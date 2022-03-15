@@ -1,11 +1,16 @@
 .container {
     display:grid;
     grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
-    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+    grid-template-rows: 30vh 30vh 30vh;
     column-gap: 10px;
     row-gap: 15px;
 }
 
 .gridImage {
-    width: 90vw;
+    width: 20vw;
+}
+
+img{
+    width: 20vw;
+    height: auto;
 }
