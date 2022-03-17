@@ -1,16 +1,54 @@
+body {
+    margin-left: 10vw;
+    margin-right: 10vw;
+    margin-top: 10vh;
+}
+
+@font-face {
+    font-family: "happy-times-NG_bold_master_web";
+    src: local("happy-times-NG_bold_master_web"), url(fonts/happy-times-NG_bold_master_web.ttf);
+}
+
+@font-face {
+    font-family: "happy-times-NG_italic_master_web";
+    src: local("happy-times-NG_italic_master_web"), url(fonts/happy-times-NG_italic_master_web.ttf);
+}
+
+h1 {
+    font-size: 60px;
+    font-family: "happy-times-NG_bold_master_web", sans-serif;
+}
+
+h2, h4 {
+    font-family: "happy-times-NG_italic_master_web", sans-serif;
+}
+
+div {
+    font-family: "happy-times-NG_bold_master_web", sans-serif;
+}
+
 .container {
     display:grid;
-    grid-template-columns: 20vw 20vw 20vw 20vw 20vw;
-    grid-template-rows: 30vh 30vh 30vh;
+    grid-template-columns: repeat(4, 20vw);
+    grid-template-rows: repeat(1, 20vw);
     column-gap: 10px;
     row-gap: 15px;
 }
 
-.gridImage {
-    width: 20vw;
+.imageHex {
+    height: 10vh;
+    width: 20vh;
+    border: 2px dotted palevioletred;
 }
 
 img{
     width: 20vw;
-    height: auto;
+    height: 30vh;
+    object-fit: cover;
+}
+
+.hexBox{
+    width: 20vw;
+    height: 5vw;
+    border: 2px brown dotted;
 }
