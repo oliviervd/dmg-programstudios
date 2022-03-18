@@ -1,3 +1,7 @@
-# JS_DMG_color-tagger
+# __SPECTRUM__
 
-web application for browsing the collection of Design Museum Gent based on color picking.  
+_pull. transmit. fall in love, and break up again._
+
+A curatorial experiment on the xeno. 
+A way of displaying the unknown by altering the means of selection. 
+
