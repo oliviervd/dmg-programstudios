@@ -1,8 +1,10 @@
-body {
-    margin-left: 10vw;
-    margin-right: 10vw;
-    margin-top: 10vh;
-}
+
+
+/*
+ALL ABOUT TYPOGRAPHY
+*/
+
+/* FONTS */
 
 @font-face {
     font-family: "happy-times-NG_bold_master_web";
@@ -23,13 +25,70 @@ h2, h4 {
     font-family: "happy-times-NG_italic_master_web", sans-serif;
 }
 
+/* ANIMATIONSSS */
+
+.scroll-container {
+    -moz-box-pack: center;
+    border: 3px solid black;
+    border-radius: 5px;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.scroll-text {
+    text-align: right;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+
+    line-height: 0px;
+
+    /*animation props*/
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+
+    -moz-animation: my-animation 35s linear infinite;
+    -webkit-animation: my-animation 35s linear infinite;
+    animation: my-animation 35s linear infinite;
+}
+
+/*FIREFOXY*/
+@-moz-keyframes my-animation {
+    from { -moz-transform: translateX(100%); }
+    to { -moz-transform: translateX(-100%);}
+}
+
+/*CHROMIE */
+@-webkit-keyframes my-animation {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes my-animation {
+from {
+    -moz-transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+    transform: translateX(-00%);
+}
+to {
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+}
+}
+
+
+
 div {
     font-family: "happy-times-NG_bold_master_web", sans-serif;
 }
 
 .container {
     display:grid;
-    grid-template-columns: repeat(4, 20vw);
+    margin-top: 5px;
+    grid-template-columns: repeat(5, 20vw);
     grid-template-rows: repeat(1, 20vw);
     column-gap: 10px;
     row-gap: 15px;
@@ -50,5 +109,4 @@ img{
 .hexBox{
     width: 20vw;
     height: 5vw;
-    border: 2px brown dotted;
 }
