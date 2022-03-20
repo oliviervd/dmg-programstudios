@@ -1,5 +1,6 @@
 import React, {useState} from "react";
 import XenoHeader from "./components/xeno"
+import XenoFooter from "./components/xenoFooter"
 import SpectreMain from "./components/spectre"
 import ProjectDescription from "./components/projectDescription";
 import {spectrumProvider} from "./spectrumContext";
@@ -49,10 +50,6 @@ function App() {
                     <ProjectDescription></ProjectDescription>
                     <SpectreMain num={_objectNum}/>
                 </div>
-
-
-
-
 
                     {/*<form onSubmit={handleSubmit}>
                     a spectrum of <br/>
