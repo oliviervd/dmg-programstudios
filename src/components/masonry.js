@@ -37,8 +37,7 @@ const MasonryGrid = () => {
             var _hexV = object_colors[x]["HEX_values"].split(",");
 
             images += '<div>' +
-                '<img alt="/src/media/alt_img.png" src='+_im[0].replace("/full/0/default.jpg","/500,/0/default.jpg")+'></img>' +
-                '<p>'+{_hexV}+'</p>'+
+                '<img alt="DREAMING OF IMAGES." src='+_im[0].replace("/full/0/default.jpg","/500,/0/default.jpg")+'></img>' +
                 '</div>';
         }
         document.getElementById('imageRandom').innerHTML = images
