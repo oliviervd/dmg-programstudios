@@ -22,22 +22,27 @@ function numSelect(i) {
     return ranNums
 }
 
-function generateCuration(){
-    return numSelect(5);
+function generateCuration(count){
+    return numSelect(count);
 }
 
 
-const SpectreMain = () => {
-    const curation = generateCuration()
+const SpectreMain = (props) => {
+
+    const num = props.num;
+    const curation = generateCuration(4)
     console.log(curation)
     return(
         <div>
             {/*<div className="container" id="imageRandom"></div>*/}
-            <ImageGenerator curatedSet = {curation}/>
+            <ImageGenerator num={num}
+                            curatedSet = {curation}/>
             {/*<button onClick={SpectreMain}>images</button>*/}
             {/*<button onClick={MasonryGrid}>masonry</button>*/}
 
-            <ColorCubes curation={curation} className="container"/>
+            <ColorCubes num={num}
+                        curation={curation}
+                        className="container"/>
         </div>
     )
 }
