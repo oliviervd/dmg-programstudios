@@ -114,10 +114,10 @@ div {
     display:grid;
     width: 80vw;
     margin-top: 5px;
-    grid-template-columns: repeat(4, 20vw);
-    grid-template-rows: repeat(1, 20vw);
+    grid-template-columns: repeat(4, auto);
+    grid-template-rows: repeat(1, auto);
     column-gap: 10px;
-    row-gap: 15px;
+    row-gap: 0px;
 }
 
 .mainContainer{
@@ -127,6 +127,7 @@ div {
 }
 
 .infoBoxLeft{
+    overflow-y:auto;
     border: 2px solid black;
     margin-right: 2.5px;
     height: 100vh;
