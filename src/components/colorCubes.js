@@ -7,7 +7,7 @@ const ColorCubes = (props) => {
 
         const selection = props.curation
         const color_hex = [];
-        for (var hexNum=0; hexNum<5; ++hexNum) {
+        for (var hexNum=0; hexNum<4; ++hexNum) {
             const x = selection[hexNum];
             var _hexVal = object_colors[x]["HEX_values"].replace("['","").replace("']","").replace("'","").split(",")
             color_hex.push(_hexVal)
@@ -19,7 +19,7 @@ const ColorCubes = (props) => {
         console.log(color_hex[1])
         console.log(color_hex[2])
         console.log(color_hex[3])
-        console.log(color_hex[4])
+
 
 
     return(
@@ -42,10 +42,7 @@ const ColorCubes = (props) => {
                         <h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[3]}
                         <HexCube hexColors = {color_hex[3]}/>
                     </div>
-                    <div>
-                        <h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[4]}
-                        <HexCube hexColors = {color_hex[4]}/>
-                    </div>
+
             </div>
         )
 
