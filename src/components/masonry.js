@@ -1,5 +1,7 @@
 import {useState} from 'react';
-import object_colors from "../data/objects_color.json";
+import object_colors from "../data/objectsColor.json";
+import ColorCubes from "./colorCubes"
+import {spectrumProvider} from "../spectrumContext";
 
 //todo: move both object_colors and nanNums to app.js
 
@@ -34,11 +36,10 @@ const MasonryGrid = () => {
         for (var i=0; i<5; ++i) {
             var x = _xList[i];
             var _im = object_colors[x]["IIIF_image"].replace("['","").replace("']","").replace("'","").split(",")
-            var _hexV = object_colors[x]["HEX_values"].split(",");
 
             images += '<div>' +
                 '<img alt="DREAMING OF IMAGES." src='+_im[0].replace("/full/0/default.jpg","/500,/0/default.jpg")+'></img>' +
-                '</div>';
+                +'<ColorCubes curatedSet={_xlist}></ColorCubes>'+'</div>';
         }
         document.getElementById('imageRandom').innerHTML = images
         console.log(_xList)
