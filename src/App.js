@@ -1,6 +1,5 @@
 import React, {useState} from "react";
-import XenoHeader from "./components/xeno"
-import XenoFooter from "./components/xenoFooter"
+import XenoHeader from "./components/xenoHeader"
 import SpectreMain from "./components/spectre"
 import ProjectDescription from "./components/projectDescription";
 import {spectrumProvider} from "./spectrumContext";

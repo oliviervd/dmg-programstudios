@@ -1,7 +1,4 @@
-import {useState} from 'react';
 import object_colors from "../data/objectsColor.json";
-import ColorCubes from "./colorCubes"
-import {spectrumProvider} from "../spectrumContext";
 
 //todo: move both object_colors and nanNums to app.js
 

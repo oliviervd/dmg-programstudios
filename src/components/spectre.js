@@ -1,5 +1,4 @@
 import React from "react";
-import MasonryGrid from "./masonry";
 import ImageGenerator from "./imageGenerator";
 import ColorCubes from "./colorCubes";
 import object_colors from "../data/objectsColor.json";
@@ -7,11 +6,10 @@ import object_colors from "../data/objectsColor.json";
 function numSelect(i) {
 
     // this function creates an array of unique numbers based on the length of object_colors.
-    var nums = [];
-    var ranNums = [];
-    var j = 0;
-    for (var n=0; n<object_colors.length; ++n) {
-        var x = Math.floor(Math.random() * object_colors.length)
+    const nums = [];
+    const ranNums = [];
+    let j = 0;
+    for (let n=0; n<object_colors.length; ++n) {
         nums.push(n);
     }
     while (i--) {

@@ -1,6 +1,5 @@
 const HexCube = (props) => {
 
-    const cubeColors = [];
     const hex_list = props.hexColors
     //console.log(hex_list)
 
