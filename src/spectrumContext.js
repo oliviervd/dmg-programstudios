@@ -1,13 +1,21 @@
 import {createContext, useState} from "react";
 
-const SpectrumContext = createContext();
+import object_colors from "./data/objects_color.json";
+
+//todo: move both object_colors and nanNums to app.js
+
+object_colors = object_colors.filter(function(entry) {
+    return entry.color_names.includes("coffee") //filter objects based on picked color.
+})
+
+const spectrumContext = createContext();
 
 export function SpectrumProvider({children}) {
     return(
-        <SpectrumContext.provider>
+        <spectrumContext.provider value={object_colors}>
             {children}
-        </SpectrumContext.provider>
+        </spectrumContext.provider>
     )
 }
 
-export default SpectrumContext;
+export default spectrumContext;
