@@ -1,21 +1,7 @@
 import React, {useState} from "react";
 import XenoHeader from "./components/xeno"
-import MetaSelection from "./components/metaSelection"
-import MasonryGrid from "./components/masonry";
 import SpectreMain from "./components/spectre"
 import {spectrumProvider} from "./spectrumContext";
-
-/*
-STRUCTURE:
-
->- app
->-- color picker; "a spectrum of {colors} traversing an ocean of desire"
->-- catalogue
->---- image
->---- color hex
->---- info text
-
- */
 
 function App() {
 
