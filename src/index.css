@@ -116,5 +116,7 @@ img{
 }
 
 .hexCube{
-
+    display: grid;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(2, 10vh);
 }
