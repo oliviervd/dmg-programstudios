@@ -122,11 +122,14 @@ div {
 
 .mainContainer{
     display:grid;
+    height: 100%;
     grid-template-columns: 18% 82%;
 }
 
 .infoBoxLeft{
     border: 2px solid black;
+    margin-right: 2.5px;
+    height: 100vh;
     border-left: none;
     border-bottom: none;
     border-top: none;
