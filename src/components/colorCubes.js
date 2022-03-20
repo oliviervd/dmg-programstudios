@@ -13,31 +13,38 @@ const ColorCubes = (props) => {
             color_hex.push(_hexVal)
         }
 
-        console.log(color_hex)
 
-        return(
+
+        const hex_1 = color_hex[0]
+        console.log(color_hex[1])
+        console.log(color_hex[2])
+        console.log(color_hex[3])
+        console.log(color_hex[4])
+
+
+    return(
             //<p>{props._hVal}</p> //todo: fetch hex values from masonry.js
 
             <div className="container">
                     <div>
                         <h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[0]}
-                        <HexCube hexColors = {color_hex}/>
+                        <HexCube hexColors = {color_hex[0]}/>
                     </div>
                     <div>
                         <h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[1]}
-                        <HexCube hexColors = {color_hex}/>
+                        <HexCube hexColors = {color_hex[1]}/>
                     </div>
                     <div><h2>GHOSTS AND THEIR SHELLS </h2>
                         <h3>DREAMING OF IMAGES</h3>{color_hex[2]}
-                        <HexCube hexColors = {color_hex}/>
+                        <HexCube hexColors = {color_hex[2]}/>
                     </div>
                     <div>
                         <h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[3]}
-                        <HexCube hexColors = {color_hex}/>
+                        <HexCube hexColors = {color_hex[3]}/>
                     </div>
                     <div>
                         <h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[4]}
-                        <HexCube hexColors = {color_hex}/>
+                        <HexCube hexColors = {color_hex[4]}/>
                     </div>
             </div>
         )
