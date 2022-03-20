@@ -17,11 +17,14 @@ ALL ABOUT TYPOGRAPHY
 }
 
 h1 {
-    font-size: 60px;
+    font-size: 43px;
     font-family: "happy-times-NG_bold_master_web", sans-serif;
 }
-
-h2, h4 {
+h4 {
+    font-family: "happy-times-NG_italic_master_web", sans-serif;
+}
+h2 {
+    font-size: 17px;
     font-family: "happy-times-NG_italic_master_web", sans-serif;
 }
 
@@ -83,6 +86,7 @@ to {
 
 div {
     font-family: "happy-times-NG_bold_master_web", sans-serif;
+    font-size: 12px;
 }
 
 .container {
@@ -109,4 +113,8 @@ img{
 .hexBox{
     width: 20vw;
     height: 5vw;
+}
+
+.hexCube{
+
 }
