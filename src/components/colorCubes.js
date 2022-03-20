@@ -1,5 +1,6 @@
 import React from "react";
 import object_colors from "../data/objectsColor.json";
+import HexCube from "../components/cube"
 
 
 const ColorCubes = (props) => {
@@ -18,11 +19,26 @@ const ColorCubes = (props) => {
             //<p>{props._hVal}</p> //todo: fetch hex values from masonry.js
 
             <div className="container">
-                    <div><h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[0]}</div>
-                    <div><h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[1]}</div>
-                    <div><h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[2]}</div>
-                    <div><h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[3]}</div>
-                    <div><h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[4]}</div>
+                    <div>
+                        <h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[0]}
+                        <HexCube hexColors = {color_hex}/>
+                    </div>
+                    <div>
+                        <h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[1]}
+                        <HexCube hexColors = {color_hex}/>
+                    </div>
+                    <div><h2>GHOSTS AND THEIR SHELLS </h2>
+                        <h3>DREAMING OF IMAGES</h3>{color_hex[2]}
+                        <HexCube hexColors = {color_hex}/>
+                    </div>
+                    <div>
+                        <h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[3]}
+                        <HexCube hexColors = {color_hex}/>
+                    </div>
+                    <div>
+                        <h2>GHOSTS AND THEIR SHELLS </h2><h3>DREAMING OF IMAGES</h3>{color_hex[4]}
+                        <HexCube hexColors = {color_hex}/>
+                    </div>
             </div>
         )
 
