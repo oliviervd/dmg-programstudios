@@ -10,11 +10,18 @@ const XenoHeader = () => {
                 <h1 className="scroll-text"> models from the past for the future | </h1>
             </div>
             <div className="scroll-container">
-                <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the anti-museum | </h2>
-                <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the anti-museum | </h2>
-                <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the anti-museum | </h2>
-                <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the anti-museum | </h2>
+                <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the anti-museum | SPECTRUM | the sensible | </h2>
+                <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the anti-museum | SPECTRUM | the sensible |</h2>
+                <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the anti-museum | SPECTRUM | the sensible |</h2>
+                <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the anti-museum | SPECTRUM | the sensible |</h2>
 
+            </div>
+            <div className="scroll-container">
+                <h3 className="scroll-text"> chapter 1: the sensorial || chapter 1: the sensorial || chapter 1: the sensorial || chapter 1: the sensorial ||</h3>
+                <h3 className="scroll-text"> chapter 1: the sensorial || chapter 1: the sensorial || chapter 1: the sensorial || chapter 1: the sensorial ||</h3>
+                <h3 className="scroll-text"> chapter 1: the sensorial || chapter 1: the sensorial || chapter 1: the sensorial || chapter 1: the sensorial ||</h3>
+                <h3 className="scroll-text"> chapter 1: the sensorial || chapter 1: the sensorial || chapter 1: the sensorial || chapter 1: the sensorial ||</h3>
+                <h3 className="scroll-text"> chapter 1: the sensorial || chapter 1: the sensorial || chapter 1: the sensorial || chapter 1: the sensorial ||</h3>
             </div>
         </div>
     )
