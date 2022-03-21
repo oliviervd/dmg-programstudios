@@ -1,4 +1,9 @@
 const ProjectDescription = () => {
+
+    function refreshPage() {
+        window.location.reload(false);
+    }
+
     return(
         <div className="infoBoxLeft">
             <h2>*** project description</h2>
@@ -9,7 +14,7 @@ const ProjectDescription = () => {
                 as a starting point, it aims at remedying the wretch and clutch of its methodologies.
                 <br/>
 
-                <h1><italic>_pull. transmit. fall in love, and break up again.</italic></h1>
+                <a><h1 onClick={refreshPage} className="presser hoverLinkEffect" ><italic>_pull. transmit. fall in love, and break up again.</italic></h1></a>
 
                 <br/> The XENO-MORPHIC, the SENSORIAL & SENSIBLE, the TRANSHISTORICAL, the CURRENT and PAST-FUTURE are all ideologies
                 and strategies that push us in devicing new kinds of interfaces that are perhaps more sensible to its users,
