@@ -19,10 +19,10 @@ const ProjectDescription = () => {
 
                 <h1><italic>_pull. transmit. fall in love, and break up again.</italic></h1>
 
-                <br/> The <Modal text="XENO-MORPHIC" description="Meillisoux arrgues that one can only approach the contingent
+                <br/> The <Modal text="XENO-MORPHIC" description="Meillisoux argues that one can only approach the contingent
                 nature of the world, which he calls 'hyperchaos', by creating a toolbox in which constant change could manifest itself.
-                Through this platform, Design Museum Gent makes visible, and encourages change to manifest and in doing so resonates
-                the layered, and altering nature of its collection, whether trough different readings in exhibitions or the lack thereof."></Modal>, the SENSORIAL & SENSIBLE, the TRANSHISTORICAL, the CURRENT and PAST-FUTURE are all ideologies
+                As a research platform, we aim to demonstrate the changing nature of museum collections by evoking the fictions
+                in which these changes occur. Whether by being part of the exhibition or the lack thereof.."></Modal>, the SENSORIAL & SENSIBLE, the TRANSHISTORICAL, the CURRENT and PAST-FUTURE are all ideologies
                 and strategies that propel us in devising new kinds of interfaces that are perhaps more sensible to its users,
                 more conscious of its surroundings and above all - foster inspiration.
 
