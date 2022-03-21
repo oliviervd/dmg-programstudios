@@ -151,14 +151,14 @@ div {
 }
 
 .infoBoxLeft{
-    overflow-y:auto;
     border: 2px solid black;
     margin-right: 2.5px;
     padding-right: 20px;
-    height: 100vh;
+    height: 90vh;
     border-left: none;
     border-bottom: none;
     border-top: none;
+    overflow-y:auto;
 }
 
 .imageHex {
