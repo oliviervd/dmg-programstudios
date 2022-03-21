@@ -26,12 +26,30 @@ h1 {
     font-size: 43px;
     font-family: "happy-times-NG_bold_master_web", sans-serif;
 }
+
+
+
+.presser{
+    font-size: 43px;
+    font-family: "happy-times-NG_bold_master_web", sans-serif;
+    text-decoration: underline;
+    border-left: 2px dotted black;
+    padding-left: 4px;
+}
+
 h4 {
     font-family: "happy-times-NG_italic_master_web", sans-serif;
 }
 h2 {
     font-size: 17px;
     font-family: "happy-times-NG_italic_master_web", sans-serif;
+}
+
+.hoverLinkEffect{
+    transition: color 150ms ease-out;
+    &:hover {
+        color: #FFCDD2;
+    }
 }
 
 /* ANIMATIONSSS */
@@ -114,7 +132,7 @@ div {
     display:grid;
     width: 80vw;
     margin-top: 5px;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 20vw);
     grid-template-rows: repeat(1, auto);
     column-gap: 10px;
     row-gap: 0px;
@@ -130,6 +148,7 @@ div {
     overflow-y:auto;
     border: 2px solid black;
     margin-right: 2.5px;
+    padding-right: 20px;
     height: 100vh;
     border-left: none;
     border-bottom: none;
