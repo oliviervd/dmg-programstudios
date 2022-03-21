@@ -39,16 +39,15 @@ const SpectreMain = (props) => {
     console.log("curated set: "+ curation)
     return(
         <div>
-            <button onClick={handleCurationChange}>GENERATE NEW CURATED SET</button>
-            {/*<div className="container" id="imageRandom"></div>*/}
             <ImageGenerator num={num}
                             curatedSet = {curation}/>
-            {/*<button onClick={SpectreMain}>images</button>*/}
-            {/*<button onClick={MasonryGrid}>masonry</button>*/}
 
             <ColorCubes num={num}
                         curation={curation}
                         className="container"/>
+
+            <button onClick={handleCurationChange}>GENERATE NEW CURATED SET</button>
+
         </div>
     )
 }
