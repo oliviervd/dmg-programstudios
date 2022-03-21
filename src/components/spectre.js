@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useState} from "react";
 import ImageGenerator from "./imageGenerator";
 import ColorCubes from "./colorCubes";
 import object_colors from "../data/objectsColor.json";
@@ -28,10 +28,18 @@ function generateCuration(count){
 const SpectreMain = (props) => {
 
     const num = props.num;
-    const curation = generateCuration(4)
-    console.log(curation)
+    const [curation, setCuration] = useState(generateCuration(num));
+
+    function handleCurationChange(event) {
+        const _x = generateCuration(num);
+        setCuration((prev) => _x);
+        console.log(_x);
+    }
+
+    console.log("curated set: "+ curation)
     return(
         <div>
+            <button onClick={handleCurationChange}>GENERATE NEW CURATED SET</button>
             {/*<div className="container" id="imageRandom"></div>*/}
             <ImageGenerator num={num}
                             curatedSet = {curation}/>
