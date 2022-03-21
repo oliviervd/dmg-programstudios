@@ -45,20 +45,48 @@ h2 {
     font-family: "happy-times-NG_italic_master_web", sans-serif;
 }
 
+.refText{
+    text-decoration: underline;
+    transition: color 300ms;
+}
+
+.refText:hover {
+    color: #ccd7bf;
+}
+
 .hoverLinkEffect{
     transition: color 150ms ease-out;
-    &:hover {
-        color: #FFCDD2;
-    }
+}
+
+.modal {
+    border-left: dotted black;
+    color: red;
 }
 
 button{
     font-family: "happy-times-NG_italic_master_web", sans-serif;
     width: 100%;
-    background-color: #ccd7bf
+    background-color: #ccd7bf;
+    margin-bottom: 10px;
+}
+
+.overlay {
+    right:0;
+    left:0;
+    bottom:0;
+    top:0;
 }
 
 /* ANIMATIONSSS */
+
+.rowScroll {
+    border: 2px dotted black;
+    height: 100%;
+    border-left: none;
+    border-bottom: none;
+    border-top: none;
+    overflow-y:auto;
+}
 
 .scroll-container {
     -moz-box-pack: center;
