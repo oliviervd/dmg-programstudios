@@ -7,9 +7,10 @@ const ProjectDescription = () => {
     return(
         <div className="infoBoxLeft">
             <h2>*** project description</h2>
-            <p style={{fontSize: "15px"}}> MODELS FROM THE PAST FOR THE FUTURE takes the form of a speculative research into
-                alternative approaches and readings of the collection of Design Museum Gent. As an evolving platform and living archive it will
-                grow and serve as a sensing layer for past, current and future research. If anything, it moves and shies
+            <p style={{fontSize: "15px"}}> MODELS FROM THE PAST FOR THE FUTURE takes on the role of speculative knowledge
+                production that is both reflective and performative investigating and embracing the (as yet) unknown. <ul>As an evolving platform it
+                investigates alternative approaches and readings of the collection of Design Museum Gent.</ul> <ul>As a living archive it will
+                grow and serve as a sensing layer for past, current and future research.</ul>If anything, it moves and shies
                 away from classical approaches of indexing and opening up museum collections online. Although it takes the collection database
                 as a starting point, it aims at remedying the wretch and clutch of its methodologies.
                 <br/>
