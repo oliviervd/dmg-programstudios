@@ -1,15 +1,12 @@
-import React, {useState} from "react";
+import React from "react";
 
 import object_colors from "../data/objectsColor.json";
 import HexCube from "../components/cube"
 
 const ColorCubes = (props) => {
 
-        const maxL = 198;
-
         const selection = props.curation
         const color_hex = [];
-        const color_hex_text = [];
         const obj_titles_NL = [];
         for (var hexNum=0; hexNum<4; ++hexNum) {
             const x = selection[hexNum];
@@ -18,7 +15,6 @@ const ColorCubes = (props) => {
             const _objTitle = object_colors[x]["title"]
 
             color_hex.push(_hexVal);
-            color_hex_text.push(_hexValStr[1]);
             obj_titles_NL.push(_objTitle);
         }
 
@@ -27,15 +23,13 @@ const ColorCubes = (props) => {
 
             <div className="container">
                     <div>
-                        <h2>GHOSTS AND THEIR SHELLS </h2>
-                        <h3>DREAMING OF IMAGES</h3>{color_hex_text[0]}
+
                         <HexCube hexColors = {color_hex[0]}/>
                         <h3>**{obj_titles_NL[0]}</h3>
                         <h3 className="rowScroll"></h3>
                     </div>
                     <div>
-                        <h2>GHOSTS AND THEIR SHELLS </h2>
-                        <h3>DREAMING OF IMAGES</h3>{color_hex_text[1]}
+
                         <HexCube hexColors = {color_hex[1]}/>
                         <h3>**{obj_titles_NL[1]}</h3>
                         <h3 className="rowScroll"></h3>
@@ -43,8 +37,7 @@ const ColorCubes = (props) => {
 
                     </div>
                     <div>
-                        <h2>GHOSTS AND THEIR SHELLS </h2>
-                        <h3>DREAMING OF IMAGES</h3>{color_hex_text[2]}
+
                         <HexCube hexColors = {color_hex[2]}/>
                         <h3>**{obj_titles_NL[2]}</h3>
                         <h3 className="rowScroll"></h3>
@@ -52,8 +45,7 @@ const ColorCubes = (props) => {
 
                     </div>
                     <div>
-                        <h2>GHOSTS AND THEIR SHELLS </h2>
-                        <h3>DREAMING OF IMAGES</h3>{color_hex_text[3]}
+
                         <HexCube hexColors = {color_hex[3]}/>
                         <h3>**{obj_titles_NL[3]}</h3>
                         <h3 className="rowScroll"></h3>
