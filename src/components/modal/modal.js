@@ -12,10 +12,10 @@ const Modal = (props) => {
             <a className="refText" onClick={toggleModal}>{props.text}</a>
             {modal && (
                 <div className="overlay" onClick={toggleModal}>
-                    <div className="modal">
+                    <div className={props.modalLineID}></div>
+                    <div className={props.modalID}>
                         <p>{props.description}</p>
                     </div>
-                    <button onClick={toggleModal}>close</button>
                 </div>
             )}
         </>

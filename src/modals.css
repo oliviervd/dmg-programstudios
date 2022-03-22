@@ -1,0 +1,43 @@
+/*modal1*/
+
+.modal1 {
+    position: absolute;
+    background: papayawhip;
+    border: black solid 3px;
+    opacity: 0.9;
+    top: 30vw;
+    right: 40vw;
+    left: 30vw;
+    font-size: 15px;
+    padding: 4px;
+}
+
+.modal1Line {
+    position: absolute;
+    border-top: black solid 3px;
+    top: 30vw;
+    right: 60vw;
+    left: 20vw;
+}
+
+.modal2 {
+    position: absolute;
+    background: papayawhip;
+    border: black solid 3px;
+    opacity: 0.9;
+    top: 20vh;
+    bottom: 60vh;
+    left: 40vw;
+    right: 30vw;
+    font-size: 15px;
+    padding: 4px;
+}
+
+.modal2Line{
+    position: absolute;
+    border-right: black solid 3px;
+    border-bottom: black solid 3px;
+    top: 20vh;
+    right: 30vw;
+    left: 20vw;
+}

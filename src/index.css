@@ -58,6 +58,10 @@ h2 {
     color: #ccd7bf;
 }
 
+.refText:focus {
+    color: #ccd7bf;
+}
+
 .hoverLinkEffect{
     transition: color 150ms ease-out;
 }
@@ -65,6 +69,16 @@ h2 {
 .modal {
     border-left: dotted black;
     color: red;
+}
+
+.titleBox{
+    margin-top: 4px;
+    height: 5vw;
+}
+
+.titleBoxTitle {
+    font-size: 15px;
+    text-align: left;
 }
 
 button{
@@ -214,6 +228,8 @@ img{
 }
 
 .hexCube{
+    padding-bottom: 4px;
+    padding-top: 4px;
     display: grid;
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(2, 10vh);
