@@ -10,7 +10,8 @@ const ProjectDescription = () => {
         <div className="infoBoxLeft">
             <h1 className="underlined" style={{fontSize: "20px"}}>___PROJECT DESCRIPTION</h1>
             <p style={{fontSize: "15px"}}>MODELS FROM THE PAST FOR THE FUTURE is a site for speculative knowledge production
-                that is both reflective and performative in investigating and embracing the (as yet) unknown. <ul> As an
+                that is both reflective and performative in investigating and embracing the (as yet) unknown. It situates itself
+                in between where we are now and where we are going next. <ul> As an
                     <bold className="underlined"> evolving platform</bold>, it seeks out alternative approaches and readings of the collection of Design museum Gent.</ul>
                 <ul>As a <bold className="underlined">living archive</bold>, it will grow and serve as a sensing layer for past, current and future research practices.</ul>
                 If anything, it moves and shies away from classical approaches of indexing and traditional ways of opening up museum collections online.
