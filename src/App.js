@@ -47,6 +47,7 @@ function App() {
                 <XenoHeader/>
                 <div className="mainContainer">
                     <ProjectDescription></ProjectDescription>
+                    <div className="dotLine"></div>
                     <SpectreMain num={_objectNum}/>
                 </div>
 
