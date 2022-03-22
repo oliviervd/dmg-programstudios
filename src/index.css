@@ -81,6 +81,10 @@ button{
     top:0;
 }
 
+.dotLine {
+    border: dotted 4px black;
+}
+
 /* ANIMATIONSSS */
 
 .rowScroll {
@@ -178,11 +182,11 @@ div {
 .mainContainer{
     display:grid;
     height: 100%;
-    grid-template-columns: 20% 80%;
+    grid-template-columns: 19.5% 0.5% 80%;
 }
 
 .infoBoxLeft{
-    border: 2px solid black;
+    border: 4px dashed black;
     margin-right: 2.5px;
     padding-right: 20px;
     height: 90vh;
