@@ -1,5 +1,5 @@
 import React from "react";
-import object_colors from "../data/objectsColor.json";
+import object_colors from "../data/objectsColor_10.json";
 
 const ImageGenerator = (props) => {
     const curatedSet = props.curatedSet;

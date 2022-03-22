@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import ImageGenerator from "./imageGenerator";
 import ColorCubes from "./colorCubes";
-import object_colors from "../data/objectsColor.json";
+import object_colors from "../data/objectsColor_10.json";
 
 function numSelect(i) {
 
