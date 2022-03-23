@@ -26,9 +26,8 @@
     border: black solid 3px;
     opacity: 0.9;
     top: 20vh;
-    bottom: 60vh;
-    left: 40vw;
-    right: 30vw;
+    right: 40vw;
+    left: 30vw;
     font-size: 15px;
     padding: 4px;
 }
@@ -38,6 +37,6 @@
     border-right: black solid 3px;
     border-bottom: black solid 3px;
     top: 20vh;
-    right: 30vw;
+    right: 40vw;
     left: 20vw;
 }
