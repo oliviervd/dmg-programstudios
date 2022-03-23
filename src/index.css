@@ -73,7 +73,7 @@ h2 {
 
 .titleBox{
     margin-top: 4px;
-    height: 5vw;
+    height: 2vw;
 }
 
 .titleBoxTitle {
@@ -113,7 +113,7 @@ button{
 
 .rowScroll {
     border: 2px dotted black;
-    height: 200px;
+    height: 300px;
     border-left: none;
     border-bottom: none;
     border-top: none;
