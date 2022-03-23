@@ -2,6 +2,7 @@ import React,{useState} from "react";
 import ImageGenerator from "./imageGenerator";
 import ColorCubes from "./colorCubes";
 import object_colors from "../data/objectsColor_10.json";
+import ldes_translations from "../data/ldes_dmg_translations.json"
 
 function numSelect(i) {
 
@@ -46,7 +47,7 @@ const SpectreMain = (props) => {
                         curation={curation}
                         className="container"/>
 
-            <button onClick={handleCurationChange}>GENERATE NEW CURATED SET</button>
+            <button className="buttonRandomizer" onClick={handleCurationChange}>GENERATE NEW CURATED SET</button>
 
         </div>
     )
