@@ -245,3 +245,10 @@ img{
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(2, 10vh);
 }
+
+.hexCubeNames{
+    display: grid;
+    font-size: 10px;
+    grid-template-columns: repeat(5, 20%);
+    grid-template-rows: repeat(2, 2vh);
+}
