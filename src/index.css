@@ -107,6 +107,7 @@ button{
 
 .dotLine {
     border: dotted 4px black;
+    margin-right: 10px;
 }
 
 /* ANIMATIONSSS */
