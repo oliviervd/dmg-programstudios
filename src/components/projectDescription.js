@@ -1,4 +1,5 @@
 import Modal from "./modal/modal"
+import React from "react"
 
 const chapters = "A form of slow programming and slow research to counter the endless acceleration of cultural production."
 

@@ -1,4 +1,4 @@
-import {createContext, useState} from "react";
+import React, {createContext, useState} from "react";
 import object_colors from "./data/objectsColor_20.json";
 
 //todo: move both object_colors and nanNums to app.js
