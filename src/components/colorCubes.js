@@ -18,25 +18,25 @@ const ColorCubes = (props) => {
 
         const selection = props.curation
         const color_hex = [];
+        const color_names = [];
         const obj_titles_EN = [];
         const obj_desc_EN = [];
 
         for (var hexNum=0; hexNum<4; ++hexNum) {
             const x = selection[hexNum];
             var _hexVal = object_colors[x]["HEX_values"].replace("['","").replace("']","").replace("'","").split(",")
-            const _hexValStr = object_colors[x]["HEX_values"].replace("['","").replace("']","").replace("'","").split("[")
-            const _objTitle = object_colors[x]["title"]
 
             const uri = object_colors[x]["URI"];
-            console.log(uri)
+
+            const color_name = object_colors[x]["color_names"]
 
             const title = titleViaURI(uri)
-            console.log(title)
 
             const title_en = title[0]["title_en"];
             const desc_en = title[0]["description_adlib_en"]
 
             color_hex.push(_hexVal);
+            color_names.push(color_name);
             obj_titles_EN.push(title_en);
             obj_desc_EN.push(desc_en);
         }
@@ -47,7 +47,9 @@ const ColorCubes = (props) => {
             <div className="container">
                     <div>
 
-                        <HexCube hexColors = {color_hex[0]}/>
+                        <HexCube
+                            hexColors = {color_hex[0]}
+                            color_names={color_names[0]}/>
                         <div className="dotLine"></div>
                         <div className="titleBox">
                             <h2 className="titleBoxTitle">**{obj_titles_EN[0]}</h2>
@@ -56,7 +58,10 @@ const ColorCubes = (props) => {
                     </div>
                     <div>
 
-                        <HexCube hexColors = {color_hex[1]}/>
+                        <HexCube
+                            hexColors = {color_hex[1]}
+                            color_names={color_names[1]}
+                        />
                         <div className="dotLine"></div>
                         <div className="titleBox">
                             <h2 className="titleBoxTitle underlined">**{obj_titles_EN[1]}</h2>
@@ -67,7 +72,10 @@ const ColorCubes = (props) => {
                     </div>
                     <div>
 
-                        <HexCube hexColors = {color_hex[2]}/>
+                        <HexCube
+                            hexColors = {color_hex[2]}
+                            color_names={color_names[2]}
+                        />
                         <div className="dotLine"></div>
                         <div className="titleBox">
                             <h2 className="titleBoxTitle">**{obj_titles_EN[2]}</h2>
@@ -78,7 +86,10 @@ const ColorCubes = (props) => {
                     </div>
                     <div>
 
-                        <HexCube hexColors = {color_hex[3]}/>
+                        <HexCube
+                            hexColors = {color_hex[3]}
+                            color_names={color_names[2]}
+                        />
                         <div className="dotLine"></div>
                         <div className="titleBox">
                             <h2 className="titleBoxTitle underlined">**{obj_titles_EN[3]}</h2>
