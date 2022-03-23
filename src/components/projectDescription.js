@@ -18,8 +18,7 @@ const ProjectDescription = () => {
                     <Modal modalID="modal2" modalLineID="modal2Line" text=" evolving platform" description={chapters}></Modal>, it seeks out alternative approaches and readings of the collection of Design museum Gent.</ul>
                 <ul>As a <bold className="underlined">living archive</bold>, it will grow and serve as a sensing layer for past, current and future research practices.</ul>
                 If anything, it moves and shies away from classical approaches of indexing and traditional ways of opening up museum collections online.
-                Although it takes the collection database as a starting point, it aims at remedying the wretch and clutch of its methodologies. By avoiding search bars and
-                complex query interfaces we are looking into the capabilities and opportunities of the "generous interface", a user experience built around the idea of the encounter.
+                Although it takes the collection database as a starting point, it aims at remedying the wretch and clutch of its methodologies.
                 <br/>
 
                 <h1><italic>__pull. transmit. fall in love, and break up again.</italic></h1>
