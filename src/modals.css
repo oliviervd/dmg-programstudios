@@ -40,3 +40,23 @@
     right: 40vw;
     left: 20vw;
 }
+
+.modal3 {
+    position: absolute;
+    background: papayawhip;
+    border: black solid 3px;
+    top: 40vh;
+    left: 25vw;
+    right: 45vw;
+    font-size: 15px;
+
+}
+
+.modal3Line{
+    position: absolute;
+    border-right: black solid 3px;
+    border-bottom: black solid 3px;
+    top: 40vh;
+    right: 45vw;
+    left: 20vw;
+}
