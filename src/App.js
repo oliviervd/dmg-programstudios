@@ -50,15 +50,6 @@ function App() {
                     <div className="dotLine"></div>
                     <SpectreMain num={_objectNum}/>
                 </div>
-
-                    {/*<form onSubmit={handleSubmit}>
-                    a spectrum of <br/>
-                    <input onChange={(c) => setColors({...colors, color: c.target.value})}
-                           type="text"
-                           value={colors.color}/> <br/>
-                    traversing an ocean of desire
-                </form>
-                <MetaSelection col={colors.color}/>*/}
             </spectrumProvider>
         </div>
     );
