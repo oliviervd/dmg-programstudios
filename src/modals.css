@@ -5,7 +5,7 @@
     background: papayawhip;
     border: black solid 3px;
     opacity: 0.9;
-    top: 30vw;
+    top: 60vh;
     right: 40vw;
     left: 30vw;
     font-size: 15px;
@@ -15,7 +15,7 @@
 .modal1Line {
     position: absolute;
     border-top: black solid 3px;
-    top: 30vw;
+    top: 60vh;
     right: 60vw;
     left: 20vw;
 }
@@ -49,6 +49,7 @@
     left: 25vw;
     right: 45vw;
     font-size: 15px;
+    padding: 4px;
 
 }
 
@@ -59,4 +60,15 @@
     top: 40vh;
     right: 45vw;
     left: 20vw;
+}
+
+.modal4{
+    position: absolute;
+    background: papayawhip;
+    border: black solid 3px;
+    top: 60vh;
+    left: 70vw;
+    right: 10vw;
+    font-size: 15px;
+    padding: 4px;
 }
