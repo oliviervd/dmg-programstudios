@@ -32,7 +32,7 @@ const ProjectDescription = () => {
 
                 <h1><italic>__pull. transmit. fall in love, and break up again.</italic></h1>
 
-                <br/> The <Modal modalID="modal1" modalLineID="modal1Line" text="XENO-MORPHIC" description={xenomorphic}></Modal>, the SENSORIAL & SENSIBLE, the TRANSHISTORICAL, the CURRENT and PAST-FUTURE are all ideologies
+                <br/> The <Modal modalID="modal1" modalLineID="modal1Line" text="XENO-MORPHIC" description={xenomorphic}></Modal>, the <Modal modalID="modal4" text="the SENSORIAL"></Modal> & SENSIBLE, the TRANSHISTORICAL, the CURRENT and PAST-FUTURE are all ideologies
                 and strategies that propel us in devising new kinds of interfaces that are perhaps more sensible to its users,
                 more conscious of its surroundings and above all - foster inspiration.
 
