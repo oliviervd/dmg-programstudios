@@ -1,7 +1,10 @@
 import Modal from "./modal/modal"
 import React from "react"
 
-const chapters = "A form of slow programming and slow research to counter the endless acceleration of cultural production."
+const chapters = "MODELS FROM THE PAST FOR THE FUTURE serves as a counter-proposal for the accelerated cultural production" +
+    "that is noticeable in  museums around the world. Taking time to find different means of approaching a museum collection " +
+    "this project can be read as a critical inquiry into the way collections are usualy displayed and how this manifested itself" +
+    "throughout time."
 
 const xenomorphic = "Meillisoux argues that one can only approach the contingent " +
     "nature of the world, which he calls 'hyperchaos', by creating a toolbox in which constant change could manifest itself." +
