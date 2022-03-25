@@ -61,10 +61,12 @@ h2 {
 
 .refText:hover {
     color: #ccd7bf;
+    transform: rotate(45deg);
 }
 
 .refText:focus {
     color: #ccd7bf;
+    transform: rotate(45deg);
 }
 
 .hoverLinkEffect{
@@ -73,7 +75,6 @@ h2 {
 
 .modal {
     border-left: dotted black;
-    color: red;
 }
 
 .titleBox{

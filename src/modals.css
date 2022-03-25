@@ -43,14 +43,12 @@
 
 .modal3 {
     position: absolute;
-    background: papayawhip;
     border: black solid 3px;
     top: 40vh;
     left: 25vw;
     right: 45vw;
     font-size: 15px;
     padding: 4px;
-
 }
 
 .modal3Line{
@@ -71,4 +69,18 @@
     right: 10vw;
     font-size: 15px;
     padding: 4px;
+}
+
+.conicBackdrop{
+    background: conic-gradient(from 10deg at 50% 50%, #79aea1 0deg, #83F102 20deg, #C4C4C4 40deg, #8234D6 60deg, #79aea1 100deg, #83F102 120deg, #C4C4C4 140deg, #8234D6 160deg, #C4C4C4 180deg, #8234D6 190deg, #79aea1 200deg, #83F102 220deg, #C4C4C4 225deg, #8234D6 230deg,#79aea1 240deg, #83F102 260deg, #C4C4C4 280deg, #8234D6 300deg, #C4C4C4 330deg, #8234D6 350deg, #79aea1 360deg);
+    background-color: rgba(0, 0, 0, 0);
+    background-position-x: 0%;
+    background-position-y: 0%;
+    background-repeat: repeat;
+    background-attachment: scroll;
+    background-image: conic-gradient(from 10deg, #79aea1 0deg, rgb(131, 241, 2) 20deg, rgb(196, 196, 196) 40deg, #FFC0CB 60deg, #79aea1 100deg, rgb(131, 241, 2) 120deg, rgb(196, 196, 196) 140deg, #FFC0CB 160deg, rgb(196, 196, 196) 180deg, #FFC0CB 190deg, #79aea1 200deg, rgb(131, 241, 2) 220deg, rgb(196, 196, 196) 225deg, #FFC0CB 230deg, #79aea1 240deg, rgb(131, 241, 2) 260deg, rgb(196, 196, 196) 280deg, #FFC0CB 300deg, rgb(196, 196, 196) 330deg,#FFC0CB 350deg,#79aea1 360deg);
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    --offset: -63.26536544850499deg;
 }
