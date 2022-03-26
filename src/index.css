@@ -32,6 +32,9 @@ h1 {
     font-family: "happy-times-NG_bold_master_web", sans-serif;
 }
 
+.mainTitle{
+    font-family: "lineal";
+}
 
 
 .presser{
@@ -79,12 +82,26 @@ h2 {
 
 .titleBox{
     margin-top: 4px;
-    height: 2vw;
+    height: 4vw;
 }
 
 .titleBoxTitle {
     font-size: 20px;
     text-align: left;
+}
+
+.colorText{
+    font-family: "happy-times-NG_italic_master_web", sans-serif;
+    font-size: 15px;
+}
+
+.descText {
+    font-family: "happy-times-NG_italic_master_web", sans-serif;
+    font-size: 15px;
+}
+
+text {
+    position: relative;
 }
 
 button{

@@ -1,5 +1,6 @@
 import Modal from "./modal/modal"
-import React from "react"
+import React, {useState} from "react"
+import object_colors from "../data/objectsColor_10.json";
 
 const chapters = "MODELS FROM THE PAST FOR THE FUTURE serves as a counter-proposal for the accelerated cultural production" +
     "that is noticeable in museums around the world and questions the role of the museum as a device that has to continuously " +
@@ -20,6 +21,8 @@ const ProjectDescription = () => {
 
     function refreshPage() {
         window.location.reload(false);
+
+
     }
 
     return(

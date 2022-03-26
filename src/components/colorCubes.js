@@ -4,6 +4,7 @@ import object_colors from "../data/objectsColor_10.json";
 import ldes_translations from "../data/ldes_dmg_translations.json"
 
 import HexCube from "../components/cube"
+import ObjectDescription from "./objectDescription";
 
 function titleViaURI(uri) {
     return ldes_translations.filter(
@@ -52,9 +53,13 @@ const ColorCubes = (props) => {
                             color_names={color_names[0]}/>
                         <div className="dotLine"></div>
                         <div className="titleBox">
-                            <h2 className="titleBoxTitle">**{obj_titles_EN[0]}</h2>
+                            <h1 className="titleBoxTitle">**{obj_titles_EN[0]}</h1>
                         </div>
-                        <h3 className="rowScroll">{obj_desc_EN[0]}</h3>
+                        <diV className="rowScroll">
+                            <ObjectDescription text={obj_desc_EN[0]}></ObjectDescription>
+                        </diV>
+
+
                     </div>
                     <div>
 
@@ -64,9 +69,12 @@ const ColorCubes = (props) => {
                         />
                         <div className="dotLine"></div>
                         <div className="titleBox">
-                            <h2 className="titleBoxTitle underlined">**{obj_titles_EN[1]}</h2>
+                            <h1 className="titleBoxTitle underlined">**{obj_titles_EN[1]}</h1>
                         </div>
-                        <h3 className="rowScroll">{obj_desc_EN[1]}</h3>
+                        <diV className="rowScroll">
+                            <ObjectDescription text={obj_desc_EN[1]}></ObjectDescription>
+                        </diV>
+
 
 
                     </div>
@@ -78,25 +86,27 @@ const ColorCubes = (props) => {
                         />
                         <div className="dotLine"></div>
                         <div className="titleBox">
-                            <h2 className="titleBoxTitle">**{obj_titles_EN[2]}</h2>
+                            <h1 className="titleBoxTitle">**{obj_titles_EN[2]}</h1>
                         </div>
-                        <h3 className="rowScroll">{obj_desc_EN[2]}</h3>
-
+                        <diV className="rowScroll">
+                            <ObjectDescription text={obj_desc_EN[2]}></ObjectDescription>
+                        </diV>
 
                     </div>
                     <div>
 
                         <HexCube
                             hexColors = {color_hex[3]}
-                            color_names={color_names[2]}
+                            color_names={color_names[3]}
                         />
                         <div className="dotLine"></div>
                         <div className="titleBox">
-                            <h2 className="titleBoxTitle underlined">**{obj_titles_EN[3]}</h2>
+                            <h1 className="titleBoxTitle underlined">**{obj_titles_EN[3]}</h1>
                         </div>
-                        <div className='rowScroll'>
-                            <h3>{obj_desc_EN[3]}</h3>
-                        </div>
+                        <diV className="rowScroll">
+                            <ObjectDescription text={obj_desc_EN[3]}></ObjectDescription>
+                        </diV>
+
 
 
                     </div>
