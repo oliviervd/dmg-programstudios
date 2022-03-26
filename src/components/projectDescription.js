@@ -2,11 +2,11 @@ import Modal from "./modal/modal"
 import React, {useState} from "react"
 import object_colors from "../data/objectsColor_10.json";
 
-const chapters = "MODELS FROM THE PAST FOR THE FUTURE serves as a counter-proposal for the accelerated cultural production" +
-    "that is noticeable in museums around the world and questions the role of the museum as a device that has to continuously " +
-    "reinvent itself in offering new experiences. Taking time to find different means of approaching a museum collection " +
-    "this project can be read as a critical inquiry into the way collections are usually displayed, looking for alternative ways of production " +
-    "that are perhaps more sensible on a planetary scale in terms of our surroundings."
+const chapters = "MODELS FROM THE PAST FOR THE FUTURE serves as a counter-proposal for the accelerated pace of cultural production" +
+    " in museums around the world, questioning its place within the experiential economy in relation to the values it has to uphold. " +
+    "In taking time to find different means of (digitaly) approaching a museum collection, this project can be read as both an critical inquiry " +
+    "into the way collections are usually displayed, as well as a curatorial excercise in creating a space in which to negotiate, " +
+    "alternative ways of knowledge production and dissemination that are perhaps more sensible on a planetary scale in terms of our surroundings."
 
 const xenomorphic = "Meillisoux argues that one can only approach the contingent " +
     "nature of the world, which he calls 'hyperchaos', by creating a toolbox in which constant change could manifest itself." +
