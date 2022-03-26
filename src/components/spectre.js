@@ -39,7 +39,7 @@ const SpectreMain = (props) => {
 
     console.log("curated set: "+ curation)
     return(
-        <div>
+        <div className="cool-to-warm-spectrum">
             <ImageGenerator num={num}
                             curatedSet = {curation}/>
 
