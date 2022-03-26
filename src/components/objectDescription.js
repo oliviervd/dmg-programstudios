@@ -16,26 +16,13 @@ const ObjectDescription = (props) => {
         for (var i = 0; i < desc.length; ++i) {
             //console.log(desc[i]);
             if (colors.includes(desc[i])) {
-
                 tags.push(
                     tags.string = desc[i],
                 )
-
-                //var tag = document.createElement("p")
-                //var x = document.createTextNode(desc[i])
-                //tag.className = "underline";
-                //tag.appendChild(x)
-                //tags.push(tag)
             } else {
                 tags.push(
                     tags.string = desc[i],
                 )
-
-                //var tag = document.createElement("p")
-                //var x = document.createTextNode(desc[i])
-                //tag.appendChild(x)
-                //tags.push(tag)
-
             }
         }
 
