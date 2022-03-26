@@ -4,6 +4,12 @@ html, body {
     bottom:0;
     left:0;
     right:0;
+    text-rendering: optimizeLegibility;
+
+}
+
+.cool-to-warm-spectrum {
+    background: linear-gradient(135deg,white 0%,white 75%,papayawhip 100%);
 }
 
 /*
