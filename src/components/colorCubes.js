@@ -55,6 +55,7 @@ const ColorCubes = (props) => {
                         <div className="titleBox">
                             <h1 className="titleBoxTitle">**{obj_titles_EN[0]}</h1>
                         </div>
+                        <div className="dotLine"></div>
                         <diV className="rowScroll">
                             <ObjectDescription text={obj_desc_EN[0]}></ObjectDescription>
                         </diV>
@@ -71,6 +72,7 @@ const ColorCubes = (props) => {
                         <div className="titleBox">
                             <h1 className="titleBoxTitle underlined">**{obj_titles_EN[1]}</h1>
                         </div>
+                        <div className="dotLine"></div>
                         <diV className="rowScroll">
                             <ObjectDescription text={obj_desc_EN[1]}></ObjectDescription>
                         </diV>
@@ -88,6 +90,7 @@ const ColorCubes = (props) => {
                         <div className="titleBox">
                             <h1 className="titleBoxTitle">**{obj_titles_EN[2]}</h1>
                         </div>
+                        <div className="dotLine"></div>
                         <diV className="rowScroll">
                             <ObjectDescription text={obj_desc_EN[2]}></ObjectDescription>
                         </diV>
@@ -103,6 +106,7 @@ const ColorCubes = (props) => {
                         <div className="titleBox">
                             <h1 className="titleBoxTitle underlined">**{obj_titles_EN[3]}</h1>
                         </div>
+                        <div className="dotLine"></div>
                         <diV className="rowScroll">
                             <ObjectDescription text={obj_desc_EN[3]}></ObjectDescription>
                         </diV>
