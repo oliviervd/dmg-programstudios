@@ -41,7 +41,7 @@ const SpectreMain = (props) => {
 
     console.log("curated set: "+ curation)
     return(
-        <div className="cool-to-warm-spectrum rowScrollMain">
+        <div className="rowScrollMain svg_divider">
             <Accordion/>
             <div className="cool-to-warm-spectrum accordion-container">
                 <ImageGenerator num={num}

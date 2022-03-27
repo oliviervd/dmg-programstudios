@@ -318,3 +318,11 @@ img{
 .accordion-container{
     height: 100vh;
 }
+
+.svg_container{
+    position: relative;
+    z-index: -1;
+    transform: skewX(25deg) translateX(-500px);
+    height: 0vh;
+    left: 0;
+}
