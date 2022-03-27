@@ -2,7 +2,6 @@ import React,{useState} from "react";
 import ImageGenerator from "./imageGenerator";
 import ColorCubes from "./colorCubes";
 import object_colors from "../data/objectsColor_10.json";
-import ldes_translations from "../data/ldes_dmg_translations.json"
 
 function numSelect(i) {
 
@@ -31,9 +30,9 @@ const SpectreMain = (props) => {
     const num = props.num;
     const [curation, setCuration] = useState(generateCuration(num));
 
-    function handleCurationChange(event) {
+    function handleCurationChange() {
         const _x = generateCuration(num);
-        setCuration((prev) => _x);
+        setCuration(() => _x);
         console.log(_x);
     }
 
@@ -42,13 +41,10 @@ const SpectreMain = (props) => {
         <div className="cool-to-warm-spectrum">
             <ImageGenerator num={num}
                             curatedSet = {curation}/>
-
             <ColorCubes num={num}
                         curation={curation}
                         className="container"/>
-
             <button className="buttonRandomizer" onClick={handleCurationChange}>PSEUDO-RANDOMIZE</button>
-
         </div>
     )
 }
