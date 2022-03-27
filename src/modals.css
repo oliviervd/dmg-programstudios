@@ -3,6 +3,7 @@
 .modal1 {
     position: absolute;
     background: papayawhip;
+    font-family: "happy-times-NG_regular_master_web", sans-serif;
     border: black solid 3px;
     opacity: 0.9;
     top: 60vh;
@@ -23,6 +24,7 @@
 .modal2 {
     position: absolute;
     background: papayawhip;
+    font-family: "happy-times-NG_regular_master_web", sans-serif;
     border: black solid 3px;
     opacity: 0.9;
     top: 20vh;
@@ -43,10 +45,8 @@
 
 .modal3 {
     position: absolute;
-    border-top: black solid 3px;
-    border-left: black solid 3px;
-    border-bottom: black solid 1px;
-    border-right: black solid 1px;
+    font-family: "happy-times-NG_regular_master_web", sans-serif;
+    border: black solid 3px;
     top: 40vh;
     left: 25vw;
     right: 45vw;
@@ -66,6 +66,7 @@
 .modal4{
     position: absolute;
     background: papayawhip;
+    font-family: "happy-times-NG_regular_master_web", sans-serif;
     border: black solid 3px;
     top: 60vh;
     left: 70vw;
