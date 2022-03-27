@@ -36,10 +36,10 @@ const ProjectDescription = () => {
 
                 <h1><italic>__pull. transmit. fall in love, and break up again.</italic></h1>
 
-                <br/> The <Modal modalID="modal1 conicBackdrop" modalLineID="modal1Line" text="XENO-MORPHIC" description={xenomorphic}></Modal>, the SENSORIAL & SENSIBLE, the TRANSHISTORICAL, the CURRENT and PAST-FUTURE are all ideologies
-                and strategies that propel us in devising new kinds of knowledge production and interfaces that are perhaps more sensible to its users,
-                more conscious of its surroundings and above all - foster inspiration.
-
+                <br/> The <Modal modalID="modal1 conicBackdrop" modalLineID="modal1Line" text="XENO-MORPHIC" description={xenomorphic}></Modal>,
+                the SENSORIAL & SENSIBLE, the TRANS-HISTORICAL, the CURRENT and PAST-FUTURE are speculative models that
+                instigate us in questioning our current tools and inspire us in devising new kinds of knowledge production
+                and interfaces that are perhaps more sensible to its users, more conscious of its surroundings and above all - foster inspiration.
                 <br/>
 
                 <h1>__break, mutate and build upon what is real and what isn't real.
