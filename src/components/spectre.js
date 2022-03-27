@@ -47,7 +47,7 @@ const SpectreMain = (props) => {
                         curation={curation}
                         className="container"/>
 
-            <button className="buttonRandomizer" onClick={handleCurationChange}>GENERATE NEW CURATED SET</button>
+            <button className="buttonRandomizer" onClick={handleCurationChange}>PSEUDO-RANDOMIZE</button>
 
         </div>
     )
