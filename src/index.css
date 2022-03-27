@@ -5,6 +5,7 @@ html, body {
     left:0;
     right:0;
     text-rendering: optimizeLegibility;
+    cursor: cell;
 
 }
 
@@ -113,6 +114,10 @@ h2 {
 .titleBoxTitle {
     font-size: 20px;
     text-align: left;
+}
+
+.glossText{
+    transform: rotate(90deg);
 }
 
 .colorText{
