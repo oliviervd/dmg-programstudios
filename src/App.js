@@ -17,6 +17,7 @@ function App() {
                     <ProjectDescription></ProjectDescription>
                     <div className="dotLine"></div>
                     <SpectreMain num={_objectNum}/>
+                    <div className="dotLine"></div>
                 </div>
             </spectrumProvider>
         </div>
