@@ -78,7 +78,7 @@
     background-position-y: 0%;
     background-repeat: repeat;
     background-attachment: scroll;
-    background-image: conic-gradient(from 10deg, #79aea1 0deg, rgb(131, 241, 2) 20deg, rgb(196, 196, 196) 40deg, #FFC0CB 60deg, #79aea1 100deg, rgb(131, 241, 2) 120deg, rgb(196, 196, 196) 140deg, #FFC0CB 160deg, rgb(196, 196, 196) 180deg, #FFC0CB 190deg, #79aea1 200deg, rgb(131, 241, 2) 220deg, rgb(196, 196, 196) 225deg, #FFC0CB 230deg, #79aea1 240deg, rgb(131, 241, 2) 260deg, rgb(196, 196, 196) 280deg, #FFC0CB 300deg, rgb(196, 196, 196) 330deg,#FFC0CB 350deg,#79aea1 360deg);
+    background-image: conic-gradient(from 10deg, #79aea1 0deg, floralwhite 20deg, rgb(196, 196, 196) 40deg, #FFC0CB 60deg, #79aea1 100deg, floralwhite 120deg, rgb(196, 196, 196) 140deg, #FFC0CB 160deg, rgb(196, 196, 196) 180deg, #FFC0CB 190deg, #79aea1 200deg, floralwhite 220deg, rgb(196, 196, 196) 225deg, #FFC0CB 230deg, #79aea1 240deg, floralwhite 260deg, rgb(196, 196, 196) 280deg, #FFC0CB 300deg, rgb(196, 196, 196) 330deg,#FFC0CB 350deg,#79aea1 360deg);
     background-size: auto;
     background-origin: padding-box;
     background-clip: border-box;

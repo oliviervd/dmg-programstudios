@@ -29,6 +29,11 @@ ALL ABOUT TYPOGRAPHY
 }
 
 @font-face {
+    font-family: "happy-times-NG_regular_master_web";
+    src: local("happy-times-NG_regular_master_web"), url(fonts/happy-times-NG_regular_master_web.ttf);
+}
+
+@font-face {
     font-family: "lineal";
     src: local("lineal"), url(fonts/Lineal.otf);
 }
@@ -88,7 +93,7 @@ h2 {
 
 .titleBox{
     margin-top: 4px;
-    height: 4vw;
+    height: 6vh;
 }
 
 .titleBoxTitle {
@@ -102,7 +107,7 @@ h2 {
 }
 
 .descText {
-    font-family: "happy-times-NG_italic_master_web", sans-serif;
+    font-family: "happy-times-NG_regular_master_web", sans-serif;
     font-size: 15px;
 }
 
@@ -148,6 +153,7 @@ button{
     border-bottom: none;
     border-top: none;
     overflow-y:auto;
+    margin-top: 4px;
 }
 
 .scroll-container {
