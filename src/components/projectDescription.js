@@ -1,6 +1,5 @@
 import Modal from "./modal/modal"
-import React, {useState} from "react"
-import object_colors from "../data/objectsColor_10.json";
+import React from "react"
 
 const chapters = "MODELS FROM THE PAST FOR THE FUTURE, as a site for post-digital discourse, serves as a counter-proposal " +
     "to the accelerated pace of cultural production in museums today. This has created a dichotomy between the need to " +
@@ -20,12 +19,6 @@ const reflective = "MODELS FROM THE PAST OF THE FUTURE reflects on the concept a
     "a place that displayed 'good forms of design and craftmanship', in which the museum had a very specific social function to inspire and inform local craftsmen in their own practices."
 
 const ProjectDescription = () => {
-
-    function refreshPage() {
-        window.location.reload(false);
-
-
-    }
 
     return(
         <div className="infoBoxLeft">
