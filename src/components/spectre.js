@@ -1,7 +1,7 @@
 import React,{useState} from "react";
 import ImageGenerator from "./imageGenerator";
 import ColorCubes from "./colorCubes";
-import Accordion from "./Accordion";
+import Accordion from "./carousel/Accordion";
 
 //data
 import object_colors from "../data/objectsColor_10.json";
@@ -41,7 +41,7 @@ const SpectreMain = (props) => {
 
     console.log("curated set: "+ curation)
     return(
-        <div className="rowScrollMain">
+        <div className="cool-to-warm-spectrum rowScrollMain">
             <Accordion/>
             <div className="cool-to-warm-spectrum accordion-container">
                 <ImageGenerator num={num}
