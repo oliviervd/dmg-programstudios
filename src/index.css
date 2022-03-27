@@ -44,7 +44,17 @@ h1 {
 }
 
 .mainTitle{
-    font-family: "lineal";
+    font-family: "happy-times-NG_bold_master_web";
+    font-size: 100px;
+    padding-top: 20vh;
+    height: 50vh;
+    bottom: 40vh;
+}
+
+.mainTitleSpan{
+    display: inline-block;
+    vertical-align: middle;
+    line-height: normal;
 }
 
 
@@ -62,6 +72,10 @@ h4 {
 h2 {
     font-size: 17px;
     font-family: "happy-times-NG_italic_master_web", sans-serif;
+}
+
+.centerText{
+    text-align: center;
 }
 
 .underlined{
@@ -154,6 +168,12 @@ button{
     border-top: none;
     overflow-y:auto;
     margin-top: 4px;
+}
+
+.rowScrollMain{
+    height: 100vh;
+    overflow-y:auto;
+    overflow-x:hidden;
 }
 
 .scroll-container {
@@ -287,4 +307,8 @@ img{
     font-size: 10px;
     grid-template-columns: repeat(5, 20%);
     grid-template-rows: repeat(2, 2vh);
+}
+
+.accordion-container{
+    height: 100vh;
 }

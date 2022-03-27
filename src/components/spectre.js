@@ -1,6 +1,9 @@
 import React,{useState} from "react";
 import ImageGenerator from "./imageGenerator";
 import ColorCubes from "./colorCubes";
+import Accordion from "./Accordion";
+
+//data
 import object_colors from "../data/objectsColor_10.json";
 
 function numSelect(i) {
@@ -38,13 +41,16 @@ const SpectreMain = (props) => {
 
     console.log("curated set: "+ curation)
     return(
-        <div className="cool-to-warm-spectrum">
-            <ImageGenerator num={num}
-                            curatedSet = {curation}/>
-            <ColorCubes num={num}
-                        curation={curation}
-                        className="container"/>
-            <button className="buttonRandomizer" onClick={handleCurationChange}>PSEUDO-RANDOMIZE</button>
+        <div className="rowScrollMain">
+            <Accordion/>
+            <div className="cool-to-warm-spectrum accordion-container">
+                <ImageGenerator num={num}
+                                curatedSet = {curation}/>
+                <ColorCubes num={num}
+                            curation={curation}
+                            className="container"/>
+                <button className="buttonRandomizer" onClick={handleCurationChange}>PSEUDO-RANDOMIZE</button>
+            </div>
         </div>
     )
 }
