@@ -2,11 +2,11 @@ import Modal from "./modal/modal"
 import React from "react"
 
 const chapters = "MODELS FROM THE PAST FOR THE FUTURE, as a site for post-digital discourse, serves as a counter-proposal " +
-    "to the accelerated pace of cultural production in museums today. This has created a dichotomy between the need to " +
-    "create new experiences to increase our marketability within the experience economy, versus our role as care-giving " +
+    "to the accelerated pace of cultural production in museums today resulting in the dichotomy between the need to " +
+    "create new experiences in order to increase our marketability within the experience economy, versus our role as care-giving " +
     "institutions. By taking the time to explore different ways of approaching a museum collection (digitally), " +
-    "this project can be read as both a critical enquiry into the way collections are displayed, and a curatorial exercise " +
-    "in creating a space in which to negotiate alternative modes of knowledge production and dissemination that might " +
+    "this project can be read as both a critical enquiry into the circulation of collection displays, as well as a curatorial exercise " +
+    "in creating new spaces in which we can negotiate alternative modes of knowledge production and dissemination that might " +
     "make more sense on a planetary scale in terms of our environment."
 
 const xenomorphic = "Meillisoux argues that one can only approach the contingent " +
@@ -15,8 +15,9 @@ const xenomorphic = "Meillisoux argues that one can only approach the contingent
     "in which these changes occur. Whether by being part of the exhibition or the lack thereof..."
 
 const reflective = "MODELS FROM THE PAST OF THE FUTURE reflects on the concept and notion of model(s) in relationship to the museum today." +
-    " How does a model museum behave? Looking back at our past we find that the museum in its earliest form was a museum of models (modellenmuseum), " +
-    "a place that displayed 'good forms of design and craftmanship', in which the museum had a very specific social function to inspire and inform local craftsmen in their own practices."
+    " How does a model museum behave? Looking back at our past we find that the museum in its earliest form was a museum of models, " +
+    "a place that displayed 'good forms of design and craftsmanship', in which the museum had a very specific social function to inspire " +
+    "and inform local craftsmen in their own practices."
 
 const ProjectDescription = () => {
 
