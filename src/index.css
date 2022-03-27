@@ -343,7 +343,6 @@ img{
     position: relative;
     z-index: -1;
     opacity: 1;
-    animation: fade 13s infinite;
     transform: skewX(30deg) translateX(-40.5%);
     height: 0vh;
     left: 0;
