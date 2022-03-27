@@ -30,9 +30,9 @@ const ProjectDescription = () => {
     return(
         <div className="infoBoxLeft">
             <h1 className="underlined" style={{fontSize: "20px"}}>___PROJECT DESCRIPTION</h1>
-            <p style={{fontSize: "15px"}}>MODELS FROM THE PAST FOR THE FUTURE is a site for speculative and intuitive knowledge production
-                that is both <Modal  modalID="modal2 conicBackdrop" modalLineID="modal2Line" text="reflective" description={reflective}/>
-                and performative in investigating and embracing the (as yet) unknown. At the moment of closing the museum, this research
+            <p style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>MODELS FROM THE PAST FOR THE FUTURE is a site for speculative and intuitive knowledge production
+                that is both <Modal  modalID="modal2 conicBackdrop" modalLineID="modal2Line" text="reflective" description={reflective}/> and
+                performative in investigating and embracing the (as yet) unknown. At the moment of closing the museum, this research
                 positions itself in between spaces of where we are now and where we are going next. <ul> As an
                     <Modal modalID="modal3 conicBackdrop" modalLineID="modal3Line"  text=" evolving platform" description={chapters}></Modal>, it plays out the fluctuating of thoughts and spaces and seeks out alternative approaches and readings of the collection of Design museum Gent.</ul>
                 <ul>As a <bold className="underlined">living archive</bold>, it will grow and serve as a sensing layer for past, current and future research practices. Living - permutating borders - the interweave of past traces and future visions.</ul>
