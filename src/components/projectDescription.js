@@ -31,7 +31,7 @@ const ProjectDescription = () => {
                     <Modal modalID="modal3 conicBackdrop" modalLineID="modal3Line"  text=" evolving platform" description={chapters}></Modal>, it plays out the fluctuating of thoughts and spaces and seeks out alternative approaches and readings of the collection of Design museum Gent.</ul>
                 <ul>As a <bold className="underlined">living archive</bold>, it will grow and serve as a sensing layer for past, current and future research practices. Living - permutating borders - the interweave of past traces and future visions.</ul>
                 If anything, it moves and shies away from classical approaches of indexing and traditional ways of opening up museum collections online.
-                Although it takes the collection database as a starting point, it aims at remedying the wretch and clutch of its <Modal text="methodologies">methodologies.</Modal>
+                Although it takes the collection database as a starting point, it aims at remedying the wretch and clutch of its methodologies.
                 <br/>
 
                 <h1><italic>__pull. transmit. fall in love, and break up again.</italic></h1>
