@@ -43,18 +43,19 @@ const SpectreMain = (props) => {
     return(
         <div className="rowScrollMain svg_divider">
             <Accordion/>
+            <div>COLOR UI INTERFACE (PICK A COLOR AND GENERATE SELECTION)</div>
             <div className="colorPickInterface" onClick={handleCurationChange}>
                 <div className="colorPickerInterfaceList">
-                    <div className="colorPickerInterfaceColorSQ"></div>
-                    <div className="colorPickerInterfaceColorSQ"></div>
-                    <div className="colorPickerInterfaceColorSQ"></div>
-                    <div className="colorPickerInterfaceColorSQ"></div>
-                    <div className="colorPickerInterfaceColorSQ"></div>
-                    <div className="colorPickerInterfaceColorSQ"></div>
-                    <div className="colorPickerInterfaceColorSQ"></div>
-                    <div className="colorPickerInterfaceColorSQ"></div>
-                    <div className="colorPickerInterfaceColorSQ"></div>
-                    <div className="colorPickerInterfaceColorSQ"></div>
+                    <div className="colorPickerInterfaceColorSQ">placeholder COLOR HEX 1</div>
+                    <div className="colorPickerInterfaceColorSQ">placeholder COLOR HEX 2</div>
+                    <div className="colorPickerInterfaceColorSQ">placeholder COLOR HEX 3</div>
+                    <div className="colorPickerInterfaceColorSQ">placeholder COLOR HEX 4</div>
+                    <div className="colorPickerInterfaceColorSQ">placeholder COLOR HEX 5</div>
+                    <div className="colorPickerInterfaceColorSQ">placeholder COLOR HEX 6</div>
+                    <div className="colorPickerInterfaceColorSQ">placeholder COLOR HEX 7</div>
+                    <div className="colorPickerInterfaceColorSQ">placeholder COLOR HEX 8</div>
+                    <div className="colorPickerInterfaceColorSQ">placeholder COLOR HEX 9</div>
+                    <div className="colorPickerInterfaceColorSQ">placeholder COLOR HEX 10</div>
                 </div>
                 <button className="colorPickerInterfaceLuckyButton">FEELING LUCKY?</button>
             </div>

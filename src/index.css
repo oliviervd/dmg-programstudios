@@ -360,11 +360,21 @@ img{
     border: solid black 3px;
 }
 
+.colorPickerInterfaceLuckyButton{
+    border: solid #0066FF 3px;
+    background-color: white;
+    height: 100%;
+    text-align: center;
+    font-family: "happy-times-NG_bold_master_web";
+    font-size: 20px;
+}
+
 .colorPickerInterfaceList{
     display:grid;
     grid-template-columns: repeat(10, 10%);
 }
 
 .colorPickerInterfaceColorSQ{
-    border: solid blue 3px;
+    border: solid #0066FF 3px;
+    text-align: center;
 }
