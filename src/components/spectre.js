@@ -43,13 +43,27 @@ const SpectreMain = (props) => {
     return(
         <div className="rowScrollMain svg_divider">
             <Accordion/>
+            <div className="colorPickInterface" onClick={handleCurationChange}>
+                <div className="colorPickerInterfaceList">
+                    <div className="colorPickerInterfaceColorSQ"></div>
+                    <div className="colorPickerInterfaceColorSQ"></div>
+                    <div className="colorPickerInterfaceColorSQ"></div>
+                    <div className="colorPickerInterfaceColorSQ"></div>
+                    <div className="colorPickerInterfaceColorSQ"></div>
+                    <div className="colorPickerInterfaceColorSQ"></div>
+                    <div className="colorPickerInterfaceColorSQ"></div>
+                    <div className="colorPickerInterfaceColorSQ"></div>
+                    <div className="colorPickerInterfaceColorSQ"></div>
+                    <div className="colorPickerInterfaceColorSQ"></div>
+                </div>
+                <button className="colorPickerInterfaceLuckyButton">FEELING LUCKY?</button>
+            </div>
             <div className="cool-to-warm-spectrum accordion-container">
                 <ImageGenerator num={num}
                                 curatedSet = {curation}/>
                 <ColorCubes num={num}
                             curation={curation}
                             className="container"/>
-                <button className="buttonRandomizer" onClick={handleCurationChange}>PSEUDO-RANDOMIZE</button>
             </div>
         </div>
     )
