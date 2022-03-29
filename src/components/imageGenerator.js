@@ -9,7 +9,6 @@ const ImageGenerator = (props) => {
         const x = curatedSet[imCount]
         var _im = object_colors[x]["IIIF_image"].replace("['","").replace("']","").replace("'","").split(",")
         _images.push(_im);
-        console.log(_images);
     }
 
     return(
