@@ -1,9 +1,7 @@
-import React, {useState} from "react";
+import React from "react";
 import XenoHeader from "./components/header+footer/xenoHeader"
 import SpectreMain from "./components/spectre"
 import ProjectDescription from "./components/projectDescription";
-import {spectrumProvider} from "./spectrumContext";
-import $ from 'jquery';
 
 function App() {
 
@@ -11,7 +9,6 @@ function App() {
 
     return (
         <div>
-            <spectrumProvider>
                 <XenoHeader/>
                 <div className="mainContainer">
                     <ProjectDescription></ProjectDescription>
@@ -19,7 +16,6 @@ function App() {
                     <SpectreMain num={_objectNum}/>
                     <div className="dotLine"></div>
                 </div>
-            </spectrumProvider>
         </div>
     );
 }
