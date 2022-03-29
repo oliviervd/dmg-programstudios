@@ -1,16 +1,8 @@
-import React, {useState} from "react";
+import React from "react";
 
 const HexCube = (props) => {
 
-    const [Color, setColor] = useState("");
-
-    function fetchColor() {
-        Color = hex_list[0].replace("[","")
-    }
-
     const hex_list = props.hexColors
-    const color_names = props.color_names.split(",");
-   // console.log(color_names)
     for (var cube=0; cube<10; ++cube) {
 
     }
