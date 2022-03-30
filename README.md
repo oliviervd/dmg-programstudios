@@ -1,4 +1,4 @@
-# __SPECTRE__
+# __MODELS FROM THE PAST FOR THE FUURE__
 
 _pull. transmit. fall in love, and break up again._
 
