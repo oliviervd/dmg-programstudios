@@ -1,4 +1,4 @@
-# __MODELS FROM THE PAST FOR THE FUURE__
+# __MODELS FROM THE PAST FOR THE FUTURE__
 
 _pull. transmit. fall in love, and break up again._
 
