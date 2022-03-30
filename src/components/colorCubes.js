@@ -45,8 +45,6 @@ const ColorCubes = (props) => {
         }
 
     return(
-            //<p>{props._hVal}</p> //todo: fetch hex values from masonry.js
-
             <div className="container">
                     <div>
                         <HexCube
