@@ -2,12 +2,10 @@ import React,{useState} from "react";
 import ImageGenerator from "./imageGenerator";
 import ColorCubes from "./colorCubes";
 import Accordion from "./carousel/Accordion";
+import Model1 from "./models/model1"
 
 //data
 import object_c from "../data/objectsColor_10.json";
-
-
-
 
 const SpectreMain = (props) => {
 
@@ -62,6 +60,7 @@ const SpectreMain = (props) => {
     return(
         <div className="rowScrollMain svg_divider">
             <Accordion/>
+            <Model1/>
             <h3>COLOR UI INTERFACE (PICK A COLOR AND GENERATE SELECTION)</h3>
             <div className="colorPickInterface">
                 <div className="colorPickerInterfaceList">

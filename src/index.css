@@ -130,6 +130,10 @@ h2 {
     font-size: 15px;
 }
 
+.modelTitle{
+    text-align: center;
+}
+
 text {
     position: relative;
 }
