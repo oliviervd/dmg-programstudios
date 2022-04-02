@@ -13,10 +13,10 @@ const ImageGenerator = (props) => {
 
     return(
         <div className="container" id="imageRandom">
-            <img alt="DREAMING OF IMAGES" src={_images[0][0].replace("/full/0/default.jpg","/750,/0/default.jpg")}></img>
-            <img alt="DREAMING OF IMAGES" src={_images[1][0].replace("/full/0/default.jpg","/750,/0/default.jpg")}></img>
-            <img alt="DREAMING OF IMAGES" src={_images[2][0].replace("/full/0/default.jpg","/700,/0/default.jpg")}></img>
-            <img alt="DREAMING OF IMAGES" src={_images[3][0].replace("/full/0/default.jpg","/700,/0/default.jpg")}></img>
+            <img alt="DREAMING OF IMAGES" src={_images[0][0].replace("/full/0/default.jpg", "/750,/0/default.jpg")}/>
+            <img alt="DREAMING OF IMAGES" src={_images[1][0].replace("/full/0/default.jpg", "/750,/0/default.jpg")}/>
+            <img alt="DREAMING OF IMAGES" src={_images[2][0].replace("/full/0/default.jpg", "/700,/0/default.jpg")}/>
+            <img alt="DREAMING OF IMAGES" src={_images[3][0].replace("/full/0/default.jpg", "/700,/0/default.jpg")}/>
         </div>
     )
 }

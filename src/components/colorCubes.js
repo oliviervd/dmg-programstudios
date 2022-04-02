@@ -50,13 +50,13 @@ const ColorCubes = (props) => {
                         <HexCube
                             hexColors = {color_hex[0]}
                             color_names={color_names[0]}/>
-                        <div className="dotLine"></div>
-                        <div className="titleBox">
-                            <h1 className="titleBoxTitle">**{obj_titles_EN[0]}</h1>
+                        <div className="dotLine"/>
+                        <div className="title-box">
+                            <h1 className="title-box__title">**{obj_titles_EN[0]}</h1>
                         </div>
-                        <div className="dotLine"></div>
+                        <div className="dotLine"/>
                         <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[0]}></ObjectDescription>
+                            <ObjectDescription text={obj_desc_EN[0]}/>
                         </div>
                     </div>
                     <div>
@@ -64,13 +64,13 @@ const ColorCubes = (props) => {
                             hexColors = {color_hex[1]}
                             color_names={color_names[1]}
                         />
-                        <div className="dotLine"></div>
-                        <div className="titleBox">
-                            <h1 className="titleBoxTitle underlined">**{obj_titles_EN[1]}</h1>
+                        <div className="dotLine"/>
+                        <div className="title-box">
+                            <h1 className="title-box__title underlined">**{obj_titles_EN[1]}</h1>
                         </div>
-                        <div className="dotLine"></div>
+                        <div className="dotLine"/>
                         <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[1]}></ObjectDescription>
+                            <ObjectDescription text={obj_desc_EN[1]}/>
                         </div>
                     </div>
                     <div>
@@ -79,13 +79,13 @@ const ColorCubes = (props) => {
                             hexColors = {color_hex[2]}
                             color_names={color_names[2]}
                         />
-                        <div className="dotLine"></div>
-                        <div className="titleBox">
-                            <h1 className="titleBoxTitle">**{obj_titles_EN[2]}</h1>
+                        <div className="dotLine"/>
+                        <div className="title-box">
+                            <h1 className="title-box__title">**{obj_titles_EN[2]}</h1>
                         </div>
-                        <div className="dotLine"></div>
+                        <div className="dotLine"/>
                         <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[2]}></ObjectDescription>
+                            <ObjectDescription text={obj_desc_EN[2]}/>
                         </div>
 
                     </div>
@@ -95,13 +95,13 @@ const ColorCubes = (props) => {
                             hexColors = {color_hex[3]}
                             color_names={color_names[3]}
                         />
-                        <div className="dotLine"></div>
-                        <div className="titleBox">
-                            <h1 className="titleBoxTitle underlined">**{obj_titles_EN[3]}</h1>
+                        <div className="dotLine"/>
+                        <div className="title-box">
+                            <h1 className="title-box__title underlined">**{obj_titles_EN[3]}</h1>
                         </div>
-                        <div className="dotLine"></div>
+                        <div className="dotLine"/>
                         <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[3]}></ObjectDescription>
+                            <ObjectDescription text={obj_desc_EN[3]}/>
                         </div>
 
 

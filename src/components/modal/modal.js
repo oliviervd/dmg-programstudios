@@ -12,7 +12,7 @@ const Modal = (props) => {
             <a className="refTex conicBackdrop underlined" onClick={toggleModal}>{props.text}</a>
             {modal && (
                 <div>
-                    <div className={props.modalLineID}></div>
+                    <div className={props.modalLineID}/>
                     <div className={props.modalID}>
                         <p>{props.description}</p>
                     </div>
