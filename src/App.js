@@ -7,14 +7,16 @@ function App() {
 
     const _objectNum = 4;
 
+
     return (
         <div>
                 <XenoHeader/>
+
                 <div className="mainContainer">
-                    <ProjectDescription></ProjectDescription>
-                    <div className="dotLine"></div>
+                    <ProjectDescription/>
+                    <div className="dotLine"/>
                     <SpectreMain num={_objectNum}/>
-                    <div className="dotLine"></div>
+                    <div className="dotLine"/>
                 </div>
         </div>
     );
