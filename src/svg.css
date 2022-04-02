@@ -5,7 +5,7 @@
     opacity: 1;
     animation: fade 10s infinite;
     transform: skewX(29deg) translateX(-39.5%);
-    height: 0vh;
+    height: 0;
     left: 0;
 }
 
@@ -15,7 +15,7 @@
     opacity: 1;
     animation: fade 7s infinite;
     transform: skewX(30deg) translateX(-40%);
-    height: 0vh;
+    height: 0;
     left: 0;
 }
 
@@ -24,7 +24,7 @@
     z-index: -1;
     opacity: 1;
     transform: skewX(30deg) translateX(-40.5%);
-    height: 0vh;
+    height: 0;
     left: 0;
 }
 
@@ -34,7 +34,7 @@
     opacity: 1;
     animation: fade 9s infinite;
     transform: skewX(29.5deg) translateX(-40%);
-    height: 0vh;
+    height: 0;
     left: 0;
 }
 
@@ -44,7 +44,7 @@
     opacity: 1;
     animation: fade 5s infinite;
     transform: skewX(30deg) translateX(-40.25%);
-    height: 0vh;
+    height: 0;
     left: 0;
 }
 

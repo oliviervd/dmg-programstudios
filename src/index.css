@@ -9,15 +9,12 @@ html, body {
 
 }
 
-.cool-to-warm-spectrum {
-    background: linear-gradient(135deg,white 0%,white 75%,papayawhip 100%);
+div {
+    font-family: "happy-times-NG_bold_master_web", sans-serif;
+    font-size: 12px;
 }
 
-/*
-ALL ABOUT TYPOGRAPHY
-*/
-
-/* FONTS */
+/* ---------------------------------- FONTS & TYPE ---------------------------------- */
 
 @font-face {
     font-family: "happy-times-NG_bold_master_web";
@@ -44,49 +41,21 @@ h1 {
     font-family: "happy-times-NG_bold_master_web", sans-serif;
 }
 
-.mainTitle{
-    font-family: "happy-times-NG_bold_master_web";
-    font-size: 100px;
-    padding-top: 20vh;
-    height: 50vh;
-    bottom: 40vh;
-}
-
-.mainTitleSpan{
-    display: inline-block;
-    vertical-align: middle;
-    line-height: normal;
-}
-
-
-.presser{
-    font-size: 43px;
-    font-family: "happy-times-NG_bold_master_web", sans-serif;
-    text-decoration: underline;
-    border-left: 2px dotted black;
-    padding-left: 4px;
-}
-
-.box{
-    position: relative;
-    width: 400px;
-    left: 50vw;
-}
-
-h4 {
-    font-family: "happy-times-NG_italic_master_web", sans-serif;
-}
 h2 {
     font-size: 17px;
     font-family: "happy-times-NG_italic_master_web", sans-serif;
 }
 
-.center{
-    text-align: center;
+h4 {
+    font-family: "happy-times-NG_italic_master_web", sans-serif;
 }
 
-.left {
-    text-align: left;
+.main-title{
+    font-family: "happy-times-NG_bold_master_web", sans-serif;
+    font-size: 100px;
+    padding-top: 20vh;
+    height: 50vh;
+    bottom: 40vh;
 }
 
 .underlined{
@@ -112,16 +81,38 @@ h2 {
     transition: color 150ms ease-out;
 }
 
+/* ---------------------------------- COLORS ---------------------------------- */
+
+.background__cool-to-warm-spectrum {
+    background: linear-gradient(135deg,white 0%,white 75%,papayawhip 100%);
+}
+
+/* ---------------------------------- LAYOUT ---------------------------------- */
+
+.box{
+    position: relative;
+    width: 400px;
+    left: 50vw;
+}
+
+.center{
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
 .modal {
     border-left: dotted black;
 }
 
-.titleBox{
+.title-box{
     margin-top: 4px;
     height: 6vh;
 }
 
-.titleBoxTitle {
+.title-box__title {
     font-size: 20px;
     text-align: left;
 }
@@ -162,7 +153,7 @@ button{
     top: 5vw;
     width: 7vw;
     font-size: 15px;
-    font-family: "happy-times-NG_bold_master_web";
+    font-family: "happy-times-NG_bold_master_web", sans-serif;
 }
 
 .overlay {
@@ -180,11 +171,9 @@ button{
 /* ANIMATIONSSS */
 
 .rowScroll {
-    border: 2px dotted black;
+    border: 2px none black;
+    border-right-style: dotted;
     height: 300px;
-    border-left: none;
-    border-bottom: none;
-    border-top: none;
     overflow-y:auto;
     margin-top: 4px;
 }
@@ -209,7 +198,7 @@ button{
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
 
-    line-height: 0px;
+    line-height: 0;
 
     /*animation props*/
     -moz-transform: translateX(-100%);
@@ -221,13 +210,14 @@ button{
     animation: my-animation 35s linear infinite;
 }
 
-/*FIREFOXY*/
+/* FIREFOXY */
+
 @-moz-keyframes my-animation {
     from { -moz-transform: translateX(100%); }
     to { -moz-transform: translateX(-100%);}
 }
 
-/*CHROMIE */
+/* CHROMIE */
 @-webkit-keyframes my-animation {
     from { -webkit-transform: translateX(100%); }
     to { -webkit-transform: translateX(-100%); }
@@ -246,12 +236,6 @@ to {
 }
 }
 
-
-
-div {
-    font-family: "happy-times-NG_bold_master_web", sans-serif;
-    font-size: 12px;
-}
 
 #left, #right {
     border: 1px solid #aaa;
@@ -275,7 +259,7 @@ div {
     grid-template-columns: repeat(4, 24%);
     grid-template-rows: repeat(1, auto);
     column-gap: 10px;
-    row-gap: 0px;
+    row-gap: 0;
 }
 
 .mainContainer{
@@ -287,7 +271,7 @@ div {
 
 .infoBoxLeft{
     border: 4px dashed black;
-    margin-right: 2.5px;
+    margin-right: 3px;
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 200px;
@@ -333,6 +317,10 @@ img{
     height: 100vh;
 }
 
+.accordion-container-left{
+    width: 20vw;
+}
+
 .colorPickInterface{
     display:grid;
     grid-template-columns: 80% 20%;
@@ -345,7 +333,7 @@ img{
     background-color: white;
     height: 100%;
     text-align: center;
-    font-family: "happy-times-NG_bold_master_web";
+    font-family: "happy-times-NG_bold_master_web", sans-serif;
     font-size: 20px;
 }
 
