@@ -1,5 +1,6 @@
+import React, {useState} from "react"
 import Modal from "./modal/modal"
-import React from "react"
+
 
 const chapters = "MODELS FROM THE PAST FOR THE FUTURE, as a site for post-digital discourse, serves as a counter-proposal " +
     "to the accelerated pace of cultural production in museums today resulting in the dichotomy between the need to " +
@@ -21,32 +22,43 @@ const reflective = "MODELS FROM THE PAST OF THE FUTURE reflects on the concept a
 
 const ProjectDescription = () => {
 
+    const [descActive, setDescActive] = useState(true);
+
+    function openDescription() {
+        console.log("▒▒▒▒▒▒▒▒▒▒ OPEN OPEN OPEN ▒▒▒▒▒▒▒▒▒▒▒▒");
+        setDescActive(!descActive);
+    }
+
     return(
         <div className="infoBoxLeft">
-            <h1 className="underlined" style={{fontSize: "20px"}}>___PROJECT DESCRIPTION</h1>
-            <p style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>MODELS FROM THE PAST FOR THE FUTURE
-                is a site for alternative curatorial production, a prototype for an open system that embraces speculative and intuitive forms of knowledge production
-                that are both <Modal  modalID="modal2 conicBackdrop" modalLineID="modal2Line" text="reflective" description={reflective}/> and
-                performative in investigating and embracing the (as yet) unknown. At the moment of closing the museum, this research
-                positions itself in between spaces of where we are now and where we are going next, as a prototype, probe. <ul> As an
-                    <Modal modalID="modal3 conicBackdrop" modalLineID="modal3Line"  text=" evolving network" description={chapters}></Modal>
-                    , it is never finished, and becomes a site for negotiating different forms of working with and approaching the museum collection.</ul>
-                <ul>As a <bold className="underlined">living archive</bold>, it will grow and serve as a sensing layer for past, current and future research practices. Living - permutating borders - the interweave of past traces and future visions.</ul>
-                If anything, it moves and shies away from classical approaches of indexing and traditional ways of opening up museum collections online.
-                Although it takes the collection database as a starting point, it aims at remedying the wretch and clutch of its methodologies.
-                <br/>
+            {descActive &&
+                <div>
+                    <h1 className="underlined" style={{fontSize: "20px"}}>___PROJECT DESCRIPTION</h1>
+                    <p style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>MODELS FROM THE PAST FOR THE FUTURE
+                        is a site for alternative curatorial production, a prototype for an open system that embraces speculative and intuitive forms of knowledge production
+                        that are both <Modal  modalID="modal2 conicBackdrop" modalLineID="modal2Line" text="reflective" description={reflective}/> and
+                        performative in investigating and embracing the (as yet) unknown. At the moment of closing the museum, this research
+                        positions itself in between spaces of where we are now and where we are going next, as a prototype, probe. <ul> As an
+                            <Modal modalID="modal3 conicBackdrop" modalLineID="modal3Line"  text=" evolving network" description={chapters}/>
+                            , it is never finished, and becomes a site for negotiating different forms of working with and approaching the museum collection.</ul>
+                        <ul>As a <bold className="underlined">living archive</bold>, it will grow and serve as a sensing layer for past, current and future research practices. Living - permutating borders - the interweave of past traces and future visions.</ul>
+                        If anything, it moves and shies away from classical approaches of indexing and traditional ways of opening up museum collections online.
+                        Although it takes the collection database as a starting point, it aims at remedying the wretch and clutch of its methodologies.
+                        <br/>
 
-                <h1><italic>__pull. transmit. fall in love, and break up again.</italic></h1>
+                        <h1><italic>__pull. transmit. fall in love, and break up again.</italic></h1>
 
-                <br/> The <Modal modalID="modal1 conicBackdrop" modalLineID="modal1Line" text="XENO-MORPHIC" description={xenomorphic}></Modal>,
-                the SENSORIAL & SENSIBLE, the TRANS-HISTORICAL, the CURRENT and PAST-FUTURE are speculative models that
-                instigate us in questioning our current tools and inspire us in devising new kinds of knowledge production
-                and interfaces that are perhaps more sensible to its users, more conscious of its surroundings and above all - foster inspiration.
-                <br/>
+                        <br/> The <Modal modalID="modal1 conicBackdrop" modalLineID="modal1Line" text="XENO-MORPHIC" description={xenomorphic}/>,
+                        the SENSORIAL & SENSIBLE, the TRANS-HISTORICAL, the CURRENT and PAST-FUTURE are speculative models that
+                        instigate us in questioning our current tools and inspire us in devising new kinds of knowledge production
+                        and interfaces that are perhaps more sensible to its users, more conscious of its surroundings and above all - foster inspiration.
+                        <br/>
 
-                <h1>__break, mutate and build upon what is real and what isn't real.
-                </h1>
-            </p>
+                        <h1>__break, mutate and build upon what is real and what isn't real.
+                        </h1>
+                    </p>
+                </div>
+            }
         </div>
     )
 }
