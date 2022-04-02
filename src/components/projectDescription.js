@@ -24,11 +24,13 @@ const ProjectDescription = () => {
     return(
         <div className="infoBoxLeft">
             <h1 className="underlined" style={{fontSize: "20px"}}>___PROJECT DESCRIPTION</h1>
-            <p style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>MODELS FROM THE PAST FOR THE FUTURE is a site for speculative and intuitive knowledge production
-                that is both <Modal  modalID="modal2 conicBackdrop" modalLineID="modal2Line" text="reflective" description={reflective}/> and
+            <p style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>MODELS FROM THE PAST FOR THE FUTURE
+                is a site for alternative curatorial production, a prototype for an open system that embraces speculative and intuitive forms of knowledge production
+                that are both <Modal  modalID="modal2 conicBackdrop" modalLineID="modal2Line" text="reflective" description={reflective}/> and
                 performative in investigating and embracing the (as yet) unknown. At the moment of closing the museum, this research
-                positions itself in between spaces of where we are now and where we are going next. <ul> As an
-                    <Modal modalID="modal3 conicBackdrop" modalLineID="modal3Line"  text=" evolving platform" description={chapters}></Modal>, it plays out the fluctuating of thoughts and spaces and seeks out alternative approaches and readings of the collection of Design museum Gent.</ul>
+                positions itself in between spaces of where we are now and where we are going next, as a prototype, probe. <ul> As an
+                    <Modal modalID="modal3 conicBackdrop" modalLineID="modal3Line"  text=" evolving network" description={chapters}></Modal>
+                    , it is never finished, and becomes a site for negotiating different forms of working with and approaching the museum collection.</ul>
                 <ul>As a <bold className="underlined">living archive</bold>, it will grow and serve as a sensing layer for past, current and future research practices. Living - permutating borders - the interweave of past traces and future visions.</ul>
                 If anything, it moves and shies away from classical approaches of indexing and traditional ways of opening up museum collections online.
                 Although it takes the collection database as a starting point, it aims at remedying the wretch and clutch of its methodologies.
