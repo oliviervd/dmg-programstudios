@@ -67,6 +67,12 @@ h1 {
     padding-left: 4px;
 }
 
+.box{
+    position: relative;
+    width: 400px;
+    left: 50vw;
+}
+
 h4 {
     font-family: "happy-times-NG_italic_master_web", sans-serif;
 }
@@ -75,8 +81,12 @@ h2 {
     font-family: "happy-times-NG_italic_master_web", sans-serif;
 }
 
-.centerText{
+.center{
     text-align: center;
+}
+
+.left {
+    text-align: left;
 }
 
 .underlined{
