@@ -77,7 +77,7 @@ const SpectreMain = (props) => {
                 </div>
                 <button className="colorPickerInterfaceLuckyButton" onClick={handleCurationChange}>placeholder RANDOM COLORS</button>
             </div>
-            <div className="cool-to-warm-spectrum accordion-container">
+            <div className="background__cool-to-warm-spectrum accordion-container">
                 <ImageGenerator num={num}
                                 curatedSet = {curation}
                                 data = {object_colors}
