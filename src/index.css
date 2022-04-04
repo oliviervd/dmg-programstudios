@@ -262,10 +262,21 @@ to {
     row-gap: 0;
 }
 
+.superContainer{
+    display: flex;
+}
+
 .mainContainer{
     display:grid;
     height: 100%;
     grid-template-columns: 19.5% 0.5% 79.5% 0.5%;
+    border-right: dashed black 4px;
+}
+
+.mainContainerAlt{
+    display:grid;
+    height: 100%;
+    grid-template-columns: 0.5% 98.5% 0.5%;
     border-right: dashed black 4px;
 }
 
@@ -275,6 +286,7 @@ to {
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 200px;
+    width: 20%;
     height: 90vh;
     border-bottom: none;
     border-top: none;
