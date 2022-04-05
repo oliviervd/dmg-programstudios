@@ -94,6 +94,25 @@ h4 {
     font-size: 20px;
 }
 
+.model-TextColumns__3 {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+}
+
+.italic {
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.italic:hover {
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+    -o-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+}
+
 /* ---------------------------------- COLORS ---------------------------------- */
 
 .background__cool-to-warm-spectrum {
@@ -116,7 +135,14 @@ h4 {
     transition-duration: 1.5s;
     color: #FFC0CB;
     background-color: white;
-    font-family: "happy-times-NG_italic_master_web";
+    border: 3px solid #FFC0CB;
+}
+
+.emptyFrameModel__1 {
+    position:relative;
+    width: 400px;
+    height: 100%;
+    left: 30vw;
     border: 3px solid #FFC0CB;
 }
 
@@ -124,7 +150,7 @@ h4 {
 .box{
     position: relative;
     width: 400px;
-    left: 50vw;
+    left: 20vw;
 }
 
 .center{
@@ -147,6 +173,11 @@ h4 {
 .title-box__title {
     font-size: 20px;
     text-align: left;
+}
+
+.title-box__title:hover{
+    color: #FFC0CB;
+    transition-duration: 1.5s;
 }
 
 .glossText{
@@ -288,7 +319,7 @@ to {
     display:grid;
     width: 70vw;
     margin-top: 5px;
-    grid-template-columns: repeat(3, 33%);
+    grid-template-columns: repeat(3, 18vw);
     grid-template-rows: repeat(1, auto);
     column-gap: 10px;
     row-gap: 0;

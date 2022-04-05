@@ -73,15 +73,16 @@ const ColorCubes = (props) => {
                             color_names={color_names[0]}/>
                         <div className="dotLine"/>
                         <div className="title-box">
-                            <h1 className="title-box__title">**{obj_titles_EN[0]}</h1>
+                            <p className="title-box__title italic" onClick={openDescription1}>{obj_titles_EN[0]}</p>
                         </div>
-                        <div className="dotLine"/>
-                        <div className="rowScroll">
-                            <div onClick={openDescription1}>read more</div>
-                            {objectDescription1 &&
-                                <ObjectDescription text={obj_desc_EN[0]}/>
-                            }
-                        </div>
+                        {objectDescription1 &&
+                            <div>
+                                <div className="dotLine"/>
+                                <div className="rowScroll">
+                                    <ObjectDescription text={obj_desc_EN[0]}/>
+                                </div>
+                            </div>
+                        }
                     </div>
                     <div>
                         <HexCube
@@ -90,15 +91,16 @@ const ColorCubes = (props) => {
                         />
                         <div className="dotLine"/>
                         <div className="title-box">
-                            <h1 className="title-box__title underlined">**{obj_titles_EN[1]}</h1>
+                            <p className="title-box__title italic" onClick={openDescription2}>{obj_titles_EN[1]}</p>
                         </div>
-                        <div className="dotLine"/>
-                        <div className="rowScroll">
-                            <div onClick={openDescription2}>read more</div>
-                            {objectDescription2 &&
-                                <ObjectDescription text={obj_desc_EN[1]}/>
-                            }
-                        </div>
+                        {objectDescription2 &&
+                            <div>
+                                <div className="dotLine"/>
+                                <div className="rowScroll">
+                                    <ObjectDescription text={obj_desc_EN[1]}/>
+                                </div>
+                            </div>
+                        }
                     </div>
                     <div>
 
@@ -108,17 +110,16 @@ const ColorCubes = (props) => {
                         />
                         <div className="dotLine"/>
                         <div className="title-box">
-                            <h1 className="title-box__title">**{obj_titles_EN[2]}</h1>
+                            <p className="title-box__title italic" onClick={openDescription3}>{obj_titles_EN[2]}</p>
                         </div>
-                        <div className="dotLine"/>
-                        <div className="rowScroll">
-                            <div onClick={openDescription3}>read more</div>
-                            {objectDescription3 &&
-                                <ObjectDescription text={obj_desc_EN[2]}/>
-                            }
-
-                        </div>
-
+                        {objectDescription3 &&
+                            <div>
+                                <div className="dotLine"/>
+                                <div className="rowScroll">
+                                    <ObjectDescription text={obj_desc_EN[2]}/>
+                                </div>
+                            </div>
+                        }
                     </div>
 
             </div>

@@ -25,14 +25,19 @@ const Model1 = () => {
     return(
         <div>
             <h1 className="center">MODEL 1: SENSE AND SENSIBILITY</h1>
-            <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>{model1_intro}</div>
-            <br/>
-            <h2 className="left box" style={{borderLeft: "3px solid black", paddingLeft: "5px"}}>__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
-            <br/>
-            <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>{model1_0}</div>
-            <br/>
-            <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>{model1_1}</div>
+            <div className="model-TextColumns__3">
+                <div/>
+                <div>
+                    <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>{model1_intro}</div>
+                    <br/>
+                    <h2 className="left box" style={{borderLeft: "3px solid black", paddingLeft: "5px"}}>__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
+                    <br/>
+                    <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>{model1_0}</div>
+                    <br/>
+                    <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>{model1_1}</div>
+                </div>
 
+            </div>
         </div>
     )
 }

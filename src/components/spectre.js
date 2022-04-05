@@ -61,6 +61,9 @@ const SpectreMain = (props) => {
             <div className="rowScrollMain svg_divider">
                 <Accordion/>
                 <Model1/>
+                <br/>
+                <div className="dotLine"></div>
+                <br/>
                 <div className="centerBox">>
                     {/*<h3>COLOR UI INTERFACE (PICK A COLOR AND GENERATE SELECTION)</h3>
                     <div className="colorPickInterface">
@@ -78,7 +81,7 @@ const SpectreMain = (props) => {
                         </div>
                         <button className="colorPickerInterfaceLuckyButton" onClick={handleCurationChange}>placeholder RANDOM COLORS</button>
                     </div>*/}
-                    <div className="background__cool-to-warm-spectrum accordion-container">
+                    <div className="accordion-container">
                         <ImageGenerator num={num}
                                         curatedSet = {curation}
                                         data = {object_colors}
