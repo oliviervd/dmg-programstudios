@@ -14,6 +14,11 @@ div {
     font-size: 12px;
 }
 
+.centerBox{
+    display: flex;
+    justify-content: center;
+}
+
 /* ---------------------------------- FONTS & TYPE ---------------------------------- */
 
 @font-face {
@@ -281,9 +286,9 @@ to {
 
 .container {
     display:grid;
-    width: 80vw;
+    width: 70vw;
     margin-top: 5px;
-    grid-template-columns: repeat(4, 24%);
+    grid-template-columns: repeat(3, 33%);
     grid-template-rows: repeat(1, auto);
     column-gap: 10px;
     row-gap: 0;
@@ -310,6 +315,7 @@ to {
 .infoBoxLeft{
     border: 4px dashed black;
     margin-right: 3px;
+    margin-left: 50px;
     padding-right: 20px;
     padding-left: 20px;
     padding-bottom: 200px;
@@ -327,7 +333,7 @@ to {
 }
 
 img{
-    width: 20vw;
+    width: 18vw;
     height: 30vh;
     object-fit: cover;
 }
@@ -348,7 +354,7 @@ img{
 .hexCubeNames{
     display: grid;
     font-size: 10px;
-    grid-template-columns: repeat(5, 20%);
+    grid-template-columns: repeat(4, 18%);
     grid-template-rows: repeat(2, 2vh);
 }
 
@@ -362,7 +368,7 @@ img{
 
 .colorPickInterface{
     display:grid;
-    grid-template-columns: 80% 20%;
+    grid-template-columns: 80% 18%;
     height: 10vh;
     border: solid black 3px;
 }

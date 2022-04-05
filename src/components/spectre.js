@@ -58,36 +58,38 @@ const SpectreMain = (props) => {
     }
 
     return(
-        <div className="rowScrollMain svg_divider">
-            <Accordion/>
-            <Model1/>
-            <h3>COLOR UI INTERFACE (PICK A COLOR AND GENERATE SELECTION)</h3>
-            <div className="colorPickInterface">
-                <div className="colorPickerInterfaceList">
-                    <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 1</div>
-                    <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 2</div>
-                    <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 3</div>
-                    <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 4</div>
-                    <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 5</div>
-                    <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 6</div>
-                    <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 7</div>
-                    <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 8</div>
-                    <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 9</div>
-                    <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 10</div>
+            <div className="rowScrollMain svg_divider">
+                <Accordion/>
+                <Model1/>
+                <div className="centerBox">>
+                    {/*<h3>COLOR UI INTERFACE (PICK A COLOR AND GENERATE SELECTION)</h3>
+                    <div className="colorPickInterface">
+                        <div className="colorPickerInterfaceList">
+                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 1</div>
+                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 2</div>
+                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 3</div>
+                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 4</div>
+                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 5</div>
+                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 6</div>
+                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 7</div>
+                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 8</div>
+                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 9</div>
+                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 10</div>
+                        </div>
+                        <button className="colorPickerInterfaceLuckyButton" onClick={handleCurationChange}>placeholder RANDOM COLORS</button>
+                    </div>*/}
+                    <div className="background__cool-to-warm-spectrum accordion-container">
+                        <ImageGenerator num={num}
+                                        curatedSet = {curation}
+                                        data = {object_colors}
+                        />
+                        <ColorCubes num={num}
+                                    curation={curation}
+                                    data = {object_colors}
+                                    className="container"/>
+                    </div>
                 </div>
-                <button className="colorPickerInterfaceLuckyButton" onClick={handleCurationChange}>placeholder RANDOM COLORS</button>
             </div>
-            <div className="background__cool-to-warm-spectrum accordion-container">
-                <ImageGenerator num={num}
-                                curatedSet = {curation}
-                                data = {object_colors}
-                />
-                <ColorCubes num={num}
-                            curation={curation}
-                            data = {object_colors}
-                            className="container"/>
-            </div>
-        </div>
     )
 }
 

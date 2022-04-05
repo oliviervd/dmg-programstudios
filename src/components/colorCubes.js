@@ -89,24 +89,6 @@ const ColorCubes = (props) => {
                         </div>
 
                     </div>
-                    <div>
-
-                        <HexCube
-                            hexColors = {color_hex[3]}
-                            color_names={color_names[3]}
-                        />
-                        <div className="dotLine"/>
-                        <div className="title-box">
-                            <h1 className="title-box__title underlined">**{obj_titles_EN[3]}</h1>
-                        </div>
-                        <div className="dotLine"/>
-                        <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[3]}/>
-                        </div>
-
-
-
-                    </div>
 
             </div>
         )
