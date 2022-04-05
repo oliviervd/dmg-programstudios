@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState} from "react";
 import HexCube from "../components/cube"
 import ObjectDescription from "./objectDescription";
 
@@ -16,6 +16,27 @@ function titleViaURI(uri) {
 }
 
 const ColorCubes = (props) => {
+
+    // open close object description
+
+    const [objectDescription1, setObjectDescription1] = useState(false);
+    const [objectDescription2, setObjectDescription2] = useState(false);
+    const [objectDescription3, setObjectDescription3] = useState(false);
+
+
+    function openDescription1() {
+        setObjectDescription1(!objectDescription1);
+    }
+
+    function openDescription2() {
+        setObjectDescription2(!objectDescription2);
+    }
+
+    function openDescription3() {
+        setObjectDescription3(!objectDescription3);
+    }
+
+    //
 
         const selection = props.curation
         const object_colors = props.data
@@ -56,7 +77,10 @@ const ColorCubes = (props) => {
                         </div>
                         <div className="dotLine"/>
                         <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[0]}/>
+                            <div onClick={openDescription1}>read more</div>
+                            {objectDescription1 &&
+                                <ObjectDescription text={obj_desc_EN[0]}/>
+                            }
                         </div>
                     </div>
                     <div>
@@ -70,7 +94,10 @@ const ColorCubes = (props) => {
                         </div>
                         <div className="dotLine"/>
                         <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[1]}/>
+                            <div onClick={openDescription2}>read more</div>
+                            {objectDescription2 &&
+                                <ObjectDescription text={obj_desc_EN[1]}/>
+                            }
                         </div>
                     </div>
                     <div>
@@ -85,7 +112,11 @@ const ColorCubes = (props) => {
                         </div>
                         <div className="dotLine"/>
                         <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[2]}/>
+                            <div onClick={openDescription3}>read more</div>
+                            {objectDescription3 &&
+                                <ObjectDescription text={obj_desc_EN[2]}/>
+                            }
+
                         </div>
 
                     </div>
