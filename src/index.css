@@ -81,6 +81,14 @@ h4 {
     transition: color 150ms ease-out;
 }
 
+.rotateText{
+    transform: rotate(90deg);
+    position: relative;
+    top: 10%;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
 /* ---------------------------------- COLORS ---------------------------------- */
 
 .background__cool-to-warm-spectrum {
@@ -88,6 +96,25 @@ h4 {
 }
 
 /* ---------------------------------- LAYOUT ---------------------------------- */
+
+.sideBarLeft-Nav{
+    display: grid;
+    width: 40px;
+}
+
+.sideBarLeft-Nav__button{
+    background: blue;
+    color: white;
+}
+
+.sideBarLeft-Nav__button:hover{
+    transition-duration: 1.5s;
+    color: #FFC0CB;
+    background-color: white;
+    font-family: "happy-times-NG_italic_master_web";
+    border: 3px solid #FFC0CB;
+}
+
 
 .box{
     position: relative;

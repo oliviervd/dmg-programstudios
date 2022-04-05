@@ -7,11 +7,17 @@ function App() {
 
     const _objectNum = 4;
 
-    const [sideActive, setSideActive] = useState(true);
+    const [sideActiveDescription, setSideActiveDescription] = useState(false);
+    const [sideActiveGloss, setSideActiveGloss] = useState(false);
 
-    function openSide() {
+    function openSideDesc() {
         console.log("MTF STOP HIDING ME")
-        setSideActive(!sideActive);
+        setSideActiveDescription(!sideActiveDescription);
+    }
+
+    function openSideGloss() {
+        console.log("WELCOME TO THE GLOSS SIDE OF THINGS")
+        setSideActiveGloss(!sideActiveGloss);
     }
 
 
@@ -19,10 +25,23 @@ function App() {
         <div>
             <XenoHeader/>
             <div className="superContainer">
-                {sideActive &&
+                <div className="sideBarLeft-Nav">
+
+                    <div className="sideBarLeft-Nav__button" onClick={openSideDesc}>
+                        <p className="rotateText"> aBOUT.</p>
+                    </div>
+
+                    <div className="sideBarLeft-Nav__button" onClick={openSideGloss}>
+                        <p className="rotateText"> gLOSSARY.</p>
+                    </div>
+
+                </div>
+
+                {sideActiveDescription &&
                     <ProjectDescription/>
                 }
-                <div className="mainContainerAlt" onClick={openSide}>
+
+                <div className="mainContainerAlt">
                     <div className="dotLine"/>
                     <SpectreMain num={_objectNum}/>
                     <div className="dotLine"/>
