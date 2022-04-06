@@ -34,45 +34,50 @@ const ProjectDescription = () => {
             {descActive &&
                 <div>
                     <h1 className="underlined" style={{fontSize: "20px"}}>PROJECT DESCRIPTION</h1>
-                    <p style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>MODELS FROM THE PAST FOR THE FUTURE
+                    <p style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}><em><strong>MODELS FROM THE PAST FOR THE FUTURE </strong></em>
                         is a curatorial experiment that takes place during the closure of the Design Museum Ghent (2022-2025) and thus
-                        positions itself in a transition period where past, present and future interlock. By focusing on
-                        the medium-specificity of the web, it investigates new curatorial strategies that better reflect
+                        positions itself in a transition period where past, present and future interlock.
+                        <br/><br/>
+                        By focusing on the medium-specificity of the web, it investigates new curatorial strategies that better reflect
                         the singularity of design in its current context. As a prototype for an alternative system, it is
                         always critically probing new forms of knowledge production. And in its growth, it is both reflective
                         and performative in nature, as we embrace the (as yet) unknown in its potential.
                         <ul>
-                            as a dynamic network; the project is in constant evolution and critically approaches the
+                            <h1 className=" pinkHeader">* </h1> as a <strong> dynamic network </strong>; the project is in constant evolution and critically approaches the
                             underlying metabolism of the museum as an institution. No "rinse and repeat" but a form of
                             "slow programming" that takes time for getting to know itself. Because whoever wants to shape
                             the future, will have to know its past.
                         </ul>
                         <ul>
-                            As a living archive; it approaches the past as an asset for the present and the future.
+                            <h1 className=" pinkHeader">* </h1> As a <strong>living archive</strong>; it approaches the past as an asset for the present and the future.
                             A growing organ, which absorbs, processes and discards. The intertwining of traces of the past
                             with visions for the future.
                         </ul>
                         Above all, it eschews the classically oriented forms of -indexation and collection discovery.
                         The collection database may be the starting point of this search, but its finality lies precisely
                         in the critical questioning of the one-to-one translation of its structure in making the collection public.
-                        <br/>
 
-                        <h1 className=" pinkHeader">__pull. transmit.</h1>
-                        <h1 className=" pinkHeader italicSet">fall in love,</h1>
-                        <h1 className=" pinkHeader">&.</h1>
-                        <h1 className=" pinkHeader">break up again.</h1>
+                        <br/><br/>
 
-                        <br/>
+                        <h1 className=" pinkHeader" style={{fontSize: "30px"}}>__pull. transmit.</h1>
+                        <h1 className=" pinkHeader italicSet" style={{fontSize: "30px"}}>fall in love,</h1>
+                        <h1 className=" pinkHeader" style={{fontSize: "30px"}}>& break up again.</h1>
+
+                        <br/><br/>
+
                         The XENO-MORPHIC, the SENSORIAL & SENSIBLE, the TRANS-HISTORICAL, the CURRENT and PAST-FUTURE are
                         speculative models that instigate us in questioning our current tools and inspire us in devising
                         new kinds of knowledge production and interfaces that are perhaps more sensible to its users,
                         more conscious of its surroundings and above all - foster inspiration. Moving from caring for collections, to a collection of care.
-                        <br/>
 
-                        <h1 className=" pinkHeader">__break, mutate and</h1>
-                        <h1 className=" pinkHeader italicSet">build upon what is real</h1>
-                        <h1 className=" pinkHeader">&</h1>
-                        <h1 className=" pinkHeader">what isn't real</h1>
+                        <br/><br/>
+
+                        <h1 className=" pinkHeader" style={{fontSize: "30px"}}>__break, mutate and</h1>
+                        <h1 className=" pinkHeader italicSet" style={{fontSize: "30px"}}>build upon what is real</h1>
+                        <h1 className=" pinkHeader" style={{fontSize: "30px"}}>& what isn't real</h1>
+
+                        <br/><br/>
+                        <br/><br/>
 
                     </p>
                 </div>
