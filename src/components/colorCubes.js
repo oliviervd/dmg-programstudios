@@ -48,7 +48,7 @@ const ColorCubes = (props) => {
 
         for (var hexNum=0; hexNum<4; ++hexNum) {
             const x = selection[hexNum];
-            var _hexVal = object_colors[x]["HEX_values"].replace("['","").replace("']","").replace("'","").split(",")
+            var _hexVal = object_colors[x]["HEX_values"].replace("['","").replace("']","").replace("'","").replace("]","").split(",")
 
             const uri = object_colors[x]["URI"];
 
