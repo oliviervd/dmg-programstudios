@@ -73,6 +73,7 @@ const ColorCubes = (props) => {
                             color_names={color_names[0]}/>
                         <div className="dotLine"/>
                         <div className="title-box">
+                            <p className="pinkHeader italic set" onClick={openDescription1}>[read more]</p>
                             <p className="title-box__title italic" onClick={openDescription1}>{obj_titles_EN[0]}</p>
                         </div>
                         {objectDescription1 &&
@@ -91,7 +92,8 @@ const ColorCubes = (props) => {
                         />
                         <div className="dotLine"/>
                         <div className="title-box">
-                            <p className="title-box__title italic" onClick={openDescription2}>{obj_titles_EN[1]}</p>
+                            <p className="pinkHeader italic set" onClick={openDescription2}>[read more]</p>
+                            <p className="title-box__title italic" onClick={openDescription2} >{obj_titles_EN[1]}</p>
                         </div>
                         {objectDescription2 &&
                             <div>
@@ -110,6 +112,7 @@ const ColorCubes = (props) => {
                         />
                         <div className="dotLine"/>
                         <div className="title-box">
+                            <p className="pinkHeader italic set" onClick={openDescription3}>[read more]</p>
                             <p className="title-box__title italic" onClick={openDescription3}>{obj_titles_EN[2]}</p>
                         </div>
                         {objectDescription3 &&
