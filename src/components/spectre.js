@@ -64,7 +64,11 @@ const SpectreMain = (props) => {
                 <br/>
                 <div className="dotLine"></div>
                 <br/>
-                <div className="centerBox">>
+                <h1 className=" pinkHeader">COLLECTIONS</h1>
+                <h1 className=" pinkHeader italicSet">OF CARE:</h1>
+                <h1 className=" pinkHeader">COLOR</h1>
+
+                <div className="centerBox">
                     {/*<h3>COLOR UI INTERFACE (PICK A COLOR AND GENERATE SELECTION)</h3>
                     <div className="colorPickInterface">
                         <div className="colorPickerInterfaceList">
