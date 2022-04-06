@@ -23,7 +23,13 @@ function App() {
 
     return (
         <div>
-            <XenoHeader/>
+            <div className="headerContainer">
+                <XenoHeader/>
+                <div className="languages_button_box">
+                    <div className="button-lang">NL</div>
+                    <div className="button-lang">EN</div>
+                </div>
+            </div>
             <div className="superContainer">
                 <div className="sideBarLeft-Nav">
 

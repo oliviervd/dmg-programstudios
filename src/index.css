@@ -246,6 +246,24 @@ button{
 
 /* ANIMATIONSSS */
 
+.headerContainer{
+    display: grid;
+    grid-template-columns: 95% 5%
+}
+
+.languages_button_box{
+    display: grid;
+    grid-template-rows:repeat(2, 50%);
+}
+
+.button-lang{
+    border: 2px solid black;
+    border-left: none;
+    text-align: center;
+    color: pink;
+    font-size: 20px;
+}
+
 .rowScroll {
     border: 2px none black;
     border-right-style: dotted;
