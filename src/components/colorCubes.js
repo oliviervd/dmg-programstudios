@@ -19,28 +19,27 @@ const ColorCubes = (props) => {
 
     // open close object description
 
+    const [objectDescription0, setObjectDescription0] = useState(false);
     const [objectDescription1, setObjectDescription1] = useState(false);
     const [objectDescription2, setObjectDescription2] = useState(false);
-    const [objectDescription3, setObjectDescription3] = useState(false);
 
 
+    function openDescription0() {
+        setObjectDescription0(!objectDescription0);
+    }
     function openDescription1() {
         setObjectDescription1(!objectDescription1);
     }
-
     function openDescription2() {
         setObjectDescription2(!objectDescription2);
     }
 
-    function openDescription3() {
-        setObjectDescription3(!objectDescription3);
-    }
 
-    //
+    // retrieve and parse data
 
         const selection = props.curation
         const object_colors = props.data
-        console.log(props.data);
+        //console.log(props.data);
         const color_hex = [];
         const color_names = [];
         const obj_titles_EN = [];
@@ -49,9 +48,7 @@ const ColorCubes = (props) => {
         for (var hexNum=0; hexNum<4; ++hexNum) {
             const x = selection[hexNum];
             var _hexVal = object_colors[x]["HEX_values"].replace("['","").replace("']","").replace("'","").replace("]","").split(",")
-
             const uri = object_colors[x]["URI"];
-
             const color_name = object_colors[x]["color_names"]
 
             const title = titleViaURI(uri)
@@ -65,18 +62,41 @@ const ColorCubes = (props) => {
             obj_desc_EN.push(desc_en);
         }
 
+        // function to copy values to clipboard
+
+        function copyTextToClipBoard_0() {
+            let copyText = color_hex[0]
+            navigator.clipboard.writeText(copyText);
+            alert("Copied the values: " +  copyText);
+        }
+
+        function copyTextToClipBoard_1() {
+            let copyText = color_hex[1]
+            navigator.clipboard.writeText(copyText);
+            alert("Copied the values: " +  copyText);
+        }
+
+        function copyTextToClipBoard_2() {
+            let copyText = color_hex[2]
+            navigator.clipboard.writeText(copyText);
+            alert("Copied the values: " +  copyText);
+        }
+
     return(
             <div className="container">
                     <div>
-                        <HexCube
+                        <HexCube id="HexCube"
                             hexColors = {color_hex[0]}
                             color_names={color_names[0]}/>
                         <div className="dotLine"/>
                         <div className="title-box">
-                            <p className="pinkHeader italic set" onClick={openDescription1}>[read more]</p>
-                            <p className="title-box__title italic" onClick={openDescription1}>{obj_titles_EN[0]}</p>
+                            <div className="title-box__top">
+                                <div className="pinkHeader italic" onClick={openDescription0}>[read more]</div>
+                                <div className="pinkHeader italic right" onClick={copyTextToClipBoard_0}>[copy to clipboard]</div>
+                            </div>
+                            <p className="title-box__title italic" onClick={openDescription0}>{obj_titles_EN[0]}</p>
                         </div>
-                        {objectDescription1 &&
+                        {objectDescription0 &&
                             <div>
                                 <div className="dotLine"/>
                                 <div className="rowScroll">
@@ -92,10 +112,13 @@ const ColorCubes = (props) => {
                         />
                         <div className="dotLine"/>
                         <div className="title-box">
-                            <p className="pinkHeader italic set" onClick={openDescription2}>[read more]</p>
-                            <p className="title-box__title italic" onClick={openDescription2} >{obj_titles_EN[1]}</p>
+                            <div className="title-box__top">
+                                <div className="pinkHeader italic" onClick={openDescription1}>[read more]</div>
+                                <div className="pinkHeader italic right" onClick={copyTextToClipBoard_1}>[copy to clipboard]</div>
+                            </div>
+                            <p className="title-box__title italic" onClick={openDescription1} >{obj_titles_EN[1]}</p>
                         </div>
-                        {objectDescription2 &&
+                        {objectDescription1 &&
                             <div>
                                 <div className="dotLine"/>
                                 <div className="rowScroll">
@@ -112,10 +135,13 @@ const ColorCubes = (props) => {
                         />
                         <div className="dotLine"/>
                         <div className="title-box">
-                            <p className="pinkHeader italic set" onClick={openDescription3}>[read more]</p>
-                            <p className="title-box__title italic" onClick={openDescription3}>{obj_titles_EN[2]}</p>
+                            <div className="title-box__top">
+                                <div className="pinkHeader italic" onClick={openDescription2}>[read more]</div>
+                                <div className="pinkHeader italic right" onClick={copyTextToClipBoard_2}>[copy to clipboard]</div>
+                            </div>
+                            <p className="title-box__title italic" onClick={openDescription2}>{obj_titles_EN[2]}</p>
                         </div>
-                        {objectDescription3 &&
+                        {objectDescription2 &&
                             <div>
                                 <div className="dotLine"/>
                                 <div className="rowScroll">
