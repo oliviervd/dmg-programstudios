@@ -37,17 +37,9 @@ const SpectreMain = (props) => {
         return ranNums
     }
 
-    // function generateCuration(count){
-    //     return numSelect(count);
-    // }
-
-    // try
-
     function generateCuration(count){
         return numSelect(count);
     }
-
-
 
     const num = props.num;
     const [curation, setCuration] = useState(generateCuration(num));

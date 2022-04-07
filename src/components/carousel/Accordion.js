@@ -13,7 +13,7 @@ const Accordion = () => {
 
     return (
         <div>
-            <div className="center" onClick={openContainer}>▒▒▒▒▒▒▒▒▒▒ OPEN OPEN OPEN ▒▒▒▒▒▒▒▒▒▒▒</div>
+            <div className="center">▒▒▒▒▒▒▒▒▒▒ OPEN OPEN OPEN ▒▒▒▒▒▒▒▒▒▒▒</div>
             {isActive &&
                 <div>
                     <div className="svg_container1">
@@ -104,7 +104,7 @@ const Accordion = () => {
                     <div className="accordion-container center">
                         <h1 className="main-title"> WHO IS <br/> COLLECTING <br/> FOR WHO?</h1>
                     </div>
-                    <div className="center" onClick={openContainer}> ▒▒▒▒▒▒▒▒▒▒ CLOSE CLOSE CLOSE ▒▒▒▒▒▒▒▒▒▒▒▒</div>
+                    <div className="center"> ▒▒▒▒▒▒▒▒▒▒ CLOSE CLOSE CLOSE ▒▒▒▒▒▒▒▒▒▒▒▒</div>
                 </div>
             }
         </div>
