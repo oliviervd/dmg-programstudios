@@ -126,6 +126,10 @@ h4 {
     line-height: 1px;
 }
 
+.line-heighter {
+    line-height: 20px;
+}
+
 /* ---------------------------------- COLORS ---------------------------------- */
 
 .background__cool-to-warm-spectrum {
@@ -174,6 +178,10 @@ h4 {
     text-align: left;
 }
 
+.right {
+    text-align: right;
+}
+
 .modal {
     border-left: dotted black;
 }
@@ -181,6 +189,11 @@ h4 {
 .title-box{
     margin-top: 4px;
     height: 6vh;
+}
+
+.title-box__top{
+    display:grid;
+    grid-template-columns: auto;
 }
 
 .title-box__title {
