@@ -79,9 +79,17 @@ const SpectreMain = (props) => {
                 <br/>
                 <div className="dotLine"></div>
                 <br/>
-                <h1 className=" pinkHeader">COLLECTIONS</h1>
-                <h1 className=" pinkHeader italicSet">OF CARE:</h1>
-                <h1 className=" pinkHeader">COLOR</h1>
+                <div className="model1_header">
+                    <div>
+                        <h1 className=" pinkHeader">COLLECTIONS</h1>
+                        <h1 className=" pinkHeader italicSet">OF CARE:</h1>
+                        <h1 className=" pinkHeader">COLOR</h1>
+                    </div>
+                    <div className="pinkHeader boxBorder" onClick = {handleNumSwapChange}>
+                        <h1 className="pinkHeader" >SWAP </h1>
+                        <h1 className="pinkHeader italic underlined" >SAMPLE</h1>
+                    </div>
+                </div>
 
                 <div className="centerBox">
 
@@ -103,7 +111,6 @@ const SpectreMain = (props) => {
                             hexColors = {colorHexSwap}
                         />
                     </div>
-                    <div className="pinkHeader" onClick = {handleNumSwapChange}>swap</div>
                 </div>
             </div>
     )

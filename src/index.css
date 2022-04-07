@@ -164,6 +164,12 @@ h4 {
 }
 
 
+.model1_header{
+    display:grid;
+    grid-template-columns: 68.5vw 31.5vw;
+}
+
+
 .box{
     position: relative;
     width: 400px;
