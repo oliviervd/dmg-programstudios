@@ -1,11 +1,14 @@
-import React,{useState} from "react";
+import React, {useState} from "react";
 import ImageGenerator from "./imageGenerator";
 import ColorCubes from "./colorCubes";
 import Accordion from "./carousel/Accordion";
 import Model1 from "./models/model1"
+import SwapBook from "./swapBook"
+import HexCube from "./cube";
 
 //data
-import object_c from "../data/objectsColor_10.json";
+import object_c from "../data/objectsColor_10.json"; // import json containing information on the collection of Design Museum Gent (objects that have been published)
+import swap_c from "../data/swapbook.json"; // import json containing information on the color swapbook that used to belong to Henry van de Velde
 
 const SpectreMain = (props) => {
 
@@ -49,6 +52,26 @@ const SpectreMain = (props) => {
         setCuration(() => _x);
     }
 
+    function generateNumSwap() {
+        const numsSwap = []
+        for (let n=0; n<swap_c.length; ++n) {
+            numsSwap.push(n);
+        }
+        return Math.floor(Math.random() * numsSwap.length);
+    }
+
+    const [, setNumSwap] = useState(generateNumSwap())
+
+    function handleNumSwapChange() {
+        const _c = generateNumSwap();
+        setNumSwap(()=>_c);
+    }
+
+    const ran = generateNumSwap();
+
+    const colorHexSwap = swap_c[ran]["HEX_values"][0];
+    const _imSwap = swap_c[ran]["IIIF_image"];
+
     return(
             <div className="rowScrollMain svg_divider">
                 <Accordion/>
@@ -61,23 +84,8 @@ const SpectreMain = (props) => {
                 <h1 className=" pinkHeader">COLOR</h1>
 
                 <div className="centerBox">
-                    {/*<h3>COLOR UI INTERFACE (PICK A COLOR AND GENERATE SELECTION)</h3>
-                    <div className="colorPickInterface">
-                        <div className="colorPickerInterfaceList">
-                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 1</div>
-                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 2</div>
-                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 3</div>
-                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 4</div>
-                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 5</div>
-                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 6</div>
-                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 7</div>
-                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 8</div>
-                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 9</div>
-                            <div className="colorPickerInterfaceColorSQ" onClick={handleCurationChange}>placeholder COLOR HEX 10</div>
-                        </div>
-                        <button className="colorPickerInterfaceLuckyButton" onClick={handleCurationChange}>placeholder RANDOM COLORS</button>
-                    </div>*/}
-                    <div className="accordion-container">
+
+                    <div className="accordion-container__imgFrame">
                         <ImageGenerator num={num}
                                         curatedSet = {curation}
                                         data = {object_colors}
@@ -87,6 +95,15 @@ const SpectreMain = (props) => {
                                     data = {object_colors}
                                     className="container"/>
                     </div>
+                    <div>
+                        <SwapBook
+                            num = {_imSwap}
+                        />
+                        <HexCube
+                            hexColors = {colorHexSwap}
+                        />
+                    </div>
+                    <div className="pinkHeader" onClick = {handleNumSwapChange}>swap</div>
                 </div>
             </div>
     )

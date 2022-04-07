@@ -449,6 +449,11 @@ img{
     height: 100vh;
 }
 
+.accordion-container__imgFrame{
+    height: 100vh;
+    width: 60vw;
+}
+
 .accordion-container-left{
     width: 20vw;
 }

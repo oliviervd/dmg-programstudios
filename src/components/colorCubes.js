@@ -4,8 +4,6 @@ import ObjectDescription from "./objectDescription";
 
 import ldes_translations from "../data/ldes_dmg_translations.json"
 
-
-
 function titleViaURI(uri) {
     return ldes_translations.filter(
         function(ldes_translations) {

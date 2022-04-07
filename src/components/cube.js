@@ -3,9 +3,6 @@ import React from "react";
 const HexCube = (props) => {
 
     const hex_list = props.hexColors
-    for (var cube=0; cube<10; ++cube) {
-
-    }
 
     return (
         <div>

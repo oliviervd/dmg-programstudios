@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import XenoHeader from "./components/header+footer/xenoHeader"
 import SpectreMain from "./components/spectre"
 import ProjectDescription from "./components/projectDescription";
@@ -7,6 +7,9 @@ function App() {
 
     const _objectNum = 4;
 
+    //todo: select language
+
+    //switch for hiding or showing the sidebar (description + glossary)
     const [sideActiveDescription, setSideActiveDescription] = useState(false);
     const [sideActiveGloss, setSideActiveGloss] = useState(false);
 
@@ -19,6 +22,10 @@ function App() {
         console.log("WELCOME TO THE GLOSS SIDE OF THINGS")
         setSideActiveGloss(!sideActiveGloss);
     }
+
+    useEffect(() => {
+        console.log("check")
+    }) 
 
 
     return (

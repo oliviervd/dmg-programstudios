@@ -1,0 +1,492 @@
+[
+  {
+    "page": "p1",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/full/full/0/default.jpg",
+    "tile": "A",
+    "title": "Blue Defrance n°4",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/1632,80,644,388/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#979f9b",
+        "#3c4853",
+        "#788487",
+        "#242c39",
+        "#c6cec6",
+        "#17254b",
+        "#0e1b2a",
+        "#5b666c",
+        "#a8b7b8",
+        "#c1c0a7"
+      ]
+    ],
+    "color_names": [
+      [
+        "Light gray",
+        "Black coral",
+        "Gray (web)",
+        "Space cadet",
+        "Silver chalice",
+        "Gunmetal",
+        "Charcoal",
+        "Laurel green",
+        "Spanish gray",
+        "Rich black (FOGRA29)"
+      ]
+    ]
+  },
+  {
+    "page": "p1",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/full/full/0/default.jpg",
+    "tile": "B",
+    "title": "Blue Defrance n°4",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/1840,544,440,262/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#878b87",
+        "#c6be9f",
+        "#3a3f49",
+        "#162042",
+        "#aca17c",
+        "#b6b49b",
+        "#1c2748",
+        "#ccc7ac",
+        "#1a2230",
+        "#5f6466"
+      ]
+    ],
+    "color_names": [
+      [
+        "Oxford blue",
+        "Khaki (web)",
+        "Space cadet",
+        "Old silver",
+        "Bone",
+        "Granite gray",
+        "Charcoal",
+        "Khaki (web)",
+        "Raisin black",
+        "Khaki (web)"
+      ]
+    ]
+  },
+  {
+    "page": "p1",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/full/full/0/default.jpg",
+    "tile": "C",
+    "title": "Blue Defrance n°5",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/1838,882,440,262/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#2b3b52",
+        "#8a5b47",
+        "#bfb396",
+        "#cac2a6",
+        "#5f2d25",
+        "#2b446d",
+        "#2a282b",
+        "#7f2b22",
+        "#646b6f",
+        "#a6967d"
+      ]
+    ],
+    "color_names": [
+      [
+        "Tuscan brown",
+        "Khaki (web)",
+        "Indigo dye",
+        "Khaki (web)",
+        "Raisin black",
+        "Burnt umber",
+        "Dim gray",
+        "Grullo",
+        "Charcoal",
+        "Caput mortuum"
+      ]
+    ]
+  },
+  {
+    "page": "p1",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/full/full/0/default.jpg",
+    "tile": "D",
+    "title": "Blue Defrance n°5",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/1814,1160,492,294/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#c3c5b1",
+        "#273f6c",
+        "#aea078",
+        "#beb28d",
+        "#27364c",
+        "#98a4a5",
+        "#40536e",
+        "#1c3361",
+        "#d0d1bd",
+        "#6e7a81"
+      ]
+    ],
+    "color_names": [
+      [
+        "Slate gray",
+        "Ash gray",
+        "Space cadet",
+        "Khaki (web)",
+        "Prussian blue",
+        "Quick Silver",
+        "Sand",
+        "Indigo dye",
+        "Independence",
+        "Bone"
+      ]
+    ]
+  },
+  {
+    "page": "p1",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/full/full/0/default.jpg",
+    "tile": "E",
+    "title": "petit blue",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/1968,1490,324,498/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#546974",
+        "#cccab4",
+        "#7d9095",
+        "#3c6587",
+        "#305074",
+        "#1b2a50",
+        "#4e7794",
+        "#adb6af",
+        "#23365d",
+        "#d6d5c0"
+      ]
+    ],
+    "color_names": [
+      [
+        "Bone",
+        "Cadet",
+        "Queen blue",
+        "Indigo dye",
+        "Roman silver",
+        "Queen blue",
+        "Bone",
+        "Ash gray",
+        "Space cadet",
+        "Space cadet"
+      ]
+    ]
+  },
+  {
+    "page": "p2",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/full/full/0/default.jpg",
+    "tile": "A",
+    "title": "Blue Defrance n°6 (petit blue)",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/440,138,540,386/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#887b61",
+        "#25272e",
+        "#a28657",
+        "#3f3a34",
+        "#816a46",
+        "#202f49",
+        "#6d6656",
+        "#947a4d",
+        "#5a5142",
+        "#9c8c71"
+      ]
+    ],
+    "color_names": [
+      [
+        "Umber",
+        "Black olive",
+        "Raisin black",
+        "Gold Fusion",
+        "Shadow",
+        "French bistre",
+        "Prussian blue",
+        "Shadow",
+        "Wood brown",
+        "Umber"
+      ]
+    ]
+  },
+  {
+    "page": "p2",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/full/full/0/default.jpg",
+    "tile": "B",
+    "title": "Blue Defrance n°6 (petit blue)",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/434,584,536,290/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#40597b",
+        "#1b2c54",
+        "#9cb0c4",
+        "#426a98",
+        "#627790",
+        "#bbcfdf",
+        "#14214a",
+        "#111d37",
+        "#7e92a9",
+        "#2b4267"
+      ]
+    ],
+    "color_names": [
+      [
+        "Shadow blue",
+        "Pale aqua",
+        "Space cadet",
+        "Cadet blue (Crayola)",
+        "Slate gray",
+        "Queen blue",
+        "Oxford blue",
+        "Space cadet",
+        "Independence",
+        "Indigo dye"
+      ]
+    ]
+  },
+  {
+    "page": "p2",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/full/full/0/default.jpg",
+    "tile": "C",
+    "title": "Blue Defrance n°6 (petit blue)",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/480,992,416,222/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#bcc2b2",
+        "#315281",
+        "#223663",
+        "#afa784",
+        "#254275",
+        "#1c2a53",
+        "#829298",
+        "#ccd0bd",
+        "#2c3347",
+        "#546473"
+      ]
+    ],
+    "color_names": [
+      [
+        "Bone",
+        "Gunmetal",
+        "Khaki (web)",
+        "Space cadet",
+        "B'dazzled blue",
+        "Space cadet",
+        "Indigo dye",
+        "Cadet grey",
+        "Ash gray",
+        "Payne's grey"
+      ]
+    ]
+  },
+  {
+    "page": "p2",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/full/full/0/default.jpg",
+    "tile": "D",
+    "title": "Bleu A",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/596,1838,448,346/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#948668",
+        "#a88d5c",
+        "#1e243b",
+        "#685943",
+        "#4f4333",
+        "#221f22",
+        "#382e26",
+        "#987f53",
+        "#7f6e53",
+        "#a99673"
+      ]
+    ],
+    "color_names": [
+      [
+        "Wood brown",
+        "Raisin black",
+        "Prussian blue",
+        "Umber",
+        "Bistre",
+        "Taupe",
+        "Shadow",
+        "Shadow",
+        "Gold Fusion",
+        "Grullo"
+      ]
+    ]
+  },
+  {
+    "page": "p3",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/full/full/0/default.jpg",
+    "tile": "A",
+    "title": "Double Vert a la planche (gros vert)",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/1720,76,520,378/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#36583f",
+        "#d2ceb3",
+        "#1a342d",
+        "#cac6a9",
+        "#264138",
+        "#47664b",
+        "#b7b190",
+        "#677a5f",
+        "#c1bca0",
+        "#8d997f"
+      ]
+    ],
+    "color_names": [
+      [
+        "Khaki (web)",
+        "Hunter green",
+        "MSU green",
+        "Hunter green",
+        "Artichoke",
+        "Bone",
+        "Xanadu",
+        "Khaki (web)",
+        "Phthalo green",
+        "Khaki (web)"
+      ]
+    ]
+  },
+  {
+    "page": "p3",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/full/full/0/default.jpg",
+    "tile": "B",
+    "title": "Double Vert a la planche (petit vert)",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/1708,486,528,398/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#4a664a",
+        "#394a37",
+        "#233729",
+        "#d6d5c0",
+        "#1d2415",
+        "#577556",
+        "#c9c8b1",
+        "#adad97",
+        "#6a8164",
+        "#8a9079"
+      ]
+    ],
+    "color_names": [
+      [
+        "Kombu green",
+        "Pine tree",
+        "Artichoke",
+        "Xanadu",
+        "Phthalo green",
+        "Bone",
+        "Hunter green",
+        "Bone",
+        "Hunter green",
+        "Grullo"
+      ]
+    ]
+  },
+  {
+    "page": "p3",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/full/full/0/default.jpg",
+    "tile": "C",
+    "title": "vert [ord] a la gomme ",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/1708,902,576,342/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#918b82",
+        "#1d3a23",
+        "#27452c",
+        "#5a564d",
+        "#aba59c",
+        "#757067",
+        "#453a33",
+        "#35503b",
+        "#c2bbb2",
+        "#2c1d1a"
+      ]
+    ],
+    "color_names": [
+      [
+        "Kombu green",
+        "Ebony",
+        "Silver (Crayola)",
+        "Taupe",
+        "Nickel",
+        "Phthalo green",
+        "Quick Silver",
+        "Raisin black",
+        "Middle grey",
+        "Phthalo green"
+      ]
+    ]
+  },
+  {
+    "page": "p3",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/full/full/0/default.jpg",
+    "tile": "D",
+    "title": "puce au bois",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/1704,1282,612,374/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#8f8974",
+        "#29251c",
+        "#beb192",
+        "#2d281f",
+        "#c7bb9d",
+        "#262118",
+        "#afa588",
+        "#6e6754",
+        "#4b4435",
+        "#342e24"
+      ]
+    ],
+    "color_names": [
+      [
+        "Taupe",
+        "Khaki (web)",
+        "Black chocolate",
+        "Grullo",
+        "Shadow",
+        "Black chocolate",
+        "Ebony",
+        "Pine tree",
+        "Khaki (web)",
+        "Pine tree"
+      ]
+    ]
+  },
+  {
+    "page": "p3",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/full/full/0/default.jpg",
+    "tile": "E",
+    "title": "puce au bois",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/1710,1924,276,154/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#796d54",
+        "#c2b79c",
+        "#423827",
+        "#8c8067",
+        "#393020",
+        "#514531",
+        "#9e9378",
+        "#312818",
+        "#aea489",
+        "#655941"
+      ]
+    ],
+    "color_names": [
+      [
+        "Olive Drab (#7)",
+        "Khaki (web)",
+        "Umber",
+        "Shadow",
+        "Grullo",
+        "Grullo",
+        "Bistre",
+        "Taupe",
+        "Olive Drab (#7)",
+        "French bistre"
+      ]
+    ]
+  }
+]
