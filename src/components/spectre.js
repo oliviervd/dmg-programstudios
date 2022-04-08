@@ -12,10 +12,61 @@ import swap_c from "../data/swapbook.json"; // import json containing informatio
 
 const SpectreMain = (props) => {
 
+    // INTERFACE FOR GENERATING CURATED SET BASED ON SELECTED COLORIST SWAP.
+
+    const [, setNumSwap] = useState(generateNumSwap())
+
+    function handleNumSwapChange() {
+        // reset swap on click.
+        const _c = generateNumSwap();
+        setNumSwap(()=>_c);
+    }
+
+    function generateNumSwap() {
+        //count number of items in color swap book json and create list to used for fetching random swap.
+        const numsSwap = []
+        for (let n=0; n<swap_c.length; ++n) {
+            numsSwap.push(n);
+        }
+        return Math.floor(Math.random() * numsSwap.length);
+    }
+
+    const ran = generateNumSwap();
+    const colorHexSwap = swap_c[ran]["HEX_values"][0]; // store data for props to generate hex tiles.
+    const colorNameSwap = swap_c[ran]["color_names"][0]
+    const _imSwap = swap_c[ran]["IIIF_image"]; // store data for props to fetch right image.
+
+    //const object_colors_match = check_overlap();
+
+    function check_overlap() {
+        //initiate list to populate
+        const itemsMatch= [];
+        let match_count = 0;
+        //loop and check if color name is also in swap sample.
+        for (let n=0; n<object_c.length; ++n) {
+            //console.log(object_c[n]["color_names"])
+            let arr2 = colorNameSwap
+
+            //retrieve and clean array
+            let arr1 = object_c[n]["color_names"].split(",")
+            let arr_1_clean = [];
+            for (let a=0; a<arr1.length; ++a) {
+                arr_1_clean.push(arr1[a].replace("[[","").replace("]]","").trim().replace("[","").replace("]","").replace("'","").replace("'",""));
+            }
+            console.log(arr_1_clean.filter(color=>arr2.includes(color)))
+        }
+    }
+
+    check_overlap();
+
+
+
+    ////
+
     const [color, setColor] = useState("")
 
     const object_colors = object_c.filter(function(item) {
-        return item.color_names.includes(color);
+        return item.color_names.includes("");
     })
 
     function handleColorChange(color) {
@@ -51,26 +102,6 @@ const SpectreMain = (props) => {
         const _x = generateCuration(num);
         setCuration(() => _x);
     }
-
-    function generateNumSwap() {
-        const numsSwap = []
-        for (let n=0; n<swap_c.length; ++n) {
-            numsSwap.push(n);
-        }
-        return Math.floor(Math.random() * numsSwap.length);
-    }
-
-    const [, setNumSwap] = useState(generateNumSwap())
-
-    function handleNumSwapChange() {
-        const _c = generateNumSwap();
-        setNumSwap(()=>_c);
-    }
-
-    const ran = generateNumSwap();
-
-    const colorHexSwap = swap_c[ran]["HEX_values"][0];
-    const _imSwap = swap_c[ran]["IIIF_image"];
 
     return(
             <div className="rowScrollMain svg_divider">
