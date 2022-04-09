@@ -7,7 +7,13 @@ const Model1 = () => {
             <div className="model-TextColumns__3">
                 <div/>
                 <div>
-                    <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>{model1_intro_a}</div>
+                    <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>
+                        What does it mean today to act with care? How do we take care of each other and what can the role of the sustainable museum be in all this?
+                        How can we, as a care institution, not only agitate about society but also agitate against society.
+                        How can we effectively live together, not only on a human scale, but also on a larger, more sustainable scale?
+                        For defining Notions of production, authorship and symbiosis are critically approached in forms of speculative and research design.
+                        All contribute to defining possible future perspectives that transcend our traditional models and world views.
+                    </div>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>
                         The social role of the museum consists not only in opening up these new models and design principles but also in acting
