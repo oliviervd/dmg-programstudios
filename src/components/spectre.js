@@ -14,8 +14,7 @@ const SpectreMain = (props) => {
 
     // INTERFACE FOR GENERATING CURATED SET BASED ON SELECTED COLORIST SWAP.
 
-    const [, setNumSwap] = useState(generateNumSwap())
-
+    const [_ran, setNumSwap] = useState(_ran);
     function handleNumSwapChange() {
         // reset swap on click.
         const _c = generateNumSwap();
@@ -31,10 +30,11 @@ const SpectreMain = (props) => {
         return Math.floor(Math.random() * numsSwap.length);
     }
 
-    const ran = generateNumSwap();
-    const colorHexSwap = swap_c[ran]["HEX_values"][0]; // store data for props to generate hex tiles.
-    const colorNameSwap = swap_c[ran]["color_names"][0]
-    const _imSwap = swap_c[ran]["IIIF_image"]; // store data for props to fetch right image.
+    const randomSwapIndex = generateNumSwap(); // generate index for random swap.
+
+    const colorHexSwap = swap_c[randomSwapIndex]["HEX_values"][0]; // store data for props to generate hex tiles.
+    const colorNameSwap = swap_c[randomSwapIndex]["color_names"][0]
+    const _imSwap = swap_c[randomSwapIndex]["IIIF_image"]; // store data for props to fetch right image.
 
     //const object_colors_match = check_overlap();
 
@@ -53,38 +53,27 @@ const SpectreMain = (props) => {
             for (let a=0; a<arr1.length; ++a) {
                 arr_1_clean.push(arr1[a].replace("[[","").replace("]]","").trim().replace("[","").replace("]","").replace("'","").replace("'",""));
             }
-            if ((arr_1_clean.filter(c => arr2.includes(c))).length != 0)  {
+            if ((arr_1_clean.filter(c => arr2.includes(c))).length !== 0)  {
                 // check if color in both arrays. Return array with overlap.
                 itemsMatch.push(object_c[n]);
-                //console.log(arr_1_clean.filter(c => arr2.includes(c)))
             } else {
-                //console.log("NO OVERLAP IN COLORS")
+                // continue
             }
         } return itemsMatch;
     }
-    console.log(check_overlap());
+    //console.log(check_overlap());
 
     /// use matched items to generate list of items.
 
-    //console.log(matchedObjects);
-
-    const [color, setColor] = useState("")
-
     const matchedObjects = check_overlap();
-
-
-    function handleColorChange(color) {
-        const _c = color;
-        setColor(()=>_c);
-    }
-
     function numSelect(i) {
 
         // this function creates an array of unique numbers based on the length of object_colors.
         const nums = [];
         const ranNums = [];
         let j = 0;
-        for (let n=0; n<matchedObjects.length; ++n) {
+        console.log("length: " + matchedObjects.length)
+        for (let n=0; n<matchedObjects.length-1; ++n) {
             nums.push(n);
         }
         while (i--) {
@@ -121,7 +110,7 @@ const SpectreMain = (props) => {
                         <h1 className=" pinkHeader">COLOR</h1>
                     </div>
                     <div className="pinkHeader boxBorder" onClick = {handleNumSwapChange}>
-                        <h1 className="pinkHeader" >SWAP </h1>
+                        <h1 className="pinkHeader" >sWAP </h1>
                         <h1 className="pinkHeader italic underlined" >SAMPLE</h1>
                     </div>
                 </div>
