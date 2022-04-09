@@ -53,21 +53,25 @@ const SpectreMain = (props) => {
             for (let a=0; a<arr1.length; ++a) {
                 arr_1_clean.push(arr1[a].replace("[[","").replace("]]","").trim().replace("[","").replace("]","").replace("'","").replace("'",""));
             }
-            console.log(arr_1_clean.filter(color=>arr2.includes(color)))
-        }
+            if ((arr_1_clean.filter(c => arr2.includes(c))).length != 0)  {
+                // check if color in both arrays. Return array with overlap.
+                itemsMatch.push(object_c[n]);
+                //console.log(arr_1_clean.filter(c => arr2.includes(c)))
+            } else {
+                //console.log("NO OVERLAP IN COLORS")
+            }
+        } return itemsMatch;
     }
+    console.log(check_overlap());
 
-    check_overlap();
+    /// use matched items to generate list of items.
 
-
-
-    ////
+    //console.log(matchedObjects);
 
     const [color, setColor] = useState("")
 
-    const object_colors = object_c.filter(function(item) {
-        return item.color_names.includes("");
-    })
+    const matchedObjects = check_overlap();
+
 
     function handleColorChange(color) {
         const _c = color;
@@ -80,7 +84,7 @@ const SpectreMain = (props) => {
         const nums = [];
         const ranNums = [];
         let j = 0;
-        for (let n=0; n<object_colors.length; ++n) {
+        for (let n=0; n<matchedObjects.length; ++n) {
             nums.push(n);
         }
         while (i--) {
@@ -127,11 +131,11 @@ const SpectreMain = (props) => {
                     <div className="accordion-container__imgFrame">
                         <ImageGenerator num={num}
                                         curatedSet = {curation}
-                                        data = {object_colors}
+                                        data = {matchedObjects}
                         />
                         <ColorCubes num={num}
                                     curation={curation}
-                                    data = {object_colors}
+                                    data = {matchedObjects}
                                     className="container"/>
                     </div>
                     <div>
