@@ -446,6 +446,10 @@ img{
     grid-template-rows: repeat(2, 10vh);
 }
 
+.hexCube__single {
+    margin: 2px;
+}
+
 .hexCubeNames{
     display: grid;
     font-size: 10px;
