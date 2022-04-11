@@ -37,13 +37,14 @@ const ColorCubes = (props) => {
 
         const selection = props.curation
         const object_colors = props.data
+        const objCount = props.num
         //console.log(props.data);
         const color_hex = [];
         const color_names = [];
         const obj_titles_EN = [];
         const obj_desc_EN = [];
 
-        for (var hexNum=0; hexNum<4; ++hexNum) {
+        for (var hexNum=0; hexNum<objCount; ++hexNum) {
             const x = selection[hexNum];
             var _hexVal = object_colors[x]["HEX_values"].replace("['","").replace("']","").replace("'","").replace("]","").split(",")
             const uri = object_colors[x]["URI"];

@@ -15,10 +15,11 @@ const SpectreMain = (props) => {
     // INTERFACE FOR GENERATING CURATED SET BASED ON SELECTED COLORIST SWAP.
 
     const [_ran, setNumSwap] = useState(_ran);
+
     function handleNumSwapChange() {
         // reset swap on click.
         const _c = generateNumSwap();
-        setNumSwap(()=>_c);
+        setNumSwap(() => _c);
     }
 
     function generateNumSwap() {
@@ -36,12 +37,9 @@ const SpectreMain = (props) => {
     const colorNameSwap = swap_c[randomSwapIndex]["color_names"][0]
     const _imSwap = swap_c[randomSwapIndex]["IIIF_image"]; // store data for props to fetch right image.
 
-    //const object_colors_match = check_overlap();
-
     function check_overlap() {
         //initiate list to populate
         const itemsMatch= [];
-        let match_count = 0;
         //loop and check if color name is also in swap sample.
         for (let n=0; n<object_c.length; ++n) {
             //console.log(object_c[n]["color_names"])
@@ -61,22 +59,21 @@ const SpectreMain = (props) => {
             }
         } return itemsMatch;
     }
-    //console.log(check_overlap());
 
     /// use matched items to generate list of items.
 
-    const matchedObjects = check_overlap();
-    function numSelect(i) {
+    let matchedObjects = check_overlap();
 
-        // this function creates an array of unique numbers based on the length of object_colors.
+    function generateCuration(count){
+
         const nums = [];
         const ranNums = [];
+
         let j = 0;
-        console.log("length: " + matchedObjects.length)
         for (let n=0; n<matchedObjects.length-1; ++n) {
             nums.push(n);
         }
-        while (i--) {
+        while (count--) {
             j = Math.floor(Math.random() * nums.length);
             ranNums.push(nums[j]);
             nums.splice(j,1);
@@ -84,24 +81,15 @@ const SpectreMain = (props) => {
         return ranNums
     }
 
-    function generateCuration(count){
-        return numSelect(count);
-    }
-
     const num = props.num;
-    const [curation, setCuration] = useState(generateCuration(num));
-
-    function handleCurationChange() {
-        const _x = generateCuration(num);
-        setCuration(() => _x);
-    }
+    const curation = generateCuration(num);
 
     return(
             <div className="rowScrollMain svg_divider">
                 <Accordion/>
                 <Model1/>
                 <br/>
-                <div className="dotLine"></div>
+                <div className="dotLine"/>
                 <br/>
                 <div className="model1_header">
                     <div>
