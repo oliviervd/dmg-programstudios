@@ -1,16 +1,14 @@
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import XenoHeader from "./components/header+footer/xenoHeader"
 import SpectreMain from "./components/spectre"
 import ProjectDescription from "./components/projectDescription";
 
 function App() {
 
-    const _objectNum = 4;
+    const _objectNum = 3;
 
     //todo: select language
-    function switchLanguage(lang) {
-        console.log(lang);
-    }
+
 
     //switch for hiding or showing the sidebar (description + glossary)
     const [sideActiveDescription, setSideActiveDescription] = useState(false);
@@ -30,8 +28,8 @@ function App() {
             <div className="headerContainer">
                 <XenoHeader/>
                 <div className="languages_button_box">
-                    <div className="button-lang" onClick={switchLanguage("NL")}>NL</div>
-                    <div className="button-lang" onClick={switchLanguage("EN")}>EN</div>
+                    <div className="button-lang">NL</div>
+                    <div className="button-lang">EN</div>
                 </div>
             </div>
             <div className="superContainer">

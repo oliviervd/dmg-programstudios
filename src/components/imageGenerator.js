@@ -2,13 +2,12 @@ import React from "react";
 
 const ImageGenerator = (props) => {
     const curatedSet = props.curatedSet;
-    console.log("set: " + curatedSet)
     const object_colors = props.data;
-    console.log(object_colors)
+    const objCount = props.num;
     const _images = []
 
 
-    for (var imCount=0; imCount<4; ++imCount) {
+    for (var imCount=0; imCount<objCount; ++imCount) {
         const x = curatedSet[imCount] // TODO: fix this goes above length of array (number of images)
         let _im = object_colors[x]["IIIF_image"].replace("['","").replace("']","").replace("'","").split(",")
         _images.push(_im);
