@@ -1,3 +1,5 @@
+.vivid-red {color: #cf2e2e}
+
 html, body {
     position:fixed;
     top:0;
@@ -141,11 +143,11 @@ h4 {
 .sideBarLeft-Nav{
     display: grid;
     width: 40px;
+    
 }
 
 .sideBarLeft-Nav__button{
-    background: blue;
-    color: white;
+    color: #FFC0CB;
 }
 
 .sideBarLeft-Nav__button:hover{
