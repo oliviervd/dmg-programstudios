@@ -55,13 +55,6 @@ function App() {
                     <div className="dotLine"/>
                 </div>
             </div>
-                {/*<XenoHeader/>
-                <div className="mainContainer">
-                    <ProjectDescription/>
-                    <div className="dotLine"/>
-                    <SpectreMain num={_objectNum}/>
-                    <div className="dotLine"/>
-                </div>*/}
         </div>
     );
 }
