@@ -14,23 +14,13 @@ const ImageGenerator = (props) => {
 
     }
 
-    try{
-        return(
-            <div className="container" id="imageRandom">
-                <img alt="DREAMING OF IMAGES" src={_images[0][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
-                <img alt="DREAMING OF IMAGES" src={_images[1][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
-                <img alt="DREAMING OF IMAGES" src={_images[2][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
-            </div>
-        )
-    } catch {
-        return(
-            <div className="container" id="imageRandom">
-                <img alt="DREAMING OF IMAGES"/>
-                <img alt="DREAMING OF IMAGES"/>
-                <img alt="DREAMING OF IMAGES"/>
-            </div>
-            )
-    }
+    return(
+        <div className="container" id="imageRandom">
+            <img alt="DREAMING OF IMAGES" src={_images[0][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+            <img alt="DREAMING OF IMAGES" src={_images[1][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+            <img alt="DREAMING OF IMAGES" src={_images[2][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+        </div>
+    )
 }
 
 export default ImageGenerator;
