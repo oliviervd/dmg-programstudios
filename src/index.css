@@ -75,12 +75,12 @@ h4 {
 }
 
 .refText:hover {
-    color: #ccd7bf;
+    color: #afc6ae;
     transform: rotate(45deg);
 }
 
 .refText:focus {
-    color: #ccd7bf;
+    color: #afc6ae;
     transform: rotate(45deg);
 }
 
@@ -124,7 +124,7 @@ h4 {
 }
 
 .pinkHeader {
-    color: #FFC0CB;
+    color: #afc6ae;
     line-height: 1px;
 }
 
@@ -147,14 +147,14 @@ h4 {
 }
 
 .sideBarLeft-Nav__button{
-    color: #FFC0CB;
+    color: #afc6ae;
 }
 
 .sideBarLeft-Nav__button:hover{
     transition-duration: 1.5s;
-    color: #FFC0CB;
+    color: #afc6ae;
     background-color: white;
-    border: 3px solid #FFC0CB;
+    border: 3px solid #afc6ae;
 }
 
 .emptyFrameModel__1 {
@@ -162,7 +162,7 @@ h4 {
     width: 400px;
     height: 100%;
     left: 30vw;
-    border: 3px solid #FFC0CB;
+    border: 3px solid #afc6ae;
 }
 
 
@@ -210,7 +210,7 @@ h4 {
 }
 
 .title-box__title:hover{
-    color: #FFC0CB;
+    color: #afc6ae;
     transition-duration: 1.5s;
 }
 
@@ -239,7 +239,7 @@ text {
 button{
     font-family: "happy-times-NG_italic_master_web", sans-serif;
     width: 100%;
-    background-color: #ccd7bf;
+    background-color: #afc6ae;
     margin-bottom: 10px;
 }
 
@@ -281,7 +281,7 @@ button{
     border: 2px solid black;
     border-left: none;
     text-align: center;
-    color: pink;
+    color: #afc6ae;
     font-size: 20px;
 }
 
@@ -315,7 +315,7 @@ button{
     overflow: hidden;
     display: flex;
     justify-content: space-evenly;
-    color: #FFC0CB;
+    color: #afc6ae;
 }
 
 
