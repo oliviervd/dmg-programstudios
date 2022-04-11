@@ -81,7 +81,7 @@ const Accordion = () => {
                             154.8C548 148.3 534 141.7 531.8 135.2C529.7 128.7 539.3 122.3 541.5 116C543.7 109.7 538.3
                             103.3 546.7 96.8C555 90.3 577 83.7 588.3 77.2C599.7 70.7 600.3 64.3 599.8 58C599.3 51.7 597.7
                             45.3 597.3 38.8C597 32.3 598 25.7 600.3 19.2C602.7 12.7 606.3 6.3 608.2 3.2L610 0"
-                                  fill="none" strokeLinecap="round" strokeLinejoin="miter" stroke={blue} strokeWidth="1"/>
+                                  fill="none" strokeLinecap="round" strokeLinejoin="miter" stroke="#afc6ae" strokeWidth="1"/>
                         </svg>
                     </div>
                     <div className="svg_container5">
@@ -98,7 +98,7 @@ const Accordion = () => {
                             154.8C548 148.3 534 141.7 531.8 135.2C529.7 128.7 539.3 122.3 541.5 116C543.7 109.7 538.3
                             103.3 546.7 96.8C555 90.3 577 83.7 588.3 77.2C599.7 70.7 600.3 64.3 599.8 58C599.3 51.7 597.7
                             45.3 597.3 38.8C597 32.3 598 25.7 600.3 19.2C602.7 12.7 606.3 6.3 608.2 3.2L610 0"
-                                  fill="none" strokeLinecap="round" strokeLinejoin="miter" stroke={blue} strokeWidth="1.5"/>
+                                  fill="none" strokeLinecap="round" strokeLinejoin="miter" stroke="#afc6ae" strokeWidth="1.5"/>
                         </svg>
                     </div>
                     <div className="accordion-container center">
