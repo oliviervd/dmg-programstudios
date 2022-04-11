@@ -4,7 +4,7 @@ import ObjectDescription from "./objectDescription";
 
 import ldes_translations from "../data/ldes_dmg_translations.json"
 
-function titleViaURI(uri) {
+function LDESViaURI(uri) {
     return ldes_translations.filter(
         function(ldes_translations) {
             return ldes_translations.URI === uri
@@ -43,6 +43,8 @@ const ColorCubes = (props) => {
         const color_names = [];
         const obj_titles_EN = [];
         const obj_desc_EN = [];
+        const object_number = [];
+        const LDES = [];
 
         for (var hexNum=0; hexNum<objCount; ++hexNum) {
             const x = selection[hexNum];
@@ -50,16 +52,23 @@ const ColorCubes = (props) => {
             const uri = object_colors[x]["URI"];
             const color_name = object_colors[x]["color_names"]
 
-            const title = titleViaURI(uri)
+            const _LDES = LDESViaURI(uri)
 
-            const title_en = title[0]["title_en"];
-            const desc_en = title[0]["description_adlib_en"]
+            const title_en = _LDES[0]["title_en"];
+            const desc_en = _LDES[0]["description_adlib_en"]
+            const LDES_object = JSON.parse(_LDES[0][0]);
 
             color_hex.push(_hexVal);
             color_names.push(color_name);
             obj_titles_EN.push(title_en);
             obj_desc_EN.push(desc_en);
+            object_number.push(LDES_object["Entiteit.identificator"][1]["skos:notation"]["@value"])
+            LDES.push(LDES_object);
+
         }
+
+        console.log(LDES);
+        console.log(object_number)
 
         // function to copy values to clipboard
 
@@ -93,11 +102,12 @@ const ColorCubes = (props) => {
                                 <div className="pinkHeader italic" onClick={openDescription0}>[read more]</div>
                                 <div className="pinkHeader italic right" onClick={copyTextToClipBoard_0}>[copy to clipboard]</div>
                             </div>
+                            <p className="pinkHeader italic">{object_number[0]}</p>
                             <p className="title-box__title italic" onClick={openDescription0}>{obj_titles_EN[0]}</p>
                         </div>
                         {objectDescription0 &&
                             <div>
-                                <div className="dotLine"/>
+                                <div className="easeBorder__green"/>
                                 <div className="rowScroll">
                                     <ObjectDescription text={obj_desc_EN[0]}/>
                                 </div>
@@ -115,11 +125,12 @@ const ColorCubes = (props) => {
                                 <div className="pinkHeader italic" onClick={openDescription1}>[read more]</div>
                                 <div className="pinkHeader italic right" onClick={copyTextToClipBoard_1}>[copy to clipboard]</div>
                             </div>
+                            <p className="pinkHeader italic">{object_number[1]}</p>
                             <p className="title-box__title italic" onClick={openDescription1} >{obj_titles_EN[1]}</p>
                         </div>
                         {objectDescription1 &&
                             <div>
-                                <div className="dotLine"/>
+                                <div className="easeBorder__green"/>
                                 <div className="rowScroll">
                                     <ObjectDescription text={obj_desc_EN[1]}/>
                                 </div>
@@ -138,11 +149,12 @@ const ColorCubes = (props) => {
                                 <div className="pinkHeader italic" onClick={openDescription2}>[read more]</div>
                                 <div className="pinkHeader italic right" onClick={copyTextToClipBoard_2}>[copy to clipboard]</div>
                             </div>
+                            <p className="pinkHeader italic">{object_number[2]}</p>
                             <p className="title-box__title italic" onClick={openDescription2}>{obj_titles_EN[2]}</p>
                         </div>
                         {objectDescription2 &&
                             <div>
-                                <div className="dotLine"/>
+                                <div className="easeBorder__green"/>
                                 <div className="rowScroll">
                                     <ObjectDescription text={obj_desc_EN[2]}/>
                                 </div>

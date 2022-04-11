@@ -25,7 +25,7 @@ const ObjectDescription = (props) => {
 
         return(
             tags.map(x => {
-                return colors.includes(x) ? <text className="colorText conicBackdrop">{x + " "}</text> :
+                return colors.includes(x) ? <text className="colorText textBackground__green">{x + " "}</text> :
                     <text className="descText">{x + " "}</text>
             })
         )
