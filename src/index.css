@@ -430,7 +430,7 @@ to {
 img{
     width: 18vw;
     height: 30vh;
-    object-fit: cover;
+    object-fit: contain;
 }
 
 .hexBox{
