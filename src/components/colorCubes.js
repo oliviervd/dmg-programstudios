@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import HexCube from "../components/cube"
 import ObjectDescription from "./objectDescription";
 
-import ldes_translations from "../data/ldes_dmg_translations.json"
+import ldes_translations from "../data/postgres_ldes_dmg_translations_ldes_dmg.json"
 
 function LDESViaURI(uri) {
     return ldes_translations.filter(
@@ -17,9 +17,9 @@ const ColorCubes = (props) => {
 
     // open close object description
 
-    const [objectDescription0, setObjectDescription0] = useState(false);
-    const [objectDescription1, setObjectDescription1] = useState(false);
-    const [objectDescription2, setObjectDescription2] = useState(false);
+    const [objectDescription0, setObjectDescription0] = useState(true);
+    const [objectDescription1, setObjectDescription1] = useState(true);
+    const [objectDescription2, setObjectDescription2] = useState(true);
 
 
     function openDescription0() {
@@ -105,6 +105,7 @@ const ColorCubes = (props) => {
                             <p className="pinkHeader italic">{object_number[0]}</p>
                             <p className="title-box__title italic" onClick={openDescription0}>{obj_titles_EN[0]}</p>
                         </div>
+                        <br/><br/>
                         {objectDescription0 &&
                             <div>
                                 <div className="easeBorder__green"/>
@@ -128,6 +129,7 @@ const ColorCubes = (props) => {
                             <p className="pinkHeader italic">{object_number[1]}</p>
                             <p className="title-box__title italic" onClick={openDescription1} >{obj_titles_EN[1]}</p>
                         </div>
+                        <br/><br/>
                         {objectDescription1 &&
                             <div>
                                 <div className="easeBorder__green"/>
@@ -152,6 +154,7 @@ const ColorCubes = (props) => {
                             <p className="pinkHeader italic">{object_number[2]}</p>
                             <p className="title-box__title italic" onClick={openDescription2}>{obj_titles_EN[2]}</p>
                         </div>
+                        <br/><br/>
                         {objectDescription2 &&
                             <div>
                                 <div className="easeBorder__green"/>
