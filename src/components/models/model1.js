@@ -32,6 +32,9 @@ const Model1 = () => {
                         thus already prior belonging to another collection. The latter transaction is characterized by the (intimate) transfer of responsibility and care for a certain object.
                         The latter occurred in the acquisition of the "sample book with paint recipes", a 19th-century catalog of samples that belonged to the personal library of Henry van de Velde.
                         It is possible that this book was used as a source of inspiration when designing one or more of his textile designs.
+                    </div>
+                    <br/>
+                    <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
                         Taking this model, in which one object inspires the other, as our starting point,
                         we are investigating how technology can be used to establish speculative relationships between
                         the samples in this book on one hand and the digitized objects in our collection on the other.
@@ -39,9 +42,7 @@ const Model1 = () => {
                         This reorganization of the collection based on samples made and collected by an unknown colorist,
                         evokes a "culture of anonymity" while also seeking other approaches to our collection that move beyond the dominant form of authorship.
                         An inherent quality of the work that often determines the visibility and/or invisibility of an object.
-
-                    </div>
-                    <br/>
+                    </div><br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
                         This approach of the collection as a social network, - a speculative system that connects in a transhistorical and transdisciplinary way -
                         transcends the art historical and institutionalized view - and also refers to the early history of the museum where it functioned as a model museum;
