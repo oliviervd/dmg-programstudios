@@ -30,7 +30,7 @@ const Model1 = () => {
                         How can we move past taking care of our collection, towards a collection of care?
                         The way the museum acquires collection objects is varying, some objects are acquired directly from the designer, others are acquired as gifts,
                         thus already prior belonging to another collection. The latter transaction is characterized by the (intimate) transfer of responsibility and care for a certain object.
-                        The latter occured in the acquisition of the "sample book with paint recipes", a 19th-century catalog of samples that belonged to the personal library of Henry van de Velde.
+                        The latter occurred in the acquisition of the "sample book with paint recipes", a 19th-century catalog of samples that belonged to the personal library of Henry van de Velde.
                         It is possible that this book was used as a source of inspiration when designing one or more of his textile designs.
                         Taking this model, in which one object inspires the other, as our starting point,
                         we are investigating how technology can be used to establish speculative relationships between
