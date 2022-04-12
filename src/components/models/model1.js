@@ -26,7 +26,7 @@ const Model1 = () => {
                     <h2 className="left box" style={{borderLeft: "3px solid black", paddingLeft: "5px"}}>__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                        As a museum, the collection obviously remains one of the most prominent and essential organs within the museum's metabolism.
+                        As a museum, the collection obviously remains one of the most prominent and essential organs driving the museum metabolism.
                         How can we move past taking care of our collection, towards a collection of care?
                         The way the museum acquires collection objects is varying, some objects are acquired directly from the designer, others are acquired as gifts,
                         thus already prior belonging to another collection. The latter transaction is characterized by the (intimate) transfer of responsibility and care for a certain object.
