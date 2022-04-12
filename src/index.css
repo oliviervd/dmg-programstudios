@@ -207,6 +207,7 @@ h4 {
 .title-box__title {
     font-size: 20px;
     text-align: left;
+    margin-bottom: 20px;
 }
 
 .title-box__title:hover{
@@ -293,7 +294,7 @@ button{
     border: 4px none #afc6ae;
     height: 300px;
     overflow-y:auto;
-    margin-top: 4px;
+    margin-top: 20px;
 }
 
 .rowScrollMain{
