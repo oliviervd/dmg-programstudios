@@ -1,80 +1,54 @@
-/*modal1*/
-
-.modal1 {
-    position: absolute;
-    background: papayawhip;
-    font-family: "happy-times-NG_regular_master_web", sans-serif;
-    border: black solid 3px;
-    opacity: 0.9;
-    top: 60vh;
-    right: 40vw;
-    left: 30vw;
-    font-size: 15px;
-    padding: 4px;
+/*GLOSSARY*/
+[aria-describedby="glossary-label"] {
+    text-decoration: none;
+    color: inherit;
+    cursor: crosshair;
+    outline: none;
 }
 
-.modal1Line {
-    position: absolute;
-    border-top: black solid 3px;
-    top: 60vh;
-    right: 60vw;
-    left: 20vw;
+[aria-describedby="glossary-label"]::after {
+    content: "[GLOSS]"; /*display the current state of the counter*/
+    vertical-align: super;
+    font-size: 0.7em;
+    margin-left: 2px;
+    color: #79aea1;
+    text-decoration: underline;
 }
 
-.modal2 {
-    position: absolute;
-    background: papayawhip;
-    font-family: "happy-times-NG_regular_master_web", sans-serif;
-    border: black solid 3px;
-    opacity: 0.9;
-    top: 20vh;
-    right: 40vw;
-    left: 30vw;
-    font-size: 15px;
-    padding: 4px;
+/*FOOTNOTES*/
+
+article {
+    counter-reset: footnotes;
 }
 
-.modal2Line{
-    position: absolute;
-    border-right: black solid 3px;
-    border-bottom: black solid 3px;
-    top: 20vh;
-    right: 40vw;
-    left: 20vw;
+.footNote__refs{
+    display:grid;
+    grid-template-columns: 20% 60% 20%;
 }
 
-.modal3 {
-    position: absolute;
-    font-family: "happy-times-NG_regular_master_web", sans-serif;
-    border: black solid 3px;
-    top: 40vh;
-    left: 25vw;
-    right: 45vw;
-    font-size: 15px;
-    padding: 4px;
+[aria-describedby="footnote-label"] {
+    counter-increment: footnotes; /*increment the counter at each new reference*/
+    text-decoration: none; /*reset link styles to make it appear like regular text*/
+    color: inherit;
+    cursor: crosshair;
+    outline: none;
 }
 
-.modal3Line{
-    position: absolute;
-    border-right: black solid 3px;
-    border-bottom: black solid 3px;
-    top: 40vh;
-    right: 45vw;
-    left: 20vw;
+[aria-describedby="footnote-label"]::after {
+    content: "[" counter(footnotes) "]"; /*display the current state of the counter*/
+    vertical-align: super;
+    font-size: 0.7em;
+    margin-left: 2px;
+    color: #79aea1;
+    text-decoration: underline;
 }
 
-.modal4{
-    position: absolute;
-    background: papayawhip;
-    font-family: "happy-times-NG_regular_master_web", sans-serif;
-    border: black solid 3px;
-    top: 60vh;
-    left: 70vw;
-    right: 10vw;
-    font-size: 15px;
-    padding: 4px;
+[aria-describedby="footnote-label"]:focus::after {
+    outline: thin dotted;
+    outline-offset: 2px;
 }
 
+/*bacground conic hypnos*/
 .conicBackdrop{
     background-position-x: 0;
     background-position-y: 0;
@@ -84,3 +58,4 @@
     background-clip: border-box;
     --offset: -63.26536544850499deg;
 }
+
