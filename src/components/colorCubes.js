@@ -19,7 +19,7 @@ const ColorCubes = (props) => {
 
     const [objectDescription0, setObjectDescription0] = useState(false);
     const [objectDescription1, setObjectDescription1] = useState(false);
-    const [objectDescription2, setObjectDescription2] = useState(false);
+    const [objectDescription2, setObjectDescription2] = useState(true);
 
 
     function openDescription0() {
