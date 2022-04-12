@@ -51,8 +51,8 @@ const SpectreMain = (props) => {
             for (let a=0; a<arr1.length; ++a) {
                 arr_1_clean.push(arr1[a].replace("[[","").replace("]]","").trim().replace("[","").replace("]","").replace("'","").replace("'",""));
             }
-            if ((arr_1_clean.filter(c => arr2.includes(c))).length !== 0)  {
-                // check if color in both arrays. Return array with overlap.
+            if ((arr_1_clean.filter(c => arr2.includes(c))).length >= 3)  {
+                // check if color in both arrays. Return array with overlap (3 matching colors.)
                 itemsMatch.push(object_c[n]);
             } else {
                 // continue
