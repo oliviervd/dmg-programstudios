@@ -98,7 +98,7 @@ const SpectreMain = (props) => {
                         <h1 className=" pinkHeader">COLOR</h1>
                     </div>
                     <div className="pinkHeader boxBorder" onClick = {handleNumSwapChange}>
-                        <h1 className="pinkHeader" >sWAP </h1>
+                        <h1 className="pinkHeader italic" >SWAP </h1>
                         <h1 className="pinkHeader italic underlined" >SAMPLE</h1>
                     </div>
                 </div>
