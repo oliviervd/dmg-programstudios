@@ -102,7 +102,7 @@ const Accordion = () => {
                         </svg>
                     </div>
                     <div className="accordion-container center">
-                        <h1 className="main-title"> WHO IS <br/> COLLECTING <br/> FOR WHO?</h1>
+                        <h1 className="main-title"> WHO IS <br/> <em className="pinkHeader">.COLLECTING.</em> <br/> FOR WHO?</h1>
                     </div>
                     <div className="center"> ▒▒▒▒▒▒▒▒▒▒        ▒▒▒▒▒▒▒▒▒▒▒▒</div>
                 </div>
