@@ -53,22 +53,25 @@ const Model1 = () => {
                     <h2 className="left box" style={{borderLeft: "3px solid black", paddingLeft: "5px"}}>__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                        How can we alter our metabolism and move beyond taking care of our collection (preservation), towards the organization of a collection of care?
-                        The way the museum acquires collection objects is varying, some objects are acquired directly from the designer, others are acquired as gifts,
-                        thus already prior being part of another collection. The transaction from one owner to the other is in this case characterized by the (intimate)
-                        transfer of responsibility and care for a certain object. The latter occurred in the acquisition of the "sample book with paint recipes",
+                        What if we try and alter our metabolism by moving beyond taking care of our collection (preservation),
+                        towards the organization of a collection of care? The ways in which objects enter the museum's collection varies;
+                        some objects are acquired directly from the designer, others are acquired as gifts,
+                        thus already prior being part of another collection. The transaction from one owner to the other
+                        is in this case characterized by the (intimate) transfer of responsibility and care for a certain object.
+                        The latter occurred in the acquisition of the "sample book with paint recipes",
                         a 19th-century catalog of samples that belonged to the personal library of Henry van de Velde.
                         It is possible that this book was used as a source of inspiration when designing one or more of his textile designs.
                     </div>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                        Taking this model, in which one object inspires the other, as a starting point, this model sets out
-                        to investigate how technology can be leveraged for establishing speculative relationships between the
-                        samples in this book on one hand and the digitized objects in our collection on the other.
-                        By means of color extraction, a speculative network can be created in which objects relate to one another
-                        based on their color palette. This reorganization of the collection based on samples made and collected by an unknown colorist,
-                        evokes a "culture of anonymity" while also seeking other approaches to our collection that move beyond the dominant form of authorship.
-                        An inherent quality of the work that often determines the visibility and/or invisibility of an object.
+                        How can technology then aid us in invoking this idea of being inspired? Can we create a model that
+                        establishes speculative relationships between the samples in this book on one hand and the digitized
+                        objects in our collection on the other? By means of color extraction, the model tries to evoke a social network,
+                        a system, in which objects relate to one another based on their color palette. At the same time,
+                        this reorganization of the collection based on samples made and collected by an unknown colorist,
+                        evokes a "culture of anonymity" while also seeking other approaches to our collection that move beyond
+                        the dominant form of authorship. An inherent quality of the work that often true both its absence and/or presence
+                        determines the visibility or invisibility of an object.
                     </div><br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
                         This approach of the collection as a social network, - a speculative system that connects in a transhistorical and transdisciplinary way -
