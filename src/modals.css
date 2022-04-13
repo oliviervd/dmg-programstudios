@@ -71,3 +71,15 @@ footer :target {
     background-clip: border-box;
     --offset: -63.26536544850499deg;
 }
+
+.closeButton__modal {
+    font-family: var(--happy__bold);
+    font-size: 40px;
+    transform: translate(50%, 50%);
+    transform: rotate(90deg);
+}
+
+.closeButton__modal:hover {
+    transition: color 2s ease-out;
+    color: var(--fluo__green)
+}

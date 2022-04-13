@@ -67,9 +67,6 @@ const ColorCubes = (props) => {
 
         }
 
-        console.log(LDES);
-        console.log(object_number)
-
         // function to copy values to clipboard
 
         function copyTextToClipBoard_0() {
