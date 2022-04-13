@@ -1,4 +1,10 @@
-.vivid-red {color: #cf2e2e}
+:root {
+    --main__green: #afc6ae;
+    --fluo__green: #00FF67;
+    --happy__bold: "happy-times-NG_bold_master_web";
+    --happy__regular: "happy-times-NG_regular_master_web";
+    --happy__italic: "happy-times-NG_italic_master_web";
+}
 
 html, body {
     position:fixed;
@@ -72,16 +78,19 @@ h4 {
 .refText{
     text-decoration: underline;
     transition: color 300ms;
+    color: var(--fluo__green)
 }
 
 .refText:hover {
-    color: #afc6ae;
     transform: rotate(45deg);
+    transition: color 2s ease-out;
+    color: var(--fluo__green)
 }
 
 .refText:focus {
-    color: #afc6ae;
     transform: rotate(45deg);
+    transition: color 2s ease-out;
+    color: var(--fluo__green)
 }
 
 .hoverLinkEffect{
@@ -94,6 +103,11 @@ h4 {
     top: 10%;
     text-decoration: underline;
     font-size: 20px;
+}
+
+.rotateText:hover{
+    transition: color 2s ease-out;
+    color: var(--fluo__green)
 }
 
 .model-TextColumns__3 {
@@ -117,6 +131,8 @@ h4 {
     -moz-transform: skewX(-10deg);
     -o-transform: skewX(-10deg);
     transform: skewX(-10deg);
+    transition: color 2s ease-out;
+    color: var(--fluo__green)
 }
 
 .italicSet{
@@ -124,7 +140,7 @@ h4 {
 }
 
 .pinkHeader {
-    color: #afc6ae;
+    color: var(--main__green);
     line-height: 1px;
 }
 
@@ -147,14 +163,14 @@ h4 {
 }
 
 .sideBarLeft-Nav__button{
-    color: #afc6ae;
+    color: var(--main__green);
 }
 
 .sideBarLeft-Nav__button:hover{
     transition-duration: 1.5s;
-    color: #afc6ae;
+    color: var(--fluo__green);
     background-color: white;
-    border: 3px solid #afc6ae;
+    border: 3px solid var(--fluo__green);
 }
 
 .emptyFrameModel__1 {
@@ -210,8 +226,9 @@ h4 {
 }
 
 .title-box__title:hover{
-    color: #afc6ae;
     transition-duration: 1.5s;
+    transition: color 2s ease-out;
+    color: var(--fluo__green)
 }
 
 .glossText{
