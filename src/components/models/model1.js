@@ -24,7 +24,7 @@ const Model1 = () => {
                         </li>
                         <li>
                             <div id="resource_hungry">
-                                The 2020 Art Verbier Summit <em>Resource Hungry</em> initiated a global dialogue to find harmony,
+                                The 2020 Art Verbier Summit "<em>Resource Hungry</em>" initiated a global dialogue to find harmony,
                                 between art, ecology and resources. <a href="#resource_hungry_ref" aria-label="Back to content">↩</a>
                             </div>
                         </li>
