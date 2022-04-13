@@ -6,6 +6,32 @@ const Model1 = () => {
             <h1 className="center">MODEL 1: SENSE AND SENSIBILITY</h1>
             <div className="model-TextColumns__3">
                 <div></div>
+                <footer className="visually-hidden footNote__refs" id="footnote-label">
+                    <div></div>
+                    <ol>
+                        <li>
+                            <div id="object_stories"> <em>Object Stories </em> was part of the permanent collection presentation.
+                                Built out of 6 layers (<em>Commisions & Commisioners, Making Matters, Curiosity, Responsible Objects,
+                                    Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted
+                                certain objects from the collection from a certain point of view.
+                            </div>
+                        </li>
+                        <li>
+                            <div id="responsible_objects">
+                                Marjan van Helvert, The responsible object. A history of design ideology for the future. Valiz, Amsterdam, 2016
+                                <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div id="resource_hungry">
+                                The 2020 Art Verbier Summit <em>Resource Hungry</em> initiated a global dialogue to find harmony,
+                                between art, ecology and resources. <a href="#resource_hungry_ref" aria-label="Back to content">↩</a>
+                            </div>
+                        </li>
+                    </ol>
+                    <div></div>
+                </footer>
+
                 <article>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>
                         “When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>

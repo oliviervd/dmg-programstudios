@@ -21,6 +21,7 @@ article {
     counter-reset: footnotes;
 }
 
+
 .footNote__refs{
     display:grid;
     grid-template-columns: 20% 60% 20%;
@@ -46,6 +47,17 @@ article {
 [aria-describedby="footnote-label"]:focus::after {
     outline: thin dotted;
     outline-offset: 2px;
+}
+
+[aria-label="Back to content"] {
+    font-size: 0.8em;
+}
+
+footer :target {
+    background: yellow;
+}
+
+.visually-hidden{
 }
 
 /*bacground conic hypnos*/
