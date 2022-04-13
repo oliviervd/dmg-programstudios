@@ -6,6 +6,7 @@
     outline: none;
 }
 
+
 [aria-describedby="glossary-label"]::after {
     content: "[GLOSS]"; /*display the current state of the counter*/
     vertical-align: super;
@@ -70,4 +71,3 @@ footer :target {
     background-clip: border-box;
     --offset: -63.26536544850499deg;
 }
-

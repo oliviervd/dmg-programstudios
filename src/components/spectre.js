@@ -39,12 +39,13 @@ const SpectreMain = (props) => {
 
     function check_overlap() {
         //initiate list to populate
-        const itemsMatch= [];
+        let itemsMatch = [];
+
         //loop and check if color name is also in swap sample.
         for (let n=0; n<object_c.length; ++n) {
             //console.log(object_c[n]["color_names"])
             let arr2 = colorNameSwap
-
+            console.log(colorNameSwap);
             //retrieve and clean array
             let arr1 = object_c[n]["color_names"].split(",")
             let arr_1_clean = [];
@@ -54,11 +55,12 @@ const SpectreMain = (props) => {
             if ((arr_1_clean.filter(c => arr2.includes(c))).length >= 3)  {
                 // check if color in both arrays. Return array with overlap (3 matching colors.)
                 itemsMatch.push(object_c[n]);
-            } else {
-                // continue
             }
         } return itemsMatch;
     }
+
+
+
 
     /// use matched items to generate list of items.
 
@@ -99,7 +101,7 @@ const SpectreMain = (props) => {
                     </div>
                     <div className="pinkHeader boxBorder" onClick = {handleNumSwapChange}>
                         <h1 className="pinkHeader italic" >SWAP </h1>
-                        <h1 className="pinkHeader italic underlined" >SAMPLE</h1>
+                        <h1 className="pinkHeader italic underlined animateFont__organism" >SAMPLE</h1>
                     </div>
                 </div>
 

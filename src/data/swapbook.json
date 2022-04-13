@@ -7,30 +7,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/1632,80,644,388/full/0/default.jpg",
     "HEX_values": [
       [
-        "#778386",
+        "#222a38",
+        "#38444f",
+        "#c5cdc4",
+        "#0e1b2a",
         "#17254b",
-        "#a7b6b7",
-        "#c1bfa7",
-        "#c5cec6",
-        "#0f1b2a",
-        "#3c4853",
-        "#5a666c",
-        "#242c3a",
-        "#969e9a"
+        "#c0bfa6",
+        "#556168",
+        "#a5b4b5",
+        "#919a98",
+        "#727e82"
       ]
     ],
     "color_names": [
       [
-        "Sonic silver",
-        "Charcoal",
-        "Silver chalice",
-        "Black coral",
-        "Gunmetal",
-        "Rich black (FOGRA29)",
         "Spanish gray",
+        "Gunmetal",
         "Space cadet",
-        "Light gray",
-        "Laurel green"
+        "Ash gray",
+        "Rich black (FOGRA29)",
+        "Gray (web)",
+        "Laurel green",
+        "Black coral",
+        "Silver chalice",
+        "Charcoal"
       ]
     ]
   },
@@ -42,30 +42,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/1840,544,440,262/full/0/default.jpg",
     "HEX_values": [
       [
-        "#cbc7ac",
-        "#1a2130",
-        "#1c2748",
-        "#b7b49b",
-        "#aca17c",
-        "#878b87",
-        "#5f6467",
-        "#162042",
-        "#3b4049",
-        "#c6bf9f"
+        "#939892",
+        "#162143",
+        "#c7bfa0",
+        "#ada17b",
+        "#6f7373",
+        "#464b52",
+        "#bab69b",
+        "#192130",
+        "#1f2948",
+        "#ccc7ae"
       ]
     ],
     "color_names": [
       [
-        "Dim gray",
-        "Khaki (web)",
-        "Spanish gray",
-        "Khaki (web)",
-        "Khaki (web)",
-        "Raisin black",
+        "Old silver",
         "Bone",
-        "Space cadet",
+        "Khaki (web)",
+        "Granite gray",
+        "Khaki (web)",
         "Charcoal",
-        "Oxford blue"
+        "Oxford blue",
+        "Khaki (web)",
+        "Space cadet",
+        "Raisin black"
       ]
     ]
   },
@@ -77,30 +77,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/1838,882,440,262/full/0/default.jpg",
     "HEX_values": [
       [
-        "#62696e",
-        "#7f2b22",
-        "#bfb395",
+        "#8c5e49",
+        "#2b3c53",
+        "#bfb396",
+        "#cac2a6",
         "#2a282b",
+        "#5f2d25",
         "#2b446d",
-        "#602d25",
-        "#2b3b52",
-        "#cac1a6",
-        "#8b5d48",
-        "#a6967d"
+        "#656b6f",
+        "#7f2b22",
+        "#a7977d"
       ]
     ],
     "color_names": [
       [
         "Blast-off bronze",
+        "Charcoal",
         "Raisin black",
         "Khaki (web)",
-        "Dim gray",
+        "Granite gray",
         "Caput mortuum",
-        "Charcoal",
         "Khaki (web)",
         "Burnt umber",
-        "Grullo",
-        "Indigo dye"
+        "Indigo dye",
+        "Grullo"
       ]
     ]
   },
@@ -112,30 +112,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/1814,1160,492,294/full/0/default.jpg",
     "HEX_values": [
       [
-        "#1c3361",
-        "#c3c5b2",
-        "#273f6c",
-        "#beb38f",
-        "#3e526e",
-        "#97a3a5",
-        "#afa17a",
-        "#d0d1be",
-        "#27364b",
-        "#6c797f"
+        "#1d3461",
+        "#c4c6b2",
+        "#beb38e",
+        "#9ba8a8",
+        "#27364c",
+        "#44566d",
+        "#afa179",
+        "#28406d",
+        "#727e84",
+        "#d0d2be"
       ]
     ],
     "color_names": [
       [
-        "Charcoal",
-        "Sand",
-        "Ash gray",
         "Independence",
-        "Quick Silver",
         "Khaki (web)",
         "Bone",
-        "Indigo dye",
         "Space cadet",
-        "Sonic silver"
+        "Sonic silver",
+        "Quick Silver",
+        "Sand",
+        "Prussian blue",
+        "Indigo dye",
+        "Ash gray"
       ]
     ]
   },
@@ -147,30 +147,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/dcb2fbc9402ae34ac834ea1e7d77c49e-2677$00.jpg/1968,1490,324,498/full/0/default.jpg",
     "HEX_values": [
       [
-        "#24385f",
-        "#1c2b51",
-        "#cdcbb4",
-        "#536873",
-        "#3e6789",
-        "#315377",
-        "#537a95",
-        "#d6d5c1",
-        "#b4bbb0",
-        "#849598"
+        "#d6d5c0",
+        "#546974",
+        "#1b2a50",
+        "#7e9195",
+        "#305175",
+        "#4f7794",
+        "#cdcab4",
+        "#23375e",
+        "#adb7af",
+        "#3c6587"
       ]
     ],
     "color_names": [
       [
-        "Cadet",
         "Bone",
-        "Space cadet",
-        "Space cadet",
-        "Queen blue",
-        "Queen blue",
         "Indigo dye",
-        "Roman silver",
+        "Queen blue",
+        "Queen blue",
         "Bone",
-        "Ash gray"
+        "Cadet",
+        "Ash gray",
+        "Space cadet",
+        "Space cadet",
+        "Roman silver"
       ]
     ]
   },
@@ -182,30 +182,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/440,138,540,386/full/0/default.jpg",
     "HEX_values": [
       [
-        "#a28657",
-        "#3b3631",
-        "#534b3f",
-        "#867a62",
-        "#836d48",
-        "#957b4d",
+        "#7a6544",
         "#202f49",
-        "#9c8c71",
-        "#24262e",
-        "#6b604e"
+        "#26272e",
+        "#a18555",
+        "#766d5b",
+        "#8c7e63",
+        "#403a33",
+        "#9f8e70",
+        "#5a5245",
+        "#91784b"
       ]
     ],
     "color_names": [
       [
-        "Wood brown",
-        "Umber",
+        "Raisin black",
+        "Taupe",
         "French bistre",
         "Shadow",
-        "Gold Fusion",
         "Prussian blue",
-        "Raisin black",
-        "Black olive",
-        "Umber",
-        "Grullo"
+        "Shadow",
+        "Gold Fusion",
+        "Wood brown",
+        "Jet",
+        "Umber"
       ]
     ]
   },
@@ -217,30 +217,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/434,584,536,290/full/0/default.jpg",
     "HEX_values": [
       [
+        "#7f93aa",
+        "#426a98",
+        "#1c2c55",
+        "#9db1c4",
         "#111d37",
-        "#3f587b",
-        "#7d91a8",
-        "#bbcfdf",
-        "#61758e",
-        "#9bafc3",
-        "#2b4167",
-        "#1b2b54",
-        "#436a99",
-        "#14214a"
+        "#2c4368",
+        "#637891",
+        "#425a7b",
+        "#14214a",
+        "#bcd0df"
       ]
     ],
     "color_names": [
       [
-        "Shadow blue",
-        "Slate gray",
+        "Independence",
+        "Cadet blue (Crayola)",
         "Oxford blue",
+        "Pale aqua",
         "Indigo dye",
         "Queen blue",
-        "Cadet blue (Crayola)",
-        "Independence",
         "Space cadet",
-        "Pale aqua",
-        "Space cadet"
+        "Slate gray",
+        "Space cadet",
+        "Shadow blue"
       ]
     ]
   },
@@ -252,30 +252,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/480,992,416,222/full/0/default.jpg",
     "HEX_values": [
       [
-        "#ccd0bd",
-        "#829298",
-        "#223560",
-        "#244174",
+        "#cdd1be",
         "#1b2a53",
-        "#bcc3b2",
-        "#305080",
-        "#536474",
-        "#afa785",
-        "#2c3247"
+        "#325280",
+        "#213563",
+        "#bec4b3",
+        "#88989d",
+        "#afa784",
+        "#2d3449",
+        "#254275",
+        "#5a6a78"
       ]
     ],
     "color_names": [
       [
-        "Ash gray",
-        "B'dazzled blue",
-        "Black coral",
+        "Roman silver",
         "Indigo dye",
         "Space cadet",
-        "Gunmetal",
-        "Bone",
-        "Roman silver",
+        "Ash gray",
+        "B'dazzled blue",
+        "Space cadet",
+        "Black coral",
         "Khaki (web)",
-        "Space cadet"
+        "Gunmetal",
+        "Bone"
       ]
     ]
   },
@@ -287,30 +287,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/596,1838,448,346/full/0/default.jpg",
     "HEX_values": [
       [
-        "#958768",
-        "#9b8254",
-        "#514534",
-        "#1e243b",
-        "#392f26",
-        "#6a5c45",
-        "#a88e5d",
-        "#a99774",
+        "#948667",
+        "#998054",
+        "#695a44",
         "#221f22",
-        "#827154"
+        "#a88d5c",
+        "#1e243b",
+        "#504434",
+        "#806f53",
+        "#392f26",
+        "#a89673"
       ]
     ],
     "color_names": [
       [
-        "Shadow",
-        "Wood brown",
-        "Black coffee",
-        "Grullo",
-        "Raisin black",
+        "Taupe",
         "Gold Fusion",
-        "Shadow",
         "Umber",
+        "Wood brown",
         "Prussian blue",
-        "Taupe"
+        "Raisin black",
+        "Shadow",
+        "Bistre",
+        "Grullo",
+        "Shadow"
       ]
     ]
   },
@@ -322,30 +322,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/1720,76,520,378/full/0/default.jpg",
     "HEX_values": [
       [
-        "#c0bb9e",
-        "#35573f",
-        "#254037",
-        "#62775b",
-        "#d2ceb2",
-        "#456549",
+        "#35563e",
         "#1a342c",
-        "#b4af8f",
-        "#cac5a8",
-        "#87957a"
+        "#d2ceb3",
+        "#cbc6a9",
+        "#60765a",
+        "#88957b",
+        "#254037",
+        "#c1bda0",
+        "#446448",
+        "#b6b091"
       ]
     ],
     "color_names": [
       [
+        "Artichoke",
+        "Khaki (web)",
+        "Bone",
+        "Phthalo green",
+        "MSU green",
+        "Xanadu",
         "Hunter green",
         "Khaki (web)",
-        "Artichoke",
-        "Phthalo green",
-        "Bone",
-        "Xanadu",
-        "MSU green",
-        "Khaki (web)",
-        "Khaki (web)",
-        "Hunter green"
+        "Hunter green",
+        "Khaki (web)"
       ]
     ]
   },
@@ -357,30 +357,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/1708,486,528,398/full/0/default.jpg",
     "HEX_values": [
       [
-        "#6a8164",
-        "#394a37",
-        "#899079",
-        "#1d2415",
-        "#d6d5c0",
-        "#587556",
-        "#acac97",
-        "#233729",
-        "#4a664a",
-        "#c9c8b1"
+        "#cac9b2",
+        "#8e937c",
+        "#223628",
+        "#6b8265",
+        "#d7d5c1",
+        "#496549",
+        "#1d2314",
+        "#b0b09a",
+        "#577556",
+        "#364836"
       ]
     ],
     "color_names": [
       [
-        "Kombu green",
         "Hunter green",
-        "Phthalo green",
+        "Kombu green",
+        "Bone",
         "Laurel green",
         "Bone",
-        "Pine tree",
-        "Xanadu",
         "Hunter green",
-        "Bone",
-        "Artichoke"
+        "Phthalo green",
+        "Pine tree",
+        "Artichoke",
+        "Xanadu"
       ]
     ]
   },
@@ -392,30 +392,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/1708,902,576,342/full/0/default.jpg",
     "HEX_values": [
       [
-        "#c1bab1",
+        "#36513b",
+        "#a8a299",
+        "#716d63",
+        "#8d877e",
+        "#58544a",
+        "#27452d",
+        "#443932",
         "#2c1d1a",
-        "#344f3a",
-        "#726d64",
-        "#26442c",
-        "#453932",
-        "#58554b",
-        "#a9a299",
-        "#1d3a22",
-        "#8e887f"
+        "#1d3b23",
+        "#c1bab1"
       ]
     ],
     "color_names": [
       [
         "Silver (Crayola)",
-        "Nickel",
-        "Raisin black",
+        "English green",
+        "Ebony",
         "Middle grey",
-        "Phthalo green",
-        "Kombu green",
         "Taupe",
-        "Davy's grey",
-        "Quick Silver",
-        "Kombu green"
+        "Raisin black",
+        "Phthalo green",
+        "Nickel",
+        "Kombu green",
+        "Quick Silver"
       ]
     ]
   },
@@ -427,30 +427,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/1704,1282,612,374/full/0/default.jpg",
     "HEX_values": [
       [
-        "#29241b",
-        "#b3a88b",
-        "#756e5b",
-        "#514a3a",
-        "#c8bc9e",
-        "#968f7a",
-        "#c0b394",
-        "#2d281f",
+        "#938c77",
+        "#c0b393",
         "#342e24",
-        "#252118"
+        "#29241b",
+        "#c8bc9e",
+        "#2d281f",
+        "#b2a88a",
+        "#4d4637",
+        "#716a57",
+        "#252017"
       ]
     ],
     "color_names": [
       [
         "Grullo",
-        "Taupe",
+        "Pine tree",
         "Black chocolate",
-        "Ebony",
+        "Grullo",
+        "Taupe",
         "Khaki (web)",
         "Pine tree",
-        "Middle grey",
         "Pine tree",
         "Khaki (web)",
-        "Pine tree"
+        "Ebony"
       ]
     ]
   },
@@ -462,30 +462,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0df63a3ff1277a5739eabf53547d6131-2677$01.jpg/1710,1924,276,154/full/0/default.jpg",
     "HEX_values": [
       [
-        "#9a8e74",
-        "#aba085",
-        "#3f3525",
-        "#372d1e",
-        "#756950",
-        "#4c412e",
-        "#62553e",
-        "#887c63",
-        "#2f2616",
-        "#bfb499"
+        "#403625",
+        "#9c9076",
+        "#766a51",
+        "#62563e",
+        "#c0b59b",
+        "#4d422e",
+        "#382f1f",
+        "#8a7d64",
+        "#ada287",
+        "#312717"
       ]
     ],
     "color_names": [
       [
-        "Shadow",
-        "Bistre",
         "Olive Drab (#7)",
-        "Grullo",
-        "Grullo",
+        "French bistre",
         "Khaki (web)",
-        "Umber",
-        "Shadow",
+        "Grullo",
+        "Olive Drab (#7)",
+        "Bistre",
+        "Grullo",
         "Taupe",
-        "Olive Drab (#7)"
+        "Shadow",
+        "Umber"
       ]
     ]
   },
@@ -497,30 +497,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/558,152,444,263/full/0/default.jpg",
     "HEX_values": [
       [
-        "#d3c0a7",
-        "#ad937d",
-        "#3d2a1c",
         "#4c3726",
+        "#ac937c",
+        "#795f49",
+        "#3d2a1c",
         "#461812",
-        "#5f4935",
-        "#967b61",
+        "#d3c0a7",
+        "#957a5f",
         "#281811",
-        "#7b614b",
-        "#c2ac94"
+        "#c2ac94",
+        "#5f4834"
       ]
     ],
     "color_names": [
       [
-        "Khaki (web)",
-        "Café noir",
-        "French bistre",
-        "Grullo",
-        "Black bean",
-        "Bistre",
         "Black chocolate",
-        "Shadow",
+        "Bistre",
+        "Tuscan brown",
+        "Café noir",
+        "Black bean",
         "Khaki (web)",
-        "Tuscan brown"
+        "Shadow",
+        "Tuscan brown",
+        "Grullo",
+        "Khaki (web)"
       ]
     ]
   },
@@ -532,30 +532,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/634,563,372,403/full/0/default.jpg",
     "HEX_values": [
       [
-        "#6c543a",
-        "#bd9a83",
-        "#4d3824",
-        "#5c452e",
-        "#611f15",
+        "#bd9982",
+        "#5d462f",
+        "#d4bea5",
         "#7f6547",
-        "#291c15",
+        "#4e3925",
         "#99785a",
-        "#d4bfa6",
-        "#3e2b1c"
+        "#3e2b1c",
+        "#2a1c15",
+        "#611f15",
+        "#6d553a"
       ]
     ],
     "color_names": [
       [
-        "Liver (organ)",
         "Liver chestnut",
-        "Grullo",
+        "Khaki (web)",
         "Café noir",
+        "Liver (organ)",
+        "Tuscan brown",
         "Tuscan brown",
         "Bistre",
-        "Tuscan brown",
-        "Raw umber",
-        "Khaki (web)",
-        "Black chocolate"
+        "Black chocolate",
+        "Grullo",
+        "Raw umber"
       ]
     ]
   },
@@ -567,30 +567,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/553,1012,472,367/full/0/default.jpg",
     "HEX_values": [
       [
-        "#4f3a26",
-        "#dac5ac",
-        "#896f4a",
-        "#684d33",
-        "#785f40",
-        "#34241a",
-        "#af8d71",
-        "#c8ab92",
+        "#886e49",
+        "#ac8b6e",
         "#65281c",
-        "#997d55"
+        "#4e3825",
+        "#775d3f",
+        "#dac4ac",
+        "#664c32",
+        "#987c54",
+        "#c6a990",
+        "#342419"
       ]
     ],
     "color_names": [
       [
-        "Tuscan brown",
-        "French bistre",
-        "Gold Fusion",
-        "Bistre",
         "Café noir",
-        "Desert sand",
-        "Khaki (web)",
-        "Raw umber",
         "Tuscan tan",
-        "Liver (organ)"
+        "French bistre",
+        "Bistre",
+        "Desert sand",
+        "Raw umber",
+        "Tuscan brown",
+        "Khaki (web)",
+        "Liver (organ)",
+        "Gold Fusion"
       ]
     ]
   },
@@ -602,30 +602,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/621,1444,348,393/full/0/default.jpg",
     "HEX_values": [
       [
-        "#d3d3c0",
-        "#583e27",
-        "#908b7a",
-        "#b0ac9a",
-        "#473421",
+        "#453320",
         "#283451",
-        "#cac9b5",
-        "#644c34",
-        "#1c283a",
-        "#716959"
+        "#634b32",
+        "#938d7c",
+        "#d4d3c1",
+        "#573c26",
+        "#b3af9d",
+        "#cccab7",
+        "#726a5a",
+        "#1b283b"
       ]
     ],
     "color_names": [
       [
         "Bone",
-        "Café noir",
-        "Ebony",
         "Grullo",
-        "Prussian blue",
-        "Bone",
         "Café noir",
         "Tuscan brown",
+        "Grullo",
+        "Prussian blue",
+        "Ebony",
         "Gunmetal",
-        "Middle grey"
+        "Bone",
+        "Café noir"
       ]
     ]
   },
@@ -637,30 +637,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/428,1888,336,189/full/0/default.jpg",
     "HEX_values": [
       [
-        "#c3bb9e",
-        "#7f785b",
-        "#765834",
-        "#d6d6c0",
-        "#aba78b",
-        "#cccab0",
+        "#c4bc9f",
         "#314e34",
-        "#4a5e44",
-        "#7f6340",
-        "#979072"
+        "#7f795d",
+        "#aca88c",
+        "#d6d6c0",
+        "#806441",
+        "#cccab1",
+        "#775835",
+        "#495e43",
+        "#999073"
       ]
     ],
     "color_names": [
       [
-        "Khaki (web)",
-        "Shadow",
         "Raw umber",
-        "Artichoke",
+        "Bone",
+        "Coyote brown",
+        "Khaki (web)",
+        "Bone",
         "Ebony",
-        "Grullo",
-        "Bone",
+        "Artichoke",
         "Hunter green",
-        "Bone",
-        "Coyote brown"
+        "Khaki (web)",
+        "Shadow"
       ]
     ]
   },
@@ -672,30 +672,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/1691,143,182,457/full/0/default.jpg",
     "HEX_values": [
       [
-        "#b49b8a",
-        "#791a14",
-        "#573a2a",
-        "#601e13",
-        "#71503f",
-        "#9e8372",
+        "#b49c8a",
+        "#725141",
         "#3f2818",
+        "#886a5a",
+        "#9f8473",
         "#81261f",
-        "#cbb3a1",
-        "#876958"
+        "#ccb3a1",
+        "#791a14",
+        "#583b2b",
+        "#601e13"
       ]
     ],
     "color_names": [
       [
-        "Falu red",
-        "Bistre",
-        "Café noir",
-        "Beaver",
-        "Tuscan brown",
         "Khaki (web)",
-        "Beaver",
+        "Burnt umber",
+        "Café noir",
         "Liver (organ)",
+        "Tuscan brown",
+        "Bistre",
+        "Grullo",
         "Falu red",
-        "Grullo"
+        "Beaver",
+        "French bistre"
       ]
     ]
   },
@@ -707,30 +707,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/1900,143,438,459/full/0/default.jpg",
     "HEX_values": [
       [
-        "#b29f94",
-        "#523c32",
-        "#69554a",
-        "#826e63",
-        "#3b281d",
         "#5a1613",
-        "#c7b5aa",
+        "#d9c8be",
+        "#675248",
+        "#513b31",
         "#2a180e",
-        "#9a877c",
-        "#d9c8be"
+        "#af9d92",
+        "#7e6b60",
+        "#c6b4a9",
+        "#978479",
+        "#3a271d"
       ]
     ],
     "color_names": [
       [
-        "Dark liver (horses)",
-        "Bistre",
         "Prune",
         "Bistre",
+        "Dark liver (horses)",
         "Silver pink",
-        "Cinereous",
-        "Grullo",
         "Umber",
         "Cinereous",
-        "Silver (Crayola)"
+        "Silver (Crayola)",
+        "Grullo",
+        "Cinereous",
+        "Bistre"
       ]
     ]
   },
@@ -742,30 +742,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/1698,682,584,353/full/0/default.jpg",
     "HEX_values": [
       [
-        "#705938",
-        "#ac9161",
-        "#4c351e",
-        "#cebd99",
         "#ddcead",
-        "#c0ac86",
-        "#b39c72",
+        "#ac9161",
+        "#bfab84",
+        "#b29b71",
         "#a28859",
-        "#967d52",
-        "#877049"
+        "#887049",
+        "#cdbc98",
+        "#4c361e",
+        "#967e53",
+        "#715b39"
       ]
     ],
     "color_names": [
       [
+        "Light French beige",
+        "Raw umber",
+        "Wood brown",
         "Gold Fusion",
-        "Khaki (web)",
         "Café noir",
         "Dutch white",
-        "Gold Fusion",
         "Khaki (web)",
-        "Light French beige",
         "Wood brown",
-        "Raw umber",
-        "Wood brown"
+        "Khaki (web)",
+        "Gold Fusion"
       ]
     ]
   },
@@ -777,29 +777,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/1672,1092,604,327/full/0/default.jpg",
     "HEX_values": [
       [
+        "#b8996b",
+        "#d5bd96",
         "#6a4924",
-        "#a37435",
-        "#c9ad82",
-        "#b99a6d",
-        "#9c7a48",
-        "#af7f40",
-        "#d5be97",
+        "#9b7947",
+        "#e1cdaa",
         "#8e6936",
-        "#ad8957",
-        "#e1cdaa"
+        "#a47536",
+        "#aa8857",
+        "#c8ac81",
+        "#b08142"
       ]
     ],
     "color_names": [
       [
-        "Dutch white",
         "Metallic Sunburst",
         "Wood brown",
-        "Metallic Sunburst",
+        "Dutch white",
+        "Dark brown",
         "Wood brown",
         "Tan",
-        "Light French beige",
         "Coyote brown",
-        "Dark brown",
+        "Light French beige",
+        "Metallic Sunburst",
         "Metallic Sunburst"
       ]
     ]
@@ -812,30 +812,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/1690,1453,568,347/full/0/default.jpg",
     "HEX_values": [
       [
-        "#a8834c",
-        "#806136",
-        "#977b50",
-        "#9d7740",
-        "#8e6d3f",
-        "#ddcaa7",
-        "#ab8f64",
-        "#6b4f27",
-        "#cdb792",
-        "#bca37c"
+        "#6a4e26",
+        "#7f6035",
+        "#8d6d3e",
+        "#decaa8",
+        "#ceb994",
+        "#ac9066",
+        "#a8834d",
+        "#bea57e",
+        "#967a50",
+        "#9d7740"
       ]
     ],
     "color_names": [
       [
-        "Dark brown",
-        "Light French beige",
+        "Wood brown",
+        "Gold Fusion",
         "Dutch white",
         "Coyote brown",
+        "Light French beige",
+        "Dark brown",
         "Metallic Sunburst",
-        "Gold Fusion",
         "Coyote brown",
-        "Metallic Sunburst",
-        "Wood brown",
-        "Tan"
+        "Tan",
+        "Metallic Sunburst"
       ]
     ]
   },
@@ -847,30 +847,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/e2e5ae366973948f2118bc51c5a11958-transcode-2677$02.jpg/1715,1891,524,241/full/0/default.jpg",
     "HEX_values": [
       [
-        "#687b73",
+        "#b7c8bd",
         "#c8d8cf",
-        "#869990",
-        "#495d56",
-        "#b8c8bd",
+        "#495c55",
+        "#0b201a",
         "#1f3633",
-        "#0a1f19",
-        "#2c423f",
-        "#162c28",
-        "#a1b3aa"
+        "#85978f",
+        "#a0b2a9",
+        "#2c433f",
+        "#172d29",
+        "#677a72"
       ]
     ],
     "color_names": [
       [
+        "Dark slate gray",
+        "Ash gray",
+        "Morning blue",
+        "Ash gray",
         "Outer space (Crayola)",
+        "Dark jungle green",
+        "Xanadu",
         "Feldgrau",
         "Dark jungle green",
-        "Ash gray",
-        "Outer space (Crayola)",
-        "Light gray",
-        "Xanadu",
-        "Dark jungle green",
-        "Ash gray",
-        "Morning blue"
+        "Timberwolf"
       ]
     ]
   },
@@ -882,30 +882,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/398,221,606,339/full/0/default.jpg",
     "HEX_values": [
       [
-        "#827152",
         "#b7b9a2",
+        "#20372d",
         "#a19f85",
-        "#465c47",
-        "#334b3a",
-        "#c9cbb6",
-        "#948a6e",
-        "#21382e",
+        "#304839",
+        "#425843",
         "#abac93",
-        "#5c725e"
+        "#576d59",
+        "#827152",
+        "#c9ccb6",
+        "#938a6e"
       ]
     ],
     "color_names": [
       [
-        "Shadow",
-        "Grullo",
-        "Rifle green",
-        "Hooker's green",
         "Laurel green",
+        "Shadow",
+        "Artichoke",
+        "Hooker's green",
+        "Rifle green",
         "Kombu green",
-        "Bone",
+        "Shadow",
         "Laurel green",
         "Phthalo green",
-        "Shadow"
+        "Bone"
       ]
     ]
   },
@@ -917,30 +917,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/807,704,240,167/full/0/default.jpg",
     "HEX_values": [
       [
-        "#928a75",
-        "#584834",
-        "#d0cdba",
+        "#cfccb8",
+        "#766c5a",
+        "#294065",
+        "#584734",
+        "#918873",
+        "#395172",
+        "#a29d88",
+        "#b7b3a0",
         "#483725",
-        "#283f64",
-        "#b9b5a1",
-        "#1e355a",
-        "#a39e8a",
-        "#385072",
-        "#776d5b"
+        "#1e355a"
       ]
     ],
     "color_names": [
       [
-        "Grullo",
-        "Umber",
-        "Ash gray",
-        "Prussian blue",
         "Bone",
-        "Café noir",
-        "Grullo",
         "Shadow",
+        "Khaki (web)",
+        "Independence",
+        "Prussian blue",
+        "Shadow",
+        "Umber",
+        "Grullo",
         "Indigo dye",
-        "Independence"
+        "Café noir"
       ]
     ]
   },
@@ -952,30 +952,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/798,894,240,207/full/0/default.jpg",
     "HEX_values": [
       [
-        "#8f947e",
-        "#465e4c",
-        "#aaad97",
-        "#1e332a",
-        "#5e7360",
-        "#bcbfab",
-        "#293f35",
-        "#364e3e",
-        "#9ea18a",
-        "#cfd3c0"
+        "#395140",
+        "#bec1ad",
+        "#adb09a",
+        "#d0d4c1",
+        "#1f332b",
+        "#2b4136",
+        "#4a624f",
+        "#a0a38c",
+        "#939780",
+        "#647865"
       ]
     ],
     "color_names": [
       [
         "Artichoke",
-        "Artichoke",
-        "Rifle green",
-        "Kombu green",
+        "Laurel green",
         "Bone",
+        "Kombu green",
+        "Feldgrau",
+        "Xanadu",
         "Ash gray",
         "Pine tree",
-        "Xanadu",
-        "Feldgrau",
-        "Laurel green"
+        "Artichoke",
+        "Kombu green"
       ]
     ]
   },
@@ -987,30 +987,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/647,1117,388,201/full/0/default.jpg",
     "HEX_values": [
       [
-        "#203355",
-        "#a6a28d",
+        "#9a927a",
+        "#908265",
+        "#304262",
+        "#6f695a",
+        "#d1d0bd",
+        "#a6a28c",
+        "#bbb7a3",
         "#433726",
-        "#d2d0bd",
-        "#bbb8a4",
-        "#908266",
-        "#6f6859",
-        "#9a937b",
-        "#304263",
-        "#584835"
+        "#203354",
+        "#584935"
       ]
     ],
     "color_names": [
       [
-        "Shadow",
-        "Bone",
-        "Prussian blue",
-        "Ebony",
-        "Independence",
-        "Ash gray",
-        "Umber",
         "Grullo",
         "Olive Drab (#7)",
-        "Grullo"
+        "Indigo dye",
+        "Grullo",
+        "Prussian blue",
+        "Umber",
+        "Ash gray",
+        "Shadow",
+        "Bone",
+        "Ebony"
       ]
     ]
   },
@@ -1022,30 +1022,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/778,1343,228,167/full/0/default.jpg",
     "HEX_values": [
       [
-        "#626968",
+        "#444a4c",
         "#7f6f56",
-        "#454a4c",
-        "#c0baa7",
-        "#a7a08e",
-        "#262e33",
-        "#958b76",
+        "#c1baa7",
         "#8c7d63",
-        "#283647",
+        "#273647",
+        "#a8a18f",
+        "#958b76",
+        "#262e33",
+        "#626968",
         "#d6d0be"
       ]
     ],
     "color_names": [
       [
         "Bone",
-        "Shadow",
+        "Dim gray",
         "Charcoal",
-        "Grullo",
         "Shadow",
-        "Davy's grey",
-        "Granite gray",
-        "Silver (Crayola)",
+        "Shadow",
         "Grullo",
-        "Gunmetal"
+        "Gunmetal",
+        "Davy's grey",
+        "Silver (Crayola)",
+        "Grullo"
       ]
     ]
   },
@@ -1057,30 +1057,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/756,1565,264,121/full/0/default.jpg",
     "HEX_values": [
       [
-        "#1e2a45",
-        "#c6c5b4",
-        "#b3b1a1",
-        "#263559",
-        "#9a937c",
-        "#d7d6c7",
-        "#817963",
-        "#8e8770",
-        "#a5a18b",
-        "#505c70"
+        "#979079",
+        "#1e2a43",
+        "#d6d5c6",
+        "#8c846e",
+        "#a39e87",
+        "#afad9c",
+        "#7f7761",
+        "#4e5a6e",
+        "#c3c2b2",
+        "#253458"
       ]
     ],
     "color_names": [
       [
-        "Grullo",
+        "Space cadet",
         "Bone",
+        "Grullo",
+        "Shadow",
         "Shadow",
         "Silver (Crayola)",
-        "Black coral",
-        "Prussian blue",
-        "Ash gray",
         "Grullo",
-        "Shadow",
-        "Space cadet"
+        "Ash gray",
+        "Prussian blue",
+        "Black coral"
       ]
     ]
   },
@@ -1092,30 +1092,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/564,1760,456,265/full/0/default.jpg",
     "HEX_values": [
       [
-        "#bf8d7d",
-        "#d4a494",
-        "#f0cdbc",
-        "#662214",
-        "#e5baa9",
-        "#8c2e24",
         "#772d1f",
-        "#945c4d",
-        "#aa7565",
-        "#7f4435"
+        "#d2a191",
+        "#7e4334",
+        "#8c2e24",
+        "#925a4a",
+        "#a77262",
+        "#f0ccbb",
+        "#e4b8a7",
+        "#662214",
+        "#bc8a7a"
       ]
     ],
     "color_names": [
       [
-        "Redwood",
         "Desert sand",
-        "Blast-off bronze",
-        "Desert sand",
-        "Bole",
         "Liver (organ)",
-        "Burnt umber",
         "Pastel pink",
+        "Redwood",
         "Blast-off bronze",
-        "Liver (organ)"
+        "Desert sand",
+        "Liver (organ)",
+        "Bole",
+        "Burnt umber",
+        "Blast-off bronze"
       ]
     ]
   },
@@ -1127,30 +1127,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/1762,105,478,263/full/0/default.jpg",
     "HEX_values": [
       [
-        "#c7b9a4",
-        "#9a8d7a",
+        "#d5c7b3",
+        "#afa18f",
         "#34251d",
-        "#2c1e14",
-        "#807261",
-        "#b2a592",
+        "#7e7160",
+        "#c4b7a2",
         "#1f1206",
-        "#4a3d2d",
-        "#d6c8b4",
-        "#645746"
+        "#645747",
+        "#978a78",
+        "#4b3d2e",
+        "#2c1e13"
       ]
     ],
     "color_names": [
       [
+        "Khaki (web)",
+        "Bone",
         "Bistre",
+        "Grullo",
+        "Taupe",
         "Shadow",
         "Grullo",
-        "Bone",
-        "Taupe",
-        "Grullo",
-        "Umber",
         "Black chocolate",
         "Bistre",
-        "Khaki (web)"
+        "Umber"
       ]
     ]
   },
@@ -1162,30 +1162,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/1773,463,478,271/full/0/default.jpg",
     "HEX_values": [
       [
-        "#daceba",
-        "#403021",
-        "#4d3929",
-        "#877865",
-        "#322313",
-        "#6d5d4b",
-        "#b8ab97",
-        "#584432",
-        "#a1937f",
-        "#cbbfaa"
+        "#6b5b49",
+        "#857663",
+        "#b6a894",
+        "#564231",
+        "#d9cdb9",
+        "#9f907d",
+        "#312312",
+        "#3f2f20",
+        "#4b3828",
+        "#cabda8"
       ]
     ],
     "color_names": [
       [
-        "Café noir",
-        "Grullo",
-        "Bone",
         "Shadow",
+        "Bone",
+        "Bistre",
+        "Café noir",
+        "Bistre",
+        "Grullo",
         "Umber",
         "Grullo",
-        "Café noir",
-        "Bistre",
-        "Bistre",
-        "Khaki (web)"
+        "Khaki (web)",
+        "Café noir"
       ]
     ]
   },
@@ -1197,65 +1197,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/1782,792,420,201/full/0/default.jpg",
     "HEX_values": [
       [
-        "#4e5d71",
-        "#c8d6e2",
-        "#131e40",
-        "#6a798c",
-        "#8593a6",
-        "#334157",
+        "#131f40",
+        "#b4c4d1",
+        "#69778a",
+        "#9cabbd",
+        "#c7d6e2",
         "#1b2648",
-        "#08152e",
-        "#9eadbe",
-        "#b5c4d2"
+        "#08152f",
+        "#334157",
+        "#4d5c70",
+        "#8391a4"
       ]
     ],
     "color_names": [
       [
         "Oxford blue",
+        "Slate gray",
+        "Pale aqua",
+        "Lavender gray",
         "Charcoal",
-        "Pale aqua",
         "Cadet blue (Crayola)",
-        "Space cadet",
-        "Pale aqua",
         "Oxford blue",
-        "Slate gray",
-        "Manatee",
+        "Space cadet",
+        "Light slate gray",
         "Black coral"
-      ]
-    ]
-  },
-  {
-    "page": "p7",
-    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/full/full/0/default.jpg",
-    "tile": "D",
-    "title": "Blue A",
-    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/1765,1036,496,163/full/0/default.jpg",
-    "HEX_values": [
-      [
-        "#1b3a60",
-        "#7996ae",
-        "#93aec2",
-        "#43617e",
-        "#294b78",
-        "#0f2f50",
-        "#5e7c95",
-        "#1e4070",
-        "#bdd6e4",
-        "#a9c4d2"
-      ]
-    ],
-    "color_names": [
-      [
-        "Queen blue",
-        "Pewter Blue",
-        "Light steel blue",
-        "Pale aqua",
-        "Prussian blue",
-        "Indigo dye",
-        "Shadow blue",
-        "Slate gray",
-        "Indigo dye",
-        "Indigo dye"
       ]
     ]
   },
@@ -1267,30 +1232,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/1700,1304,580,273/full/0/default.jpg",
     "HEX_values": [
       [
-        "#d1ccb5",
-        "#80765a",
-        "#968f76",
-        "#293d2a",
-        "#354834",
-        "#445a42",
-        "#a8a187",
-        "#bdb79d",
-        "#576a51",
-        "#8b8369"
+        "#7e755a",
+        "#bcb59b",
+        "#566950",
+        "#8b8267",
+        "#344834",
+        "#293d29",
+        "#d0ccb4",
+        "#a69f85",
+        "#435941",
+        "#958e75"
       ]
     ],
     "color_names": [
       [
-        "Kombu green",
+        "Bone",
         "Grullo",
-        "Rifle green",
-        "Khaki (web)",
-        "Grullo",
+        "Shadow",
         "Ebony",
-        "Shadow",
-        "Shadow",
         "Kombu green",
-        "Bone"
+        "Kombu green",
+        "Khaki (web)",
+        "Shadow",
+        "Artichoke",
+        "Rifle green"
       ]
     ]
   },
@@ -1302,30 +1267,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/d40421680f7e95bd8478dfe8b46306b4-transcode-2677$03.jpg/1707,1626,542,563/full/0/default.jpg",
     "HEX_values": [
       [
-        "#171a18",
         "#bbb1a2",
-        "#9a5130",
-        "#4e2b1c",
-        "#96431e",
-        "#99887a",
-        "#2e180d",
-        "#72412b",
+        "#171a18",
+        "#695850",
         "#1b2534",
-        "#6a584f"
+        "#9a5130",
+        "#2e180d",
+        "#96431e",
+        "#4e2c1c",
+        "#73412b",
+        "#99887a"
       ]
     ],
     "color_names": [
       [
-        "Eerie black",
-        "Caput mortuum",
-        "Saddle brown",
+        "Raisin black",
         "Silver (Crayola)",
+        "Café noir",
         "Van Dyke brown",
-        "Cinereous",
+        "Fuzzy Wuzzy",
+        "Saddle brown",
         "Bistre",
         "Umber",
-        "Raisin black",
-        "Fuzzy Wuzzy"
+        "Cinereous",
+        "Eerie black"
       ]
     ]
   },
@@ -1337,30 +1302,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/438,166,448,866/full/0/default.jpg",
     "HEX_values": [
       [
-        "#2c2519",
-        "#b1aa93",
-        "#cac2a7",
-        "#3d3526",
-        "#574f3c",
-        "#756e59",
-        "#d8d6bf",
         "#332c1f",
-        "#d2cdb4",
-        "#938c78"
+        "#716a56",
+        "#d1cdb3",
+        "#908974",
+        "#afa791",
+        "#2c2519",
+        "#c9c1a6",
+        "#d8d6bf",
+        "#544d3a",
+        "#3d3526"
       ]
     ],
     "color_names": [
       [
-        "Khaki (web)",
+        "Grullo",
         "Bistre",
+        "Pine tree",
+        "Khaki (web)",
+        "Bone",
+        "Umber",
+        "Grullo",
         "Shadow",
         "Bone",
-        "Bistre",
-        "Olive Drab (#7)",
-        "Grullo",
-        "Bone",
-        "Rifle green",
-        "Grullo"
+        "Olive Drab (#7)"
       ]
     ]
   },
@@ -1372,30 +1337,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/535,1120,332,355/full/0/default.jpg",
     "HEX_values": [
       [
-        "#ab9579",
-        "#7f5f40",
-        "#d0bfa4",
-        "#6e5238",
-        "#866b4f",
-        "#c2ad90",
-        "#4c372d",
-        "#372722",
+        "#d1c0a5",
+        "#684e37",
+        "#ac977b",
+        "#c3af92",
+        "#866a4e",
+        "#372622",
+        "#746150",
         "#947d62",
-        "#736051"
+        "#7d5d3e",
+        "#49342b"
       ]
     ],
     "color_names": [
       [
-        "Khaki (web)",
-        "Umber",
-        "Raw umber",
+        "French bistre",
+        "Old burgundy",
         "Grullo",
         "Dark liver (horses)",
         "Shadow",
-        "Old burgundy",
         "Khaki (web)",
+        "Coyote brown",
+        "Umber",
         "Tuscan brown",
-        "French bistre"
+        "Khaki (web)"
       ]
     ]
   },
@@ -1407,30 +1372,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/415,1560,544,455/full/0/default.jpg",
     "HEX_values": [
       [
-        "#6e635a",
-        "#a0968b",
-        "#584a42",
-        "#877d73",
-        "#1f1813",
-        "#463b38",
-        "#27201e",
+        "#453a37",
         "#cbc1b6",
-        "#342b27",
-        "#b9aea0"
+        "#b9ad9f",
+        "#847a70",
+        "#27201e",
+        "#6b6058",
+        "#9e9489",
+        "#201813",
+        "#564841",
+        "#342a27"
       ]
     ],
     "color_names": [
       [
-        "Umber",
-        "Grullo",
         "Black coffee",
         "Granite gray",
-        "Middle grey",
-        "Taupe",
-        "Silver pink",
-        "Silver (Crayola)",
         "Black chocolate",
-        "Raisin black"
+        "Umber",
+        "Raisin black",
+        "Middle grey",
+        "Grullo",
+        "Silver (Crayola)",
+        "Taupe",
+        "Silver pink"
       ]
     ]
   },
@@ -1442,30 +1407,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/1903,63,303,225/full/0/default.jpg",
     "HEX_values": [
       [
-        "#2b2922",
-        "#55574d",
-        "#334a54",
+        "#5a412e",
         "#435e68",
+        "#334a54",
         "#736d58",
-        "#59412e",
-        "#86826c",
-        "#23211b",
         "#453324",
-        "#724c33"
+        "#734c33",
+        "#23211b",
+        "#54564d",
+        "#86826c",
+        "#2c2922"
       ]
     ],
     "color_names": [
       [
-        "Charcoal",
         "Bistre",
-        "Tuscan brown",
+        "Ebony",
+        "Black chocolate",
+        "Shadow",
         "Pine tree",
+        "Charcoal",
         "Shadow",
         "Café noir",
-        "Ebony",
-        "Deep Space Sparkle",
-        "Black chocolate",
-        "Shadow"
+        "Tuscan brown",
+        "Deep Space Sparkle"
       ]
     ]
   },
@@ -1477,30 +1442,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/1905,309,274,240/full/0/default.jpg",
     "HEX_values": [
       [
-        "#716148",
-        "#4f666e",
-        "#92866a",
-        "#23221b",
+        "#674930",
         "#38525f",
+        "#4e666f",
+        "#555349",
+        "#3d3f37",
         "#827457",
-        "#545248",
-        "#2c2b24",
-        "#3d3e37",
-        "#674930"
+        "#23221b",
+        "#92866a",
+        "#726148",
+        "#2c2b24"
       ]
     ],
     "color_names": [
       [
         "Shadow",
         "Ebony",
-        "Black chocolate",
-        "Black olive",
+        "Pine tree",
         "Deep Space Sparkle",
         "French bistre",
+        "Black olive",
+        "Charcoal",
         "Tuscan brown",
         "Shadow",
-        "Pine tree",
-        "Charcoal"
+        "Black chocolate"
       ]
     ]
   },
@@ -1512,30 +1477,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/1683,576,490,244/full/0/default.jpg",
     "HEX_values": [
       [
-        "#90805c",
-        "#2a251b",
-        "#3d515a",
-        "#817352",
-        "#586565",
+        "#4e4135",
+        "#5a6564",
+        "#9d8e6b",
+        "#3d515b",
+        "#29241a",
+        "#817251",
         "#ccd1c1",
-        "#9e8e6b",
-        "#3b3326",
-        "#534437",
-        "#685844"
+        "#655341",
+        "#907f5b",
+        "#383024"
       ]
     ],
     "color_names": [
       [
+        "Bone",
+        "Umber",
         "Gold Fusion",
-        "Granite gray",
-        "Olive Drab (#7)",
+        "Taupe",
         "Shadow",
         "Charcoal",
-        "Umber",
-        "Bone",
-        "Taupe",
+        "Granite gray",
         "Black chocolate",
-        "Gold Fusion"
+        "Gold Fusion",
+        "Bistre"
       ]
     ]
   },
@@ -1547,28 +1512,28 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/1682,905,492,278/full/0/default.jpg",
     "HEX_values": [
       [
-        "#1b1b18",
-        "#4c504d",
+        "#2c3a42",
         "#425c6c",
-        "#2c3a41",
-        "#494332",
-        "#76694d",
-        "#304a5c",
+        "#474131",
+        "#84795f",
+        "#76684d",
+        "#4b4f4b",
+        "#1b1b18",
         "#24241f",
-        "#85795f",
-        "#665840"
+        "#304a5c",
+        "#655840"
       ]
     ],
     "color_names": [
       [
-        "French bistre",
         "Gunmetal",
-        "Davy's grey",
-        "Charcoal",
-        "Taupe",
-        "Shadow",
         "Black coral",
+        "Charcoal",
+        "French bistre",
         "Dark jungle green",
+        "Davy's grey",
+        "Shadow",
+        "Taupe",
         "Eerie black",
         "Umber"
       ]
@@ -1582,30 +1547,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/1684,1226,492,250/full/0/default.jpg",
     "HEX_values": [
       [
-        "#737262",
-        "#5b5b50",
-        "#644c2f",
-        "#4d6975",
-        "#3a5766",
-        "#364447",
-        "#2c2b24",
+        "#737263",
         "#1e1e19",
+        "#3a5765",
+        "#4d6975",
         "#7c5d39",
-        "#868a7c"
+        "#374447",
+        "#868a7c",
+        "#644c2f",
+        "#2c2b24",
+        "#5b5b50"
       ]
     ],
     "color_names": [
       [
-        "Black chocolate",
-        "Ebony",
+        "Nickel",
         "Coyote brown",
         "Deep Space Sparkle",
         "Charcoal",
-        "Middle grey",
+        "Eerie black",
         "Pine tree",
-        "Nickel",
+        "Ebony",
+        "Cadet",
         "Tuscan brown",
-        "Cadet"
+        "Middle grey"
       ]
     ]
   },
@@ -1617,30 +1582,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/1692,1511,490,230/full/0/default.jpg",
     "HEX_values": [
       [
+        "#878a7c",
+        "#31454f",
+        "#50666f",
+        "#7e6241",
+        "#2c2921",
+        "#74532e",
         "#57452f",
-        "#abb0a1",
-        "#4f656e",
-        "#7e6140",
-        "#1d1d18",
         "#3a5565",
-        "#85897b",
-        "#2d2922",
-        "#31444e",
-        "#74532e"
+        "#1d1d18",
+        "#abb0a2"
       ]
     ],
     "color_names": [
       [
-        "Middle grey",
-        "Coyote brown",
-        "Black coral",
+        "Tuscan brown",
         "Raw umber",
-        "Ash gray",
-        "Black chocolate",
-        "Cadet",
+        "Gunmetal",
+        "Coyote brown",
+        "Middle grey",
         "Charcoal",
-        "Pine tree",
-        "Café noir"
+        "Bistre",
+        "Eerie black",
+        "Ash gray",
+        "Deep Space Sparkle"
       ]
     ]
   },
@@ -1653,29 +1618,29 @@
     "HEX_values": [
       [
         "#23211b",
-        "#3d413c",
-        "#918569",
-        "#949b91",
-        "#2e2b24",
-        "#b3bcb3",
-        "#635c4a",
+        "#4e697a",
         "#385569",
+        "#2e2b24",
+        "#949b91",
+        "#b3bcb3",
+        "#918569",
+        "#3d413c",
         "#817458",
-        "#4e697a"
+        "#635c4a"
       ]
     ],
     "color_names": [
       [
-        "Morning blue",
-        "Black chocolate",
-        "Black coral",
-        "Shadow",
-        "Black olive",
-        "Ebony",
-        "Ash gray",
+        "Pine tree",
         "Payne's grey",
+        "Black coral",
+        "Black chocolate",
+        "Morning blue",
+        "Ash gray",
+        "Black olive",
         "Shadow",
-        "Pine tree"
+        "Shadow",
+        "Ebony"
       ]
     ]
   },
@@ -1687,30 +1652,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/1729,2055,460,144/full/0/default.jpg",
     "HEX_values": [
       [
+        "#877857",
+        "#342f21",
+        "#b0b39c",
+        "#5e7373",
+        "#9e966a",
+        "#454c32",
+        "#496164",
+        "#6d623f",
         "#26221a",
-        "#887857",
-        "#9f976b",
-        "#496265",
-        "#5e7473",
-        "#b1b39c",
-        "#6e6341",
-        "#352f21",
-        "#454c33",
         "#9b8243"
       ]
     ],
     "color_names": [
       [
-        "French bistre",
-        "Olive Drab (#7)",
-        "Deep Space Sparkle",
-        "Metallic Sunburst",
-        "Black chocolate",
-        "Gold Fusion",
-        "Nickel",
         "Artichoke",
-        "Laurel green",
-        "Rifle green"
+        "Olive Drab (#7)",
+        "Rifle green",
+        "Nickel",
+        "Metallic Sunburst",
+        "Shadow",
+        "Deep Space Sparkle",
+        "French bistre",
+        "Black chocolate",
+        "Laurel green"
       ]
     ]
   },
@@ -1722,30 +1687,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/2264,1930,160,192/full/0/default.jpg",
     "HEX_values": [
       [
-        "#8e7648",
-        "#1f1f1a",
-        "#44585a",
         "#6f5a3b",
-        "#2a2922",
-        "#54472e",
-        "#827e67",
-        "#36443a",
+        "#55696c",
+        "#44585a",
+        "#1f1f1a",
+        "#53472e",
         "#726a51",
-        "#54696c"
+        "#35443b",
+        "#2a2922",
+        "#8e7648",
+        "#827e67"
       ]
     ],
     "color_names": [
       [
-        "Deep Space Sparkle",
-        "Gold Fusion",
-        "Black chocolate",
-        "Deep Space Sparkle",
+        "Kombu green",
         "Shadow",
         "Raw umber",
+        "Pine tree",
+        "Black chocolate",
         "Shadow",
-        "Kombu green",
         "Café noir",
-        "Pine tree"
+        "Deep Space Sparkle",
+        "Gold Fusion",
+        "Deep Space Sparkle"
       ]
     ]
   },
@@ -1757,30 +1722,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/2475,1933,170,192/full/0/default.jpg",
     "HEX_values": [
       [
-        "#201f1a",
-        "#827f64",
-        "#485f64",
+        "#5b6e70",
+        "#70502e",
+        "#485f65",
         "#4d4529",
         "#2a2922",
-        "#3c4b40",
-        "#5a6e70",
+        "#201f1a",
+        "#5d5c4d",
+        "#3c4b41",
         "#7d5d39",
-        "#70502d",
-        "#5d5c4d"
+        "#827f64"
       ]
     ],
     "color_names": [
       [
+        "Black chocolate",
+        "Coyote brown",
+        "Olive Drab (#7)",
+        "Kombu green",
+        "Pine tree",
         "Cadet",
         "Ebony",
-        "Dark brown",
-        "Coyote brown",
-        "Pine tree",
-        "Kombu green",
-        "Deep Space Sparkle",
-        "Black chocolate",
         "Shadow",
-        "Olive Drab (#7)"
+        "Dark brown",
+        "Deep Space Sparkle"
       ]
     ]
   },
@@ -1792,30 +1757,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/1ff501e122cde911d57728c7f6483a0a-transcode-2677$04.jpg/2694,1933,170,192/full/0/default.jpg",
     "HEX_values": [
       [
-        "#5d6e6e",
-        "#332d23",
+        "#938d67",
+        "#332e24",
+        "#7a6644",
         "#4a5e61",
-        "#3e4a3f",
-        "#25231e",
-        "#6f5433",
-        "#928d67",
+        "#25241e",
+        "#55422a",
+        "#3e4b3f",
+        "#5e6f6f",
         "#a7a58a",
-        "#544129",
-        "#7a6543"
+        "#705434"
       ]
     ],
     "color_names": [
       [
-        "Eerie black",
+        "Dark jungle green",
         "Grullo",
-        "Raw umber",
-        "Pine tree",
-        "Artichoke",
+        "Coyote brown",
         "Deep Space Sparkle",
-        "Rifle green",
+        "Pine tree",
         "Café noir",
-        "Nickel",
-        "Tuscan brown"
+        "Cadet",
+        "Artichoke",
+        "Rifle green",
+        "French bistre"
       ]
     ]
   },
@@ -1827,30 +1792,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a10239fd6b820f2437dfddc7196cad73-transcode-2677$05.jpg/434,140,512,364/full/0/default.jpg",
     "HEX_values": [
       [
-        "#2f291e",
-        "#b6b9ab",
+        "#c7cab9",
+        "#505759",
         "#17233b",
-        "#787b76",
+        "#95988f",
+        "#cdd3c8",
         "#1d2b53",
-        "#c8cbba",
-        "#423c2f",
-        "#54595a",
-        "#999c93",
-        "#ced4c9"
+        "#b3b5a8",
+        "#433d30",
+        "#2f291e",
+        "#747772"
       ]
     ],
     "color_names": [
       [
         "Taupe",
-        "Spanish gray",
         "Ash gray",
         "Nickel",
-        "Timberwolf",
-        "Ash gray",
         "Space cadet",
-        "Pine tree",
         "Prussian blue",
-        "Davy's grey"
+        "Ash gray",
+        "Davy's grey",
+        "Timberwolf",
+        "Pine tree",
+        "Spanish gray"
       ]
     ]
   },
@@ -1862,30 +1827,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a10239fd6b820f2437dfddc7196cad73-transcode-2677$05.jpg/490,568,480,664/full/0/default.jpg",
     "HEX_values": [
       [
-        "#9b8372",
-        "#dacaba",
-        "#765e4d",
-        "#c9b6a6",
-        "#866a59",
-        "#77271d",
-        "#b39d8d",
-        "#8f231d",
-        "#824a3a",
-        "#665141"
+        "#8f7464",
+        "#d8c8b8",
+        "#a99282",
+        "#815340",
+        "#685343",
+        "#c3af9f",
+        "#8c211a",
+        "#796151",
+        "#932822",
+        "#76281f"
       ]
     ],
     "color_names": [
       [
         "Umber",
-        "OU Crimson red",
         "Bone",
-        "Grullo",
-        "Khaki (web)",
-        "French bistre",
+        "OU Crimson red",
         "Prune",
-        "Beaver",
+        "Khaki (web)",
+        "Umber",
+        "Grullo",
         "Bole",
-        "Umber"
+        "Beaver",
+        "French bistre"
       ]
     ]
   },
@@ -1897,30 +1862,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a10239fd6b820f2437dfddc7196cad73-transcode-2677$05.jpg/472,1256,512,364/full/0/default.jpg",
     "HEX_values": [
       [
-        "#a69488",
-        "#5f4c41",
-        "#2d1e1b",
+        "#2d1e1c",
         "#c0aea1",
-        "#8d7a6e",
-        "#d4c6b7",
-        "#48382f",
+        "#786458",
         "#802521",
-        "#766156",
-        "#65231e"
+        "#a79589",
+        "#d4c5b6",
+        "#4a3a31",
+        "#8f7b70",
+        "#63231e",
+        "#634e43"
       ]
     ],
     "color_names": [
       [
-        "Raisin black",
-        "Umber",
-        "Prune",
-        "Silver pink",
-        "Grullo",
-        "Taupe",
         "Silver (Crayola)",
-        "Cinereous",
+        "Prune",
+        "Grullo",
+        "Umber",
         "Liver (organ)",
-        "Umber"
+        "Cinereous",
+        "Taupe",
+        "Silver pink",
+        "Umber",
+        "Raisin black"
       ]
     ]
   },
@@ -1932,29 +1897,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a10239fd6b820f2437dfddc7196cad73-transcode-2677$05.jpg/450,1662,564,456/full/0/default.jpg",
     "HEX_values": [
       [
-        "#3b2826",
-        "#6e5750",
-        "#948377",
-        "#bead9c",
-        "#251b1a",
         "#672520",
-        "#53423f",
-        "#614c47",
+        "#bead9c",
+        "#968579",
+        "#704339",
+        "#6f5851",
         "#79211c",
-        "#70443a"
+        "#3c2a27",
+        "#554340",
+        "#261b1a",
+        "#624d47"
       ]
     ],
     "color_names": [
       [
-        "Cinereous",
-        "Black chocolate",
-        "Grullo",
-        "Bole",
-        "Liver",
         "Old burgundy",
-        "Liver (organ)",
-        "Umber",
         "Prune",
+        "Black chocolate",
+        "Liver",
+        "Grullo",
+        "Umber",
+        "Bole",
+        "Liver (organ)",
+        "Cinereous",
         "Dark liver (horses)"
       ]
     ]
@@ -1967,30 +1932,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a10239fd6b820f2437dfddc7196cad73-transcode-2677$05.jpg/1706,104,324,380/full/0/default.jpg",
     "HEX_values": [
       [
-        "#1d283c",
-        "#859194",
-        "#6a767c",
-        "#b2bcb7",
-        "#35414b",
-        "#c3cdca",
-        "#141f36",
-        "#4f5c63",
-        "#9fa9a8",
+        "#9faaa8",
+        "#6b777d",
+        "#1e293d",
+        "#36434c",
+        "#b3bcb8",
+        "#869295",
+        "#141f37",
+        "#c3cdcb",
+        "#515d64",
         "#0f1a2e"
       ]
     ],
     "color_names": [
       [
-        "Roman silver",
-        "Sonic silver",
-        "Oxford blue",
-        "Silver sand",
-        "Oxford blue",
-        "Quick Silver",
+        "Gray (web)",
         "Gunmetal",
-        "Black coral",
         "Ash gray",
-        "Charcoal"
+        "Silver chalice",
+        "Rich black (FOGRA29)",
+        "Oxford blue",
+        "Spanish gray",
+        "Charcoal",
+        "Light gray",
+        "Cadet"
       ]
     ]
   },
@@ -2002,28 +1967,28 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a10239fd6b820f2437dfddc7196cad73-transcode-2677$05.jpg/2060,92,302,396/full/0/default.jpg",
     "HEX_values": [
       [
-        "#111d32",
-        "#717c7e",
-        "#39434d",
         "#b1b8b2",
+        "#111d32",
+        "#525d62",
+        "#6e787b",
+        "#9fa8a4",
         "#c0c7c4",
-        "#556065",
         "#1d2941",
-        "#a0a9a5",
-        "#8a9494",
-        "#16223b"
+        "#889292",
+        "#16223b",
+        "#36404b"
       ]
     ],
     "color_names": [
       [
-        "Quick Silver",
         "Oxford blue",
-        "Black coral",
+        "Oxford blue",
+        "Quick Silver",
         "Prussian blue",
-        "Ash gray",
         "Silver sand",
         "Charcoal",
-        "Oxford blue",
+        "Ash gray",
+        "Cadet",
         "Spanish gray",
         "Gray (web)"
       ]
@@ -2038,29 +2003,29 @@
     "HEX_values": [
       [
         "#12203c",
-        "#aab2ab",
-        "#19242d",
-        "#8a9292",
-        "#444e53",
-        "#192742",
-        "#cdd0c3",
-        "#263244",
+        "#465055",
+        "#192743",
+        "#697274",
         "#bfc4b7",
-        "#677072"
+        "#1a242e",
+        "#8b9493",
+        "#273244",
+        "#abb3ac",
+        "#cdd1c3"
       ]
     ],
     "color_names": [
       [
+        "Nickel",
+        "Ash gray",
+        "Oxford blue",
         "Raisin black",
         "Timberwolf",
-        "Dim gray",
+        "Davy's grey",
+        "Spanish gray",
         "Gunmetal",
         "Ash gray",
-        "Charcoal",
-        "Old silver",
-        "Oxford blue",
-        "Prussian blue",
-        "Silver chalice"
+        "Prussian blue"
       ]
     ]
   },
@@ -2072,30 +2037,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a10239fd6b820f2437dfddc7196cad73-transcode-2677$05.jpg/2065,560,278,352/full/0/default.jpg",
     "HEX_values": [
       [
-        "#1c2948",
-        "#131f3a",
-        "#9ca2a1",
-        "#c9cbbe",
-        "#526070",
+        "#9da4a2",
+        "#788187",
+        "#141f3b",
+        "#1c2a48",
+        "#bbbeb2",
         "#24324e",
-        "#35445c",
-        "#babdb1",
+        "#526070",
         "#172442",
-        "#778086"
+        "#c9cbbe",
+        "#35445c"
       ]
     ],
     "color_names": [
       [
-        "Ash gray",
-        "Space cadet",
-        "Oxford blue",
-        "Silver (Crayola)",
-        "Slate gray",
         "Spanish gray",
+        "Slate gray",
         "Oxford blue",
+        "Independence",
+        "Space cadet",
+        "Ash gray",
+        "Silver (Crayola)",
         "Black coral",
         "Prussian blue",
-        "Independence"
+        "Oxford blue"
       ]
     ]
   },
@@ -2107,28 +2072,28 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a10239fd6b820f2437dfddc7196cad73-transcode-2677$05.jpg/1705,1047,572,392/full/0/default.jpg",
     "HEX_values": [
       [
-        "#5e5853",
-        "#1d1d28",
         "#1b213e",
-        "#77664d",
-        "#4c433b",
-        "#63533d",
-        "#9b8c74",
-        "#8d7a5a",
-        "#373230",
-        "#787168"
+        "#8e7a5a",
+        "#383231",
+        "#77674d",
+        "#64543e",
+        "#797268",
+        "#1d1d28",
+        "#4d443b",
+        "#9b8d74",
+        "#5e5854"
       ]
     ],
     "color_names": [
       [
-        "Shadow",
-        "Jet",
-        "Taupe",
-        "Oxford blue",
-        "Raisin black",
-        "Grullo",
-        "French bistre",
         "Davy's grey",
+        "Raisin black",
+        "Oxford blue",
+        "Taupe",
+        "Grullo",
+        "Shadow",
+        "French bistre",
+        "Jet",
         "Umber",
         "Nickel"
       ]
@@ -2142,30 +2107,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a10239fd6b820f2437dfddc7196cad73-transcode-2677$05.jpg/1707,1500,584,340/full/0/default.jpg",
     "HEX_values": [
       [
+        "#9f8a60",
+        "#79684d",
+        "#a89d82",
+        "#8b7a5a",
+        "#2f2c2d",
+        "#554632",
         "#18171c",
-        "#ab9466",
-        "#817053",
-        "#332f2e",
-        "#ada082",
-        "#938a73",
-        "#584834",
-        "#6d5c44",
         "#181d33",
-        "#9a855b"
+        "#ad9768",
+        "#68573f"
       ]
     ],
     "color_names": [
       [
-        "French bistre",
-        "Wood brown",
         "Shadow",
+        "Eerie black",
+        "Café noir",
+        "Wood brown",
+        "Gold Fusion",
+        "French bistre",
         "Grullo",
         "Oxford blue",
-        "Café noir",
-        "Eerie black",
-        "Gold Fusion",
         "Jet",
-        "Tuscan brown"
+        "Umber"
       ]
     ]
   },
@@ -2177,27 +2142,27 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a10239fd6b820f2437dfddc7196cad73-transcode-2677$05.jpg/1715,1895,584,276/full/0/default.jpg",
     "HEX_values": [
       [
-        "#32302e",
+        "#33312f",
         "#191e30",
-        "#7c7a71",
-        "#5e5e5b",
-        "#9f9888",
-        "#191514",
-        "#978360",
-        "#49453e",
-        "#806e4f",
-        "#6a5a3f"
+        "#7f7c72",
+        "#988360",
+        "#191614",
+        "#6b5a3f",
+        "#816f4f",
+        "#4a473f",
+        "#a09889",
+        "#60615d"
       ]
     ],
     "color_names": [
       [
-        "Jet",
-        "Eerie black",
-        "Shadow",
-        "Black olive",
+        "Raw umber",
         "French bistre",
         "Raisin black",
-        "Raw umber",
+        "Black olive",
+        "Shadow",
+        "Jet",
+        "Eerie black",
         "Granite gray",
         "Grullo",
         "Middle grey"
@@ -2212,30 +2177,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/4dbb775a5f117d8a117ded8b9c2cbdb3-transcode-2677$06.jpg/446,172,452,434/full/0/default.jpg",
     "HEX_values": [
       [
-        "#d5cfb6",
-        "#625139",
-        "#cec6a9",
-        "#a69679",
-        "#907f63",
         "#392b1b",
-        "#79684e",
-        "#baac8d",
+        "#b9ab8c",
+        "#d5cfb6",
+        "#c6bc9d",
+        "#a59578",
+        "#cec6a9",
         "#4c3b27",
-        "#c7bc9d"
+        "#78674c",
+        "#625038",
+        "#8f7e62"
       ]
     ],
     "color_names": [
       [
-        "Shadow",
+        "Grullo",
         "Khaki (web)",
+        "Bistre",
+        "Tuscan brown",
         "Khaki (web)",
         "Bone",
-        "Grullo",
-        "Bistre",
-        "Khaki (web)",
-        "French bistre",
         "Café noir",
-        "Tuscan brown"
+        "French bistre",
+        "Khaki (web)",
+        "Shadow"
       ]
     ]
   },
@@ -2247,29 +2212,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/4dbb775a5f117d8a117ded8b9c2cbdb3-transcode-2677$06.jpg/410,670,576,422/full/0/default.jpg",
     "HEX_values": [
       [
-        "#473a2a",
-        "#bfb59c",
-        "#3b2f1f",
-        "#938871",
-        "#a99e87",
-        "#d1c9b1",
-        "#d9d5bf",
+        "#6b5e49",
+        "#cfc7af",
+        "#7e725b",
         "#584b37",
-        "#7f725c",
-        "#6b5e49"
+        "#3b2f1f",
+        "#bcb299",
+        "#92866f",
+        "#473b2a",
+        "#a79b84",
+        "#d9d5bf"
       ]
     ],
     "color_names": [
       [
+        "Bone",
+        "Bistre",
+        "Umber",
+        "Bone",
         "Taupe",
-        "Bone",
         "Umber",
-        "Shadow",
-        "Umber",
-        "Bone",
-        "Shadow",
-        "Olive Drab (#7)",
         "Grullo",
+        "Shadow",
+        "Shadow",
         "Khaki (web)"
       ]
     ]
@@ -2282,30 +2247,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/4dbb775a5f117d8a117ded8b9c2cbdb3-transcode-2677$06.jpg/412,1174,516,326/full/0/default.jpg",
     "HEX_values": [
       [
-        "#7d2723",
-        "#391d17",
         "#c6a592",
-        "#d4b1a2",
-        "#76453d",
         "#923c36",
-        "#9e4840",
-        "#592a24",
+        "#391d17",
+        "#76453c",
         "#b18677",
-        "#986559"
+        "#d4b1a2",
+        "#986559",
+        "#592a24",
+        "#7d2723",
+        "#9e4841"
       ]
     ],
     "color_names": [
       [
-        "Blast-off bronze",
-        "Prune",
-        "Chestnut",
-        "Chestnut",
+        "Silver pink",
         "Khaki (web)",
+        "Chestnut",
+        "Dark sienna",
+        "Prune",
         "Bole",
         "Beaver",
         "Caput mortuum",
-        "Silver pink",
-        "Dark sienna"
+        "Blast-off bronze",
+        "Chestnut"
       ]
     ]
   },
@@ -2317,30 +2282,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/4dbb775a5f117d8a117ded8b9c2cbdb3-transcode-2677$06.jpg/398,1558,552,522/full/0/default.jpg",
     "HEX_values": [
       [
-        "#785d4c",
-        "#4e1c18",
-        "#c2ae99",
-        "#54392f",
+        "#593d32",
+        "#2d1915",
+        "#7b302c",
+        "#97806b",
+        "#b19c82",
+        "#7a604f",
+        "#c1ae98",
         "#cbbba9",
-        "#2e1915",
-        "#957e69",
-        "#682926",
-        "#7c312d",
-        "#b19b81"
+        "#642724",
+        "#4c1c18"
       ]
     ],
     "color_names": [
       [
-        "Caput mortuum",
-        "Bistre",
         "Brandy",
-        "Beaver",
-        "Caput mortuum",
+        "Silver (Crayola)",
         "Dark liver (horses)",
         "Khaki (web)",
-        "Grullo",
-        "Silver (Crayola)",
-        "Tuscan brown"
+        "Bistre",
+        "Beaver",
+        "Caput mortuum",
+        "French bistre",
+        "Caput mortuum",
+        "Grullo"
       ]
     ]
   },
@@ -2352,28 +2317,28 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/4dbb775a5f117d8a117ded8b9c2cbdb3-transcode-2677$06.jpg/1686,40,636,362/full/0/default.jpg",
     "HEX_values": [
       [
-        "#a35149",
-        "#6d473b",
-        "#b6a387",
-        "#2f160e",
-        "#92433c",
-        "#4d2a21",
-        "#cabea1",
+        "#512f25",
+        "#714a3f",
+        "#937c67",
+        "#a25149",
+        "#b7a588",
+        "#93423b",
+        "#cabfa2",
+        "#31170f",
         "#d7ceb6",
-        "#917a64",
-        "#6d1d19"
+        "#6c1d19"
       ]
     ],
     "color_names": [
       [
+        "Chestnut",
         "Dark sienna",
-        "Tuscan brown",
         "Shadow",
+        "Bole",
+        "Bone",
+        "Khaki (web)",
         "Caput mortuum",
         "Prune",
-        "Chestnut",
-        "Khaki (web)",
-        "Bone",
         "Khaki (web)",
         "Redwood"
       ]
@@ -2387,30 +2352,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/4dbb775a5f117d8a117ded8b9c2cbdb3-transcode-2677$06.jpg/1692,422,624,322/full/0/default.jpg",
     "HEX_values": [
       [
-        "#8e3738",
-        "#c7b5a4",
-        "#b65e60",
-        "#dad2bd",
-        "#ab4e51",
-        "#a78d80",
-        "#7e5d56",
-        "#321916",
+        "#c6b3a2",
+        "#56312c",
         "#7e1f1f",
-        "#56322d"
+        "#b65e60",
+        "#ab4e51",
+        "#7d5c55",
+        "#a58a7e",
+        "#321916",
+        "#8e3738",
+        "#dad2bd"
       ]
     ],
     "color_names": [
       [
-        "Bone",
-        "Rose vale",
-        "Dark sienna",
-        "Solid pink",
-        "Middle red purple",
-        "Beaver",
-        "Deep taupe",
-        "Falu red",
         "Khaki (web)",
-        "Dark liver (horses)"
+        "Rose vale",
+        "Dark liver (horses)",
+        "Dark sienna",
+        "Beaver",
+        "Falu red",
+        "Solid pink",
+        "Bone",
+        "Deep taupe",
+        "Middle red purple"
       ]
     ]
   },
@@ -2422,29 +2387,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/4dbb775a5f117d8a117ded8b9c2cbdb3-transcode-2677$06.jpg/1680,798,652,414/full/0/default.jpg",
     "HEX_values": [
       [
-        "#c59c52",
-        "#545553",
-        "#c2ab7d",
-        "#172035",
-        "#bcb49b",
-        "#b19b6d",
-        "#868376",
-        "#c9a664",
-        "#a69f88",
-        "#20283b"
+        "#20283b",
+        "#c59d52",
+        "#a39e89",
+        "#515251",
+        "#bcb59c",
+        "#ae996e",
+        "#c8a666",
+        "#827f74",
+        "#c0aa7e",
+        "#172035"
       ]
     ],
     "color_names": [
       [
-        "Wood brown",
         "Light French beige",
+        "Raisin black",
         "Earth yellow",
         "Khaki (web)",
-        "Grullo",
-        "Oxford blue",
-        "Light French beige",
-        "Davy's grey",
         "Middle grey",
+        "Light French beige",
+        "Wood brown",
+        "Davy's grey",
+        "Grullo",
         "Gunmetal"
       ]
     ]
@@ -2457,30 +2422,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/4dbb775a5f117d8a117ded8b9c2cbdb3-transcode-2677$06.jpg/1706,1270,616,782/full/0/default.jpg",
     "HEX_values": [
       [
-        "#baa698",
-        "#402f2c",
-        "#d2c0b9",
-        "#54433f",
-        "#6d5c57",
-        "#a18f88",
-        "#877670",
-        "#2d201e",
-        "#cab4a0",
-        "#261918"
+        "#bca799",
+        "#705f5b",
+        "#8a7973",
+        "#584743",
+        "#271a19",
+        "#a4928a",
+        "#43332f",
+        "#d2c1ba",
+        "#302220",
+        "#cbb5a1"
       ]
     ],
     "color_names": [
       [
-        "Silver (Crayola)",
-        "Grullo",
-        "Dark liver (horses)",
-        "Black coffee",
-        "Cinereous",
+        "Khaki (web)",
+        "Rocket metallic",
         "Raisin black",
-        "Old burgundy",
-        "Umber",
+        "Dark liver (horses)",
         "Cinereous",
-        "Khaki (web)"
+        "Black chocolate",
+        "Silver (Crayola)",
+        "Umber",
+        "Grullo",
+        "Old burgundy"
       ]
     ]
   },
@@ -2492,29 +2457,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a212d9c284cf001604aecc65112b3484-transcode-2677$07.jpg/420,102,516,790/full/0/default.jpg",
     "HEX_values": [
       [
-        "#53472f",
+        "#c4b99a",
+        "#544830",
+        "#b8aa8a",
         "#352d20",
-        "#897d60",
-        "#c1b596",
-        "#cac1a5",
-        "#9f9274",
-        "#6f6349",
-        "#d3cdb4",
-        "#2c2414",
-        "#b3a685"
+        "#71654b",
+        "#8c8063",
+        "#d4ceb6",
+        "#ccc4a9",
+        "#a49778",
+        "#2c2414"
       ]
     ],
     "color_names": [
       [
-        "Khaki (web)",
-        "Khaki (web)",
-        "Bistre",
-        "Shadow",
-        "Bistre",
         "French bistre",
+        "Bistre",
+        "Khaki (web)",
+        "Shadow",
+        "Bone",
         "Grullo",
         "Khaki (web)",
-        "Bone",
+        "Khaki (web)",
+        "Bistre",
         "Café noir"
       ]
     ]
@@ -2527,30 +2492,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a212d9c284cf001604aecc65112b3484-transcode-2677$07.jpg/430,938,512,702/full/0/default.jpg",
     "HEX_values": [
       [
-        "#3a3624",
-        "#8b8a74",
-        "#636d59",
-        "#1d2b3c",
         "#17282c",
-        "#a9a389",
-        "#274734",
-        "#bdbaa5",
-        "#3d5642",
-        "#b5b098"
+        "#636d59",
+        "#bdb9a4",
+        "#1d2b3c",
+        "#b4af96",
+        "#274835",
+        "#3a3624",
+        "#888972",
+        "#a7a086",
+        "#3f5743"
       ]
     ],
     "color_names": [
       [
-        "MSU green",
-        "Gunmetal",
-        "Olive Drab (#7)",
-        "Laurel green",
-        "Grullo",
-        "English green",
+        "Charleston green",
         "Artichoke",
-        "Khaki (web)",
         "Ebony",
-        "Xanadu"
+        "English green",
+        "Gunmetal",
+        "Grullo",
+        "Ash gray",
+        "Rifle green",
+        "Olive Drab (#7)",
+        "Khaki (web)"
       ]
     ]
   },
@@ -2563,29 +2528,29 @@
     "HEX_values": [
       [
         "#2c5380",
-        "#6d7877",
-        "#b7b7a5",
+        "#26426a",
+        "#969c92",
+        "#1a263b",
+        "#707b79",
+        "#535b57",
+        "#c7cdc0",
         "#373830",
-        "#25416a",
-        "#1a263a",
-        "#949a91",
-        "#515955",
-        "#1b2a4f",
-        "#c6ccc0"
+        "#1b2a50",
+        "#b7b7a5"
       ]
     ],
     "color_names": [
       [
-        "Morning blue",
+        "Ash gray",
+        "Indigo dye",
+        "Space cadet",
+        "Spanish gray",
+        "Indigo dye",
+        "Davy's grey",
+        "Ash gray",
+        "Prussian blue",
         "Black olive",
-        "Gunmetal",
-        "Nickel",
-        "Indigo dye",
-        "Ash gray",
-        "Feldgrau",
-        "Indigo dye",
-        "Ash gray",
-        "Space cadet"
+        "Nickel"
       ]
     ]
   },
@@ -2597,30 +2562,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a212d9c284cf001604aecc65112b3484-transcode-2677$07.jpg/1668,188,636,710/full/0/default.jpg",
     "HEX_values": [
       [
-        "#a3a18d",
-        "#b4b29d",
-        "#6b6c5f",
-        "#172748",
-        "#8a8977",
-        "#262822",
+        "#898876",
         "#1f3860",
-        "#4d4c3b",
+        "#a3a18d",
+        "#172748",
+        "#242723",
+        "#b4b29d",
+        "#686a5c",
+        "#4b4939",
         "#254572",
         "#c0beab"
       ]
     ],
     "color_names": [
       [
-        "Ash gray",
-        "Oxford blue",
-        "Ash gray",
-        "Pine tree",
         "Grullo",
-        "Middle grey",
+        "Space cadet",
+        "Ash gray",
         "Indigo dye",
+        "Laurel green",
+        "Ebony",
+        "Charleston green",
         "Rifle green",
-        "Prussian blue",
-        "Ebony"
+        "Indigo dye",
+        "Middle grey"
       ]
     ]
   },
@@ -2632,30 +2597,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a212d9c284cf001604aecc65112b3484-transcode-2677$07.jpg/1664,1046,648,550/full/0/default.jpg",
     "HEX_values": [
       [
-        "#1c3767",
-        "#b5b5a1",
-        "#2f2f27",
-        "#c1c3b0",
-        "#224477",
-        "#49504f",
-        "#182751",
-        "#9d9e8b",
         "#142041",
-        "#747a73"
+        "#b3b49f",
+        "#182751",
+        "#6b726c",
+        "#414849",
+        "#1c3768",
+        "#c1c2af",
+        "#234577",
+        "#979987",
+        "#2e2e25"
       ]
     ],
     "color_names": [
       [
-        "Nickel",
-        "Space cadet",
-        "Laurel green",
-        "Pine tree",
-        "Space cadet",
         "Charcoal",
-        "Indigo dye",
         "Ash gray",
+        "Space cadet",
+        "Nickel",
+        "Indigo dye",
+        "Pine tree",
         "Oxford blue",
-        "Grullo"
+        "Grullo",
+        "Ash gray",
+        "Space cadet"
       ]
     ]
   },
@@ -2668,29 +2633,29 @@
     "HEX_values": [
       [
         "#16252e",
-        "#b6b8a6",
-        "#ced0c0",
-        "#3f5943",
-        "#7f8473",
-        "#5f6958",
-        "#25392a",
-        "#2f4c36",
-        "#9da08f",
-        "#c3c6b5"
+        "#818575",
+        "#253b2b",
+        "#c2c5b4",
+        "#9da08e",
+        "#626b5a",
+        "#425a45",
+        "#304d37",
+        "#b4b6a4",
+        "#cdcfbf"
       ]
     ],
     "color_names": [
       [
-        "Ash gray",
-        "English green",
-        "Ebony",
-        "Rifle green",
         "Charleston green",
+        "Bone",
+        "Kombu green",
+        "Ash gray",
         "Grullo",
+        "Ebony",
         "Xanadu",
         "Ash gray",
-        "Kombu green",
-        "Bone"
+        "English green",
+        "Rifle green"
       ]
     ]
   },
@@ -2702,30 +2667,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/8187ef6892acad92632ddc53b4fae88f-transcode-2677$08.jpg/420,162,536,774/full/0/default.jpg",
     "HEX_values": [
       [
-        "#be7020",
         "#1e1c20",
-        "#a77e4f",
-        "#251209",
-        "#845d36",
-        "#613f22",
-        "#ab7031",
-        "#14151c",
         "#43210c",
-        "#b26717"
+        "#825c35",
+        "#b36817",
+        "#603e21",
+        "#a87e50",
+        "#251209",
+        "#be7121",
+        "#14151c",
+        "#a86f32"
       ]
     ],
     "color_names": [
       [
-        "Raisin black",
+        "Rich black (FOGRA29)",
+        "Liver (dogs)",
+        "Café noir",
+        "Dark brown",
+        "Ochre",
         "Coyote brown",
         "Tuscan tan",
         "Black chocolate",
-        "Liver (dogs)",
-        "Dark brown",
-        "Copper",
-        "Rich black (FOGRA29)",
-        "Café noir",
-        "Ochre"
+        "Raisin black",
+        "Copper"
       ]
     ]
   },
@@ -2737,30 +2702,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/8187ef6892acad92632ddc53b4fae88f-transcode-2677$08.jpg/420,1266,536,774/full/0/default.jpg",
     "HEX_values": [
       [
-        "#b7b99b",
-        "#392c2a",
-        "#75695f",
-        "#a19783",
-        "#483a37",
-        "#c5beaa",
-        "#d3cbbd",
-        "#8c8072",
-        "#b0ac8f",
-        "#5e514a"
+        "#d2cbbc",
+        "#aea88d",
+        "#867a6d",
+        "#382b29",
+        "#9c917f",
+        "#b5b899",
+        "#5a4d46",
+        "#706359",
+        "#453836",
+        "#c2bea8"
       ]
     ],
     "color_names": [
       [
-        "Umber",
-        "Laurel green",
-        "Middle grey",
-        "Grullo",
-        "Umber",
         "Silver (Crayola)",
+        "Umber",
+        "Khaki (web)",
         "Black coffee",
-        "Grullo",
+        "Taupe",
         "Laurel green",
-        "Black coffee"
+        "Bone",
+        "Grullo",
+        "Granite gray",
+        "Middle grey"
       ]
     ]
   },
@@ -2772,30 +2737,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/8187ef6892acad92632ddc53b4fae88f-transcode-2677$08.jpg/1334,1806,312,421/full/0/default.jpg",
     "HEX_values": [
       [
-        "#653228",
-        "#debfaf",
-        "#aca689",
-        "#b6b699",
-        "#aa8573",
-        "#7d2622",
-        "#cf9e91",
-        "#996559",
-        "#541f17",
-        "#84483e"
+        "#663329",
+        "#7d2621",
+        "#b6b69a",
+        "#541f18",
+        "#debeaf",
+        "#aca78a",
+        "#cd9b8f",
+        "#a98572",
+        "#84483e",
+        "#996559"
       ]
     ],
     "color_names": [
       [
-        "Prune",
-        "Grullo",
-        "Pastel pink",
-        "Desert sand",
-        "Caput mortuum",
-        "Caput mortuum",
-        "Beaver",
-        "Blast-off bronze",
         "Bole",
-        "Laurel green"
+        "Caput mortuum",
+        "Caput mortuum",
+        "Pastel pink",
+        "Blast-off bronze",
+        "Prune",
+        "Desert sand",
+        "Laurel green",
+        "Beaver",
+        "Grullo"
       ]
     ]
   },
@@ -2807,29 +2772,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/8187ef6892acad92632ddc53b4fae88f-transcode-2677$08.jpg/1700,71,646,565/full/0/default.jpg",
     "HEX_values": [
       [
-        "#afac96",
-        "#c1c1b1",
-        "#49493f",
-        "#2b4c73",
-        "#6a6d67",
-        "#2b281e",
         "#213b5f",
-        "#b7b4a0",
+        "#afab96",
+        "#6a6d66",
+        "#49493f",
+        "#2b281e",
+        "#2b4c73",
+        "#c1c0b0",
         "#182443",
+        "#b7b4a0",
         "#8f9084"
       ]
     ],
     "color_names": [
       [
         "Grullo",
-        "Middle grey",
-        "Prussian blue",
-        "Oxford blue",
-        "Nickel",
-        "Pine tree",
         "Black olive",
-        "Khaki (web)",
+        "Prussian blue",
+        "Nickel",
+        "Middle grey",
         "Indigo dye",
+        "Oxford blue",
+        "Khaki (web)",
+        "Pine tree",
         "Ash gray"
       ]
     ]
@@ -2842,30 +2807,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/8187ef6892acad92632ddc53b4fae88f-transcode-2677$08.jpg/1685,724,648,389/full/0/default.jpg",
     "HEX_values": [
       [
-        "#40231b",
-        "#d1af96",
-        "#c09e81",
-        "#af8f73",
-        "#644533",
-        "#4c2e22",
-        "#7d5e4a",
         "#c9a78c",
+        "#d1b097",
+        "#987861",
+        "#634432",
         "#36190b",
-        "#977861"
+        "#40221b",
+        "#7c5d4a",
+        "#b09073",
+        "#4b2c21",
+        "#c09e82"
       ]
     ],
     "color_names": [
       [
-        "Café noir",
-        "Khaki (web)",
-        "Khaki (web)",
-        "Khaki (web)",
-        "Dark sienna",
-        "Beaver",
         "Bistre",
-        "French bistre",
+        "Khaki (web)",
+        "Beaver",
+        "Khaki (web)",
+        "Liver chestnut",
+        "Dark sienna",
+        "Grullo",
+        "Café noir",
         "Tuscan brown",
-        "Beaver"
+        "Khaki (web)"
       ]
     ]
   },
@@ -2877,30 +2842,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/8187ef6892acad92632ddc53b4fae88f-transcode-2677$08.jpg/1673,1174,636,331/full/0/default.jpg",
     "HEX_values": [
       [
-        "#c9a58c",
-        "#361a0e",
-        "#846755",
-        "#4e3126",
-        "#b79980",
-        "#694c3b",
-        "#d7b7a1",
-        "#40251d",
-        "#9f826c",
-        "#d0ae95"
+        "#d6b69f",
+        "#816452",
+        "#cfad94",
+        "#40241d",
+        "#674a39",
+        "#361a0d",
+        "#9b7e69",
+        "#c8a48b",
+        "#b3967e",
+        "#4c2f25"
       ]
     ],
     "color_names": [
       [
+        "Khaki (web)",
         "Dark sienna",
-        "Bistre",
-        "French bistre",
-        "Khaki (web)",
-        "Khaki (web)",
-        "Bistre",
-        "Grullo",
-        "Beaver",
         "Tuscan brown",
-        "Desert sand"
+        "Bistre",
+        "Bistre",
+        "Beaver",
+        "Desert sand",
+        "Khaki (web)",
+        "Tuscan brown",
+        "Grullo"
       ]
     ]
   },
@@ -2912,29 +2877,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/8187ef6892acad92632ddc53b4fae88f-transcode-2677$08.jpg/1689,1594,644,287/full/0/default.jpg",
     "HEX_values": [
       [
-        "#31180a",
-        "#3a231c",
-        "#7a614d",
-        "#c4ab90",
-        "#af977f",
-        "#5e4634",
-        "#957c67",
+        "#3a221b",
         "#cfb49a",
-        "#452c23",
-        "#d8bda6"
+        "#5d4433",
+        "#d7bda6",
+        "#967d68",
+        "#79614d",
+        "#b09880",
+        "#442b23",
+        "#31180a",
+        "#c4ab90"
       ]
     ],
     "color_names": [
       [
+        "Desert sand",
+        "French bistre",
+        "Bistre",
         "Tuscan brown",
         "Khaki (web)",
-        "Bistre",
+        "Khaki (web)",
+        "Beaver",
         "Grullo",
         "Bistre",
-        "Beaver",
-        "Khaki (web)",
-        "French bistre",
-        "Desert sand",
         "Bistre"
       ]
     ]
@@ -2947,30 +2912,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/8187ef6892acad92632ddc53b4fae88f-transcode-2677$08.jpg/2033,1935,320,275/full/0/default.jpg",
     "HEX_values": [
       [
-        "#614f3a",
-        "#c4b695",
-        "#4d3429",
-        "#7c6b55",
-        "#d4ccb2",
-        "#b3a485",
-        "#988870",
-        "#351f0e",
-        "#cbc2a5",
-        "#432b20"
+        "#806f59",
+        "#9d8d75",
+        "#ccc4a7",
+        "#432b20",
+        "#b8a988",
+        "#c6b998",
+        "#64523d",
+        "#4d342a",
+        "#d5cdb3",
+        "#351f0e"
       ]
     ],
     "color_names": [
       [
-        "Grullo",
         "Bistre",
         "Khaki (web)",
-        "Umber",
         "Khaki (web)",
-        "Bistre",
-        "Dark liver (horses)",
-        "Bone",
         "Shadow",
-        "Khaki (web)"
+        "Khaki (web)",
+        "Bistre",
+        "Umber",
+        "Bone",
+        "Dark liver (horses)",
+        "Shadow"
       ]
     ]
   },
@@ -2982,30 +2947,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/8187ef6892acad92632ddc53b4fae88f-transcode-2677$08.jpg/2417,1951,260,251/full/0/default.jpg",
     "HEX_values": [
       [
-        "#87725c",
-        "#b79e80",
-        "#a08a72",
-        "#37261a",
-        "#c3a98b",
+        "#cdb49b",
+        "#85705b",
+        "#241308",
+        "#9d8770",
         "#251e19",
-        "#ceb59c",
-        "#513f2d",
-        "#6c5844",
-        "#241308"
+        "#36261a",
+        "#c2a88a",
+        "#6b5743",
+        "#b59c7f",
+        "#503e2c"
       ]
     ],
     "color_names": [
       [
-        "Grullo",
+        "Khaki (web)",
+        "Khaki (web)",
+        "Beaver",
+        "Shadow",
+        "Bistre",
+        "Khaki (web)",
+        "Black chocolate",
         "Café noir",
         "Black chocolate",
-        "Umber",
-        "Shadow",
-        "Beaver",
-        "Khaki (web)",
-        "Bistre",
-        "Black chocolate",
-        "Khaki (web)"
+        "Umber"
       ]
     ]
   },
@@ -3017,30 +2982,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/8187ef6892acad92632ddc53b4fae88f-transcode-2677$08.jpg/2690,1927,326,271/full/0/default.jpg",
     "HEX_values": [
       [
-        "#35271a",
-        "#d4cdb3",
-        "#504130",
-        "#b4a98a",
-        "#685b47",
-        "#c1b798",
-        "#9d9178",
-        "#413027",
-        "#cac3a6",
-        "#837760"
+        "#9f9279",
+        "#554734",
+        "#cbc4a8",
+        "#6c604a",
+        "#36281b",
+        "#b6aa8c",
+        "#c3b99b",
+        "#423127",
+        "#857963",
+        "#d5ceb5"
       ]
     ],
     "color_names": [
       [
-        "Grullo",
-        "Bistre",
-        "Bone",
         "Taupe",
-        "Khaki (web)",
-        "Shadow",
+        "Bistre",
         "Khaki (web)",
         "Khaki (web)",
         "Umber",
-        "Bistre"
+        "Khaki (web)",
+        "Shadow",
+        "Bistre",
+        "Grullo",
+        "Bone"
       ]
     ]
   },
@@ -3052,30 +3017,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/c10b10df2c5102eebb3b9029b8b27284-transcode-2677$09.jpg/392,144,568,668/full/0/default.jpg",
     "HEX_values": [
       [
-        "#765857",
         "#751a17",
-        "#a28885",
+        "#a28785",
+        "#644b4c",
         "#611c1a",
         "#563e3f",
-        "#6e3735",
+        "#6e3635",
         "#b89f9c",
-        "#cbb3b0",
-        "#654c4c",
-        "#8b6e6c"
+        "#cbb4b1",
+        "#8b6e6c",
+        "#755756"
       ]
     ],
     "color_names": [
       [
         "Silver pink",
         "Prune",
-        "Bole",
-        "Prune",
-        "Tuscany",
-        "Deep taupe",
-        "Rose ebony",
         "Cinereous",
-        "Dark liver (horses)",
-        "Deep taupe"
+        "Liver",
+        "Deep taupe",
+        "Silver pink",
+        "Prune",
+        "Deep taupe",
+        "Bole",
+        "Dark liver (horses)"
       ]
     ]
   },
@@ -3087,30 +3052,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/c10b10df2c5102eebb3b9029b8b27284-transcode-2677$09.jpg/488,924,456,732/full/0/default.jpg",
     "HEX_values": [
       [
-        "#35455a",
-        "#674d49",
-        "#3e2a31",
+        "#233958",
+        "#3d2b31",
+        "#9ca2a4",
+        "#566672",
+        "#37465a",
         "#5a2524",
-        "#9aa1a3",
-        "#546471",
-        "#7b8188",
-        "#233957",
-        "#253346",
-        "#b7bcbe"
+        "#7c8389",
+        "#694f4a",
+        "#243346",
+        "#b8bdbe"
       ]
     ],
     "color_names": [
       [
-        "Roman silver",
         "Charcoal",
+        "Gray (web)",
         "Black coffee",
+        "Liver",
         "Prussian blue",
-        "Silver sand",
-        "Gunmetal",
         "Quick Silver",
-        "Caput mortuum",
         "Black coral",
-        "Liver"
+        "Gunmetal",
+        "Caput mortuum",
+        "Gray (X11 gray)"
       ]
     ]
   },
@@ -3122,30 +3087,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/c10b10df2c5102eebb3b9029b8b27284-transcode-2677$09.jpg/388,1788,248,346/full/0/default.jpg",
     "HEX_values": [
       [
+        "#30404f",
+        "#2f353e",
         "#76302b",
-        "#787c78",
-        "#999388",
-        "#51403e",
-        "#31414f",
-        "#422625",
-        "#876556",
         "#b1a99d",
-        "#2f363f",
-        "#575d5d"
+        "#422625",
+        "#575d5d",
+        "#787b78",
+        "#50403f",
+        "#866455",
+        "#999388"
       ]
     ],
     "color_names": [
       [
+        "Liver chestnut",
         "Old burgundy",
+        "Liver (organ)",
         "Dark liver (horses)",
         "Nickel",
-        "Liver (organ)",
         "Davy's grey",
         "Charcoal",
         "Silver chalice",
-        "Gunmetal",
-        "Deep taupe",
-        "Middle grey"
+        "Middle grey",
+        "Gunmetal"
       ]
     ]
   },
@@ -3157,30 +3122,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/c10b10df2c5102eebb3b9029b8b27284-transcode-2677$09.jpg/390,1780,264,354/full/0/default.jpg",
     "HEX_values": [
       [
-        "#767975",
-        "#422725",
-        "#54595a",
-        "#989186",
-        "#d6d2c3",
-        "#4f3d3b",
-        "#876153",
-        "#b1a89b",
-        "#75302b",
-        "#2f3d49"
+        "#886253",
+        "#75312b",
+        "#2f3c49",
+        "#747774",
+        "#4e3c3b",
+        "#d5d1c3",
+        "#b0a79b",
+        "#979086",
+        "#545859",
+        "#422625"
       ]
     ],
     "color_names": [
       [
-        "Liver (organ)",
-        "Charcoal",
-        "Middle grey",
         "Davy's grey",
-        "Dark liver (horses)",
-        "Grullo",
+        "Liver (organ)",
         "Old burgundy",
+        "Middle grey",
+        "Bone",
+        "Dark liver (horses)",
+        "Charcoal",
         "Rose taupe",
         "Nickel",
-        "Bone"
+        "Grullo"
       ]
     ]
   },
@@ -3192,30 +3157,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/c10b10df2c5102eebb3b9029b8b27284-transcode-2677$09.jpg/662,1768,352,390/full/0/default.jpg",
     "HEX_values": [
       [
-        "#adaea9",
+        "#acaea9",
         "#2f3936",
-        "#727364",
+        "#717364",
         "#31424f",
-        "#9f9465",
         "#1e1f1f",
-        "#5e2b27",
+        "#89908b",
+        "#9f9465",
         "#262827",
-        "#89918c",
+        "#5e2b27",
         "#53554d"
       ]
     ],
     "color_names": [
       [
         "Nickel",
+        "Charleston green",
+        "Outer space (Crayola)",
+        "Charcoal",
+        "Sand",
         "Eerie black",
         "Silver chalice",
-        "Sand",
-        "Davy's grey",
-        "Spanish gray",
-        "Outer space (Crayola)",
-        "Charleston green",
         "Caput mortuum",
-        "Charcoal"
+        "Old silver",
+        "Ebony"
       ]
     ]
   },
@@ -3227,29 +3192,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/c10b10df2c5102eebb3b9029b8b27284-transcode-2677$09.jpg/1704,66,612,374/full/0/default.jpg",
     "HEX_values": [
       [
-        "#2e231d",
-        "#644d3a",
-        "#9f9079",
-        "#c5b99f",
-        "#cec3ad",
+        "#bdad91",
+        "#2f241d",
+        "#493828",
+        "#67503e",
+        "#837462",
+        "#a7977e",
+        "#5c4431",
+        "#cfc4ae",
         "#231f1b",
-        "#463627",
-        "#7d6d5b",
-        "#bbab8e",
-        "#5a422f"
+        "#c6baa1"
       ]
     ],
     "color_names": [
       [
-        "Café noir",
-        "Bistre",
-        "Grullo",
-        "Café noir",
-        "Khaki (web)",
         "Shadow",
-        "Tuscan brown",
-        "Bone",
+        "Umber",
+        "Grullo",
         "Black chocolate",
+        "Khaki (web)",
+        "Bistre",
+        "Bone",
+        "Café noir",
+        "Café noir",
         "Khaki (web)"
       ]
     ]
@@ -3262,30 +3227,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/c10b10df2c5102eebb3b9029b8b27284-transcode-2677$09.jpg/1706,484,628,314/full/0/default.jpg",
     "HEX_values": [
       [
-        "#d4cdb8",
-        "#2f2823",
-        "#bfb197",
-        "#574a42",
-        "#7d6a54",
+        "#a0917b",
+        "#60442b",
+        "#cdc4ab",
+        "#574b43",
+        "#c0b297",
         "#6f5238",
-        "#9d8e79",
-        "#cdc3ab",
         "#26201a",
-        "#60442b"
+        "#d4cdb8",
+        "#7f6d58",
+        "#2f2824"
       ]
     ],
     "color_names": [
       [
-        "Shadow",
+        "French bistre",
         "Black coffee",
-        "Umber",
-        "Black chocolate",
-        "Bone",
         "Tuscan brown",
-        "Khaki (web)",
+        "Umber",
+        "Bone",
         "Grullo",
+        "Black chocolate",
+        "Van Dyke brown",
         "Khaki (web)",
-        "Van Dyke brown"
+        "Khaki (web)"
       ]
     ]
   },
@@ -3297,30 +3262,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/c10b10df2c5102eebb3b9029b8b27284-transcode-2677$09.jpg/1676,906,292,466/full/0/default.jpg",
     "HEX_values": [
       [
-        "#845646",
-        "#66261f",
-        "#d1ac98",
+        "#d1ab97",
+        "#724132",
         "#ba9680",
-        "#6f3e30",
-        "#c4a18b",
-        "#5d1f18",
-        "#9a6e5c",
-        "#4e1a0e",
-        "#ad8670"
+        "#885a49",
+        "#c4a08b",
+        "#9d715f",
+        "#66271f",
+        "#5e2019",
+        "#4f1a0f",
+        "#ae8771"
       ]
     ],
     "color_names": [
       [
         "Liver (organ)",
-        "Tuscan brown",
-        "Khaki (web)",
-        "Beaver",
         "Bole",
-        "Grullo",
-        "Liver (organ)",
-        "Blast-off bronze",
+        "Bole",
+        "Beaver",
+        "Caput mortuum",
         "Khaki (web)",
-        "Caput mortuum"
+        "Caput mortuum",
+        "Blast-off bronze",
+        "Grullo",
+        "Khaki (web)"
       ]
     ]
   },
@@ -3332,30 +3297,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/c10b10df2c5102eebb3b9029b8b27284-transcode-2677$09.jpg/2020,902,332,466/full/0/default.jpg",
     "HEX_values": [
       [
-        "#d7d2bd",
-        "#ad8475",
-        "#782b23",
-        "#5d271b",
+        "#966859",
         "#e9d2c0",
-        "#936557",
-        "#c8a494",
-        "#d7c4ad",
-        "#7b473a",
-        "#8a2d29"
+        "#792b23",
+        "#7c483b",
+        "#d7c6ae",
+        "#cba997",
+        "#b18879",
+        "#d8d2be",
+        "#5e271c",
+        "#8b2e29"
       ]
     ],
     "color_names": [
       [
-        "Beaver",
-        "Champagne pink",
-        "Prune",
-        "Desert sand",
         "Blast-off bronze",
-        "Caput mortuum",
-        "Bole",
-        "Bone",
+        "Desert sand",
+        "Liver (organ)",
+        "Beaver",
         "Khaki (web)",
-        "Burnt umber"
+        "Champagne pink",
+        "Bone",
+        "Bole",
+        "Burnt umber",
+        "Caput mortuum"
       ]
     ]
   },
@@ -3367,30 +3332,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/c10b10df2c5102eebb3b9029b8b27284-transcode-2677$09.jpg/1708,1452,564,678/full/0/default.jpg",
     "HEX_values": [
       [
-        "#b1b1ae",
-        "#151f32",
-        "#611c17",
-        "#3a3e47",
         "#191617",
-        "#1b263a",
-        "#5e5e62",
-        "#7f7f82",
-        "#3b1a19",
-        "#a29f99"
+        "#a29f98",
+        "#3b3f47",
+        "#b1b1ae",
+        "#5d5d62",
+        "#1c263a",
+        "#611c17",
+        "#7e7f82",
+        "#151f32",
+        "#3b1a19"
       ]
     ],
     "color_names": [
       [
-        "Davy's grey",
-        "Silver chalice",
-        "Prussian blue",
-        "Dark sienna",
-        "Spanish gray",
         "Prune",
+        "Quick Silver",
         "Raisin black",
+        "Granite gray",
+        "Silver chalice",
+        "Gunmetal",
+        "Eerie black",
         "Gray (web)",
-        "Charcoal",
-        "Eerie black"
+        "Dark sienna",
+        "Charcoal"
       ]
     ]
   },
@@ -3402,30 +3367,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/26bb2d2778a18bb098cbc2a26d1c751b-transcode-2677$010.jpg/377,152,582,361/full/0/default.jpg",
     "HEX_values": [
       [
-        "#393d31",
-        "#6a6442",
-        "#191f1b",
-        "#9ca2a2",
-        "#48545a",
-        "#757e79",
-        "#233953",
+        "#958a4d",
         "#1f322f",
-        "#95894d",
-        "#52201b"
+        "#233953",
+        "#757e7a",
+        "#52201b",
+        "#495559",
+        "#9ca3a2",
+        "#6c6543",
+        "#3a3e30",
+        "#191f1b"
       ]
     ],
     "color_names": [
       [
-        "Prussian blue",
-        "Spanish bistre",
-        "Dark jungle green",
-        "Charleston green",
-        "Black olive",
-        "Caput mortuum",
+        "Davy's grey",
         "Quick Silver",
         "Gold Fusion",
-        "Davy's grey",
-        "Gray (web)"
+        "Caput mortuum",
+        "Charleston green",
+        "Spanish bistre",
+        "Prussian blue",
+        "Old silver",
+        "Kombu green",
+        "Dark jungle green"
       ]
     ]
   },
@@ -3437,30 +3402,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/26bb2d2778a18bb098cbc2a26d1c751b-transcode-2677$010.jpg/386,616,598,429/full/0/default.jpg",
     "HEX_values": [
       [
+        "#796a56",
+        "#b5b5b1",
         "#46221b",
-        "#796c57",
-        "#b5b6b3",
-        "#989883",
-        "#1c1916",
-        "#1e2735",
-        "#b09658",
-        "#4a4a42",
+        "#192127",
         "#75251c",
-        "#192127"
+        "#b09659",
+        "#1e2735",
+        "#494942",
+        "#969682",
+        "#1c1916"
       ]
     ],
     "color_names": [
       [
-        "Shadow",
-        "Artichoke",
-        "Raisin black",
-        "Gray (X11 gray)",
-        "Gunmetal",
-        "Black chocolate",
         "Wood brown",
-        "Black olive",
+        "Gunmetal",
+        "Prune",
+        "Silver chalice",
         "Dark sienna",
-        "Prune"
+        "Artichoke",
+        "Shadow",
+        "Black olive",
+        "Raisin black",
+        "Black chocolate"
       ]
     ]
   },
@@ -3472,30 +3437,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/26bb2d2778a18bb098cbc2a26d1c751b-transcode-2677$010.jpg/381,1126,602,413/full/0/default.jpg",
     "HEX_values": [
       [
-        "#d6cbb2",
-        "#9b7261",
-        "#87322a",
-        "#b69381",
-        "#6f3426",
-        "#815343",
-        "#dbd5c1",
         "#cdb39d",
+        "#6f3426",
+        "#9b7361",
+        "#87322a",
+        "#dbd5c1",
         "#612618",
-        "#822721"
+        "#822721",
+        "#d6cab2",
+        "#815343",
+        "#b69381"
       ]
     ],
     "color_names": [
       [
-        "Liver (organ)",
-        "Bole",
+        "Bone",
         "Khaki (web)",
+        "Grullo",
         "Liver (organ)",
-        "Bone",
+        "Tuscan brown",
         "Bone",
         "Burnt umber",
-        "Burnt umber",
+        "Liver (organ)",
         "Blast-off bronze",
-        "Beaver"
+        "Burnt umber"
       ]
     ]
   },
@@ -3507,15 +3472,15 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/26bb2d2778a18bb098cbc2a26d1c751b-transcode-2677$010.jpg/393,1627,600,359/full/0/default.jpg",
     "HEX_values": [
       [
-        "#423024",
-        "#7d6a4c",
         "#301d18",
-        "#917c57",
+        "#6e5c42",
+        "#412f24",
+        "#7d694b",
+        "#917b57",
         "#5a4834",
-        "#6f5c42",
+        "#35231d",
         "#4a3829",
         "#63513a",
-        "#36241e",
         "#52402e"
       ]
     ],
@@ -3523,14 +3488,14 @@
       [
         "Bistre",
         "Gold Fusion",
+        "Bistre",
+        "Umber",
+        "Café noir",
         "Café noir",
         "Bistre",
         "Tuscan brown",
-        "Bistre",
         "French bistre",
-        "Café noir",
-        "Café noir",
-        "Tuscan brown"
+        "Raw umber"
       ]
     ]
   },
@@ -3542,30 +3507,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/26bb2d2778a18bb098cbc2a26d1c751b-transcode-2677$010.jpg/1710,94,600,505/full/0/default.jpg",
     "HEX_values": [
       [
-        "#c9c3ac",
-        "#d3d0bb",
-        "#282214",
-        "#4c4637",
-        "#817c6c",
+        "#cac3ac",
+        "#645f4f",
+        "#373023",
+        "#4b4435",
+        "#d3d1bc",
+        "#9a9484",
+        "#7f796a",
+        "#b6ae99",
         "#d8d7c4",
-        "#383123",
-        "#9b9686",
-        "#b6af9a",
-        "#666151"
+        "#282214"
       ]
     ],
     "color_names": [
       [
-        "Grullo",
-        "Bone",
         "Pine tree",
+        "Ebony",
+        "Grullo",
         "Bone",
         "Middle grey",
-        "Taupe",
         "Olive Drab (#7)",
+        "Taupe",
+        "Bone",
         "Khaki (web)",
-        "Grullo",
-        "Ebony"
+        "Bone"
       ]
     ]
   },
@@ -3577,30 +3542,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/26bb2d2778a18bb098cbc2a26d1c751b-transcode-2677$010.jpg/1692,643,642,301/full/0/default.jpg",
     "HEX_values": [
       [
-        "#621b14",
+        "#3c271c",
+        "#ab8c64",
         "#644e3a",
-        "#aa8b63",
         "#765d47",
-        "#3d271c",
+        "#c2a27f",
+        "#927354",
         "#311a13",
-        "#4a3526",
-        "#917353",
-        "#574130",
-        "#c1a17f"
+        "#621b14",
+        "#56412f",
+        "#4a3526"
       ]
     ],
     "color_names": [
       [
-        "Prune",
         "Bistre",
+        "Tuscan tan",
+        "Tuscan brown",
+        "Bistre",
+        "Liver chestnut",
+        "Prune",
+        "Light French beige",
         "Café noir",
         "Tuscan brown",
-        "Light French beige",
-        "Liver chestnut",
-        "Tuscan tan",
-        "Café noir",
-        "Bistre",
-        "Tuscan brown"
+        "Café noir"
       ]
     ]
   },
@@ -3612,30 +3577,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/26bb2d2778a18bb098cbc2a26d1c751b-transcode-2677$010.jpg/1721,1175,598,459/full/0/default.jpg",
     "HEX_values": [
       [
-        "#521a11",
-        "#3e2c20",
-        "#6d4130",
-        "#dab9a2",
-        "#a97d67",
+        "#c59e86",
+        "#3f2d21",
         "#312219",
-        "#8b5e4b",
-        "#c49c84",
+        "#dbbaa3",
+        "#6f4332",
+        "#8e614d",
+        "#ab806a",
+        "#521a11",
         "#211a16",
         "#681e19"
       ]
     ],
     "color_names": [
       [
-        "Caput mortuum",
-        "Black chocolate",
-        "Antique brass",
-        "Blast-off bronze",
         "Desert sand",
         "Bistre",
-        "Tuscan tan",
-        "Bistre",
         "Prune",
-        "Van Dyke brown"
+        "Van Dyke brown",
+        "Antique brass",
+        "Tuscan tan",
+        "Blast-off bronze",
+        "Caput mortuum",
+        "Black chocolate",
+        "Bistre"
       ]
     ]
   },
@@ -3647,30 +3612,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/26bb2d2778a18bb098cbc2a26d1c751b-transcode-2677$010.jpg/1711,1775,614,341/full/0/default.jpg",
     "HEX_values": [
       [
-        "#543e2c",
-        "#c9ab91",
-        "#9b745b",
-        "#78241c",
-        "#852f27",
-        "#3d2b1f",
-        "#d9c1a8",
-        "#805842",
-        "#b58f77",
-        "#2e2018"
+        "#7c5741",
+        "#c9aa90",
+        "#79241d",
+        "#997259",
+        "#2d1f18",
+        "#503b2b",
+        "#863229",
+        "#d9c0a8",
+        "#b38e75",
+        "#3c2b1e"
       ]
     ],
     "color_names": [
       [
-        "Tuscan brown",
         "Burnt umber",
+        "Liver chestnut",
         "Khaki (web)",
-        "Bistre",
-        "Beaver",
+        "Tuscan brown",
+        "Prune",
         "Bistre",
         "Desert sand",
+        "Bistre",
         "Café noir",
-        "Liver chestnut",
-        "Prune"
+        "Beaver"
       ]
     ]
   },
@@ -3682,30 +3647,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7a0a9dc23a4c9095ecb153dc5ae979f5-transcode-2677$011.jpg/370,122,580,654/full/0/default.jpg",
     "HEX_values": [
       [
-        "#312a1e",
         "#d5d3bf",
-        "#c6bd9e",
-        "#574f3c",
-        "#cfcab1",
-        "#746d59",
-        "#b0a78c",
-        "#928b76",
-        "#292418",
-        "#3c3324"
+        "#322a1e",
+        "#99927d",
+        "#79725e",
+        "#c8c0a2",
+        "#3e3425",
+        "#292419",
+        "#cfccb3",
+        "#5a523f",
+        "#b8ae90"
       ]
     ],
     "color_names": [
       [
-        "Khaki (web)",
-        "Bistre",
-        "Bone",
+        "Pine tree",
+        "Grullo",
         "Umber",
         "Shadow",
         "Khaki (web)",
         "Bone",
-        "Pine tree",
+        "Bone",
         "Olive Drab (#7)",
-        "Grullo"
+        "Bistre",
+        "Khaki (web)"
       ]
     ]
   },
@@ -3717,30 +3682,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7a0a9dc23a4c9095ecb153dc5ae979f5-transcode-2677$011.jpg/394,886,512,690/full/0/default.jpg",
     "HEX_values": [
       [
-        "#6e2320",
-        "#aa9e86",
-        "#aebd9a",
-        "#836758",
         "#a7b591",
-        "#cec2ad",
-        "#6f4d41",
-        "#59372c",
-        "#978270",
-        "#4d261e"
+        "#58362c",
+        "#96806e",
+        "#aebd9a",
+        "#4d261e",
+        "#6e2320",
+        "#6f4d40",
+        "#826657",
+        "#a99d85",
+        "#cec2ad"
       ]
     ],
     "color_names": [
       [
-        "Silver (Crayola)",
-        "Laurel green",
         "Caput mortuum",
+        "French bistre",
         "Tuscan brown",
         "Beaver",
-        "Prune",
-        "Grullo",
+        "Silver (Crayola)",
         "Dark liver (horses)",
+        "Grullo",
         "Laurel green",
-        "French bistre"
+        "Laurel green",
+        "Prune"
       ]
     ]
   },
@@ -3752,30 +3717,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7a0a9dc23a4c9095ecb153dc5ae979f5-transcode-2677$011.jpg/404,1622,528,478/full/0/default.jpg",
     "HEX_values": [
       [
-        "#c8ad9c",
+        "#c8b09e",
+        "#885a50",
+        "#772925",
+        "#724239",
+        "#9c766a",
+        "#a9b693",
         "#4c261f",
         "#69221e",
-        "#87594e",
-        "#b18e81",
-        "#9b7467",
-        "#714238",
-        "#d6c1b1",
-        "#a9b693",
-        "#782925"
+        "#b39083",
+        "#d7c1b1"
       ]
     ],
     "color_names": [
       [
-        "Tuscany",
-        "Dark liver (horses)",
-        "Bole",
-        "Laurel green",
-        "Silver (Crayola)",
-        "Blast-off bronze",
+        "Khaki (web)",
         "Prune",
-        "Caput mortuum",
+        "Bole",
+        "Prune",
         "Beaver",
-        "Prune"
+        "Caput mortuum",
+        "Burnished brown",
+        "Silver (Crayola)",
+        "Laurel green",
+        "Rose taupe"
       ]
     ]
   },
@@ -3787,30 +3752,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7a0a9dc23a4c9095ecb153dc5ae979f5-transcode-2677$011.jpg/1674,80,260,698/full/0/default.jpg",
     "HEX_values": [
       [
-        "#98857e",
-        "#b29f98",
-        "#7c6963",
-        "#332929",
+        "#b09d95",
+        "#352b2a",
+        "#64514b",
         "#641917",
-        "#65514c",
+        "#564544",
+        "#c2b1aa",
+        "#94817a",
         "#1b1818",
-        "#c3b2ab",
-        "#564543",
-        "#4a3a3b"
+        "#4b3b3b",
+        "#79655f"
       ]
     ],
     "color_names": [
       [
+        "Cinereous",
+        "Black coffee",
+        "Deep taupe",
+        "Silver pink",
         "Prune",
         "Umber",
+        "Silver pink",
+        "Dark liver (horses)",
         "Eerie black",
-        "Silver pink",
-        "Dark liver (horses)",
-        "Black coffee",
-        "Cinereous",
-        "Silver pink",
-        "Dark liver (horses)",
-        "Deep taupe"
+        "Old burgundy"
       ]
     ]
   },
@@ -3822,30 +3787,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7a0a9dc23a4c9095ecb153dc5ae979f5-transcode-2677$011.jpg/1996,82,276,698/full/0/default.jpg",
     "HEX_values": [
       [
-        "#57413e",
+        "#7e1a17",
+        "#97776f",
+        "#b09389",
+        "#744236",
         "#6a201b",
-        "#c4aba1",
-        "#98786f",
+        "#7f5c52",
+        "#66504a",
         "#88221f",
-        "#7f5d53",
-        "#754337",
-        "#7d1a17",
-        "#b1948a",
-        "#66504a"
+        "#57413e",
+        "#c4aba1"
       ]
     ],
     "color_names": [
       [
-        "Burnished brown",
-        "Tuscany",
-        "Liver",
-        "Prune",
-        "Deep taupe",
         "Falu red",
-        "Silver pink",
         "Falu red",
         "Dark liver (horses)",
-        "Bole"
+        "Deep taupe",
+        "Burnished brown",
+        "Bole",
+        "Silver pink",
+        "Prune",
+        "Tuscany",
+        "Liver"
       ]
     ]
   },
@@ -3857,15 +3822,15 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7a0a9dc23a4c9095ecb153dc5ae979f5-transcode-2677$011.jpg/2311,480,692,307/full/0/default.jpg",
     "HEX_values": [
       [
-        "#a28d84",
-        "#765f56",
-        "#311f18",
-        "#473229",
-        "#60473e",
+        "#ccb8b0",
+        "#463228",
+        "#755d54",
+        "#a18c82",
+        "#311e18",
+        "#b6a299",
+        "#5e463c",
         "#751916",
-        "#8d776d",
-        "#cdb9b1",
-        "#b7a39a",
+        "#8b756b",
         "#611d17"
       ]
     ],
@@ -3873,14 +3838,14 @@
       [
         "Bistre",
         "Silver pink",
-        "Umber",
-        "Cinereous",
-        "Cinereous",
-        "Liver",
         "Bistre",
+        "Grullo",
+        "Umber",
+        "Deep taupe",
         "Prune",
-        "Falu red",
-        "Silver pink"
+        "Dark liver (horses)",
+        "Cinereous",
+        "Silver (Crayola)"
       ]
     ]
   },
@@ -3893,28 +3858,28 @@
     "HEX_values": [
       [
         "#1c1f14",
-        "#5c6363",
-        "#424028",
-        "#b09434",
-        "#776b36",
+        "#5a6060",
+        "#444127",
+        "#9f904e",
+        "#7a6e38",
         "#b7beb5",
-        "#9d8f4e",
-        "#92978d",
+        "#a38727",
+        "#8f958c",
         "#1a212c",
-        "#a48727"
+        "#b09434"
       ]
     ],
     "color_names": [
       [
-        "Spanish gray",
-        "Black chocolate",
-        "Sand dune",
-        "Rifle green",
-        "Spanish bistre",
-        "Ash gray",
-        "Spanish bistre",
         "Raisin black",
         "Granite gray",
+        "Sand dune",
+        "Spanish bistre",
+        "Ash gray",
+        "Black chocolate",
+        "Spanish gray",
+        "Rifle green",
+        "Spanish bistre",
         "Satin sheen gold"
       ]
     ]
@@ -3927,30 +3892,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a12f42bdf7827bb6f4cac4309c806d35-transcode-2677$012.jpg/352,122,556,354/full/0/default.jpg",
     "HEX_values": [
       [
-        "#685444",
-        "#c2ad96",
-        "#6a482e",
-        "#821f1b",
-        "#80644c",
-        "#d4c2af",
-        "#6d2318",
-        "#78573b",
-        "#947c64",
-        "#ac957d"
+        "#82201b",
+        "#695545",
+        "#d4c2ae",
+        "#68472e",
+        "#c1ac94",
+        "#7f634a",
+        "#aa937b",
+        "#775639",
+        "#6d2218",
+        "#927962"
       ]
     ],
     "color_names": [
       [
         "Falu red",
-        "Silver (Crayola)",
+        "Umber",
         "Tuscan brown",
         "Grullo",
-        "French bistre",
-        "Khaki (web)",
-        "Prune",
-        "Van Dyke brown",
         "Shadow",
-        "Umber"
+        "Prune",
+        "Bone",
+        "Van Dyke brown",
+        "French bistre",
+        "Khaki (web)"
       ]
     ]
   },
@@ -3962,30 +3927,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a12f42bdf7827bb6f4cac4309c806d35-transcode-2677$012.jpg/642,506,276,374/full/0/default.jpg",
     "HEX_values": [
       [
-        "#a88c7e",
-        "#66493c",
-        "#907466",
-        "#d3b9ac",
-        "#442b1f",
-        "#7a5d50",
-        "#6c2119",
-        "#c0a596",
-        "#7f221d",
-        "#553a2d"
+        "#d5bbae",
+        "#634639",
+        "#74574a",
+        "#7c221c",
+        "#9b8072",
+        "#44291d",
+        "#b19587",
+        "#c4aa9b",
+        "#876a5d",
+        "#53382b"
       ]
     ],
     "color_names": [
       [
-        "Prune",
-        "Liver",
+        "Grullo",
+        "Bistre",
         "Silver pink",
-        "Umber",
         "Beaver",
+        "Umber",
         "Dark liver (horses)",
+        "Deep taupe",
         "Grullo",
         "Falu red",
-        "Beaver",
-        "Bistre"
+        "Liver"
       ]
     ]
   },
@@ -3997,30 +3962,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a12f42bdf7827bb6f4cac4309c806d35-transcode-2677$012.jpg/408,918,496,286/full/0/default.jpg",
     "HEX_values": [
       [
-        "#772e29",
-        "#5d4942",
-        "#bfb1a8",
-        "#4c3d39",
-        "#d2c6bd",
-        "#745f57",
-        "#3c2f2b",
-        "#a8988f",
         "#932822",
-        "#8d7c73"
+        "#3c2f2b",
+        "#4c3d38",
+        "#a7978e",
+        "#772e29",
+        "#d2c6bd",
+        "#bfb1a7",
+        "#5c4942",
+        "#8c7b72",
+        "#745e56"
       ]
     ],
     "color_names": [
       [
         "OU Crimson red",
-        "Grullo",
-        "Cinereous",
-        "Dark liver (horses)",
-        "Prune",
-        "Silver pink",
         "Old burgundy",
+        "Silver (Crayola)",
+        "Silver pink",
+        "Prune",
         "Umber",
-        "Umber",
-        "Silver (Crayola)"
+        "Cinereous",
+        "Deep taupe",
+        "Taupe",
+        "Grullo"
       ]
     ]
   },
@@ -4032,29 +3997,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a12f42bdf7827bb6f4cac4309c806d35-transcode-2677$012.jpg/424,1244,452,290/full/0/default.jpg",
     "HEX_values": [
       [
-        "#942a25",
-        "#a79791",
-        "#53423e",
-        "#654e47",
-        "#d2c6bf",
-        "#75625c",
-        "#bfb0aa",
-        "#413330",
+        "#644d46",
+        "#a89892",
         "#7a2f29",
-        "#8d7c76"
+        "#52423e",
+        "#8d7c77",
+        "#942a25",
+        "#75625c",
+        "#413330",
+        "#c0b1aa",
+        "#d3c6c0"
       ]
     ],
     "color_names": [
       [
-        "Dark liver (horses)",
-        "Umber",
-        "Silver (Crayola)",
-        "OU Crimson red",
-        "Silver pink",
         "Liver",
-        "Cinereous",
         "Liver (organ)",
+        "Silver pink",
+        "Dark liver (horses)",
         "Old burgundy",
+        "OU Crimson red",
+        "Umber",
+        "Cinereous",
+        "Silver (Crayola)",
         "Cinereous"
       ]
     ]
@@ -4067,30 +4032,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a12f42bdf7827bb6f4cac4309c806d35-transcode-2677$012.jpg/1676,108,620,538/full/0/default.jpg",
     "HEX_values": [
       [
-        "#251612",
-        "#704e38",
-        "#b99c7f",
         "#563525",
-        "#4f1912",
-        "#a28165",
-        "#38261d",
-        "#8a674c",
         "#ceb399",
-        "#2d1d16"
+        "#2d1d16",
+        "#4f1912",
+        "#a17f64",
+        "#704d37",
+        "#b89a7e",
+        "#38261d",
+        "#251613",
+        "#8a664b"
       ]
     ],
     "color_names": [
       [
         "Grullo",
+        "Tuscan brown",
         "Khaki (web)",
         "Bistre",
-        "Tuscan brown",
         "Caput mortuum",
         "Black chocolate",
         "Liver chestnut",
         "Bistre",
-        "Café noir",
-        "Raw umber"
+        "Raw umber",
+        "Café noir"
       ]
     ]
   },
@@ -4102,30 +4067,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a12f42bdf7827bb6f4cac4309c806d35-transcode-2677$012.jpg/1680,742,612,438/full/0/default.jpg",
     "HEX_values": [
       [
-        "#38221c",
-        "#613f2b",
-        "#2f1b16",
-        "#772621",
-        "#c9af8e",
-        "#b99677",
+        "#d4c0a3",
         "#612117",
-        "#82583f",
-        "#9e765b",
-        "#d5c2a5"
+        "#c7ac8b",
+        "#5f3d2a",
+        "#7f553d",
+        "#38221c",
+        "#772621",
+        "#b59273",
+        "#9a7257",
+        "#2f1b16"
       ]
     ],
     "color_names": [
       [
         "Khaki (web)",
-        "Bistre",
-        "Bistre",
-        "Tuscan tan",
-        "Khaki (web)",
         "Prune",
-        "Van Dyke brown",
+        "Liver chestnut",
+        "Bistre",
+        "Khaki (web)",
+        "Tuscan brown",
         "Wood brown",
-        "Liver (organ)",
-        "Coyote brown"
+        "Bistre",
+        "Van Dyke brown",
+        "Liver (organ)"
       ]
     ]
   },
@@ -4137,30 +4102,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a12f42bdf7827bb6f4cac4309c806d35-transcode-2677$012.jpg/1682,1274,632,438/full/0/default.jpg",
     "HEX_values": [
       [
-        "#cdb291",
-        "#552114",
-        "#967353",
-        "#7c573d",
+        "#cdb391",
         "#291e18",
+        "#7c573d",
+        "#552114",
         "#ad8c65",
-        "#1e1915",
         "#36281f",
-        "#bda078",
-        "#603d29"
+        "#977353",
+        "#603d29",
+        "#1e1915",
+        "#bda178"
       ]
     ],
     "color_names": [
       [
+        "Khaki (web)",
         "Bistre",
         "Tuscan brown",
         "Black chocolate",
-        "Van Dyke brown",
-        "Caput mortuum",
-        "Khaki (web)",
-        "Light French beige",
-        "Black chocolate",
         "Wood brown",
-        "Liver chestnut"
+        "Liver chestnut",
+        "Black chocolate",
+        "Caput mortuum",
+        "Light French beige",
+        "Van Dyke brown"
       ]
     ]
   },
@@ -4172,30 +4137,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/a12f42bdf7827bb6f4cac4309c806d35-transcode-2677$012.jpg/1678,1776,632,414/full/0/default.jpg",
     "HEX_values": [
       [
-        "#a27b5d",
-        "#d6c7ae",
-        "#4f3827",
-        "#33231a",
-        "#83563f",
-        "#251b16",
-        "#ba9b75",
-        "#622215",
+        "#34231a",
         "#7b2a22",
-        "#cab190"
+        "#82543e",
+        "#622215",
+        "#503927",
+        "#a0775a",
+        "#251b16",
+        "#d6c6ac",
+        "#c8af8e",
+        "#b89872"
       ]
     ],
     "color_names": [
       [
-        "Tuscan tan",
-        "Tuscan brown",
-        "Bone",
         "Khaki (web)",
-        "Prune",
-        "Café noir",
-        "Wood brown",
+        "Black chocolate",
         "Liver (organ)",
+        "Liver chestnut",
+        "Wood brown",
+        "Desert sand",
+        "Tuscan brown",
+        "Café noir",
         "Bistre",
-        "Black chocolate"
+        "Prune"
       ]
     ]
   },
@@ -4207,30 +4172,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/af6daa070b451a87dcaf558283b26271-transcode-2677$013.jpg/397,121,500,329/full/0/default.jpg",
     "HEX_values": [
       [
-        "#d1d2c6",
-        "#1b2b4a",
-        "#4b535b",
-        "#1c2737",
-        "#687074",
-        "#293951",
-        "#869092",
-        "#917d58",
-        "#a3adab",
-        "#b7bfb8"
+        "#869093",
+        "#25354f",
+        "#7e6e53",
+        "#a4aeac",
+        "#9a855d",
+        "#646f76",
+        "#b8bfb8",
+        "#444f5a",
+        "#1a2945",
+        "#d1d2c7"
       ]
     ],
     "color_names": [
       [
-        "Charcoal",
-        "Silver chalice",
         "Sonic silver",
-        "Ash gray",
-        "Timberwolf",
         "Prussian blue",
-        "Davy's grey",
-        "Gold Fusion",
+        "Silver chalice",
+        "Timberwolf",
         "Spanish gray",
-        "Gunmetal"
+        "Prussian blue",
+        "Shadow",
+        "Black coral",
+        "Ash gray",
+        "Gold Fusion"
       ]
     ]
   },
@@ -4242,30 +4207,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/af6daa070b451a87dcaf558283b26271-transcode-2677$013.jpg/397,504,582,329/full/0/default.jpg",
     "HEX_values": [
       [
-        "#1e1c21",
-        "#958158",
-        "#a8915f",
-        "#776e5c",
         "#1c233e",
-        "#b0a589",
-        "#999177",
-        "#3b3431",
-        "#5b5145",
-        "#b39c6b"
+        "#a8915f",
+        "#595044",
+        "#393230",
+        "#b39c6c",
+        "#766d5c",
+        "#1e1c21",
+        "#999077",
+        "#afa589",
+        "#968158"
       ]
     ],
     "color_names": [
       [
         "Raisin black",
-        "Light French beige",
-        "Jet",
-        "Grullo",
-        "Grullo",
-        "Umber",
-        "Oxford blue",
-        "Wood brown",
         "Shadow",
-        "Gold Fusion"
+        "Grullo",
+        "Jet",
+        "Light French beige",
+        "Gold Fusion",
+        "Grullo",
+        "Oxford blue",
+        "Umber",
+        "Wood brown"
       ]
     ]
   },
@@ -4277,30 +4242,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/af6daa070b451a87dcaf558283b26271-transcode-2677$013.jpg/401,865,580,379/full/0/default.jpg",
     "HEX_values": [
       [
-        "#c7d8da",
-        "#24304b",
-        "#9aaeb9",
-        "#3e5061",
-        "#7d909c",
-        "#17253d",
         "#d3d4c4",
-        "#b4c7cc",
-        "#5e717e",
-        "#b3aa8a"
+        "#222d48",
+        "#506372",
+        "#8ea2ae",
+        "#c5d6d8",
+        "#acc0c8",
+        "#14233a",
+        "#708390",
+        "#b3aa8a",
+        "#334257"
       ]
     ],
     "color_names": [
       [
-        "Bone",
-        "Prussian blue",
         "Khaki (web)",
-        "Slate gray",
-        "Payne's grey",
-        "Charcoal",
-        "Light gray",
         "Cadet grey",
-        "Silver sand",
-        "Prussian blue"
+        "Prussian blue",
+        "Payne's grey",
+        "Prussian blue",
+        "Bone",
+        "Light gray",
+        "Slate gray",
+        "Charcoal",
+        "Silver sand"
       ]
     ]
   },
@@ -4313,29 +4278,29 @@
     "HEX_values": [
       [
         "#22222f",
-        "#3c383a",
-        "#6f5f47",
-        "#8e826e",
-        "#817056",
+        "#5e4d37",
+        "#827157",
+        "#706c66",
+        "#3d393a",
+        "#706048",
         "#1d2848",
-        "#5e4c37",
-        "#706b65",
-        "#a19785",
-        "#555352"
+        "#a29885",
+        "#8e836f",
+        "#565352"
       ]
     ],
     "color_names": [
       [
-        "Raisin black",
         "Shadow",
-        "Davy's grey",
-        "French bistre",
         "Grullo",
-        "Nickel",
-        "Onyx",
-        "Umber",
         "Shadow",
-        "Space cadet"
+        "Space cadet",
+        "French bistre",
+        "Onyx",
+        "Davy's grey",
+        "Raisin black",
+        "Umber",
+        "Nickel"
       ]
     ]
   },
@@ -4348,29 +4313,29 @@
     "HEX_values": [
       [
         "#d2d6c9",
-        "#23344a",
-        "#3c4a5c",
-        "#9ca5a4",
-        "#b0bec1",
-        "#c8d7d6",
-        "#788790",
+        "#24354b",
+        "#223965",
+        "#9ea7a5",
+        "#5c6c77",
+        "#c9d7d6",
+        "#3f4d5e",
+        "#b1bfc2",
         "#c9cdbe",
-        "#596874",
-        "#223965"
+        "#7c8a93"
       ]
     ],
     "color_names": [
       [
-        "Ash gray",
-        "Quick Silver",
+        "Slate gray",
+        "Cadet",
+        "Timberwolf",
         "Charcoal",
-        "Prussian blue",
+        "Silver sand",
         "Space cadet",
         "Light gray",
-        "Cadet",
-        "Silver sand",
-        "Timberwolf",
-        "Roman silver"
+        "Prussian blue",
+        "Quick Silver",
+        "Ash gray"
       ]
     ]
   },
@@ -4382,30 +4347,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/af6daa070b451a87dcaf558283b26271-transcode-2677$013.jpg/1664,105,648,327/full/0/default.jpg",
     "HEX_values": [
       [
-        "#171008",
-        "#867862",
-        "#c4b99f",
-        "#aa9876",
-        "#1e1b18",
-        "#4c392a",
-        "#bbad8e",
-        "#cec5ae",
+        "#c3b99e",
         "#3e2f23",
-        "#645643"
+        "#4c392a",
+        "#baac8d",
+        "#cdc4ad",
+        "#171008",
+        "#847560",
+        "#a89675",
+        "#1e1b18",
+        "#625442"
       ]
     ],
     "color_names": [
       [
-        "Black chocolate",
+        "Umber",
         "Bistre",
         "Khaki (web)",
-        "Café noir",
         "Khaki (web)",
-        "Black chocolate",
         "Bone",
+        "Smoky black",
         "Grullo",
-        "Shadow",
-        "Umber"
+        "Café noir",
+        "Eerie black",
+        "Shadow"
       ]
     ]
   },
@@ -4417,30 +4382,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/af6daa070b451a87dcaf558283b26271-transcode-2677$013.jpg/1668,528,624,537/full/0/default.jpg",
     "HEX_values": [
       [
+        "#1c1a18",
+        "#23211f",
+        "#cdc9b8",
+        "#9a9285",
+        "#d5d2c3",
+        "#443a35",
+        "#bbb4a3",
         "#7b7265",
-        "#23201e",
-        "#cbc7b5",
-        "#989183",
-        "#625548",
-        "#d4d2c2",
         "#564538",
-        "#b7afa0",
-        "#433a34",
-        "#1c1917"
+        "#625447"
       ]
     ],
     "color_names": [
       [
-        "Umber",
-        "Umber",
-        "Silver (Crayola)",
+        "Eerie black",
         "Grullo",
         "Bone",
-        "Taupe",
+        "Middle grey",
         "Bone",
-        "Eerie black",
-        "Eerie black",
-        "Middle grey"
+        "Taupe",
+        "Silver (Crayola)",
+        "Umber",
+        "Umber",
+        "Eerie black"
       ]
     ]
   },
@@ -4453,29 +4418,29 @@
     "HEX_values": [
       [
         "#712e1f",
-        "#473421",
-        "#56412e",
-        "#3a2716",
-        "#844836",
-        "#4d3926",
+        "#56422e",
         "#352211",
-        "#b48873",
-        "#3e2b1a",
-        "#422f1d"
+        "#4d3926",
+        "#483422",
+        "#3b2817",
+        "#b58974",
+        "#43301e",
+        "#844836",
+        "#3f2c1b"
       ]
     ],
     "color_names": [
       [
+        "Bistre",
+        "Café noir",
+        "Bistre",
+        "Café noir",
+        "Bistre",
+        "Café noir",
+        "Café noir",
         "Beaver",
-        "Café noir",
-        "Liver (organ)",
-        "Bistre",
-        "Bistre",
-        "Café noir",
-        "Café noir",
-        "Bistre",
         "Bole",
-        "Café noir"
+        "Liver (organ)"
       ]
     ]
   },
@@ -4487,29 +4452,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/af6daa070b451a87dcaf558283b26271-transcode-2677$013.jpg/1712,1692,582,315/full/0/default.jpg",
     "HEX_values": [
       [
-        "#4e2a19",
-        "#5e3321",
+        "#6c2d1a",
         "#b08f45",
-        "#4a3726",
+        "#4f2b19",
+        "#493626",
         "#3b2617",
-        "#8d6b3d",
-        "#6b2c1a",
-        "#743421",
-        "#7a4029",
+        "#5f3321",
+        "#743522",
+        "#7a412a",
+        "#8e6b3d",
         "#412f1f"
       ]
     ],
     "color_names": [
       [
+        "Coyote brown",
+        "Liver (organ)",
+        "Van Dyke brown",
         "Liver (organ)",
         "Café noir",
-        "Metallic Sunburst",
-        "Van Dyke brown",
-        "Bistre",
-        "Coyote brown",
         "Caput mortuum",
         "Liver (organ)",
-        "Liver (organ)",
+        "Metallic Sunburst",
+        "Bistre",
         "Bistre"
       ]
     ]
@@ -4522,30 +4487,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/381,172,568,361/full/0/default.jpg",
     "HEX_values": [
       [
-        "#523f30",
-        "#376895",
         "#cccbb9",
+        "#467299",
+        "#523f30",
+        "#31618f",
+        "#8a8679",
+        "#162853",
+        "#6a5e4e",
+        "#234471",
         "#cfd5ca",
-        "#172954",
-        "#8d8473",
-        "#695c4c",
-        "#a7aba4",
-        "#29517f",
-        "#618097"
+        "#a4aaa5"
       ]
     ],
     "color_names": [
       [
-        "Bone",
-        "Silver chalice",
-        "Timberwolf",
-        "Indigo dye",
-        "Light slate gray",
-        "Middle grey",
         "Space cadet",
+        "Timberwolf",
+        "Queen blue",
+        "Slate gray",
+        "Middle grey",
+        "Quick Silver",
         "Taupe",
         "Umber",
-        "Queen blue"
+        "Silver (Crayola)",
+        "Indigo dye"
       ]
     ]
   },
@@ -4557,30 +4522,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/407,630,546,331/full/0/default.jpg",
     "HEX_values": [
       [
-        "#5789aa",
-        "#375e87",
-        "#5a4d3d",
-        "#6c808a",
-        "#d0d8cf",
-        "#8ba2aa",
+        "#6d808a",
+        "#b0c4c8",
         "#213c68",
+        "#5a4d3d",
+        "#8da3ab",
+        "#47799e",
         "#182b55",
-        "#aec2c6",
-        "#46789e"
+        "#385f88",
+        "#5889aa",
+        "#d0d8cf"
       ]
     ],
     "color_names": [
       [
-        "Light gray",
-        "Indigo dye",
+        "Queen blue",
         "Cerulean frost",
-        "Umber",
-        "Light slate gray",
+        "Indigo dye",
+        "Slate gray",
         "Queen blue",
+        "Cadet grey",
         "Space cadet",
+        "Umber",
         "Timberwolf",
-        "Queen blue",
-        "Cadet grey"
+        "Opal"
       ]
     ]
   },
@@ -4592,29 +4557,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/402,1047,564,333/full/0/default.jpg",
     "HEX_values": [
       [
-        "#d4dacf",
-        "#5e89a5",
-        "#36547d",
-        "#554236",
-        "#958c7e",
+        "#d4d9cf",
         "#739db3",
+        "#35547d",
+        "#978e80",
+        "#706253",
+        "#554337",
+        "#5e89a4",
+        "#acb5b2",
         "#223a65",
-        "#adb5b1",
-        "#d3d0bd",
-        "#6e5f51"
+        "#d3d0bc"
       ]
     ],
     "color_names": [
       [
+        "Timberwolf",
+        "Dark liver (horses)",
+        "Indigo dye",
+        "Purple navy",
         "Shadow blue",
         "Middle grey",
-        "Bone",
-        "Queen blue",
-        "Taupe",
         "Umber",
-        "Indigo dye",
         "Ash gray",
-        "Timberwolf",
+        "Bone",
         "Air superiority blue"
       ]
     ]
@@ -4627,30 +4592,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/409,1458,494,245/full/0/default.jpg",
     "HEX_values": [
       [
-        "#423127",
-        "#5e4e42",
-        "#807167",
-        "#382a27",
-        "#3f2d21",
-        "#48372d",
+        "#443329",
+        "#544438",
+        "#382a26",
+        "#3b291e",
+        "#86776d",
+        "#625247",
         "#2b1e1a",
         "#312320",
-        "#38271e",
-        "#504035"
+        "#4a3a2f",
+        "#402e23"
       ]
     ],
     "color_names": [
       [
-        "Cinereous",
         "Bistre",
+        "Taupe",
+        "Bistre",
+        "Cinereous",
         "Black coffee",
         "Taupe",
+        "Black coffee",
         "Bistre",
         "Black chocolate",
-        "Umber",
-        "Taupe",
-        "Bistre",
-        "Black coffee"
+        "Umber"
       ]
     ]
   },
@@ -4662,30 +4627,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/411,1725,492,181/full/0/default.jpg",
     "HEX_values": [
       [
-        "#6c5940",
-        "#432f21",
-        "#887356",
+        "#412d20",
+        "#5f4b35",
+        "#79654a",
         "#2d1b11",
-        "#533e2b",
-        "#978160",
-        "#a7916d",
+        "#523d2a",
         "#32201e",
-        "#5f4b36",
-        "#7a654b"
+        "#968160",
+        "#a7916c",
+        "#6c5840",
+        "#877355"
       ]
     ],
     "color_names": [
       [
-        "French bistre",
+        "Shadow",
+        "Grullo",
+        "Tuscan brown",
         "Shadow",
         "Café noir",
-        "French bistre",
-        "Old burgundy",
+        "Black coffee",
         "Tuscan brown",
         "Bistre",
-        "Tuscan brown",
-        "Café noir",
-        "Shadow"
+        "French bistre",
+        "Bistre"
       ]
     ]
   },
@@ -4697,30 +4662,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/421,1932,572,241/full/0/default.jpg",
     "HEX_values": [
       [
-        "#96805b",
-        "#4c3522",
-        "#755f45",
-        "#a28c62",
-        "#351e11",
         "#b79f6e",
-        "#ae9766",
-        "#3b231b",
-        "#604a33",
-        "#867152"
+        "#493220",
+        "#ae9666",
+        "#5c4630",
+        "#836e50",
+        "#947e5b",
+        "#705a42",
+        "#351e10",
+        "#a28b61",
+        "#3a231b"
       ]
     ],
     "color_names": [
       [
-        "Bistre",
+        "French bistre",
+        "Café noir",
         "Gold Fusion",
+        "Tuscan brown",
+        "Wood brown",
         "Light French beige",
         "Tuscan brown",
-        "Shadow",
-        "Café noir",
-        "French bistre",
+        "Gold Fusion",
         "Bistre",
-        "Wood brown",
-        "Tuscan brown"
+        "Bistre"
       ]
     ]
   },
@@ -4732,30 +4697,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/1664,144,600,654/full/0/default.jpg",
     "HEX_values": [
       [
-        "#35516c",
-        "#1e335d",
-        "#c5bfa1",
-        "#1a273d",
-        "#5e7984",
+        "#1e345d",
+        "#607b86",
+        "#3a688f",
+        "#91a5a5",
         "#9e8d65",
-        "#90a3a4",
-        "#bcc7bd",
-        "#3a678f",
-        "#bbb496"
+        "#bdc7bd",
+        "#bbb496",
+        "#37546d",
+        "#c5bfa1",
+        "#1a273d"
       ]
     ],
     "color_names": [
       [
-        "Queen blue",
-        "Space cadet",
-        "Gold Fusion",
-        "Cadet",
         "Ash gray",
+        "Independence",
+        "Space cadet",
+        "Morning blue",
         "Prussian blue",
         "Khaki (web)",
+        "Shadow",
+        "Queen blue",
         "Khaki (web)",
-        "Independence",
-        "Morning blue"
+        "Slate gray"
       ]
     ]
   },
@@ -4767,28 +4732,28 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/1696,842,604,530/full/0/default.jpg",
     "HEX_values": [
       [
-        "#a29b77",
-        "#1f3566",
-        "#2f5484",
-        "#3e4b50",
-        "#426d94",
-        "#c3cbba",
-        "#1c2c46",
-        "#c0c3ac",
-        "#b2bda8",
-        "#748c97"
+        "#a29a77",
+        "#718a95",
+        "#416d95",
+        "#c4c9b5",
+        "#1f3567",
+        "#305484",
+        "#3d494e",
+        "#1b2c47",
+        "#bec2ab",
+        "#b0bca7"
       ]
     ],
     "color_names": [
       [
-        "Slate gray",
+        "Queen blue",
         "Artichoke",
-        "Prussian blue",
-        "Charcoal",
         "Laurel green",
+        "Prussian blue",
         "B'dazzled blue",
         "Ash gray",
-        "Queen blue",
+        "Charcoal",
+        "Slate gray",
         "Space cadet",
         "Cadet grey"
       ]
@@ -4802,30 +4767,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/1746,1428,564,158/full/0/default.jpg",
     "HEX_values": [
       [
-        "#1f100a",
         "#bea393",
+        "#4f3c32",
+        "#6c584d",
+        "#1f1009",
+        "#c8afa1",
+        "#a28b7d",
+        "#2e231e",
         "#201c1a",
-        "#a48c7e",
-        "#b49989",
-        "#897469",
-        "#2f241f",
-        "#c9afa1",
-        "#6d594f",
-        "#503d33"
+        "#887368",
+        "#b49989"
       ]
     ],
     "color_names": [
       [
-        "Black coffee",
         "Beaver",
+        "Black chocolate",
         "Silver pink",
         "Cinereous",
         "Grullo",
+        "Black coffee",
         "Dark liver (horses)",
-        "Eerie black",
         "Grullo",
-        "Umber",
-        "Black chocolate"
+        "Eerie black",
+        "Umber"
       ]
     ]
   },
@@ -4837,30 +4802,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/1736,1614,580,154/full/0/default.jpg",
     "HEX_values": [
       [
-        "#402c23",
-        "#cdc3b0",
-        "#625141",
-        "#b1a390",
-        "#4a372c",
+        "#332316",
+        "#786857",
+        "#d9cfbd",
+        "#938573",
         "#c3b8a4",
-        "#7d6e5c",
-        "#d8cebc",
-        "#342317",
-        "#988a77"
+        "#49352a",
+        "#3f2b22",
+        "#cec3b0",
+        "#5d4c3c",
+        "#aea08d"
       ]
     ],
     "color_names": [
       [
-        "Beaver",
-        "Bone",
-        "Bistre",
-        "Grullo",
-        "Umber",
         "Silver (Crayola)",
-        "Shadow",
         "Taupe",
+        "Bistre",
+        "Shadow",
+        "Grullo",
         "Khaki (web)",
-        "Bistre"
+        "Grullo",
+        "Bistre",
+        "Bone",
+        "Umber"
       ]
     ]
   },
@@ -4872,30 +4837,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/1746,1774,580,154/full/0/default.jpg",
     "HEX_values": [
       [
-        "#b6a693",
-        "#85715f",
-        "#755747",
-        "#9e8c79",
-        "#4d3524",
-        "#d3c8b6",
-        "#604232",
-        "#6c4b3b",
-        "#dbd1c0",
-        "#c9bba9"
+        "#c9bca9",
+        "#a3917e",
+        "#634434",
+        "#8b7866",
+        "#b9a895",
+        "#d2c7b6",
+        "#dbd0bf",
+        "#785d4c",
+        "#6f4e3e",
+        "#4f3726"
       ]
     ],
     "color_names": [
       [
-        "Silver (Crayola)",
+        "Grullo",
         "Tuscan brown",
-        "Bone",
-        "Grullo",
-        "Grullo",
-        "Silver (Crayola)",
         "Café noir",
+        "Grullo",
+        "Bone",
         "Tuscan brown",
         "Shadow",
-        "Tuscan brown"
+        "Bone",
+        "Tuscan brown",
+        "Silver (Crayola)"
       ]
     ]
   },
@@ -4907,30 +4872,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/1754,1938,556,126/full/0/default.jpg",
     "HEX_values": [
       [
-        "#d1b6a8",
-        "#2f201b",
-        "#4d382e",
+        "#2e201b",
+        "#bea190",
+        "#4c372d",
+        "#d2b7a9",
         "#200e08",
-        "#bda08f",
-        "#a48b7e",
-        "#6b554a",
+        "#a48c7e",
         "#211a18",
-        "#887165",
-        "#c8a998"
+        "#c9aa99",
+        "#877164",
+        "#6a5449"
       ]
     ],
     "color_names": [
       [
-        "Beaver",
+        "Dark liver (horses)",
         "Eerie black",
         "Khaki (web)",
-        "Dark liver (horses)",
+        "Silver pink",
         "Smoky black",
         "Umber",
-        "Grullo",
+        "Beaver",
         "Bistre",
         "Cinereous",
-        "Silver pink"
+        "Grullo"
       ]
     ]
   },
@@ -4942,30 +4907,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/921c9d1dae2515ce48bc7593ddff6ab9-transcode-2677$014.jpg/1752,2078,556,126/full/0/default.jpg",
     "HEX_values": [
       [
-        "#4e4331",
-        "#c2b79a",
-        "#a79c85",
-        "#201408",
-        "#d4cdb3",
-        "#281e19",
+        "#d3ccb2",
         "#34271e",
-        "#897f69",
-        "#cdc4a7",
-        "#6b614c"
+        "#a69c84",
+        "#6d634e",
+        "#cbc2a5",
+        "#281e19",
+        "#8b806a",
+        "#4f4432",
+        "#201408",
+        "#bfb498"
       ]
     ],
     "color_names": [
       [
-        "Umber",
-        "Bistre",
-        "Bone",
-        "Khaki (web)",
-        "Khaki (web)",
+        "Black chocolate",
         "Grullo",
+        "Khaki (web)",
+        "Bistre",
+        "Shadow",
+        "Bone",
         "Taupe",
+        "Khaki (web)",
         "Black chocolate",
-        "Black chocolate",
-        "Shadow"
+        "Umber"
       ]
     ]
   },
@@ -4977,30 +4942,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/201e781c460748a53a7f4abeb0c34973-transcode-2677$015.jpg/394,102,676,826/full/0/default.jpg",
     "HEX_values": [
       [
-        "#4f412f",
-        "#19284c",
-        "#41688f",
-        "#d4dad2",
-        "#715c45",
-        "#a3aaa6",
-        "#82837b",
-        "#2b4168",
-        "#5582a9",
-        "#c9cdc1"
+        "#5683a9",
+        "#cbcec3",
+        "#19294d",
+        "#715c46",
+        "#50412f",
+        "#d5dbd3",
+        "#2c4269",
+        "#84857d",
+        "#a5aca8",
+        "#416990"
       ]
     ],
     "color_names": [
       [
-        "Steel blue",
-        "Quick Silver",
         "Indigo dye",
-        "Queen blue",
         "Timberwolf",
-        "Timberwolf",
-        "Space cadet",
         "Middle grey",
+        "Timberwolf",
         "Tuscan brown",
-        "Taupe"
+        "Taupe",
+        "Steel blue",
+        "Space cadet",
+        "Quick Silver",
+        "Queen blue"
       ]
     ]
   },
@@ -5012,30 +4977,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/201e781c460748a53a7f4abeb0c34973-transcode-2677$015.jpg/416,1032,564,554/full/0/default.jpg",
     "HEX_values": [
       [
-        "#272421",
-        "#d0c7bb",
+        "#d0c8bc",
+        "#c4b9a6",
         "#1f1c19",
-        "#433934",
-        "#362e2b",
-        "#635b52",
-        "#857d73",
-        "#c4b8a5",
         "#a69d93",
-        "#cac1b2"
+        "#635b53",
+        "#433934",
+        "#cbc1b2",
+        "#857d74",
+        "#272421",
+        "#362e2b"
       ]
     ],
     "color_names": [
       [
-        "Grullo",
-        "Black coffee",
-        "Silver (Crayola)",
-        "Taupe",
-        "Umber",
-        "Raisin black",
         "Khaki (web)",
-        "Middle grey",
+        "Taupe",
+        "Raisin black",
         "Silver (Crayola)",
-        "Eerie black"
+        "Silver (Crayola)",
+        "Eerie black",
+        "Grullo",
+        "Umber",
+        "Black coffee",
+        "Middle grey"
       ]
     ]
   },
@@ -5047,30 +5012,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/201e781c460748a53a7f4abeb0c34973-transcode-2677$015.jpg/406,1618,564,554/full/0/default.jpg",
     "HEX_values": [
       [
+        "#c3b799",
+        "#898170",
         "#524337",
         "#2c2722",
-        "#cdc6ac",
-        "#c1b698",
-        "#d2cfbc",
-        "#867d6c",
         "#23201c",
-        "#a49b88",
-        "#423932",
-        "#685f50"
+        "#d2cfbc",
+        "#a79f8a",
+        "#6b6253",
+        "#cdc6ad",
+        "#433933"
       ]
     ],
     "color_names": [
       [
-        "Bone",
-        "Bone",
-        "Raisin black",
-        "Taupe",
         "Grullo",
-        "Eerie black",
-        "Middle grey",
+        "Raisin black",
         "Khaki (web)",
         "Taupe",
-        "Umber"
+        "Middle grey",
+        "Bone",
+        "Eerie black",
+        "Umber",
+        "Bone",
+        "Taupe"
       ]
     ]
   },
@@ -5082,30 +5047,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/201e781c460748a53a7f4abeb0c34973-transcode-2677$015.jpg/1650,82,620,506/full/0/default.jpg",
     "HEX_values": [
       [
-        "#a9a38a",
-        "#263853",
-        "#928d75",
-        "#b6b099",
-        "#16273f",
-        "#667279",
-        "#b1bbb8",
-        "#89989f",
-        "#1b2e4e",
-        "#485359"
+        "#1a2c4c",
+        "#b2bbb8",
+        "#908c74",
+        "#8998a0",
+        "#455157",
+        "#b5af98",
+        "#16263b",
+        "#233653",
+        "#a8a289",
+        "#647178"
       ]
     ],
     "color_names": [
       [
-        "Charcoal",
-        "Artichoke",
-        "Prussian blue",
-        "Black coral",
-        "Cadet grey",
-        "Khaki (web)",
-        "Grullo",
+        "Cadet",
         "Ash gray",
         "Prussian blue",
-        "Slate gray"
+        "Khaki (web)",
+        "Prussian blue",
+        "Grullo",
+        "Artichoke",
+        "Cadet grey",
+        "Prussian blue",
+        "Davy's grey"
       ]
     ]
   },
@@ -5117,28 +5082,28 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/201e781c460748a53a7f4abeb0c34973-transcode-2677$015.jpg/1646,626,648,554/full/0/default.jpg",
     "HEX_values": [
       [
-        "#473d45",
-        "#242e3e",
-        "#847c82",
-        "#17191d",
-        "#223651",
-        "#615c66",
-        "#3d1c1f",
         "#a89798",
+        "#252f3f",
         "#581b1a",
-        "#2d405a"
+        "#4e3d43",
+        "#3d1d20",
+        "#2f4159",
+        "#857d83",
+        "#615d67",
+        "#223652",
+        "#17191d"
       ]
     ],
     "color_names": [
       [
-        "Taupe gray",
-        "Dark liver",
-        "Prussian blue",
-        "Gunmetal",
-        "Spanish gray",
-        "Granite gray",
-        "Charcoal",
+        "Rocket metallic",
         "Dark sienna",
+        "Gunmetal",
+        "Prussian blue",
+        "Davy's grey",
+        "Spanish gray",
+        "Independence",
+        "Dark liver",
         "Caput mortuum",
         "Eerie black"
       ]
@@ -5152,30 +5117,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/201e781c460748a53a7f4abeb0c34973-transcode-2677$015.jpg/1652,1214,640,438/full/0/default.jpg",
     "HEX_values": [
       [
-        "#242a38",
-        "#6c727e",
-        "#8e9299",
-        "#453d3f",
+        "#8f9299",
+        "#233350",
+        "#93684e",
+        "#a17860",
+        "#6f5a52",
         "#465061",
-        "#abacae",
-        "#a17961",
-        "#23334f",
-        "#725c52",
-        "#94684e"
+        "#6d737e",
+        "#443c3f",
+        "#242a39",
+        "#abacae"
       ]
     ],
     "color_names": [
       [
-        "Charcoal",
-        "Prussian blue",
-        "Roman silver",
-        "Onyx",
         "Liver chestnut",
         "Gunmetal",
-        "Slate gray",
+        "Silver chalice",
+        "Roman silver",
         "Umber",
+        "Onyx",
+        "Charcoal",
         "Liver chestnut",
-        "Silver chalice"
+        "Prussian blue",
+        "Slate gray"
       ]
     ]
   },
@@ -5187,30 +5152,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/201e781c460748a53a7f4abeb0c34973-transcode-2677$015.jpg/1658,1682,640,502/full/0/default.jpg",
     "HEX_values": [
       [
-        "#371d21",
-        "#6b4441",
-        "#92878a",
-        "#1b2941",
-        "#222332",
-        "#4c505b",
         "#521f1b",
+        "#92878a",
+        "#2e3546",
+        "#1c2941",
+        "#694240",
+        "#371d21",
+        "#4d515c",
         "#aaa0a3",
-        "#726b72",
-        "#2d3545"
+        "#746b71",
+        "#212332"
       ]
     ],
     "color_names": [
       [
-        "Prussian blue",
-        "Taupe gray",
+        "Dim gray",
+        "Dark sienna",
         "Caput mortuum",
+        "Prussian blue",
         "Rose ebony",
-        "Silver (Metallic)",
-        "Gunmetal",
         "Raisin black",
-        "Sonic silver",
-        "Dark liver",
-        "Old burgundy"
+        "Charcoal",
+        "Taupe gray",
+        "Silver (Metallic)",
+        "Gunmetal"
       ]
     ]
   },
@@ -5222,30 +5187,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/201e781c460748a53a7f4abeb0c34973-transcode-2677$015.jpg/2332,1912,548,254/full/0/default.jpg",
     "HEX_values": [
       [
-        "#592120",
-        "#3f333b",
-        "#77777e",
-        "#364254",
-        "#afaeb0",
+        "#57555d",
+        "#aeacad",
+        "#21324d",
+        "#212837",
+        "#3d323b",
         "#3f2025",
-        "#5b5961",
-        "#222838",
-        "#22334d",
-        "#969598"
+        "#929195",
+        "#323f53",
+        "#73727a",
+        "#592120"
       ]
     ],
     "color_names": [
       [
-        "Silver chalice",
-        "Charcoal",
-        "Dark sienna",
-        "Granite gray",
         "Prussian blue",
-        "Caput mortuum",
-        "Spanish gray",
-        "Gray (web)",
+        "Black coffee",
         "Gunmetal",
-        "Black coffee"
+        "Caput mortuum",
+        "Sonic silver",
+        "Silver chalice",
+        "Dark sienna",
+        "Davy's grey",
+        "Spanish gray",
+        "Charcoal"
       ]
     ]
   },
@@ -5254,33 +5219,33 @@
     "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/98232faac1ad3cae16fee1936a14d841-transcode-2677$016.jpg/full/full/0/default.jpg",
     "tile": "A",
     "title": null,
-    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/98232faac1ad3cae16fee1936a14d841-transcode-2677$016.jpg/full/full/0/default.jpg",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/98232faac1ad3cae16fee1936a14d841-transcode-2677$016.jpg/380,112,584,419/full/0/default.jpg",
     "HEX_values": [
       [
-        "#32231f",
-        "#d6bdad",
-        "#3d5168",
-        "#886a47",
-        "#c1c7bc",
-        "#a08a6e",
-        "#d6d5c7",
-        "#b6ad98",
-        "#553124",
-        "#71482c"
+        "#39526f",
+        "#a08666",
+        "#c2c1bc",
+        "#1e1b1e",
+        "#2a425c",
+        "#7e8385",
+        "#636468",
+        "#4a4045",
+        "#a2a4a2",
+        "#541b1c"
       ]
     ],
     "color_names": [
       [
-        "Kobicha",
-        "Ash gray",
-        "Bone",
-        "Raw umber",
-        "Beaver",
-        "Black coffee",
-        "Khaki (web)",
+        "Silver",
+        "Independence",
+        "Eerie black",
+        "Quick Silver",
         "Caput mortuum",
-        "Desert sand",
-        "Independence"
+        "Prussian blue",
+        "Shadow",
+        "Dark liver",
+        "Granite gray",
+        "Old silver"
       ]
     ]
   },
@@ -5292,30 +5257,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/98232faac1ad3cae16fee1936a14d841-transcode-2677$016.jpg/398,564,536,741/full/0/default.jpg",
     "HEX_values": [
       [
-        "#987952",
+        "#997b54",
+        "#795d3b",
+        "#624833",
         "#463021",
-        "#785c3b",
-        "#c4ae8c",
-        "#8a6b45",
-        "#b29b79",
-        "#d6c2a2",
-        "#a28966",
+        "#a48b68",
+        "#c5af8d",
+        "#b39c7a",
+        "#d7c3a3",
         "#523b2b",
-        "#614833"
+        "#8b6c46"
       ]
     ],
     "color_names": [
       [
-        "Tuscan brown",
-        "Shadow",
-        "Raw umber",
-        "Coyote brown",
-        "Khaki (web)",
-        "Bistre",
-        "Khaki (web)",
-        "Khaki (web)",
         "Café noir",
-        "Liver chestnut"
+        "Tuscan tan",
+        "Khaki (web)",
+        "Raw umber",
+        "Tuscan brown",
+        "Khaki (web)",
+        "Coyote brown",
+        "Café noir",
+        "Liver chestnut",
+        "Khaki (web)"
       ]
     ]
   },
@@ -5327,29 +5292,29 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/98232faac1ad3cae16fee1936a14d841-transcode-2677$016.jpg/392,1378,594,375/full/0/default.jpg",
     "HEX_values": [
       [
+        "#835623",
+        "#9c8462",
+        "#8a602e",
+        "#523a24",
+        "#846947",
+        "#664629",
         "#3b2c1c",
-        "#836845",
-        "#b49f7e",
+        "#ccbc9d",
         "#745331",
-        "#8b602d",
-        "#513924",
-        "#654628",
-        "#835523",
-        "#9a8260",
-        "#cbbb9d"
+        "#b6a180"
       ]
     ],
     "color_names": [
       [
-        "Van Dyke brown",
-        "Coyote brown",
-        "Khaki (web)",
-        "Sepia",
-        "Shadow",
         "Raw umber",
         "Café noir",
         "Khaki (web)",
+        "Khaki (web)",
+        "Coyote brown",
         "Bistre",
+        "Sepia",
+        "Shadow",
+        "Van Dyke brown",
         "Coyote brown"
       ]
     ]
@@ -5362,30 +5327,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/98232faac1ad3cae16fee1936a14d841-transcode-2677$016.jpg/404,1781,584,401/full/0/default.jpg",
     "HEX_values": [
       [
-        "#825d2f",
-        "#937e54",
-        "#827149",
+        "#805c2f",
+        "#927e54",
+        "#837049",
+        "#685b3c",
         "#543c24",
-        "#c1af88",
         "#3c2c1c",
-        "#695b3c",
-        "#916933",
-        "#6d4b27",
-        "#aa956c"
+        "#6c4a27",
+        "#906832",
+        "#aa956c",
+        "#c1af88"
       ]
     ],
     "color_names": [
       [
-        "Gold Fusion",
-        "Dark brown",
-        "Wood brown",
         "Khaki (web)",
-        "Gold Fusion",
-        "Café noir",
-        "Bistre",
-        "Coyote brown",
+        "Wood brown",
+        "Raw umber",
         "Metallic Sunburst",
-        "Raw umber"
+        "Dark brown",
+        "Coyote brown",
+        "Bistre",
+        "Gold Fusion",
+        "Gold Fusion",
+        "Café noir"
       ]
     ]
   },
@@ -5397,30 +5362,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/98232faac1ad3cae16fee1936a14d841-transcode-2677$016.jpg/1649,73,658,479/full/0/default.jpg",
     "HEX_values": [
       [
-        "#937a74",
-        "#5a1513",
-        "#745a53",
-        "#b0988f",
-        "#573d36",
-        "#2f2121",
-        "#502521",
-        "#c8afa7",
-        "#1e1515",
-        "#3d2d2e"
+        "#2f2122",
+        "#c8b0a7",
+        "#5a1613",
+        "#583e36",
+        "#745b54",
+        "#1f1515",
+        "#b09890",
+        "#502621",
+        "#947b74",
+        "#3e2e2e"
       ]
     ],
     "color_names": [
       [
-        "Eerie black",
-        "Dark liver (horses)",
-        "Silver pink",
-        "Tuscany",
         "Prune",
-        "Black coffee",
-        "Black coffee",
+        "Cinereous",
+        "Raisin black",
+        "Dark liver (horses)",
+        "Eerie black",
         "Liver",
+        "Black coffee",
+        "Silver pink",
         "Caput mortuum",
-        "Cinereous"
+        "Tuscany"
       ]
     ]
   },
@@ -5432,30 +5397,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/98232faac1ad3cae16fee1936a14d841-transcode-2677$016.jpg/1659,588,650,409/full/0/default.jpg",
     "HEX_values": [
       [
-        "#734c32",
-        "#614028",
-        "#9d816f",
-        "#4a3020",
-        "#752c1f",
         "#311e17",
-        "#bca28f",
+        "#7e5e4a",
+        "#603f27",
         "#d7bbaa",
-        "#8a261c",
-        "#7f604d"
+        "#4a3020",
+        "#bba18e",
+        "#724b31",
+        "#752a1d",
+        "#9c7f6d",
+        "#8a261c"
       ]
     ],
     "color_names": [
       [
-        "Desert sand",
-        "Liver (organ)",
-        "Grullo",
-        "Van Dyke brown",
-        "Bistre",
-        "Beaver",
-        "Tuscan brown",
-        "OU Crimson red",
         "Café noir",
-        "Tuscan brown"
+        "OU Crimson red",
+        "Liver (organ)",
+        "Beaver",
+        "Bistre",
+        "Tuscan brown",
+        "Grullo",
+        "Tuscan brown",
+        "Van Dyke brown",
+        "Desert sand"
       ]
     ]
   },
@@ -5467,30 +5432,30 @@
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/98232faac1ad3cae16fee1936a14d841-transcode-2677$016.jpg/1672,1036,628,521/full/0/default.jpg",
     "HEX_values": [
       [
-        "#754e35",
-        "#b99e8d",
-        "#d1b7a6",
-        "#664229",
-        "#7f604b",
-        "#503321",
-        "#372119",
-        "#66231f",
         "#73312a",
-        "#9c7f6e"
+        "#7e5e49",
+        "#654129",
+        "#d1b7a5",
+        "#9a7d6c",
+        "#4f3221",
+        "#b99d8c",
+        "#744d33",
+        "#372119",
+        "#66231f"
       ]
     ],
     "color_names": [
       [
-        "Tuscan brown",
-        "Tuscan brown",
-        "Liver (organ)",
-        "Liver (organ)",
+        "Van Dyke brown",
         "Grullo",
+        "Tuscan brown",
         "Bistre",
+        "Tuscan brown",
         "Khaki (web)",
         "Beaver",
-        "Café noir",
-        "Van Dyke brown"
+        "Liver (organ)",
+        "Liver (organ)",
+        "Café noir"
       ]
     ]
   },
@@ -5503,29 +5468,799 @@
     "HEX_values": [
       [
         "#5e3e20",
-        "#73512e",
-        "#bfb094",
+        "#7d5d39",
         "#3e2b19",
-        "#a89579",
-        "#694727",
-        "#7d5d3a",
-        "#4f351d",
+        "#8c7759",
+        "#bfaf94",
+        "#684726",
         "#d2c4aa",
-        "#8d785a"
+        "#a79478",
+        "#4f351d",
+        "#72512d"
+      ]
+    ],
+    "color_names": [
+      [
+        "Bistre",
+        "Dark brown",
+        "Khaki (web)",
+        "Dark brown",
+        "Shadow",
+        "Coyote brown",
+        "Khaki (web)",
+        "Café noir",
+        "Dark brown",
+        "Grullo"
+      ]
+    ]
+  },
+  {
+    "page": "p34",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/full/full/0/default.jpg",
+    "tile": "A",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/404,112,544,489/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#8f6937",
+        "#795832",
+        "#3f2715",
+        "#694827",
+        "#a8926f",
+        "#4e301a",
+        "#bba884",
+        "#917855",
+        "#5d3b1f",
+        "#ccbc9c"
       ]
     ],
     "color_names": [
       [
         "Dark brown",
-        "Shadow",
-        "Coyote brown",
-        "Bistre",
         "Khaki (web)",
-        "Dark brown",
         "Café noir",
+        "French bistre",
+        "Coyote brown",
+        "Khaki (web)",
+        "Van Dyke brown",
+        "Coyote brown",
         "Grullo",
-        "Kobicha",
+        "Bistre"
+      ]
+    ]
+  },
+  {
+    "page": "p34",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/full/full/0/default.jpg",
+    "tile": "B",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/374,1187,594,437/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#3f2b23",
+        "#52392c",
+        "#8b7264",
+        "#60281f",
+        "#68442f",
+        "#c5b2a5",
+        "#72553e",
+        "#2b1d1a",
+        "#4c1c17",
+        "#ab9689"
+      ]
+    ],
+    "color_names": [
+      [
+        "Tuscan brown",
+        "Caput mortuum",
+        "Grullo",
+        "Beaver",
+        "Bistre",
+        "Van Dyke brown",
+        "Black chocolate",
+        "Dark liver (horses)",
+        "Silver pink",
+        "Caput mortuum"
+      ]
+    ]
+  },
+  {
+    "page": "p34",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/full/full/0/default.jpg",
+    "tile": "C",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/374,1187,594,437/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#60281f",
+        "#3f2b22",
+        "#a99487",
+        "#4c1c17",
+        "#897062",
+        "#72543d",
+        "#c4b1a4",
+        "#2b1d1a",
+        "#52392c",
+        "#68442f"
+      ]
+    ],
+    "color_names": [
+      [
+        "Grullo",
+        "Dark liver (horses)",
+        "Caput mortuum",
+        "Caput mortuum",
+        "Silver pink",
+        "Bistre",
+        "Black chocolate",
+        "Beaver",
+        "Tuscan brown",
+        "Van Dyke brown"
+      ]
+    ]
+  },
+  {
+    "page": "p34",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/full/full/0/default.jpg",
+    "tile": "D",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/370,1689,594,437/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#b18955",
+        "#b37d5c",
+        "#af8055",
+        "#b58d59",
+        "#ab7353",
+        "#ae8450",
+        "#a86f4f",
+        "#ab7b4f",
+        "#ae7856",
+        "#a4694b"
+      ]
+    ],
+    "color_names": [
+      [
+        "Tuscan tan",
+        "Tuscan tan",
+        "Tuscan tan",
+        "Brown sugar",
+        "Wood brown",
+        "Wood brown",
+        "Brown sugar",
+        "Brown sugar",
+        "Wood brown",
+        "Brown sugar"
+      ]
+    ]
+  },
+  {
+    "page": "p35",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/full/full/0/default.jpg",
+    "tile": "A",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/1648,73,620,537/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#bf8141",
+        "#a97232",
+        "#925821",
+        "#b97b3b",
+        "#a8692a",
+        "#b57636",
+        "#9f6327",
+        "#ae7838",
+        "#b17232",
+        "#ad6d2e"
+      ]
+    ],
+    "color_names": [
+      [
+        "Copper",
+        "Copper",
+        "Copper",
+        "Brown",
+        "Copper",
+        "Copper",
+        "Copper",
+        "Copper",
+        "Copper",
+        "Brown"
+      ]
+    ]
+  },
+  {
+    "page": "p35",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/full/full/0/default.jpg",
+    "tile": "B",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/1660,650,592,529/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#7b563a",
+        "#997551",
+        "#906b49",
+        "#8b6645",
+        "#96724b",
+        "#ab8861",
+        "#936f4f",
+        "#856041",
+        "#a37f5a",
+        "#9e7a54"
+      ]
+    ],
+    "color_names": [
+      [
+        "Tuscan tan",
+        "Liver chestnut",
+        "Coyote brown",
+        "Liver chestnut",
+        "Liver chestnut",
+        "Tuscan tan",
+        "Liver chestnut",
+        "Coyote brown",
+        "Tuscan brown",
+        "Liver chestnut"
+      ]
+    ]
+  },
+  {
+    "page": "p35",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/full/full/0/default.jpg",
+    "tile": "D",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/66c77dfa2295a38a61db1df6322bcb41-transcode-2677$017.jpg/1679,1732,594,419/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#bda94a",
+        "#b09b3c",
+        "#c0ac4c",
+        "#b9a545",
+        "#bba747",
+        "#c2af4f",
+        "#b6a142",
+        "#d0bd5d",
+        "#c6b253",
+        "#cab757"
+      ]
+    ],
+    "color_names": [
+      [
+        "Vegas gold",
+        "Vegas gold",
+        "Vegas gold",
+        "Vegas gold",
+        "Vegas gold",
+        "Vegas gold",
+        "Vegas gold",
+        "Vegas gold",
+        "Vegas gold",
+        "Vegas gold"
+      ]
+    ]
+  },
+  {
+    "page": "p36",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
+    "tile": "A",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/376,100,584,462/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#894f2b",
+        "#9a683a",
+        "#956235",
+        "#915933",
+        "#834725",
+        "#a57346",
+        "#9a613c",
+        "#9f6c40",
+        "#8d5430",
+        "#955c37"
+      ]
+    ],
+    "color_names": [
+      [
+        "Brown sugar",
+        "Russet",
+        "Brown sugar",
+        "Russet",
+        "Russet",
+        "Russet",
+        "Brown sugar",
+        "Brown sugar",
+        "Brown sugar",
+        "Brown sugar"
+      ]
+    ]
+  },
+  {
+    "page": "p36",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
+    "tile": "B",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/386,640,584,462/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#915737",
+        "#9a6040",
+        "#86492b",
+        "#8a4f30",
+        "#98663a",
+        "#7f4125",
+        "#9f6b43",
+        "#a7734b",
+        "#955c3a",
+        "#8e5333"
+      ]
+    ],
+    "color_names": [
+      [
+        "Fuzzy Wuzzy",
+        "Brown sugar",
+        "Brown sugar",
+        "Fuzzy Wuzzy",
+        "Russet",
+        "Russet",
+        "Brown sugar",
+        "Brown sugar",
+        "Fuzzy Wuzzy",
+        "Brown sugar"
+      ]
+    ]
+  },
+  {
+    "page": "p36",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
+    "tile": "C",
+    "title": "Jaune a la Gaude",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/382,1182,584,462/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#b8941d",
+        "#b38e17",
+        "#c0994b",
+        "#b08b14",
+        "#b5911a",
+        "#b18c1b",
+        "#c29e27",
+        "#a7810c",
+        "#ac8711",
+        "#bb9821"
+      ]
+    ],
+    "color_names": [
+      [
+        "Satin sheen gold",
+        "Satin sheen gold",
+        "Satin sheen gold",
+        "Gold",
+        "Gold",
+        "Gold",
+        "Satin sheen gold",
+        "Dark goldenrod",
+        "Gold",
+        "Earth yellow"
+      ]
+    ]
+  },
+  {
+    "page": "p36",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
+    "tile": "D",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/372,1686,584,462/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#37592f",
+        "#40572d",
+        "#325025",
+        "#294c21",
+        "#25481e",
+        "#31542a",
+        "#2d5126",
+        "#2c4e23",
+        "#395329",
+        "#495e35"
+      ]
+    ],
+    "color_names": [
+      [
+        "Hunter green",
+        "Hunter green",
+        "Hunter green",
+        "Hunter green",
+        "UP Forest green",
+        "Hunter green",
+        "Hunter green",
+        "Hunter green",
+        "Army green",
+        "Hunter green"
+      ]
+    ]
+  },
+  {
+    "page": "p37",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
+    "tile": "A",
+    "title": "Teinte orange",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/1668,80,584,462/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#a85527",
+        "#8f3c0f",
+        "#a14f21",
+        "#9c4a1c",
+        "#853307",
+        "#8b380c",
+        "#934012",
+        "#954315",
+        "#b25f31",
+        "#994618"
+      ]
+    ],
+    "color_names": [
+      [
+        "Saddle brown",
+        "Liver (dogs)",
+        "Sienna",
+        "Saddle brown",
+        "Saddle brown",
+        "Saddle brown",
+        "Saddle brown",
+        "Saddle brown",
+        "Saddle brown",
+        "Saddle brown"
+      ]
+    ]
+  },
+  {
+    "page": "p37",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
+    "tile": "B",
+    "title": "Violet avec le mordant de l'allumine n°1",
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/1638,600,656,494/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#b2a282",
+        "#9f8e6f",
+        "#b6a787",
+        "#d0c1a2",
+        "#ad9d7c",
+        "#948364",
+        "#c1b292",
+        "#bcac8c",
+        "#a69676",
+        "#c7b899"
+      ]
+    ],
+    "color_names": [
+      [
+        "Khaki (web)",
+        "Shadow",
+        "Grullo",
+        "Khaki (web)",
+        "Khaki (web)",
+        "Grullo",
+        "Grullo",
+        "Khaki (web)",
+        "Khaki (web)",
         "Khaki (web)"
+      ]
+    ]
+  },
+  {
+    "page": "p37",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
+    "tile": "C",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/1640,1140,644,470/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#9a6441",
+        "#a6714d",
+        "#9d6844",
+        "#8f5636",
+        "#96603e",
+        "#935c3a",
+        "#814429",
+        "#8a4f31",
+        "#a16c48",
+        "#ad7954"
+      ]
+    ],
+    "color_names": [
+      [
+        "Tuscan tan",
+        "Brown sugar",
+        "Brown sugar",
+        "Brown sugar",
+        "Brown sugar",
+        "Russet",
+        "Brown sugar",
+        "Russet",
+        "Brown sugar",
+        "Fuzzy Wuzzy"
+      ]
+    ]
+  },
+  {
+    "page": "p37",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
+    "tile": "D",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/1648,1658,644,470/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#856f50",
+        "#7a6444",
+        "#4c3a21",
+        "#ab9875",
+        "#bdae8e",
+        "#715a39",
+        "#96815f",
+        "#cdc4a8",
+        "#3a2a14",
+        "#664d2d"
+      ]
+    ],
+    "color_names": [
+      [
+        "Shadow",
+        "Café noir",
+        "Raw umber",
+        "Bistre",
+        "Grullo",
+        "French bistre",
+        "Khaki (web)",
+        "Raw umber",
+        "Tuscan brown",
+        "Khaki (web)"
+      ]
+    ]
+  },
+  {
+    "page": "p38",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/full/full/0/default.jpg",
+    "tile": "A",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/372,102,576,898/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#6d4e30",
+        "#2b456d",
+        "#d4d4c4",
+        "#9d8869",
+        "#3b668e",
+        "#cdc9b2",
+        "#82633e",
+        "#19305a",
+        "#b6a990",
+        "#8f724d"
+      ]
+    ],
+    "color_names": [
+      [
+        "Shadow",
+        "Space cadet",
+        "Tuscan brown",
+        "Bone",
+        "Khaki (web)",
+        "Coyote brown",
+        "Queen blue",
+        "Bone",
+        "French bistre",
+        "Indigo dye"
+      ]
+    ]
+  },
+  {
+    "page": "p38",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/full/full/0/default.jpg",
+    "tile": "B",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/390,1214,568,450/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#62481d",
+        "#8b703d",
+        "#7c5e26",
+        "#b9922f",
+        "#b5995b",
+        "#4d330d",
+        "#a57b24",
+        "#32261a",
+        "#a28449",
+        "#362005"
+      ]
+    ],
+    "color_names": [
+      [
+        "Pullman Brown (UPS Brown)",
+        "Sand dune",
+        "Bistre",
+        "Field drab",
+        "Satin sheen gold",
+        "Bistre",
+        "Metallic Sunburst",
+        "Gold Fusion",
+        "Wood brown",
+        "Dark brown"
+      ]
+    ]
+  },
+  {
+    "page": "p38",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/full/full/0/default.jpg",
+    "tile": "C",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/372,1750,560,362/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#624933",
+        "#a88359",
+        "#311c0e",
+        "#735a43",
+        "#503825",
+        "#a88b6b",
+        "#876c52",
+        "#2d211e",
+        "#977c60",
+        "#3f291a"
+      ]
+    ],
+    "color_names": [
+      [
+        "Raisin black",
+        "Tuscan tan",
+        "Café noir",
+        "Bistre",
+        "Liver chestnut",
+        "Bistre",
+        "Tuscan brown",
+        "French bistre",
+        "Tuscan tan",
+        "Tuscan brown"
+      ]
+    ]
+  },
+  {
+    "page": "p39",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/full/full/0/default.jpg",
+    "tile": "A",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/1642,60,656,422/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#4d583a",
+        "#151b0b",
+        "#2a2d1c",
+        "#6f815a",
+        "#586f41",
+        "#1f2016",
+        "#63794c",
+        "#7f7c48",
+        "#848e6c",
+        "#3b432a"
+      ]
+    ],
+    "color_names": [
+      [
+        "Black chocolate",
+        "Pine tree",
+        "Gold Fusion",
+        "Dark olive green",
+        "Kombu green",
+        "Russian green",
+        "Artichoke",
+        "Fern green",
+        "Black chocolate",
+        "Rifle green"
+      ]
+    ]
+  },
+  {
+    "page": "p39",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/full/full/0/default.jpg",
+    "tile": "B",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/1632,518,656,422/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#8c9067",
+        "#373116",
+        "#4b4626",
+        "#1e1b08",
+        "#897431",
+        "#6e7344",
+        "#725f23",
+        "#7c8251",
+        "#5c5d38",
+        "#242117"
+      ]
+    ],
+    "color_names": [
+      [
+        "Turtle green",
+        "Olive Drab (#7)",
+        "Army green",
+        "Gold Fusion",
+        "Spanish bistre",
+        "Black chocolate",
+        "Artichoke",
+        "Olive Drab (#7)",
+        "Field drab",
+        "Black chocolate"
+      ]
+    ]
+  },
+  {
+    "page": "p39",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/full/full/0/default.jpg",
+    "tile": "C",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/1622,982,652,386/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#161f0e",
+        "#333f24",
+        "#6c8769",
+        "#3f4d33",
+        "#1f2118",
+        "#5a7b57",
+        "#4c5e3d",
+        "#445524",
+        "#262c1d",
+        "#4d734a"
+      ]
+    ],
+    "color_names": [
+      [
+        "Kombu green",
+        "Pine tree",
+        "Fern green",
+        "Hunter green",
+        "Russian green",
+        "Black chocolate",
+        "Army green",
+        "Rifle green",
+        "Xanadu",
+        "Pine tree"
+      ]
+    ]
+  },
+  {
+    "page": "p39",
+    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/full/full/0/default.jpg",
+    "tile": "D",
+    "title": null,
+    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/0352b9381b82b8340e8b4451d00c0573-transcode-2677$019.jpg/1648,1466,632,666/full/0/default.jpg",
+    "HEX_values": [
+      [
+        "#30211c",
+        "#231713",
+        "#58391f",
+        "#a17e46",
+        "#9d8c79",
+        "#3f322d",
+        "#57473d",
+        "#432816",
+        "#beb2a4",
+        "#796248"
+      ]
+    ],
+    "color_names": [
+      [
+        "Van Dyke brown",
+        "Umber",
+        "Bistre",
+        "French bistre",
+        "Grullo",
+        "Metallic Sunburst",
+        "Old burgundy",
+        "Silver (Crayola)",
+        "Black chocolate",
+        "Café noir"
       ]
     ]
   }
