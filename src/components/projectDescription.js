@@ -25,7 +25,7 @@ const ProjectDescription = () => {
     const [descActive, setDescActive] = useState(true);
 
     function openDescription() {
-        console.log("▒▒▒▒▒▒▒▒▒▒ OPEN OPEN OPEN ▒▒▒▒▒▒▒▒▒▒▒▒");
+        console.log("▒▒▒▒▒▒▒▒▒▒ XXXX ▒▒▒▒▒▒▒▒▒▒▒▒");
         setDescActive(!descActive);
     }
 
@@ -34,13 +34,16 @@ const ProjectDescription = () => {
             {descActive &&
                 <div>
                     <h1 className="underlined" style={{fontSize: "20px"}}>PROJECT DESCRIPTION</h1>
+                    <p style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>“I then turned my microscope to the cognition engine… This was an engine undergoing continuous transformation,
+                        indeed modifying itself as part of its operations. The lattice was not so much a machine as it was a page on
+                        which the machine was written, and on which the machine itself ceaselessly wrote.” (Chiang, T. , 2019. Exhalation.)</p>
                     <p style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}><em><strong>MODELS FROM THE PAST FOR THE FUTURE </strong></em>
-                        is a curatorial experiment that takes place during the closure of the Design Museum Ghent (2022-2025) and thus
-                        positions itself in a transition period where past, present and future interlock.
+                        is a curatorial experiment and post-digital discourse that takes place during the closure of the Design Museum Ghent (2022-2025). As such this exercise positions
+                        itself in a period of transition where past, present and future interlock.
                         <br/><br/>
                         By focusing on the medium-specificity of the web, it investigates new curatorial strategies that better reflect
                         the singularity of design in its current context. As a prototype for an alternative system, it is
-                        always critically probing new forms of knowledge production. And in its growth, it is both reflective
+                        always critically probing new forms of knowledge production. And in its growth, <em>like a computing machine for redirecting air currents, </em>it is both reflective
                         and performative in nature, as we embrace the (as yet) unknown in its potential.
                         <ul>
                             <h1 className=" pinkHeader">* </h1> as a <strong> dynamic network </strong>; the project is in constant evolution and critically approaches the
