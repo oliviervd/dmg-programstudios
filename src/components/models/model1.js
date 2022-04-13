@@ -41,10 +41,11 @@ const Model1 = () => {
                     </div>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>
-                        Marjan van Helvert defined these “Responsible Objects”; objects that behave responsibly, consciously and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
-                        In line with this, the question arises today on how we, as an institution, can also contribute within this shifting society.
-                        Not only by disseminating and opening up these good examples of design, but also by making the critical reflection ourselves of
-                        how we can act in a more caring manner. An institution that does not only act about society, but also for and in society.
+                        Marjan van Helvert defined “Responsible Objects” as objects that behave responsibly, consciously and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
+                        Taking responsibility through responsible behavior affects and effects all parts of society. Which raises the question how we as an institution,
+                        can also contribute for the better within this shifting society. Not only by disseminating and opening up these good examples of design,
+                        but also by making the critical reflection ourselves of how we can act in a more caring manner.
+                        An institution that does not only act about society, but also for and in society.
                         If not, we risk lapsing into a form of façadism in which programming about sustainability is not also sustainable;
                         a major challenge that prevails and is being addressed internationally within the (touring) exhibition <a href="#resource_hungry" aria-describedby="footnote-label" id="resource_hungry_ref">sector</a>.
                         In this sense, making the institution sustainable also implies a critical reprogramming of the museum and its <a href="#metabolism" aria-describedby="glossary-label" id="metabolism_ref">metabolism</a> as a whole.
@@ -70,7 +71,7 @@ const Model1 = () => {
                         a system, in which objects relate to one another based on their color palette. At the same time,
                         this reorganization of the collection based on samples made and collected by an unknown colorist,
                         evokes a "culture of anonymity" while also seeking other approaches to our collection that move beyond
-                        the dominant form of authorship. An inherent quality of the work that often true both its absence and/or presence
+                        the dominant form of authorship. An inherent quality of the work that often through both its absence and/or presence
                         determines the visibility or invisibility of an object.
                     </div><br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
