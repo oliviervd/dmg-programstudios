@@ -69,6 +69,11 @@ h4 {
     font-family: "happy-times-NG_italic_master_web", sans-serif;
 }
 
+a {
+    color: var(--main__green);
+    cursor: crosshair;
+}
+
 .main-title{
     font-family: "happy-times-NG_bold_master_web", sans-serif;
     font-size: 100px;

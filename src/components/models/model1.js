@@ -21,6 +21,13 @@ const Model1 = () => {
                                 Marjan van Helvert, The responsible object. A history of design ideology for the future. Valiz, Amsterdam, 2016
                                 <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
                             </div>
+                        </li><li>
+                            <div id="sustainability_exhibitions">
+                                The museum organised several exhibitions on sustainability and ecological design such as
+                                <em><a href="https://www.designmuseumgent.be/en/events/no-design-to-waste"> No Design to Waste</a></em> (2014),
+                                <em><a href="https://www.designmuseumgent.be/en/events/fibre-fixed"> Fibre Fixed</a></em> (2019) and <em><a href="https://www.designfestgent.be/"> Design Fest Gent</a></em> (2022).
+                                <a href="#sustainability_exhibitions_ref" aria-label="Back to content">↩</a>
+                            </div>
                         </li>
                         <li>
                             <div id="resource_hungry">
@@ -28,6 +35,14 @@ const Model1 = () => {
                                 between art, ecology and resources. <a href="#resource_hungry_ref" aria-label="Back to content">↩</a>
                             </div>
                         </li>
+                        <li>
+                            <div id="models_museum">
+                                The museum was established in 1903 as a "models museum" (<em>modellenmuseum</em> or <em>musee des modelles</em>).
+                                The collection comprised of good examples of various crafts and trades to inspire artists and craftsmen and
+                                provide support for their training.<a href="#models_museum_ref" aria-label="Back to content">↩</a>
+                            </div>
+                        </li>
+
                     </ol>
                     <div></div>
                 </footer>
@@ -46,7 +61,7 @@ const Model1 = () => {
                         can also contribute for the better within this shifting society. Not only by disseminating and opening up these good examples of design,
                         but also by making the critical reflection ourselves of how we can act in a more caring manner.
                         An institution that does not only act about society, but also for and in society.
-                        If not, we risk lapsing into a form of façadism in which programming about sustainability is not also sustainable;
+                        If not, we risk lapsing into a form of façadism in which programming about <a href="#sustainability_exhibitions" aria-describedby="footnote-label" id="sustainability_exhibitions_ref">sustainability</a> is not also sustainable;
                         a major challenge that prevails and is being addressed internationally within the (touring) exhibition <a href="#resource_hungry" aria-describedby="footnote-label" id="resource_hungry_ref">sector</a>.
                         In this sense, making the institution sustainable also implies a critical reprogramming of the museum and its <a href="#metabolism" aria-describedby="glossary-label" id="metabolism_ref">metabolism</a> as a whole.
                     </div>
@@ -76,7 +91,7 @@ const Model1 = () => {
                     </div><br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
                         This approach of the collection as a social network, - a speculative system that connects in a transhistorical and transdisciplinary way -
-                        transcends the art historical and institutionalized view - and also refers to the early history of the museum where it functioned as a model museum;
+                        transcends the art historical and institutionalized view - and also refers to the early history of the museum where it functioned as a models <a href="#models_museum" aria-describedby="footnote-label" id="models_museum_ref">museum</a>;
                         a place with the social purpose of inspiring craftsmen by presenting good models or forms of design.
                     </div>
                     <br/><br/>
