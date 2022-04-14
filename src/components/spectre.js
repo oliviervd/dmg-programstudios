@@ -45,6 +45,7 @@ const SpectreMain = (props) => {
         for (let n=0; n<object_c.length; ++n) {
             //console.log(object_c[n]["color_names"])
             let arr2 = colorNameSwap
+
             //retrieve and clean array
             let arr1 = object_c[n]["color_names"].split(",")
             let arr_1_clean = [];
