@@ -5742,41 +5742,6 @@
   {
     "page": "p37",
     "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
-    "tile": "A",
-    "title": "Teinte orange",
-    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/1668,80,584,462/full/0/default.jpg",
-    "HEX_values": [
-      [
-        "#a85527",
-        "#8f3c0f",
-        "#a14f21",
-        "#9c4a1c",
-        "#853307",
-        "#8b380c",
-        "#934012",
-        "#954315",
-        "#b25f31",
-        "#994618"
-      ]
-    ],
-    "color_names": [
-      [
-        "Saddle brown",
-        "Liver (dogs)",
-        "Sienna",
-        "Saddle brown",
-        "Saddle brown",
-        "Saddle brown",
-        "Saddle brown",
-        "Saddle brown",
-        "Saddle brown",
-        "Saddle brown"
-      ]
-    ]
-  },
-  {
-    "page": "p37",
-    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
     "tile": "B",
     "title": "Violet avec le mordant de l'allumine n°1",
     "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/1638,600,656,494/full/0/default.jpg",
