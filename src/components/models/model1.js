@@ -69,9 +69,9 @@ const Model1 = () => {
                     <h2 className="left box" style={{borderLeft: "3px solid black", paddingLeft: "5px"}}>__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                        What if we try and alter our metabolism by moving beyond taking care of our collection (preservation),
-                        towards the organization of a collection of care? The ways in which objects enter the museum's collection varies;
-                        some objects are acquired directly from the designer, others are acquired as gifts,
+                        What if we try and alter our metabolism by moving extending the task of taking care of a collection (preservation),
+                        towards the sensible act of supporting a collection of care? The ways in which objects enter and exit the museum, are perhaps telling;
+                        some objects are acquired directly from the designer, others enter as gifts,
                         thus already prior being part of another collection. The transaction from one owner to the other
                         is in this case characterized by the (intimate) transfer of responsibility and care for a certain object.
                         The latter occurred in the acquisition of the "sample book with paint recipes",
