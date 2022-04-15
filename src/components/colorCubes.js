@@ -75,16 +75,12 @@ const ColorCubes = (props) => {
             acquisition_method = "";
         }
 
-        console.log(acquisition_method)
-
         let acquisition_date = "unknown date of transaction" + acquisition_method
         try {
             acquisition_date = "date of transaction: " + LDES_object["MaterieelDing.isOvergedragenBijVerwerving"][0]["Conditie.periode"]["Periode.begin"] +  acquisition_method;
         } catch {
             acquisition_date = "unknown date of transaction"
         }
-
-        console.log(acquisition_date)
 
         color_hex.push(_hexVal);
         color_names.push(color_name);
