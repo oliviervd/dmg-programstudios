@@ -44,6 +44,7 @@ const ColorCubes = (props) => {
         const obj_titles_EN = [];
         const obj_desc_EN = [];
         const object_number = [];
+        const acquisition_dates = [];
         const LDES = [];
 
         for (var hexNum=0; hexNum<objCount; ++hexNum) {
@@ -58,11 +59,21 @@ const ColorCubes = (props) => {
             const desc_en = _LDES[0]["description_adlib_en"]
             const LDES_object = JSON.parse(_LDES[0][0]);
 
+            let acquisition_date = "unknown date of transaction"
+            try {
+                acquisition_date = "date of transaction: " + LDES_object["MaterieelDing.isOvergedragenBijVerwerving"][0]["Conditie.periode"]["Periode.begin"];
+            } catch {
+                acquisition_date = "unknown date of transaction"
+            }
+
+            console.log(acquisition_date)
+
             color_hex.push(_hexVal);
             color_names.push(color_name);
             obj_titles_EN.push(title_en);
             obj_desc_EN.push(desc_en);
             object_number.push(LDES_object["Entiteit.identificator"][1]["skos:notation"]["@value"])
+            acquisition_dates.push(acquisition_date)
             LDES.push(LDES_object);
 
         }
@@ -100,6 +111,7 @@ const ColorCubes = (props) => {
                                 <div className="pinkHeader italic right" onClick={copyTextToClipBoard_0}>[copy to clipboard]</div>
                             </div>
                             <p className="pinkHeader italic">{object_number[0]}</p>
+                            <p className="pinkHeader italic">{acquisition_dates[0]}</p>
                             <p className="title-box__title italic" onClick={openDescription0}>{obj_titles_EN[0]}</p>
                         </div>
                         <br/><br/>
@@ -124,6 +136,7 @@ const ColorCubes = (props) => {
                                 <div className="pinkHeader italic right" onClick={copyTextToClipBoard_1}>[copy to clipboard]</div>
                             </div>
                             <p className="pinkHeader italic">{object_number[1]}</p>
+                            <p className="pinkHeader italic">{acquisition_dates[1]}</p>
                             <p className="title-box__title italic" onClick={openDescription1} >{obj_titles_EN[1]}</p>
                         </div>
                         <br/><br/>
@@ -149,6 +162,7 @@ const ColorCubes = (props) => {
                                 <div className="pinkHeader italic right" onClick={copyTextToClipBoard_2}>[copy to clipboard]</div>
                             </div>
                             <p className="pinkHeader italic">{object_number[2]}</p>
+                            <p className="pinkHeader italic">{acquisition_dates[2]}</p>
                             <p className="title-box__title italic" onClick={openDescription2}>{obj_titles_EN[2]}</p>
                         </div>
                         <br/><br/>
