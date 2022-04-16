@@ -5670,41 +5670,6 @@
     ]
   },
   {
-    "page": "p36",
-    "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
-    "tile": "B",
-    "title": null,
-    "IIIF_image": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/386,640,584,462/full/0/default.jpg",
-    "HEX_values": [
-      [
-        "#a6734a",
-        "#8a4e30",
-        "#7f4125",
-        "#98653a",
-        "#9a6040",
-        "#9e6a42",
-        "#8e5333",
-        "#955c3a",
-        "#85492b",
-        "#915737"
-      ]
-    ],
-    "color_names": [
-      [
-        "Brown sugar",
-        "Russet",
-        "Fuzzy Wuzzy",
-        "Brown sugar",
-        "Fuzzy Wuzzy",
-        "Fuzzy Wuzzy",
-        "Brown sugar",
-        "Brown sugar",
-        "Russet",
-        "Brown sugar"
-      ]
-    ]
-  },
-  {
     "page": "p37",
     "IIIF_image__page": "https://api.collectie.gent/iiif/imageiiif/2/7f6f2d813b67c318b01042aeb1109162-transcode-2677$018.jpg/full/full/0/default.jpg",
     "tile": "B",
