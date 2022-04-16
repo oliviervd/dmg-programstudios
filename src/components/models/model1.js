@@ -70,7 +70,7 @@ const Model1 = () => {
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
                         What if we tried to alter our metabolism in such a way that the core task of the museum of taking
-                        care of the collection (conservation/preservation) is extended to the sensible act of supporting a <u>collection of care<u></u>?
+                        care of the collection (conservation/preservation) is extended to the sensible act of supporting a <u>collection of care</u>?
                         For is not the process of expanding the collection through acquisition essentially a transfer of caring for an object from one person to the other?
                         Let’s take for example the acquisition of the "sample book with paint recipes", a 19th-century catalog of samples that used to belong to the personal library of Henry van de Velde,
                         before it was gifted to the museum. It is possible that this book was used as a source of inspiration

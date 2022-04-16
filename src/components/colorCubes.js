@@ -53,6 +53,8 @@ const ColorCubes = (props) => {
         const uri = object_colors[x]["URI"];
         const color_name = object_colors[x]["color_names"]
 
+        console.log(color_name);
+
         const _LDES = LDESViaURI(uri)
 
         const title_en = _LDES[0]["title_en"];
