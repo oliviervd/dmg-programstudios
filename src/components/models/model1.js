@@ -69,18 +69,17 @@ const Model1 = () => {
                     <h2 className="left box" style={{borderLeft: "3px solid black", paddingLeft: "5px"}}>__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                        What if we try and alter our metabolism by moving extending the task of taking care of a collection (preservation),
-                        towards the sensible act of supporting a collection of care? The ways in which objects enter and exit the museum, are perhaps telling;
-                        some objects are acquired directly from the designer, others enter as gifts,
-                        thus already prior being part of another collection. The transaction from one owner to the other
-                        is in this case characterized by the (intimate) transfer of responsibility and care for a certain object.
-                        The latter occurred in the acquisition of the "sample book with paint recipes",
-                        a 19th-century catalog of samples that belonged to the personal library of Henry van de Velde.
-                        It is possible that this book was used as a source of inspiration when designing one or more of his textile designs.
+                        What if we tried to alter our metabolism in such a way that the core task of the museum of taking
+                        care of the collection (conservation/preservation) is extended to the sensible act of supporting a collection of care?
+                        For is not the process of expanding the collection through acquisition essentially a transfer of caring for an object from one person to the other?
+                        Let’s take for example the acquisition of the "sample book with paint recipes", a 19th-century catalog of samples that used to belong to the personal library of Henry van de Velde,
+                        before it was gifted to the museum. It is possible that this book was used as a source of inspiration
+                        when designing one or more of his textile designs. We are now taking care of this object by preserving it,
+                        yet it has almost never been on display in the museum, which begs the question, who are we taking for?
                     </div>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                        How can technology then aid us in invoking this idea of being inspired? Can we create a model that
+                        How can technology then aid us in reevoking this idea of being inspired? Can  Can we create a model that
                         establishes speculative relationships between the samples in this book on one hand and the digitized
                         objects in our collection on the other? By means of color extraction, the model tries to evoke a social network,
                         a system, in which objects relate to one another based on their color palette. At the same time,
