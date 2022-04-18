@@ -1,0 +1,85 @@
+/*GLOSSARY*/
+[aria-describedby="glossary-label"] {
+    text-decoration: none;
+    color: inherit;
+    cursor: crosshair;
+    outline: none;
+}
+
+
+[aria-describedby="glossary-label"]::after {
+    content: "[GLOSS]"; /*display the current state of the counter*/
+    vertical-align: super;
+    font-size: 0.7em;
+    margin-left: 2px;
+    color: #79aea1;
+    text-decoration: underline;
+}
+
+/*FOOTNOTES*/
+
+article {
+    counter-reset: footnotes;
+}
+
+
+.footNote__refs{
+    display:grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
+[aria-describedby="footnote-label"] {
+    counter-increment: footnotes; /*increment the counter at each new reference*/
+    text-decoration: none; /*reset link styles to make it appear like regular text*/
+    color: inherit;
+    cursor: crosshair;
+    outline: none;
+}
+
+[aria-describedby="footnote-label"]::after {
+    content: "[" counter(footnotes) "]"; /*display the current state of the counter*/
+    vertical-align: super;
+    font-size: 0.7em;
+    margin-left: 2px;
+    color: #79aea1;
+    text-decoration: underline;
+}
+
+[aria-describedby="footnote-label"]:focus::after {
+    outline: thin dotted;
+    outline-offset: 2px;
+}
+
+[aria-label="Back to content"] {
+    font-size: 0.8em;
+}
+
+footer :target {
+    background: yellow;
+}
+
+.visually-hidden{
+}
+
+/*bacground conic hypnos*/
+.conicBackdrop{
+    background-position-x: 0;
+    background-position-y: 0;
+    background: rgba(0, 0, 0, 0) conic-gradient(from 10deg, #79aea1 0deg, floralwhite 20deg, rgb(196, 196, 196) 40deg, #FFC0CB 60deg, #79aea1 100deg, floralwhite 120deg, rgb(196, 196, 196) 140deg, #FFC0CB 160deg, rgb(196, 196, 196) 180deg, #FFC0CB 190deg, #79aea1 200deg, floralwhite 220deg, rgb(196, 196, 196) 225deg, #FFC0CB 230deg, #79aea1 240deg, floralwhite 260deg, rgb(196, 196, 196) 280deg, #FFC0CB 300deg, rgb(196, 196, 196) 330deg, #FFC0CB 350deg, #79aea1 360deg) repeat scroll;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+    --offset: -63.26536544850499deg;
+}
+
+.closeButton__modal {
+    font-family: var(--happy__bold);
+    font-size: 40px;
+    transform: translate(50%, 50%);
+    transform: rotate(90deg);
+}
+
+.closeButton__modal:hover {
+    transition: color 2s ease-out;
+    color: var(--fluo__green)
+}
