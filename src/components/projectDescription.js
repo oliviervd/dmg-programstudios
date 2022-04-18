@@ -48,7 +48,7 @@ const ProjectDescription = () => {
                         <ul>
                             <h1 className=" pinkHeader">* </h1> as a <strong> dynamic network </strong>; the project is in constant evolution and critically approaches the
                             underlying metabolism of the museum as an institution. No "rinse and repeat" but a form of
-                            "slow programming" that takes time for getting to know itself. Because whoever wants to shape
+                            "slow programming", a slow burning change, that takes time for getting to know itself. Because whoever wants to shape
                             the future, will have to know its past.
                         </ul>
                         <ul>
