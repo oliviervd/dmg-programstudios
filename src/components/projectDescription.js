@@ -10,11 +10,6 @@ const chapters = "MODELS FROM THE PAST FOR THE FUTURE, as a site for post-digita
     "in creating new spaces in which we can negotiate alternative modes of knowledge production and dissemination that might " +
     "make more sense on a planetary scale in terms of our environment."
 
-const xenomorphic = "Meillisoux argues that one can only approach the contingent " +
-    "nature of the world, which he calls 'hyperchaos', by creating a toolbox in which constant change could manifest itself." +
-    "As a research platform, we aim to demonstrate the changing nature of museum collections by evoking the fictions, narratives and frameworks " +
-    "in which these changes occur. Whether by being part of the exhibition or the lack thereof..."
-
 const reflective = "MODELS FROM THE PAST OF THE FUTURE reflects on the concept and notion of model(s) in relationship to the museum today." +
     " How does a model museum behave? Looking back at our past we find that the museum in its earliest form was a museum of models, " +
     "a place that displayed 'good forms of design and craftsmanship', in which the museum had a very specific social function to inspire " +
