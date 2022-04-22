@@ -6,6 +6,10 @@
     --happy__italic: "happy-times-NG_italic_master_web";
 }
 
+.inline-block{
+    display: inline-block;
+}
+
 ::selection {
     background: var(--main__green)
 }
@@ -486,6 +490,25 @@ img{
     right: 20vw;
 
     z-index: 100000;
+}
+
+.imageViewer__modal__title{
+    display: inline-block;
+    overflow: hidden;
+}
+
+.imageViewer__modal__title-inner{
+    display: inline-block;
+    white-space: nowrap;
+
+    transform: translate(0, 100%) rotate(90deg);
+    transform-origin: 0 40px;
+}
+
+.imageViewer__modal__title-inner:after {
+    content: "";
+    float: left;
+    margin-top: 100%;
 }
 
 .img__large{
