@@ -500,9 +500,14 @@ img{
 .imageViewer__modal__title-inner{
     display: inline-block;
     white-space: nowrap;
-
-    transform: translate(0, 100%) rotate(90deg);
-    transform-origin: 0 40px;
+    background: white;
+    padding-left: 20px;
+    padding-right: 20px;
+    transform:
+            translate(0, 100%)
+            rotate(90deg)
+            translateX(-90px);
+    transform-origin: -10px 40px;
 }
 
 .imageViewer__modal__title-inner:after {
