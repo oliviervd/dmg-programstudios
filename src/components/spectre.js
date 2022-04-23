@@ -89,6 +89,7 @@ const SpectreMain = (props) => {
 
     return(
             <div className="rowScrollMain svg_divider">
+                <Sketch1/>
                 <Model1/>
                 <br/>
                 <div className="dotLine"/>
