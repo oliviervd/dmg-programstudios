@@ -24,7 +24,7 @@
     "react-responsive": "^9.0.0-beta.6",
     "react-router-dom": "^6.3.0",
     "react-scripts": "^2.1.3",
-    "sass": "^1.32.11",
+    "sass": "^1.50.1",
     "serve": "^13.0.2",
     "stream": "^0.0.2",
     "web-vitals": "^2.1.4"
