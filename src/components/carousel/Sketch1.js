@@ -2,7 +2,7 @@ import React from "react";
 import Sketch from "react-p5";
 
 
-const Sketch_1 = () => {
+const Sketch1 = () => {
 
     let _height = window.innerHeight
     let _width = window.innerWidth
@@ -54,4 +54,4 @@ const Sketch_1 = () => {
     return (<Sketch setup={setup} draw={draw}/>)
 }
 
-export default Sketch_1;
+export default Sketch1;

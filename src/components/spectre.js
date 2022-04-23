@@ -5,7 +5,7 @@ import Accordion from "./carousel/Accordion";
 import Model1 from "./models/model1"
 import SwapBook from "./swapBook"
 import HexCube from "./cube";
-import Sketch_1 from "./carousel/past_future--p5_1";
+import Sketch1 from "./carousel/Sketch1";
 
 //data
 import object_c from "../data/objectsColor_10.json"; // import json containing information on the collection of Design Museum Gent (objects that have been published)
@@ -89,8 +89,7 @@ const SpectreMain = (props) => {
 
     return(
             <div className="rowScrollMain svg_divider">
-                <Accordion/>
-                {/*<Sketch_1/>*/}
+                <Sketch1/>
                 <Model1/>
                 <br/>
                 <div className="dotLine"/>
