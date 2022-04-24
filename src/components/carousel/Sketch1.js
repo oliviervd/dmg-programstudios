@@ -15,18 +15,8 @@ const Sketch1 = () => {
 
     const draw = p5 => {
 
-        let models = [
-            "models",
-            "from",
-            "the",
-            "past",
-            "for",
-            "the",
-            "future"
-        ]
-
-        let begin = 1903;
-        let end = 2025
+        let begin = 1903; //year the museum opened
+        let end = 2025 // make dynamic?
         let index = p5.int(p5.map(p5.mouseX, 0, _width, 0, (end-begin)));
         let rectWidth = (_width/(end-begin));
 
