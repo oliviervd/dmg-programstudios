@@ -16,7 +16,7 @@ const Sketch1 = () => {
     const draw = p5 => {
 
         let begin = 1903; //year the museum opened
-        let end = 2025 // make dynamic?
+        let end = 2030 // make dynamic?
         let _span = end - begin;
 
         let _mmPos = (_width/_span)
