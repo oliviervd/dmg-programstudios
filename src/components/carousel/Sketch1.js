@@ -32,7 +32,7 @@ const Sketch1 = () => {
         p5.rect(rectWidth*index, 0, rectWidth, _height);
 
         //meta information; //todo: put in dictionary instead of evoking with variables.
-        p5.textSize(30)
+        p5.textSize(20);
 
         //models museum
         p5.line(_mmPos, 0, _mmPos, _height);
