@@ -19,7 +19,9 @@ const Sketch1 = () => {
         let end = 2025 // make dynamic?
         let _span = end - begin;
 
+        let _mmPos = (_width/_span)
         let _hdcPos = (_width/_span)*19 // 19 yrs after opening the museum moved to Hotel De Coninck.
+        let _dingPOS = (_width/_span) * 121
 
         let index = p5.int(p5.map(p5.mouseX, 0, _width, 0, (end-begin)));
         let rectWidth = (_width/(end-begin));
@@ -32,9 +34,17 @@ const Sketch1 = () => {
         //meta information; //todo: put in dictionary instead of evoking with variables.
         p5.textSize(30)
 
-        //hotel de Coninck
+        //models museum
+        p5.line(_mmPos, 0, _mmPos, _height);
+        p5.text("Museum of Models", _mmPos, _mmPos)
+
+        //hotel de Coninck TODO: write function to generate these things and use dictionary declared above.
         p5.line(_hdcPos, 0, _hdcPos, _height);
         p5.text("Hotel De Coninck", _hdcPos, _hdcPos);
+
+        //ding
+        p5.line(_dingPOS, 0, _dingPOS, _height);
+        p5.text("DING", _dingPOS, _dingPOS);
 
         p5.push()
         p5.translate(_width/2, _height/2)
