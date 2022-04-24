@@ -17,6 +17,8 @@ const Sketch1 = () => {
 
         let begin = 1903; //year the museum opened
         let end = 2025 // make dynamic?
+        let _span = end - begin;
+
         let index = p5.int(p5.map(p5.mouseX, 0, _width, 0, (end-begin)));
         let rectWidth = (_width/(end-begin));
 
@@ -24,6 +26,9 @@ const Sketch1 = () => {
 
         p5.stroke("#00FF67");
         p5.rect(rectWidth*index, 0, rectWidth, _height);
+
+        //meta information;
+        p5.line((_width/_span)*29, 0, (_width/_span)*29, _height);
 
 
         p5.push()
@@ -33,7 +38,6 @@ const Sketch1 = () => {
         p5.text(begin+index, 0, 0);
         p5.fill("#00FF67")
         p5.pop()
-
 
         p5.noStroke()
         p5.fill("#00FF67")
