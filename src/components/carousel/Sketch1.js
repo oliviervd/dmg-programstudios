@@ -7,6 +7,11 @@ const Sketch1 = () => {
     let _height = window.innerHeight
     let _width = window.innerWidth
 
+    //colors
+    let _white1 = "#f1f1f1"
+    let _green1 = "#00FF67"
+    let _green2 = ""
+
 
     const setup = (p5, canvasParantRef) => {
         p5.createCanvas(_width, _height).parent(canvasParantRef)
@@ -23,24 +28,25 @@ const Sketch1 = () => {
         let _hdcPos = (_width/_span)*19 // 19 yrs after opening the museum moved to Hotel De Coninck.
         let _dingPOS = (_width/_span) * 121
 
+        let _History = (_width/_span)*19
         let index = p5.int(p5.map(p5.mouseX, 0, _width, 0, (end-begin)));
         let rectWidth = (_width/(end-begin));
 
-        p5.background("#f1f1f1");
+        p5.background(_white1);
 
-        p5.stroke("#00FF67");
+        p5.stroke(_green1);
         p5.rect(rectWidth*index, 0, rectWidth, _height);
 
         //meta information; //todo: put in dictionary instead of evoking with variables.
-        p5.textSize(20);
+        p5.textSize(15);
 
         //models museum
-        p5.line(_mmPos, 0, _mmPos, _height);
-        p5.text("Museum of Models", _mmPos, _mmPos)
+        p5.line(_mmPos, 0, _mmPos, _mmPos);
+        p5.text("**Museum of Models", _mmPos, _History);
 
         //hotel de Coninck TODO: write function to generate these things and use dictionary declared above.
         p5.line(_hdcPos, 0, _hdcPos, _height);
-        p5.text("Hotel De Coninck", _hdcPos, _hdcPos);
+        p5.text("**Hotel De Coninck", _hdcPos, _History);
 
         //ding
         p5.line(_dingPOS, 0, _dingPOS, _height);
