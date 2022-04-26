@@ -35,12 +35,32 @@ const Sketch1 = p5 => {
 
         p5.background(_white1)
 
-        //rect
+        // coordinate system for grid;
+        let gridX = 30; //grid amount X
+        let gridY = 20; // grid amount Y
+        let gridW = _width / gridX;
+        let gridH = _height / gridY;
+
+        // tiled__staired grid.
+        for (let x = 0; x < gridX; x++) {
+            for (let y = 0; y < gridY; y++) {
+
+                p5.push()
+                p5.translate(gridW * x, gridH * y); // distribute elements on coordinate system
+                p5.stroke(_green1)
+                p5.rect(gridW * x, gridW * x + gridW, gridH * y, gridH * y + gridH) // draw rect (grid);
+                p5.pop()
+
+            }
+        }
+
+        // scanner head
         let n = p5.map(p5.mouseX, 0, _width, 0, 1)
         let _lerp = p5.lerpColor(_green1, _green2, n);
         p5.fill(_lerp)
         p5.rect(rectWidth*index, 0, rectWidth, _height);
 
+        // text displaying YEAR
         p5.push()
         p5.translate(_width/2, _height/2)
         p5.textSize(300);
@@ -49,23 +69,7 @@ const Sketch1 = p5 => {
         p5.fill(_green1)
         p5.pop()
 
-        //meta information; //todo: put in dictionary instead of evoking with variables.
-        p5.textSize(15);
-
-        //Models_Museum
-        p5.fill(0);
-        p5.stroke(0);
-        //p5.line(_mmPos, 0, _mmPos, _mmPos);
-        //p5.text("**Museum of Models", _mmPos, _History);
-
-        //hotel de Coninck TODO: write function to generate these things and use dictionary declared above.
-        //p5.line(_hdcPos, 0, _hdcPos, _height);
-        //p5.text("**Hotel De Coninck", _hdcPos, _History);
-
-        //DING
-        //p5.line(_dingPOS, 0, _dingPOS, _height);
-        //p5.text("DING", _dingPOS, _dingPOS);
-
+        // cursor
         p5.noStroke()
         p5.fill(255);
         p5.ellipse(p5.mouseX, p5.mouseY, 20, 20);
