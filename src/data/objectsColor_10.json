@@ -6631,5 +6631,203 @@
     "HEX_values": "[['#f5f1ec', '#8b6151', '#44281e', '#a77c66', '#5d3f33', '#e5dbd0', '#25120c', '#bf9a87', '#734f41', '#f9f9f8']]",
     "color_names": "[['Cultured', 'Bistre', 'Tuscan brown', 'Blast-off bronze', 'Tuscan tan', 'Bone', 'Grullo', 'Black chocolate', 'Isabelline', 'Dark liver (horses)']]",
     "entropy": null
+  },
+  {
+    "Unnamed: 0": null,
+    "URI": "title",
+    "timestamp": "IIIF_manifest",
+    "title": "IIIF_image",
+    "IIIF_manifest": "HEX_values",
+    "IIIF_image": "color_names",
+    "HEX_values": "entropy",
+    "color_names": "URI",
+    "entropy": "timestamp"
+  },
+  {
+    "Unnamed: 0": null,
+    "URI": "URI",
+    "timestamp": "timestamp",
+    "title": "title",
+    "IIIF_manifest": "IIIF_manifest",
+    "IIIF_image": "IIIF_image",
+    "HEX_values": "HEX_values",
+    "color_names": "color_names",
+    "entropy": "entropy"
+  },
+  {
+    "Unnamed: 0": 1.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530017708",
+    "timestamp": "2022-04-21T00:00:53.602Z",
+    "title": "Commode-secretaire met drie lades",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:2012-0003",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/653b14fb1c1cb3f24c28fd5aa7603399-2012-0003.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#86685c', '#dddbdc', '#583427', '#d3cdcd', '#a98e85', '#ebe8ea', '#8a4f31', '#a1613b', '#744430', '#c8bfbe']]",
+    "color_names": "[['Gainsboro', 'Tuscan brown', 'Burnished brown', 'Cinereous', 'Van Dyke brown', 'Café noir', 'Brown sugar', 'Fuzzy Wuzzy', 'Platinum', 'Silver (Crayola)']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 2.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530016401",
+    "timestamp": "2022-04-21T00:00:40.025Z",
+    "title": "Kleedje in naaldkant",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1988-0028",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/b795799e7d7a0baf1eda1b688aaceca8-1988-0028.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#222a29', '#46514d', '#616c68', '#a8b4af', '#cbd7cf', '#161b1a', '#7b8782', '#bcc8c1', '#2c3535', '#939f9a']]",
+    "color_names": "[['Morning blue', 'Outer space (Crayola)', \"Davy's grey\", 'Ash gray', 'Dim gray', 'Ash gray', 'Eerie black', 'Old silver', 'Light gray', 'Charleston green']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 3.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530015647",
+    "timestamp": "2022-04-21T00:00:36.254Z",
+    "title": "Bijzettafel met opklapbaar schrijfblad",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1952",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/d1c0e3f19a8624c23cd88a1736886029-1952.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#edeced', '#161414', '#c7bfba', '#3a2523', '#e1dfe0', '#f9f9f9', '#6c564d', '#d6d2d0', '#897a74', '#593733']]",
+    "color_names": "[['Gainsboro', 'Rocket metallic', 'Cultured', 'White', 'Dark liver (horses)', 'Eerie black', 'Silver (Crayola)', 'Old burgundy', 'Platinum', 'Umber']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 4.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530014599",
+    "timestamp": "2022-04-21T00:00:24.873Z",
+    "title": "Schrijfkist met passietafereel",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1863",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/d5067bd38f4c3c2fa3d92ff714defcd4-1863$1.JPG/full/full/0/default.jpg', 'http://api.collectie.gent/iiif/image/iiif/2/325f8dba5360e85d322a1a8865419355-1863$2.JPG/full/full/0/default.jpg', 'http://api.collectie.gent/iiif/image/iiif/2/d9f61a693ffb2df07b4d6eb8b2e615bf-IMG_6764.JPG/full/full/0/default.jpg', 'http://api.collectie.gent/iiif/image/iiif/2/2481426ad906b0cb4b51a62c41e0c033-IMG_6765.JPG/full/full/0/default.jpg', 'http://api.collectie.gent/iiif/image/iiif/2/5344427fef22da4a5ff08cb086095b10-IMG_6766.JPG/full/full/0/default.jpg', 'http://api.collectie.gent/iiif/image/iiif/2/d101865ae3576d73f90a057001951692-IMG_6767.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#f7f5f2', '#a48071', '#bc9176', '#775247', '#ece6e2', '#966655', '#d19d71', '#412d28', '#dbb292', '#b57858'], ['#c88861', '#fcfbf9', '#6e3f30', '#b79080', '#f6f2ee', '#a7745e', '#8a5c4b', '#e1a576', '#cdb2a5', '#43241c'], ['#cad0d1', '#3d201a', '#8a6e5f', '#bebfc4', '#aeadb0', '#572e1f', '#72594e', '#c4c8cb', '#7f522c', '#a2807c'], ['#745b51', '#d0d5d6', '#886e62', '#381e18', '#b3b3b5', '#52291b', '#6e4326', '#c5c7cb', '#875a2f', '#a47f78'], ['#50291a', '#cbd3d4', '#381e18', '#ababac', '#754b26', '#6f574a', '#bfc1c4', '#a47e7a', '#c5c9cd', '#83695d'], ['#c8d0d1', '#765f54', '#989799', '#a37770', '#3f2017', '#6c4627', '#a6a7a9', '#babdc0', '#868184', '#c1c7ca']]",
+    "color_names": "[['Cultured', 'Brown sugar', 'Beaver', 'Tumbleweed', 'Blast-off bronze', 'Platinum', 'Liver', 'Old burgundy', 'Tan (Crayola)', 'Antique brass'], ['Copper (Crayola)', 'Isabelline', 'Beaver', 'Bole', 'Bistre', 'Baby powder', 'Tan (Crayola)', 'Blast-off bronze', 'Tuscan brown', 'Silver pink'], ['Beaver', 'Silver sand', 'Dark sienna', 'Burnished brown', 'Silver (Metallic)', 'Kobicha', 'Silver sand', 'Umber', 'Light gray', 'Caput mortuum'], ['Silver sand', 'Coyote brown', 'Beaver', 'Umber', 'Silver chalice', 'Burnished brown', 'Bistre', 'Caput mortuum', 'Kobicha', 'Light gray'], ['Bistre', 'Light gray', 'Burnished brown', 'Kobicha', 'Silver chalice', 'Deep taupe', 'Silver sand', 'Umber', 'Silver sand', 'Caput mortuum'], ['Spanish gray', 'Umber', 'Light gray', 'Kobicha', 'Quick Silver', 'Dark sienna', 'Silver sand', 'Burnished brown', 'Taupe gray', 'Silver sand']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 5.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530014569",
+    "timestamp": "2022-04-21T00:00:11.354Z",
+    "title": "Secrétaire à abattant in empirestijl",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1866",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/981946f190dcd2897126581169f02676-1866$1.jpg/full/full/0/default.jpg']",
+    "HEX_values": "[['#c7c6c6', '#784a31', '#90705e', '#34221e', '#aa9989', '#765d53', '#653d2a', '#4e3126', '#5b4741', '#895a3c']]",
+    "color_names": "[['Silver', 'Kobicha', 'Dark liver (horses)', 'Bistre', 'Coyote brown', 'Bistre', 'Umber', 'Grullo', 'Van Dyke brown', 'Beaver']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 6.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530027429",
+    "timestamp": "2022-04-16T00:00:58.842Z",
+    "title": "Glasraam met menselijke figuren",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:2017-0064",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/a61585f7572b36e1d761b1ca35959277-2017-0064$1.JPG/full/full/0/default.jpg', 'http://api.collectie.gent/iiif/image/iiif/2/0577be94f1ab97a1f94d0eb2ff3577e6-2017-0064$2.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#d8d9d9', '#9f6c46', '#9ea8b7', '#918d8b', '#e6e9ea', '#625b58', '#42373b', '#c9c8c7', '#405d8b', '#221f28'], ['#191a1f', '#777156', '#85868b', '#d9dcdc', '#333233', '#cbcbcc', '#af8a69', '#9b9ca2', '#4f4c49', '#2a416f']]",
+    "color_names": "[['Black coffee', 'Middle grey', 'Gainsboro', 'Platinum', 'Queen blue', 'Silver', 'Brown sugar', 'Cadet grey', 'Raisin black', \"Davy's grey\"], ['Eerie black', 'Spanish gray', 'Gainsboro', \"Davy's grey\", 'Light gray', 'Tuscan tan', 'Indigo dye', 'Shadow', 'Jet', 'Taupe gray']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 7.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530015608",
+    "timestamp": "2022-04-16T00:00:52.829Z",
+    "title": "Kabinet met marqueterie",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1800",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/793395f39f24bf9adcb17f7941d062f7-1800$1.JPG/full/full/0/default.jpg', 'http://api.collectie.gent/iiif/image/iiif/2/94d68830475d303a29014ecfacc5abb6-1800$2.JPG/full/full/0/default.jpg', 'http://api.collectie.gent/iiif/image/iiif/2/430c03e5387ace2bfa71d4bf9040d639-1800$3.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#181a17', '#e3ebe5', '#6d6f67', '#2d2f2a', '#d6ddd8', '#4a4b44', '#9ea29b', '#f1faf6', '#33120a', '#0d0b08'], ['#2e2f2b', '#d1d8d1', '#f3faf9', '#0f0d0b', '#e4eee7', '#6a6c66', '#dde4de', '#9a9d95', '#201b17', '#4a4944'], ['#a3b4ad', '#f5fdfc', '#847a6f', '#d2e3dd', '#3a3e3e', '#515655', '#95a29b', '#1f2223', '#bacbc3', '#835347']]",
+    "color_names": "[['Jet', 'Gainsboro', 'Quick Silver', 'Eerie black', \"Davy's grey\", 'Platinum', 'Nickel', 'Smoky black', 'Mint cream', 'Dark sienna'], ['Timberwolf', 'Dim gray', 'Mint cream', 'Jet', 'Alabaster', 'Spanish gray', 'Smoky black', 'Platinum', 'Black olive', 'Black chocolate'], [\"Davy's grey\", 'Ash gray', 'Eerie black', 'Middle grey', 'Azure (X11/web color)', 'Morning blue', 'Ash gray', 'Onyx', 'Gainsboro', 'Bole']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 8.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530015573",
+    "timestamp": "2022-04-16T00:00:50.384Z",
+    "title": "Fauteuil à la reine met kruisverbinding tussen de poten",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1796",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/1f006c44b02c52c027071977cfeab3c6-1796.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#e3eff9', '#7b4d43', '#5d342d', '#ccc3be', '#514c51', '#a28b83', '#d3dde6', '#b8aaa2', '#30292b', '#886c65']]",
+    "color_names": "[['Alice blue', 'Silver pink', 'Dark liver', 'Silver (Crayola)', 'Rose taupe', 'Bole', 'Black coffee', 'Cinereous', 'Gainsboro', 'Granite gray']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 10.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530014144",
+    "timestamp": "2022-04-16T00:00:38.467Z",
+    "title": "Spaanse mansstoel met siernagels en leeuwenkoppen",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1859",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/7bcdb66831ff4b944bcd244dc5dff1e0-1859.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#dddfe0', '#493b38', '#6c615f', '#7b7578', '#b6b5b5', '#5a4e4a', '#d8d9d7', '#959295', '#cccdcc', '#322825']]",
+    "color_names": "[['Gainsboro', 'Dark liver', 'Black coffee', 'Sonic silver', 'Gray (X11 gray)', 'Spanish gray', 'Taupe', 'Gainsboro', 'Granite gray', 'Light gray']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 12.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530005524",
+    "timestamp": "2022-04-16T00:00:29.970Z",
+    "title": "Spaanse mansstoel met leeuwenkoppen",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1856",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/419eb2550fb25e5491ae01ae4a1537a7-1856.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#56493f', '#c8c2b1', '#e1e2d5', '#3d2c23', '#b6b09f', '#70675d', '#d6d2c2', '#1f1611', '#989183', '#ecede1']]",
+    "color_names": "[['Bistre', 'Black chocolate', 'Grullo', 'Nickel', 'Umber', 'Bone', 'Alabaster', 'Ash gray', 'Silver (Crayola)', 'Alabaster']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 13.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530005103",
+    "timestamp": "2022-04-16T00:00:21.352Z",
+    "title": "Vargueño",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:0805_0-2",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/2fd86cb0f8c62ba2dd620cb4962014be-0805_0-2$1.JPG/full/full/0/default.jpg', 'http://api.collectie.gent/iiif/image/iiif/2/1d65eb8278da7909a8c52b916868974f-0805_0-2$2.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#c5bdae', '#31271e', '#827566', '#fefefe', '#624c38', '#6b5946', '#a39986', '#766756', '#503e2f', '#8d8478'], ['#fefefe', '#8e7043', '#d5c9a0', '#553f2a', '#2d261f', '#5e4c3e', '#9e875e', '#b9a576', '#726354', '#735639']]",
+    "color_names": "[['Silver (Crayola)', 'Shadow', 'Middle grey', 'Bistre', 'White', 'Taupe', 'Tuscan brown', 'Grullo', 'Umber', 'Umber'], ['White', 'Sand', 'Coyote brown', 'Umber', 'Café noir', 'Dutch white', 'Tuscan brown', 'Gold Fusion', 'Umber', 'Black coffee']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 14.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530002221",
+    "timestamp": "2022-04-16T00:00:11.408Z",
+    "title": "Dressoir met maaswerk en briefpanelen",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:0031",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/cbd7e9065ea51ea1a6a7b2d165943c92-0031.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#e5dbd0', '#755042', '#26130c', '#f5f1ec', '#5f4034', '#a97e68', '#45291f', '#f9f9f8', '#8d6353', '#bf9c8a']]",
+    "color_names": "[['Bone', 'Black chocolate', 'Cultured', 'Blast-off bronze', 'Dark liver (horses)', 'Grullo', 'Tuscan brown', 'Isabelline', 'Bistre', 'Tuscan tan']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 15.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530015020",
+    "timestamp": "2022-04-14T00:00:29.253Z",
+    "title": "Kast-skulptuur",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1980-0310",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/6ba20416c9b074b9fdc02a778a03ea9f-1980-0310$1.jpg/full/full/0/default.jpg']",
+    "HEX_values": "[['#d2bcb2', '#24211f', '#dfe9f1', '#6d7176', '#302c2c', '#dcd8d7', '#725a4d', '#afaaa7', '#423a38', '#7d8285']]",
+    "color_names": "[['Timberwolf', 'Jet', 'Silver pink', 'Black olive', 'Gray (web)', 'Umber', 'Silver chalice', 'Raisin black', 'Alice blue', 'Dim gray']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 16.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530014128",
+    "timestamp": "2022-04-14T00:00:29.235Z",
+    "title": "Stoel met opengewerkte rugleuning",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1791",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/2bee6db5cb95587fce097f7c02241ba1-1791.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#d7e4ee', '#8a5048', '#957571', '#ad9893', '#54413d', '#3b2c27', '#6a5a57', '#d0dbe4', '#deecf7', '#c4ccd3']]",
+    "color_names": "[['Gainsboro', 'Umber', 'Tuscany', 'Lavender gray', 'Gainsboro', 'Bole', 'Old burgundy', 'Dark liver (horses)', 'Alice blue', 'Burnished brown']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 18.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530002207",
+    "timestamp": "2022-04-14T00:00:08.363Z",
+    "title": "Stoel met uitgesneden rugleuning",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1801",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/3bc2a3daa4dc85d32755fbb8f40329d2-1801.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#e7e5dc', '#a18978', '#846248', '#7e2731', '#d9d5c9', '#efeee7', '#3b2721', '#c1b7a8', '#634532', '#a84a54']]",
+    "color_names": "[['Raw umber', 'Antique ruby', 'Alabaster', 'Bone', 'Alabaster', 'Beaver', 'Tuscan brown', 'Silver (Crayola)', 'English red', 'Bistre']]",
+    "entropy": null
+  },
+  {
+    "Unnamed: 0": 20.0,
+    "URI": "https://stad.gent/id/mensgemaaktobject/dmg/530015559",
+    "timestamp": "2022-04-13T00:01:05.698Z",
+    "title": "Schrijfkist in Louis XV-stijl",
+    "IIIF_manifest": "https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1774",
+    "IIIF_image": "['http://api.collectie.gent/iiif/image/iiif/2/135406e7668d0006af126ba00d3a6898-1774$3.JPG/full/full/0/default.jpg', 'http://api.collectie.gent/iiif/image/iiif/2/ba0d25f1d00e113018f35bf134e20f37-1774$4.JPG/full/full/0/default.jpg']",
+    "HEX_values": "[['#fcf9f6', '#664030', '#ceaf95', '#ab7e5b', '#4e291c', '#1c130f', '#dec0a8', '#825d49', '#b99373', '#947d6f'], ['#cc9e73', '#f4efe9', '#8e694e', '#f8f6f3', '#503a2e', '#d4b9a2', '#a37c5f', '#735541', '#b9906e', '#dcac7c']]",
+    "color_names": "[['Snow', 'Beaver', 'Liver chestnut', 'Black chocolate', 'Caput mortuum', 'Tuscan tan', 'Desert sand', 'Van Dyke brown', 'Khaki (web)', 'Tuscan brown'], ['Cultured', 'Tuscan brown', 'Wood brown', 'Tuscan tan', 'Khaki (web)', 'Dark liver (horses)', 'Isabelline', 'Burlywood', 'Wood brown', 'Liver chestnut']]",
+    "entropy": null
   }
 ]

@@ -40,6 +40,11 @@ div {
 /* ---------------------------------- FONTS & TYPE ---------------------------------- */
 
 @font-face {
+    font-family: "P-ACR-AGON-Regular";
+    src: local("P-ACR-AGON-Regular"), url(fonts/P-ACR-AGON-Regular.otf)
+}
+
+@font-face {
     font-family: "happy-times-NG_bold_master_web";
     src: local("happy-times-NG_bold_master_web"), url(fonts/happy-times-NG_bold_master_web.ttf);
 }
@@ -57,6 +62,11 @@ div {
 @font-face {
     font-family: "lineal";
     src: local("lineal"), url(fonts/Lineal.otf);
+}
+
+crypto--h1 {
+    font-size: 43px;
+    font-family: "P-ACR-AGON-Regular", sans-serif;
 }
 
 h1 {
