@@ -14,7 +14,10 @@ const Sketch13D = p5 => {
     let SPEED = 20;
     let MOTION = 0;
 
+    let canvas;
+
     let HDC_outer;
+    let HDC_inner;
     let DOME__OUTER;
 
 
@@ -26,9 +29,9 @@ const Sketch13D = p5 => {
 
 
     const setup = (p5, canvasParantRef) => {
-        p5.createCanvas(WIDTH, HEIGHT, p5.WEBGL).parent(canvasParantRef);
-        HDC_outer = p5.loadImage('https://api.collectie.gent/iiif/image/iiif/2/5ef857c9b8b605791a2024c09daf2ed1-MA_SCMS_FO_00682.tif/full/full/0/default.jpg');
-
+        canvas = p5.createCanvas(WIDTH, HEIGHT, p5.WEBGL).parent(canvasParantRef);
+        HDC_outer = p5.loadImage('https://api.collectie.gent/iiif/image/iiif/2/5ef857c9b8b605791a2024c09daf2ed1-MA_SCMS_FO_00682.tif/full/1920,/0/default.jpg');
+        HDC_inner = p5.loadImage("hdc_01.jpeg");
     }
 
     const draw = p5 => {
@@ -46,7 +49,7 @@ const Sketch13D = p5 => {
 
         // outer__dome;
         p5.push();
-        p5.texture(HDC_outer);
+        //p5.texture(HDC_inner);
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(p5.frameCount*0.2));
         p5.translate(0, -2200, 0);
@@ -74,6 +77,14 @@ const Sketch13D = p5 => {
             }
         }
 
+        p5.push()
+        p5.translate(300, -700, 400);
+        //p5.texture(HDC_inner);
+        p5.rotateX(p5.radians(-90));
+        p5.rotateY(p5.radians(p5.frameCount));
+        p5.sphere(300);
+        p5.pop()
+
         p5.rotateY(p5.radians(p5.frameCount));
         // inner sphere
         p5.sphere(500);
@@ -90,6 +101,12 @@ const Sketch13D = p5 => {
             }
         }
 
+    }
+
+    window.onresize = function() {
+        HEIGHT = window.innerHeight
+        WIDTH = window.innerWidth
+        canvas.size(WIDTH, HEIGHT);
     }
 
     return (<Sketch setup={setup} draw={draw}/>)

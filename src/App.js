@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, useEffect} from "react";
 import { useMediaQuery } from "react-responsive";
 
 // components
@@ -22,13 +22,9 @@ function App() {
     const [sideActiveDescription, setSideActiveDescription] = useState(false);
     const [sideActiveGloss, setSideActiveGloss] = useState(false);
 
+
     function openSideDesc() {
         setSideActiveDescription(!sideActiveDescription);
-/*        if (_objectNum == 3) {
-            setObjectNum(() => 2)
-        } else {
-            setObjectNum(() => 3)
-        }*/
     }
 
     function openSideGloss() {
