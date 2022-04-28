@@ -80,6 +80,8 @@ const Sketch13D = p5 => {
         p5.push()
         p5.translate(300, -700, 400);
         //p5.texture(HDC_inner);
+        p5.stroke(_green2)
+        p5.fill(_green1)
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(p5.frameCount));
         p5.sphere(300);
@@ -87,6 +89,8 @@ const Sketch13D = p5 => {
 
         p5.rotateY(p5.radians(p5.frameCount));
         // inner sphere
+        p5.stroke(_green1)
+        p5.fill(_green2)
         p5.sphere(500);
 
         p5.pop();
