@@ -36,8 +36,8 @@ const Sketch1 = p5 => {
         p5.background(_white1)
 
         // coordinate system for grid;
-        let gridX = 30; //grid amount X
-        let gridY = 20; // grid amount Y
+        let gridX = 16*2; //grid amount X
+        let gridY = 9*2; // grid amount Y
         let gridW = _width / gridX;
         let gridH = _height / gridY;
 
@@ -53,6 +53,25 @@ const Sketch1 = p5 => {
 
             }
         }
+
+        // ellipse (grid)
+
+        p5.push();
+        p5.translate(-_width/2, -_height/2);
+
+        for (let x = 0; x < gridX; x++) {
+            for (let y = 0; y < gridY; y++) {
+
+                p5.push()
+                p5.translate(_width/2 + gridW * x, _height/2 + gridH * y); // distribute elements on coordinate system
+                p5.stroke(_green2)
+                p5.ellipse(0, 0, 5, 5) // draw rect (grid);
+                p5.pop()
+
+            }
+        }
+
+        p5.pop();
 
         // scanner head
         let n = p5.map(p5.mouseX, 0, _width, 0, 1)
