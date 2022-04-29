@@ -14,6 +14,10 @@ const Sketch13D = p5 => {
     let SPEED = 20;
     let MOTION = 0;
 
+    let xOff = 0;
+    let yOff = 1;
+    let zOff = 2;
+
     let canvas;
 
     let HDC_outer;
@@ -84,6 +88,7 @@ const Sketch13D = p5 => {
         p5.fill(0, 255, 103, 63)
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(p5.frameCount));
+        p5.translate(p5.noise(xOff)*100, p5.noise(yOff)*HEIGHT*0.01, -p5.noise(zOff)*600);
         p5.sphere(300);
         p5.pop()
 
@@ -95,11 +100,15 @@ const Sketch13D = p5 => {
 
         p5.pop();
 
+        xOff+=0.001;
+        yOff+=0.001;
+        zOff+=0.001;
+
         if(p5.keyPressed) {
-            if (p5.key == 'z' | p5.key == 'w') {
+            if (p5.key === 'z' || p5.key === 'w') {
                 MOTION += SPEED; // move forward
                 console.log("forward")
-            } else if (p5.key == 's') {
+            } else if (p5.key === 's') {
                 MOTION -= SPEED; // move backwards
                 console.log("backwards")
             }

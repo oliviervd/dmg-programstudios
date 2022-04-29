@@ -36,6 +36,7 @@ const SpectreMain = (props) => {
 
     const colorHexSwap = swap_c[randomSwapIndex]["HEX_values"][0]; // store data for props to generate hex tiles.
     const colorNameSwap = swap_c[randomSwapIndex]["color_names"][0]
+    console.log(colorNameSwap);
     const _imSwap = swap_c[randomSwapIndex]["IIIF_image"]; // store data for props to fetch right image.
 
     function check_overlap() {
