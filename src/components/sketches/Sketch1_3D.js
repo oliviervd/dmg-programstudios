@@ -36,6 +36,7 @@ const Sketch13D = p5 => {
         canvas = p5.createCanvas(WIDTH, HEIGHT, p5.WEBGL).parent(canvasParantRef);
         HDC_outer = p5.loadImage('https://api.collectie.gent/iiif/image/iiif/2/5ef857c9b8b605791a2024c09daf2ed1-MA_SCMS_FO_00682.tif/full/1920,/0/default.jpg');
         HDC_inner = p5.loadImage("hdc_01.jpeg");
+        //p5.tint(255, 127);
     }
 
     const draw = p5 => {
@@ -57,6 +58,7 @@ const Sketch13D = p5 => {
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(p5.frameCount*0.2));
         p5.translate(0, -2200, 0);
+        //p5.texture(HDC_outer);
         p5.sphere(3000);
         p5.pop();
 
@@ -83,9 +85,9 @@ const Sketch13D = p5 => {
 
         p5.push()
         p5.translate(300, -700, 400);
-        //p5.texture(HDC_inner);
         p5.stroke(_green2)
-        p5.fill(0, 255, 103, 63)
+        //p5.fill(0, 255, 103, 63)
+        //p5.texture(HDC_inner);
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(p5.frameCount));
         p5.translate(p5.noise(xOff)*100, p5.noise(yOff)*HEIGHT*0.01, -p5.noise(zOff)*600);

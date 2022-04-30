@@ -38,13 +38,13 @@ const ImageGenerator = (props) => {
         <div className="container" id="imageRandom">
 
             <img className="__img" alt="DREAMING OF IMAGES" onClick={()=>{setImageViewer1(true)}}  src={_images[0][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
-                <ImageViewer open={imageViewer1} onClose={() => setImageViewer1(false)} image={_images[0][0]} _title={_titles[0]}/>
+                <ImageViewer open={imageViewer1} onClose={() => setImageViewer1(false)} image={_images[0]} _title={_titles[0]}/>
 
             <img className="__img" alt="DREAMING OF IMAGES" onClick={()=>{setImageViewer2(true)}}  src={_images[1][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
-                <ImageViewer open={imageViewer2} onClose={() => setImageViewer2(false)} image={_images[1][0]} _title={_titles[1]}/>
+                <ImageViewer open={imageViewer2} onClose={() => setImageViewer2(false)} image={_images[1]} _title={_titles[1]}/>
 
             <img className="__img" alt="DREAMING OF IMAGES" onClick={()=>{setImageViewer3(true)}} src={_images[2][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
-                <ImageViewer open={imageViewer3} onClose={()=> setImageViewer3(false)} image={_images[2][0]} _title={_titles[2]}/>
+                <ImageViewer open={imageViewer3} onClose={()=> setImageViewer3(false)} image={_images[2]} _title={_titles[2]}/>
 
 
         </div>
