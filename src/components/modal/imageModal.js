@@ -1,4 +1,5 @@
 import React, {useState} from "react"
+import ImageGallery from "./ImageGallery";
 
 const ImageViewer = ({open, onClose, image, _title}) => {
 
@@ -24,17 +25,20 @@ const ImageViewer = ({open, onClose, image, _title}) => {
 
     if(!open) return null
     return(
-        <div className="imageViewer__modal">
-            <div className="imageViewer__modal__title">
-                <h2 className="imageViewer__modal__title-inner">{_title}</h2>
+        <div>
+            <div className="imageViewer__modal">
+                <div className="imageViewer__modal__title">
+                    <h2 className="imageViewer__modal__title-inner">{_title}</h2>
+                </div>
+                <img className="img__large" src={imageSet} onClick={loadNextImage}></img>
+                <div>
+                    <div className="closeButton__modal" onClick={onClose}>▒▒✖▒▒</div>
+                    <p></p>
+                </div>
             </div>
-            <img className="img__large" src={imageSet} onClick={loadNextImage}></img>
-            <div>
-                <div className="closeButton__modal" onClick={onClose}>▒▒✖▒▒</div>
-                <p></p>
-            </div>
+            {/*<ImageGallery className="imageViewer__modal__gallery" images={imagesClean}*/}
         </div>
-    )
+)
 }
 
 
