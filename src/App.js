@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from "react";
 import { useMediaQuery } from "react-responsive";
+import { Outlet, Link} from "react-router-dom";
 
 // components
 import XenoHeader from "./components/header+footer/xenoHeader"
@@ -52,9 +53,17 @@ function App() {
                         <p className="rotateText"> aBOUT.</p>
                     </div>s
 
-                    <div className="sideBarLeft-Nav__button" onClick={openSideGloss}>
-                        <p className="rotateText"> gLOSSARY.</p>
+                    {/*<div className="sideBarLeft-Nav__button" onClick={openSideGloss}>
+                        <Link to="glossary">
+                            <p className="rotateText"> gLOSSARY.</p>
+                        </Link>
                     </div>
+
+                    <div className="sideBarLeft-Nav__button" onClick={openSideGloss}>
+                        <Link to="essay/the-algorithmic-museum">
+                            <p className="rotateText"> the algorithmic museum.</p>
+                        </Link>
+                    </div>*/}
 
                 </div>
 
@@ -72,6 +81,7 @@ function App() {
                     <div className="dotLine"/>
                 </div>
             </div>
+            <Outlet />
         </div>
     );
 }

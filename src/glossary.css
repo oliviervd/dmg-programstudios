@@ -1,10 +1,6 @@
 .glossaryContainer__main{
-    position: absolute;
-    background: black;
-    border-radius: 20px;
-    width: 300px;
-    right: 40px;
-    top: 20px;
+    display: grid;
+    grid-template-columns: 30vw 40vw 30vw;
 }
 
 .glossaryContainer__border_inner {
