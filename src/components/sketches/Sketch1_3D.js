@@ -98,6 +98,7 @@ const Sketch13D = p5 => {
         // inner sphere
         p5.stroke(_green1);
         p5.fill(175, 198, 174, 67);
+        p5.strokeWeight(4);
         p5.translate(p5.noise(xOff)*200, p5.noise(yOff)*HEIGHT*0.08, -p5.noise(zOff)*100);
         p5.sphere(500);
 
