@@ -49,7 +49,7 @@ const Model1 = () => {
 
                 <article>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>
-                        RESPONSIBLE. “When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
+                        <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>RESPONSIBLE</p>. “When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
                         For four years this question was central to one of the tracks in Object Stories, the permanent presentation
                         of the collection of Design Museum Gent. The objects on display (within this specific track) all in their
                         own way demonstrated that although there is an increased focus on sustainability and social concern today,
@@ -63,7 +63,9 @@ const Model1 = () => {
                         as objects that behave responsibly, consciously and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
                         Taking responsibility through responsible behavior affects and effects all parts of society and is perhaps the primary precondition in order for something (or someone) to co-exist.
                         Which raises the question how the museum as an institution withing society, can also contribute for the better within this shifting society. Not only by disseminating and opening up these good examples of design,
-                        but also by becoming more self-aware and self-conscious by making the critical reflection ourselves of how we can act in a more caring manner. An institution that does not only act about society, but also for and in society.
+                        but also by becoming more self-aware and self-conscious by making the critical reflection ourselves of how we can act in a more caring manner.
+                        An institution that does not only act about or upon society, but also for and in society.
+                        As an interface that engages in a mutual relationship – a form of coexistence that moves beyond the mere display.
                         If not, we risk lapsing into a form of façadism in which programming about <a href="#sustainability_exhibitions" aria-describedby="footnote-label" id="sustainability_exhibitions_ref">sustainability</a> is not also sustainable;
                         a major challenge that prevails and is being addressed internationally within the (touring) exhibition <a href="#resource_hungry" aria-describedby="footnote-label" id="resource_hungry_ref">sector</a>.
                         In this sense, making the institution sustainable also implies a critical reprogramming of the museum and its <a href="#metabolism" aria-describedby="glossary-label" id="metabolism_ref">metabolism</a> as a whole.
@@ -72,7 +74,7 @@ const Model1 = () => {
                     <h2 className="left box" style={{borderLeft: "3px solid black", paddingLeft: "5px"}}>__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                        METABOLISM. What if we tried to alter our metabolism in such a way that the core task of the museum of taking
+                        <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>METABOLISM</p>. What if we tried to alter our metabolism in such a way that the core task of the museum of taking
                         care of the collection (conservation/preservation) is extended to the sensible act of supporting a <u>collection of care</u>?
                         For is not the process of expanding the collection through acquisition essentially a transfer of caring for an object from one person to the other?
                         Let’s take for example the acquisition of the "sample book with paint recipes", a 19th-century catalog of samples that used to belong to the personal library of Henry van de Velde,
@@ -82,7 +84,7 @@ const Model1 = () => {
                     </div>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                        SOCIAL. How can technology then aid us in rekindling this potentiality, (re-)invoking this idea of being inspired? Can we create a model that
+                        <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>SOCIAL</p>. How can technology then aid us in rekindling this potentiality, (re-)invoking this idea of being inspired? Can we create a model that
                         establishes speculative relationships between the samples in this book on one hand and the digitized
                         objects in our collection on the other? By means of color extraction, the model tries to evoke a social network,
                         a system, in which objects relate to one another based on their color palette. At the same time,
