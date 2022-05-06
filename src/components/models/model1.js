@@ -96,8 +96,9 @@ const Model1 = () => {
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
                         This approach of the collection as a social network, - a speculative system that connects in a transhistorical and transdisciplinary way -
                         transcends the art historical and institutionalized view - resounding the indeterminacy that might lie at the museum’s foundations.
-                        Referring to the early history of the museum where it functioned as a model <a href="#models_museum" aria-describedby="footnote-label" id="models_museum_ref">museum</a>;
-                        a place with the social purpose of inspiring craftsmen by presenting good models or forms of design.
+                        At the same time it very much resonates with the "indeterminacy" that might lie at the museum’s foundations, a place where knowledge is constantly being (re-)produced based upon the passage of both human and non-human agency.
+                        One could also read this excercise as if revisiting, invoking or emulating the museum in its early, former form, in which it went as a <a href="#models_museum" aria-describedby="footnote-label" id="models_museum_ref">model museum</a>;
+                        (musee des modeles) a place with the social purpose of inspiring craftsmen by presenting good models or forms of design. Nostalgic, no. Co-existent, perhaps.
                     </div>
                     <br/><br/>
 
