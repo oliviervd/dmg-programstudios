@@ -1,4 +1,4 @@
-import React from "react";
+import React ,{useEffect} from "react";
 import Sketch from "react-p5";
 
 
@@ -31,25 +31,41 @@ const Sketch13D = p5 => {
     let _green1 = "#00ff67"
     let _green2 = "#afc6ae"
 
+    const preload = (p5) => {
+        HDC_outer = p5.loadImage('hdc_01.jpeg');
+        p5.redraw();
+    }
+
 
     const setup = (p5, canvasParantRef) => {
         canvas = p5.createCanvas(WIDTH, HEIGHT, p5.WEBGL).parent(canvasParantRef);
-        HDC_outer = p5.loadImage('https://api.collectie.gent/iiif/image/iiif/2/5ef857c9b8b605791a2024c09daf2ed1-MA_SCMS_FO_00682.tif/full/1920,/0/default.jpg');
-        HDC_inner = p5.loadImage("hdc_01.jpeg");
+        //HDC_inner = p5.loadImage("https://api.collectie.gent/iiif/image/iiif/2/b7a376735df545a775899c6efb23f808-MA_SCMS_FO_00683.tif/624,661,1992,1423/full/0/default.jpg");
         //p5.tint(255, 127);
     }
 
     const draw = p5 => {
 
+
         GRID_W = MAGNITUDE / GRID_X
         GRID_H = MAGNITUDE / GRID_Y;
+
+        let eyeX = WIDTH/2.0 + p5.map(p5.mouseX, 0, WIDTH, 0, 1000);
+        let eyeY = HEIGHT/2.0;
+        let eyeZ =(HEIGHT/2.0) / p5.tan(p5.PI*30.0 / 180.0);
+        let centerX = WIDTH/2.0;
+        let centerY = HEIGHT/2.0;
+        let centerZ = 0;
+        let upX = 0;
+        let upY = 1;
+        let upZ = 0;
+        p5.camera(eyeX, eyeY, eyeZ, centerX, centerY, centerZ, upX, upY, upZ);
 
         // -------- SCENE -----------//
         p5.background(BG);
         p5.perspective(p5.PI/3.0, p5.float(WIDTH/HEIGHT), 1, 10000);
 
         p5.push();
-        p5.translate(0, 300, MOTION);
+        p5.translate(0, 750, MOTION);
         p5.rotateX(p5.radians(90));
 
         // outer__dome;
@@ -87,7 +103,7 @@ const Sketch13D = p5 => {
         p5.translate(300, -700, 400);
         p5.stroke(_green2)
         //p5.fill(0, 255, 103, 63)
-        //p5.texture(HDC_inner);
+        //p5.texture(HDC_outer);
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(p5.frameCount));
         p5.translate(p5.noise(xOff)*100, p5.noise(yOff)*HEIGHT*0.01, -p5.noise(zOff)*600);
@@ -120,13 +136,7 @@ const Sketch13D = p5 => {
 
     }
 
-    window.onresize = function() {
-        HEIGHT = window.innerHeight
-        WIDTH = window.innerWidth
-        canvas.size(WIDTH, HEIGHT);
-    }
-
-    return (<Sketch setup={setup} draw={draw}/>)
+    return (<Sketch preload={preload} setup={setup} draw={draw}/>)
 }
 
 export default Sketch13D;
