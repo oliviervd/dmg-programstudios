@@ -1,5 +1,6 @@
 import React from "react"
 import XenoHeader from "../header+footer/xenoHeader";
+import RedBars from "../sketches/Sketch2_redBars";
 
 const EssayAlgoMuseum = () => {
     return(
@@ -11,6 +12,7 @@ const EssayAlgoMuseum = () => {
                     <div className="button-lang">EN</div>
                 </div>
                 <div>
+                    <RedBars/>
                     <crypto--h1 className="center underlined">THE MUSEUM AND THE COMPUTATIONAL</crypto--h1>
                 </div>
             </div>
