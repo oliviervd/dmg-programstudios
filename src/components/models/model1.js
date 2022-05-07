@@ -77,9 +77,10 @@ const Model1 = () => {
                     <h2 className="left box" style={{borderLeft: "3px solid black", paddingLeft: "5px"}}>__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                        <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>METABOLISM</p>Could we imagine
-                        ways of changing the metabolism of the museum in such a way that core tasks of the museum such as
-                        taking care of the collection (conservation/preservation) is reformulated into the sensible act of supporting a  <u>collection of care</u>?
+                        <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>METABOLISM</p>Can we reimagine and
+                        rethink the metabolism of the museum in such a way that the core tasks of the museum in terms of
+                        taking care of the collection (conservation/preservation) are reformulated into
+                        the sensible act of supporting a  <u>collection of care</u>?
                         Could we not agree that the process of expanding the collection through acquisition is essentially
                         a transfer of “caring for” an object from one person to the other? Defining what is meant by
                         “to take care for”, as well as the transformation of caring for a collection into a collection of
@@ -95,16 +96,17 @@ const Model1 = () => {
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
                         <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>TO TAKE CARE OF. </p>
                         Taking care of something or someone is a highly social endeavor and is a premise for us to co-exist.
-                        To support this act of caretaking we developed technology of all sorts – this same technology however
-                        can also lead to direct opposite when not used properly. Could we now imagine interfaces of care?
-                        Can we create a model that establishes speculative relationships? For example, to socialize
-                        between the samples in this book on one hand and the digitized objects in our collection on the other?
-                        One such interface could be achieved by means of color extraction, a model that tries to evoke a social network,
-                        a system, in which objects relate to one another based on their color palette. At the same time,
-                        this reorganization of the collection based on samples made and collected by an unknown colorist,
-                        evokes a "culture of anonymity" while also seeking other approaches to our collection that move
-                        beyond the dominant form of authorship. An inherent quality of the work that often determines
-                        the visibility and/or invisibility of an object.
+                        To support this act of caretaking we developed technology that aids us in the process. However,
+                        this same technology can also lead to direct opposite when not used or approached properly.
+                        So how do we define these interfaces of care? Is it possible to make use of technology to create a
+                        model that speculates on the interrelationships between agents and objects in a collection For example,
+                        to socialize between the samples in this book on one hand and the digitized objects in our
+                        collection on the other? One such interface could be achieved by means of color extraction,
+                        a model that tries to evoke a social network, a system, in which objects relate to one another
+                        based on their color palette. At the same time, this reorganization of the collection based on
+                        samples made and collected by an unknown colorist, evokes a "culture of anonymity" while also
+                        seeking other approaches to our collection that move beyond the dominant form of authorship.
+                        An inherent quality of the work that often determines the visibility and/or invisibility of an object.
 
                     </div><br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
