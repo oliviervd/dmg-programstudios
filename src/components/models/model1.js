@@ -36,8 +36,18 @@ const Model1 = () => {
                             </div>
                         </li>
                         <li>
+                            <div id="technological_senisbility">
+                                Take for example our social media platforms. On the one hand they have the potential to
+                                create new (sometimes meaningful) relationships between users active on the platform.
+                                On the other hand, the computational power needed to drive the algorithms behind these
+                                machines are reliant on natural resources, resulting in their depletion of highly needed
+                                resources from the earth. <a href="#technological_senisbility_ref" aria-label="Back to content">↩</a>
+                            </div>
+                        </li>
+                        <li>
                             <div id="ecology">
-                                "ecology of technology" - [see also glossary] <a href="#ecology_ref" aria-label="Back to content">↩</a>
+                                James Bridle refers to an "ecology of technology", in which human and non-human entities,
+                                such as computers amplify each other, rather than trying to outdo each other. - [see also glossary: ECOLOGY] <a href="#ecology_ref" aria-label="Back to content">↩</a>
                             </div>
                         </li>
                         <li>
@@ -45,10 +55,8 @@ const Model1 = () => {
                                 The museum was established in 1903 as a "models museum" (<em>modellenmuseum</em> or <em>musee des modelles</em>).
                                 The collection comprised of good examples of various crafts and trades to inspire artists and craftsmen and
                                 provide support for their training.<a href="#models_museum_ref" aria-label="Back to content">↩</a>
+                                <img src="https://api.collectie.gent/iiif/image/iiif/2/b7a376735df545a775899c6efb23f808-MA_SCMS_FO_00683.tif/624,661,1992,1423/full/0/default.jpg"></img>
                             </div>
-                        </li>
-                        <li>
-                            <img src="https://api.collectie.gent/iiif/image/iiif/2/b7a376735df545a775899c6efb23f808-MA_SCMS_FO_00683.tif/624,661,1992,1423/full/0/default.jpg"></img>
                         </li>
 
                     </ol>
@@ -102,17 +110,18 @@ const Model1 = () => {
                         <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>TO TAKE CARE OF. </p>
                         Taking care of something or someone is a highly social endeavor and is perhaps even a premise for
                         us to co-exist. To support this act of caretaking we developed technology that aids us in the process.
-                        However, this same technology can also lead to direct opposite when not used or approached properly.
+                        However, this same technology can also lead to direct opposite when not used or approached <a href="#technological_senisbility" aria-describedby="footnote-label" id="technological_senisbility_ref">responsibly</a>.
                         So how do we define these interfaces of care? Is it possible to make use of technology to create a
                         model that speculates on the interrelationships between agents and objects in a collection?
                         What can technology teach us about the relationship between things? MODEL1: SENSE & SENSIBILITY looks into leveraging technology as a way to measure proximity.
                         At the same time it looks back at past interfaces that might be inspiring for the future.
                         Looking back at the color book today – as an interface that inspired – both manufacturers of paint,
-                        craftsmen as well as – prior to its entering the museum - Henry van de Velde, inspiration struck
-                        me to think about ways to re-invoke this same ritual of knowledge transfer, this same idea of one
-                        object inspiring the creation of another. <br/><br/> The interface below embodies this idea, recursively looping
-                        over the collection, as one would flip the pages of book, to bring together objects that are
-                        closely related (in terms of color) to a particular color sample in this book. By doing so,
+                        craftsmen and artists alike; inspiration struck to consider ways to re-invoke this same ritual of
+                        knowledge transfer, this same idea of one object inspiring the creation of another.  <br/><br/>
+
+                        The interface below embodies this idea, recursively looping
+                        over the collection, as one would flip the pages of book, to establish encounters of objects that are
+                         related (in terms of their color) to a particular color sample in this book. By doing so,
                         a speculative <a href="#ecology" aria-describedby="footnote-label" id="ecology_ref">ecology</a> of 4 objects is invoked that might or might not have inspired each other
                         one point in time. At the same time, this reorganization of the collection based on samples carefully
                         crafted and collected by an unknown colorist, evokes a "culture of anonymity" and broadens traditional
