@@ -36,6 +36,11 @@ const Model1 = () => {
                             </div>
                         </li>
                         <li>
+                            <div id="ecology">
+                                "ecology of technology" - [see also glossary] <a href="#ecology_ref" aria-label="Back to content">↩</a>
+                            </div>
+                        </li>
+                        <li>
                             <div id="models_museum">
                                 The museum was established in 1903 as a "models museum" (<em>modellenmuseum</em> or <em>musee des modelles</em>).
                                 The collection comprised of good examples of various crafts and trades to inspire artists and craftsmen and
@@ -95,18 +100,19 @@ const Model1 = () => {
                     <br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
                         <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>TO TAKE CARE OF. </p>
-                        Taking care of something or someone is a highly social endeavor and is a premise for us to co-exist.
-                        To support this act of caretaking we developed technology that aids us in the process. However,
-                        this same technology can also lead to direct opposite when not used or approached properly.
+                        Taking care of something or someone is a highly social endeavor and is perhaps even a premise for
+                        us to co-exist. To support this act of caretaking we developed technology that aids us in the process.
+                        However, this same technology can also lead to direct opposite when not used or approached properly.
                         So how do we define these interfaces of care? Is it possible to make use of technology to create a
-                        model that speculates on the interrelationships between agents and objects in a collection For example,
-                        to socialize between the samples in this book on one hand and the digitized objects in our
-                        collection on the other? One such interface could be achieved by means of color extraction,
-                        a model that tries to evoke a social network, a system, in which objects relate to one another
-                        based on their color palette. At the same time, this reorganization of the collection based on
-                        samples made and collected by an unknown colorist, evokes a "culture of anonymity" while also
-                        seeking other approaches to our collection that move beyond the dominant form of authorship.
-                        An inherent quality of the work that often determines the visibility and/or invisibility of an object.
+                        model that speculates on the interrelationships between agents and objects in a collection?
+                        What can technology teach us about the relationship between things?
+                        This first model looks into leveraging technology as a way to measure proximity through color extraction
+                        and create a speculative <a href="#ecology" aria-describedby="footnote-label" id="ecology_ref">ecology</a> of objects that might or might not have inspired each other. At the same time,
+                        this reorganization of the collection based on samples carefully crafted and collected by an unknown colorist,
+                        evokes a "culture of anonymity" while also seeking other approaches to our collection that move beyond
+                        the dominant form of authorship. An inherent quality of the work that often determines the visibility
+                        and/or invisibility of an object.
+
 
                     </div><br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
