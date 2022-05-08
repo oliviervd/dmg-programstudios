@@ -105,14 +105,19 @@ const Model1 = () => {
                         However, this same technology can also lead to direct opposite when not used or approached properly.
                         So how do we define these interfaces of care? Is it possible to make use of technology to create a
                         model that speculates on the interrelationships between agents and objects in a collection?
-                        What can technology teach us about the relationship between things?
-                        This first model looks into leveraging technology as a way to measure proximity through color extraction
-                        and create a speculative <a href="#ecology" aria-describedby="footnote-label" id="ecology_ref">ecology</a> of objects that might or might not have inspired each other. At the same time,
-                        this reorganization of the collection based on samples carefully crafted and collected by an unknown colorist,
-                        evokes a "culture of anonymity" while also seeking other approaches to our collection that move beyond
-                        the dominant form of authorship. An inherent quality of the work that often determines the visibility
-                        and/or invisibility of an object.
-
+                        What can technology teach us about the relationship between things? MODEL1: SENSE & SENSIBILITY looks into leveraging technology as a way to measure proximity.
+                        At the same time it looks back at past interfaces that might be inspiring for the future.
+                        Looking back at the color book today – as an interface that inspired – both manufacturers of paint,
+                        craftsmen as well as – prior to its entering the museum - Henry van de Velde, inspiration struck
+                        me to think about ways to re-invoke this same ritual of knowledge transfer, this same idea of one
+                        object inspiring the creation of another. The interface below embodies this idea, recursively looping
+                        over the collection, as one would flip the pages of book, to bring together objects that are
+                        closely related (in terms of color) to a particular color sample in this book. By doing so,
+                        a speculative <a href="#ecology" aria-describedby="footnote-label" id="ecology_ref">ecology</a> of 4 objects is invoked that might or might not have inspired each other
+                        one point in time. At the same time, this reorganization of the collection based on samples carefully
+                        crafted and collected by an unknown colorist, evokes a "culture of anonymity" and broadens traditional
+                        approaches to our collection that move beyond the dominant form of authorship. An inherent quality
+                        of the work that often determines the visibility and/or invisibility of an object.
 
                     </div><br/>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
