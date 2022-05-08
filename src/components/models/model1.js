@@ -110,7 +110,7 @@ const Model1 = () => {
                         Looking back at the color book today – as an interface that inspired – both manufacturers of paint,
                         craftsmen as well as – prior to its entering the museum - Henry van de Velde, inspiration struck
                         me to think about ways to re-invoke this same ritual of knowledge transfer, this same idea of one
-                        object inspiring the creation of another. The interface below embodies this idea, recursively looping
+                        object inspiring the creation of another. <br/><br/> The interface below embodies this idea, recursively looping
                         over the collection, as one would flip the pages of book, to bring together objects that are
                         closely related (in terms of color) to a particular color sample in this book. By doing so,
                         a speculative <a href="#ecology" aria-describedby="footnote-label" id="ecology_ref">ecology</a> of 4 objects is invoked that might or might not have inspired each other
