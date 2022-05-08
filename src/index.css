@@ -520,7 +520,14 @@ img{
     
 }
 
-.imageViewer__modal__gallery-image {
+.imageViewer__modal__gallery-image__outer {
+    position: absolute;
+    display: grid;
+    grid-template-colums: 12vw 12vw 12vw 12vw 12vw;
+}
+
+.imageViewer__modal__gallery-image__inner {
+    position: relative;
     border: solid 2px var(--fluo__green)
 }
 

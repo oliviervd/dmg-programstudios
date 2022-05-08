@@ -18,10 +18,11 @@ const ImageViewer = ({open, onClose, image, _title}) => {
 
     for (let i = 0; i < image.length; i++) {
         let x = image[i].replace("'", "");
-        imagesClean.push(x);
+        imagesClean.push(x.replace("g'","g"));
+        console.log("CLEAN: "+imagesClean);
     }
 
-    let imageSet = imagesClean[_i].replace("'","");
+    let imageSet = imagesClean[_i].replace("'","").replace("g'","");
 
     if(!open) return null
     return(
@@ -35,8 +36,10 @@ const ImageViewer = ({open, onClose, image, _title}) => {
                     <div className="closeButton__modal" onClick={onClose}>▒▒✖▒▒</div>
                     <p></p>
                 </div>
+                <div className="imageViewer__modal__gallery-image__outer">
+                    <ImageGallery className="imageViewer__modal__gallery" images={imagesClean}/>
+                </div>
             </div>
-            {/*<ImageGallery className="imageViewer__modal__gallery" images={imagesClean}*/}
         </div>
 )
 }
