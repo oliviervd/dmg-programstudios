@@ -26,7 +26,7 @@ const ImageViewer = ({open, onClose, image, _title}) => {
 
     if(!open) return null
     return(
-        <div>
+        <div className="imageViewer__modal-main">
             <div className="imageViewer__modal">
                 <div className="imageViewer__modal__title">
                     <h2 className="imageViewer__modal__title-inner">{_title}</h2>

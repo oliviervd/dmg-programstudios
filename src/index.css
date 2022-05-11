@@ -478,6 +478,12 @@ img{
     object-fit: contain;
 }
 
+img__thumbnail {
+    width: 18vw;
+    height: 20vh;
+    object-fit: contain;
+}
+
 .__img{
     border: none;
 }
@@ -489,6 +495,14 @@ img{
 
 .imageViewer__modal--box {
     display: grid;
+}
+
+imageViewer__modal-main {
+    position: absolute;
+    top: 10vh;
+    bottom: 120vh;
+    left: 10vw;
+    right: 20vw;
 }
 
 .imageViewer__modal{
@@ -515,7 +529,7 @@ img{
 
     top: 90vh;
     bottom: 5vh;
-    left: 20vw;
+    left: 10vw;
     right: 20vw;
     
 }
@@ -523,12 +537,18 @@ img{
 .imageViewer__modal__gallery-image__outer {
     position: absolute;
     display: grid;
-    grid-template-colums: 12vw 12vw 12vw 12vw 12vw;
+    grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
+    left: -20vw;
 }
 
 .imageViewer__modal__gallery-image__inner {
     position: relative;
-    border: solid 2px var(--fluo__green)
+    background: linear-gradient(180deg, var(--main__green) 0%,  var(--fluo__green) 100%);
+    border: solid 2px var(--fluo__green);
+    width: 18vw;
+    height: 20vh;
+    object-fit: contain;
+    overflow-y:auto;
 }
 
 .imageViewer__modal__title{
