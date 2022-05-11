@@ -1,6 +1,7 @@
 :root {
     --main__green: #afc6ae;
     --fluo__green: #00FF67;
+    --triad_pink: #C6AEAF;
     --happy__bold: "happy-times-NG_bold_master_web";
     --happy__regular: "happy-times-NG_regular_master_web";
     --happy__italic: "happy-times-NG_italic_master_web";
@@ -67,6 +68,8 @@ div {
 crypto--h1 {
     font-size: 43px;
     font-family: "P-ACR-AGON-Regular", sans-serif;
+    text-decoration: none;
+    color: black;
 }
 
 h1 {
@@ -369,6 +372,8 @@ button{
     white-space: nowrap;
     text-transform: uppercase;
     text-rendering: optimizeLegibility;
+    color: black;;
+    text-decoration: none;
 
     line-height: 0;
 

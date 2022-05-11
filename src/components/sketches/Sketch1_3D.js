@@ -1,14 +1,14 @@
 import React ,{useEffect} from "react";
 import Sketch from "react-p5";
-
+import "./hdc_01.jpeg"
 
 const Sketch13D = p5 => {
 
     let MAGNITUDE = 12000;
     let HEIGHT = window.innerHeight
     let WIDTH = window.innerWidth
-    let GRID_X = 100; //grid amount X
-    let GRID_Y = 100;
+    let GRID_X = 50; //grid amount X
+    let GRID_Y = 50;
     let GRID_W;
     let GRID_H;
     let SPEED = 20;
@@ -30,16 +30,17 @@ const Sketch13D = p5 => {
     let FG = "#f1f1f1"
     let _green1 = "#00ff67"
     let _green2 = "#afc6ae"
+    let _pink1 = "#C6AEAF"
 
     const preload = (p5) => {
-        HDC_outer = p5.loadImage('hdc_01.jpeg');
+        HDC_inner = p5.loadImage('hdc_01.jpeg');
+        HDC_outer = p5.loadImage("https://api.collectie.gent/iiif/image/iiif/2/5ef857c9b8b605791a2024c09daf2ed1-MA_SCMS_FO_00682.tif/full/full/0/default.jpg");
         p5.redraw();
     }
 
 
     const setup = (p5, canvasParantRef) => {
         canvas = p5.createCanvas(WIDTH, HEIGHT, p5.WEBGL).parent(canvasParantRef);
-        //HDC_inner = p5.loadImage("https://api.collectie.gent/iiif/image/iiif/2/b7a376735df545a775899c6efb23f808-MA_SCMS_FO_00683.tif/624,661,1992,1423/full/0/default.jpg");
         //p5.tint(255, 127);
     }
 
@@ -62,6 +63,7 @@ const Sketch13D = p5 => {
 
         // -------- SCENE -----------//
         p5.background(BG);
+        //p5.lights();
         p5.perspective(p5.PI/3.0, p5.float(WIDTH/HEIGHT), 1, 10000);
 
         p5.push();
@@ -70,11 +72,10 @@ const Sketch13D = p5 => {
 
         // outer__dome;
         p5.push();
-        //p5.texture(HDC_inner);
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(p5.frameCount*0.2));
         p5.translate(0, -2200, 0);
-        //p5.texture(HDC_outer);
+        p5.texture(HDC_outer);
         p5.sphere(3000);
         p5.pop();
 
@@ -94,6 +95,8 @@ const Sketch13D = p5 => {
             for (let y = 0; y < GRID_Y; y++) {
                 p5.push()
                 p5.translate(GRID_W/2 - MAGNITUDE/2 + GRID_W * x, GRID_H/2 - MAGNITUDE/2 + GRID_H * y);
+                //p5.stroke(_pink1);
+                p5.fill(_pink1);
                 p5.box(5);
                 p5.pop()
             }
@@ -103,7 +106,7 @@ const Sketch13D = p5 => {
         p5.translate(300, -700, 400);
         p5.stroke(_green2)
         //p5.fill(0, 255, 103, 63)
-        //p5.texture(HDC_outer);
+        p5.texture(HDC_inner);
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(p5.frameCount));
         p5.translate(p5.noise(xOff)*100, p5.noise(yOff)*HEIGHT*0.01, -p5.noise(zOff)*600);
@@ -112,9 +115,9 @@ const Sketch13D = p5 => {
 
         p5.rotateY(p5.radians(p5.frameCount));
         // inner sphere
-        p5.stroke(_green1);
+        p5.stroke(_pink1);
         p5.fill(175, 198, 174, 67);
-        p5.strokeWeight(4);
+        p5.strokeWeight(2);
         p5.translate(p5.noise(xOff)*200, p5.noise(yOff)*HEIGHT*0.08, -p5.noise(zOff)*100);
         p5.sphere(500);
 
