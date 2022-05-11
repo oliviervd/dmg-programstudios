@@ -57,13 +57,13 @@ function App() {
                         <Link to="glossary">
                             <p className="rotateText"> gLOSSARY.</p>
                         </Link>
-                    </div>*/}
+                    </div>
 
                     <div className="sideBarLeft-Nav__button" onClick={openSideGloss}>
                         <Link to="essay/the-algorithmic-museum">
                             <p className="rotateText"> the algorithmic museum.</p>
                         </Link>
-                    </div>
+                    </div>*/}
 
                 </div>
 

@@ -1,6 +1,5 @@
-import React, {useState} from "react"
-import Modal from "./modal/modal"
-
+import React, {useState} from "react";
+import { Link } from "react-router-dom";
 
 const chapters = "MODELS FROM THE PAST FOR THE FUTURE, as a site for post-digital discourse, serves as a counter-proposal " +
     "to the accelerated pace of cultural production in museums today resulting in the dichotomy between the need to " +
@@ -63,7 +62,7 @@ const ProjectDescription = () => {
 
                         <br/><br/>
 
-                        The XENO-MORPHIC, the SENSORIAL & SENSIBLE, the TRANS-HISTORICAL, the CURRENT and PAST-FUTURE are
+                        The COMPUTATIONAL, XENO-MORPHIC, the <Link to="/">SENSORIAL & SENSIBLE</Link>, the TRANS-HISTORICAL, the CURRENT and PAST-FUTURE are
                         speculative models that instigate us in questioning our current tools and inspire us in devising
                         new kinds of knowledge production and interfaces that are perhaps more sensible to its users,
                         more conscious of its surroundings and above all - foster inspiration. Moving from caring for collections, to a collection of care.
