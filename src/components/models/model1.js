@@ -46,8 +46,10 @@ const Model1 = () => {
                         </li>
                         <li>
                             <div id="ecology">
-                                James Bridle refers to an "ecology of technology", in which human and non-human entities,
-                                such as computers amplify each other, rather than trying to outdo each other. - [see also glossary: ECOLOGY] <a href="#ecology_ref" aria-label="Back to content">↩</a>
+                                James Bridle refers to an "technological ecology", in which human and non-human entities,
+                                such as computers amplify each other, rather than trying to outdo each other. "The combination of technological
+                                capacity with a more-than-human sensitivy which constructs new ways of seeing and appreciating the world.
+                                - [see also glossary: ECOLOGY] <a href="#ecology_ref" aria-label="Back to content">↩</a>
                             </div>
                         </li>
                         <li>
