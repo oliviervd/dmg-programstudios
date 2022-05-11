@@ -113,7 +113,9 @@ const Model1 = () => {
                         However, this same technology can also lead to direct opposite when not used or approached <a href="#technological_senisbility" aria-describedby="footnote-label" id="technological_senisbility_ref">responsibly</a>.
                         So how do we define these interfaces of care? Is it possible to make use of technology to create a
                         model that speculates on the interrelationships between agents and objects in a collection?
-                        What can technology teach us about the relationship between things? MODEL1: SENSE & SENSIBILITY looks into leveraging technology as a way to measure proximity.
+                        What can technology teach us about the relationship between things, an ecology of
+                        <a href="#ecology" aria-describedby="footnote-label" id="ecology_ref">technology</a> perhaps?
+                        MODEL1: SENSE & SENSIBILITY looks into leveraging technology as a way to measure proximity.
                         At the same time it looks back at past interfaces that might be inspiring for the future.
                         Looking back at the color book today – as an interface that inspired – both manufacturers of paint,
                         craftsmen and artists alike; inspiration struck to consider ways to re-invoke this same ritual of
@@ -121,8 +123,8 @@ const Model1 = () => {
 
                         The interface below embodies this idea, recursively looping
                         over the collection, as one would flip the pages of book, to establish encounters of objects that are
-                         related (in terms of their color) to a particular color sample in this book. By doing so,
-                        a speculative <a href="#ecology" aria-describedby="footnote-label" id="ecology_ref">ecology</a> of 4 objects is invoked that might or might not have inspired each other
+                        related (in terms of their color) to a particular color sample in this book. By doing so,
+                        an interaction (however briefly) between 4 objects is invoked that might or might not have inspired each other
                         one point in time. At the same time, this reorganization of the collection based on samples carefully
                         crafted and collected by an unknown colorist, evokes a "culture of anonymity" and broadens traditional
                         approaches to our collection that move beyond the dominant form of authorship. An inherent quality
