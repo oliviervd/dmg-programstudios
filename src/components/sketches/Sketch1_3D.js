@@ -65,7 +65,7 @@ const Sketch13D = p5 => {
 
         // -------- SCENE -----------//
         p5.background(255);
-        //p5.perspective(p5.PI/3.0, p5.float(WIDTH/HEIGHT), 1, 10000);
+        p5.perspective(p5.PI/3.0, p5.float(WIDTH/HEIGHT), 1, 10000);
 
         p5.push();
         p5.translate(0, 1000, MOTION); // 750
