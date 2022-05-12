@@ -36,7 +36,7 @@ const ProjectDescription = () => {
                         itself in a period of transition where past, present and future interlock.
                         <br/><br/>
                         By focusing on the medium-specificity of the web, it investigates new curatorial strategies that better reflect
-                        the singularity of design in its current context. As a prototype for an alternative system, it is
+                        the intricacies and complexities of design in its current context. As a prototype for an alternative system, it is
                         always critically probing new forms of knowledge production. And in its growth, it is both reflective
                         and performative in nature, as we embrace the (as yet) unknown in its potential.
                         <ul>
