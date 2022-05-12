@@ -37,7 +37,7 @@ const ProjectDescription = () => {
                         <br/><br/>
                         By focusing on the medium-specificity of the web, it investigates new curatorial strategies that better reflect
                         the singularity of design in its current context. As a prototype for an alternative system, it is
-                        always critically probing new forms of knowledge production. And in its growth, <em>like a computing machine for redirecting air currents, </em>it is both reflective
+                        always critically probing new forms of knowledge production. And in its growth, it is both reflective
                         and performative in nature, as we embrace the (as yet) unknown in its potential.
                         <ul>
                             <h1 className=" pinkHeader">* </h1> as a <strong> dynamic network </strong>; the project is in constant evolution and critically approaches the
