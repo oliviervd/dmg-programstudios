@@ -4,7 +4,7 @@ import "./hdc_01.jpeg"
 
 const Sketch13D = p5 => {
 
-    let MAGNITUDE = 12000;
+    let MAGNITUDE = 10000;
     let HEIGHT = window.innerHeight
     let WIDTH = window.innerWidth
     let GRID_X = 50; //grid amount X
@@ -22,6 +22,7 @@ const Sketch13D = p5 => {
 
     let HDC_outer;
     let HDC_inner;
+    let MODELMUS01;
     let DOME__OUTER;
 
 
@@ -34,7 +35,8 @@ const Sketch13D = p5 => {
 
     const preload = (p5) => {
         HDC_inner = p5.loadImage('hdc_01.jpeg');
-        HDC_outer = p5.loadImage("https://api.collectie.gent/iiif/image/iiif/2/5ef857c9b8b605791a2024c09daf2ed1-MA_SCMS_FO_00682.tif/full/full/0/default.jpg");
+        HDC_outer = p5.loadImage('SCMS_PBK_0409.jpeg');
+        MODELMUS01 = p5.loadImage('modelMus00.jpg');
         p5.redraw();
     }
 
@@ -62,30 +64,42 @@ const Sketch13D = p5 => {
         p5.camera(eyeX, eyeY, eyeZ, centerX, centerY, centerZ, upX, upY, upZ);
 
         // -------- SCENE -----------//
-        p5.background(BG);
-        //p5.lights();
-        p5.perspective(p5.PI/3.0, p5.float(WIDTH/HEIGHT), 1, 10000);
+        p5.background(255);
+        //p5.perspective(p5.PI/3.0, p5.float(WIDTH/HEIGHT), 1, 10000);
 
         p5.push();
-        p5.translate(0, 750, MOTION);
+        p5.translate(0, 1000, MOTION); // 750
         p5.rotateX(p5.radians(90));
 
         // outer__dome;
+
         p5.push();
+        p5.lights();
+        //IMAGE_OUTSIDE
         p5.rotateX(p5.radians(-90));
+        p5.rotateY(p5.radians(-90)); //starting pos.
         p5.rotateY(p5.radians(p5.frameCount*0.2));
-        p5.translate(0, -2200, 0);
-        p5.texture(HDC_outer);
-        p5.sphere(3000);
+        p5.translate(0, -2700, 0);
+        //p5.texture(HDC_outer);
+        HDC_outer.resize(2500, 0);
+        p5.image(HDC_outer, -1500, 1000);
+        //p5.sphere(3000);
         p5.pop();
 
-        // __draw grid for floor ref. (boxes)__ //
+        //IMAGE INSIDE
+        p5.push();
+        let _angle = p5.map(p5.mouseY, 0, HEIGHT, 0, 360);
+        p5.rotateX(p5.radians(-90));
+        p5.rotateY(p5.radians(-30));
+        p5.translate(1500, -2200, -1000);
+        HDC_outer.resize(2500, 0);
+        p5.image(MODELMUS01, -1500, 1000);
+        //p5.sphere(3000);
 
-        //p5.fill(BG)
         p5.rectMode(p5.CENTER);
         p5.push()
-        p5.stroke("#ff0000");
         p5.translate(0, 20);
+        p5.fill(198, 174, 175, 99);
         p5.rect(0, 0, MAGNITUDE, MAGNITUDE);
         p5.pop()
 
@@ -97,10 +111,39 @@ const Sketch13D = p5 => {
                 p5.translate(GRID_W/2 - MAGNITUDE/2 + GRID_W * x, GRID_H/2 - MAGNITUDE/2 + GRID_H * y);
                 //p5.stroke(_pink1);
                 p5.fill(_pink1);
-                p5.box(5);
+                p5.ellipse(0, 0, 5, 10);
+
                 p5.pop()
             }
         }
+
+        p5.pop();
+
+
+        // __draw grid for floor ref. (boxes)__ //
+
+        //p5.fill(BG)
+        p5.rectMode(p5.CENTER);
+        p5.push()
+        p5.translate(0, 20);
+        p5.fill(198, 174, 175, 65);
+        p5.rect(0, 0, MAGNITUDE, MAGNITUDE);
+        p5.pop()
+
+        p5.noFill();
+
+        for (let x = 0; x < GRID_X; x++) {
+            for (let y = 0; y < GRID_Y; y++) {
+                p5.push()
+                p5.translate(GRID_W/2 - MAGNITUDE/2 + GRID_W * x, GRID_H/2 - MAGNITUDE/2 + GRID_H * y);
+                //p5.stroke(_pink1);
+                p5.fill(_pink1);
+                p5.ellipse(0, 0, 5, 10);
+
+                p5.pop()
+            }
+        }
+
 
         p5.push()
         p5.translate(300, -700, 400);
@@ -136,7 +179,6 @@ const Sketch13D = p5 => {
                 console.log("backwards")
             }
         }
-
     }
 
     return (<Sketch preload={preload} setup={setup} draw={draw}/>)
