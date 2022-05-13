@@ -57,7 +57,7 @@ const Model1 = () => {
                                 The museum was established in 1903 as a "models museum" (<em>modellenmuseum</em> or <em>musee des modelles</em>).
                                 The collection comprised of good examples of various crafts and trades to inspire artists and craftsmen and
                                 provide support for their training.<a href="#models_museum_ref" aria-label="Back to content">↩</a>
-                                <img src="https://api.collectie.gent/iiif/image/iiif/2/b7a376735df545a775899c6efb23f808-MA_SCMS_FO_00683.tif/624,661,1992,1423/full/0/default.jpg"></img>
+                                {/*<img src="https://api.collectie.gent/iiif/image/iiif/2/b7a376735df545a775899c6efb23f808-MA_SCMS_FO_00683.tif/624,661,1992,1423/full/0/default.jpg"></img>*/}
                             </div>
                         </li>
 
