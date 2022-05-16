@@ -32,13 +32,13 @@ const Sketch13D = p5 => {
     let _green1 = "#00ff67"
     let _green2 = "#afc6ae"
     let _pink1 = "#C6AEAF"
-
+/*
     const preload = (p5) => {
         HDC_inner = p5.loadImage('hdc_01.jpeg');
         HDC_outer = p5.loadImage('SCMS_PBK_0409.jpeg');
         MODELMUS01 = p5.loadImage('modelMus00.jpg');
         p5.redraw();
-    }
+    }*/
 
 
     const setup = (p5, canvasParantRef) => {
@@ -81,7 +81,7 @@ const Sketch13D = p5 => {
         p5.rotateY(p5.radians(p5.frameCount*0.2));
         p5.translate(0, -2700, 0);
         //p5.texture(HDC_outer);
-        HDC_outer.resize(2500, 0);
+        //HDC_outer.resize(2500, 0); // RESIZE IMG.
         //p5.image(HDC_outer, -1500, 1000); // ACTIVATE IMG.
         //p5.sphere(3000);
         p5.pop();
@@ -92,7 +92,7 @@ const Sketch13D = p5 => {
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(-30));
         p5.translate(1500, -2200, -1000);
-        HDC_outer.resize(2500, 0);
+        //HDC_outer.resize(2500, 0); // RESIZE IMG.
         // p5.image(MODELMUS01, -1500, 1000); // ACTIVATE IMG.
         // p5.sphere(3000);
 
@@ -181,7 +181,8 @@ const Sketch13D = p5 => {
         }
     }
 
-    return (<Sketch preload={preload} setup={setup} draw={draw}/>)
+    //return (<Sketch preload={preload} setup={setup} draw={draw}/>)
+    return (<Sketch setup={setup} draw={draw}/>)
 }
 
 export default Sketch13D;
