@@ -65,8 +65,8 @@ div {
     src: local("lineal"), url(fonts/Lineal.otf);
 }
 
-crypto--h1 {
-    font-size: 43px;
+crypto--h1--large {
+    font-size: 80px;
     font-family: "P-ACR-AGON-Regular", sans-serif;
     text-decoration: none;
     color: black;
