@@ -82,7 +82,7 @@ const Sketch13D = p5 => {
         p5.translate(0, -2700, 0);
         //p5.texture(HDC_outer);
         HDC_outer.resize(2500, 0);
-        p5.image(HDC_outer, -1500, 1000);
+        //p5.image(HDC_outer, -1500, 1000); // ACTIVATE IMG.
         //p5.sphere(3000);
         p5.pop();
 
@@ -93,8 +93,8 @@ const Sketch13D = p5 => {
         p5.rotateY(p5.radians(-30));
         p5.translate(1500, -2200, -1000);
         HDC_outer.resize(2500, 0);
-        p5.image(MODELMUS01, -1500, 1000);
-        //p5.sphere(3000);
+        // p5.image(MODELMUS01, -1500, 1000); // ACTIVATE IMG.
+        // p5.sphere(3000);
 
         p5.rectMode(p5.CENTER);
         p5.push()
@@ -149,7 +149,7 @@ const Sketch13D = p5 => {
         p5.translate(300, -700, 400);
         p5.stroke(_green2)
         //p5.fill(0, 255, 103, 63)
-        p5.texture(HDC_inner);
+        // p5.texture(HDC_inner); // REACTIVATE FOR SPHERE.
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(p5.frameCount));
         p5.translate(p5.noise(xOff)*100, p5.noise(yOff)*HEIGHT*0.01, -p5.noise(zOff)*600);
