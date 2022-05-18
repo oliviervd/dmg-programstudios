@@ -1,6 +1,6 @@
 import React from "react";
 
-const Model1 = () => {
+const Model1_sensibility = () => {
     return(
         <div>
             <h1 className="center">MODEL 1: SENSE AND SENSIBILITY</h1>
@@ -149,4 +149,4 @@ const Model1 = () => {
     )
 }
 
-export default Model1;
+export default Model1_sensibility;

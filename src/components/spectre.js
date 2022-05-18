@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import ImageGenerator from "./imageGenerator";
 import ColorCubes from "./colorCubes";
 import Accordion from "./carousel/Accordion";
-import Model1 from "./models/model1"
+import Model1_sensibility from "./models/model1_sensibility"
 import SwapBook from "./swapBook"
 import HexCube from "./cube";
 import Sketch13D from "./sketches/Sketch1_3D";
@@ -91,7 +91,7 @@ const SpectreMain = (props) => {
     return(
             <div className="rowScrollMain svg_divider">
                 <Sketch13D/>
-                <Model1/>
+                <Model1_sensibility/>
                 <br/>
                 <div className="dotLine"/>
                 <br/>
