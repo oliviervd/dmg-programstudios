@@ -101,9 +101,13 @@ const Model1_sensibility = () => {
 
                     {/*read more: open the whole text only when asked for; clean up layout */}
 
-                    <br/>
-                    <p className="underlined" onClick={handleReadMore}> READ MORE </p>
-                    <br/>
+                    {!readMore &&
+                        <div>
+                            <br/>
+                            <p className="underlined" onClick={handleReadMore}> READ MORE </p>
+                            <br/>
+                        </div>
+                    }
 
                     {readMore &&
                         <div>
