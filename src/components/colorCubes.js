@@ -1,8 +1,8 @@
-import React, {useState} from "react";
-import HexCube from "../components/cube"
-import ObjectDescription from "./objectDescription";
-
+import React, {useState, Suspense} from "react";
 import ldes_translations from "../data/postgres_ldes_dmg_translations_ldes_dmg.json"
+
+const HexCube = React.lazy(() => import("../components/cube"))
+const ObjectDescription = React.lazy(() => import("./objectDescription"))
 
 function LDESViaURI(uri) {
     return ldes_translations.filter(
@@ -115,84 +115,86 @@ const ColorCubes = (props) => {
     }
 
     return(
-        <div className="container">
-            <div>
-                <HexCube id="HexCube"
-                         hexColors = {color_hex[0]}
-                         color_names={color_names[0]}/>
-                <div className="dotLine"/>
-                <div className="title-box">
-                    <div className="title-box__top">
-                        <div className="pinkHeader italic" onClick={openDescription0}>[read more]</div>
-                        <div className="pinkHeader italic right" onClick={copyTextToClipBoard_0}>[copy to clipboard]</div>
-                    </div>
-                    <p className="pinkHeader italic">{object_number[0]}</p>
-                    <p className="pinkHeader italic">{acquisition_dates[0]}</p>
-                    <p className="title-box__title italic" onClick={openDescription0}>{obj_titles_EN[0]}</p>
-                </div>
-                <br/><br/>
-                {objectDescription0 &&
-                    <div>
-                        <div className="easeBorder__green"/>
-                        <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[0]}/>
+        <Suspense>
+            <div className="container">
+                <div>
+                    <HexCube id="HexCube"
+                             hexColors = {color_hex[0]}
+                             color_names={color_names[0]}/>
+                    <div className="dotLine"/>
+                    <div className="title-box">
+                        <div className="title-box__top">
+                            <div className="pinkHeader italic" onClick={openDescription0}>[read more]</div>
+                            <div className="pinkHeader italic right" onClick={copyTextToClipBoard_0}>[copy to clipboard]</div>
                         </div>
+                        <p className="pinkHeader italic">{object_number[0]}</p>
+                        <p className="pinkHeader italic">{acquisition_dates[0]}</p>
+                        <p className="title-box__title italic" onClick={openDescription0}>{obj_titles_EN[0]}</p>
                     </div>
-                }
-            </div>
-            <div>
-                <HexCube
-                    hexColors = {color_hex[1]}
-                    color_names={color_names[1]}
-                />
-                <div className="dotLine"/>
-                <div className="title-box">
-                    <div className="title-box__top">
-                        <div className="pinkHeader italic" onClick={openDescription1}>[read more]</div>
-                        <div className="pinkHeader italic right" onClick={copyTextToClipBoard_1}>[copy to clipboard]</div>
-                    </div>
-                    <p className="pinkHeader italic">{object_number[1]}</p>
-                    <p className="pinkHeader italic">{acquisition_dates[1]}</p>
-                    <p className="title-box__title italic" onClick={openDescription1} >{obj_titles_EN[1]}</p>
-                </div>
-                <br/><br/>
-                {objectDescription1 &&
-                    <div>
-                        <div className="easeBorder__green"/>
-                        <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[1]}/>
+                    <br/><br/>
+                    {objectDescription0 &&
+                        <div>
+                            <div className="easeBorder__green"/>
+                            <div className="rowScroll">
+                                <ObjectDescription text={obj_desc_EN[0]}/>
+                            </div>
                         </div>
+                    }
+                </div>
+                <div>
+                    <HexCube
+                        hexColors = {color_hex[1]}
+                        color_names={color_names[1]}
+                    />
+                    <div className="dotLine"/>
+                    <div className="title-box">
+                        <div className="title-box__top">
+                            <div className="pinkHeader italic" onClick={openDescription1}>[read more]</div>
+                            <div className="pinkHeader italic right" onClick={copyTextToClipBoard_1}>[copy to clipboard]</div>
+                        </div>
+                        <p className="pinkHeader italic">{object_number[1]}</p>
+                        <p className="pinkHeader italic">{acquisition_dates[1]}</p>
+                        <p className="title-box__title italic" onClick={openDescription1} >{obj_titles_EN[1]}</p>
                     </div>
-                }
-            </div>
-            <div>
+                    <br/><br/>
+                    {objectDescription1 &&
+                        <div>
+                            <div className="easeBorder__green"/>
+                            <div className="rowScroll">
+                                <ObjectDescription text={obj_desc_EN[1]}/>
+                            </div>
+                        </div>
+                    }
+                </div>
+                <div>
 
-                <HexCube
-                    hexColors = {color_hex[2]}
-                    color_names={color_names[2]}
-                />
-                <div className="dotLine"/>
-                <div className="title-box">
-                    <div className="title-box__top">
-                        <div className="pinkHeader italic" onClick={openDescription2}>[read more]</div>
-                        <div className="pinkHeader italic right" onClick={copyTextToClipBoard_2}>[copy to clipboard]</div>
-                    </div>
-                    <p className="pinkHeader italic">{object_number[2]}</p>
-                    <p className="pinkHeader italic">{acquisition_dates[2]}</p>
-                    <p className="title-box__title italic" onClick={openDescription2}>{obj_titles_EN[2]}</p>
-                </div>
-                <br/><br/>
-                {objectDescription2 &&
-                    <div>
-                        <div className="easeBorder__green"/>
-                        <div className="rowScroll">
-                            <ObjectDescription text={obj_desc_EN[2]}/>
+                    <HexCube
+                        hexColors = {color_hex[2]}
+                        color_names={color_names[2]}
+                    />
+                    <div className="dotLine"/>
+                    <div className="title-box">
+                        <div className="title-box__top">
+                            <div className="pinkHeader italic" onClick={openDescription2}>[read more]</div>
+                            <div className="pinkHeader italic right" onClick={copyTextToClipBoard_2}>[copy to clipboard]</div>
                         </div>
+                        <p className="pinkHeader italic">{object_number[2]}</p>
+                        <p className="pinkHeader italic">{acquisition_dates[2]}</p>
+                        <p className="title-box__title italic" onClick={openDescription2}>{obj_titles_EN[2]}</p>
                     </div>
-                }
+                    <br/><br/>
+                    {objectDescription2 &&
+                        <div>
+                            <div className="easeBorder__green"/>
+                            <div className="rowScroll">
+                                <ObjectDescription text={obj_desc_EN[2]}/>
+                            </div>
+                        </div>
+                    }
+                </div>
             </div>
+        </Suspense>
 
-        </div>
     )
 
 }

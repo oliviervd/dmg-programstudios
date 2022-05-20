@@ -1,15 +1,19 @@
-import React, {useState} from "react";
-import ImageGenerator from "./imageGenerator";
-import ColorCubes from "./colorCubes";
-import Accordion from "./carousel/Accordion";
-import Model1_sensibility from "./models/model1_sensibility"
-import SwapBook from "./swapBook"
-import HexCube from "./cube";
-import Sketch13D from "./sketches/Sketch1_3D";
+import React, {useState, Suspense} from "react";
 
 //data
 import object_c from "../data/objectsColor_10.json"; // import json containing information on the collection of Design Museum Gent (objects that have been published)
-import swap_c from "../data/swapbook.json"; // import json containing information on the color swapbook that used to belong to Henry van de Velde
+import swap_c from "../data/swapbook.json"; // import json containing information on the color swap book that used to belong to Henry van de Velde
+//const object_c = React.lazy(() => import("../data/objectsColor_10.json"));  // import json containing information on the collection of Design Museum Gent (objects that have been published)
+//const swap_c = React.lazy(() => import("../data/swapbook.json")); // import json containing information on the color swap book that used to belong to Henry van de Velde
+
+//lazy loading
+const HexCube = React.lazy(() => import( "./cube"));
+const ImageGenerator = React.lazy(() => import("./imageGenerator"));
+const ColorCubes = React.lazy(() => import("./colorCubes"));
+const Sketch13D = React.lazy(() => import("./sketches/Sketch1_3D"));
+const Model1_sensibility = React.lazy(() => import("./models/model1_sensibility"));
+const SwapBook = React.lazy(() => import("./swapBook"));
+
 
 const SpectreMain = (props) => {
 
@@ -90,8 +94,10 @@ const SpectreMain = (props) => {
 
     return(
             <div className="rowScrollMain svg_divider">
-                <Sketch13D/>
-                <Model1_sensibility/>
+                <Suspense>
+                    <Sketch13D/>
+                    <Model1_sensibility/>
+                </Suspense>
                 <br/>
                 <div className="dotLine"/>
                 <br/>
@@ -110,22 +116,26 @@ const SpectreMain = (props) => {
                 <div className="centerBox">
 
                     <div className="accordion-container__imgFrame">
-                        <ImageGenerator num={num}
-                                        curatedSet = {curation}
+                        <Suspense>
+                            <ImageGenerator num={num}
+                                            curatedSet = {curation}
+                                            data = {matchedObjects}
+                            />
+                            <ColorCubes num={num}
+                                        curation={curation}
                                         data = {matchedObjects}
-                        />
-                        <ColorCubes num={num}
-                                    curation={curation}
-                                    data = {matchedObjects}
-                                    className="container"/>
+                                        className="container"/>
+                        </Suspense>
                     </div>
                     <div>
-                        <SwapBook
-                            num = {_imSwap}
-                        />
-                        <HexCube
-                            hexColors = {colorHexSwap}
-                        />
+                        <Suspense>
+                            <SwapBook
+                                num = {_imSwap}
+                            />
+                            <HexCube
+                                hexColors = {colorHexSwap}
+                            />
+                        </Suspense>
                     </div>
                 </div>
             </div>

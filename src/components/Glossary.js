@@ -1,11 +1,14 @@
-import React from "react";
-import XenoHeader from "./header+footer/xenoHeader";
+import React, {Suspense} from "react";
+
+const XenoHeader = React.lazy(() => import("./header+footer/xenoHeader"))
 
 const Glossary = () => {
     return(
         <div>
             <div className="headerContainer">
-                <XenoHeader/>
+                <Suspense>
+                    <XenoHeader/>
+                </Suspense>
                 <div className="languages_button_box">
                     <div className="button-lang">NL</div>
                     <div className="button-lang">EN</div>

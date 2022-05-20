@@ -1,5 +1,7 @@
-import React, {useState} from "react"
-import ImageGallery from "./ImageGallery";
+import React, {useState, Suspense} from "react"
+
+const ImageGallery = React.lazy(() => import("./ImageGallery"))
+
 
 const ImageViewer = ({open, onClose, image, _title}) => {
 
@@ -37,7 +39,9 @@ const ImageViewer = ({open, onClose, image, _title}) => {
                     <p></p>
                 </div>
                 <div className="imageViewer__modal__gallery-image__outer">
-                    <ImageGallery className="imageViewer__modal__gallery" images={imagesClean}/>
+                    <Suspense>
+                        <ImageGallery className="imageViewer__modal__gallery" images={imagesClean}/>
+                    </Suspense>
                 </div>
             </div>
         </div>

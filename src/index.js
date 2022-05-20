@@ -10,15 +10,17 @@ import './glossary.css';
 
 // import pages
 import Glossary from "./components/Glossary";
-import EssayAlgoMuseum from "./components/essay/algoMuseum";
+import Computational from "./components/models/model2_computational";
+import Landing from "./components/pages/landing";
 
 const rootElement = document.getElementById("root");
 render(
     <BrowserRouter>
         <Routes>
+            <Route path="landing" element={<Landing/>}/>
             <Route path="/" element={<App />}/>
             <Route path="glossary" element={<Glossary />}/>
-            <Route path="essay/the-algorithmic-museum" element={<EssayAlgoMuseum/>}/>
+            <Route path="essay/the-algorithmic-museum" element={<Computational />}/>
         </Routes>
     </BrowserRouter>,
     rootElement
