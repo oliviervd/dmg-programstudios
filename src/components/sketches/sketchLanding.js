@@ -10,15 +10,22 @@ const SketchLanding = p5 => {
     let FG = 0;
     let BG = "#F1F1F1";
     let happy;
-    let _happy;
+
+    let fontSize = 128;
+    let lineHeight = 0.9;
+    let _shrink
 
     const setup = (p5, canvasParentRef) => {
         canvas = p5.createCanvas(WIDTH, HEIGHT).parent(canvasParentRef);
         var fontFile = "P-ACR-AGON-Regular.otf"
-        happy = p5.loadFont(fontFile, 128);
+        happy = p5.loadFont(fontFile, 1000);
     }
 
     const draw = p5 => {
+
+        _shrink = p5.map(p5.sin(p5.radians(p5.frameCount*0.2)), -1, 1, -1, 1);
+        console.log(_shrink);
+
         p5.background(BG);
 
         p5.translate(WIDTH/2, HEIGHT/2);
@@ -31,8 +38,12 @@ const SketchLanding = p5 => {
         p5.textSize(128);
         p5.textFont(happy);
         p5.fill(FG);
-        p5.text("MODELS FROM THE PAST", 0, -60);
-        p5.text("FOR THE FUTURE", 0, 60);
+        p5.textLeading(fontSize * _shrink);
+        p5.text("MODELS FROM THE PAST \n FOR THE FUTURE ", 0, 0);
+        //p5.text("FOR THE FUTURE", 0, 60);
+
+        p5.textSize(30);
+        p5.text(_shrink, 0, -300)
     }
 
     return (

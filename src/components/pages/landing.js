@@ -14,7 +14,7 @@ const Landing = () => {
                 }}> ENTER </h1>
             </Link>
 
-            <Suspense>
+            <Suspense fallback={<img src="../sketches/49.png"/>}>
                 <SketchLanding style={{"z-index": -30000}}/>
             </Suspense>
         </>
