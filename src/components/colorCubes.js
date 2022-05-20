@@ -46,6 +46,7 @@ const ColorCubes = (props) => {
     const object_number = [];
     const acquisition_dates = [];
     const LDES = [];
+    const color_hex_sel = [];
 
     for (var hexNum=0; hexNum<objCount; ++hexNum) {
         const x = selection[hexNum];
@@ -85,6 +86,7 @@ const ColorCubes = (props) => {
         }
 
         color_hex.push(_hexVal);
+
         color_names.push(color_name);
         obj_titles_EN.push(title_en);
         obj_desc_EN.push(desc_en);
@@ -97,19 +99,29 @@ const ColorCubes = (props) => {
     // function to copy values to clipboard
 
     function copyTextToClipBoard_0() {
-        let copyText = color_hex[0]
+        for (let i = 0; i < 10; i++) {
+            color_hex_sel.push(color_hex[0][i].replace("[", ""))
+        }
+        let copyText = color_hex_sel
+        console.log(copyText);
         navigator.clipboard.writeText(copyText);
         alert("Copied the values: " +  copyText);
     }
 
     function copyTextToClipBoard_1() {
-        let copyText = color_hex[1]
+        for (let i = 0; i < 10; i++) {
+            color_hex_sel.push(color_hex[1][i].replace("[", ""))
+        }
+        let copyText = color_hex_sel
         navigator.clipboard.writeText(copyText);
         alert("Copied the values: " +  copyText);
     }
 
     function copyTextToClipBoard_2() {
-        let copyText = color_hex[2]
+        for (let i = 0; i < 10; i++) {
+            color_hex_sel.push(color_hex[2][i].replace("[", ""))
+        }
+        let copyText = color_hex_sel
         navigator.clipboard.writeText(copyText);
         alert("Copied the values: " +  copyText);
     }
