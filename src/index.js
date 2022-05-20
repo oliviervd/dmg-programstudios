@@ -18,8 +18,8 @@ const rootElement = document.getElementById("root");
 render(
     <BrowserRouter>
         <Routes>
-            <Route path="landing" element={<Landing/>}/>
-            <Route path="/" element={<App />}/>
+            <Route path="/" element={<Landing/>}/>
+            <Route path="model1" element={<App />}/>
             <Route path="glossary" element={<Glossary />}/>
             <Route path="essay/the-algorithmic-museum" element={<Computational />}/>
         </Routes>
