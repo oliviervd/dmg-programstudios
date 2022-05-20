@@ -11,12 +11,12 @@ const ImageGallery = ({images}) => {
     }
 
     const imList = images.map(x =>
-        <img className="imageViewer__modal__gallery-image__inner" src={x}></img>
+        <img alt="DREAMING OF IMAGES" className="imageViewer__modal__gallery-image__inner" src={x}></img>
     )
     return(
-        <>
+        <div className="scrollable">
             {imList}
-        </>
+        </div>
     )
 
     console.log(imList);
