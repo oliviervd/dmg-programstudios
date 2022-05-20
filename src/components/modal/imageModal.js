@@ -20,7 +20,7 @@ const ImageViewer = ({open, onClose, image, _title}) => {
 
     for (let i = 0; i < image.length; i++) {
         let x = image[i].replace("'", "");
-        imagesClean.push(x.replace("g'","g"));
+        imagesClean.push(x.replace("g'","g").replace("/full/0/default.jpg", "/1000,/0/default.jpg"))
         console.log("CLEAN: "+imagesClean);
     }
 
