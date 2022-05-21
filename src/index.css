@@ -156,10 +156,9 @@ a {
     grid-template-columns: repeat(3, 30%);
 }
 
-@media only screen and (max-width: 1224px) {
+@media (max-width: 1224px) {
     .model-TextColumns__3{
         grid-template-columns: none;
-        grid-template-rows: repeat(3, 30%);
         grid-auto-flow: dense;
     }
 }
