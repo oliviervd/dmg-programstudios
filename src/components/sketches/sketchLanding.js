@@ -37,6 +37,7 @@ const SketchLanding = p5 => {
 
     const draw = p5 => {
 
+        let fitX = _width * 0.75;
         _shrink = p5.map(p5.sin(p5.radians(p5.frameCount*0.2)), -1, 1, -1, 1);
 
         p5.background(BG);
@@ -45,18 +46,21 @@ const SketchLanding = p5 => {
         p5.noFill();
         p5.stroke(FG);
         p5.strokeWeight(7);
-        p5.ellipse(0, 0, 1200, 400);
+        p5.ellipse(0, 0, _width*0.75, 400);
 
         p5.textAlign(p5.CENTER, p5.CENTER);
-        p5.textSize(128);
+        p5.textSize(_width/18);
+        let _main = "MODELS FROM THE PAST \n FOR THE FUTURE "
         p5.textFont(_pacragon);
         p5.fill(FG);
         p5.textLeading(fontSize * _shrink);
-        p5.text("MODELS FROM THE PAST \n FOR THE FUTURE ", 0, 0);
+        p5.text(_main, 0, 0);
         //p5.text("FOR THE FUTURE", 0, 60);
 
+        console.log(_width);
+
         p5.noFill();
-        p5.textSize(30);
+        p5.textSize(_width/70);
         p5.strokeWeight(2);
         p5.text(_shrink, 0, -300)
 
