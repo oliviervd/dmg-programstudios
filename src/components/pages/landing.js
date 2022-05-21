@@ -10,7 +10,7 @@ const Landing = () => {
                 <h1 style={{
                     "position": "absolute",
                     "left": "45vw",
-                    "top": "60vh"
+                    "top": "80vh"
                 }}> ENTER </h1>
             </Link>
 
