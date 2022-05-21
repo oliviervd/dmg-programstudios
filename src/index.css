@@ -552,7 +552,7 @@ imageViewer__modal-main {
     position: absolute;
     display: grid;
     grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
-    left: -20vw;
+    left: -19vw;
 }
 
 .imageViewer__modal__gallery-image__inner {
