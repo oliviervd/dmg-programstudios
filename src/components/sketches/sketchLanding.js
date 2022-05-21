@@ -61,7 +61,7 @@ const SketchLanding = p5 => {
 
         p5.noFill();
         p5.textSize(_width/70);
-        p5.strokeWeight(2);
+        p5.strokeWeight(_width/1000);
         p5.text(_shrink, 0, -300)
 
         p5.textFont(_happy);

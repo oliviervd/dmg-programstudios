@@ -9,8 +9,10 @@ const Landing = () => {
             <Link to="model1">
                 <h1 style={{
                     "position": "absolute",
-                    "left": "45vw",
-                    "top": "80vh"
+                    "top": "80vh",
+                    "text-align": "center",
+                    "width": "100vw",
+                    "font-family": "lineal"
                 }}> ENTER </h1>
             </Link>
 
