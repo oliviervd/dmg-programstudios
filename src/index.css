@@ -73,6 +73,12 @@ crypto--h1--large {
     color: black;
 }
 
+@media only screen and (max-width: 1224px) {
+    crypto--h1--large {
+        font-size: 40px;
+    }
+}
+
 h1 {
     font-size: 43px;
     font-family: "happy-times-NG_bold_master_web", sans-serif;
@@ -148,6 +154,14 @@ a {
 .model-TextColumns__3 {
     display: grid;
     grid-template-columns: repeat(3, 30%);
+}
+
+@media only screen and (max-width: 1224px) {
+    .model-TextColumns__3{
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 30%);
+        grid-auto-flow: dense;
+    }
 }
 
 .boldSet {

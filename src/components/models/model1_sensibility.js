@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import {useMediaQuery} from "react-responsive";
 
 const Model1_sensibility = () => {
 
@@ -8,69 +9,101 @@ const Model1_sensibility = () => {
         setReadMore(!readMore);
     }
 
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+    })
+
+    const isMobileOrTablet = useMediaQuery({
+        query: '(max-width: 1224px)'
+    })
+
     return(
         <div>
             <h1 className="center">MODEL 1: SENSE AND SENSIBILITY</h1>
             <div className="model-TextColumns__3">
                 <div></div>
-                <footer className="visually-hidden footNote__refs" id="footnote-label">
-                    <div></div>
-                    <ol>
-                        <li>
-                            <div id="object_stories"> <em>Object Stories </em> offered several looks on the collection of the museum.
-                                Consisting out of 6 (thematic) layers (<em>Commisions & Commisioners, Making Matters, Curiosity, Responsible Objects,
-                                    Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted
-                                featured around 200 objects from the collection of which some were highlighted from certain point of view.
-                            </div>
-                        </li>
-                        <li>
-                            <div id="responsible_objects">
-                                Marjan van Helvert, The responsible object. A history of design ideology for the future. Valiz, Amsterdam, 2016
-                                <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
-                            </div>
-                        </li><li>
-                            <div id="sustainability_exhibitions">
-                                The museum organised several exhibitions on sustainability and ecological design such as
-                                <em><a href="https://www.designmuseumgent.be/en/events/no-design-to-waste"> No Design to Waste</a></em> (2014),
-                                <em><a href="https://www.designmuseumgent.be/en/events/fibre-fixed"> Fibre Fixed</a></em> (2019) and <em><a href="https://www.designfestgent.be/"> Design Fest Gent</a></em> (2022).
-                                <a href="#sustainability_exhibitions_ref" aria-label="Back to content">↩</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div id="resource_hungry">
-                                The 2020 Art Verbier Summit "<em>Resource Hungry</em>" initiated a global dialogue to find harmony,
-                                between art, ecology and resources. <a href="#resource_hungry_ref" aria-label="Back to content">↩</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div id="technological_senisbility">
-                                Take for example our social media platforms. On the one hand they have the potential to
-                                create new (sometimes meaningful) relationships between users active on the platform.
-                                On the other hand, the computational power needed to drive the algorithms behind these
-                                machines are reliant on natural resources, resulting in their depletion of highly needed
-                                resources from the earth. <a href="#technological_senisbility_ref" aria-label="Back to content">↩</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div id="ecology">
-                                James Bridle refers to an "technological ecology", in which human and non-human entities,
-                                such as computers amplify each other, rather than trying to outdo each other. "The combination of technological
-                                capacity with a more-than-human sensitivy which constructs new ways of seeing and appreciating the world.
-                                - [see also glossary: ECOLOGY] <a href="#ecology_ref" aria-label="Back to content">↩</a>
-                            </div>
-                        </li>
-                        <li>
-                            <div id="models_museum">
-                                The museum was established in 1903 as a "models museum" (<em>modellenmuseum</em> or <em>musee des modelles</em>).
-                                The collection comprised of good examples of various crafts and trades to inspire artists and craftsmen and
-                                provide support for their training.<a href="#models_museum_ref" aria-label="Back to content">↩</a>
-                                {/*<img src="https://api.collectie.gent/iiif/image/iiif/2/b7a376735df545a775899c6efb23f808-MA_SCMS_FO_00683.tif/624,661,1992,1423/full/0/default.jpg"></img>*/}
-                            </div>
-                        </li>
+                {isDesktopOrLaptop &&
+                    <footer className="visually-hidden footNote__refs" id="footnote-label">
+                        <div></div>
+                        <ol>
+                            <li>
+                                <div id="object_stories"><em>Object Stories </em> offered several looks on the
+                                    collection of the museum.
+                                    Consisting out of 6 (thematic) layers (<em>Commisions & Commisioners, Making
+                                        Matters, Curiosity, Responsible Objects,
+                                        Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted
+                                    featured around 200 objects from the collection of which some were highlighted from
+                                    certain point of view.
+                                </div>
+                            </li>
+                            <li>
+                                <div id="responsible_objects">
+                                    Marjan van Helvert, The responsible object. A history of design ideology for the
+                                    future. Valiz, Amsterdam, 2016
+                                    <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="sustainability_exhibitions">
+                                    The museum organised several exhibitions on sustainability and ecological design
+                                    such as
+                                    <em><a href="https://www.designmuseumgent.be/en/events/no-design-to-waste"> No
+                                        Design to Waste</a></em> (2014),
+                                    <em><a href="https://www.designmuseumgent.be/en/events/fibre-fixed"> Fibre Fixed</a></em> (2019)
+                                    and <em><a href="https://www.designfestgent.be/"> Design Fest Gent</a></em> (2022).
+                                    <a href="#sustainability_exhibitions_ref" aria-label="Back to content">↩</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="resource_hungry">
+                                    The 2020 Art Verbier Summit "<em>Resource Hungry</em>" initiated a global dialogue
+                                    to find harmony,
+                                    between art, ecology and resources. <a href="#resource_hungry_ref"
+                                                                           aria-label="Back to content">↩</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="technological_senisbility">
+                                    Take for example our social media platforms. On the one hand they have the potential
+                                    to
+                                    create new (sometimes meaningful) relationships between users active on the
+                                    platform.
+                                    On the other hand, the computational power needed to drive the algorithms behind
+                                    these
+                                    machines are reliant on natural resources, resulting in their depletion of highly
+                                    needed
+                                    resources from the earth. <a href="#technological_senisbility_ref"
+                                                                 aria-label="Back to content">↩</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="ecology">
+                                    James Bridle refers to an "technological ecology", in which human and non-human
+                                    entities,
+                                    such as computers amplify each other, rather than trying to outdo each other. "The
+                                    combination of technological
+                                    capacity with a more-than-human sensitivy which constructs new ways of seeing and
+                                    appreciating the world.
+                                    - [see also glossary: ECOLOGY] <a href="#ecology_ref"
+                                                                      aria-label="Back to content">↩</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="models_museum">
+                                    The museum was established in 1903 as a "models museum"
+                                    (<em>modellenmuseum</em> or <em>musee des modelles</em>).
+                                    The collection comprised of good examples of various crafts and trades to inspire
+                                    artists and craftsmen and
+                                    provide support for their training.<a href="#models_museum_ref"
+                                                                          aria-label="Back to content">↩</a>
+                                    {/*<img src="https://api.collectie.gent/iiif/image/iiif/2/b7a376735df545a775899c6efb23f808-MA_SCMS_FO_00683.tif/624,661,1992,1423/full/0/default.jpg"></img>*/}
+                                </div>
+                            </li>
 
-                    </ol>
-                    <div></div>
-                </footer>
+                        </ol>
+                        <div></div>
+                    </footer>
+                }
 
                 <article>
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>
@@ -168,6 +201,77 @@ const Model1_sensibility = () => {
                     }
 
                 </article>
+                {isMobileOrTablet &&
+                    <footer className="visually-hidden footNote__refs" id="footnote-label">
+                        <div></div>
+                        <ol>
+                            <li>
+                                <div id="object_stories"><em>Object Stories </em> offered several looks on the
+                                    collection of the museum.
+                                    Consisting out of 6 (thematic) layers (<em>Commisions & Commisioners, Making
+                                        Matters, Curiosity, Responsible Objects,
+                                        Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted
+                                    featured around 200 objects from the collection of which some were highlighted from
+                                    certain point of view.
+                                </div>
+                            </li>
+                            <li>
+                                <div id="responsible_objects">
+                                    Marjan van Helvert, The responsible object. A history of design ideology for the
+                                    future. Valiz, Amsterdam, 2016
+                                    <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="sustainability_exhibitions">
+                                    The museum organised several exhibitions on sustainability and ecological design
+                                    such as
+                                    <em><a href="https://www.designmuseumgent.be/en/events/no-design-to-waste"> No
+                                        Design to Waste</a></em> (2014),
+                                    <em><a href="https://www.designmuseumgent.be/en/events/fibre-fixed"> Fibre Fixed</a></em> (2019)
+                                    and <em><a href="https://www.designfestgent.be/"> Design Fest Gent</a></em> (2022).
+                                    <a href="#sustainability_exhibitions_ref" aria-label="Back to content">↩</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="resource_hungry">
+                                    The 2020 Art Verbier Summit "<em>Resource Hungry</em>" initiated a global dialogue
+                                    to find harmony,
+                                    between art, ecology and resources. <a href="#resource_hungry_ref"
+                                                                           aria-label="Back to content">↩</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="technological_senisbility">
+                                    Take for example our social media platforms. On the one hand they have the potential
+                                    to create new (sometimes meaningful) relationships between users active on the
+                                    platform. On the other hand, the computational power needed to drive the algorithms behind
+                                    these machines are reliant on natural resources, resulting in their depletion of highly
+                                    needed resources from the earth. <a href="#technological_senisbility_ref" aria-label="Back to content">↩</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="ecology">
+                                    James Bridle refers to an "technological ecology", in which human and non-human
+                                    entities, such as computers amplify each other, rather than trying to outdo each other. "The
+                                    combination of technological capacity with a more-than-human sensitivy which constructs new ways of seeing and
+                                    appreciating the world. - [see also glossary: ECOLOGY] <a href="#ecology_ref" aria-label="Back to content">↩</a>
+                                </div>
+                            </li>
+                            <li>
+                                <div id="models_museum">
+                                    The museum was established in 1903 as a "models museum"
+                                    (<em>modellenmuseum</em> or <em>musee des modelles</em>).
+                                    The collection comprised of good examples of various crafts and trades to inspire
+                                    artists and craftsmen and provide support for their training.<a href="#models_museum_ref" aria-label="Back to content">↩</a>
+                                    {/*<img src="https://api.collectie.gent/iiif/image/iiif/2/b7a376735df545a775899c6efb23f808-MA_SCMS_FO_00683.tif/624,661,1992,1423/full/0/default.jpg"></img>*/}
+                                </div>
+                            </li>
+
+                        </ol>
+                        <div></div>
+                    </footer>
+                }
 
             </div>
         </div>

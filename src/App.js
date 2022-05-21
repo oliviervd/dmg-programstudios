@@ -54,25 +54,28 @@ function App() {
                 </div>
             </div>
             <div className="superContainer">
-                <div className="sideBarLeft-Nav">
 
-                    <div className="sideBarLeft-Nav__button" onClick={openSideDesc}>
-                        <p className="rotateText"> aBOUT.</p>
-                    </div>s
+                {isDesktopOrLaptop&&
+                    <div className="sideBarLeft-Nav">
 
-                    {/*<div className="sideBarLeft-Nav__button" onClick={openSideGloss}>
+                        <div className="sideBarLeft-Nav__button" onClick={openSideDesc}>
+                            <p className="rotateText"> aBOUT.</p>
+                        </div>s
+
+                        {/*<div className="sideBarLeft-Nav__button" onClick={openSideGloss}>
                         <Link to="glossary">
                             <p className="rotateText"> gLOSSARY.</p>
                         </Link>
                     </div>*/}
 
-                    <div className="sideBarLeft-Nav__button" onClick={openSideGloss}>
-                        <Link to="essay/the-algorithmic-museum">
-                            <p className="rotateText"> the algorithmic museum.</p>
-                        </Link>
-                    </div>
+                        <div className="sideBarLeft-Nav__button" onClick={openSideGloss}>
+                            <Link to="essay/the-algorithmic-museum">
+                                <p className="rotateText"> the algorithmic museum.</p>
+                            </Link>
+                        </div>
 
-                </div>
+                    </div>
+                }
 
                 {sideActiveDescription &&
                     <Suspense>

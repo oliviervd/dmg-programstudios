@@ -1,8 +1,10 @@
 import React, {useState, Suspense} from "react";
+import {MediaQuery, useMediaQuery} from "react-responsive";
 
 //data
 import object_c from "../data/objectsColor_10.json"; // import json containing information on the collection of Design Museum Gent (objects that have been published)
-import swap_c from "../data/swapbook.json"; // import json containing information on the color swap book that used to belong to Henry van de Velde
+import swap_c from "../data/swapbook.json";
+import {queries} from "@testing-library/react"; // import json containing information on the color swap book that used to belong to Henry van de Velde
 //const object_c = React.lazy(() => import("../data/objectsColor_10.json"));  // import json containing information on the collection of Design Museum Gent (objects that have been published)
 //const swap_c = React.lazy(() => import("../data/swapbook.json")); // import json containing information on the color swap book that used to belong to Henry van de Velde
 
@@ -37,7 +39,6 @@ const SpectreMain = (props) => {
     }
 
     const randomSwapIndex = generateNumSwap(); // generate index for random swap.
-
     const colorHexSwap = swap_c[randomSwapIndex]["HEX_values"][0]; // store data for props to generate hex tiles.
     const colorNameSwap = swap_c[randomSwapIndex]["color_names"][0]
     console.log(colorNameSwap);
@@ -65,13 +66,9 @@ const SpectreMain = (props) => {
         } return itemsMatch;
     }
 
-
-
-
     /// use matched items to generate list of items.
 
     let matchedObjects = check_overlap();
-
     function generateCuration(count){
 
         const nums = [];
@@ -92,10 +89,14 @@ const SpectreMain = (props) => {
     const num = props.num;
     const curation = generateCuration(num);
 
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+    })
+
     return(
             <div className="rowScrollMain svg_divider">
                 <Suspense>
-                    <Sketch13D/>
+                    {isDesktopOrLaptop && <Sketch13D/>}
                     <Model1_sensibility/>
                 </Suspense>
                 <br/>
