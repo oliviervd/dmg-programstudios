@@ -109,8 +109,8 @@ const Model1_sensibility = () => {
                         which raises the question how the museum as an institution within society, can also contribute
                         and take part in this broader shifting society. Not only by disseminating and opening up these examples of design,
                         but also by becoming more self-aware and self-conscious by making the critical reflection ourselves of how we can act in a more caring manner.
-                        An institution that does not only act about or upon society, but also for and in society.
-                        As an interface that engages in a mutual relationship – a form of coexistence that moves beyond the mere display.
+                        An institution that does not only act about or upon society, but also for and in society. In other words, how do we adapt – not as an individual institution – but as a community of individuals.
+                        The museum as an interface that engages in a mutual relationship – one based on forms of coexistence, moving beyond the mere display.
                         If not, we risk lapsing into a form of façadism in which programming about <a href="#sustainability_exhibitions" aria-describedby="footnote-label" id="sustainability_exhibitions_ref">sustainability</a> is not also sustainable;
                         a major challenge that prevails and is being addressed internationally within the (touring) exhibition <a href="#resource_hungry" aria-describedby="footnote-label" id="resource_hungry_ref">sector</a>.
                         In this sense, making the institution sustainable also implies a critical reprogramming of the museum and its <a href="#metabolism" aria-describedby="glossary-label" id="metabolism_ref">metabolism</a> as a whole.
@@ -166,7 +166,7 @@ const Model1_sensibility = () => {
 
                                 The interface below embodies this idea, recursively looping
                                 over the collection, as one would flip the pages of book, to establish encounters of objects that are
-                                related (in terms of their color) to a particular color sample in this book. By doing so,
+                                related (in terms of their color) to a particular color sample in this book. Acting as a sensory layer,
                                 an interaction (however briefly) between 4 objects is invoked that might or might not have inspired each other
                                 one point in time. At the same time, this reorganization of the collection based on samples carefully
                                 crafted and collected by an unknown colorist, evokes and performs a "culture of anonymity" and broadens traditional
@@ -195,8 +195,7 @@ const Model1_sensibility = () => {
                         <ol>
                             <li>
                                 <div id="object_stories"><em>Object Stories </em> offered several looks on the
-                                    collection of the museum.
-                                    Consisting out of 6 (thematic) layers (<em>Commisions & Commisioners, Making
+                                    collection of the museum. Consisting out of 6 (thematic) layers (<em>Commisions & Commisioners, Making
                                         Matters, Curiosity, Responsible Objects,
                                         Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted
                                     featured around 200 objects from the collection of which some were highlighted from
@@ -206,17 +205,14 @@ const Model1_sensibility = () => {
                             <li>
                                 <div id="responsible_objects">
                                     Marjan van Helvert, The responsible object. A history of design ideology for the
-                                    future. Valiz, Amsterdam, 2016
-                                    <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
+                                    future. Valiz, Amsterdam, 2016 <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
                                 </div>
                             </li>
                             <li>
                                 <div id="sustainability_exhibitions">
                                     The museum organised several exhibitions on sustainability and ecological design
-                                    such as
-                                    <em><a href="https://www.designmuseumgent.be/en/events/no-design-to-waste"> No
-                                        Design to Waste</a></em> (2014),
-                                    <em><a href="https://www.designmuseumgent.be/en/events/fibre-fixed"> Fibre Fixed</a></em> (2019)
+                                    such as<em><a href="https://www.designmuseumgent.be/en/events/no-design-to-waste"> No
+                                    Design to Waste</a></em> (2014),<em><a href="https://www.designmuseumgent.be/en/events/fibre-fixed"> Fibre Fixed</a></em> (2019)
                                     and <em><a href="https://www.designfestgent.be/"> Design Fest Gent</a></em> (2022).
                                     <a href="#sustainability_exhibitions_ref" aria-label="Back to content">↩</a>
                                 </div>
@@ -235,7 +231,8 @@ const Model1_sensibility = () => {
                                     to create new (sometimes meaningful) relationships between users active on the
                                     platform. On the other hand, the computational power needed to drive the algorithms behind
                                     these machines are reliant on natural resources, resulting in their depletion of highly
-                                    needed resources from the earth. <a href="#technological_senisbility_ref" aria-label="Back to content">↩</a>
+                                    needed resources from the earth. <a href="#technological_senisbility_ref"
+                                                                        aria-label="Back to content">↩</a>
                                 </div>
                             </li>
                             <li>
@@ -243,15 +240,15 @@ const Model1_sensibility = () => {
                                     James Bridle refers to an "technological ecology", in which human and non-human
                                     entities, such as computers amplify each other, rather than trying to outdo each other. "The
                                     combination of technological capacity with a more-than-human sensitivy which constructs new ways of seeing and
-                                    appreciating the world. - [see also glossary: ECOLOGY] <a href="#ecology_ref" aria-label="Back to content">↩</a>
+                                    appreciating the world." - [see also glossary: ECOLOGY] <a href="#ecology_ref"
+                                                                                               aria-label="Back to content">↩</a>
                                 </div>
                             </li>
                             <li>
                                 <div id="models_museum">
-                                    The museum was established in 1903 as a "models museum"
-                                    (<em>modellenmuseum</em> or <em>musee des modelles</em>).
-                                    The collection comprised of good examples of various crafts and trades to inspire
-                                    artists and craftsmen and provide support for their training.<a href="#models_museum_ref" aria-label="Back to content">↩</a>
+                                    The museum was established in 1903 as a "models museum" (<em>modellenmuseum</em> or <em>musee des modelles</em>);
+                                    a collection built out of good examples of various crafts and trades to inspire artists and craftsmen and
+                                    provide support for their training. A collection, with a clear relation to the world. <a href="#models_museum_ref" aria-label="Back to content">↩</a>
                                     {/*<img src="https://api.collectie.gent/iiif/image/iiif/2/b7a376735df545a775899c6efb23f808-MA_SCMS_FO_00683.tif/624,661,1992,1423/full/0/default.jpg"></img>*/}
                                 </div>
                             </li>
