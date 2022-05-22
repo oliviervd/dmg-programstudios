@@ -95,7 +95,7 @@ const Model1_sensibility = () => {
 
                 <article>
                     <div className="left box" style={{fontFamily: "happy-times-NG_italic_master_web"}}>
-                        <p style={{fontFamily: "P-ACR-AGON-Regular"}}>RESPONSIBLE</p>“When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
+                        <p className="subHeader__text">RESPONSIBLE</p>“When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
                         For four years this question was central to one of the tracks in Object Stories, the permanent presentation
                         of the collection of Design Museum Gent. The objects on display (within this specific track) all in their
                         own way demonstrated that although there is an increased focus on sustainability and social concern today,
@@ -134,7 +134,7 @@ const Model1_sensibility = () => {
                     {readMore &&
                         <div>
                             <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                <p style={{fontFamily: "P-ACR-AGON-Regular"}}>METABOLISM</p>Can we reimagine and
+                                <p className="subHeader__text">METABOLISM</p>Can we reimagine and
                                 rethink the metabolism of the museum in such a way that the core tasks of the museum in terms of
                                 taking care of the collection (conservation/preservation) are reformulated into
                                 the sensible act of supporting a  <u>collection of care</u>?
@@ -153,7 +153,7 @@ const Model1_sensibility = () => {
                             </div>
                             {isDesktopOrLaptop && <br/>}
                             <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                <p style={{fontFamily: "P-ACR-AGON-Regular"}}>TO TAKE CARE OF. </p>
+                                <p className="subHeader__text">TO TAKE CARE OF. </p>
                                 Taking care of something or someone is a highly social endeavor and is perhaps even a premise for
                                 us to co-exist. To support this act of caretaking we developed technology that aids us in the process.
                                 However, this same technology can also lead to direct opposite when not used or approached <a href="#technological_senisbility" aria-describedby="footnote-label" id="technological_senisbility_ref">responsibly</a>.

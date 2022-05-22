@@ -93,6 +93,17 @@ h2 {
     }
 }
 
+.subHeader__text {
+    font-size: 20px;
+    color: var(--main__green);
+    font-family: lineal;
+} @media (max-width: 1224px) {
+    .subHeader__text{
+        font-size: 50px;
+    }
+
+}
+
 .quote{
     border-left: 3px solid black;
     margin-left: 5%;
