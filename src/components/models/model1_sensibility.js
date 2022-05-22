@@ -105,8 +105,9 @@ const Model1_sensibility = () => {
                     <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
                         Marjan van Helvert defined “Responsible Objects” (also the title of the track on responsible design in Object Stories)
                         as objects that behave responsibly, consciously and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
-                        Taking responsibility through responsible behavior affects and effects all parts of society and is perhaps the primary precondition in order for something (or someone) to co-exist.
-                        Which raises the question how the museum as an institution withing society, can also contribute for the better within this shifting society. Not only by disseminating and opening up these good examples of design,
+                        Taking responsibility through responsible behavior affects and effects all parts of society,
+                        which raises the question how the museum as an institution within society, can also contribute
+                        and take part in this broader shifting society. Not only by disseminating and opening up these examples of design,
                         but also by becoming more self-aware and self-conscious by making the critical reflection ourselves of how we can act in a more caring manner.
                         An institution that does not only act about or upon society, but also for and in society.
                         As an interface that engages in a mutual relationship – a form of coexistence that moves beyond the mere display.
@@ -138,13 +139,15 @@ const Model1_sensibility = () => {
                                 Could we not agree that the process of expanding the collection through acquisition is essentially
                                 a transfer of “caring for” an object from one person to the other? Defining what is meant by
                                 “to take care for”, as well as the transformation of caring for a collection into a collection of
-                                care may help us as a museum in our transformation into a sustainable and caring institution.
+                                care may help us as a museum in our transformation into a sustainable and caring institution;
+                                one is performative first, and representative second.
                                 Let’s take for example the acquisition of the "sample book with paint recipes",
                                 a 19th-century catalog of samples that used to belong to the personal library of Henry van de Velde,
                                 before it was gifted to the museum. It is plausible that this book was used as a source of inspiration
                                 by Henry van de Velde when designing one or more of his textile designs. We are now taking care of
                                 this object by preserving it, yet it has almost never been on display in the museum, which begs the question,
-                                who are we taking care of? And for who are we taking care?
+                                who are we taking care of? And for who are we taking care? What relationships are we caring for,
+                                and how does this affect the way in which we represent?
                             </div>
                             <br/>
                             <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
@@ -154,9 +157,8 @@ const Model1_sensibility = () => {
                                 However, this same technology can also lead to direct opposite when not used or approached <a href="#technological_senisbility" aria-describedby="footnote-label" id="technological_senisbility_ref">responsibly</a>.
                                 So how do we define these interfaces of care? Is it possible to make use of technology to create a
                                 model that speculates on the interrelationships between agents and objects in a collection?
-                                What can technology teach us about the relationship between things, an ecology of
-                                <a href="#ecology" aria-describedby="footnote-label" id="ecology_ref">technology</a> perhaps?
-                                MODEL1: SENSE & SENSIBILITY looks into leveraging technology as a way to measure proximity.
+                                What can technology teach us about the relationship between things, instead of us teaching <a href="#ecology" aria-describedby="footnote-label" id="ecology_ref">them</a> ?
+                                MODEL1: SENSE & SENSIBILITY looks into leveraging technology as a way to measure and negotiate proximity.
                                 At the same time it looks back at past interfaces that might be inspiring for the future.
                                 Looking back at the color book today – as an interface that inspired – both manufacturers of paint,
                                 craftsmen and artists alike; inspiration struck to consider ways to re-invoke this same ritual of
@@ -167,7 +169,7 @@ const Model1_sensibility = () => {
                                 related (in terms of their color) to a particular color sample in this book. By doing so,
                                 an interaction (however briefly) between 4 objects is invoked that might or might not have inspired each other
                                 one point in time. At the same time, this reorganization of the collection based on samples carefully
-                                crafted and collected by an unknown colorist, evokes a "culture of anonymity" and broadens traditional
+                                crafted and collected by an unknown colorist, evokes and performs a "culture of anonymity" and broadens traditional
                                 approaches to our collection that move beyond the dominant form of authorship. An inherent quality
                                 of the work that often determines the visibility and/or invisibility of an object.
 
@@ -177,7 +179,7 @@ const Model1_sensibility = () => {
                                 transcends the art historical and institutionalized view - resounding the indeterminacy that might lie at the museum’s foundations.
                                 At the same time it very much resonates with the "indeterminacy" that might lie at the museum’s foundations, a place where knowledge is constantly being (re-)produced based upon the passage of both human and non-human agency.
                                 One could also read this exercise as if revisiting, invoking or emulating the museum in its early, former form, in which it went as a <a href="#models_museum" aria-describedby="footnote-label" id="models_museum_ref">model museum</a>;
-                                (musee des modeles) a place with the social purpose of inspiring craftsmen by presenting good models or forms of design. Nostalgic, no. Co-existent, perhaps.
+                                (musee des modeles) a place with the social purpose of inspiring craftsmen by presenting good models or forms of design. Nostalgic, no. Co-existent with the future? Perhaps.
                             </div>
                             <br/>
                             <p className="underlined" onClick={handleReadMore}> HIDE TEXT </p>
