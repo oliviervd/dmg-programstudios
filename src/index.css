@@ -184,13 +184,7 @@ a {
     }
 }
 
-@media (min-width: 800px) {
-    .model-TextColumns__3{
-        grid-template-columns: 5% 55% 40%;
-    }
-}
-
-@media (max-width: 800px) {
+@media (max-width: 1224px) {
     .model-TextColumns__3{
         grid-template-columns: none;
         grid-auto-flow: dense;

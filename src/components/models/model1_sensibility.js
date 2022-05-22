@@ -10,11 +10,11 @@ const Model1_sensibility = () => {
     }
 
     const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 800px)'
+        query: '(min-width: 1224px)'
     })
 
     const isMobileOrTablet = useMediaQuery({
-        query: '(max-width: 800px)'
+        query: '(max-width: 1224px)'
     })
 
     return(
