@@ -26,6 +26,14 @@ article {
 .footNote__refs{
     display:grid;
     grid-template-columns: 20% 60% 20%;
+} @media (max-width: 1224px) {
+    .footNote__refs{
+        font-size: 20px;
+    }
+}
+
+.footNote__text{
+    font-size: 20px;
 }
 
 [aria-describedby="footnote-label"] {

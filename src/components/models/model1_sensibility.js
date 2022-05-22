@@ -19,7 +19,9 @@ const Model1_sensibility = () => {
 
     return(
         <div>
+            {isDesktopOrLaptop &&
             <h1 className="center">MODEL 1: SENSE AND SENSIBILITY</h1>
+            }
             <div className="model-TextColumns__3">
                 <div></div>
                 {isDesktopOrLaptop &&
@@ -27,7 +29,7 @@ const Model1_sensibility = () => {
                         <div></div>
                         <ol>
                             <li>
-                                <div id="object_stories"><em>Object Stories </em> offered several looks on the
+                                <div className="footNote__text" id="object_stories"><em>Object Stories </em> offered several looks on the
                                     collection of the museum. Consisting out of 6 (thematic) layers (<em>Commisions & Commisioners, Making
                                         Matters, Curiosity, Responsible Objects,
                                         Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted
@@ -36,13 +38,13 @@ const Model1_sensibility = () => {
                                 </div>
                             </li>
                             <li>
-                                <div id="responsible_objects">
+                                <div className="footNote__text" id="responsible_objects">
                                     Marjan van Helvert, The responsible object. A history of design ideology for the
                                     future. Valiz, Amsterdam, 2016 <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
                                 </div>
                             </li>
                             <li>
-                                <div id="sustainability_exhibitions">
+                                <div className="footNote__text" id="sustainability_exhibitions">
                                     The museum organised several exhibitions on sustainability and ecological design
                                     such as<em><a href="https://www.designmuseumgent.be/en/events/no-design-to-waste"> No
                                     Design to Waste</a></em> (2014),<em><a href="https://www.designmuseumgent.be/en/events/fibre-fixed"> Fibre Fixed</a></em> (2019)
@@ -51,7 +53,7 @@ const Model1_sensibility = () => {
                                 </div>
                             </li>
                             <li>
-                                <div id="resource_hungry">
+                                <div className="footNote__text" id="resource_hungry">
                                     The 2020 Art Verbier Summit "<em>Resource Hungry</em>" initiated a global dialogue
                                     to find harmony,
                                     between art, ecology and resources. <a href="#resource_hungry_ref"
@@ -59,7 +61,7 @@ const Model1_sensibility = () => {
                                 </div>
                             </li>
                             <li>
-                                <div id="technological_senisbility">
+                                <div className="footNote__text" id="technological_senisbility">
                                     Take for example our social media platforms. On the one hand they have the potential
                                     to create new (sometimes meaningful) relationships between users active on the
                                     platform. On the other hand, the computational power needed to drive the algorithms behind
@@ -69,7 +71,7 @@ const Model1_sensibility = () => {
                                 </div>
                             </li>
                             <li>
-                                <div id="ecology">
+                                <div className="footNote__text"  id="ecology">
                                     James Bridle refers to an "technological ecology", in which human and non-human
                                     entities, such as computers amplify each other, rather than trying to outdo each other. "The
                                     combination of technological capacity with a more-than-human sensitivy which constructs new ways of seeing and
@@ -78,7 +80,7 @@ const Model1_sensibility = () => {
                                 </div>
                             </li>
                             <li>
-                                <div id="models_museum">
+                                <div className="footNote__text" id="models_museum">
                                     The museum was established in 1903 as a "models museum" (<em>modellenmuseum</em> or <em>musee des modelles</em>);
                                     a collection built out of good examples of various crafts and trades to inspire artists and craftsmen and
                                     provide support for their training. A collection, with a clear relation to the world. <a href="#models_museum_ref" aria-label="Back to content">↩</a>
@@ -92,8 +94,8 @@ const Model1_sensibility = () => {
                 }
 
                 <article>
-                    <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>
-                        <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>RESPONSIBLE</p>“When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
+                    <div className="left box" style={{fontFamily: "happy-times-NG_italic_master_web"}}>
+                        <p style={{fontFamily: "P-ACR-AGON-Regular"}}>RESPONSIBLE</p>“When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
                         For four years this question was central to one of the tracks in Object Stories, the permanent presentation
                         of the collection of Design Museum Gent. The objects on display (within this specific track) all in their
                         own way demonstrated that although there is an increased focus on sustainability and social concern today,
@@ -102,7 +104,7 @@ const Model1_sensibility = () => {
                         defined new production methods and/or formulated alternate forms of society that better correspond to the issues at hand.
                     </div>
                     <br/>
-                    <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
+                    <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                         Marjan van Helvert defined “Responsible Objects” (also the title of the track on responsible design in Object Stories)
                         as objects that behave responsibly, consciously and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
                         Taking responsibility through responsible behavior affects and effects all parts of society,
@@ -110,7 +112,7 @@ const Model1_sensibility = () => {
                         and take part in this broader shifting society. Not only by disseminating and opening up these examples of design,
                         but also by becoming more self-aware and self-conscious by making the critical reflection ourselves of how we can act in a more caring manner.
                         An institution that does not only act about or upon society, but also for and in society. In other words, how do we adapt – not as an individual institution – but as a community of individuals.
-                        The museum as an interface that engages in a mutual relationship – one based on forms of coexistence, moving beyond the mere display.
+                        The museum reimagined; as an interface that engages in a mutual relationship – one based on forms of coexistence, moving beyond the mere display.
                         If not, we risk lapsing into a form of façadism in which programming about <a href="#sustainability_exhibitions" aria-describedby="footnote-label" id="sustainability_exhibitions_ref">sustainability</a> is not also sustainable;
                         a major challenge that prevails and is being addressed internationally within the (touring) exhibition <a href="#resource_hungry" aria-describedby="footnote-label" id="resource_hungry_ref">sector</a>.
                         In this sense, making the institution sustainable also implies a critical reprogramming of the museum and its <a href="#metabolism" aria-describedby="glossary-label" id="metabolism_ref">metabolism</a> as a whole.
@@ -131,8 +133,8 @@ const Model1_sensibility = () => {
 
                     {readMore &&
                         <div>
-                            <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                                <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>METABOLISM</p>Can we reimagine and
+                            <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                <p style={{fontFamily: "P-ACR-AGON-Regular"}}>METABOLISM</p>Can we reimagine and
                                 rethink the metabolism of the museum in such a way that the core tasks of the museum in terms of
                                 taking care of the collection (conservation/preservation) are reformulated into
                                 the sensible act of supporting a  <u>collection of care</u>?
@@ -150,8 +152,8 @@ const Model1_sensibility = () => {
                                 and how does this affect the way in which we represent?
                             </div>
                             <br/>
-                            <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
-                                <p style={{fontSize: "15px", fontFamily: "P-ACR-AGON-Regular"}}>TO TAKE CARE OF. </p>
+                            <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                <p style={{fontFamily: "P-ACR-AGON-Regular"}}>TO TAKE CARE OF. </p>
                                 Taking care of something or someone is a highly social endeavor and is perhaps even a premise for
                                 us to co-exist. To support this act of caretaking we developed technology that aids us in the process.
                                 However, this same technology can also lead to direct opposite when not used or approached <a href="#technological_senisbility" aria-describedby="footnote-label" id="technological_senisbility_ref">responsibly</a>.
@@ -174,7 +176,7 @@ const Model1_sensibility = () => {
                                 of the work that often determines the visibility and/or invisibility of an object.
 
                             </div><br/>
-                            <div className="left box" style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}>
+                            <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                                 This approach of the collection as a social network, - a speculative system that connects in a transhistorical and transdisciplinary way -
                                 transcends the art historical and institutionalized view - resounding the indeterminacy that might lie at the museum’s foundations.
                                 At the same time it very much resonates with the "indeterminacy" that might lie at the museum’s foundations, a place where knowledge is constantly being (re-)produced based upon the passage of both human and non-human agency.
@@ -194,7 +196,7 @@ const Model1_sensibility = () => {
                         <div></div>
                         <ol>
                             <li>
-                                <div id="object_stories"><em>Object Stories </em> offered several looks on the
+                                <div className="footNote__text" id="object_stories"><em>Object Stories </em> offered several looks on the
                                     collection of the museum. Consisting out of 6 (thematic) layers (<em>Commisions & Commisioners, Making
                                         Matters, Curiosity, Responsible Objects,
                                         Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted
@@ -203,13 +205,13 @@ const Model1_sensibility = () => {
                                 </div>
                             </li>
                             <li>
-                                <div id="responsible_objects">
+                                <div className="footNote__text" id="responsible_objects">
                                     Marjan van Helvert, The responsible object. A history of design ideology for the
                                     future. Valiz, Amsterdam, 2016 <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
                                 </div>
                             </li>
                             <li>
-                                <div id="sustainability_exhibitions">
+                                <div className="footNote__text" id="sustainability_exhibitions">
                                     The museum organised several exhibitions on sustainability and ecological design
                                     such as<em><a href="https://www.designmuseumgent.be/en/events/no-design-to-waste"> No
                                     Design to Waste</a></em> (2014),<em><a href="https://www.designmuseumgent.be/en/events/fibre-fixed"> Fibre Fixed</a></em> (2019)
@@ -218,7 +220,7 @@ const Model1_sensibility = () => {
                                 </div>
                             </li>
                             <li>
-                                <div id="resource_hungry">
+                                <div className="footNote__text" id="resource_hungry">
                                     The 2020 Art Verbier Summit "<em>Resource Hungry</em>" initiated a global dialogue
                                     to find harmony,
                                     between art, ecology and resources. <a href="#resource_hungry_ref"
@@ -226,7 +228,7 @@ const Model1_sensibility = () => {
                                 </div>
                             </li>
                             <li>
-                                <div id="technological_senisbility">
+                                <div className="footNote__text" id="technological_senisbility">
                                     Take for example our social media platforms. On the one hand they have the potential
                                     to create new (sometimes meaningful) relationships between users active on the
                                     platform. On the other hand, the computational power needed to drive the algorithms behind
@@ -236,7 +238,7 @@ const Model1_sensibility = () => {
                                 </div>
                             </li>
                             <li>
-                                <div id="ecology">
+                                <div className="footNote__text"  id="ecology">
                                     James Bridle refers to an "technological ecology", in which human and non-human
                                     entities, such as computers amplify each other, rather than trying to outdo each other. "The
                                     combination of technological capacity with a more-than-human sensitivy which constructs new ways of seeing and
@@ -245,7 +247,7 @@ const Model1_sensibility = () => {
                                 </div>
                             </li>
                             <li>
-                                <div id="models_museum">
+                                <div className="footNote__text" id="models_museum">
                                     The museum was established in 1903 as a "models museum" (<em>modellenmuseum</em> or <em>musee des modelles</em>);
                                     a collection built out of good examples of various crafts and trades to inspire artists and craftsmen and
                                     provide support for their training. A collection, with a clear relation to the world. <a href="#models_museum_ref" aria-label="Back to content">↩</a>
