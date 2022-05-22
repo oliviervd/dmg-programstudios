@@ -73,9 +73,9 @@ crypto--h1--large {
     color: black;
 }
 
-@media only screen and (max-width: 1224px) {
+@media (max-width: 1224px) {
     crypto--h1--large {
-        font-size: 40px;
+        font-size: 90px;
     }
 }
 
@@ -87,6 +87,15 @@ h1 {
 h2 {
     font-size: 17px;
     font-family: "happy-times-NG_italic_master_web", sans-serif;
+} @media (max-width: 1224px) {
+    h2 {
+        font-size: 30px;
+    }
+}
+
+.quote{
+    border-left: 3px solid black;
+    margin-left: 5%;
 }
 
 h4 {
@@ -196,6 +205,13 @@ a {
     line-height: 20px;
 }
 
+@media (max-width: 1224px){
+    .button__readMore{
+        padding: 5%;
+        font-size: 30px;
+    }
+}
+
 /* ---------------------------------- COLORS ---------------------------------- */
 
 .background__cool-to-warm-spectrum {
@@ -244,7 +260,7 @@ a {
     .box {
         width: 90%;
         padding: 5%;
-        font-size: 25px;
+        font-size: 30px;
         text-align: justify;
     }
 }
@@ -381,6 +397,10 @@ button{
     overflow: hidden;
     display: flex;
     justify-content: space-evenly;
+} @media (max-width: 1224px) {
+    .scroll-container{
+        font-size: 30px;
+    }
 }
 
 .scroll-container__blue__pink{

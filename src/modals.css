@@ -33,7 +33,11 @@ article {
 }
 
 .footNote__text{
-    font-size: 20px;
+    font-size: 12px;
+} @media (max-width: 1224px) {
+    .footNote__text{
+        font-size: 20px;
+    }
 }
 
 [aria-describedby="footnote-label"] {

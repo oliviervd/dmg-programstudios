@@ -103,7 +103,7 @@ const Model1_sensibility = () => {
                         emerged that critically addressed the impact of our actions on the climate and, as a response,
                         defined new production methods and/or formulated alternate forms of society that better correspond to the issues at hand.
                     </div>
-                    <br/>
+                    {isDesktopOrLaptop && <br/>}
                     <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                         Marjan van Helvert defined “Responsible Objects” (also the title of the track on responsible design in Object Stories)
                         as objects that behave responsibly, consciously and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
@@ -117,17 +117,17 @@ const Model1_sensibility = () => {
                         a major challenge that prevails and is being addressed internationally within the (touring) exhibition <a href="#resource_hungry" aria-describedby="footnote-label" id="resource_hungry_ref">sector</a>.
                         In this sense, making the institution sustainable also implies a critical reprogramming of the museum and its <a href="#metabolism" aria-describedby="glossary-label" id="metabolism_ref">metabolism</a> as a whole.
                     </div>
-                    <br/>
-                    <h2 className="left box" style={{borderLeft: "3px solid black", paddingLeft: "5px"}}>__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
-                    <br/>
+                    {isDesktopOrLaptop && <br/>}
+                    <h2 className="left box quote">__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
+                    {isDesktopOrLaptop && <br/>}
 
                     {/*read more: open the whole text only when asked for; clean up layout */}
 
                     {!readMore &&
                         <div>
-                            <br/>
-                            <p className="underlined" onClick={handleReadMore}> READ MORE </p>
-                            <br/>
+                            {isDesktopOrLaptop && <br/>}
+                            <p className="underlined button__readMore" onClick={handleReadMore}> READ MORE </p>
+                            {isDesktopOrLaptop && <br/>}
                         </div>
                     }
 
@@ -151,7 +151,7 @@ const Model1_sensibility = () => {
                                 who are we taking care of? And for who are we taking care? What relationships are we caring for,
                                 and how does this affect the way in which we represent?
                             </div>
-                            <br/>
+                            {isDesktopOrLaptop && <br/>}
                             <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                                 <p style={{fontFamily: "P-ACR-AGON-Regular"}}>TO TAKE CARE OF. </p>
                                 Taking care of something or someone is a highly social endeavor and is perhaps even a premise for
@@ -165,7 +165,9 @@ const Model1_sensibility = () => {
                                 Looking back at the color book today – as an interface that inspired – both manufacturers of paint,
                                 craftsmen and artists alike; inspiration struck to consider ways to re-invoke this same ritual of
                                 knowledge transfer, this same idea of one object inspiring the creation of another.  <br/><br/>
+                            </div>
 
+                            <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                                 The interface below embodies this idea, recursively looping
                                 over the collection, as one would flip the pages of book, to establish encounters of objects that are
                                 related (in terms of their color) to a particular color sample in this book. Acting as a sensory layer,
@@ -174,8 +176,10 @@ const Model1_sensibility = () => {
                                 crafted and collected by an unknown colorist, evokes and performs a "culture of anonymity" and broadens traditional
                                 approaches to our collection that move beyond the dominant form of authorship. An inherent quality
                                 of the work that often determines the visibility and/or invisibility of an object.
+                            </div>
 
-                            </div><br/>
+                            {isDesktopOrLaptop && <br/>}
+
                             <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                                 This approach of the collection as a social network, - a speculative system that connects in a transhistorical and transdisciplinary way -
                                 transcends the art historical and institutionalized view - resounding the indeterminacy that might lie at the museum’s foundations.
@@ -183,9 +187,9 @@ const Model1_sensibility = () => {
                                 One could also read this exercise as if revisiting, invoking or emulating the museum in its early, former form, in which it went as a <a href="#models_museum" aria-describedby="footnote-label" id="models_museum_ref">model museum</a>;
                                 (musee des modeles) a place with the social purpose of inspiring craftsmen by presenting good models or forms of design. Nostalgic, no. Co-existent with the future? Perhaps.
                             </div>
-                            <br/>
-                            <p className="underlined" onClick={handleReadMore}> HIDE TEXT </p>
-                            <br/>
+                            {isDesktopOrLaptop && <br/>}
+                            <p className="underlined button__readMore" onClick={handleReadMore}> HIDE TEXT </p>
+                            {isDesktopOrLaptop && <br/>}
 
                         </div>
                     }
@@ -222,8 +226,7 @@ const Model1_sensibility = () => {
                             <li>
                                 <div className="footNote__text" id="resource_hungry">
                                     The 2020 Art Verbier Summit "<em>Resource Hungry</em>" initiated a global dialogue
-                                    to find harmony,
-                                    between art, ecology and resources. <a href="#resource_hungry_ref"
+                                    to find harmony, between art, ecology and resources. <a href="#resource_hungry_ref"
                                                                            aria-label="Back to content">↩</a>
                                 </div>
                             </li>
