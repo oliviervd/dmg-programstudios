@@ -32,7 +32,8 @@ const ProjectDescription = () => {
                         indeed modifying itself as part of its operations. The lattice was not so much a machine as it was a page on
                         which the machine was written, and on which the machine itself ceaselessly wrote.” (Chiang, T. , 2019. Exhalation.)</p>
                     <p style={{fontSize: "15px", fontFamily: "happy-times-NG_regular_master_web"}}><em><strong>MODELS FROM THE PAST FOR THE FUTURE </strong></em>
-                        is a curatorial experiment and post-digital discourse that takes place during the closure of the Design Museum Ghent (2022-2025). As such this exercise positions
+                        is a curatorial experiment and post-digital discourse looking into past, future and speculative models, and
+                        takes place during the closure of the Design Museum Ghent (2022-2025). As such this exercise positions
                         itself in a period of transition where past, present and future interlock.
                         <br/><br/>
                         By focusing on the medium-specificity of the web, it investigates new curatorial strategies that better reflect
