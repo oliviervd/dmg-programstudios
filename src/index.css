@@ -1,3 +1,6 @@
+/* max-width: 1224 = ipad */
+/* max-width: 1224 = mobile */
+
 :root {
     --main__green: #afc6ae;
     --fluo__green: #00FF67;
@@ -73,7 +76,7 @@ crypto--h1--large {
     color: black;
 }
 
-@media (max-width: 1224px) {
+@media (max-width: 800px) {
     crypto--h1--large {
         font-size: 90px;
     }
@@ -173,15 +176,27 @@ a {
 
 .model-TextColumns__3 {
     display: grid;
-    grid-template-columns: repeat(3, 30%);
 }
 
-@media (max-width: 1224px) {
+@media (min-width: 1224px) {
+    .model-TextColumns__3{
+        grid-template-columns: repeat(3, 30%);
+    }
+}
+
+@media (min-width: 800px) {
+    .model-TextColumns__3{
+        grid-template-columns: 5% 55% 40%;
+    }
+}
+
+@media (max-width: 800px) {
     .model-TextColumns__3{
         grid-template-columns: none;
         grid-auto-flow: dense;
     }
 }
+
 
 .boldSet {
     font-family: "happy-times-NG_bold_master_web", sans-serif;
@@ -216,7 +231,7 @@ a {
     line-height: 20px;
 }
 
-@media (max-width: 1224px){
+@media (max-width: 1224px) {
     .button__readMore{
         padding: 5%;
         font-size: 30px;

@@ -26,7 +26,7 @@ article {
 .footNote__refs{
     display:grid;
     grid-template-columns: 20% 60% 20%;
-} @media (max-width: 1224px) {
+} @media (max-width: 1224px) { /*mobile*/
     .footNote__refs{
         font-size: 20px;
     }
@@ -34,7 +34,7 @@ article {
 
 .footNote__text{
     font-size: 12px;
-} @media (max-width: 1224px) {
+} @media (max-width: 1224px) { /*mobile*/
     .footNote__text{
         font-size: 20px;
     }
@@ -93,5 +93,5 @@ footer :target {
 
 .closeButton__modal:hover {
     transition: color 2s ease-out;
-    color: var(--fluo__green)
+    color: var(--fluo__green);
 }

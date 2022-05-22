@@ -10,11 +10,11 @@ const Model1_sensibility = () => {
     }
 
     const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 1224px)'
+        query: '(min-width: 800px)'
     })
 
     const isMobileOrTablet = useMediaQuery({
-        query: '(max-width: 1224px)'
+        query: '(max-width: 800px)'
     })
 
     return(
@@ -153,7 +153,7 @@ const Model1_sensibility = () => {
                             </div>
                             {isDesktopOrLaptop && <br/>}
                             <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                <p className="subHeader__text">TO TAKE CARE OF. </p>
+                                <p className="subHeader__text">TO TAKE CARE OF </p>
                                 Taking care of something or someone is a highly social endeavor and is perhaps even a premise for
                                 us to co-exist. To support this act of caretaking we developed technology that aids us in the process.
                                 However, this same technology can also lead to direct opposite when not used or approached <a href="#technological_senisbility" aria-describedby="footnote-label" id="technological_senisbility_ref">responsibly</a>.
