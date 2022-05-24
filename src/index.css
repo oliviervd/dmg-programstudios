@@ -5,6 +5,7 @@
     --main__green: #afc6ae;
     --fluo__green: #00FF67;
     --triad_pink: #C6AEAF;
+    --white_main: #F1F1F1;
     --happy__bold: "happy-times-NG_bold_master_web";
     --happy__regular: "happy-times-NG_regular_master_web";
     --happy__italic: "happy-times-NG_italic_master_web";
@@ -273,7 +274,6 @@ a {
 
 
 .box{
-    position: relative;
     width: 400px;
     font-size: 15px;
 } @media (max-width: 1224px) {
@@ -545,10 +545,10 @@ to {
     border: 4px solid palevioletred;
 }
 
-img{
-    width: 18vw;
-    height: 30vh;
+
+img__bruises{
     object-fit: contain;
+    width: 300px;
 }
 
 img__thumbnail {
@@ -559,6 +559,9 @@ img__thumbnail {
 
 .__img{
     border: none;
+    width: 18vw;
+    height: 30vh;
+    object-fit: contain;
 }
 
 .__img:hover{
@@ -726,4 +729,41 @@ imageViewer__modal-main {
 
 .fluoGreen {
     color: var(--fluo__green);
+}
+
+.bruises__box{
+    position: fixed;
+    background: white;
+    cursor: grab;
+    top: 50vh;
+    left: 60vw;
+    width: 300px;
+    border: black 2px solid;
+    padding: 10px 10px;
+}
+
+.bruises__header{
+    font-family: "happy-times-NG_bold_master_web", sans-serif;
+    text-align: center;
+    font-size: 20px;
+    border: 2px solid black;
+    margin-bottom: 3.33px;
+    padding: 3.33px 3.33px;
+}
+
+.bruises__text{
+    border-top: black solid 2px;
+}
+
+.notDraggable {
+    user-drag: none;
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+
+.imgBruises {
+    width: 300px;
 }
