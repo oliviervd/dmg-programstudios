@@ -32,7 +32,7 @@ const Sketch13D = p5 => {
 
     const setup = (p5, canvasParantRef) => {
         canvas = p5.createCanvas(_width, _height, p5.WEBGL).parent(canvasParantRef);
-        //_bruises = p5.loadImage("49.png");
+        //_bruises = p5.loadImage("bruise_01.png");
         //p5.tint(255, 127);
     }
 
