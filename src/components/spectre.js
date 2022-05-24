@@ -15,13 +15,13 @@ const ColorCubes = React.lazy(() => import("./colorCubes"));
 const Sketch13D = React.lazy(() => import("./sketches/Sketch1_3D"));
 const Model1_sensibility = React.lazy(() => import("./models/model1_sensibility"));
 const SwapBook = React.lazy(() => import("./swapBook"));
+const Bruises = React.lazy(() => import ("./elements/bruises"))
 
 
 const SpectreMain = (props) => {
 
     // INTERFACE FOR GENERATING CURATED SET BASED ON SELECTED COLORIST SWAP.
-
-    const [_ran, setNumSwap] = useState(_ran);
+    const [numSwap, setNumSwap] = useState(3);
 
     function handleNumSwapChange() {
         // reset swap on click.
@@ -96,6 +96,9 @@ const SpectreMain = (props) => {
     return(
             <div className="rowScrollMain svg_divider">
                 <Suspense>
+                    <Suspense>
+                        <Bruises/>
+                    </Suspense>
                     {isDesktopOrLaptop && <Sketch13D/>}
                     <Model1_sensibility/>
                 </Suspense>
