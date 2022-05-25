@@ -39,7 +39,7 @@ const Model1_sensibility = () => {
                             </li>
                             <li>
                                 <div className="footNote__text" id="responsible_objects">
-                                    Marjan van Helvert, The responsible object. A history of design ideology for the
+                                    (Also the title of the track within object stories); Marjan van Helvert, The responsible object. A history of design ideology for the
                                     future. Valiz, Amsterdam, 2016 <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
                                 </div>
                             </li>
@@ -97,7 +97,7 @@ const Model1_sensibility = () => {
                     <div className="left box" style={{fontFamily: "happy-times-NG_italic_master_web"}}>
                         <p className="subHeader__text">RESPONSIBLE</p>“When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
                         For four years this question was central to one of the tracks in Object Stories, the permanent presentation
-                        of the collection of Design Museum Gent. The objects on display (within this specific track) all in their
+                        of the collection of Design Museum Gent. The objects on display in this track all in their
                         own way demonstrated that although there is an increased focus on sustainability and social concern today,
                         this phenomenon is not new in the design world per se. Throughout history, various design strategies have
                         emerged that critically addressed the impact of our actions on the climate and, as a response,
@@ -105,8 +105,8 @@ const Model1_sensibility = () => {
                     </div>
                     {isDesktopOrLaptop && <br/>}
                     <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                        Marjan van Helvert defined “Responsible Objects” (also the title of the track on responsible design in Object Stories)
-                        as objects that behave responsibly, consciously and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
+                        Marjan van Helvert defined “Responsible Objects” as objects that behave responsibly, consciously
+                        and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
                         Taking responsibility through responsible behavior affects and effects all parts of society,
                         which raises the question how the museum as an institution within society, can also contribute
                         and take part in this broader shifting society. Not only by disseminating and opening up these examples of design,
@@ -143,19 +143,18 @@ const Model1_sensibility = () => {
                                 “to take care for”, as well as the transformation of caring for a collection into a collection of
                                 care may help us as a museum in our transformation into a sustainable and caring institution;
                                 one is performative first, and representative second.
-                                Let’s take for example the acquisition of the "sample book with paint recipes",
-                                a 19th-century catalog of samples that used to belong to the personal library of Henry van de Velde,
-                                before it was gifted to the museum. It is plausible that this book was used as a source of inspiration
-                                by Henry van de Velde when designing one or more of his textile designs. We are now taking care of
-                                this object by preserving it, yet it has almost never been on display in the museum, which begs the question,
-                                who are we taking care of? And for who are we taking care? What relationships are we caring for,
+                                To illustrate this position, we could address the acquisition by museum of a "sample book with paint recipes",
+                                a 19th-century catalog of samples that used to belong to the personal library of Henry van de Velde, before it was gifted to the museum.
+                                It is plausible that this book was used as a source of inspiration by Henry van de Velde when designing one or more of his textile designs.
+                                The museum is now taking care of this object by preserving it, yet it has almost never been on display in the museum, which begs the question,
+                                who are we taking care of? And for who are we taking care? What relationships do we support and sustain,
                                 and how does this affect the way in which we represent?
                             </div>
                             {isDesktopOrLaptop && <br/>}
                             <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                                 <p className="subHeader__text">TO TAKE CARE OF </p>
                                 Taking care of something or someone is a highly social endeavor and is perhaps even a premise for
-                                us to co-exist. To support this act of caretaking we developed technology that aids us in the process.
+                                us to co-exist. To support this act of caretaking technology has been developed to aid us in the process.
                                 However, this same technology can also lead to direct opposite when not used or approached <a href="#technological_senisbility" aria-describedby="footnote-label" id="technological_senisbility_ref">responsibly</a>.
                                 So how do we define these interfaces of care? Is it possible to make use of technology to create a
                                 model that speculates on the interrelationships between agents and objects in a collection?
@@ -163,8 +162,8 @@ const Model1_sensibility = () => {
                                 MODEL1: SENSE & SENSIBILITY looks into leveraging technology as a way to measure and negotiate proximity.
                                 At the same time it looks back at past interfaces that might be inspiring for the future.
                                 Looking back at the color book today – as an interface that inspired – both manufacturers of paint,
-                                craftsmen and artists alike; inspiration struck to consider ways to re-invoke this same ritual of
-                                knowledge transfer, this same idea of one object inspiring the creation of another.  <br/><br/>
+                                craftsmen and artists alike; , we perhaps need to consider and think about ways to re-invoke this same ritual of
+                                knowledge transfer, this same idea of one object inspiring the creation of another. To become performative again. <br/><br/>
                             </div>
 
                             <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
@@ -174,7 +173,7 @@ const Model1_sensibility = () => {
                                 an interaction (however briefly) between 4 objects is invoked that might or might not have inspired each other
                                 one point in time. At the same time, this reorganization of the collection based on samples carefully
                                 crafted and collected by an unknown colorist, evokes and performs a "culture of anonymity" and broadens traditional
-                                approaches to our collection that move beyond the dominant form of authorship. An inherent quality
+                                approaches to our collection that move beyond the dominant and sovereign forms of authorship. An inherent quality
                                 of the work that often determines the visibility and/or invisibility of an object.
                             </div>
 
@@ -184,7 +183,7 @@ const Model1_sensibility = () => {
                                 This approach of the collection as a social network, - a speculative system that connects in a transhistorical and transdisciplinary way -
                                 transcends the art historical and institutionalized view - resounding the indeterminacy that might lie at the museum’s foundations.
                                 At the same time it very much resonates with the "indeterminacy" that might lie at the museum’s foundations, a place where knowledge is constantly being (re-)produced based upon the passage of both human and non-human agency.
-                                One could also read this exercise as if revisiting, invoking or emulating the museum in its early, former form, in which it went as a <a href="#models_museum" aria-describedby="footnote-label" id="models_museum_ref">model museum</a>;
+                                One could also read this exercise as if revisiting, invoking or emulating the design museum in its early, former form, in which it went as a <a href="#models_museum" aria-describedby="footnote-label" id="models_museum_ref">model museum</a>;
                                 (musee des modeles) a place with the social purpose of inspiring craftsmen by presenting good models or forms of design. Nostalgic, no. Co-existent with the future? Perhaps.
                             </div>
                             {isDesktopOrLaptop && <br/>}
@@ -210,7 +209,7 @@ const Model1_sensibility = () => {
                             </li>
                             <li>
                                 <div className="footNote__text" id="responsible_objects">
-                                    Marjan van Helvert, The responsible object. A history of design ideology for the
+                                    (Also the title of the track within object stories); Marjan van Helvert, The responsible object. A history of design ideology for the
                                     future. Valiz, Amsterdam, 2016 <a href="#responsible_objects_ref" aria-label="Back to content">↩</a>
                                 </div>
                             </li>
