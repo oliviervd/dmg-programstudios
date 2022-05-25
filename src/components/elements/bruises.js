@@ -57,15 +57,13 @@ const Bruises = () => {
         <div>
             <animated.div className="bruises__box background__white__green" ref={ref} style={style}>
                 <div>
-                    <div className="bruises__header">BRUISES</div>
+                    <div className="bruises__header">BRUISES </div>
                     <div>
                         <img className="notDraggable imgBruises" src="bruise_01.png"/>
-
                     </div>
                     <div className="bruises__text">
-                        <p className="italic" style={{fontFamily:"happy-times-NG_italic_master_web"}}>What first appeared to be some scene that one could see when peering to through a microscope,
-                            a blury vision of cells moving around quickly turned visceral taking on skin-like qualities.
-                            Organisms turning into bruises.</p>
+                        <p className="italic" style={{fontFamily:"happy-times-NG_italic_master_web"}}>Peering into the machine, a scene - quite similar to what one would observe through the lense of a microscope - started to appear. At first, a blurry scape, a mist of pink feauturing two bodies, gently mutating, resembling the qualities of cells, quickly turned visceral. The pinkish mist taking on skin-like qualities. The pulsating organisms turning int bruises.
+                        </p>
                     </div>
                 </div>
             </animated.div>
