@@ -27,7 +27,7 @@ const ProjectDescription = () => {
         <div className="infoBoxLeft">
             {descActive &&
                 <div>
-                    <h1 className="underlined" style={{fontSize: "20px"}}>PROJECT DESCRIPTION</h1>
+                    <h1 className="underlined" style={{fontSize: "20px"}}>CURATORIAL STATEMENT</h1>
                     <p style={{fontSize: "15px", fontFamily: "happy-times-NG_italic_master_web"}}>“I then turned my microscope to the cognition engine… This was an engine undergoing continuous transformation,
                         indeed modifying itself as part of its operations. The lattice was not so much a machine as it was a page on
                         which the machine was written, and on which the machine itself ceaselessly wrote.” (Chiang, T. , 2019. Exhalation.)</p>
