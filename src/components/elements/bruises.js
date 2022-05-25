@@ -55,7 +55,7 @@ const Bruises = () => {
 
     return(
         <div>
-            <animated.div className="bruises__box" ref={ref} style={style}>
+            <animated.div className="bruises__box background__white__green" ref={ref} style={style}>
                 <div>
                     <div className="bruises__header">BRUISES</div>
                     <div>
