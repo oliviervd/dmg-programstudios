@@ -32,9 +32,7 @@ const Model1_sensibility = () => {
                                 <div className="footNote__text" id="object_stories"><em>Object Stories </em> offered several looks on the
                                     collection of the museum. Consisting out of 6 (thematic) layers (<em>Commisions & Commisioners, Making
                                         Matters, Curiosity, Responsible Objects,
-                                        Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted
-                                    featured around 200 objects from the collection of which some were highlighted from
-                                    certain point of view.
+                                        Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted and featured around 200 objects from the collection.
                                 </div>
                             </li>
                             <li>
@@ -202,9 +200,7 @@ const Model1_sensibility = () => {
                                 <div className="footNote__text" id="object_stories"><em>Object Stories </em> offered several looks on the
                                     collection of the museum. Consisting out of 6 (thematic) layers (<em>Commisions & Commisioners, Making
                                         Matters, Curiosity, Responsible Objects,
-                                        Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted
-                                    featured around 200 objects from the collection of which some were highlighted from
-                                    certain point of view.
+                                        Bauhaus 100!</em> and <em>Children's Choices</em>) it highlighted and featured around 200 objects from the collection.
                                 </div>
                             </li>
                             <li>
