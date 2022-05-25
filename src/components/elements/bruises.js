@@ -62,7 +62,7 @@ const Bruises = () => {
                         <img className="notDraggable imgBruises" src="bruise_01.png"/>
                     </div>
                     <div className="bruises__text">
-                        <p className="italic" style={{fontFamily:"happy-times-NG_italic_master_web"}}>Peering into the machine, a scene - quite similar to what one would observe through the lense of a microscope - started to appear. At first, a blurry scape, a mist of pink feauturing two bodies, gently mutating, resembling the qualities of cells, quickly turned visceral. The pinkish mist taking on skin-like qualities. The pulsating organisms turning int bruises.
+                        <p className="italic" style={{fontFamily:"happy-times-NG_italic_master_web"}}>Peering into the machine, a scene - quite similar to what one would observe through the lense of a microscope - slowly takes form. At first, a blurry scape, a mist of pink feauturing two bodies, gently mutating, resembling the qualities of biological cells, quickly turning visceral. The pinkish mist taking on skin-like qualities, the pulsating organisms turning int bruises.
                         </p>
                     </div>
                 </div>
