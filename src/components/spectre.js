@@ -20,6 +20,8 @@ const Bruises = React.lazy(() => import ("./elements/bruises"))
 
 const SpectreMain = (props) => {
 
+    const[bruises, setBruises] = useState(true);
+
     // INTERFACE FOR GENERATING CURATED SET BASED ON SELECTED COLORIST SWAP.
     const [numSwap, setNumSwap] = useState(3);
 
@@ -97,7 +99,7 @@ const SpectreMain = (props) => {
             <div className="rowScrollMain svg_divider">
                 <Suspense>
                     <Suspense>
-                        <Bruises/>
+                        <Bruises open={bruises} onClose={()=>setBruises(false)}/>
                     </Suspense>
                     {isDesktopOrLaptop && <Sketch13D/>}
                     <Model1_sensibility/>
