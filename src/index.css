@@ -744,7 +744,7 @@ imageViewer__modal-main {
     position: fixed;
     cursor: grab;
     top: 20vh;
-    left: 20vw;
+    left: 80vw;
     width: 300px;
     border: black 2px solid;
     padding: 10px 10px;
