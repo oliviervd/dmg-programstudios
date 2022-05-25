@@ -2,19 +2,12 @@ import React, {useState, Suspense} from "react";
 import { useMediaQuery } from "react-responsive";
 import { Outlet, Link} from "react-router-dom";
 
-// components
-//import XenoHeader from "./components/header+footer/xenoHeader"
-//import SpectreMain from "./components/spectre"
-//import ProjectDescription from "./components/projectDescription";
-//import Glossary from "./components/Glossary";
-
 const XenoHeader = React.lazy(() => import("./components/header+footer/xenoHeader"));
 const SpectreMain = React.lazy(()=> import("./components/spectre"));
 const Glossary = React.lazy(() => import("./components/Glossary"));
 const ProjectDescription = React.lazy(() => import("./components/projectDescription"))
 
 function App() {
-
 
     //todo: select language
 
