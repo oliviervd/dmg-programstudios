@@ -1,5 +1,4 @@
 import Sketch from "react-p5";
-import {Link} from "react-router-dom";
 
 const SketchLanding = p5 => {
 
@@ -9,12 +8,11 @@ const SketchLanding = p5 => {
 
 
     let FG = 0;
-    let BG = "#F1F1F1";
+    let BG = 255;
     let _pacragon;
     let _happy;
 
     let fontSize = 128;
-    let lineHeight = 0.9;
     let _shrink
     let _closed
     let _days
@@ -37,7 +35,6 @@ const SketchLanding = p5 => {
 
     const draw = p5 => {
 
-        let fitX = _width * 0.75;
         _shrink = p5.map(p5.sin(p5.radians(p5.frameCount*0.2)), -1, 1, -1, 1);
 
         p5.background(BG);
