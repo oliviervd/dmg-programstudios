@@ -1,10 +1,10 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import {createUseGesture, dragAction, pinchAction} from "@use-gesture/react";
 import {useSpring, animated} from "@react-spring/web";
 
 const useGesture = createUseGesture([dragAction, pinchAction])
 
-const Bruises = () => {
+const Bruises = ({open, onClose}) => {
 
     useEffect(() => {
         const handler = e => e.preventDefault();
@@ -53,6 +53,7 @@ const Bruises = () => {
         }
     )
 
+    if(!open) return null
     return(
         <div>
             <animated.div className="bruises__box background__white__green" ref={ref} style={style}>
@@ -65,6 +66,7 @@ const Bruises = () => {
                         <p className="italic" style={{fontFamily:"happy-times-NG_italic_master_web"}}>Peering into the machine, a scene - quite similar to what one would observe through the lense of a microscope - slowly takes form. At first, a blurry scape, a mist of pink feauturing two bodies, gently mutating, resembling the qualities of biological cells, quickly turning visceral. The pinkish mist taking on skin-like qualities, the pulsating organisms turning int bruises.
                         </p>
                     </div>
+                    <div onClick={onClose}>X</div>
                 </div>
             </animated.div>
         </div>
