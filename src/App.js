@@ -37,15 +37,10 @@ function App() {
 
     return (
         <div>
-            <div className="headerContainer">
-                <Suspense>
-                    <XenoHeader/>
-                </Suspense>
-                <div className="languages_button_box">
-                    <div className="button-lang">NL</div>
-                    <div className="button-lang">EN</div>
-                </div>
-            </div>
+            <Suspense>
+                <XenoHeader header_main={true} header_models={true} header_model={true} model="model_1"/>
+            </Suspense>
+
             <div className="superContainer">
 
                 {isDesktopOrLaptop&&
