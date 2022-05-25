@@ -96,11 +96,11 @@ const SpectreMain = (props) => {
     })
 
     return(
-            <div className="rowScrollMain svg_divider">
+            <div className="rowScrollMain">
                 <Suspense>
-                    <Suspense>
+                    {/*<Suspense>
                         <Bruises open={bruises} onClose={()=>setBruises(false)}/>
-                    </Suspense>
+                    </Suspense>*/}
                     {isDesktopOrLaptop && <Sketch13D/>}
                     <Model1_sensibility/>
                 </Suspense>
