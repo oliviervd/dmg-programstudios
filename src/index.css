@@ -210,7 +210,7 @@ a {
     -o-transform: skewX(-10deg);
     transform: skewX(-10deg);
     transition: color 2s ease-out;
-    color: var(--fluo__green)
+    /*color: var(--fluo__green)*/
 }
 
 .italicSet{
@@ -239,6 +239,15 @@ a {
     background: linear-gradient(135deg,white 0%,white 75%,papayawhip 100%);
 }
 
+.background__white__green {
+    background: linear-gradient(135deg, white 0%, var(--main__green) 100%);
+}
+
+.background__transparent__flow {
+    backround: transparent;
+    background-image: linear-gradient(180deg,papayawhip 60%,rgba(255,230,0,0));
+}
+
 /* ---------------------------------- LAYOUT ---------------------------------- */
 
 .sideBarLeft-Nav{
@@ -263,7 +272,7 @@ a {
     width: 400px;
     height: 100%;
     left: 30vw;
-    border: 3px solid #afc6ae;
+    border: 3px solid var(--main__green);
 }
 
 
@@ -333,7 +342,7 @@ a {
 }
 
 .easeBorder__green{
-    border: 2px solid #afc6ae;
+    border: 2px solid var(--main__green);
 }
 
 .descText {
@@ -352,7 +361,7 @@ text {
 button{
     font-family: "happy-times-NG_italic_master_web", sans-serif;
     width: 100%;
-    background-color: #afc6ae;
+    background-color: var(--main__green);
     margin-bottom: 10px;
 }
 
@@ -394,12 +403,12 @@ button{
     border: 2px solid black;
     border-left: none;
     text-align: center;
-    color: #afc6ae;
+    color: var(--main__green);
     font-size: 20px;
 }
 
 .rowScroll {
-    border: 4px none #afc6ae;
+    border: 4px none var(--main__green);
     height: 300px;
     overflow-y:auto;
     margin-top: 20px;
@@ -431,7 +440,7 @@ button{
     overflow: hidden;
     display: flex;
     justify-content: space-evenly;
-    color: #afc6ae;
+    color: var(--main__green);
 }
 
 
@@ -724,7 +733,7 @@ imageViewer__modal-main {
 }
 
 .textBackground__green{
-    color: #afc6ae;
+    color: var(--main__green);
 }
 
 .fluoGreen {
@@ -733,10 +742,9 @@ imageViewer__modal-main {
 
 .bruises__box{
     position: fixed;
-    background: white;
     cursor: grab;
-    top: 50vh;
-    left: 60vw;
+    top: 20vh;
+    left: 20vw;
     width: 300px;
     border: black 2px solid;
     padding: 10px 10px;
