@@ -4,7 +4,8 @@ import {useSpring, animated} from "@react-spring/web";
 
 const useGesture = createUseGesture([dragAction, pinchAction])
 
-const Bruises = ({open, onClose}) => {
+//todo: change to recieve props to fill with content.
+const ModalWindow = ({open, onClose, props}) => {
 
     useEffect(() => {
         const handler = e => e.preventDefault();
@@ -73,4 +74,4 @@ const Bruises = ({open, onClose}) => {
     )
 }
 
-export default Bruises;
+export default ModalWindow;
