@@ -6,6 +6,7 @@
     --fluo__green: #00FF67;
     --triad_pink: #C6AEAF;
     --white_main: #F1F1F1;
+    --yellow_ish: papayawhip;
     --happy__bold: "happy-times-NG_bold_master_web";
     --happy__regular: "happy-times-NG_regular_master_web";
     --happy__italic: "happy-times-NG_italic_master_web";
@@ -236,7 +237,7 @@ a {
 /* ---------------------------------- COLORS ---------------------------------- */
 
 .background__cool-to-warm-spectrum {
-    background: linear-gradient(135deg,white 0%,white 75%,papayawhip 100%);
+    background: linear-gradient(135deg,white 0%,white 75%,var(--yellow_ish) 100%);
 }
 
 .background__white__green {
@@ -245,7 +246,7 @@ a {
 
 .background__transparent__flow {
     backround: transparent;
-    background-image: linear-gradient(180deg,papayawhip 60%,rgba(255,230,0,0));
+    background-image: linear-gradient(180deg,var(--yellow_ish) 60%,rgba(255,230,0,0));
 }
 
 /* ---------------------------------- LAYOUT ---------------------------------- */
@@ -774,4 +775,18 @@ imageViewer__modal-main {
 
 .imgBruises {
     width: 300px;
+}
+
+.grid--3_4_3{
+    display:grid;
+    grid-template-columns: 30% 40% 30%;
+}
+
+.grid--even_4{
+    display:grid;
+    grid-template-columns: repeat(4, 25%);
+}
+
+.border_box {
+    border: 2px black solid;
 }
