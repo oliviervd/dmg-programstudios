@@ -1,7 +1,7 @@
 import React, {useState, Suspense} from "react";
 import ldes_translations from "../data/postgres_ldes_dmg_translations_ldes_dmg.json"
 
-const ImageViewer = React.lazy(()=> import("./modal/imageModal"))
+const ImageViewer = React.lazy(()=> import("./elements/imageModal"))
 
 function LDESViaURI(uri) {
     return ldes_translations.filter(
