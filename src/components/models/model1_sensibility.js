@@ -140,7 +140,7 @@ const Model1_sensibility = () => {
                                 a transfer of “caring for” an object from one person to the other? Defining what is meant by
                                 “to take care for”, as well as the transformation of caring for a collection into a collection of
                                 care may help us as a museum in our transformation into a sustainable and caring institution;
-                                one is performative first, and representative second.
+                                one that is performative first, and representative second.
                                 To illustrate this position, we could address the acquisition by museum of a "sample book with paint recipes",
                                 a 19th-century catalog of samples that used to belong to the personal library of Henry van de Velde, before it was gifted to the museum.
                                 It is plausible that this book was used as a source of inspiration by Henry van de Velde when designing one or more of his textile designs.
