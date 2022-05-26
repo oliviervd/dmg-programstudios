@@ -1,6 +1,5 @@
 import React ,{useEffect} from "react";
 import Sketch from "react-p5";
-import "./hdc_01.jpeg"
 
 const Sketch13D = p5 => {
 
