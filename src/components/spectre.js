@@ -4,9 +4,6 @@ import {MediaQuery, useMediaQuery} from "react-responsive";
 //data
 import object_c from "../data/objectsColor_10.json"; // import json containing information on the collection of Design Museum Gent (objects that have been published)
 import swap_c from "../data/swapbook.json";
-import {queries} from "@testing-library/react"; // import json containing information on the color swap book that used to belong to Henry van de Velde
-//const object_c = React.lazy(() => import("../data/objectsColor_10.json"));  // import json containing information on the collection of Design Museum Gent (objects that have been published)
-//const swap_c = React.lazy(() => import("../data/swapbook.json")); // import json containing information on the color swap book that used to belong to Henry van de Velde
 
 //lazy loading
 const HexCube = React.lazy(() => import( "./cube"));
@@ -15,7 +12,7 @@ const ColorCubes = React.lazy(() => import("./colorCubes"));
 const Sketch13D = React.lazy(() => import("./sketches/Sketch1_3D"));
 const Model1_sensibility = React.lazy(() => import("./models/model1_sensibility"));
 const SwapBook = React.lazy(() => import("./swapBook"));
-const Bruises = React.lazy(() => import ("./elements/bruises"))
+const modalWindow = React.lazy(() => import ("./elements/modalWindow"))
 
 
 const SpectreMain = (props) => {
@@ -99,7 +96,7 @@ const SpectreMain = (props) => {
             <div className="rowScrollMain">
                 <Suspense>
                     {/*<Suspense>
-                        <Bruises open={bruises} onClose={()=>setBruises(false)}/>
+                        <modalWindow open={bruises} onClose={()=>setBruises(false)}/>
                     </Suspense>*/}
                     {isDesktopOrLaptop && <Sketch13D/>}
                     <Model1_sensibility/>
