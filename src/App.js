@@ -2,7 +2,7 @@ import React, {useState, Suspense} from "react";
 import { useMediaQuery } from "react-responsive";
 import { Outlet, Link} from "react-router-dom";
 
-const XenoHeader = React.lazy(() => import("./components/header+footer/xenoHeader"));
+const XenoHeader = React.lazy(() => import("./components/elements/xenoHeader"));
 const SpectreMain = React.lazy(()=> import("./components/spectre"));
 const Glossary = React.lazy(() => import("./components/Glossary"));
 const ProjectDescription = React.lazy(() => import("./components/projectDescription"))
@@ -55,12 +55,6 @@ function App() {
                             <p className="rotateText"> gLOSSARY.</p>
                         </Link>
                     </div>*/}
-
-                        <div className="sideBarLeft-Nav__button" onClick={openSideGloss}>
-                            <Link to="essay/the-algorithmic-museum">
-                                <p className="rotateText"> the algorithmic museum.</p>
-                            </Link>
-                        </div>
 
                     </div>
                 }
