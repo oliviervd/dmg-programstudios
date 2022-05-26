@@ -1,6 +1,6 @@
 import React, {Suspense} from "react";
 
-const XenoHeader = React.lazy(() => import("./header+footer/xenoHeader"))
+const XenoHeader = React.lazy(() => import("./elements/xenoHeader"))
 
 const Glossary = () => {
     return(
