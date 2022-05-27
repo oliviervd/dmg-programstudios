@@ -37,9 +37,7 @@ const Sketch_ModelsGrid = p5 => {
 
                 let xPos = x * WIDTH/gridSize * wave
                 let xPosRev = x * WIDTH/gridSize/wave
-                //let xPosRev = xPos/2 + WIDTH/gridSize
                 let yPos = y * HEIGHT/gridSize
-                let xWidth = WIDTH/gridSize * wave
                 let xOffSet = (WIDTH/gridSize)/2
                 let yOffSet = (HEIGHT/gridSize)/2
 
