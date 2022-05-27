@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 
 const XenoHeader = React.lazy(() => import("../elements/xenoHeader"))
 const Sketch_ModelsGrid = React.lazy(() => import("../sketches/Sketch_ModelsGrid"))
+const SketchPlaceHolder = React.lazy(()=> import("../sketches/sketchPlaceHolder"))
 
 const Home = () => {
     return(
@@ -83,9 +84,30 @@ const Home = () => {
                                 </div>
 
                             </div>
-                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}><h1 className="center" style={{fontFamily:"lineal"}}>MODEL2</h1></div>
-                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}><h1 className="center" style={{fontFamily:"lineal"}}>MODEL3</h1></div>
-                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}><h1 className="center" style={{fontFamily:"lineal"}}>MODEL4</h1></div>
+                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>
+                                <h1 className="center" style={{fontFamily:"lineal"}}>MODEL2</h1>`
+                                <div id="PLCH" style={{height: "40vh"}}>
+                                    <Suspense>
+                                        <SketchPlaceHolder/>
+                                    </Suspense>
+                                </div>
+                            </div>
+                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>
+                                <h1 className="center" style={{fontFamily:"lineal"}}>MODEL3</h1>`
+                                <div id="PLCH" style={{height: "40vh"}}>
+                                    <Suspense>
+                                        <SketchPlaceHolder/>
+                                    </Suspense>
+                                </div>
+                            </div>
+                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>
+                                <h1 className="center" style={{fontFamily:"lineal"}}>MODEL4</h1>`
+                                <div id="PLCH" style={{height: "50vh", zIndex: "-100000"}}>
+                                    <Suspense>
+                                        <SketchPlaceHolder/>
+                                    </Suspense>
+                                </div>
+                            </div>
                         </div>
                     </div>
 
