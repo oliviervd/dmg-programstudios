@@ -20,7 +20,14 @@ const Model1_sensibility = () => {
     return(
         <div>
             {isDesktopOrLaptop &&
-            <h1 className="center">MODEL 1: SENSE AND SENSIBILITY</h1>
+                <div>
+                    <div className="grid--3_4_3">
+                        <div></div><h1 className="center">ON THE LOGIC OF COLLECTING AND SOVEREIGNTY TOWARDS A COLLECTION OF CARE</h1>
+                    </div>
+                    <div className="grid--4_2_4">
+                        <div/><p className="center" style={{fontSize: "16px", fontFamily: "lineal", borderBottom: "2px var(--main__green) solid", borderTop: "2px var(--main__green) solid"}}>ESSAY, INTERFACE</p><div/>
+                    </div>
+                </div>
             }
             <div className="model-TextColumns__3">
                 <div></div>
