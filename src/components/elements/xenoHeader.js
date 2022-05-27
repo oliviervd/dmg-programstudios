@@ -14,7 +14,7 @@ const XenoHeader = (props) => {
             <div>
 
                 {props.header_main &&
-                    <Link to="/">
+                    <Link to="../home">
                         <div className="scroll-container">
                             <crypto--h1--large className="scroll-text"> models from the past for the future | </crypto--h1--large>
                         </div>
