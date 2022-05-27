@@ -47,6 +47,7 @@ const Sketch_ModelsGrid = p5 => {
                 p5.stroke(0)
                 p5.strokeWeight(5);
                 p5.ellipse( xPos + xOffSet , yPos + yOffSet, WIDTH/gridSize, HEIGHT/gridSize);
+                p5.ellipse( WIDTH - xPos + xOffSet , yPos + yOffSet, WIDTH/gridSize, HEIGHT/gridSize);
                 p5.ellipse( xPosRev + xOffSet , yPos + yOffSet, WIDTH/gridSize, HEIGHT/gridSize);
                 p5.line(xPos, 0, xPos, HEIGHT) // vertical line
             }

@@ -1,5 +1,5 @@
 import React, {useState, Suspense} from "react";
-import {MediaQuery, useMediaQuery} from "react-responsive";
+import {useMediaQuery} from "react-responsive";
 
 //data
 import object_c from "../data/objectsColor_10.json"; // import json containing information on the collection of Design Museum Gent (objects that have been published)
@@ -12,12 +12,9 @@ const ColorCubes = React.lazy(() => import("./colorCubes"));
 const Sketch13D = React.lazy(() => import("./sketches/Sketch1_3D"));
 const Model1_sensibility = React.lazy(() => import("./models/model1_sensibility"));
 const SwapBook = React.lazy(() => import("./swapBook"));
-const modalWindow = React.lazy(() => import ("./elements/modalWindow"))
 
 
 const SpectreMain = (props) => {
-
-    const[bruises, setBruises] = useState(true);
 
     // INTERFACE FOR GENERATING CURATED SET BASED ON SELECTED COLORIST SWAP.
     const [numSwap, setNumSwap] = useState(3);

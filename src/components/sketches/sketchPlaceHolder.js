@@ -5,7 +5,7 @@ import Sketch from "react-p5";
 const SketchPlaceHolder = p5 => {
 
     let c;
-    let n =100;
+    let n =20;
     const WIDTH = document.getElementById("PLCH").offsetWidth;
     const HEIGHT = document.getElementById("PLCH").offsetHeight;
     const BG = "#fbf2e7";
