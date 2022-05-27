@@ -768,6 +768,12 @@ imageViewer__modal-main {
     border-top: black solid 2px;
 }
 
+.login-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .notDraggable {
     user-drag: none;
     -webkit-user-drag: none;

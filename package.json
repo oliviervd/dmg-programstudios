@@ -31,16 +31,14 @@
     "stream": "^0.0.2",
     "web-vitals": "^2.1.4"
   },
-
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "npm start",
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "heroku-postbuild": "npm run build"
   },
-
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -58,5 +56,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1"
   }
 }

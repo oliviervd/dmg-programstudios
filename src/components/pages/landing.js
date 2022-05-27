@@ -1,8 +1,17 @@
 import React, {Suspense} from "react";
 import {Link} from "react-router-dom";
-const  SketchLanding = React.lazy(() => import("../sketches/sketchLanding"));
+import Login from "../elements/Login";
+import useToken from "../elements/useToken"
+
+const SketchLanding = React.lazy(() => import("../sketches/sketchLanding"));
 
 const Landing = () => {
+
+    const {token, setToken} = useToken();
+
+    if(!token) {
+        return <Login setToken={setToken} />
+    }
 
     return(
         <>
