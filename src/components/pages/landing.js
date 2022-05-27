@@ -6,7 +6,7 @@ const Landing = () => {
 
     return(
         <>
-            <Link to="model1">
+            <Link to="../home">
                 <h1 style={{
                     "position": "absolute",
                     "top": "80vh",
@@ -16,7 +16,7 @@ const Landing = () => {
                 }}> ENTER </h1>
             </Link>
 
-            <Suspense fallback={<img src="../sketches/49.png"/>}>
+            <Suspense fallback={<img src="../sketches/assets/49.png" alt="DREAMING OF IMAGES"/>}>
                 <SketchLanding style={{"z-index": -30000}}/>
             </Suspense>
         </>
