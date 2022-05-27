@@ -9,7 +9,6 @@ import './svg.css';
 import './glossary.css';
 
 // import pages
-import Glossary from "./components/Glossary";
 import Landing from "./components/pages/landing";
 import Home from "./components/pages/home";
 
@@ -20,7 +19,6 @@ render(
             <Route path="/" element={<Landing/>}/>
             <Route path="home" element={<Home />}/>
             <Route path="model1" element={<App />}/>
-            <Route path="glossary" element={<Glossary />}/>
         </Routes>
     </BrowserRouter>,
     rootElement
