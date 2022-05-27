@@ -307,6 +307,10 @@ a {
     text-align: right;
 }
 
+.justify {
+    text-align: justify;
+}
+
 .modal {
     border-left: dotted black;
 }
@@ -777,9 +781,29 @@ imageViewer__modal-main {
     width: 300px;
 }
 
-.grid--3_4_3{
+.grid--3_4_3 {
     display:grid;
     grid-template-columns: 30% 40% 30%;
+}
+
+.grid--4_2_4 {
+    display: grid;
+    grid-template-columns: 40% 20% 40%;
+}
+
+.grid--8_2 {
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
+
+.grid--7_3 {
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.grid--3_7 {
+    display: grid;
+    grid-template-columns: 30% 70%;
 }
 
 .grid--even_4{
