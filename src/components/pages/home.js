@@ -1,4 +1,5 @@
 import React, {Suspense} from "react";
+import {Link} from "react-router-dom";
 
 const XenoHeader = React.lazy(() => import("../elements/xenoHeader"))
 const Sketch_ModelsGrid = React.lazy(() => import("../sketches/Sketch_ModelsGrid"))
@@ -14,7 +15,7 @@ const Home = () => {
                     <Sketch_ModelsGrid/>
                 </Suspense>
                 <div style={{height: "200vh"}}>
-                    <h1 className="center">CURATORIAL STATEMENT</h1>
+                    <h1 className="center" style={{fontFamily:"lineal", fontSize: "60px"}}>CURATORIAL STATEMENT</h1>
                     {/* curatorial statement (text) */}
                     <div className="grid--3_4_3">
                         <div>
@@ -57,11 +58,41 @@ const Home = () => {
                     {/* curatorial statement (text) */}
                     <div style={{padding: "20px"}}>
                         <div className="grid--even_4">
-                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>MODEL1</div>
-                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>MODEL2</div>
-                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>MODEL3</div>
-                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>MODEL4</div>
+                            <div className="center" style={{height: "50vh", margin:"1vw"}}>
+                                <h1 className="center" style={{fontFamily:"lineal"}}>MODEL1: <br/> SENSE & SENSIBILITY</h1>
+                                <div>
+                                    <p className="justify" style={{fontSize: "20px", fontFamily: "happy-times-NG_regular_master_web", padding: "4px"}}>
+                                        how do we adapt – not as an individual institution – but as a community of individuals.
+                                        The museum reimagined; as an interface that engages in a mutual relationship –
+                                        one based on forms of coexistence, moving beyond the mere display.
+                                        A model for an institution that is performative first, representational second.
+                                    </p>
+                                    <line></line>
+                                    <div className="grid--7_3">
+                                        <Link to={"../model1"} replace>
+                                            <p className="justify" style=
+                                            {{fontSize: "16px",
+                                                fontFamily: "happy-times-NG_bold_master_web",
+                                                padding: "4px", borderBottom: "2px var(--main__green) solid",
+                                                borderTop: "2px var(--main__green) solid"}}>
+                                            On the Logic of Collecting and Sovereignty towards a Collection of Care.
+                                            </p>
+                                        </Link>
+                                        <p className="center" style={{fontSize: "16px", fontFamily: "lineal", padding: "4px", borderBottom: "2px var(--main__green) solid", borderTop: "2px var(--main__green) solid"}} >ESSAY, INTERFACE</p>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}><h1 className="center" style={{fontFamily:"lineal"}}>MODEL2</h1></div>
+                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}><h1 className="center" style={{fontFamily:"lineal"}}>MODEL3</h1></div>
+                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}><h1 className="center" style={{fontFamily:"lineal"}}>MODEL4</h1></div>
                         </div>
+                    </div>
+
+                    <div className="grid--3_7" style={{height: "50vh", margin:"1vw"}}>
+                        <h1 className="center" style={{fontFamily:"lineal"}}>INSTRUMENTS FOR CARE</h1>
+                        <div className="center border_box" style={{height: "20vh", margin:"1vw"}}/>
+                        {/*link to glossary*/}
                     </div>
 
                 </div>
