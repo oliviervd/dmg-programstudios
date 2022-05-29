@@ -17,10 +17,9 @@ function App() {
                 <XenoHeader header_main={true} header_models={true} header_model={true} model="model_1"/>
             </Suspense>
 
-            <div className="superContainer">
+            <div>
 
-                <div className="mainContainerAlt">
-                    <div className="dotLine"/>
+                <div>
                     <Suspense>
                         <SpectreMain num={_objectNum}/>
                     </Suspense>
