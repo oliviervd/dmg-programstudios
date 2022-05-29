@@ -34,7 +34,7 @@ const ImageGenerator = (props) => {
     }
 
     return(
-        <div className="container" id="imageRandom">
+        <div className="container_color_interface" id="imageRandom">
             <Suspense>
                 <img className="__img" alt="DREAMING OF IMAGES" onClick={()=>{setImageViewer1(true)}}  src={_images[0][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
                 <ImageViewer open={imageViewer1} onClose={() => setImageViewer1(false)} image={_images[0]} _title={_titles[0]}/>
