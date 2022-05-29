@@ -101,7 +101,7 @@ const SpectreMain = (props) => {
                 <br/>
                 <div className="dotLine"/>
                 <br/>
-                <div className="model1_header">
+                <div className="grid--7_3">
                     <div>
                         <h1 className=" pinkHeader">COLLECTIONS</h1>
                         <h1 className=" pinkHeader italicSet">OF CARE:</h1>
@@ -124,7 +124,7 @@ const SpectreMain = (props) => {
                             <ColorCubes num={num}
                                         curation={curation}
                                         data = {matchedObjects}
-                                        className="container"/>
+                                        className="container_color_interface"/>
                         </Suspense>
                     </div>
                     <div>
