@@ -29,7 +29,7 @@ const Model1_sensibility = () => {
                     </div>
                 </div>
             }
-            <div className="model-TextColumns__3">
+            <div className="grid--3_3_3">
                 <div></div>
                 {isDesktopOrLaptop &&
                     <footer className="visually-hidden footNote__refs" id="footnote-label">
