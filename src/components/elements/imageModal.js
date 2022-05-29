@@ -28,7 +28,7 @@ const ImageViewer = ({open, onClose, image, _title}) => {
     if(!open) return null
     return(
         <div className="imageViewer__modal-main">
-            <div className="imageViewer__modal">
+            <div className="imageViewer__modal grid--1_8_1">
                 <div className="imageViewer__modal__title">
                     <h2 className="imageViewer__modal__title-inner">{_title}</h2>
                 </div>
@@ -37,7 +37,7 @@ const ImageViewer = ({open, onClose, image, _title}) => {
                     <div className="closeButton__modal" onClick={onClose}>▒▒✖▒▒</div>
                     <p></p>
                 </div>
-                <div className="imageViewer__modal__gallery-image__outer">
+                <div className="imageViewer__modal__gallery-image__outer gridH--even_5">
                     <Suspense>
                         <ImageGallery className="imageViewer__modal__gallery" images={imagesClean}/>
                     </Suspense>
