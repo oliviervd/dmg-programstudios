@@ -10,11 +10,11 @@ const XenoHeader = (props) => {
     }
 
     return (
-        <div className="headerContainer">
+        <div className="grid--97_3">
             <div>
 
                 {props.header_main &&
-                    <Link to="../home">
+                    <Link to="/home">
                         <div className="scroll-container">
                             <crypto--h1--large className="scroll-text"> models from the past for the future | </crypto--h1--large>
                         </div>
@@ -38,7 +38,7 @@ const XenoHeader = (props) => {
 
             </div>
 
-            <div className="languages_button_box">
+            <div className="gridH--even_2">
                 <div className="button-lang">NL</div>
                 <div className="button-lang">EN</div>
             </div>
