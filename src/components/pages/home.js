@@ -115,7 +115,7 @@ const Home = () => {
                     </div>
 
                     <div className="grid--3_7" style={{height: "50vh", margin:"1vw"}}>
-                        <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>INSTRUMENTS FOR CARE</h1>
+                        <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>INSTRUMENTS + TOOLS</h1>
                         <div className="center border_box" style={{height: "20vh", margin:"1vw"}}/>
                         {/*link to glossary*/}
                     </div>
