@@ -30,7 +30,7 @@ html, body {
     text-rendering: optimizeLegibility;
     cursor: cell;
     height: 200vh;
-    background: linear-gradient(180deg, #ffffff 0%,  #fbf2e7 85%);
+    background: linear-gradient(180deg, white 0%,  #fbf2e7 85%);
 
 }
 
@@ -222,6 +222,14 @@ a {
 }
 
 /* ---------------------------------- COLORS ---------------------------------- */
+
+.background__transparent {
+    background: transparent;
+}
+
+.background__white {
+    background: linear-gradient(180deg, #ffffff 0%,  #fbf2e7 85%);
+}
 
 .background__cool-to-warm-spectrum {
     background: linear-gradient(135deg,white 0%,white 75%,var(--yellow_ish) 100%);

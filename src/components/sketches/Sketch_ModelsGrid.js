@@ -4,9 +4,9 @@ import Sketch from "react-p5";
 const Sketch_ModelsGrid = p5 => {
 
     let WIDTH = window.innerWidth
-    let HEIGHT = window.innerHeight*(1/4)
+    let HEIGHT = window.innerHeight*(1/2)
 
-    let gridSize = 30;
+    let gridSize = 50;
     let _happy;
     let _pacragon;
 
@@ -21,8 +21,8 @@ const Sketch_ModelsGrid = p5 => {
     const draw = p5 => {
         p5.background(255);
 
-        let wave = p5.map(p5.sin(p5.radians(p5.frameCount)),-1, 1, 0.5, 1)
-        let _w2 = p5.map(p5.cos(p5.radians(p5.frameCount)),-1, 1, 0.5, 2)
+        let wave = p5.map(p5.sin(p5.radians(p5.frameCount*0.1)),-1, 1, 0.5, 1)
+        let _w2 = p5.map(p5.cos(p5.radians(p5.frameCount*0.1)),-1, 1, 0.5, 2)
         p5.textFont(_pacragon);
         p5.textSize(WIDTH/10);
         //p5.stroke(255);

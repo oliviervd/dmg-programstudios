@@ -4,6 +4,7 @@ import {Link} from "react-router-dom";
 const XenoHeader = React.lazy(() => import("../elements/xenoHeader"))
 const Sketch_ModelsGrid = React.lazy(() => import("../sketches/Sketch_ModelsGrid"))
 const SketchPlaceHolder = React.lazy(()=> import("../sketches/sketchPlaceHolder"))
+const CubicBezier = React.lazy(()=> import("../sketches/cubicBezier"));
 
 const Home = () => {
     return(
@@ -12,22 +13,19 @@ const Home = () => {
                 <XenoHeader header_main={true} header_models={true} header_model={false}/>
             </Suspense>
             <div className="rowScrollMain">
-                <Suspense>
-                    <Sketch_ModelsGrid/>
-                </Suspense>
-                <div style={{height: "200vh"}}>
-                    <h1 className="center" style={{fontFamily:"happy-times-NG_bold_master_web", fontSize: "60px"}}>CURATORIAL STATEMENT</h1>
+                <div style={{marginBottom: "-400px"}}>
+                    <Suspense>
+                        <CubicBezier/>
+                    </Suspense>
+                </div>
+                <div  style={{height: "200vh"}}>
+
                     {/* curatorial statement (text) */}
                     <div className="grid--3_4_3">
-                        <div>
-                            {/*<div style={{}}>
-                                <div style={{height: "60vh"}}/>
-                                <h1 className=" pinkHeader center" style={{fontSize: "30px"}}>__pull. transmit.</h1>
-                                <h1 className=" pinkHeader italicSet center" style={{fontSize: "30px"}}>fall in love,</h1>
-                                <h1 className=" pinkHeader center" style={{fontSize: "30px"}}>& break up again.</h1>
-                            </div>*/}
+                        <div className="background__transparent">
                         </div>
-                        <div style={{height: "auto"}}>
+                        <div className="background__white" style={{height: "auto", padding: "80px"}}>
+                            <h1 style={{fontFamily:"happy-times-NG_bold_master_web", fontSize: "60px", textAlign: "center"}}>CURATORIAL STATEMENT</h1>
                             <p style={{fontFamily: "happy-times-NG_italic_master_web"}} className="text">“I then turned my microscope to the cognition engine… This was an engine undergoing continuous transformation,
                                 indeed modifying itself as part of its operations. The lattice was not so much a machine as it was a page on
                                 which the machine was written, and on which the machine itself ceaselessly wrote.” (Chiang, T. , 2019. Exhalation.)</p>
@@ -54,7 +52,7 @@ const Home = () => {
                                 The collection database may be the starting point of this search, but its finality lies precisely
                                 in the critical questioning of the one-to-one translation of its structure in making the collection public.</p>
                         </div>
-                        <div style={{height: "50vh"}}/>
+                        <div className="background__transparent" style={{height: "50vh"}}/>
                     </div>
                     {/* curatorial statement (text) */}
 
