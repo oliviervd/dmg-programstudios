@@ -15,14 +15,15 @@ const CubicBezier = (p5) => {
 
     const setup = (p5, canvasParentRef) => {
         canvas = p5.createCanvas(WIDTH, HEIGHT).parent(canvasParentRef);
+
     }
     const draw = p5 => {
         // setup
         p5.background(BG);
 
-        let waveV = p5.map(p5.sin(p5.radians(p5.frameCount)), -1, 1, -200, 300);
-        let waveH = p5.map(p5.sin(p5.radians(p5.frameCount)), -1, 1, -400, 1000);
-        let _p = p5.map(p5.tan(p5.radians(p5.frameCount)), -1, 1, -1000, 0 + waveH);
+        let waveV = p5.map(p5.sin(p5.radians(p5.frameCount*0.9)), -1, 1, -200, 300);
+        let waveH = p5.map(p5.sin(p5.radians(p5.frameCount*0.5)), -1, 1, -400, 1000);
+        let _p = p5.map(p5.tan(p5.radians(p5.frameCount*0.7)), -1, 1, -1000, 0 + waveH);
 
         let cX = WIDTH/2 + waveH + _p; // center X
         let cY = HEIGHT/2 + waveV - _p + waveH; // center Y
@@ -36,7 +37,8 @@ const CubicBezier = (p5) => {
         let p4 = p5.createVector(WIDTH, HEIGHT); // bottom-left;
 
 
-        p5.stroke(FG);
+        p5.stroke(FG, 120 + waveV/10);
+        //p5.fill(BG);
         //p5.strokeWeight(2);
 
         let t;
