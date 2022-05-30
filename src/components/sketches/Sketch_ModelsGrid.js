@@ -6,7 +6,7 @@ const Sketch_ModelsGrid = p5 => {
     let WIDTH = window.innerWidth
     let HEIGHT = window.innerHeight*(1/4)
 
-    let gridSize = 20;
+    let gridSize = 30;
     let _happy;
     let _pacragon;
 
@@ -22,7 +22,7 @@ const Sketch_ModelsGrid = p5 => {
         p5.background(255);
 
         let wave = p5.map(p5.sin(p5.radians(p5.frameCount)),-1, 1, 0.5, 1)
-        let _w2 = p5.map(p5.cos(p5.radians(p5.frameCount)),-1, 1, 0.5, 10)
+        let _w2 = p5.map(p5.cos(p5.radians(p5.frameCount)),-1, 1, 0.5, 2)
         p5.textFont(_pacragon);
         p5.textSize(WIDTH/10);
         //p5.stroke(255);
@@ -45,7 +45,7 @@ const Sketch_ModelsGrid = p5 => {
                 p5.stroke(0)
 
                 let _w = p5.random(-1, 5);
-                if(_w==0 || _w==2) {
+                if(_w==0) {
                     p5.fill("#afc6ae");
                 }
                 p5.strokeWeight(_w2);
