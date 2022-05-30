@@ -40,13 +40,13 @@ const Home = () => {
                                 always critically probing new forms of knowledge production. And in its growth, it is both reflective
                                 and performative in nature, as we embrace the (as yet) unknown in its potential.</p>
                             <ul>
-                                <h1 className="center" style={{fontFamily:"lineal"}}>* </h1> <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}> as a <strong> dynamic network</strong>; the project is in constant evolution and critically approaches the
+                                <h4 className="center" style={{fontFamily:"lineal"}}>* </h4> <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}> as a <strong> dynamic network</strong>; the project is in constant evolution and critically approaches the
                                 underlying metabolism of the museum as an institution. No "rinse and repeat" but a form of
                                 "slow programming", a slow burning change, that takes time for getting to know itself. Because whoever wants to shape
                                 the future, will have to know its past.</p>
                             </ul>
                             <ul>
-                                <h1 className="center" style={{fontFamily:"lineal"}}>* </h1> <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}> As a <strong>living archive</strong>; it approaches the past as an asset for the present and the future.
+                                <h4 className="center" style={{fontFamily:"lineal"}}>* </h4> <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}> As a <strong>living archive</strong>; it approaches the past as an asset for the present and the future.
                                 A growing organ, which absorbs, processes and discards. The intertwining of traces of the past
                                 with visions for the future. </p>
                             </ul>
@@ -57,6 +57,9 @@ const Home = () => {
                         <div style={{height: "50vh"}}/>
                     </div>
                     {/* curatorial statement (text) */}
+
+                    <br/><br/><br/><br/><br/><br/>
+
                     <div style={{padding: "20px"}}>
                         <div className="grid--even_4">
                             <div className="center" style={{height: "50vh", margin:"1vw"}}>
