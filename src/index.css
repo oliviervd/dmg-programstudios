@@ -71,6 +71,10 @@ div {
     src: local("lineal"), url(fonts/Lineal.otf);
 }
 
+.text {
+    font-size: 18px;
+}
+
 crypto--h1--large {
     font-size: 70px;
     font-family: "P-ACR-AGON-Regular", sans-serif;
@@ -261,7 +265,7 @@ a {
 
 .box{
     width: 400px;
-    font-size: 15px;
+    font-size: 18px;
 } @media (max-width: 1224px) {
     .box {
         width: 90%;

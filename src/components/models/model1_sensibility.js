@@ -100,7 +100,7 @@ const Model1_sensibility = () => {
 
                 <article>
                     <div className="left box" style={{fontFamily: "happy-times-NG_italic_master_web"}}>
-                        <p className="subHeader__text">RESPONSIBLE</p>“When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
+                        <p className="subHeader__text text">RESPONSIBLE</p>“When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
                         For four years this question was central to one of the tracks in Object Stories, the permanent presentation
                         of the collection of Design Museum Gent. The objects on display in this track all in their
                         own way demonstrated that although there is an increased focus on sustainability and social concern today,
@@ -109,7 +109,7 @@ const Model1_sensibility = () => {
                         defined new production methods and/or formulated alternate forms of society that better correspond to the issues at hand.
                     </div>
                     {isDesktopOrLaptop && <br/>}
-                    <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                    <div className="left box text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                         Marjan van Helvert defined “Responsible Objects” as objects that behave responsibly, consciously
                         and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
                         Taking responsibility through responsible behavior affects and effects all parts of society,
@@ -123,7 +123,7 @@ const Model1_sensibility = () => {
                         In this sense, making the institution sustainable also implies a critical reprogramming of the museum and its <a href="#metabolism" aria-describedby="glossary-label" id="metabolism_ref">metabolism</a> as a whole.
                     </div>
                     {isDesktopOrLaptop && <br/>}
-                    <h2 className="left box quote">__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
+                    <h2 className="left box quote text">__Who are we taking care for? <br/> On the Logic of Collecting and Sovereignty towards a Collection of Care.</h2>
                     {isDesktopOrLaptop && <br/>}
 
                     {/*read more: open the whole text only when asked for; clean up layout */}
@@ -131,7 +131,7 @@ const Model1_sensibility = () => {
                     {!readMore &&
                         <div>
                             {isDesktopOrLaptop && <br/>}
-                            <p className="underlined button__readMore" onClick={handleReadMore}> READ MORE </p>
+                            <p className="underlined button__readMore text" onClick={handleReadMore}> READ MORE </p>
                             {isDesktopOrLaptop && <br/>}
                         </div>
                     }
@@ -139,7 +139,7 @@ const Model1_sensibility = () => {
                     {readMore &&
                         <div>
                             <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                <p className="subHeader__text">METABOLISM</p>Can we reimagine and
+                                <p className="subHeader__text text">METABOLISM</p>Can we reimagine and
                                 rethink the metabolism of the museum in such a way that the core tasks of the museum in terms of
                                 taking care of the collection (conservation/preservation) are reformulated into
                                 the sensible act of supporting a  <u>collection of care</u>?
@@ -157,7 +157,7 @@ const Model1_sensibility = () => {
                             </div>
                             {isDesktopOrLaptop && <br/>}
                             <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                <p className="subHeader__text">TO TAKE CARE OF </p>
+                                <p className="subHeader__text text">TO TAKE CARE OF </p>
                                 Taking care of something or someone is a highly social endeavor and is perhaps even a premise for
                                 us to co-exist. To support this act of caretaking technology has been developed to aid us in the process.
                                 However, this same technology can also lead to direct opposite when not used or approached <a href="#technological_senisbility" aria-describedby="footnote-label" id="technological_senisbility_ref">responsibly</a>.
@@ -171,7 +171,7 @@ const Model1_sensibility = () => {
                                 knowledge transfer, this same idea of one object inspiring the creation of another. To become performative again. <br/><br/>
                             </div>
 
-                            <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                            <div className="left box text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                                 The interface below embodies this idea, recursively looping
                                 over the collection, as one would flip the pages of book, to establish encounters of objects that are
                                 related (in terms of their color) to a particular color sample in this book. Acting as a sensory layer,
@@ -184,7 +184,7 @@ const Model1_sensibility = () => {
 
                             {isDesktopOrLaptop && <br/>}
 
-                            <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                            <div className="left box text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                                 This approach of the collection as a social network, - a speculative system that connects in a transhistorical and transdisciplinary way -
                                 transcends the art historical and institutionalized view - resounding the indeterminacy that might lie at the museum’s foundations.
                                 At the same time it very much resonates with the "indeterminacy" that might lie at the museum’s foundations, a place where knowledge is constantly being (re-)produced based upon the passage of both human and non-human agency.
