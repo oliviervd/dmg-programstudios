@@ -5,7 +5,7 @@ import Sketch from "react-p5";
 const CubicBezier = (p5) => {
 
     let canvas;
-    let BG = 255;
+    let BG = "#C6AEAF";
     let FG = 0;
 
     let center, v0, v1, v2, v3
@@ -21,10 +21,11 @@ const CubicBezier = (p5) => {
         p5.background(BG);
 
         let waveV = p5.map(p5.sin(p5.radians(p5.frameCount)), -1, 1, -200, 300);
-        let waveH = p5.map(p5.sin(p5.radians(p5.frameCount)), -1, 1, -400, 100);
+        let waveH = p5.map(p5.sin(p5.radians(p5.frameCount)), -1, 1, -400, 1000);
+        let _p = p5.map(p5.tan(p5.radians(p5.frameCount)), -1, 1, -1000, 0 + waveH);
 
-        let cX = WIDTH/2 + waveH; // center X
-        let cY = HEIGHT/2 + waveV; // center Y
+        let cX = WIDTH/2 + waveH + _p; // center X
+        let cY = HEIGHT/2 + waveV - _p + waveH; // center Y
 
         let delta = 0.01;
 
@@ -36,7 +37,7 @@ const CubicBezier = (p5) => {
 
 
         p5.stroke(FG);
-        p5.strokeWeight(2);
+        //p5.strokeWeight(2);
 
         let t;
 
@@ -46,6 +47,10 @@ const CubicBezier = (p5) => {
             let xT2 = p5.lerp(p0.x, p2.x, t);
             let yT1 = p5.lerp(p1.y, p0.y, t);
             let yT2 = p5.lerp(p0.y, p2.y, t);
+
+            let _w = 2 * t;
+            p5.strokeWeight(_w);
+
             p5.line(xT1, yT1, xT2, yT2);
             let xT = p5.lerp(xT1, xT2, t);
             let yT = p5.lerp(yT1, yT2, t);
@@ -59,6 +64,10 @@ const CubicBezier = (p5) => {
             let xT2 = p5.lerp(p0.x, p4.x, t);
             let yT1 = p5.lerp(p3.y, p0.y, t);
             let yT2 = p5.lerp(p0.y, p4.y, t);
+
+            let _w = 3 * t;
+            p5.strokeWeight(_w);
+
             p5.line(xT1, yT1, xT2, yT2);
             let xT = p5.lerp(xT1, xT2, t);
             let yT = p5.lerp(yT1, yT2, t);
@@ -72,6 +81,10 @@ const CubicBezier = (p5) => {
             let xT2 = p5.lerp(p0.x, p3.x, t);
             let yT1 = p5.lerp(p1.y, p0.y, t);
             let yT2 = p5.lerp(p0.y, p3.y, t);
+
+            let _w = 2 * t;
+            p5.strokeWeight(_w);
+
             p5.line(xT1, yT1, xT2, yT2);
             let xT = p5.lerp(xT1, xT2, t);
             let yT = p5.lerp(yT1, yT2, t);
@@ -85,6 +98,10 @@ const CubicBezier = (p5) => {
             let xT2 = p5.lerp(p0.x, p4.x, t);
             let yT1 = p5.lerp(p2.y, p0.y, t);
             let yT2 = p5.lerp(p0.y, p4.y, t);
+
+            let _w = 2 * t;
+            p5.strokeWeight(_w);
+
             p5.line(xT1, yT1, xT2, yT2);
             let xT = p5.lerp(xT1, xT2, t);
             let yT = p5.lerp(yT1, yT2, t);

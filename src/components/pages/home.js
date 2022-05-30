@@ -13,7 +13,7 @@ const Home = () => {
                 <XenoHeader header_main={true} header_models={true} header_model={false}/>
             </Suspense>
             <div className="rowScrollMain">
-                <div style={{marginBottom: "-400px"}}>
+                <div style={{marginBottom: "-600px"}}>
                     <Suspense>
                         <CubicBezier/>
                     </Suspense>
