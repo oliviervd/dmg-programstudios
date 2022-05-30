@@ -58,7 +58,7 @@ const Home = () => {
 
                     <br/><br/><br/><br/><br/><br/>
 
-                    <div style={{padding: "20px"}}>
+                    <div style={{padding: "100px"}}>
                         <div className="grid--even_4">
                             <div className="center" style={{height: "50vh", margin:"1vw"}}>
                                 <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>MODEL1: <br/> SENSE & SENSIBILITY</h1>
@@ -112,9 +112,9 @@ const Home = () => {
                         </div>
                     </div>
 
-                    <div className="grid--3_7" style={{height: "50vh", margin:"1vw"}}>
-                        <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>INSTRUMENTS + TOOLS</h1>
+                    <div className="grid--7_3" style={{height: "50vh", margin:"1vw", padding:"100px"}}>
                         <div className="center border_box" style={{height: "20vh", margin:"1vw"}}/>
+                        <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>INSTRUMENTS + TOOLS</h1>
                         {/*link to glossary*/}
                     </div>
 
