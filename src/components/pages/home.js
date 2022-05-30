@@ -16,7 +16,7 @@ const Home = () => {
                     <Sketch_ModelsGrid/>
                 </Suspense>
                 <div style={{height: "200vh"}}>
-                    <h1 className="center" style={{fontFamily:"lineal", fontSize: "60px"}}>CURATORIAL STATEMENT</h1>
+                    <h1 className="center" style={{fontFamily:"happy-times-NG_bold_master_web", fontSize: "60px"}}>CURATORIAL STATEMENT</h1>
                     {/* curatorial statement (text) */}
                     <div className="grid--3_4_3">
                         <div>
@@ -63,7 +63,7 @@ const Home = () => {
                     <div style={{padding: "20px"}}>
                         <div className="grid--even_4">
                             <div className="center" style={{height: "50vh", margin:"1vw"}}>
-                                <h1 className="center" style={{fontFamily:"lineal"}}>MODEL1: <br/> SENSE & SENSIBILITY</h1>
+                                <h1 className="center" style={{fontFamily:"happy-times-NG_bold_master_web"}}>MODEL1: <br/> SENSE & SENSIBILITY</h1>
                                 <div>
                                     <p className="justify text" style={{fontFamily: "happy-times-NG_regular_master_web", padding: "4px"}}>
                                         how do we adapt – not as an individual institution – but as a community of individuals.
@@ -82,13 +82,13 @@ const Home = () => {
                                             On the Logic of Collecting and Sovereignty towards a Collection of Care.
                                             </p>
                                         </Link>
-                                        <p className="center text" style={{fontFamily: "lineal", padding: "4px", borderBottom: "2px var(--main__green) solid", borderTop: "2px var(--main__green) solid"}} >ESSAY, INTERFACE</p>
+                                        <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web", padding: "4px", borderBottom: "2px var(--main__green) solid", borderTop: "2px var(--main__green) solid"}} >ESSAY, INTERFACE</p>
                                     </div>
                                 </div>
 
                             </div>
                             <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>
-                                <h1 className="center" style={{fontFamily:"lineal"}}>MODEL2</h1>`
+                                <h1 className="center" style={{fontFamily:"happy-times-NG_bold_master_web"}}>MODEL2</h1>`
                                 <div id="PLCH" style={{height: "40vh"}}>
                                     <Suspense>
                                         <SketchPlaceHolder/>
@@ -96,7 +96,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>
-                                <h1 className="center" style={{fontFamily:"lineal"}}>MODEL3</h1>`
+                                <h1 className="center" style={{fontFamily:"happy-times-NG_bold_master_web"}}>MODEL3</h1>`
                                 <div id="PLCH" style={{height: "40vh"}}>
                                     <Suspense>
                                         <SketchPlaceHolder/>
@@ -104,7 +104,7 @@ const Home = () => {
                                 </div>
                             </div>
                             <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>
-                                <h1 className="center" style={{fontFamily:"lineal"}}>MODEL4</h1>`
+                                <h1 className="center" style={{fontFamily:"happy-times-NG_bold_master_web"}}>MODEL4</h1>`
                                 <div id="PLCH" style={{height: "50vh", zIndex: "-100000"}}>
                                     <Suspense>
                                         <SketchPlaceHolder/>
@@ -115,7 +115,7 @@ const Home = () => {
                     </div>
 
                     <div className="grid--3_7" style={{height: "50vh", margin:"1vw"}}>
-                        <h1 className="center" style={{fontFamily:"lineal"}}>INSTRUMENTS FOR CARE</h1>
+                        <h1 className="center" style={{fontFamily:"happy-times-NG_bold_master_web"}}>INSTRUMENTS FOR CARE</h1>
                         <div className="center border_box" style={{height: "20vh", margin:"1vw"}}/>
                         {/*link to glossary*/}
                     </div>
