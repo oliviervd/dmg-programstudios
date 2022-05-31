@@ -91,13 +91,16 @@ const SpectreMain = (props) => {
 
     return(
             <div className="rowScrollMain">
-                <Suspense>
-                    {/*<Suspense>
+                    <Suspense>
+                        {/*<Suspense>
                         <modalWindow open={bruises} onClose={()=>setBruises(false)}/>
                     </Suspense>*/}
-                    {isDesktopOrLaptop && <Sketch13D/>}
-                    <Model1_sensibility/>
-                </Suspense>
+                        <div style={{marginBottom: "-300px", marginTop: "-200px"}}>
+                            {isDesktopOrLaptop && <Sketch13D/>}
+                        </div>
+                        <Model1_sensibility/>
+                    </Suspense>
+
                 <br/>
                 <div className="dotLine"/>
                 <br/>

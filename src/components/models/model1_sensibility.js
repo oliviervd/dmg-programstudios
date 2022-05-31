@@ -22,10 +22,14 @@ const Model1_sensibility = () => {
             {isDesktopOrLaptop &&
                 <div>
                     <div className="grid--3_4_3">
-                        <div></div><h1 className="center">ON THE LOGIC OF COLLECTING AND SOVEREIGNTY TOWARDS A COLLECTION OF CARE</h1>
+                        <div className="background__transparent"></div>
+                        <h1 className="center"  style={{height: "auto", padding: "80px", background:"white"}}>ON THE LOGIC OF COLLECTING AND SOVEREIGNTY TOWARDS A COLLECTION OF CARE</h1>
+                        <div className="background__transparent"></div>
                     </div>
                     <div className="grid--4_2_4">
-                        <div/><p className="center" style={{fontSize: "16px", fontFamily: "lineal", borderBottom: "2px var(--main__green) solid", borderTop: "2px var(--main__green) solid"}}>ESSAY, INTERFACE</p><div/>
+                        <div className="background__transparent"/>
+                        <p className="center background__white" style={{fontSize: "16px", fontFamily: "lineal", borderBottom: "2px var(--main__green) solid", borderTop: "2px var(--main__green) solid"}}>ESSAY, INTERFACE</p>
+                        <div className="background__transparent"/>
                     </div>
                 </div>
             }
