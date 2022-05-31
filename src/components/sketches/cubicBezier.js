@@ -40,13 +40,43 @@ const CubicBezier = (p5) => {
         //p5.strokeWeight(2);
 
         let t;
+        p5.beginShape();
+        for (let t = 0; t <= 1.000001; t += delta) {
+            quadratic(p0, p1, p2, t);
+        }
+        p5.endShape();
 
         p5.beginShape();
         for (let t = 0; t <= 1.000001; t += delta) {
-            let xT1 = p5.lerp(p1.x, p0.x, t);
-            let xT2 = p5.lerp(p0.x, p2.x, t);
-            let yT1 = p5.lerp(p1.y, p0.y, t);
-            let yT2 = p5.lerp(p0.y, p2.y, t);
+            quadratic(p0, p3, p4, t);
+        }
+        p5.endShape();
+
+        p5.beginShape();
+        for (let t = 0; t <= 1.000001; t += delta) {
+            quadratic(p0, p1, p3, t);
+        }
+        p5.endShape();
+
+        p5.beginShape();
+        for (let t = 0; t <= 1.000001; t += delta) {
+            quadratic(p0, p2, p4, t);
+        }
+        p5.endShape();
+
+        p5.beginShape();
+        for (let t = 0; t <= 1.000001; t += delta) {
+            let x = quadratic(p0, p2, p4, t);
+            let y = quadratic(p0, p1, p4, t);
+            p5.vertex(x, y);
+        }
+        p5.endShape();
+
+        function quadratic(s0, s1, s2, t) {
+            let xT1 = p5.lerp(s1.x, s0.x, t);
+            let xT2 = p5.lerp(s0.x, s2.x, t);
+            let yT1 = p5.lerp(s1.y, s0.y, t);
+            let yT2 = p5.lerp(s0.y, s2.y, t);
 
             let _w = 2 * t;
             p5.strokeWeight(_w);
@@ -55,59 +85,8 @@ const CubicBezier = (p5) => {
             let xT = p5.lerp(xT1, xT2, t);
             let yT = p5.lerp(yT1, yT2, t);
             p5.vertex(xT, yT);
+
         }
-        p5.endShape();
-
-        p5.beginShape();
-        for (let t = 0; t <= 1.000001; t += delta) {
-            let xT1 = p5.lerp(p3.x, p0.x, t);
-            let xT2 = p5.lerp(p0.x, p4.x, t);
-            let yT1 = p5.lerp(p3.y, p0.y, t);
-            let yT2 = p5.lerp(p0.y, p4.y, t);
-
-            let _w = 3 * t;
-            p5.strokeWeight(_w);
-
-            p5.line(xT1, yT1, xT2, yT2);
-            let xT = p5.lerp(xT1, xT2, t);
-            let yT = p5.lerp(yT1, yT2, t);
-            p5.vertex(xT, yT);
-        }
-        p5.endShape();
-
-        p5.beginShape();
-        for (let t = 0; t <= 1.000001; t += delta) {
-            let xT1 = p5.lerp(p1.x, p0.x, t);
-            let xT2 = p5.lerp(p0.x, p3.x, t);
-            let yT1 = p5.lerp(p1.y, p0.y, t);
-            let yT2 = p5.lerp(p0.y, p3.y, t);
-
-            let _w = 2 * t;
-            p5.strokeWeight(_w);
-
-            p5.line(xT1, yT1, xT2, yT2);
-            let xT = p5.lerp(xT1, xT2, t);
-            let yT = p5.lerp(yT1, yT2, t);
-            p5.vertex(xT, yT);
-        }
-        p5.endShape();
-
-        p5.beginShape();
-        for (let t = 0; t <= 1.000001; t += delta) {
-            let xT1 = p5.lerp(p2.x, p0.x, t);
-            let xT2 = p5.lerp(p0.x, p4.x, t);
-            let yT1 = p5.lerp(p2.y, p0.y, t);
-            let yT2 = p5.lerp(p0.y, p4.y, t);
-
-            let _w = 2 * t;
-            p5.strokeWeight(_w);
-
-            p5.line(xT1, yT1, xT2, yT2);
-            let xT = p5.lerp(xT1, xT2, t);
-            let yT = p5.lerp(yT1, yT2, t);
-            p5.vertex(xT, yT);
-        }
-        p5.endShape();
 
 
     }
