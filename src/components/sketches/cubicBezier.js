@@ -4,19 +4,17 @@ import Sketch from "react-p5";
 
 const CubicBezier = (p5) => {
 
-    let canvas;
-    let BG = "#C6AEAF";
+    let canvas, _happy;
+    let BG = "#ffe600";
     let FG = 0;
-
-    let center, v0, v1, v2, v3
 
     let WIDTH = window.innerWidth;
     let HEIGHT = window.innerHeight * 2/3;
 
     const setup = (p5, canvasParentRef) => {
         canvas = p5.createCanvas(WIDTH, HEIGHT).parent(canvasParentRef);
-
     }
+
     const draw = p5 => {
         // setup
         p5.background(BG);

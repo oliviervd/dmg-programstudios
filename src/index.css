@@ -7,6 +7,7 @@
     --triad_pink: #C6AEAF;
     --white_main: #F1F1F1;
     --yellow_ish: papayawhip;
+    --yellow_bright: #ffe600;
     --happy__bold: "happy-times-NG_bold_master_web";
     --happy__regular: "happy-times-NG_regular_master_web";
     --happy__italic: "happy-times-NG_italic_master_web";
@@ -242,6 +243,14 @@ a {
 .background__transparent__flow {
     backround: transparent;
     background-image: linear-gradient(180deg,var(--yellow_ish) 60%,rgba(255,230,0,0));
+}
+
+.background__yellow {
+    background: var(--yellow_bright);
+}
+
+.background__pink {
+    background: var(--triad_pink);
 }
 
 /* ---------------------------------- LAYOUT ---------------------------------- */

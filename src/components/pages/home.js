@@ -3,8 +3,9 @@ import {Link} from "react-router-dom";
 
 const XenoHeader = React.lazy(() => import("../elements/xenoHeader"))
 const Sketch_ModelsGrid = React.lazy(() => import("../sketches/Sketch_ModelsGrid"))
-const SketchPlaceHolder = React.lazy(()=> import("../sketches/sketchPlaceHolder"))
 const CubicBezier = React.lazy(()=> import("../sketches/cubicBezier"));
+
+const SketchPlaceHolder = React.lazy(()=> import("../sketches/sketchPlaceHolder"))
 
 const Home = () => {
     return(
@@ -58,8 +59,8 @@ const Home = () => {
 
                     <br/><br/><br/><br/><br/><br/>
 
-                    <div style={{padding: "100px"}}>
-                        <div className="grid--even_4">
+                    <div style={{padding: "100px"}} className="background__yellow">
+                        <div className="grid--even_4 background__yellow">
                             <div className="center" style={{height: "50vh", margin:"1vw"}}>
                                 <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>MODEL1: <br/> SENSE & SENSIBILITY</h1>
                                 <div>
