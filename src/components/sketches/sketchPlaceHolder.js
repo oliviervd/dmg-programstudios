@@ -1,14 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import p5 from "react-p5"
 import Sketch from "react-p5";
 
 const SketchPlaceHolder = (p5, props) => {
 
+    let _c = props._id
     let c;
     let n =20;
-    console.log(props._id);
-    let WIDTH = document.getElementById("PLCH").offsetWidth;
-    let HEIGHT = document.getElementById("PLCH").offsetHeight;
+    let WIDTH = 400;
+    let HEIGHT = 400;
     const BG = "#fbf2e7";
     //const BG = 255;
     const FG = 0;
@@ -27,8 +27,8 @@ const SketchPlaceHolder = (p5, props) => {
         p5.strokeWeight(2);
 
         window.onresize = function() {
-            WIDTH = document.getElementById("PLCH").offsetWidth;
-            HEIGHT = document.getElementById("PLCH").offsetHeight;
+            WIDTH = document.getElementById(_c).offsetWidth;
+            HEIGHT = document.getElementById(_c).offsetHeight;
             c.size(WIDTH, HEIGHT);
         }
 

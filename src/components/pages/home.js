@@ -104,7 +104,7 @@ const Home = () => {
                             </div>
                             <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>
                                 <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>MODEL4</h1>`
-                                <div id="PLCH1" style={{height: "50vh", zIndex: "-100000"}}>
+                                <div id="PLCH" style={{height: "50vh", zIndex: "-100000"}}>
                                     <Suspense>
                                         <SketchPlaceHolder _id={"PLCH1"}/>
                                     </Suspense>
