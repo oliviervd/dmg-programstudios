@@ -10,19 +10,23 @@ const XenoHeader = (props) => {
     }
 
     return (
-        <div className="grid--97_3">
+        <div>
             <div>
 
                 {props.header_main &&
                     <Link to="/home" style={{ textDecoration: 'none' }}>
-                        <div className="scroll-container">
-                            <crypto--h1--large className="scroll-text" > models from the past for the future | </crypto--h1--large>
+                        <div className="scroll-container" style={{background: "#ffe600"}}>
+                            <h1 className="scroll-text" > models from the past for the future | </h1>
+                            <h1 className="scroll-text" > models from the past for the future | </h1>
+                            <h1 className="scroll-text" > models from the past for the future | </h1>
+                            <h1 className="scroll-text" > models from the past for the future | </h1>
+                            <h1 className="scroll-text" > models from the past for the future | </h1>
                         </div>
                     </Link>
                 }
 
                 {props.header_models &&
-                    <div className="scroll-container ">
+                    <div className="scroll-container " style={{background: "#ffe600"}}>
                         <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the sensible | SPECTRUM | the computational |</h2>
                         <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the sensible | SPECTRUM | the computational |</h2>
                         <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the sensible | SPECTRUM | the computational |</h2>
@@ -31,17 +35,21 @@ const XenoHeader = (props) => {
                 }
 
                 {props.header_model &&
-                    <div className="scroll-container background__transparent__flow " style={{}}>
+                    <div className="scroll-container background__transparent__flow ">
                         {model_title}{model_title}{model_title}{model_title}{model_title}
                     </div>
                 }
 
+                    <div className="background__transparent__flow grid--even_4" style={{textAlign: "center"}}>
+                        <h2>about</h2> <h2>almanac</h2> <h2>reading list</h2>
+                    </div>
+
             </div>
 
-            <div className="gridH--even_2">
+            {/*<div className="gridH--even_2 background__yellow" >
                 <div className="button-lang">NL</div>
                 <div className="button-lang">EN</div>
-            </div>
+            </div>*/}
 
 
         </div>
