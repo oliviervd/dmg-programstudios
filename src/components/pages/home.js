@@ -1,9 +1,8 @@
-import React, {Suspense, useEffect} from "react";
+import React, {Suspense} from "react";
 import {Link} from "react-router-dom";
 import SketchPlaceHolder from "../sketches/sketchPlaceHolder";
 
 const XenoHeader = React.lazy(() => import("../elements/xenoHeader"))
-const Sketch_ModelsGrid = React.lazy(() => import("../sketches/Sketch_ModelsGrid"))
 const CubicBezier = React.lazy(()=> import("../sketches/cubicBezier"));
 
 
@@ -12,7 +11,7 @@ const Home = () => {
     return(
         <div>
             <Suspense>
-                <XenoHeader header_main={true} header_models={true} header_model={false}/>
+                <XenoHeader header_main={true} header_models={false} header_model={false} header_nav={true}/>
             </Suspense>
             <div className="rowScrollMain">
                 <div style={{marginBottom: "-600px"}}>
@@ -118,9 +117,8 @@ const Home = () => {
                         <div className="center border_box" style={{height: "20vh", margin:"1vw"}}/>
                         <div>
                             <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>INSTRUMENTS + TOOLS</h1>
-                            <h2 style={{textTransform: "uppercase"}}>**Glossary</h2>
+                            <h2 style={{textTransform: "uppercase"}}>**Almenac</h2>
                             <h2 style={{textTransform: "uppercase"}}>**Reading list</h2>
-                            <h2 style={{textTransform: "uppercase"}}>**Manifest</h2>
                         </div>
                         {/*link to glossary*/}
                     </div>
