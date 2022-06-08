@@ -15,7 +15,7 @@ const XenoHeader = (props) => {
 
                 {props.header_main &&
                     <Link to="/home" style={{ textDecoration: 'none' }}>
-                        <div className="scroll-container" style={{background: "#ffe600"}}>
+                        <div className="scroll-container background__cool-to-warm-spectrum">
                             <h1 className="scroll-text" > models from the past for the future | </h1>
                             <h1 className="scroll-text" > models from the past for the future | </h1>
                             <h1 className="scroll-text" > models from the past for the future | </h1>
@@ -41,7 +41,7 @@ const XenoHeader = (props) => {
                 }
 
                 {props.header_nav &&
-                    <div className="background__transparent__flow grid--even_4" style={{textAlign: "center"}}>
+                    <div className="background__transparent__flow grid--even_3" style={{textAlign: "center"}}>
                         <Link to="/home">
                             <h3>ABOUT</h3>
                         </Link>
