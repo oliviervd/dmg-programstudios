@@ -11,6 +11,7 @@ import './glossary.css';
 // import pages
 import Landing from "./components/pages/landing";
 import Home from "./components/pages/home";
+import Glossary from "./components/pages/Glossary";
 
 const rootElement = document.getElementById("root");
 render(
@@ -19,6 +20,7 @@ render(
             <Route path="/" element={<Landing/>}/>
             <Route path="home" element={<Home />}/>
             <Route path="model1" element={<App />}/>
+            <Route path="glossary" element={<Glossary />}/>
         </Routes>
     </BrowserRouter>,
     rootElement
