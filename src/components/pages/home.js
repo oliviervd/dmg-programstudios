@@ -86,7 +86,7 @@ const Home = () => {
                                 </div>
 
                             </div>
-                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>
+                            <div className="center" style={{height: "50vh", margin:"1vw"}}>
                                 <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>MODEL2</h1>`
                                 <div id="PLCH" style={{height: "40vh"}}>
                                     <Suspense>
@@ -94,7 +94,7 @@ const Home = () => {
                                     </Suspense>
                                 </div>
                             </div>
-                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>
+                            <div className="center" style={{height: "50vh", margin:"1vw"}}>
                                 <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>MODEL3</h1>`
                                 <div id="PLCH" style={{height: "40vh"}}>
                                     <Suspense>
@@ -102,7 +102,7 @@ const Home = () => {
                                     </Suspense>
                                 </div>
                             </div>
-                            <div className="center border_box" style={{height: "50vh", margin:"1vw"}}>
+                            <div className="center" style={{height: "50vh", margin:"1vw"}}>
                                 <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>MODEL4</h1>`
                                 <div id="PLCH" style={{height: "50vh", zIndex: "-100000"}}>
                                     <Suspense>
@@ -111,16 +111,6 @@ const Home = () => {
                                 </div>
                             </div>
                         </div>
-                    </div>
-
-                    <div className="grid--7_3" style={{height: "50vh", margin:"1vw", padding:"100px"}}>
-                        <div className="center border_box" style={{height: "20vh", margin:"1vw"}}/>
-                        <div>
-                            <h1 className="center" style={{fontSize: "30px", fontFamily:"happy-times-NG_bold_master_web"}}>INSTRUMENTS + TOOLS</h1>
-                            <h2 style={{textTransform: "uppercase"}}>**Almenac</h2>
-                            <h2 style={{textTransform: "uppercase"}}>**Reading list</h2>
-                        </div>
-                        {/*link to glossary*/}
                     </div>
 
                 </div>
