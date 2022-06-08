@@ -104,7 +104,7 @@ const SpectreMain = (props) => {
                 <br/>
                 <div className="dotLine"/>
                 <br/>
-                <div className="grid--7_3">
+                <div className="grid--7_3" style={{margin: "100px"}}>
                     <div>
                         <h1 className=" pinkHeader">COLLECTIONS</h1>
                         <h1 className=" pinkHeader italicSet">OF CARE:</h1>
