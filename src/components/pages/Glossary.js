@@ -8,8 +8,8 @@ const Glossary = () => {
 
     // connect with google sheets API.
     const {data} = useGoogleSheets({
-        apiKey: "AIzaSyDHjinRVt4Hi3VeWbRhkq5z-jyAPsli1sg",
-        sheetId: "1p8nTYZBJ4nZfyVON_v_JA_YhAWoEvfcoRwar-qfD-3E"
+        apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
+        sheetId: process.env.REACT_APP_GOOGLE_SHEETS_ID
     })
 
     // push objets in array
