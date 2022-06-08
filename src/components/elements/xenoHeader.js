@@ -5,7 +5,7 @@ const XenoHeader = (props) => {
 
     let model_title;
 
-    if (props.model == "model_1") {
+    if (props.model === "model_1") {
         model_title = <h3 className="scroll-text"> model 1: sense and sensibility || model 1: sense and sensibility || model 1: sense and sensibility || model 1: sense and sensibility ||</h3>
     }
 
@@ -40,9 +40,16 @@ const XenoHeader = (props) => {
                     </div>
                 }
 
+                {props.header_nav &&
                     <div className="background__transparent__flow grid--even_4" style={{textAlign: "center"}}>
-                        <h2>about</h2> <h2>almanac</h2> <h2>reading list</h2>
+                        <Link to="/home">
+                            <h3>ABOUT</h3>
+                        </Link>
+                        <h3>GLOSSARY</h3>
+                        <h3>READING LIST</h3>
                     </div>
+                }
+
 
             </div>
 
