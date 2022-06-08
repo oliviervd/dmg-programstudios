@@ -825,6 +825,11 @@ imageViewer__modal-main {
     grid-template-rows: repeat(2, 50%);
 }
 
+.grid--even_3 {
+    display: grid;
+    grid-template-columns: repeat(3, 33%);
+}
+
 .grid--even_4{
     display:grid;
     grid-template-columns: repeat(4, 25%);
