@@ -76,6 +76,10 @@ div {
     font-size: 18px;
 }
 
+.white {
+    color: var(--yellow_ish);
+}
+
 crypto--h1--large {
     font-size: 70px;
     font-family: "P-ACR-AGON-Regular", sans-serif;
@@ -254,6 +258,17 @@ a {
 }
 
 /* ---------------------------------- LAYOUT ---------------------------------- */
+
+/* ---------------------------------- ACCORDION ---------------------------------- */
+
+.collapsed {
+    color: #007bff;
+    background: var(--yellow_ish);
+    padding: 15px 15px;
+    text-align: center;
+}
+
+/* ---------------------------------- NAV + HEADER  ---------------------------------- */
 
 .sideBarLeft-Nav{
     display: grid;
