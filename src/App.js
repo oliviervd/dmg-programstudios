@@ -1,5 +1,4 @@
 import React, {useState, Suspense} from "react";
-import { Outlet } from "react-router-dom";
 
 const XenoHeader = React.lazy(() => import("./components/elements/xenoHeader"));
 const SpectreMain = React.lazy(()=> import("./components/spectre"));
@@ -26,7 +25,6 @@ function App() {
                     <div className="dotLine"/>
                 </div>
             </div>
-            <Outlet />
         </div>
     );
 }
