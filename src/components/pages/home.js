@@ -108,10 +108,14 @@ const Home = () => {
                                     <div className="dotLine"></div>
                                     <div className="grid--3_7">
                                         <div>
-                                            <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BREAK</p>
+                                            <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BUILD</p>
                                         </div>
                                         <div>
-                                            <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}></p>
+                                            <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                                Starting with one model, both new models as well as contributions within an existing model can be proposed and added.
+                                                Concurently new terms can be added to the glossary. Additions can take on different forms, including (but not exclusivively)
+                                                (research) essays, interfaces and media.
+                                            </p>
                                         </div>
                                     </div>
                                     <div className="grid--3_7">
@@ -120,19 +124,18 @@ const Home = () => {
                                         </div>
                                         <div>
                                             <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-
+                                                Programming the institution as <i>Open Source</i>. Graphic and visual entities can and will change.
+                                                Components breath, expand and discard. Performing the metabolistic.
                                             </p>
                                         </div>
                                     </div>
                                     <div className="grid--3_7">
                                         <div>
-                                            <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BUILD</p>
+                                            <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BREAK</p>
                                         </div>
                                         <div>
                                             <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                                Starting with one model, both new models as well as contributions within an existing model can be proposed and added.
-                                                Concurently new terms can be added to the glossary. Additions can take on different forms, including (but not exclusivively)
-                                                (research) essays, interfaces and media.
+
                                             </p>
                                         </div>
                                     </div>
