@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React, {Suspense, useState} from "react";
 import {Link} from "react-router-dom";
 import SketchPlaceHolder from "../sketches/sketchPlaceHolder";
 
@@ -7,6 +7,11 @@ const CubicBezier = React.lazy(() => import("../sketches/cubicBezier"));
 
 
 const Home = () => {
+
+    const[open, setOpen] = useState(true);
+    function openAccordion() {
+        setOpen(!open);
+    }
 
     return (
         <div>
@@ -96,57 +101,66 @@ const Home = () => {
                                 <h1 className="center">MODELS</h1>
                                 <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                                     MODELS FROM THE PAST FOR THE FUTURE cultivates “models” that are the primary building
-                                    blocks for this production platform. These models can be read as possible future frameworks
-                                    for the museum to operate in. They can be read both as critical inquiries into what
+                                    blocks for this production platform. As possible collective futures and frameworks for
+                                    the museum to operate in, these models can be read both as critical inquiries into what
                                     the future museum ought to be, as well as a curatorial exercise looking into the past
                                     becoming future becoming present in terms of the “future” design museum.
                                     Each model harbors a space in which alternative modes of knowledge (production) and
                                     dissemination can come to fruition and further develop.
-
                                     <br/>
                                     <br/>
 
                                     <div className="dotLine"></div>
-                                    <p style={{fontFamily: "happy-times-NG_bold_master_web"}}>RULE #1: models may <i>BREAK, MUTATE,</i> and <i>BUILD</i> upon what is and isn't real</p>
-                                    <div className="dotLine"></div>
-                                    <div className="grid--3_7">
+                                    <p style={{fontFamily: "happy-times-NG_bold_master_web"}}><u>RULE #1</u>: models may <i>break, mutate</i> and <i>build</i> upon what is and isn't real</p>
+                                    {!open&&
+                                        <p className='center' style={{fontFamily: "lineal"}} onClick={openAccordion}> V - read more - V </p>
+                                    }
+                                    {open&&
                                         <div>
-                                            <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BUILD</p>
+                                            <div className="dotLine"></div>
+                                            <div className="grid--3_7">
+                                                <div>
+                                                    <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BUILD</p>
+                                                </div>
+                                                <div>
+                                                    <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                                        Starting with one model, both new models as well as contributions within an
+                                                        existing model can be proposed and added, not discarding but building upon previous work.
+                                                        Concurently new terms can be added to the glossary. Additions can take on different forms, including (but not exclusivively)
+                                                        (research) essays, interfaces and digital works.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="grid--3_7">
+                                                <div>
+                                                    <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO MUTATE</p>
+                                                </div>
+                                                <div>
+                                                    <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                                        All models exist within a transformative system, like a filter that
+                                                        distorts in a recognizable way. This idea of slowly <i>mutating</i> and
+                                                        <i>distorting</i> the program resembles the programming within Museum of Moving Practice,
+                                                        where the <i>exhibitionary complex</i> was in constant change.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <div className="grid--3_7">
+                                                <div>
+                                                    <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BREAK</p>
+                                                </div>
+                                                <div>
+                                                    <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                                        As a flexibly adaptive language system things will most likely break along the way,
+                                                        making room for new ideas to flourish in the process.
+                                                    </p>
+                                                </div>
+                                            </div>
+                                            <p className='center' style={{fontFamily: "lineal", fontSize: "18px"}} onClick={openAccordion}> ^ - close - ^ </p>
                                         </div>
-                                        <div>
-                                            <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                                Starting with one model, both new models as well as contributions within an
-                                                existing model can be proposed and added, not discarding but building upon previous work.
-                                                Concurently new terms can be added to the glossary. Additions can take on different forms, including (but not exclusivively)
-                                                (research) essays, interfaces and media.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="grid--3_7">
-                                        <div>
-                                            <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO MUTATE</p>
-                                        </div>
-                                        <div>
-                                            <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                                All models exist within a transformative system, like a filter that
-                                                distorts in a recognizable way. This idea of slowly <i>mutating</i> and
-                                                <i>distorting</i> the program resembles the programming within Museum of Moving Practice,
-                                                where the <i>exhibitionary complex</i> was in constant change.
-                                            </p>
-                                        </div>
-                                    </div>
-                                    <div className="grid--3_7">
-                                        <div>
-                                            <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BREAK</p>
-                                        </div>
-                                        <div>
-                                            <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                                As a flexibly adaptive language system things will most likely break along the way,
-                                                making room for new ideas to flourish in the process.
-                                            </p>
-                                        </div>
-                                    </div>
+                                    }
 
+                                    <div className="dotLine"></div>
+                                    <p style={{fontFamily: "happy-times-NG_bold_master_web"}}><u>RULE #2</u>: models are inherently <i>multi-authored</i> and <i>collaborative</i>.</p>
                                     <div className="dotLine"></div>
 
                                 </p>
@@ -192,11 +206,9 @@ const Home = () => {
                                     fontSize: "30px",
                                     fontFamily: "happy-times-NG_bold_master_web"
                                 }}>MODEL2</h1>`
-                                <div id="PLCH" style={{height: "40vh"}}>
-                                    <Suspense>
-                                        <SketchPlaceHolder/>
-                                    </Suspense>
-                                </div>
+                                <Suspense>
+                                    <SketchPlaceHolder/>
+                                </Suspense>
                             </div>
                             <div className="center" style={{height: "50vh", margin: "1vw"}}>
                                 <h1 className="center" style={{
