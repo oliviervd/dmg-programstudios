@@ -54,8 +54,6 @@ const SketchLanding = p5 => {
         p5.text(_main, 0, 0);
         //p5.text("FOR THE FUTURE", 0, 60);
 
-        console.log(_width);
-
         p5.noFill();
         p5.textSize(_width/70);
         p5.strokeWeight(_width/1000);
@@ -71,7 +69,6 @@ const SketchLanding = p5 => {
         _hours= _count/(1000 * 3600) + " hours"
         _minutes = _count/(1000) + " minutes"
         _fullMoon = Math.floor(_count/(1000 * 3600 * 24) / 29.5) + " full moons"
-        console.log(_fullMoon)
 
         _ticker += 1;
         if (_ticker == 400) {
