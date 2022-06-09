@@ -13,9 +13,12 @@ import './glossary.css';
 import Landing from "./components/pages/landing";
 import Home from "./components/pages/home";
 import Glossary from "./components/pages/Glossary";
+import ReadingList from "./components/pages/ReadingList";
 
 const domain = process.env.REACT_APP_AUTH0_DOMAIN
 const clientId = process.env.REACT_APP_AUTH0_CLIENT_ID
+
+console.log(window.location.origin);
 
 const rootElement = document.getElementById("root");
 render(
@@ -31,6 +34,7 @@ render(
                 <Route path="home" element={<Home />}/>
                 <Route path="model1" element={<App />}/>
                 <Route path="glossary" element={<Glossary />}/>
+                <Route path="reading-list" element={<ReadingList />}/>
             </Routes>
         </Auth0Provider>
     </BrowserRouter>,
