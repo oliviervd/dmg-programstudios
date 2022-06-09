@@ -13,6 +13,8 @@ const Home = () => {
             <Suspense>
                 <XenoHeader header_main={true} header_models={false} header_model={false} header_nav={true}/>
             </Suspense>
+
+            {/*section 1*/}
             <div className="rowScrollMain">
                 <div style={{marginBottom: "-600px"}}>
                     <Suspense>
@@ -41,18 +43,14 @@ const Home = () => {
                             <br/>
                             <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                                 <strong>MODELS FROM THE PAST FOR THE FUTURE </strong>
-                                is a curatorial experiment and post-digital discourse looking into past, future and
-                                speculative models, and
-                                takes place during the closure of the Design Museum Ghent (2022-2025). As such this
-                                exercise positions
-                                itself in a period of transition where past, present and future interlock. By focusing
-                                on the medium-specificity of the web, it investigates new curatorial strategies that
-                                better reflect
-                                the intricacies, complexities and plural nature of design of design practice in its
-                                current context. As a prototype for an alternative system, it is
-                                always critically probing new forms of knowledge production. And in its growth, it is
-                                both reflective
-                                and performative in nature, as we embrace the (as yet) unknown in its potential.</p>
+                                is a curatorial experiment, post-digital discourse and production platform looking into past,
+                                future and speculative models, and takes place during the closure of the Design Museum Ghent (2022-2025).
+                                As such this exercise positions itself in a period of transition where past, present and future interlock.
+                                By focusing on the medium-specificity of the web, it investigates new curatorial strategies that
+                                better reflect the intricacies, complexities and plural nature of design of design practice in its
+                                current context. As a prototype for an alternative system, it is always critically probing new forms o
+                                f knowledge production. And in its growth, it is both reflective and performative in nature,
+                                as we embrace the (as yet) unknown in its potential.</p>
 
                             <h4 className="center" style={{fontFamily: "lineal"}}>* </h4> <p className="center text"
                                                                                              style={{fontFamily: "happy-times-NG_regular_master_web"}}> as
@@ -82,37 +80,43 @@ const Home = () => {
                         </div>
                         <div className="background__transparent" style={{height: "50vh"}}/>
                     </div>
-                    {/* curatorial statement (text) */}
 
 
                     <br/><br/><br/><br/><br/><br/>
 
+                    {/* SECTION 2 */}
+
                     <div style={{padding: "100px"}} className="background__cool-to-warm-spectrum">
 
+
                         <div className="grid--3_4_3">
-                            <div></div>
+                            <div className="background__transparent">
+                            </div>
                             <div className="background__white">
                                 <h1 className="center">MODELS</h1>
                                 <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                    MODELS FROM THE PAST FOR THE FUTURE, or FUTURE MODELS FROM THE PAST reflects on the notion
-                                    of model(s) as possible frameworks for to the museum. It can be read as both a critically inquiry into
-                                    what the future museum ought to be, as well as a curatorial excercise on the past, present and
-                                    future of the museum. Each model creates new spaces in which alternative modes of knowledge production
-                                    and dissemination can come to fruition.
+                                    MODELS FROM THE PAST FOR THE FUTURE cultivates “models” that are the primary building
+                                    blocks for this production platform. These models can be read as possible future frameworks
+                                    for the museum to operate in. They can be read both as critical inquiries into what
+                                    the future museum ought to be, as well as a curatorial exercise looking into the past
+                                    becoming future becoming present in terms of the “future” design museum.
+                                    Each model harbors a space in which alternative modes of knowledge (production) and
+                                    dissemination can come to fruition and further develop.
 
                                     <br/>
                                     <br/>
 
                                     <div className="dotLine"></div>
-                                    <p>Each model <i>BREAKS, MUTATES,</i> and <i>BUILDS</i> upon what is and isn't real</p>
+                                    <p style={{fontFamily: "happy-times-NG_bold_master_web"}}>RULE #1: models may <i>BREAK, MUTATE,</i> and <i>BUILD</i> upon what is and isn't real</p>
                                     <div className="dotLine"></div>
                                     <div className="grid--3_7">
                                         <div>
                                             <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BUILD</p>
                                         </div>
                                         <div>
-                                            <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                                Starting with one model, both new models as well as contributions within an existing model can be proposed and added.
+                                            <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                                Starting with one model, both new models as well as contributions within an
+                                                existing model can be proposed and added, not discarding but building upon previous work.
                                                 Concurently new terms can be added to the glossary. Additions can take on different forms, including (but not exclusivively)
                                                 (research) essays, interfaces and media.
                                             </p>
@@ -123,9 +127,11 @@ const Home = () => {
                                             <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO MUTATE</p>
                                         </div>
                                         <div>
-                                            <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                                Programming the institution as <i>Open Source</i>. Graphic and visual entities can and will change.
-                                                Components breath, expand and discard. Performing the metabolistic.
+                                            <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                                All models exist within a transformative system, like a filter that
+                                                distorts in a recognizable way. This idea of slowly <i>mutating</i> and
+                                                <i>distorting</i> the program resembles the programming within Museum of Moving Practice,
+                                                where the <i>exhibitionary complex</i> was in constant change.
                                             </p>
                                         </div>
                                     </div>
@@ -134,8 +140,9 @@ const Home = () => {
                                             <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BREAK</p>
                                         </div>
                                         <div>
-                                            <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-
+                                            <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                                As a flexibly adaptive language system things will most likely break along the way,
+                                                making room for new ideas to flourish in the process.
                                             </p>
                                         </div>
                                     </div>
@@ -220,6 +227,8 @@ const Home = () => {
 
             </div>
             <br/><br/>
+
+
         </div>
     )
 }
