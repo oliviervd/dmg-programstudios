@@ -9,7 +9,7 @@ const CubicBezier = (p5) => {
     let FG = 0;
 
     let WIDTH = window.innerWidth;
-    let HEIGHT = window.innerHeight * 2/3;
+    let HEIGHT = window.innerHeight * 4/5;
 
     const setup = (p5, canvasParentRef) => {
         canvas = p5.createCanvas(WIDTH, HEIGHT).parent(canvasParentRef);
