@@ -238,7 +238,7 @@ a {
 }
 
 .background__cool-to-warm-spectrum {
-    background: linear-gradient(135deg,white 0%,white 75%,var(--yellow_ish) 100%);
+    background: linear-gradient(135deg,var(--yellow_ish) 0%,white 20%,var(--yellow_ish) 100%);
 }
 
 .background__white__green {
