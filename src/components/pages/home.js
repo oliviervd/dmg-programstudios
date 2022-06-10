@@ -4,6 +4,7 @@ import SketchPlaceHolder from "../sketches/sketchPlaceHolder";
 
 const XenoHeader = React.lazy(() => import("../elements/xenoHeader"))
 const CubicBezier = React.lazy(() => import("../sketches/cubicBezier"));
+const XenoFooter = React.lazy(() =>  import("../elements/xenoFooter"))
 
 
 const Home = () => {
@@ -26,7 +27,7 @@ const Home = () => {
                         <CubicBezier/>
                     </Suspense>
                 </div>
-                <div style={{height: "200vh"}}>
+                <div>
 
                     {/* curatorial statement (text) */}
                     <div className="grid--3_4_3">
@@ -51,9 +52,9 @@ const Home = () => {
                                 future and speculative models, and takes place during the closure of the Design Museum Ghent (2022-2025).
                                 As such this exercise positions itself in a period of transition where past, present and future interlock.
                                 By focusing on the medium-specificity of the web, it investigates new curatorial strategies that
-                                better reflect the intricacies, complexities and plural nature of design of design practice in its
-                                current context. As a prototype for an alternative system, it is always critically probing new forms o
-                                f knowledge production. And in its growth, it is both reflective and performative in nature,
+                                better reflect the singularity of design practice in its
+                                current context. As a prototype for an alternative system, it is always critically probing new forms of
+                                knowledge production. And in its growth, it is both reflective and performative in nature,
                                 as we embrace the (as yet) unknown in its potential.</p>
 
                             <h4 className="center" style={{fontFamily: "lineal"}}>* </h4> <p className="center text font-main"> as
@@ -225,12 +226,15 @@ const Home = () => {
                             </div>
                         </div>
                     </div>
-
+                    <div style={{height: "250px", margin: "1vw"}}>
+                        <Suspense>
+                            <XenoFooter/>
+                        </Suspense>
+                    </div>
                 </div>
 
             </div>
             <br/><br/>
-
 
         </div>
     )
