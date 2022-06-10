@@ -307,7 +307,7 @@ a {
 }
 
 .box{
-    width: 400px;
+    width: 500px;
     font-size: 18px;
 } @media (max-width: 1224px) {
     .box {
