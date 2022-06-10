@@ -50,7 +50,7 @@ const XenoHeader = (props) => {
                         <div></div>
                         <div></div>
                         <div></div>
-                        <h3> MODELS V</h3>
+                        <div></div>
                         <Link to="/glossary">
                             <h3>GLOSSARY</h3>
                         </Link>
