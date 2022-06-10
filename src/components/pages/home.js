@@ -92,8 +92,7 @@ const Home = () => {
 
 
                         <div className="grid--3_4_3">
-                            <div className="background__transparent">
-                            </div>
+                            <div className="background__transparent"/>
                             <div className="background__white">
                                 <h1 className="center">MODELS</h1>
                                 <p className="center text font-main">
@@ -103,11 +102,12 @@ const Home = () => {
                                     In a sense they perform the very notion and movement of the past become future becoming present –
                                     in that way that they harbor space for critical retrospect, thoughtful futuring and
                                     the possibility for present actualization.
+                                </p>
                                     <br/>
                                     <br/>
 
                                     <div className="dotLine"></div>
-                                    <p><u>RULE #1</u>: models may <i>break, mutate</i> and <i>build</i> upon what is and isn't real</p>
+                                    <p className="font-main text center"><u>RULE #1</u>: models may <i>break, mutate</i> and <i>build</i> upon what is and isn't real</p>
                                     {!open&&
                                         <p className='center' style={{fontFamily: "lineal"}} onClick={openAccordion}> V - read more - V </p>
                                     }
@@ -156,10 +156,15 @@ const Home = () => {
                                     }
 
                                     <div className="dotLine"></div>
-                                    <p className="font-main"><u>RULE #2</u>: models are inherently <i>multi-authored</i> and <i>collaborative</i>.</p>
+                                    <p className="font-main text center"><u>RULE #2</u>: models are inherently <i>multi-authored</i> and <i>collaborative</i>.</p>
                                     <div className="dotLine"></div>
-
-                                </p>
+                                    <div>
+                                        <p className="center text">
+                                            by setting up several director's projects, the museum wants to give designers
+                                            the space and agency to co-develop the new programming and the necessary support structures.
+                                        </p>
+                                    </div>
+                                </div>
                             </div>
                             <div></div>
                         </div>
@@ -233,8 +238,6 @@ const Home = () => {
                             <XenoFooter/>
                         </Suspense>
                     </div>
-                </div>
-
             </div>
             <br/><br/>
 
