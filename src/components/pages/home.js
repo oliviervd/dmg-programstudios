@@ -43,7 +43,7 @@ const Home = () => {
                                 transformation,
                                 indeed modifying itself as part of its operations. The lattice was not so much a machine
                                 as it was a page on
-                                which the machine was written, and o    n which the machine itself ceaselessly wrote.”
+                                which the machine was written, and on which the machine itself ceaselessly wrote.”
                                 (Chiang, T. , 2019. Exhalation.)</i></p>
                             <br/>
                             <p className="center text font-main">
@@ -159,7 +159,7 @@ const Home = () => {
                                     <p className="font-main text center"><u>RULE #2</u>: models are inherently <i>multi-authored</i> and <i>collaborative</i>.</p>
                                     <div className="dotLine"></div>
                                     <div>
-                                        <p className="center text">
+                                        <p className="center text" style={{margin:"10px 10px"}}>
                                             by setting up several director's projects, the museum wants to give designers
                                             the space and agency to co-develop the new programming and the necessary support structures.
                                         </p>
