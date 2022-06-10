@@ -9,7 +9,8 @@ const Glossary = () => {
     // connect with google sheets API.
     const {data} = useGoogleSheets({
         apiKey: process.env.REACT_APP_GOOGLE_API_KEY,
-        sheetId: process.env.REACT_APP_GOOGLE_SHEETS_ID
+        sheetId: process.env.REACT_APP_GOOGLE_SHEETS_ID,
+        sheetsNames: ['glossary']
     })
 
     // push objets in array
@@ -21,15 +22,19 @@ const Glossary = () => {
         })
     })
 
-    console.log(reTard);
+    let _x = JSON.stringify(data);
 
     return(
         <div>
             <Suspense>
-                <XenoHeader header_nav={true}/>
+                <XenoHeader header_nav={true} header_main={true}/>
             </Suspense>
 
-            <Accordion>
+            {/* ROW1 */}
+
+            <p className="center text">{_x}</p>
+
+            {/*<Accordion>
                 {reTard.map((sub) => (
                         <Accordion.Item key={sub.id}>
                             <Accordion.Collapsed id={sub.id}>
@@ -47,7 +52,7 @@ const Glossary = () => {
                         </Accordion.Item>
 
                 ))}
-            </Accordion>
+            </Accordion>*/}
 
         </div>
     )
