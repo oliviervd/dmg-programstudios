@@ -36,7 +36,7 @@ const XenoHeader = (props) => {
 
                 {props.header_model &&
                     <div className="scroll-container background__transparent__flow ">
-                        {model_title}{model_title}{model_title}{model_title}{model_title}
+                        {model_title}{model_title}{model_title}{model_title}{model_title}{model_title}{model_title}{model_title}{model_title}
                     </div>
                 }
 

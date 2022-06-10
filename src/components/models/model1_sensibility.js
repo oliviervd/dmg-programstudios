@@ -23,7 +23,7 @@ const Model1_sensibility = () => {
                 <div>
                     <div className="grid--3_4_3">
                         <div className="background__transparent"></div>
-                        <h1 className="center"  style={{height: "auto", padding: "80px", background:"white"}}>ON THE LOGIC OF COLLECTING AND SOVEREIGNTY TOWARDS A COLLECTION OF CARE</h1>
+                        <h1 className="center background__white"  style={{height: "auto", padding: "80px"}}>ON THE LOGIC OF COLLECTING AND SOVEREIGNTY TOWARDS A COLLECTION OF CARE</h1>
                         <div className="background__transparent"></div>
                     </div>
                     <div className="grid--4_2_4">
@@ -103,17 +103,17 @@ const Model1_sensibility = () => {
                 }
 
                 <article>
-                    <div className="left box" style={{fontFamily: "happy-times-NG_italic_master_web"}}>
-                        <p className="subHeader__text text">RESPONSIBLE</p>“When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
+                    <div className="left box main-text">
+                        <p className="subHeader__text text">RESPONSIBLE</p><i>“When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
                         For four years this question was central to one of the tracks in Object Stories, the permanent presentation
                         of the collection of Design Museum Gent. The objects on display in this track all in their
                         own way demonstrated that although there is an increased focus on sustainability and social concern today,
                         this phenomenon is not new in the design world per se. Throughout history, various design strategies have
                         emerged that critically addressed the impact of our actions on the climate and, as a response,
-                        defined new production methods and/or formulated alternate forms of society that better correspond to the issues at hand.
+                        defined new production methods and/or formulated alternate forms of society that better correspond to the issues at hand.</i>
                     </div>
                     {isDesktopOrLaptop && <br/>}
-                    <div className="left box text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                    <div className="left box text main-text">
                         Marjan van Helvert defined “Responsible Objects” as objects that behave responsibly, consciously
                         and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
                         Taking responsibility through responsible behavior affects and effects all parts of society,
@@ -142,7 +142,7 @@ const Model1_sensibility = () => {
 
                     {readMore &&
                         <div>
-                            <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                            <div className="left box main-text">
                                 <p className="subHeader__text text">METABOLISM</p>Can we reimagine and
                                 rethink the metabolism of the museum in such a way that the core tasks of the museum in terms of
                                 taking care of the collection (conservation/preservation) are reformulated into
@@ -160,7 +160,7 @@ const Model1_sensibility = () => {
                                 and how does this affect the way in which we represent?
                             </div>
                             {isDesktopOrLaptop && <br/>}
-                            <div className="left box" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                            <div className="left box main-text">
                                 <p className="subHeader__text text">TO TAKE CARE OF </p>
                                 Taking care of something or someone is a highly social endeavor and is perhaps even a premise for
                                 us to co-exist. To support this act of caretaking technology has been developed to aid us in the process.
@@ -175,7 +175,7 @@ const Model1_sensibility = () => {
                                 knowledge transfer, this same idea of one object inspiring the creation of another. To become performative again. <br/><br/>
                             </div>
 
-                            <div className="left box text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                            <div className="left box text main-text">
                                 The interface below embodies this idea, recursively looping
                                 over the collection, as one would flip the pages of book, to establish encounters of objects that are
                                 related (in terms of their color) to a particular color sample in this book. Acting as a sensory layer,
@@ -188,7 +188,7 @@ const Model1_sensibility = () => {
 
                             {isDesktopOrLaptop && <br/>}
 
-                            <div className="left box text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                            <div className="left box text main-text">
                                 This approach of the collection as a social network, - a speculative system that connects in a transhistorical and transdisciplinary way -
                                 transcends the art historical and institutionalized view - resounding the indeterminacy that might lie at the museum’s foundations.
                                 At the same time it very much resonates with the "indeterminacy" that might lie at the museum’s foundations, a place where knowledge is constantly being (re-)produced based upon the passage of both human and non-human agency.

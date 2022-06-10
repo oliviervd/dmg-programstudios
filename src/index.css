@@ -11,6 +11,7 @@
     --happy__bold: "happy-times-NG_bold_master_web";
     --happy__regular: "happy-times-NG_regular_master_web";
     --happy__italic: "happy-times-NG_italic_master_web";
+    --main-font: "sligoil-micro";
 }
 
 .inline-block{
@@ -36,7 +37,7 @@ html, body {
 }
 
 div {
-    font-family: "happy-times-NG_bold_master_web", sans-serif;
+    font-family: "sligoil-micro", sans-serif;
     font-size: 12px;
 }
 
@@ -72,6 +73,11 @@ div {
     src: local("lineal"), url(fonts/Lineal.otf);
 }
 
+@font-face {
+    font-family: "sligoil-micro";
+    src: local("Sligoil-Micro"), url(fonts/Sligoil-Micro.otf);
+}
+
 .text {
     font-size: 18px;
     padding: 2px
@@ -96,16 +102,20 @@ crypto--h1--large {
 
 h1 {
     font-size: 43px;
-    font-family: "happy-times-NG_bold_master_web", sans-serif;
+    font-family: "sligoil-micro", sans-serif;
 }
 
 h2 {
     font-size: 17px;
-    font-family: "happy-times-NG_italic_master_web", sans-serif;
+    font-family: "sligoil-micro", sans-serif;
 } @media (max-width: 1224px) {
     h2 {
         font-size: 30px;
     }
+}
+
+.font-main {
+    font-family: "sligoil-micro", sans-serif;
 }
 
 .subHeader__text {
@@ -125,7 +135,7 @@ h2 {
 }
 
 h4 {
-    font-family: "happy-times-NG_italic_master_web", sans-serif;
+    font-family: "sligoil-micro", sans-serif;
 }
 
 a {
@@ -134,7 +144,7 @@ a {
 }
 
 .main-title{
-    font-family: "happy-times-NG_bold_master_web", sans-serif;
+    font-family: "sligoil-micro", sans-serif;
     font-size: 100px;
     padding-top: 20vh;
     height: 50vh;
@@ -355,7 +365,7 @@ a {
 }
 
 .colorText{
-    font-family: "happy-times-NG_italic_master_web", sans-serif;
+    font-family: "sligoil-micro", sans-serif;
     font-size: 15px;
 }
 
@@ -364,7 +374,7 @@ a {
 }
 
 .descText {
-    font-family: "happy-times-NG_regular_master_web", sans-serif;
+    font-family: "sligoil-micro", sans-serif;
     font-size: 15px;
 }
 
@@ -377,7 +387,7 @@ text {
 }
 
 button{
-    font-family: "happy-times-NG_italic_master_web", sans-serif;
+    font-family: "sligoil-micro", sans-serif;
     width: 100%;
     background-color: var(--main__green);
     margin-bottom: 10px;
@@ -390,7 +400,7 @@ button{
     top: 5vw;
     width: 7vw;
     font-size: 15px;
-    font-family: "happy-times-NG_bold_master_web", sans-serif;
+    font-family: "sligoil-micro", sans-serif;
 }
 
 .overlay {

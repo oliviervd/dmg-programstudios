@@ -4,7 +4,7 @@ import Sketch from "react-p5";
 const Sketch13D = p5 => {
 
     let MAGNITUDE = 10000;
-    let _height = window.innerHeight * 2/3;
+    let _height = window.innerHeight * 3/4;
     let _width = window.innerWidth
     let GRID_X = 50; //grid amount X
     let GRID_Y = 50;

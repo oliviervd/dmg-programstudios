@@ -34,11 +34,10 @@ const Home = () => {
                         </div>
                         <div className="background__white" style={{height: "auto", padding: "80px"}}>
                             <h1 style={{
-                                fontFamily: "happy-times-NG_bold_master_web",
                                 fontSize: "60px",
                                 textAlign: "center"
                             }}>CURATORIAL STATEMENT</h1>
-                            <p style={{fontFamily: "happy-times-NG_italic_master_web"}} className="text">“I then turned
+                            <p className="text font-main">“I then turned
                                 my microscope to the cognition engine… This was an engine undergoing continuous
                                 transformation,
                                 indeed modifying itself as part of its operations. The lattice was not so much a machine
@@ -46,7 +45,7 @@ const Home = () => {
                                 which the machine was written, and on which the machine itself ceaselessly wrote.”
                                 (Chiang, T. , 2019. Exhalation.)</p>
                             <br/>
-                            <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                            <p className="center text font-main">
                                 <strong>MODELS FROM THE PAST FOR THE FUTURE </strong>
                                 is a curatorial experiment, post-digital discourse and production platform looking into past,
                                 future and speculative models, and takes place during the closure of the Design Museum Ghent (2022-2025).
@@ -57,8 +56,7 @@ const Home = () => {
                                 f knowledge production. And in its growth, it is both reflective and performative in nature,
                                 as we embrace the (as yet) unknown in its potential.</p>
 
-                            <h4 className="center" style={{fontFamily: "lineal"}}>* </h4> <p className="center text"
-                                                                                             style={{fontFamily: "happy-times-NG_regular_master_web"}}> as
+                            <h4 className="center" style={{fontFamily: "lineal"}}>* </h4> <p className="center text font-main"> as
                             a <strong> dynamic network</strong>; the project is in constant evolution and critically
                             approaches the
                             underlying metabolism of the museum as a <i>fluid</i> institution. No "rinse and repeat" but
@@ -68,9 +66,8 @@ const Home = () => {
                             about awareness.
                             Because whoever wants to shape the future, will have to know its past.</p>
 
-                            <h4 className="center" style={{fontFamily: "lineal"}}>* </h4> <p className="center text"
-                                                                                             style={{fontFamily: "happy-times-NG_regular_master_web"}}> As
-                            a <strong>living archive</strong>; it approaches the past as an asset for the present and
+                            <h4 className="center" style={{fontFamily: "lineal"}}>* </h4> <p className="center text font-main">
+                            As a <strong>living archive</strong>; it approaches the past as an asset for the present and
                             the future.
                             A growing organ, which absorbs, processes and discards. The intertwining of traces of the
                             past
@@ -81,7 +78,6 @@ const Home = () => {
                             in the critical questioning of the one-to-one translation of its structure in making the
                             collection public.</p>
 
-                            <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}></p>
                         </div>
                         <div className="background__transparent" style={{height: "50vh"}}/>
                     </div>
@@ -99,7 +95,7 @@ const Home = () => {
                             </div>
                             <div className="background__white">
                                 <h1 className="center">MODELS</h1>
-                                <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                <p className="center text font-main">
                                     MODELS FROM THE PAST FOR THE FUTURE is both a program and a catalyst for change.
                                     Working with models as primary building blocks and (thematic) nodes it is in search
                                     for alternative collectively built futures in which the museum can operate with care.
@@ -110,7 +106,7 @@ const Home = () => {
                                     <br/>
 
                                     <div className="dotLine"></div>
-                                    <p style={{fontFamily: "happy-times-NG_bold_master_web"}}><u>RULE #1</u>: models may <i>break, mutate</i> and <i>build</i> upon what is and isn't real</p>
+                                    <p><u>RULE #1</u>: models may <i>break, mutate</i> and <i>build</i> upon what is and isn't real</p>
                                     {!open&&
                                         <p className='center' style={{fontFamily: "lineal"}} onClick={openAccordion}> V - read more - V </p>
                                     }
@@ -119,10 +115,10 @@ const Home = () => {
                                             <div className="dotLine"></div>
                                             <div className="grid--3_7">
                                                 <div>
-                                                    <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BUILD</p>
+                                                    <p className="center text font-main">TO BUILD</p>
                                                 </div>
                                                 <div>
-                                                    <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                                    <p className="left text font-main">
                                                         when building this production platform, we are not building on top,
                                                         as to hide and discard past traces, but are <i>rebuilding</i> as a form of continuation
                                                         and acknowledgement that concepts and ideas are not singular but perform in a networked system.
@@ -132,10 +128,10 @@ const Home = () => {
                                             </div>
                                             <div className="grid--3_7">
                                                 <div>
-                                                    <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO MUTATE</p>
+                                                    <p className="center text font-main">TO MUTATE</p>
                                                 </div>
                                                 <div>
-                                                    <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                                    <p className="left text font-main">
                                                         All models exist within a transformative system, like a filter that distorts in a recognizable way.
                                                         This idea of slowly mutating and <i>distorting</i> the program resembles the programming within Museum of Moving Practice,
                                                         where the exhibition complex was in constant change yet always in dialogue with its environment and its ecosystem.
@@ -144,10 +140,10 @@ const Home = () => {
                                             </div>
                                             <div className="grid--3_7">
                                                 <div>
-                                                    <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>TO BREAK</p>
+                                                    <p className="center text font-main">TO BREAK</p>
                                                 </div>
                                                 <div>
-                                                    <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
+                                                    <p className="left text font-main">
                                                         As a flexibly adaptive language system things will most likely break along the way,
                                                         making room for new ideas to flourish in the process. Breaking not in a destructive and disruptive manner,
                                                         but as a way to gift space for new thoughts to cultivate.
@@ -159,7 +155,7 @@ const Home = () => {
                                     }
 
                                     <div className="dotLine"></div>
-                                    <p style={{fontFamily: "happy-times-NG_bold_master_web"}}><u>RULE #2</u>: models are inherently <i>multi-authored</i> and <i>collaborative</i>.</p>
+                                    <p className="font-main"><u>RULE #2</u>: models are inherently <i>multi-authored</i> and <i>collaborative</i>.</p>
                                     <div className="dotLine"></div>
 
                                 </p>
@@ -170,12 +166,11 @@ const Home = () => {
                         <div className="grid--even_4 background__cool-to-warm-spectrum">
                             <div className="center" style={{height: "50vh", margin: "1vw"}}>
                                 <h1 className="center" style={{
-                                    fontSize: "30px",
-                                    fontFamily: "happy-times-NG_bold_master_web"
+                                    fontSize: "30px"
                                 }}>MODEL1: <br/> SENSE & SENSIBILITY</h1>
                                 <div>
-                                    <p className="justify text"
-                                       style={{fontFamily: "happy-times-NG_regular_master_web", padding: "4px"}}>
+                                    <p className="justify text font-main"
+                                       style={{padding: "4px"}}>
                                         how do we adapt – not as an individual institution – but as a community of
                                         individuals.
                                         The museum reimagined; as an interface that engages in a mutual relationship –
@@ -189,11 +184,11 @@ const Home = () => {
                                         borderTop: "2px var(--main__green) solid"
                                     }}>
                                         <Link to={"../model1"} replace>
-                                            <p className="justify text" style={{fontFamily: "happy-times-NG_bold_master_web"}}>
+                                            <p className="justify text font-main">
                                                 On the Logic of Collecting and Sovereignty towards a Collection of Care.
                                             </p>
                                         </Link>
-                                        <p className="center text" style={{fontFamily: "happy-times-NG_bold_master_web", fontSize: "15px"}}>
+                                        <p className="center text font-main" style={{fontSize: "15px"}}>
                                             ESSAY, INTERFACE
                                         </p>
                                     </div>
@@ -202,8 +197,7 @@ const Home = () => {
                             </div>
                             <div className="center" style={{height: "50vh", margin: "1vw"}}>
                                 <h1 className="center" style={{
-                                    fontSize: "30px",
-                                    fontFamily: "happy-times-NG_bold_master_web"
+                                    fontSize: "30px"
                                 }}>MODEL2</h1>`
                                 <Suspense>
                                     <SketchPlaceHolder/>
@@ -211,8 +205,7 @@ const Home = () => {
                             </div>
                             <div className="center" style={{height: "50vh", margin: "1vw"}}>
                                 <h1 className="center" style={{
-                                    fontSize: "30px",
-                                    fontFamily: "happy-times-NG_bold_master_web"
+                                    fontSize: "30px"
                                 }}>MODEL3</h1>`
                                 <div id="PLCH" style={{height: "40vh"}}>
                                     <Suspense>
@@ -222,8 +215,7 @@ const Home = () => {
                             </div>
                             <div className="center" style={{height: "50vh", margin: "1vw"}}>
                                 <h1 className="center" style={{
-                                    fontSize: "30px",
-                                    fontFamily: "happy-times-NG_bold_master_web"
+                                    fontSize: "30px"
                                 }}>MODEL4</h1>`
                                 <div id="PLCH" style={{height: "50vh", zIndex: "-100000"}}>
                                     <Suspense>

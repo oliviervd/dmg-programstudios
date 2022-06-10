@@ -95,7 +95,7 @@ const SpectreMain = (props) => {
                         {/*<Suspense>
                         <modalWindow open={bruises} onClose={()=>setBruises(false)}/>
                     </Suspense>*/}
-                        <div style={{marginBottom: "-300px", marginTop: "-200px"}}>
+                        <div style={{marginBottom: "-400px", marginTop: "-200px"}}>
                             {isDesktopOrLaptop && <Sketch13D/>}
                         </div>
                         <Model1_sensibility/>
