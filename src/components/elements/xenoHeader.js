@@ -16,12 +16,12 @@ const XenoHeader = (props) => {
                 {props.header_main &&
                     <Link to="/home" style={{ textDecoration: 'none' }}>
                         <div className="scroll-container background__cool-to-warm-spectrum">
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}> models from the past for the future | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}> models from the past for the future | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}> models from the past for the future | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}> models from the past for the future | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}> models from the past for the future | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}> models from the past for the future | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
                         </div>
                     </Link>
                 }
