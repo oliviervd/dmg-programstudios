@@ -32,7 +32,7 @@ render(
             <Routes>
                 <Route path="/" element={<Landing/>}/>
                 <Route path="home" element={<Home />}/>
-                <Route path="model1" element={<App />}/>
+                <Route path="M01_C01" element={<App />}/>
                 <Route path="glossary" element={<Glossary />}/>
                 <Route path="reading-list" element={<ReadingList />}/>
             </Routes>

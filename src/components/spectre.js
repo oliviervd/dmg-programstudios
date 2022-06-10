@@ -10,7 +10,7 @@ const HexCube = React.lazy(() => import( "./cube"));
 const ImageGenerator = React.lazy(() => import("./imageGenerator"));
 const ColorCubes = React.lazy(() => import("./colorCubes"));
 const Sketch13D = React.lazy(() => import("./sketches/Sketch1_3D"));
-const Model1_sensibility = React.lazy(() => import("./models/model1_sensibility"));
+const Model1_sensibility = React.lazy(() => import("./models/GL01_C01"));
 const SwapBook = React.lazy(() => import("./swapBook"));
 
 

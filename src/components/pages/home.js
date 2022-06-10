@@ -191,7 +191,7 @@ const Home = () => {
                                         borderBottom: "2px var(--main__green) solid",
                                         borderTop: "2px var(--main__green) solid"
                                     }}>
-                                        <Link to={"../model1"} replace>
+                                        <Link to={"../M01_C01"} replace>
                                             <p className="justify text font-main">
                                                 On the Logic of Collecting and Sovereignty towards a Collection of Care.
                                             </p>

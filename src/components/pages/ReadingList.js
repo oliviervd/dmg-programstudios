@@ -1,5 +1,7 @@
 import React, { Suspense } from "react";
 import useGoogleSheets from "use-google-sheets";
+import {Link} from "react-router-dom";
+
 const XenoHeader = React.lazy(()=>(import("../elements/xenoHeader")))
 
 const ReadingList = () => {
@@ -10,7 +12,13 @@ const ReadingList = () => {
         sheetsNames: ['reading_list'],
     })
 
-    let x = JSON.stringify(data);
+    let x = JSON.stringify(data[0]);
+    let  _list = [];
+    data.map((x)=>{
+        x.data.map((l)=>{
+            _list.push(l);
+        })
+    })
 
     return (
         <div>
@@ -18,7 +26,42 @@ const ReadingList = () => {
                 <XenoHeader header_main={true} header_nav={true}/>
             </Suspense>
             <h1 className="center">READING LIST</h1>
-            <p className="center text">{x}</p>
+            <div className="grid--2_6_2">
+                <div></div>
+                <div>
+                    <div className="grid--7_1_2">
+                        <div></div>
+                        <div>//</div>
+                        <div>refenced in contributions:</div>
+                    </div>
+                    {_list.map((lit)=>(
+                        //console.log(lit.id)
+                        <div>
+                            <div className="grid--7_1_2">
+                                <div>
+                                    <p className="left text background__white">{lit.author}, <i>{lit.title}</i> ({lit.year}), {lit.publisher}</p>
+                                </div>
+                                <div></div>
+                                <div>
+
+                                    <Link to={'/'+lit.relevant_contrib}>
+                                        <p className='left text background__cool-to-warm-spectrum'>
+                                            {lit.relevant_contrib}
+                                        </p>
+                                    </Link>
+                                </div>
+                            </div>
+                            <div className="dotLine"></div>
+                        </div>
+
+
+
+                    ))}
+                </div>
+            </div>
+            <br></br>
+
+
         </div>
     )
 }

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {useMediaQuery} from "react-responsive";
 
-const Model1_sensibility = () => {
+const GL01_C01 = () => {
 
     // open and close READ MORE
     const[readMore, setReadMore] = useState(false);
@@ -274,4 +274,4 @@ const Model1_sensibility = () => {
     )
 }
 
-export default Model1_sensibility;
+export default GL01_C01;

@@ -114,6 +114,11 @@ h2 {
     }
 }
 
+h3 {
+    font-size: 15px;
+    font-family: "sligoil-micro", sans-serif;
+}
+
 .font-main {
     font-family: "sligoil-micro", sans-serif;
 }
@@ -801,9 +806,19 @@ imageViewer__modal-main {
     grid-template-columns: 10% 80% 10%;
 }
 
+.grid--2_6_2 {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+}
+
 .grid--3_4_3 {
     display:grid;
     grid-template-columns: 30% 40% 30%;
+}
+
+.grid--7_1_2 {
+    display: grid;
+    grid-template-columns: 70% 10% 20%;
 }
 
 .grid--4_2_4 {
