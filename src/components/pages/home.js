@@ -38,13 +38,13 @@ const Home = () => {
                                 fontSize: "60px",
                                 textAlign: "center"
                             }}>CURATORIAL STATEMENT</h1>
-                            <p className="text font-main">“I then turned
+                            <p className="text font-main"><i>“I then turned
                                 my microscope to the cognition engine… This was an engine undergoing continuous
                                 transformation,
                                 indeed modifying itself as part of its operations. The lattice was not so much a machine
                                 as it was a page on
-                                which the machine was written, and on which the machine itself ceaselessly wrote.”
-                                (Chiang, T. , 2019. Exhalation.)</p>
+                                which the machine was written, and o    n which the machine itself ceaselessly wrote.”
+                                (Chiang, T. , 2019. Exhalation.)</i></p>
                             <br/>
                             <p className="center text font-main">
                                 <strong>MODELS FROM THE PAST FOR THE FUTURE </strong>
@@ -163,6 +163,8 @@ const Home = () => {
                             </div>
                             <div></div>
                         </div>
+
+                        <br/><br/><br/><br/>
 
                         <div className="grid--even_4 background__cool-to-warm-spectrum">
                             <div className="center" style={{height: "50vh", margin: "1vw"}}>
