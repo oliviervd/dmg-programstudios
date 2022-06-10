@@ -845,6 +845,11 @@ imageViewer__modal-main {
     grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
 }
 
+.grid--even_6 {
+    display: grid;
+    grid-template-columns: repeat(6, 16%);
+}
+
 .border_box {
     border: 2px black solid;
 }
