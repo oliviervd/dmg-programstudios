@@ -59,7 +59,13 @@ const ColorCubes = (props) => {
         const _LDES = LDESViaURI(uri)
 
         const title_en = _LDES[0]["title_en"];
-        const desc_en = _LDES[0]["description_adlib_en"]
+        let desc_en;
+        if(_LDES[0]["description_adlib_en"]) {
+            desc_en = _LDES[0]["description_adlib_en"]
+        } else {
+            desc_en = "this object has no description"
+        }
+
         const LDES_object = JSON.parse(_LDES[0][0]);
 
         let acquisition_method = ""
