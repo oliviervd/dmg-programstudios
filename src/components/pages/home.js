@@ -100,13 +100,12 @@ const Home = () => {
                             <div className="background__white">
                                 <h1 className="center">MODELS</h1>
                                 <p className="center text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                    MODELS FROM THE PAST FOR THE FUTURE cultivates “models” that are the primary building
-                                    blocks for this production platform. As possible collective futures and frameworks for
-                                    the museum to operate in, these models can be read both as critical inquiries into what
-                                    the future museum ought to be, as well as a curatorial exercise looking into the past
-                                    becoming future becoming present in terms of the “future” design museum.
-                                    Each model harbors a space in which alternative modes of knowledge (production) and
-                                    dissemination can come to fruition and further develop.
+                                    MODELS FROM THE PAST FOR THE FUTURE is both a program and a catalyst for change.
+                                    Working with models as primary building blocks and (thematic) nodes it is in search
+                                    for alternative collectively built futures in which the museum can operate with care.
+                                    In a sense they perform the very notion and movement of the past become future becoming present –
+                                    in that way that they harbor space for critical retrospect, thoughtful futuring and
+                                    the possibility for present actualization.
                                     <br/>
                                     <br/>
 
@@ -124,10 +123,10 @@ const Home = () => {
                                                 </div>
                                                 <div>
                                                     <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                                        Starting with one model, both new models as well as contributions within an
-                                                        existing model can be proposed and added, not discarding but building upon previous work.
-                                                        Concurently new terms can be added to the glossary. Additions can take on different forms, including (but not exclusivively)
-                                                        (research) essays, interfaces and digital works.
+                                                        when building this production platform, we are not building on top,
+                                                        as to hide and discard past traces, but are <i>rebuilding</i> as a form of continuation
+                                                        and acknowledgement that concepts and ideas are not singular but perform in a networked system.
+                                                        Contributions can take on different forms, including (but not exclusively) essay, interfaces and media.
                                                     </p>
                                                 </div>
                                             </div>
@@ -137,10 +136,9 @@ const Home = () => {
                                                 </div>
                                                 <div>
                                                     <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
-                                                        All models exist within a transformative system, like a filter that
-                                                        distorts in a recognizable way. This idea of slowly <i>mutating</i> and
-                                                        <i>distorting</i> the program resembles the programming within Museum of Moving Practice,
-                                                        where the <i>exhibitionary complex</i> was in constant change.
+                                                        All models exist within a transformative system, like a filter that distorts in a recognizable way.
+                                                        This idea of slowly mutating and <i>distorting</i> the program resembles the programming within Museum of Moving Practice,
+                                                        where the exhibition complex was in constant change yet always in dialogue with its environment and its ecosystem.
                                                     </p>
                                                 </div>
                                             </div>
@@ -151,7 +149,8 @@ const Home = () => {
                                                 <div>
                                                     <p className="left text" style={{fontFamily: "happy-times-NG_regular_master_web"}}>
                                                         As a flexibly adaptive language system things will most likely break along the way,
-                                                        making room for new ideas to flourish in the process.
+                                                        making room for new ideas to flourish in the process. Breaking not in a destructive and disruptive manner,
+                                                        but as a way to gift space for new thoughts to cultivate.
                                                     </p>
                                                 </div>
                                             </div>
