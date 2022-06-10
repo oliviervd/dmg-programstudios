@@ -12,7 +12,6 @@ const ReadingList = () => {
         sheetsNames: ['reading_list'],
     })
 
-    let x = JSON.stringify(data[0]);
     let  _list = [];
     data.map((x)=>{
         x.data.map((l)=>{
@@ -32,7 +31,7 @@ const ReadingList = () => {
                     <div className="grid--7_1_2">
                         <div></div>
                         <div>//</div>
-                        <div>refenced in contributions:</div>
+                        <div>referenced in contributions:</div>
                     </div>
                     {_list.map((lit)=>(
                         //console.log(lit.id)
