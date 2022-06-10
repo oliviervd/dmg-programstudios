@@ -171,7 +171,7 @@ const Home = () => {
 
                         <br/><br/><br/><br/>
 
-                        <div className="grid--even_4 background__cool-to-warm-spectrum">
+                        <div className="grid--even_4 background__cool-to-warm-spectrum" style={{margin:"0px 30px"}}>
                             <div className="center" style={{height: "50vh", margin: "1vw"}}>
                                 <h1 className="center" style={{
                                     fontSize: "30px"
@@ -196,7 +196,7 @@ const Home = () => {
                                                 On the Logic of Collecting and Sovereignty towards a Collection of Care.
                                             </p>
                                         </Link>
-                                        <p className="center text font-main" style={{fontSize: "15px"}}>
+                                        <p className="center text font-main" style={{fontSize: "15px", padding:"0 10px"}}>
                                             ESSAY, INTERFACE
                                         </p>
                                     </div>
