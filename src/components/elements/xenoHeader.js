@@ -42,13 +42,15 @@ const XenoHeader = (props) => {
                 }
 
                 {props.header_nav &&
-                    <div className="background__transparent__flow grid--even_6" style={{textAlign: "center"}}>
+                    <div className="background__transparent__flow grid--even_8" style={{textAlign: "center"}}>
                         <Link to="/home">
                             <h3>ABOUT</h3>
                         </Link>
                         <div></div>
                         <div></div>
                         <div></div>
+                        <div></div>
+                        <h3> MODELS V</h3>
                         <Link to="/glossary">
                             <h3>GLOSSARY</h3>
                         </Link>

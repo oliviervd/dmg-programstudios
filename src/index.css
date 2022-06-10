@@ -860,6 +860,11 @@ imageViewer__modal-main {
     grid-template-columns: repeat(6, 16%);
 }
 
+.grid--even_8 {
+    display:grid;
+    grid-template-columns: repeat(8, 12%);
+}
+
 .border_box {
     border: 2px black solid;
 }
