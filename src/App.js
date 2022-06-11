@@ -2,6 +2,7 @@ import React, {useState, Suspense} from "react";
 
 const XenoHeader = React.lazy(() => import("./components/elements/xenoHeader"));
 const SpectreMain = React.lazy(()=> import("./components/spectre"));
+const XenoFooter = React.lazy(() => import("./components/elements/xenoFooter"))
 
 function App() {
 
@@ -25,6 +26,10 @@ function App() {
                     <div className="dotLine"/>
                 </div>
             </div>
+            <Suspense>
+                <XenoFooter/>
+            </Suspense>
+
         </div>
     );
 }

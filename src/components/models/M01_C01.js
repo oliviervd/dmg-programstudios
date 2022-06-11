@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import {useMediaQuery} from "react-responsive";
 
-const GL01_C01 = () => {
+const M01_C01 = () => {
 
     // open and close READ MORE
     const[readMore, setReadMore] = useState(false);
@@ -135,7 +135,7 @@ const GL01_C01 = () => {
                     {!readMore &&
                         <div>
                             {isDesktopOrLaptop && <br/>}
-                            <p className="underlined button__readMore text" onClick={handleReadMore}> READ MORE </p>
+                            <p className="underlined button__readMore text nav--header" onClick={handleReadMore}> READ MORE </p>
                             {isDesktopOrLaptop && <br/>}
                         </div>
                     }
@@ -196,7 +196,7 @@ const GL01_C01 = () => {
                                 (musee des modeles) a place with the social purpose of inspiring craftsmen by presenting good models or forms of design. Nostalgic, no. Co-existent with the future? Perhaps.
                             </div>
                             {isDesktopOrLaptop && <br/>}
-                            <p className="underlined button__readMore" onClick={handleReadMore}> HIDE TEXT </p>
+                            <p className="underlined button__readMore nav--header" onClick={handleReadMore}> HIDE TEXT </p>
                             {isDesktopOrLaptop && <br/>}
 
                         </div>
@@ -274,4 +274,4 @@ const GL01_C01 = () => {
     )
 }
 
-export default GL01_C01;
+export default M01_C01;

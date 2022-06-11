@@ -286,22 +286,14 @@ a {
 
 /* ---------------------------------- NAV + HEADER  ---------------------------------- */
 
-.sideBarLeft-Nav{
-    display: grid;
-    width: 40px;
-    
+.nav--header {
+    color: black;
+    transition: color 300ms ease-in-out;
 }
 
-.sideBarLeft-Nav__button{
-    color: var(--main__green);
-}
-
-.sideBarLeft-Nav__button:hover{
-    transition-duration: 1.5s;
-    color: var(--fluo__green);
-    background-color: white;
-    border: 3px solid var(--fluo__green);
-}
+.nav--header:hover {
+    color: var(--yellow_bright)
+ }
 
 .emptyFrameModel__1 {
     position:relative;

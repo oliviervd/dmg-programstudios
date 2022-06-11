@@ -44,7 +44,7 @@ const XenoHeader = (props) => {
                 {props.header_nav &&
                     <div className="background__transparent__flow grid--even_8" style={{textAlign: "center"}}>
                         <Link to="/home">
-                            <h3>ABOUT</h3>
+                            <h3 className="nav--header">ABOUT</h3>
                         </Link>
                         <div></div>
                         <div></div>
@@ -52,10 +52,10 @@ const XenoHeader = (props) => {
                         <div></div>
                         <div></div>
                         <Link to="/glossary">
-                            <h3>GLOSSARY</h3>
+                            <h3 className="nav--header">GLOSSARY</h3>
                         </Link>
                         <Link to="/reading-list">
-                            <h3>READING LIST</h3>
+                            <h3 className="nav--header">READING LIST</h3>
                         </Link>
                     </div>
                 }

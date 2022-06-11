@@ -109,7 +109,7 @@ const Home = () => {
                                     <div className="dotLine"></div>
                                     <p className="font-main text center"><u>RULE #1</u>: models may <i>break, mutate</i> and <i>build</i> upon what is and isn't real</p>
                                     {!open&&
-                                        <p className='center' style={{fontFamily: "lineal"}} onClick={openAccordion}> V - read more - V </p>
+                                        <p className='center nav-header' style={{fontFamily: "lineal"}} onClick={openAccordion}> V - read more - V </p>
                                     }
                                     {open&&
                                         <div>
@@ -151,7 +151,7 @@ const Home = () => {
                                                     </p>
                                                 </div>
                                             </div>
-                                            <p className='center' style={{fontFamily: "lineal", fontSize: "18px"}} onClick={openAccordion}> ^ - close - ^ </p>
+                                            <p className='center nav-header' style={{fontFamily: "lineal", fontSize: "18px"}} onClick={openAccordion}> ^ - close - ^ </p>
                                         </div>
                                     }
 
@@ -192,7 +192,7 @@ const Home = () => {
                                         borderTop: "2px var(--main__green) solid"
                                     }}>
                                         <Link to={"../M01_C01"} replace>
-                                            <p className="justify text font-main">
+                                            <p className="justify text font-main nav--header">
                                                 On the Logic of Collecting and Sovereignty towards a Collection of Care.
                                             </p>
                                         </Link>

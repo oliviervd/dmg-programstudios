@@ -134,7 +134,7 @@ const ColorCubes = (props) => {
 
     return(
         <Suspense>
-            <div className="container_color_interface">
+            <div className="container_color_interface" style={{height:'90vh'}}>
                 <div>
                     <HexCube id="HexCube"
                              hexColors = {color_hex[0]}
