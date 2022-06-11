@@ -29,7 +29,6 @@ const ReadingList = () => {
             <div className="grid--3_4_3">
                 <div/>
                 <p className="center text">
-                    This list comprises texts that were a source of inspriation for the contributions on this production platform.
                 </p>
                 <div/>
             </div>
