@@ -1,4 +1,4 @@
-import React ,{useEffect} from "react";
+import React from "react";
 import Sketch from "react-p5";
 
 const Sketch13D = p5 => {
@@ -21,12 +21,8 @@ const Sketch13D = p5 => {
 
 
     //colors
-    let BG = 0;
-    let FG = "#f1f1f1"
-    let _green1 = "#00ff67"
-    let _green2 = "#afc6ae"
-    let _pink1 = "#C6AEAF"
-    let _bruises
+    let _green2 = "#ffefd5"
+    let _pink1 = "#ffefd5"
 
 
     const setup = (p5, canvasParantRef) => {
@@ -53,7 +49,7 @@ const Sketch13D = p5 => {
         p5.camera(eyeX, eyeY, eyeZ, centerX, centerY, centerZ, upX, upY, upZ);
 
         // -------- SCENE -----------//
-        p5.background(255);
+        p5.background("#ff1111");
         p5.perspective(p5.PI/3.0, p5.float(_width/_height), 1, 10000);
 
         p5.push();
@@ -77,7 +73,6 @@ const Sketch13D = p5 => {
 
         //IMAGE INSIDE
         p5.push();
-        let _angle = p5.map(p5.mouseY, 0, _height, 0, 360);
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(-30));
         p5.translate(1500, -2200, -1000);
@@ -141,6 +136,7 @@ const Sketch13D = p5 => {
         //p5.texture(_bruises); // REACTIVATE FOR SPHERE.
         p5.rotateX(p5.radians(-90));
         p5.rotateY(p5.radians(p5.frameCount));
+        p5.strokeWeight(3);
         p5.translate(p5.noise(xOff)*100, p5.noise(yOff)*_height*0.01, -p5.noise(zOff)*600);
         p5.sphere(300);
         p5.pop()
@@ -149,7 +145,7 @@ const Sketch13D = p5 => {
         // inner sphere
         p5.stroke(_pink1);
         p5.fill(175, 198, 174, 67);
-        p5.strokeWeight(2);
+        p5.strokeWeight(3);
         p5.translate(p5.noise(xOff)*200, p5.noise(yOff)*_height*0.08, -p5.noise(zOff)*100);
         p5.sphere(500);
 
