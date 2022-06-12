@@ -96,12 +96,12 @@ const Home = () => {
                             <div className="background__white">
                                 <h1 className="center">MODELS</h1>
                                 <p className="center text font-main">
-                                    MODELS FROM THE PAST FOR THE FUTURE is both a program and a catalyst for change.
-                                    Working with models as primary building blocks and (thematic) nodes it is in search
-                                    for alternative collectively built futures in which the museum can operate with care.
-                                    In a sense they perform the very notion and movement of the past become future becoming present –
-                                    in that way that they harbor space for critical retrospect, thoughtful futuring and
-                                    the possibility for present actualization.
+                                    is both a program and a catalyst for change. Establishing models as primary building
+                                    blocks and frameworks that become instrumental in the search alternative collectively
+                                    built futures in which the museum can operate with care. The conceptual frameworks
+                                    operate as structures that exemplify the very notion and movement of the past become
+                                    future becoming present – in that way that they harbor space for critical retrospect,
+                                    thoughtful futuring and the possibility for present actualization.
                                 </p>
                                     <br/>
                                     <br/>
@@ -147,7 +147,7 @@ const Home = () => {
                                                     <p className="left text font-main">
                                                         As a flexibly adaptive language system things will most likely break along the way,
                                                         making room for new ideas to flourish in the process. Breaking not in a destructive and disruptive manner,
-                                                        but as a way to gift space for new thoughts to cultivate.
+                                                        but as a way of allowing new combinations of thought to emerge.
                                                     </p>
                                                 </div>
                                             </div>
@@ -162,6 +162,7 @@ const Home = () => {
                                         <p className="center text" style={{margin:"10px 10px"}}>
                                             by setting up several director's projects, the museum wants to give designers
                                             the space and agency to co-develop the new programming and the necessary support structures.
+                                            In order to do this the museum searched for a series of protagonists to work with this coming years.
                                         </p>
                                     </div>
                                 </div>
@@ -184,6 +185,7 @@ const Home = () => {
                                         The museum reimagined; as an interface that engages in a mutual relationship –
                                         one based on forms of coexistence, moving beyond the mere display.
                                         A model for an institution that is performative first, representational second.
+                                        <u style={{color: "var(--yellow_bright)"}}> #INTIMACY</u>
                                     </p>
                                     <line></line>
                                     <div className="grid--7_3" style={{
@@ -192,7 +194,7 @@ const Home = () => {
                                         borderTop: "2px var(--main__green) solid"
                                     }}>
                                         <Link to={"../M01_C01"} replace>
-                                            <p className="justify text font-main nav--header">
+                                            <p className="justify text font-main nav--header" style={{fontSize:"14px"}}>
                                                 On the Logic of Collecting and Sovereignty towards a Collection of Care.
                                             </p>
                                         </Link>
@@ -200,16 +202,38 @@ const Home = () => {
                                             ESSAY, INTERFACE
                                         </p>
                                     </div>
+                                    {/*<div className="grid--7_3" style={{
+                                        padding: "4px",
+                                        borderBottom: "2px var(--main__green) solid",
+                                        //borderTop: "2px var(--main__green) solid"
+                                    }}>
+                                        <Link to={"../M02_C01"} replace>
+                                            <p className="justify text font-main nav--header" style={{fontSize:"14px"}}>
+                                                On kinship, machines and the museum – from representational devices to performative modes of co-existence.
+                                            </p>
+                                        </Link>
+                                        <p className="center text font-main" style={{fontSize: "15px", padding:"0 10px"}}>
+                                            ESSAY
+                                        </p>
+                                    </div>*/}
                                 </div>
 
                             </div>
                             <div className="center" style={{height: "50vh", margin: "1vw"}}>
                                 <h1 className="center" style={{
                                     fontSize: "30px"
-                                }}>MODEL2</h1>`
-                                <Suspense>
-                                    <SketchPlaceHolder/>
-                                </Suspense>
+                                }}>MODEL2: <br/> THE EXPANDED FIELD</h1>
+                                <div>
+                                    <p className="justify text font-main"
+                                       style={{padding: "4px"}}>
+                                        What if a museum could act in an expanded space. What would these spaces look like?
+                                        And how do they relate to the existing museological frameworks? What is to be a museum without walls,
+                                        or how does it act beyond its walls? What if the museum operated more as a studio,
+                                        akin to a production platform, a driver for change. <u style={{color: "var(--yellow_bright)"}}>#PLACE</u>
+                                    </p>
+                                    <line></line>
+                                </div>
+
                             </div>
                             <div className="center" style={{height: "50vh", margin: "1vw"}}>
                                 <h1 className="center" style={{
