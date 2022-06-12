@@ -33,6 +33,7 @@ html, body {
     cursor: cell;
     height: 200vh;
     background: linear-gradient(180deg, white 0%,  #fbf2e7 85%);
+    scroll-behavior: smooth;
 
 }
 
@@ -846,6 +847,11 @@ imageViewer__modal-main {
 .gridH--even_2{
     display:grid;
     grid-template-rows: repeat(2, 50%);
+}
+
+.grid--even_2 {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
 }
 
 .grid--even_3 {
