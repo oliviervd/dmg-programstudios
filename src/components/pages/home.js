@@ -96,7 +96,7 @@ const Home = () => {
                             <div className="background__white">
                                 <h1 className="center">MODELS</h1>
                                 <p className="center text font-main">
-                                    is both a program and a catalyst for change. Establishing models as primary building
+                                    MODELS FROM THE PAST FOR THE FUTURE is both a program and a catalyst for change. Establishing models as primary building
                                     blocks and frameworks that become instrumental in the search alternative collectively
                                     built futures in which the museum can operate with care. The conceptual frameworks
                                     operate as structures that exemplify the very notion and movement of the past become
