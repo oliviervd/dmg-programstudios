@@ -36,9 +36,7 @@ const M01_C01 = () => {
             <div className="grid--even_3">
                 <div>
                     {readMore &&
-                        <div style={{paddingLeft: "250px", paddingTop: "180vh"}}>
-                            <p className="background__white caption" >©Archief Gent</p>
-                            <img style={{height: "300px"}} src={"https://beeldbank.stad.gent/GENT/fc4f206ee968449ab5b0a5dbbadf06b2b6ab40300b904d318b6678be25c21ea3/browse.jpg"}></img>
+                        <div>
                         </div>
                     }
                 </div>
@@ -75,6 +73,7 @@ const M01_C01 = () => {
                         Acknowledging that we are not alone in this, as it has become a major challenge that is being addressed internationally within the (touring) exhibition <a href="#resource_hungry" aria-describedby="footnote-label" id="resource_hungry_ref">sector</a>.
                         In this sense, making the institution sustainable also implies a critical reprogramming of the museum, reconsidering its <a href="#metabolism" aria-describedby="glossary-label" id="metabolism_ref">metabolism</a> as a whole.
                     </div>
+
                     {isDesktopOrLaptop && <br/>}
                     <h1 className="center quote text">I imagine a future where the museum engages in mutual relationships with machines –
                         more-than-human – critters and systems, that enable us to converse on more-than-human scales.
@@ -92,8 +91,21 @@ const M01_C01 = () => {
                         </div>
                     }
 
+
+
                     {readMore &&
                         <div>
+                            <div className="grid--even_2">
+                                <div style={{paddingLeft: "50px", paddingTop: "150px"}}>
+                                    <br/>
+                                    <img style={{height: "280px"}} src={"https://beeldbank.stad.gent/GENT/b9c4ed74ddd747509c487497b22aa4636559db9dc46648fcadc4d16c36bef951/browse.jpg"}></img>
+                                </div>
+                                <div>
+                                    <br/>
+                                    <img style={{height: "300px"}} src={"https://beeldbank.stad.gent/GENT/02212221bbe94ec09cb05beb1d87f4d592dda19734214db3a1071ecfcf7dfd9e/browse.jpg"}></img>
+                                </div>
+
+                            </div>
                             <div className="center text">
                                 <p className="subHeader__text text">METABOLISM</p>Can we reimagine and rethink the metabolism –
                                 and thus the act of processing “matter” to sustain the vitality of the museum -
@@ -172,6 +184,7 @@ const M01_C01 = () => {
                                 One could also read this exercise as if revisiting, invoking or emulating the design museum in its early, former form, in which it went as a <a href="#models_museum" aria-describedby="footnote-label" id="models_museum_ref">model museum</a>;
                                 (musee des modeles) a place with the social purpose of inspiring craftsmen by presenting good models or forms of design. Nostalgic, no. Co-existent with the future? Perhaps.
                             </div>
+
                             {isDesktopOrLaptop && <br/>}
                             <p className="underlined center button__readMore nav--header" onClick={handleReadMore}> HIDE TEXT </p>
                             {isDesktopOrLaptop && <br/>}
