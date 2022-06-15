@@ -120,7 +120,7 @@ const Home = () => {
                                                 </div>
                                                 <div>
                                                     <p className="left text font-main">
-                                                        when building this production platform, we are not building on top,
+                                                        contributions are not building on top of,
                                                         as to hide and discard past traces, but are <i>rebuilding</i> as a form of continuation
                                                         and acknowledgement that concepts and ideas are not singular but perform in a networked system.
                                                         Contributions can take on different forms, including (but not exclusively) essay, interfaces and media.
