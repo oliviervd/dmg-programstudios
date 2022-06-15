@@ -76,7 +76,7 @@ const M01_C01 = () => {
 
                     {isDesktopOrLaptop && <br/>}
                     <h1 className="center quote text">I imagine a future where the museum engages in mutual relationships with machines –
-                        more-than-human – critters and systems, that enable us to converse on more-than-human scales.
+                        and other <i>living systems</i>, that enable us to converse on more-than-human scales.
                         A mode of coproducing futures – or futuring - that is built on epistemologies that transcend
                         that of the Anthropos. </h1>
                     {isDesktopOrLaptop && <br/>}
@@ -106,7 +106,7 @@ const M01_C01 = () => {
                                     <br/><br/>
                                     <div className="grid--1_8_1">
                                         <div><p>⇡</p></div>
-                                        <div><p> museum for decorative arts; now Design Museum Gent (ca. 1913)</p></div>
+                                        <div><p> museum for decorative arts; now Design Museum Gent (ca. 1913) - Collectie Archief Gent (SCMS_PBK_1668).</p></div>
                                     </div>
                                     <div className="grid--1_8_1">
                                         <div><p>⬸</p></div>
