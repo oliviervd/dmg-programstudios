@@ -49,7 +49,7 @@ article {
 }
 
 [aria-describedby="footnote-label"]::after {
-    content: "[" counter(footnotes) "]"; /*display the current state of the counter*/
+    content: "[" counter(footnotes) "] "; /*display the current state of the counter*/
     vertical-align: super;
     font-size: 0.7em;
     margin-left: 2px;
