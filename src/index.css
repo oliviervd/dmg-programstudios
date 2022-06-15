@@ -125,9 +125,10 @@ h3 {
 }
 
 .subHeader__text {
-    font-size: 20px;
+    font-size: 40px;
     color: var(--main__green);
     font-family: lineal;
+    text-align: left;
 } @media (max-width: 1224px) {
     .subHeader__text{
         font-size: 50px;
@@ -137,7 +138,8 @@ h3 {
 
 .quote{
     border-left: 3px solid black;
-    margin-left: 5%;
+    left: 20%;
+    font-size: 20px;
 }
 
 h4 {
@@ -575,6 +577,11 @@ img__thumbnail {
     border: dotted 1px #00FF67;
 }
 
+.caption {
+    padding: 10px 10px;
+    font-size: 15px;
+}
+
 .imageViewer__modal--box {
     display: grid;
 }
@@ -782,18 +789,6 @@ imageViewer__modal-main {
  V: vertical (columns)
  */}
 
-.grid--3_3_3 {
-    display: grid;
-}  @media (min-width: 1224px) {
-    .grid--3_3_3{
-        grid-template-columns: repeat(3, 30%);
-    }
-}  @media (max-width: 1224px) {
-    .grid--3_3_3{
-        grid-template-columns: none;
-        grid-auto-flow: dense;
-    }
-}
 
 .grid--1_8_1 {
     grid-template-columns: 10% 80% 10%;
@@ -856,7 +851,17 @@ imageViewer__modal-main {
 
 .grid--even_3 {
     display: grid;
-    grid-template-columns: repeat(3, 33%);
+    }
+
+@media (min-width: 1224px) {
+    .grid--even_3{
+        grid-template-columns: repeat(3, 33%);
+    }
+}  @media (max-width: 1224px) {
+    .grid--even_3{
+        grid-template-columns: none;
+        grid-auto-flow: dense;
+    }
 }
 
 .grid--even_4{
