@@ -19,6 +19,10 @@ const ReadingList = () => {
         })
     })
 
+    for (let i=0; i<_list.length; i++) {
+        console.log(i);
+    }
+
     return (
         <div>
             <Suspense>
