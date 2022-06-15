@@ -103,6 +103,15 @@ const M01_C01 = () => {
                                 <div>
                                     <br/>
                                     <img style={{height: "300px"}} src={"https://beeldbank.stad.gent/GENT/02212221bbe94ec09cb05beb1d87f4d592dda19734214db3a1071ecfcf7dfd9e/browse.jpg"}></img>
+                                    <br/><br/>
+                                    <div className="grid--1_8_1">
+                                        <div><p>⇡</p></div>
+                                        <div><p> museum for decorative arts; now Design Museum Gent (ca. 1913)</p></div>
+                                    </div>
+                                    <div className="grid--1_8_1">
+                                        <div><p>⬸</p></div>
+                                        <div><p>019 - Museum of Moving Practice (2019)</p></div>
+                                    </div>
                                 </div>
 
                             </div>
