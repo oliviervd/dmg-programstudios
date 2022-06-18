@@ -6,7 +6,7 @@ const ImageViewer = React.lazy(()=> import("./elements/imageModal"))
 function LDESViaURI(uri) {
     return ldes_translations.filter(
         function(ldes_translations) {
-            return ldes_translations.URI === uri
+            return ldes_translations.uri === uri
         }
     )
 
@@ -28,6 +28,7 @@ const ImageGenerator = (props) => {
         const x = curatedSet[imCount]
         const uri = object_colors[x]["URI"];
         const _LDES = LDESViaURI(uri)
+        console.log(_LDES)
         let _im = object_colors[x]["IIIF_image"].replace("['","").replace("']","").replace("'","").split(",")
         _images.push(_im);
         _titles.push(_LDES[0]["title_en"])

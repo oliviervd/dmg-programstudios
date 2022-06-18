@@ -90,9 +90,7 @@ const M01_C01 = () => {
                             {isDesktopOrLaptop && <br/>}
                         </div>
                     }
-
-
-
+                    
                     {readMore &&
                         <div>
                             <div className="grid--even_2">

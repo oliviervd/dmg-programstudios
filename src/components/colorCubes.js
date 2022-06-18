@@ -7,7 +7,7 @@ const ObjectDescription = React.lazy(() => import("./objectDescription"))
 function LDESViaURI(uri) {
     return ldes_translations.filter(
         function(ldes_translations) {
-            return ldes_translations.URI === uri
+            return ldes_translations.uri === uri
         }
     )
 
