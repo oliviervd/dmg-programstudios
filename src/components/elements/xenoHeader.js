@@ -47,10 +47,10 @@ const XenoHeader = (props) => {
                             <h3 className="nav--header">ABOUT</h3>
                         </Link>
                         <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
-                        <div></div>
+                        <div><h3 className="nav--header" style={{fontFamily:'P-ACR-AGON-Regular'}}>||</h3></div>
+                        <div><h3 className="nav--header">PAST(S)</h3></div>
+                        <div><h3 className="nav--header">FUTURE(S)</h3></div>
+                        <div><h3 className="nav--header" style={{fontFamily:'P-ACR-AGON-Regular'}}>||</h3></div>
                         <Link to="/glossary">
                             <h3 className="nav--header">GLOSSARY</h3>
                         </Link>
