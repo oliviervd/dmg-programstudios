@@ -27,7 +27,7 @@ const SpectreMain = (props) => {
 
     function generateNumSwap() {
         //count number of items in color swap book json and create list to used for fetching random swap.
-        const numsSwap = []
+        const numsSwap = [];
         for (let n=0; n<swap_c.length; ++n) {
             numsSwap.push(n);
         }
@@ -111,8 +111,9 @@ const SpectreMain = (props) => {
                         <h1 className=" pinkHeader">COLOR</h1>
                     </div>
                     <div className="pinkHeader boxBorder" onClick = {handleNumSwapChange}>
-                        <h1 className="pinkHeader italic" >SWAP </h1>
-                        <h1 className="pinkHeader italic underlined animateFont__organism" >SAMPLE</h1>
+                        <h1 className="pinkHeader italic" >SUGGEST </h1>
+                        <h1 className="pinkHeader italicSet" >|| RE-GENERATE </h1>
+                        <h1 className="pinkHeader italic underlined animateFont__organism" >NEW COLLECTION</h1>
                     </div>
                 </div>
 
