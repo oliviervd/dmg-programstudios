@@ -226,10 +226,11 @@ const Home = () => {
                                 <div>
                                     <p className="justify text font-main"
                                        style={{padding: "4px"}}>
-                                        What if a museum could act in an expanded space. What would these spaces look like?
+                                        What if a museum could act in an expanded space. What would these spaces look like and with what <b>scales</b> would these by measured by?
                                         And how do they relate to the existing museological frameworks? What is to be a museum without walls,
                                         or how does it act beyond its walls? What if the museum operated more as a studio,
-                                        akin to a production platform, a driver for change. <u style={{color: "var(--yellow_bright)"}}>#PLACE</u>
+                                        akin to a production platform, a driver for change. <u style={{color: "var(--yellow_bright)"}}>#PLACE</u>,
+                                         <u style={{color: "var(--yellow_bright)"}}>#RESCALING</u>
                                     </p>
                                     <line></line>
                                 </div>
