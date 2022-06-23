@@ -78,7 +78,7 @@ const Glossary = () => {
                         <div></div>
                         <div className="glossDefinitionBox">
                             <h1 className="center">{_glossTitle}</h1>
-                            <div className="center text">{_glossDesc}</div>
+                            <div className="center text" style={{margin: "100px"}}>{_glossDesc}</div>
                         </div>
                         <div></div>
                     </div>
