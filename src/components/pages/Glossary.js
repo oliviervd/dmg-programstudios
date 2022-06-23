@@ -53,7 +53,7 @@ const Glossary = () => {
             {/* ROW1 */}
 
             <div className="rowScrollMain">
-                <div style={{background: "#111111", height:"200vh"}}>
+                <div style={{background: "#111111", height:"150vh"}}>
                     <div className="grid--even_10">
                         <div className="border_box white glossBox"/>
                         <div className="border_box white glossBox"/>
