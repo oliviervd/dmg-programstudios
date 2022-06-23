@@ -39,8 +39,10 @@ const Glossary = () => {
         return val.id === gloss
     })
 
-    let _glossTitle = _result.map((_temp) => { return _temp.glossary_term})
+    let _glossTitle = _result.map((_temp) => { return _temp.glossary_term.toUpperCase()})
     let _glossDesc = _result.map((_temp) => {return _temp.glossary_description})
+    let _glossSource = _result.map((_temp) => {return _temp.glossary_source})
+    let _glossActive = _result.map((_temp) => {return _temp.glossary_active})
 
 
     // set glossary term to be shown
@@ -78,7 +80,9 @@ const Glossary = () => {
                         <div></div>
                         <div className="glossDefinitionBox">
                             <h1 className="center">{_glossTitle}</h1>
+                            <h3 className="center">{_glossActive}</h3>
                             <div className="center text" style={{margin: "100px"}}>{_glossDesc}</div>
+                            <div className="center text">{_glossSource}</div>
                         </div>
                         <div></div>
                     </div>
