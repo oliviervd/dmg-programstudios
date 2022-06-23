@@ -84,15 +84,6 @@ const Glossary = () => {
                     </div>
                 </div>
 
-                <div className="grid--3_4_3">
-                    <div></div>
-                    <div>
-                        <h1 className="center">GLOSSARY</h1>
-                    </div>
-                    <div></div>
-
-                </div>
-
             </div>
 
 
