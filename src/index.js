@@ -23,7 +23,6 @@ console.log(window.location.origin);
 
 const rootElement = document.getElementById("root");
 render(
-
     <BrowserRouter>
         <Auth0Provider
             domain={domain}
