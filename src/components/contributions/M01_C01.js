@@ -43,9 +43,9 @@ const M01_C01 = () => {
                 <article>
                     <div className="center text">
                         “When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
-                        This question served as a baseling for one of the thematic tracks in Object Stories,
-                        the semi-permanent presentation of the collection of Design Museum Gent. The objects on display,
-                        all in their own way demonstrative of the belief that although there is an increased focus on
+                        This question served as a baseline for many years in one of the tracks in Object Stories,
+                        the semi-permanent presentation of the collection of Design Museum Gent before it closed its doors in 2022.
+                        The objects on display, all in their own way demonstrative of the belief that although there is an increased focus on
                         sustainability and social concern today, this phenomenon is not new in the design world per se.
                         The heightened awareness of these changes came along with emerging technologies and theories that
                         enabled us to sense in more-than-human scales that were previously too large to grasp.
