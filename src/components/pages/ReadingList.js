@@ -45,36 +45,57 @@ const ReadingList = () => {
                         <div>//</div>
                         <div>referenced in contributions:</div>
                     </div>
-                    {_list.map((lit)=>(
-                        //console.log(lit.id)
-                        <div>
-                            <div className="grid--7_1_2">
-                                <div>
-                                    <p className="left text background__white">{lit.author}, <i><u>{lit.title}</u></i> ({lit.year}), {lit.publisher}</p>
-                                </div>
-                                <div></div>
-                                <div>
+                    {_list.map((lit) => {
+                            if (lit.part_of == "x") {
+                                return (
+                                    <div>
+                                        <div className="grid--7_1_2">
+                                            <div>
+                                                <p className="left text background__white">{lit.author}, <i><u>{lit.title}</u></i> ({lit.year}), {lit.publisher}
+                                                </p>
+                                            </div>
+                                            <div></div>
+                                            <div>
+                                                <Link to={'/' + lit.relevant_contrib}>
+                                                    <p className='left text background__cool-to-warm-spectrum nav--header'>
+                                                        {lit.relevant_contrib}
+                                                    </p>
+                                                </Link>
+                                            </div>
 
-                                    <Link to={'/'+lit.relevant_contrib}>
-                                        <p className='left text background__cool-to-warm-spectrum nav--header'>
-                                            {lit.relevant_contrib}
-                                        </p>
-                                    </Link>
-                                </div>
-                            </div>
-                            <div className="dotLine"></div>
-                        </div>
+                                        </div>
+                                        <div className="dotLine"></div>
+                                    </div>
+                                )
+                            } else {
+                                return (
+                                    <div>
+                                        <div className="grid--7_1_2">
+                                            <div>
+                                                <p className="left text background__white">{lit.author}, <i><u>{lit.title}</u></i>, in {lit.part_of} ({lit.year}), {lit.publisher}
+                                                </p>
+                                            </div>
+                                            <div></div>
+                                            <div>
+                                                <Link to={'/' + lit.relevant_contrib}>
+                                                    <p className='left text background__cool-to-warm-spectrum nav--header'>
+                                                        {lit.relevant_contrib}
+                                                    </p>
+                                                </Link>
+                                            </div>
 
-
-
-                    ))}
+                                        </div>
+                                        <div className="dotLine"></div>
+                                    </div>
+                                )
+                            }
+                        }
+                    )
+                    }
                 </div>
+                <div></div>
             </div>
-            <br></br>
-
-
         </div>
     )
-}
+}; export default ReadingList;
 
-export default ReadingList;
