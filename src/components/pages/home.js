@@ -49,7 +49,7 @@ const Home = () => {
                             <p className="center text font-main">
                                 <strong>MODELS FROM THE PAST FOR THE FUTURE </strong>
                                 is a curatorial experiment, post-digital discourse and production platform looking into past,
-                                future and speculative models, and takes place during the closure of the Design Museum Ghent (2022-2025).
+                                future and speculative models that takes place during the closure of the Design Museum Ghent (2022-2025).
                                 As such this exercise positions itself in a period of transition where past, present and future interlock.
                                 By focusing on the medium-specificity of the web, it investigates new curatorial strategies that
                                 better reflect the singularity of design practice in its
