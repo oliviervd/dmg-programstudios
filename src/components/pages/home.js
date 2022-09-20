@@ -17,12 +17,12 @@ const Home = () => {
     return (
         <div>
             <Suspense>
-                <XenoHeader header_main={true} header_models={false} header_model={false} header_nav={true}/>
+                <XenoHeader header_main={true} header_models={true} header_model={true} header_nav={true}/>
             </Suspense>
 
             {/*section 1*/}
             <div className="rowScrollMain">
-                <div style={{marginBottom: "-600px"}}>
+                <div style={{marginBottom: "-800px"}}>
                     <Suspense>
                         <CubicBezier/>
                     </Suspense>
@@ -30,10 +30,8 @@ const Home = () => {
                 <div>
 
                     {/* curatorial statement (text) */}
-                    <div className="grid--3_4_3">
-                        <div className="background__transparent">
-                        </div>
-                        <div className="background__white" style={{height: "auto", padding: "80px"}}>
+                    <div className="grid--6_1_3">
+                        <div className="background__white" style={{height: "auto", padding: "80px", margin: "80px"}}>
                             <h1 style={{
                                 fontSize: "60px",
                                 textAlign: "center"
@@ -80,6 +78,9 @@ const Home = () => {
                             collection public.</p>
 
                         </div>
+                        <div className="background__white">
+                        </div>
+
                         <div className="background__transparent" style={{height: "50vh"}}/>
                     </div>
 
@@ -103,106 +104,106 @@ const Home = () => {
                                     future becoming present – in that way that they harbor space for critical retrospect,
                                     thoughtful futuring and the possibility for present actualization.
                                 </p>
-                                    <br/>
-                                    <br/>
+                                <br/>
+                                <br/>
 
-                                    <div className="dotLine"></div>
-                                    <p className="font-main text center"><u>RULE #1</u>: models may <i>break, mutate</i> and <i>build</i> upon what is and isn't real</p>
-                                    {!open&&
-                                        <p className='center nav-header' style={{fontFamily: "lineal"}} onClick={openAccordion}> V - read more - V </p>
-                                    }
-                                    {open&&
-                                        <div>
-                                            <div className="dotLine"></div>
-                                            <div className="grid--3_7">
-                                                <div>
-                                                    <p className="center text font-main">TO BUILD</p>
-                                                </div>
-                                                <div>
-                                                    <p className="left text font-main">
-                                                        contributions are not building on top of,
-                                                        as to hide and discard past traces, but are <i>rebuilding</i> as a form of continuation
-                                                        and acknowledgement that concepts and ideas are not singular but perform in a networked system.
-                                                        Contributions can take on different forms, including (but not exclusively) essay, interfaces and media.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div className="grid--3_7">
-                                                <div>
-                                                    <p className="center text font-main">TO MUTATE</p>
-                                                </div>
-                                                <div>
-                                                    <p className="left text font-main">
-                                                        All models exist within a transformative system, like a filter that distorts in a recognizable way.
-                                                        This idea of slowly mutating and <i>distorting</i> the program resembles the programming within Museum of Moving Practice,
-                                                        where the exhibition complex was in constant change yet always in dialogue with its environment and its ecosystem.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <div className="grid--3_7">
-                                                <div>
-                                                    <p className="center text font-main">TO BREAK</p>
-                                                </div>
-                                                <div>
-                                                    <p className="left text font-main">
-                                                        As a flexibly adaptive language system things will most likely break along the way,
-                                                        making room for new ideas to flourish in the process. Breaking not in a destructive and disruptive manner,
-                                                        but as a way of allowing new combinations of thought to emerge.
-                                                    </p>
-                                                </div>
-                                            </div>
-                                            <p className='center nav-header' style={{fontFamily: "lineal", fontSize: "18px"}} onClick={openAccordion}> ^ - close - ^ </p>
-                                        </div>
-                                    }
-
-                                    <div className="dotLine"></div>
-                                    <p className="font-main text center"><u>RULE #2</u>: models are inherently <i>multi-authored</i> and <i>collaborative</i>.</p>
-                                    <div className="dotLine"></div>
+                                <div className="dotLine"></div>
+                                <p className="font-main text center"><u>RULE #1</u>: models may <i>break, mutate</i> and <i>build</i> upon what is and isn't real</p>
+                                {!open&&
+                                    <p className='center nav-header' style={{fontFamily: "lineal"}} onClick={openAccordion}> V - read more - V </p>
+                                }
+                                {open&&
                                     <div>
-                                        <p className="center text" style={{margin:"10px 10px"}}>
-                                            by setting up several director's projects, the museum wants to give designers
-                                            the space and agency to co-develop the new programming and the necessary support structures.
-                                            In order to do this the museum searched for a series of protagonists to work with this coming years.
-                                        </p>
+                                        <div className="dotLine"></div>
+                                        <div className="grid--3_7">
+                                            <div>
+                                                <p className="center text font-main">TO BUILD</p>
+                                            </div>
+                                            <div>
+                                                <p className="left text font-main">
+                                                    contributions are not building on top of,
+                                                    as to hide and discard past traces, but are <i>rebuilding</i> as a form of continuation
+                                                    and acknowledgement that concepts and ideas are not singular but perform in a networked system.
+                                                    Contributions can take on different forms, including (but not exclusively) essay, interfaces and media.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="grid--3_7">
+                                            <div>
+                                                <p className="center text font-main">TO MUTATE</p>
+                                            </div>
+                                            <div>
+                                                <p className="left text font-main">
+                                                    All models exist within a transformative system, like a filter that distorts in a recognizable way.
+                                                    This idea of slowly mutating and <i>distorting</i> the program resembles the programming within Museum of Moving Practice,
+                                                    where the exhibition complex was in constant change yet always in dialogue with its environment and its ecosystem.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <div className="grid--3_7">
+                                            <div>
+                                                <p className="center text font-main">TO BREAK</p>
+                                            </div>
+                                            <div>
+                                                <p className="left text font-main">
+                                                    As a flexibly adaptive language system things will most likely break along the way,
+                                                    making room for new ideas to flourish in the process. Breaking not in a destructive and disruptive manner,
+                                                    but as a way of allowing new combinations of thought to emerge.
+                                                </p>
+                                            </div>
+                                        </div>
+                                        <p className='center nav-header' style={{fontFamily: "lineal", fontSize: "18px"}} onClick={openAccordion}> ^ - close - ^ </p>
                                     </div>
+                                }
+
+                                <div className="dotLine"></div>
+                                <p className="font-main text center"><u>RULE #2</u>: models are inherently <i>multi-authored</i> and <i>collaborative</i>.</p>
+                                <div className="dotLine"></div>
+                                <div>
+                                    <p className="center text" style={{margin:"10px 10px"}}>
+                                        by setting up several director's projects, the museum wants to give designers
+                                        the space and agency to co-develop the new programming and the necessary support structures.
+                                        In order to do this the museum searched for a series of protagonists to work with this coming years.
+                                    </p>
                                 </div>
                             </div>
-                            <div></div>
                         </div>
+                        <div></div>
+                    </div>
 
-                        <br/><br/><br/><br/>
+                    <br/><br/><br/><br/>
 
-                        <div className="grid--even_4 background__cool-to-warm-spectrum" style={{margin:"0px 30px"}}>
-                            <div className="center" style={{height: "50vh", margin: "1vw"}}>
-                                <h1 className="center" style={{
-                                    fontSize: "30px"
-                                }}>MODEL1: <br/> SENSE & SENSIBILITY</h1>
-                                <div>
-                                    <p className="justify text font-main"
-                                       style={{padding: "4px"}}>
-                                        how do we adapt – not as an individual institution – but as a community of
-                                        individuals.
-                                        The museum reimagined; as an interface that engages in a mutual relationship –
-                                        one based on forms of coexistence, moving beyond the mere display.
-                                        A model for an institution that is performative first, representational second.
-                                        <u style={{color: "var(--yellow_bright)"}}> #INTIMACY</u>
-                                    </p>
-                                    <line></line>
-                                    <div className="grid--7_3" style={{
-                                        padding: "4px",
-                                        borderBottom: "2px var(--main__green) solid",
-                                        borderTop: "2px var(--main__green) solid"
-                                    }}>
-                                        <Link to={"../M01_C01"} replace>
-                                            <p className="justify text font-main nav--header" style={{fontSize:"14px"}}>
-                                                On the Logic of Collecting and Sovereignty towards a Collection of Care.
-                                            </p>
-                                        </Link>
-                                        <p className="center text font-main" style={{fontSize: "15px", padding:"0 10px"}}>
-                                            ESSAY, INTERFACE
+                    <div className="grid--even_4 background__cool-to-warm-spectrum" style={{margin:"0px 30px"}}>
+                        <div className="center" style={{height: "50vh", margin: "1vw"}}>
+                            <h1 className="center" style={{
+                                fontSize: "30px"
+                            }}>MODEL1: <br/> SENSE & SENSIBILITY</h1>
+                            <div>
+                                <p className="justify text font-main"
+                                   style={{padding: "4px"}}>
+                                    how do we adapt – not as an individual institution – but as a community of
+                                    individuals.
+                                    The museum reimagined; as an interface that engages in a mutual relationship –
+                                    one based on forms of coexistence, moving beyond the mere display.
+                                    A model for an institution that is performative first, representational second.
+                                    <u style={{color: "var(--yellow_bright)"}}> #INTIMACY</u>
+                                </p>
+                                <line></line>
+                                <div className="grid--7_3" style={{
+                                    padding: "4px",
+                                    borderBottom: "2px var(--main__green) solid",
+                                    borderTop: "2px var(--main__green) solid"
+                                }}>
+                                    <Link to={"../M01_C01"} replace>
+                                        <p className="justify text font-main nav--header" style={{fontSize:"14px"}}>
+                                            On the Logic of Collecting and Sovereignty towards a Collection of Care.
                                         </p>
-                                    </div>
-                                    {/*<div className="grid--7_3" style={{
+                                    </Link>
+                                    <p className="center text font-main" style={{fontSize: "15px", padding:"0 10px"}}>
+                                        ESSAY, INTERFACE
+                                    </p>
+                                </div>
+                                {/*<div className="grid--7_3" style={{
                                         padding: "4px",
                                         borderBottom: "2px var(--main__green) solid",
                                         //borderTop: "2px var(--main__green) solid"
@@ -216,53 +217,53 @@ const Home = () => {
                                             ESSAY
                                         </p>
                                     </div>*/}
-                                </div>
+                            </div>
 
+                        </div>
+                        <div className="center" style={{height: "50vh", margin: "1vw"}}>
+                            <h1 className="center" style={{
+                                fontSize: "30px"
+                            }}>MODEL2: <br/> THE EXPANDED FIELD</h1>
+                            <div>
+                                <p className="justify text font-main"
+                                   style={{padding: "4px"}}>
+                                    What if a museum could act in an expanded space. What would these spaces look like and with what <b>scales</b> would these by measured by?
+                                    And how do they relate to the existing museological frameworks? What is to be a museum without walls,
+                                    or how does it act beyond its walls? What if the museum operated more as a studio,
+                                    akin to a production platform, a driver for change. <u style={{color: "var(--yellow_bright)"}}>#PLACE</u>,
+                                    <u style={{color: "var(--yellow_bright)"}}>#RESCALING</u>
+                                </p>
+                                <line></line>
                             </div>
-                            <div className="center" style={{height: "50vh", margin: "1vw"}}>
-                                <h1 className="center" style={{
-                                    fontSize: "30px"
-                                }}>MODEL2: <br/> THE EXPANDED FIELD</h1>
-                                <div>
-                                    <p className="justify text font-main"
-                                       style={{padding: "4px"}}>
-                                        What if a museum could act in an expanded space. What would these spaces look like and with what <b>scales</b> would these by measured by?
-                                        And how do they relate to the existing museological frameworks? What is to be a museum without walls,
-                                        or how does it act beyond its walls? What if the museum operated more as a studio,
-                                        akin to a production platform, a driver for change. <u style={{color: "var(--yellow_bright)"}}>#PLACE</u>,
-                                         <u style={{color: "var(--yellow_bright)"}}>#RESCALING</u>
-                                    </p>
-                                    <line></line>
-                                </div>
 
+                        </div>
+                        <div className="center" style={{height: "50vh", margin: "1vw"}}>
+                            <h1 className="center" style={{
+                                fontSize: "30px"
+                            }}>MODEL3</h1>`
+                            <div id="PLCH" style={{height: "40vh"}}>
+                                <Suspense>
+                                    <SketchPlaceHolder/>
+                                </Suspense>
                             </div>
-                            <div className="center" style={{height: "50vh", margin: "1vw"}}>
-                                <h1 className="center" style={{
-                                    fontSize: "30px"
-                                }}>MODEL3</h1>`
-                                <div id="PLCH" style={{height: "40vh"}}>
-                                    <Suspense>
-                                        <SketchPlaceHolder/>
-                                    </Suspense>
-                                </div>
-                            </div>
-                            <div className="center" style={{height: "50vh", margin: "1vw"}}>
-                                <h1 className="center" style={{
-                                    fontSize: "30px"
-                                }}>MODEL4</h1>`
-                                <div id="PLCH" style={{height: "50vh", zIndex: "-100000"}}>
-                                    <Suspense>
-                                        <SketchPlaceHolder _id={"PLCH1"}/>
-                                    </Suspense>
-                                </div>
+                        </div>
+                        <div className="center" style={{height: "50vh", margin: "1vw"}}>
+                            <h1 className="center" style={{
+                                fontSize: "30px"
+                            }}>MODEL4</h1>`
+                            <div id="PLCH" style={{height: "50vh", zIndex: "-100000"}}>
+                                <Suspense>
+                                    <SketchPlaceHolder _id={"PLCH1"}/>
+                                </Suspense>
                             </div>
                         </div>
                     </div>
-                    <div style={{height: "250px", margin: "1vw"}}>
-                        <Suspense>
-                            <XenoFooter/>
-                        </Suspense>
-                    </div>
+                </div>
+                <div style={{height: "250px", margin: "1vw"}}>
+                    <Suspense>
+                        <XenoFooter/>
+                    </Suspense>
+                </div>
             </div>
             <br/><br/>
 

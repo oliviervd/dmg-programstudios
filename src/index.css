@@ -826,6 +826,11 @@ imageViewer__modal-main {
     grid-template-columns: 20% 60% 20%;
 }
 
+.grid--6_1_3 {
+    display: grid;
+    grid-template-columns: 60% 10% 30%;
+}
+
 .grid--3_4_3 {
     display:grid;
     grid-template-columns: 30% 40% 30%;
