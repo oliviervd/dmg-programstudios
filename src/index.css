@@ -6,7 +6,7 @@
     --fluo__green: #00FF67;
     --triad_pink: #C6AEAF;
     --white_main: #F1F1F1;
-    --yellow_ish: papayawhip;
+    --yellow_ish: #F1F1F1;
     --yellow_bright: #ffe600;
     --happy__bold: "happy-times-NG_bold_master_web";
     --happy__regular: "happy-times-NG_regular_master_web";
@@ -141,8 +141,7 @@ h3 {
 }
 
 .glossDefinitionBox{
-    background: papayawhip;
-    position: relative;
+            position: relative;
     top: -33vh;
     height: 60vh;
 }
