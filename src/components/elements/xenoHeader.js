@@ -16,22 +16,22 @@ const XenoHeader = (props) => {
                 {props.header_main &&
                     <Link to="/home" style={{ textDecoration: 'none' }}>
                         <div className="scroll-container background__cool-to-warm-spectrum">
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| models from the past for the future | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
                         </div>
                     </Link>
                 }
 
                 {props.header_models &&
                     <div className="scroll-container " style={{background: "#ffe600"}}>
-                        <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the sensible | SPECTRUM | the computational |</h2>
-                        <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the sensible | SPECTRUM | the computational |</h2>
-                        <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the sensible | SPECTRUM | the computational |</h2>
-                        <h2 className="scroll-text"> SPECTRUM | the transhistorical | SPECTRUM | the current | SPECTRUM | the xeno-morphic | SPECTRUM | the past-future | SPECTRUM | the sensible | SPECTRUM | the computational |</h2>
+                        <h2 className="scroll-text"> models from the past for the future | models from the past for the future | models from the past for the future | models from the past for the future |</h2>
+                        <h2 className="scroll-text"> models from the past for the future | models from the past for the future | models from the past for the future | models from the past for the future |</h2>
+                        <h2 className="scroll-text"> models from the past for the future | models from the past for the future | models from the past for the future | models from the past for the future |</h2>
+                        <h2 className="scroll-text"> models from the past for the future | models from the past for the future | models from the past for the future | models from the past for the future |</h2>
                     </div>
                 }
 
