@@ -13,6 +13,19 @@ const XenoHeader = (props) => {
         <div>
             <div>
 
+                {props.header_home &&
+                    <Link to="/home" style={{ textDecoration: 'none' }}>
+                        <div className="scroll-container">
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
+                        </div>
+                    </Link>
+                }
+
                 {props.header_main &&
                     <Link to="/home" style={{ textDecoration: 'none' }}>
                         <div className="scroll-container background__cool-to-warm-spectrum">
@@ -27,7 +40,7 @@ const XenoHeader = (props) => {
                 }
 
                 {props.header_models &&
-                    <div className="scroll-container " style={{background: "#ffe600"}}>
+                    <div className="scroll-container " style={{background: "#f1f1f1"}}>
                         <h2 className="scroll-text"> models from the past for the future | models from the past for the future | models from the past for the future | models from the past for the future |</h2>
                         <h2 className="scroll-text"> models from the past for the future | models from the past for the future | models from the past for the future | models from the past for the future |</h2>
                         <h2 className="scroll-text"> models from the past for the future | models from the past for the future | models from the past for the future | models from the past for the future |</h2>
