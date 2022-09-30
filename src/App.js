@@ -1,4 +1,6 @@
 import React, {useState, Suspense} from "react";
+import {LanguageProvider} from "./components/containers/language";
+
 
 const XenoHeader = React.lazy(() => import("./components/elements/xenoHeader"));
 const SpectreMain = React.lazy(()=> import("./components/spectre"));
@@ -12,25 +14,27 @@ function App() {
     const [_objectNum] = useState(3)
 
     return (
-        <div>
-            <Suspense>
-                <XenoHeader header_main={true} header_models={false} header_model={true} model="model_1" header_nav={true}/>
-            </Suspense>
-
-            <div>
-
+        <LanguageProvider>
                 <div>
                     <Suspense>
-                        <SpectreMain num={_objectNum}/>
+                        <XenoHeader header_home={true} header_main={false} header_models={false} header_model={true} model="model_1" header_nav={true}/>
                     </Suspense>
-                    <div className="dotLine"/>
-                </div>
-            </div>
-            <Suspense>
-                <XenoFooter/>
-            </Suspense>
 
-        </div>
+                    <div>
+
+                        <div>
+                            <Suspense>
+                                <SpectreMain num={_objectNum}/>
+                            </Suspense>
+                            <div className="dotLine"/>
+                        </div>
+                    </div>
+                    <Suspense>
+                        <XenoFooter/>
+                    </Suspense>
+
+                </div>
+        </LanguageProvider>
     );
 }
 
