@@ -5,7 +5,8 @@ import Sketch from "react-p5";
 const CubicBezier = (p5) => {
 
     let canvas, _happy;
-    let BG = "#ffe600";
+    //let BG = "#ffe600";
+    let BG = "#8faa95"
     let FG = 0;
 
     let WIDTH = window.innerWidth;
@@ -35,7 +36,7 @@ const CubicBezier = (p5) => {
         let p4 = p5.createVector(WIDTH, HEIGHT); // bottom-left;
 
 
-        p5.stroke(FG, 120 + waveV/10);
+        p5.stroke(FG, 50 + waveV/10);
         //p5.fill(BG);
         //p5.strokeWeight(2);
 
