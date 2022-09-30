@@ -3,6 +3,7 @@
 
 :root {
     --main__green: #afc6ae;
+    --green_ish: #8faa95
     --fluo__green: #00FF67;
     --triad_pink: #C6AEAF;
     --white_main: #F1F1F1;
@@ -24,7 +25,6 @@
 
 html, body {
     position:fixed;
-    margin:30px;
     top:0;
     bottom:0;
     left:0;
@@ -40,6 +40,8 @@ html, body {
 div {
     font-family: "sligoil-micro", sans-serif;
     font-size: 12px;
+    padding:none;
+    margin: none;
 }
 
 .centerBox{
@@ -277,6 +279,10 @@ a {
     background: transparent;
 }
 
+.background__black {
+    background: black
+}
+
 .background__white {
     background: linear-gradient(180deg, #ffffff 0%,  #fbf2e7 85%);
 }
@@ -321,7 +327,7 @@ a {
 }
 
 .nav--header:hover {
-    color: var(--yellow_bright)
+    color: var(#afc6ae)
  }
 
 .emptyFrameModel__1 {
@@ -331,6 +337,15 @@ a {
     left: 30vw;
     border: 3px solid var(--main__green);
 }
+
+.black-box{
+    background:black;
+    height: 100vh;
+    margin: none;
+    padding: none;
+}
+
+
 
 .box{
     width: 500px;
@@ -398,6 +413,13 @@ a {
 .easeBorder__green{
     border: 2px solid var(--main__green);
 }
+
+.searchbox{
+    height: 33%;
+    width: 10vw;
+}
+
+
 
 .descText {
     font-family: "sligoil-micro", sans-serif;
@@ -467,7 +489,6 @@ button{
 
 .scroll-container {
     -moz-box-pack: center;
-    border: 3px solid black;
     overflow: hidden;
     display: flex;
     justify-content: space-evenly;
@@ -496,6 +517,39 @@ button{
     text-rendering: optimizeLegibility;
     color: black;;
     text-decoration: none;
+
+
+    line-height: 0;
+
+    /*animation props*/
+    -moz-transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+    transform: translateX(-100%);
+
+    -moz-animation: my-animation 35s linear infinite;
+    -webkit-animation: my-animation 35s linear infinite;
+    animation: my-animation 35s linear infinite;
+}
+
+.text-white-home {
+    margin: 10px;
+    padding: 20px;
+    color: white;
+    font-size: 50px;
+}
+
+.scroll-text-big{
+    text-align: right;
+    white-space: nowrap;
+    text-transform: uppercase;
+    text-rendering: optimizeLegibility;
+    color: black;;
+    text-decoration: none;
+
+    padding-left: 30vw;
+
+    height: 0vh;
+    font-size: 100px;
 
     line-height: 0;
 
