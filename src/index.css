@@ -324,6 +324,7 @@ a {
 .nav--header {
     color: black;
     transition: color 300ms ease-in-out;
+    text-align: center;
 }
 
 .nav--header:hover {
@@ -343,6 +344,13 @@ a {
     height: 100vh;
     margin: none;
     padding: none;
+}
+
+.white-box{
+    background:white;
+    height: 20vh;
+    margin: 20vh;
+    padding: 10vh;
 }
 
 
@@ -928,6 +936,11 @@ imageViewer__modal-main {
 .gridH--even_2{
     display:grid;
     grid-template-rows: repeat(2, 50%);
+}
+
+.gridH--even_3{
+    display:grid;
+    grid-template-rows: repeat(3, 33%);
 }
 
 .grid--even_2 {
