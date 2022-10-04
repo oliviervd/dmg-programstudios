@@ -1,5 +1,6 @@
 import React from 'react';
 import {Link} from "react-router-dom";
+import {useMediaQuery} from "react-responsive";
 
 const XenoHeader = (props) => {
 
@@ -8,6 +9,14 @@ const XenoHeader = (props) => {
     if (props.model === "model_1") {
         model_title = <h3 className="scroll-text"> model 1: sense and sensibility || model 1: sense and sensibility || model 1: sense and sensibility || model 1: sense and sensibility ||</h3>
     }
+
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+    })
+
+    const isMobileOrTablet = useMediaQuery({
+        query: '(max-width: 1224px)'
+    })
 
     return (
         <div>
