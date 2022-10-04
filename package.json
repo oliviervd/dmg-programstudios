@@ -25,6 +25,7 @@
     "os": "^0.1.2",
     "os-browserify": "^0.3.0",
     "react": "^18.0.0",
+    "react-burger-menu": "^3.0.8",
     "react-dom": "^18.0.0",
     "react-native-xml2js": "^1.0.3",
     "react-p5": "^1.3.28",
