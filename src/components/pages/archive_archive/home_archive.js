@@ -46,7 +46,7 @@ const Home_archive = () => {
                                 which the machine was written, and on which the machine itself ceaselessly wrote.”
                                 (Chiang, T. , 2019. Exhalation.)</i></p>
                             <br/>
-                            <p className="center text font-main">
+                            <p className="text-center text font-main">
                                 <strong>MODELS FROM THE PAST FOR THE FUTURE </strong>
                                 is a curatorial experiment, post-digital discourse and production platform looking into past,
                                 future and speculative models that takes place during the closure of the Design Museum Ghent (2022-2025).
@@ -57,7 +57,7 @@ const Home_archive = () => {
                                 knowledge production. And in its growth, it is both reflective and performative in nature,
                                 as we embrace the (as yet) unknown in its potential.</p>
 
-                            <h4 className="center" style={{fontFamily: "lineal"}}>* </h4> <p className="center text font-main"> as
+                            <h4 className="text-center" style={{fontFamily: "lineal"}}>* </h4> <p className="text-center text font-main"> as
                             a <strong> dynamic network</strong>; the project is in constant evolution and critically
                             approaches the
                             underlying metabolism of the museum as a <i>fluid</i> institution. No "rinse and repeat" but
@@ -67,7 +67,7 @@ const Home_archive = () => {
                             about awareness.
                             Because whoever wants to shape the future, will have to know its past.</p>
 
-                            <h4 className="center" style={{fontFamily: "lineal"}}>* </h4> <p className="center text font-main">
+                            <h4 className="text-center" style={{fontFamily: "lineal"}}>* </h4> <p className="text-center text font-main">
                             As a <strong>living archive</strong>; it approaches the past as an asset for the present and
                             the future.
                             A growing organ, which absorbs, processes and discards. The intertwining of traces of the
@@ -94,8 +94,8 @@ const Home_archive = () => {
                         <div className="grid--3_4_3">
                             <div className="background__transparent"/>
                             <div className="background__white">
-                                <h1 className="center">MODELS</h1>
-                                <p className="center text font-main">
+                                <h1 className="text-center">MODELS</h1>
+                                <p className="text-center text font-main">
                                     MODELS FROM THE PAST FOR THE FUTURE is both a program and a catalyst for change. Establishing models as primary building
                                     blocks and frameworks that become instrumental in the search alternative collectively
                                     built futures in which the museum can operate with care. The conceptual frameworks
@@ -107,16 +107,16 @@ const Home_archive = () => {
                                     <br/>
 
                                     <div className="dotLine"></div>
-                                    <p className="font-main text center"><u>RULE #1</u>: models may <i>break, mutate</i> and <i>build</i> upon what is and isn't real</p>
+                                    <p className="font-main text text-center"><u>RULE #1</u>: models may <i>break, mutate</i> and <i>build</i> upon what is and isn't real</p>
                                     {!open&&
-                                        <p className='center nav-header' style={{fontFamily: "lineal"}} onClick={openAccordion}> V - read more - V </p>
+                                        <p className='text-center nav-header' style={{fontFamily: "lineal"}} onClick={openAccordion}> V - read more - V </p>
                                     }
                                     {open&&
                                         <div>
                                             <div className="dotLine"></div>
                                             <div className="grid--3_7">
                                                 <div>
-                                                    <p className="center text font-main">TO BUILD</p>
+                                                    <p className="text-center text font-main">TO BUILD</p>
                                                 </div>
                                                 <div>
                                                     <p className="left text font-main">
@@ -129,7 +129,7 @@ const Home_archive = () => {
                                             </div>
                                             <div className="grid--3_7">
                                                 <div>
-                                                    <p className="center text font-main">TO MUTATE</p>
+                                                    <p className="text-center text font-main">TO MUTATE</p>
                                                 </div>
                                                 <div>
                                                     <p className="left text font-main">
@@ -141,7 +141,7 @@ const Home_archive = () => {
                                             </div>
                                             <div className="grid--3_7">
                                                 <div>
-                                                    <p className="center text font-main">TO BREAK</p>
+                                                    <p className="text-center text font-main">TO BREAK</p>
                                                 </div>
                                                 <div>
                                                     <p className="left text font-main">
@@ -151,15 +151,15 @@ const Home_archive = () => {
                                                     </p>
                                                 </div>
                                             </div>
-                                            <p className='center nav-header' style={{fontFamily: "lineal", fontSize: "18px"}} onClick={openAccordion}> ^ - close - ^ </p>
+                                            <p className='text-center nav-header' style={{fontFamily: "lineal", fontSize: "18px"}} onClick={openAccordion}> ^ - close - ^ </p>
                                         </div>
                                     }
 
                                     <div className="dotLine"></div>
-                                    <p className="font-main text center"><u>RULE #2</u>: models are inherently <i>multi-authored</i> and <i>collaborative</i>.</p>
+                                    <p className="font-main text text-center"><u>RULE #2</u>: models are inherently <i>multi-authored</i> and <i>collaborative</i>.</p>
                                     <div className="dotLine"></div>
                                     <div>
-                                        <p className="center text" style={{margin:"10px 10px"}}>
+                                        <p className="text-center text" style={{margin:"10px 10px"}}>
                                             by setting up several director's projects, the museum wants to give designers
                                             the space and agency to co-develop the new programming and the necessary support structures.
                                             In order to do this the museum searched for a series of protagonists to work with this coming years.
@@ -173,8 +173,8 @@ const Home_archive = () => {
                         <br/><br/><br/><br/>
 
                         <div className="grid--even_4 background__cool-to-warm-spectrum" style={{margin:"0px 30px"}}>
-                            <div className="center" style={{height: "50vh", margin: "1vw"}}>
-                                <h1 className="center" style={{
+                            <div className="text-center" style={{height: "50vh", margin: "1vw"}}>
+                                <h1 className="text-center" style={{
                                     fontSize: "30px"
                                 }}>MODEL1: <br/> SENSE & SENSIBILITY</h1>
                                 <div>
@@ -198,7 +198,7 @@ const Home_archive = () => {
                                                 On the Logic of Collecting and Sovereignty towards a Collection of Care.
                                             </p>
                                         </Link>
-                                        <p className="center text font-main" style={{fontSize: "15px", padding:"0 10px"}}>
+                                        <p className="text-center text font-main" style={{fontSize: "15px", padding:"0 10px"}}>
                                             ESSAY, INTERFACE
                                         </p>
                                     </div>
@@ -219,8 +219,8 @@ const Home_archive = () => {
                                 </div>
 
                             </div>
-                            <div className="center" style={{height: "50vh", margin: "1vw"}}>
-                                <h1 className="center" style={{
+                            <div className="text-center" style={{height: "50vh", margin: "1vw"}}>
+                                <h1 className="text-center" style={{
                                     fontSize: "30px"
                                 }}>MODEL2: <br/> THE EXPANDED FIELD</h1>
                                 <div>
@@ -236,8 +236,8 @@ const Home_archive = () => {
                                 </div>
 
                             </div>
-                            <div className="center" style={{height: "50vh", margin: "1vw"}}>
-                                <h1 className="center" style={{
+                            <div className="text-center" style={{height: "50vh", margin: "1vw"}}>
+                                <h1 className="text-center" style={{
                                     fontSize: "30px"
                                 }}>MODEL3</h1>`
                                 <div id="PLCH" style={{height: "40vh"}}>
@@ -246,8 +246,8 @@ const Home_archive = () => {
                                     </Suspense>
                                 </div>
                             </div>
-                            <div className="center" style={{height: "50vh", margin: "1vw"}}>
-                                <h1 className="center" style={{
+                            <div className="text-center" style={{height: "50vh", margin: "1vw"}}>
+                                <h1 className="text-center" style={{
                                     fontSize: "30px"
                                 }}>MODEL4</h1>`
                                 <div id="PLCH" style={{height: "50vh", zIndex: "-100000"}}>

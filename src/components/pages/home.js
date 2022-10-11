@@ -4,6 +4,7 @@ import LanguageSelector from "../LanguageSelector";
 import {Text, LanguageContext} from "../containers/language";
 import {slide as Menu} from "react-burger-menu";
 import {useMediaQuery} from "react-responsive";
+import Sketch_studios from "../sketches/sketch_studios";
 
 const XenoHeader = React.lazy(() => import("../elements/xenoHeader"))
 
@@ -22,7 +23,7 @@ const Home = () => {
             <div>
                 <Suspense>
 
-                    <div className="grid--2_6_2">
+                    <div className="grid--2_6_2 border-dots">
 
                         {isDesktopOrLaptop && //don't show hamburger menu
                             <div className="gridH--even_3">
@@ -47,7 +48,13 @@ const Home = () => {
                             </div>
                         }
 
-                        <XenoHeader header_home={true} header_main={false} header_models={false} header_model={false} header_nav={false}/>
+                        <XenoHeader
+                            className="text-white"
+                            header_home={true}
+                            header_main={false}
+                            header_models={false}
+                            header_model={false}
+                            header_nav={false}/>
                         <div className="grid--2_6_2">
                             <div/>
                             <form>
@@ -60,18 +67,44 @@ const Home = () => {
                         </div>
                     </div>
                 </Suspense>
-                <div className="black-box">
-                    <p className="text-white-home">
-                        <Text tid="introduction-text-home"></Text>
-                        Studio DMG is <u>multimedia platform</u> for collective reflection on the future, past and present of the museum.
-                        All studio's reside and co-exist as part of a larger ecosystem. They mingle, converse and change accordingly.
-                    </p>
-                </div>
-                <div className="background__transparent__flow">
 
-                </div>
+                <div className="rowScrollMain">
 
-                <h1></h1>
+                    <Suspense fallback={<img src="../sketches/assets/49.png" alt="DREAMING OF IMAGES"/>}>
+                        <Sketch_studios style={{"z-index": -30000}} />
+                    </Suspense>
+
+                    <div className="black-box">
+                        <p className="text-white-home">
+                            <Text tid="introduction-text-home"></Text>
+                        </p>
+                    </div>
+                    <div className="black-box">
+                        <div className="grid--even_3">
+                            <div className="border-white text-center">
+                                <h2 className="box-title uppercase text-center text-white"><Text tid="studio_DIG"></Text></h2>
+                                <div className="lineH_dash"></div>
+                                <p className="box-text text-center text-white"><Text tid="studio_DIG_intro"></Text></p>
+                            </div>
+                            <div className="border-white text-center">
+                                <h2 className="uppercase text-center text-white"><Text tid="studio_COL"></Text></h2>
+                                <div className="lineH_dash"></div>
+                                <p className="box-text text-center text-white"><Text tid="studio_DIG_intro"></Text></p>
+                            </div>
+                            <div className="border-white text-center">
+                                <h2 className="uppercase text-center text-white"><Text tid="studio_GD"></Text></h2>
+                                <div className="lineH_dash"></div>
+                                <p className="box-text text-center text-white"><Text tid="studio_DIG_intro"></Text></p>
+                            </div>
+                        </div>
+                        <div className="grid--even_3">
+                            <div className="border-white text-center"/>
+                            <div className="border-white text-center"/>
+                            <div className="border-white text-center"/>
+                        </div>
+                    </div>
+                    <h1></h1>
+                </div>
             </div>
     )
 

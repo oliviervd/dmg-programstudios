@@ -28,11 +28,11 @@ const ReadingList = () => {
             <Suspense>
                 <XenoHeader header_main={true} header_nav={true}/>
             </Suspense>
-            <h1 className="center">READING LIST</h1>
+            <h1 className="text-center">READING LIST</h1>
 
             <div className="grid--3_4_3">
                 <div/>
-                <p className="center text">
+                <p className="text-center text">
                 </p>
                 <div/>
             </div>

@@ -1,6 +1,11 @@
 /* max-width: 1224 = ipad */
 /* max-width: 1224 = mobile */
 
+* {
+    padding: 0;
+    margin: 0;
+}
+
 :root {
     --main__green: #afc6ae;
     --green_ish: #8faa95
@@ -194,7 +199,6 @@ a {
 .scrollable{
     overflow: scroll;
     display: grid;
-    height: 600px;
 }
 
 .refText{
@@ -308,7 +312,18 @@ a {
     background: var(--triad_pink);
 }
 
+.border-dots{
+    border-bottom: white solid 3px;
+}
+
 /* ---------------------------------- LAYOUT ---------------------------------- */
+
+/* ------- graphic elements ---------*/
+
+.lineH_dash {
+    border-bottom: white dotted 1.5px;
+    height: 13px;
+}
 
 /* ---------------------------------- ACCORDION ---------------------------------- */
 
@@ -339,11 +354,20 @@ a {
     border: 3px solid var(--main__green);
 }
 
+.black {
+    background:black;
+}
+
+.box-title {
+    padding: 10px;
+}
+
 .black-box{
     background:black;
-    height: 100vh;
+    height: fit-content;
     margin: none;
     padding: none;
+
 }
 
 .white-box{
@@ -367,7 +391,18 @@ a {
     }
 }
 
-.center{
+.box-text{
+    height: 30vw;
+    font-size: 20px;
+    padding: 40px;
+}
+
+.border-white{
+    border: white solid 3px;
+    /* border-color: rgba(255,255,255,var(--tw-border-opacity)); */
+}
+
+.text-center{
     text-align: center;
 }
 
@@ -425,6 +460,12 @@ a {
 .searchbox{
     height: 33%;
     width: 10vw;
+}
+
+.studio_box {
+    height: 100px;
+    color: black;
+    border: white solid 2px;
 }
 
 .descText {
@@ -563,10 +604,10 @@ button{
 
     padding-left: 30vw;
 
-    height: 0vh;
+    height: 10vh;
     font-size: 100px;
 
-    line-height: 0;
+    line-height: -20px;
 
     /*animation props*/
     -moz-transform: translateX(-100%);
@@ -576,6 +617,14 @@ button{
     -moz-animation: my-animation 35s linear infinite;
     -webkit-animation: my-animation 35s linear infinite;
     animation: my-animation 35s linear infinite;
+}
+
+.text-white{
+    color: white;
+}
+
+.uppercase{
+    text-transform: uppercase;
 }
 
 /* FIREFOXY */
@@ -957,11 +1006,12 @@ imageViewer__modal-main {
 
 .grid--even_3 {
     display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
 @media (min-width: 1224px) {
     .grid--even_3{
-        grid-template-columns: repeat(3, 33%);
+        grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 }  @media (max-width: 1224px) {
     .grid--even_3{

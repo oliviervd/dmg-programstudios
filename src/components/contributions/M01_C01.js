@@ -23,12 +23,12 @@ const M01_C01 = () => {
                 <div>
                     <div className="grid--3_4_3">
                         <div className="background__transparent"></div>
-                        <h1 className="center background__white"  style={{height: "auto", padding: "80px"}}>ON THE LOGIC OF COLLECTING AND SOVEREIGNTY TOWARDS A COLLECTION OF CARE</h1>
+                        <h1 className="text-center background__white" style={{height: "auto", padding: "80px"}}>ON THE LOGIC OF COLLECTING AND SOVEREIGNTY TOWARDS A COLLECTION OF CARE</h1>
                         <div className="background__transparent"></div>
                     </div>
                     <div className="grid--4_2_4">
                         <div className="background__transparent"/>
-                        <p className="center background__white" style={{fontSize: "16px", fontFamily: "lineal", borderBottom: "2px var(--main__green) solid", borderTop: "2px var(--main__green) solid"}}>ESSAY, INTERFACE</p>
+                        <p className="text-center background__white" style={{fontSize: "16px", fontFamily: "lineal", borderBottom: "2px var(--main__green) solid", borderTop: "2px var(--main__green) solid"}}>ESSAY, INTERFACE</p>
                         <div className="background__transparent"/>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ const M01_C01 = () => {
                     }
                 </div>
                 <article>
-                    <div className="center text">
+                    <div className="text-center text">
                         “When is an object socially or ecologically responsible?<a href="#object_stories" aria-describedby="footnote-label" id="object_stories_ref">"</a>
                         This question served as a baseline for many years in one of the tracks in Object Stories,
                         the semi-permanent presentation of the collection of Design Museum Gent before it closed its doors in 2022.
@@ -60,7 +60,7 @@ const M01_C01 = () => {
                         <div></div>
 
                     </div>
-                    <div className="center text">
+                    <div className="text-center text">
                         Marjan van Helvert defined “Responsible Objects” as objects that behave responsibly, consciously
                         and with care in relation to their <a href="#responsible_objects" aria-describedby="footnote-label" id="responsible_objects_ref">environment</a>.
                         Taking responsibility through responsible behavior affects and effects all parts of society,
@@ -75,7 +75,7 @@ const M01_C01 = () => {
                     </div>
 
                     {isDesktopOrLaptop && <br/>}
-                    <h1 className="center quote text">I imagine a future where the museum engages in mutual relationships with machines –
+                    <h1 className="text-center quote text">I imagine a future where the museum engages in mutual relationships with machines –
                         and other <i>living systems</i>, that enable us to converse on more-than-human scales.
                         A mode of coproducing futures – or futuring - that is built on epistemologies that transcend
                         that of the Anthropos. </h1>
@@ -113,7 +113,7 @@ const M01_C01 = () => {
                                 </div>
 
                             </div>
-                            <div className="center text">
+                            <div className="text-center text">
                                 <p className="subHeader__text text">METABOLISM</p>Can we reimagine and rethink the metabolism –
                                 and thus the act of processing “matter” to sustain the vitality of the museum -
                                 in such a way that the core tasks of the museum in terms of taking care of the collection are
@@ -146,7 +146,7 @@ const M01_C01 = () => {
 
                             </div>
                             {isDesktopOrLaptop && <br/>}
-                            <div className="center text">
+                            <div className="text-center text">
                                 <p className="subHeader__text text">TO TAKE CARE OF </p>
                                 Taking care of something or someone is a highly social endeavor that demands for a mutual
                                 understanding of one another’s needs; To been taken care of and to be cared for is a premise for us to co-exist.
@@ -161,7 +161,7 @@ const M01_C01 = () => {
                                 If so, what can technology teach us about the relationship between things, instead of us teaching <a href="#ecology" aria-describedby="footnote-label" id="ecology_ref">them</a>?
                             </div>
 
-                            <div className="center text">
+                            <div className="text-center text">
                                 <br/><br/>
                                 The interface below makes use of AI to negotiate and measure proximity in large collections such as that of a museum.
                                 A task that presumably could never be done by human agents on their own (at least not in this time and scale). At the same time,
@@ -184,7 +184,7 @@ const M01_C01 = () => {
 
                             {isDesktopOrLaptop && <br/>}
 
-                            <div className="center text">
+                            <div className="text-center text">
                                 This approach of the collection as a social network, - a speculative system that connects in a transhistorical and transdisciplinary way -
                                 transcends the art historical and institutionalized view - resounding the indeterminacy that might lie at the museum’s foundations.
                                 At the same time, it very much resonates with the "indeterminacy" that might lie at the museum’s foundations, a place where knowledge is constantly being (re-)produced based upon the passage of both human and non-human agency.
@@ -193,7 +193,7 @@ const M01_C01 = () => {
                             </div>
 
                             {isDesktopOrLaptop && <br/>}
-                            <p className="underlined center button__readMore nav--header" onClick={handleReadMore}> HIDE TEXT </p>
+                            <p className="underlined text-center button__readMore nav--header" onClick={handleReadMore}> HIDE TEXT </p>
                             {isDesktopOrLaptop && <br/>}
 
                         </div>

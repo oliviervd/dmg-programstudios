@@ -79,10 +79,10 @@ const Glossary = () => {
                     <div className="grid--3_4_3">
                         <div></div>
                         <div className="glossDefinitionBox background__transparent__flow">
-                            <h1 className="center">{_glossTitle}</h1>
-                            <h3 className="center">{_glossActive}</h3>
-                            <div className="center text" style={{margin: "100px"}}>{_glossDesc}</div>
-                            <div className="center text">{_glossSource}</div>
+                            <h1 className="text-center">{_glossTitle}</h1>
+                            <h3 className="text-center">{_glossActive}</h3>
+                            <div className="text-center text" style={{margin: "100px"}}>{_glossDesc}</div>
+                            <div className="text-center text">{_glossSource}</div>
                         </div>
                         <div></div>
                     </div>
