@@ -81,20 +81,23 @@ const Home = () => {
                     </div>
                     <div className="black-box">
                         <div className="grid--even_3">
-                            <div className="border-white text-center">
+                            <div className="border-white text-center relative">
                                 <h2 className="box-title uppercase text-center text-white"><Text tid="studio_DIG"></Text></h2>
                                 <div className="lineH_dash"></div>
                                 <p className="box-text text-center text-white"><Text tid="studio_DIG_intro"></Text></p>
+                                <div className="fade"></div>
                             </div>
-                            <div className="border-white text-center">
-                                <h2 className="uppercase text-center text-white"><Text tid="studio_COL"></Text></h2>
+                            <div className="border-white text-center relative">
+                                <h2 className="box-title uppercase text-center text-white"><Text tid="studio_COL"></Text></h2>
                                 <div className="lineH_dash"></div>
-                                <p className="box-text text-center text-white"><Text tid="studio_DIG_intro"></Text></p>
+                                <p className="box-text text-center text-white"><Text tid="studio_COL_intro"></Text></p>
+                                <div className="fade"></div>
                             </div>
-                            <div className="border-white text-center">
-                                <h2 className="uppercase text-center text-white"><Text tid="studio_GD"></Text></h2>
+                            <div className="border-white text-center relative">
+                                <h2 className="box-title uppercase text-center text-white"><Text tid="studio_GD"></Text></h2>
                                 <div className="lineH_dash"></div>
-                                <p className="box-text text-center text-white"><Text tid="studio_DIG_intro"></Text></p>
+                                <p className="box-text text-center text-white"><Text tid="studio_GD_intro"></Text></p>
+                                <div className="fade"></div>
                             </div>
                         </div>
                         <div className="grid--even_3">
