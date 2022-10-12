@@ -2,7 +2,9 @@
     "header": "STUDIO DIGITAL",
     "introduction-text-home": "Studio DMG is <u>multimedia platform</u> for collective reflection on the future, past and present of the museum. All studio's reside and co-exist as part of a larger ecosystem. They mingle, converse and change accordingly.",
     "studio_DIG": "Studio Digital Culture and Design",
-    "studio_DIG_intro": "Studio Digital Culture and Design functions as a production body within a broader ecology of studios. Specifically, it works on the (continued) development of strategies, research agenda and programming regarding Design and Digital Culture. ",
+    "studio_DIG_intro": "Studio Digital Culture and Design functions as a production body within a broader ecology of studios. Specifically, it works on the (continued) development of strategies, research agenda and programming regarding Design and Digital Culture. Studio Digital Culture and Design functions as a production body within a broader ecology of studios. Specifically, it works on the (continued) development of strategies, research agenda and programming regarding Design and Digital Culture. ",
     "studio_COL": "Studio Collection",
-    "studio_GD": "Studio Graphic Design"
+    "studio_COL_intro": "Studio Collection takes the collection of the museum as primary source to develop",
+    "studio_GD": "Studio Graphic Design",
+    "studio_GD_intro": "Studio Graphic Design works around graphic design"
 }
