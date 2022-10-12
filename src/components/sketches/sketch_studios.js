@@ -36,12 +36,16 @@ const Sketch_studios = p5 => {
         let x = r * p5.cos(theta);
         let y = r * p5.sin(theta);
 
+        let motion = p5.map(p5.sin(p5.radians(p5.frameCount)), -1, 1, 100, -100)
+        p5.translate(-motion, motion);
+
         for (let i = 0; i < sentenceArray_DIG.length; i++){
             p5.rotate(360/sentenceArray_DIG.length);
             p5.text(sentenceArray_DIG[i], x, y);
         }
 
-        p5.translate(100, 100);
+        r = r - motion/100;
+        p5.translate(100 + motion, 100 + motion);
         for (let i = 0; i < sentenceArray_GD.length; i++){
             p5.rotate(360/sentenceArray_GD.length);
             p5.text(sentenceArray_GD[i], x, y);
