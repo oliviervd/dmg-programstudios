@@ -28,6 +28,22 @@
     background: var(--main__green)
 }
 
+.absolute{
+    position:absolute;
+}
+
+.relative{
+    position: relative;
+}
+
+.left-0{
+    left:0;
+}
+
+.right-0{
+    right:0;
+}
+
 html, body {
     position:fixed;
     top:0;
@@ -360,6 +376,16 @@ a {
 
 .box-title {
     padding: 10px;
+}
+
+.fade {
+    background: linear-gradient(transparent, black);
+    height: 100%;
+    z-index: 30000000;
+    width: 33.333vw;
+    bottom: 0;
+    top: 0;
+    position: absolute;
 }
 
 .black-box{
