@@ -6,6 +6,16 @@
     margin: 0;
 }
 
+.full-page{
+    height: 100vh;
+    width: 100vw;
+}
+
+.fill {
+    height: 100%;
+    width: 100%;
+}
+
 :root {
     --main__green: #afc6ae;
     --green_ish: #8faa95
@@ -286,6 +296,14 @@ a {
     line-height: 20px;
 }
 
+.lineH{
+    border-top: 1px black solid;
+}
+
+.lineV{
+    border-left: 1px black solid;
+}
+
 @media (max-width: 1224px) {
     .button__readMore{
         padding: 5%;
@@ -326,6 +344,9 @@ a {
 
 .background__pink {
     background: var(--triad_pink);
+}
+.background__pinkLight{
+    background: lightgoldenrodyellow;
 }
 
 .border-dots{
@@ -1051,6 +1072,11 @@ imageViewer__modal-main {
     grid-template-columns: repeat(4, 25%);
 }
 
+.grid--even_5{
+    display:grid;
+    grid-template-columns: repeat(5, 20%);
+}
+
 .gridH--even_5 {
     grid-template-rows: 20vh 20vh 20vh 20vh 20vh;
 }
@@ -1070,6 +1096,15 @@ imageViewer__modal-main {
     grid-template-columns: repeat(10, 10%);
 }
 
+.gridH--6_4 {
+    display: grid;
+    grid-template-rows: 60% 40%;
+}
+
 .border_box {
     border: 2px solid;
+}
+
+.padding-10 {
+    padding: 10px;
 }
