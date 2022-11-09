@@ -25,12 +25,11 @@ const XenoHeader = (props) => {
                 {props.header_home &&
                     <Link to="/home" style={{ textDecoration: 'none' }}>
                         <div className="scroll-container">
-                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
-                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
-                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
-                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
-                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
-                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN MUSEUM GENT | </h1>
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| PROGRAM STUDIOS | </h1>
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| PROGRAM STUDIOS | </h1>
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| PROGRAM STUDIOS | </h1>
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| PROGRAM STUDIOS | </h1>
+                            <h1 className="scroll-text-big" style={{fontFamily:'P-ACR-AGON-Regular'}}>| PROGRAM STUDIOS | </h1>
                         </div>
                     </Link>
                 }
@@ -38,12 +37,11 @@ const XenoHeader = (props) => {
                 {props.header_main &&
                     <Link to="/home" style={{ textDecoration: 'none' }}>
                         <div className="scroll-container background__cool-to-warm-spectrum">
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
-                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DIGITAL | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN & DIGITAL CULTURE | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN & DIGITAL CULTURE | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN & DIGITAL CULTURE | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN & DIGITAL CULTURE | </h1>
+                            <h1 className="scroll-text" style={{fontFamily:'P-ACR-AGON-Regular'}}>| STUDIO DESIGN & DIGITAL CULTURE | </h1>
                         </div>
                     </Link>
                 }
