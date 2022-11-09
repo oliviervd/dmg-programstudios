@@ -30,8 +30,8 @@ render(
             redirectUri={window.location.origin}
         >
             <Routes>
-                <Route path="/" element={<Landing/>}/>
-                <Route path="home" element={<Home />}/>
+                <Route path="landing" element={<Landing/>}/>
+                <Route path="/" element={<Home />}/>
                 <Route path="M01_C01" element={<App />}/>
                 <Route path="M02_C01" element={<M02_C01/>}/>
                 <Route path="glossary" element={<Glossary />}/>
