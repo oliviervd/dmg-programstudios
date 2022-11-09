@@ -81,8 +81,8 @@ const Home = () => {
                         description_en = fetchDescription(studio, language, "studio");
                         studioImage = fetchImage(studio, "studio");
                         return(
-                            <div>
-                                <div className="scroll-div">
+                            <div className="rowScroll">
+                                <div className="scroll-div" >
                                     <h2 className="text-center uppercase box-title">{title_en}</h2>
                                     <img className="img__fit center" src={studioImage}/>
                                     <p className="uppercase justify padding-10">{description_en}</p>

@@ -298,6 +298,7 @@ a {
 
 .lineH{
     border-top: 1px black solid;
+    z-index: 1000;
 }
 
 .lineV{
@@ -590,7 +591,7 @@ button{
 
 .rowScroll {
     border: 4px none var(--main__green);
-    height: 300px;
+    height: 120%;
     overflow-y:auto;
     margin-top: 20px;
 }
