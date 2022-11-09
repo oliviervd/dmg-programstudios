@@ -5,6 +5,7 @@ import {useState} from "react";
 const Home = () => {
 
     const [language, setLanguage] = useState("EN");
+    const [about, setAbout] = useState(false);
 
     const {data, loading, error} = useGoogleSheets({
         apiKey: "AIzaSyAhfyQ_9XDc6ajRYDy3qPXPAp8mkLKja90",
@@ -39,7 +40,7 @@ const Home = () => {
                     <div/>
                     <div/>
                     <div/>
-                    <h2 className="uppercase text-center" style={{margin: 10}}>{headerAbout(language)}</h2>
+                    <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setAbout(!about)}>{headerAbout(language)}</h2>
                     <div className="grid--even_3">
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("EN")}>EN</h2>
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("NL")}>NL</h2>
@@ -51,7 +52,7 @@ const Home = () => {
                 <div className="grid--even_3">
                     <div style={{margin: 10}}>
                         {_studios.map((text => {
-                            let _text, _textSingle, t;
+                            let _text;
                             _text = fetchText(text, language, "about");
                             if (typeof _text !== "undefined"){
                                 const _t = _text.map((t)=>
@@ -59,11 +60,13 @@ const Home = () => {
                                 )
                                 console.log(_text);
 
-                                return(
-                                    <div className="about gridH--even_5">
-                                        <p>{_t}</p>
-                                    </div>
-                                )
+                                if (about === true){
+                                    return(
+                                        <div className="about gridH--even_5">
+                                            <p>{_t}</p>
+                                        </div>
+                                    )
+                                }
                             }
                         }))}
                     </div>
