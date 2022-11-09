@@ -31,7 +31,6 @@ export function fetchImage(i, _type) {
 }
 
 export function headerTitle(lang, _type) {
-    if (_type === _type) {
         if (lang === "EN") {
             return <p>program studios</p>
         } else if (lang === "NL") {
@@ -39,7 +38,7 @@ export function headerTitle(lang, _type) {
         } else {
             return <p>studios de programmation</p>
         }
-    }
+
 }
 
 export function headerAbout(lang) {
@@ -53,7 +52,6 @@ export function headerAbout(lang) {
 }
 
 export function fetchTitle(i, lang, _type) {
-    let titleEn;
     if (i._type === _type) {
         if (lang === "EN") {
             if (i.title_en !== "") {
@@ -70,13 +68,12 @@ export function fetchTitle(i, lang, _type) {
 }
 
 export function fetchDescription(i, lang, _type) {
-    let descEn;
     if (i._type === _type) {
-        if (lang == "EN") {
+        if (lang === "EN") {
             if (i.description_en !== "") {
                 return <p>{i.description_en}</p>
             }
-        } else if (lang == "NL") {
+        } else if (lang === "NL") {
             if (i.description_nl !== "") {
                 return <p>{i.description_nl}</p>
             }
