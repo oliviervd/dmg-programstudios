@@ -524,6 +524,17 @@ a {
     text-align: center;
 }
 
+.center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.langButton {
+    height: 20px;
+
+}
+
 text {
     position: relative;
 }
@@ -862,6 +873,11 @@ imageViewer__modal-main {
     opacity: 1;
 }
 
+.img__fit{
+    max-width:90%;
+    height: auto;
+}
+
 .hexBox{
     width: 20vw;
     height: 5vw;
@@ -1101,10 +1117,23 @@ imageViewer__modal-main {
     grid-template-rows: 60% 40%;
 }
 
+.gridH--1_5_4{
+    display: grid;
+    grid-template-rows: 10% 50% 40%;
+}
+
 .border_box {
     border: 2px solid;
 }
 
 .padding-10 {
+    padding: 10px;
+}
+
+.about{
+    padding: 10px;
+}
+
+.paragraph{
     padding: 10px;
 }
