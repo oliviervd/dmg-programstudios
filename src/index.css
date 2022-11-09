@@ -645,6 +645,16 @@ button{
     animation: my-animation 35s linear infinite;
 }
 
+.scroll-div{
+    -moz-transform: translateY(-100%);
+    -webkit-transform: translateY(-100%);
+    transform: translateY(100%);
+
+    -moz-animation: scroll-down 35s linear infinite;
+    -webkit-animation: scroll-down 35s linear infinite;
+    animation: scroll-down 35s linear infinite;
+}
+
 .text-white-home {
     margin: 10px;
     padding: 20px;
@@ -711,6 +721,31 @@ to {
 }
 }
 
+
+
+@-moz-keyframes scroll-down {
+    from { -moz-transform: translateY(100%); }
+    to { -moz-transform: translateY(-100%);}
+}
+
+/* CHROMIE */
+@-webkit-keyframes scroll-down {
+    from { -webkit-transform: translateX(100%); }
+    to { -webkit-transform: translateX(-100%); }
+}
+
+@keyframes scroll-down {
+    from {
+        -moz-transform: translateY(100%);
+        -webkit-transform: translateY(100%);
+        transform: translateY(00%);
+    }
+    to {
+        -moz-transform: translateY(-100%);
+        -webkit-transform: translateY(-100%);
+        transform: translateY(-100%);
+    }
+}
 
 #left, #right {
     border: 1px solid #aaa;

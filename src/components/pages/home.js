@@ -49,7 +49,7 @@ const Home = () => {
                     </div>
 
                 </div>
-                <div className="grid--even_3">
+                <div className="grid--even_3" style={{zIndex: 100000, background: "white"}}>
                     <div style={{margin: 10}}>
                         {_studios.map((text => {
                             let _text;
@@ -81,11 +81,19 @@ const Home = () => {
                         description_en = fetchDescription(studio, language, "studio");
                         studioImage = fetchImage(studio, "studio");
                         return(
-                            <div className="scrollable">
-                                <h2 className="text-center uppercase box-title">{title_en}</h2>
-                                <img className="img__fit center" src={studioImage}/>
-                                <p className="uppercase justify padding-10">{description_en}</p>
+                            <div>
+                                <div className="scroll-div">
+                                    <h2 className="text-center uppercase box-title">{title_en}</h2>
+                                    <img className="img__fit center" src={studioImage}/>
+                                    <p className="uppercase justify padding-10">{description_en}</p>
+                                </div>
+                                <div className="scroll-div">
+                                    <h2 className="text-center uppercase box-title">{title_en}</h2>
+                                    <img className="img__fit center" src={studioImage}/>
+                                    <p className="uppercase justify padding-10">{description_en}</p>
+                                </div>
                             </div>
+
                         )
 
                     }))}
