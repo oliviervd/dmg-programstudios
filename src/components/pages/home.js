@@ -1,8 +1,10 @@
 import React from "react";
 import useGoogleSheets from "use-google-sheets";
-import {fetchTitleEn, fetchDescriptionEn} from "../utils/data_parsers";
-
+import {fetchTitle, fetchDescription, headerTitle, headerAbout, fetchImage, fetchText} from "../utils/data_parsers";
+import {useState} from "react";
 const Home = () => {
+
+    const [language, setLanguage] = useState("EN");
 
     const {data, loading, error} = useGoogleSheets({
         apiKey: "AIzaSyAhfyQ_9XDc6ajRYDy3qPXPAp8mkLKja90",
@@ -27,9 +29,9 @@ const Home = () => {
 
     return(
         <div>
-            <div className="gridH--6_4 full-page">
-                <div className="background__pinkLight grid--even_10">
-                    <h2 className="uppercase text-center" style={{margin: 10}}>program studios</h2>
+            <div className="gridH--1_5_4 full-page">
+                <div className="grid--even_10">
+                    <h2 className="uppercase text-center" style={{margin: 10}}>{headerTitle(language)}</h2>
                     <div/>
                     <div/>
                     <div/>
@@ -37,19 +39,48 @@ const Home = () => {
                     <div/>
                     <div/>
                     <div/>
-                    <div/>
-                    <h2 className="uppercase text-center" style={{margin: 10}}>about</h2>
+                    <h2 className="uppercase text-center" style={{margin: 10}}>{headerAbout(language)}</h2>
+                    <div className="grid--even_3">
+                        <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("EN")}>EN</h2>
+                        <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("NL")}>NL</h2>
+                        <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("FR")}>FR</h2>
+
+                    </div>
 
                 </div>
+                <div className="grid--even_3">
+                    <div style={{margin: 10}}>
+                        {_studios.map((text => {
+                            let _text, _textSingle, t;
+                            _text = fetchText(text, language, "about");
+                            if (typeof _text !== "undefined"){
+                                const _t = _text.map((t)=>
+                                    <p className="paragraph">{t}</p>
+                                )
+                                console.log(_text);
+
+                                return(
+                                    <div className="about gridH--even_5">
+                                        <p>{_t}</p>
+                                    </div>
+                                )
+                            }
+                        }))}
+                    </div>
+                    <div/>
+                    <div/>
+                </div>
+
                 <div className="lineH grid--even_5">
                     {_studios.map((studio => {
-                        let title_en, description_en
-                        title_en = fetchTitleEn(studio);
-                        description_en = fetchDescriptionEn(studio);
-                        console.log(title_en);
+                        let title_en, description_en, studioImage;
+                        title_en = fetchTitle(studio, language, "studio");
+                        description_en = fetchDescription(studio, language, "studio");
+                        studioImage = fetchImage(studio, "studio");
                         return(
-                            <div>
+                            <div className="scrollable">
                                 <h2 className="text-center uppercase box-title">{title_en}</h2>
+                                <img className="img__fit center" src={studioImage}/>
                                 <p className="uppercase justify padding-10">{description_en}</p>
                             </div>
                         )
