@@ -22,6 +22,10 @@ export function fetchText(i, lang, id) {
 
 }
 
+export function fetchType(i){
+    return i._type;
+}
+
 export function fetchImage(i, _type) {
     if (i._type === _type){
         if (i.media_ !== "") {
@@ -79,6 +83,56 @@ export function fetchDescription(i, lang, _type) {
             }
         } else {
             return <p>{i.description_fr}</p>
+        }
+    }
+}
+
+export function fetchStudioID(i) {
+    return i.id;
+}
+
+export function fetchStudioProjectImage(i, _type, studioID) {
+    if (i._type === _type){
+        if (i.id.startsWith(studioID)){
+            if (i.media_ !== "") {
+                return i.media_
+            }
+        }
+    }
+}
+
+
+export function fetchStudioProjectDescription(i, lang, _type, studioID) {
+    if (i._type === _type) {
+        if (i.id.startsWith(studioID)){
+            if (lang === "EN") {
+                if (i.description_en !== "") {
+                    const desc = i.description_en
+                    return desc;
+                }
+            }
+        }
+    }
+}
+
+export function fetchStudioProjectTitle(i, lang, _type, studioID) {
+    if (i._type === _type) {
+        if (i.id.startsWith(studioID)) {
+            if (lang === "EN") {
+                if (i.title !== ""){
+                    return <p>{i.title_en}</p>;
+                }
+            }
+            if (lang === "NL") {
+                if (i.title !== ""){
+                    return <p>{i.title_nl}</p>;
+                }
+            }
+            if (lang === "FR") {
+                if (i.title !== ""){
+                    return <p>{i.title_fr}</p>;
+                }
+            }
         }
     }
 }

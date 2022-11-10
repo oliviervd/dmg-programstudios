@@ -1,7 +1,11 @@
 import React from "react";
 import useGoogleSheets from "use-google-sheets";
-import {fetchTitle, fetchDescription, headerTitle, headerAbout, fetchImage, fetchText} from "../utils/data_parsers";
+import {fetchTitle, fetchDescription, headerTitle, headerAbout, fetchImage, fetchText
+    , fetchStudioProjectDescription, fetchStudioID, fetchStudioProjectTitle, fetchType} from "../utils/data_parsers";
 import {useState} from "react";
+
+import ProjectHomeSnippet from "../elements/projectHomeSnippet";
+
 const Home = () => {
 
     const [language, setLanguage] = useState("EN");
@@ -58,7 +62,6 @@ const Home = () => {
                                 const _t = _text.map((t)=>
                                     <p className="paragraph">{t}</p>
                                 )
-                                console.log(_text);
 
                                 if (about === true){
                                     return(
@@ -76,25 +79,36 @@ const Home = () => {
 
                 <div className="lineH grid--even_5">
                     {_studios.map((studio => {
-                        let title_en, description_en, studioImage;
+                        let title_en, description, studioImage, projectDesc, studioID, projectTitle, studioType;
                         title_en = fetchTitle(studio, language, "studio");
-                        description_en = fetchDescription(studio, language, "studio");
+                        description = fetchDescription(studio, language, "studio");
                         studioImage = fetchImage(studio, "studio");
-                        return(
-                            <div className="rowScroll">
-                                <div className="scroll-div" >
-                                    <h2 className="text-center uppercase box-title">{title_en}</h2>
-                                    <img className="img__fit center" src={studioImage}/>
-                                    <p className="uppercase justify padding-10">{description_en}</p>
-                                </div>
-                                <div className="scroll-div">
-                                    <h2 className="text-center uppercase box-title">{title_en}</h2>
-                                    <img className="img__fit center" src={studioImage}/>
-                                    <p className="uppercase justify padding-10">{description_en}</p>
-                                </div>
-                            </div>
+                        studioType = fetchType(studio);
+                        studioID = fetchStudioID(studio);
 
-                        )
+                        projectDesc = fetchStudioProjectDescription(studio, language, "text", studioID);
+
+                        if (studioType === "studio") {
+
+                            return(
+                                <div className="rowScroll">
+                                    <div className="scroll-div" >
+                                        <h2 className="text-center uppercase box-title">{title_en}</h2>
+                                        <img className="img__fit center" src={studioImage}/>
+                                        <p className="uppercase justify padding-10">{description}</p>
+                                        <ProjectHomeSnippet className="padding-10" id={studioID} lang={language}/>
+                                    </div>
+                                    <div className="scroll-div" >
+                                        <h2 className="text-center uppercase box-title">{title_en}</h2>
+                                        <img className="img__fit center" src={studioImage}/>
+                                        <p className="uppercase justify padding-10">{description}</p>
+                                        <ProjectHomeSnippet id={studioID} lang={language}/>
+                                    </div>
+                                </div>
+
+                            )
+                        }
+
 
                     }))}
                 </div>
