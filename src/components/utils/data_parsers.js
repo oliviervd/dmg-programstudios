@@ -111,6 +111,18 @@ export function fetchStudioProjectDescription(i, lang, _type, studioID) {
                     return desc;
                 }
             }
+            if (lang === "FR") {
+                if (i.description_fr !== "") {
+                    const desc = i.description_fr
+                    return desc;
+                }
+            }
+            if (lang === "NL") {
+                if (i.description_nl !== "") {
+                    const desc = i.description_nl
+                    return desc;
+                }
+            }
         }
     }
 }
