@@ -153,6 +153,11 @@ h3 {
     font-family: "sligoil-micro", sans-serif;
 }
 
+.borderLine-left{
+    margin-left: 30px;
+    border-left: 1px dotted black;
+}
+
 .glossBox{
     transform: rotate(-15deg);
     height: 70vh;

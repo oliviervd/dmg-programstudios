@@ -45,7 +45,7 @@ const ProjectHomeSnippet = (props) => {
                 projectID = fetchStudioID(project)
                 if (projectID.startsWith(id) && id !== projectID){
                     return(
-                        <div>
+                        <div className="borderLine-left">
                             <h2 className="text-center uppercase box-title">{projectTitle}</h2>
                             <img className="img__fit center" src={projectIMG}/>
                             <p className="uppercase justify padding-10">{projectDesc}</p>
