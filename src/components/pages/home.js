@@ -1,17 +1,24 @@
-import React from "react";
+import React, {useState} from "react";
+import {useMediaQuery} from "react-responsive";
 import useGoogleSheets from "use-google-sheets";
 import {fetchTitle, fetchDescription, headerTitle, headerAbout, fetchImage, fetchText
     , fetchStudioProjectDescription, fetchStudioID, fetchStudioProjectTitle, fetchType} from "../utils/data_parsers";
-import {useState} from "react";
-
 import ProjectHomeSnippet from "../elements/projectHomeSnippet";
 import ProjectHomeView from "../elements/projectHomeView";
-
+import Header from "../elements/Header";
 const Home = () => {
 
     const [language, setLanguage] = useState("EN");
     const [about, setAbout] = useState(false);
     const [hoverContent, setHoverContent] = useState(" ");
+
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+    })
+
+    const isMobile = useMediaQuery({
+        query: '(max-width: 1224px)'
+    })
 
     const {data, loading, error} = useGoogleSheets({
         apiKey: "AIzaSyAhfyQ_9XDc6ajRYDy3qPXPAp8mkLKja90",
@@ -34,9 +41,16 @@ const Home = () => {
         })
     })
 
+    //todo: make responsive mobile
+    //todo: make responsive tablet
+    //todo: make seperate container for scroller.
+
     return(
         <div>
-            <div className="gridH--1_5_4 full-page">
+            <div className="grid-home-main full-page">
+                <Header setAbout={setAbout} setLanguage={setLanguage} language={language}/>
+                {/*
+
                 <div className="grid--even_10">
                     <h2 className="uppercase text-center" style={{margin: 10}}>{headerTitle(language)}</h2>
                     <div/>
@@ -52,11 +66,10 @@ const Home = () => {
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("EN")}>EN</h2>
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("NL")}>NL</h2>
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("FR")}>FR</h2>
-
                     </div>
                 </div>
 
-
+                */}
                 <div className="grid--1_2" style={{zIndex: 100000, background: "white"}}>
                     <div style={{margin: 10}}>
                         {_studios.map((text => {
@@ -96,16 +109,16 @@ const Home = () => {
                         if (studioType === "studio") {
 
                             return(
-                                <div className="rowScroll">
+                                <div className="rowScroll fade-in">
                                     <div className="scroll-div" >
                                         <h2 className="text-center uppercase box-title">{title_en}</h2>
-                                        <img className="img__fit center" src={studioImage} onMouseOver={()=>setHoverContent(studioImage)}/>
+                                        <img className="img__fit center" src={studioImage} onMouseOver={()=>setHoverContent(studioImage)} onMouseLeave={()=>setHoverContent(" ")}/>
                                         <p className="uppercase justify padding-10">{description}</p>
                                         <ProjectHomeSnippet className="padding-10" id={studioID} lang={language}/>
                                     </div>
                                     <div className="scroll-div" >
                                         <h2 className="text-center uppercase box-title">{title_en}</h2>
-                                        <img className="img__fit center" src={studioImage} onMouseOver={()=>setHoverContent(studioImage)}/>
+                                        <img className="img__fit center" src={studioImage} onMouseOver={()=>setHoverContent(studioImage)} onMouseLeave={()=>setHoverContent(" ")}/>
                                         <p className="uppercase justify padding-10">{description}</p>
                                         <ProjectHomeSnippet id={studioID} lang={language}/>
                                     </div>
