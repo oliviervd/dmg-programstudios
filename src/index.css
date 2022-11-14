@@ -802,7 +802,7 @@ img__bruises{
     width: 300px;
 }
 
-img__thumbnail {
+.img__thumbnail {
     width: 18vw;
     height: 20vh;
     object-fit: contain;
@@ -1037,10 +1037,14 @@ imageViewer__modal-main {
  V: vertical (columns)
  */}
 
-
 .grid--1_8_1 {
     display:grid;
     grid-template-columns: 10% 80% 10%;
+}
+
+.grid--1_2{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
 }
 
 .grid--2_6_2 {
