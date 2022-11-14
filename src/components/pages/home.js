@@ -12,8 +12,6 @@ const Home = () => {
     const [about, setAbout] = useState(false);
     const [hoverContent, setHoverContent] = useState(" ");
 
-    console.log(hoverContent);
-
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
     })
