@@ -12,6 +12,8 @@ const Home = () => {
     const [about, setAbout] = useState(false);
     const [hoverContent, setHoverContent] = useState(" ");
 
+    console.log(hoverContent);
+
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
     })
@@ -49,27 +51,7 @@ const Home = () => {
         <div>
             <div className="grid-home-main full-page">
                 <Header setAbout={setAbout} setLanguage={setLanguage} language={language}/>
-                {/*
 
-                <div className="grid--even_10">
-                    <h2 className="uppercase text-center" style={{margin: 10}}>{headerTitle(language)}</h2>
-                    <div/>
-                    <div/>
-                    <div/>
-                    <div/>
-                    <div/>
-                    <div/>
-                    <div/>
-                    <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setAbout(!about)}>{headerAbout(language)}</h2>
-
-                    <div className="grid--even_3">
-                        <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("EN")}>EN</h2>
-                        <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("NL")}>NL</h2>
-                        <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("FR")}>FR</h2>
-                    </div>
-                </div>
-
-                */}
                 <div className="grid--1_2" style={{zIndex: 100000, background: "white"}}>
                     <div style={{margin: 10}}>
                         {_studios.map((text => {
@@ -114,13 +96,13 @@ const Home = () => {
                                         <h2 className="text-center uppercase box-title">{title_en}</h2>
                                         <img className="img__fit center" src={studioImage} onMouseOver={()=>setHoverContent(studioImage)} onMouseLeave={()=>setHoverContent(" ")}/>
                                         <p className="uppercase justify padding-10">{description}</p>
-                                        <ProjectHomeSnippet className="padding-10" id={studioID} lang={language}/>
+                                        <ProjectHomeSnippet className="padding-10" id={studioID} lang={language} setHoverContent={setHoverContent}/>
                                     </div>
                                     <div className="scroll-div" >
                                         <h2 className="text-center uppercase box-title">{title_en}</h2>
                                         <img className="img__fit center" src={studioImage} onMouseOver={()=>setHoverContent(studioImage)} onMouseLeave={()=>setHoverContent(" ")}/>
                                         <p className="uppercase justify padding-10">{description}</p>
-                                        <ProjectHomeSnippet id={studioID} lang={language}/>
+                                        <ProjectHomeSnippet className="padding-10" id={studioID} lang={language} setHoverContent={setHoverContent}/>
                                     </div>
                                 </div>
 
