@@ -5,11 +5,13 @@ import {fetchTitle, fetchDescription, headerTitle, headerAbout, fetchImage, fetc
 import {useState} from "react";
 
 import ProjectHomeSnippet from "../elements/projectHomeSnippet";
+import ProjectHomeView from "../elements/projectHomeView";
 
 const Home = () => {
 
     const [language, setLanguage] = useState("EN");
     const [about, setAbout] = useState(false);
+    const [hoverContent, setHoverContent] = useState(" ");
 
     const {data, loading, error} = useGoogleSheets({
         apiKey: "AIzaSyAhfyQ_9XDc6ajRYDy3qPXPAp8mkLKja90",
@@ -45,15 +47,17 @@ const Home = () => {
                     <div/>
                     <div/>
                     <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setAbout(!about)}>{headerAbout(language)}</h2>
+
                     <div className="grid--even_3">
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("EN")}>EN</h2>
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("NL")}>NL</h2>
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => setLanguage("FR")}>FR</h2>
 
                     </div>
-
                 </div>
-                <div className="grid--even_3" style={{zIndex: 100000, background: "white"}}>
+
+
+                <div className="grid--1_2" style={{zIndex: 100000, background: "white"}}>
                     <div style={{margin: 10}}>
                         {_studios.map((text => {
                             let _text;
@@ -73,8 +77,9 @@ const Home = () => {
                             }
                         }))}
                     </div>
-                    <div/>
-                    <div/>
+                    <div>
+                        <ProjectHomeView img={hoverContent}/>
+                    </div>
                 </div>
 
                 <div className="lineH grid--even_5">
@@ -94,13 +99,13 @@ const Home = () => {
                                 <div className="rowScroll">
                                     <div className="scroll-div" >
                                         <h2 className="text-center uppercase box-title">{title_en}</h2>
-                                        <img className="img__fit center" src={studioImage}/>
+                                        <img className="img__fit center" src={studioImage} onMouseOver={()=>setHoverContent(studioImage)}/>
                                         <p className="uppercase justify padding-10">{description}</p>
                                         <ProjectHomeSnippet className="padding-10" id={studioID} lang={language}/>
                                     </div>
                                     <div className="scroll-div" >
                                         <h2 className="text-center uppercase box-title">{title_en}</h2>
-                                        <img className="img__fit center" src={studioImage}/>
+                                        <img className="img__fit center" src={studioImage} onMouseOver={()=>setHoverContent(studioImage)}/>
                                         <p className="uppercase justify padding-10">{description}</p>
                                         <ProjectHomeSnippet id={studioID} lang={language}/>
                                     </div>
@@ -112,8 +117,6 @@ const Home = () => {
 
                     }))}
                 </div>
-
-
             </div>
         </div>
 
