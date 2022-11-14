@@ -415,6 +415,93 @@ a {
     position: absolute;
 }
 
+.fade-in{
+    animation: fadeIn ease 2s;
+    -webkit-animation: fadeIn ease 2s;
+    -moz-animation: fadeIn ease 2s;
+    -o-animation: fadeIn ease 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity:0;
+    }
+    100% {
+        opacity:1;
+    }
+}
+
+.fade-out{
+    animation: fadeOut ease 2s;
+    -webkit-animation: fadeOut ease 2s;
+    -moz-animation: fadeOut ease 2s;
+    -o-animation: fadeOut ease 2s;
+}
+
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@-moz-keyframes fadeOut {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@-webkit-keyframes fadeOut {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
+@-o-keyframes fadeOut {
+    0% {
+        opacity:1;
+    }
+    100% {
+        opacity:0;
+    }
+}
+
 .black-box{
     background:black;
     height: fit-content;
@@ -1166,6 +1253,26 @@ imageViewer__modal-main {
     display: grid;
     grid-template-rows: 10% 50% 40%;
 }
+
+.gridH--1_3_6{
+    display:grid;
+    grid-template-rows: 10% 30% 60%;
+}
+
+@media (max-width: 1224px) {
+    .grid-home-main{
+        display: grid;
+        grid-template-rows: 10% 30% 60%;
+    }
+}
+
+@media (min-width: 1224px) {
+    .grid-home-main{
+        display: grid;
+        grid-template-rows: 10% 50% 40%;
+    }
+}
+
 
 .border_box {
     border: 2px solid;
