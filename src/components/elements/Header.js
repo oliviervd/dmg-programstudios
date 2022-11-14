@@ -13,6 +13,8 @@ const Header = props => {
         query: '(max-width: 1224px)'
     })
 
+    console.log(props.about);
+
     return(
         <div>
             <div className="grid--even_10">

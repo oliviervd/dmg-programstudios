@@ -50,7 +50,7 @@ const Home = () => {
     return(
         <div>
             <div className="grid-home-main full-page">
-                <Header setAbout={setAbout} setLanguage={setLanguage} language={language}/>
+                <Header about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
 
                 <div className="grid--1_2" style={{zIndex: 100000, background: "white"}}>
                     <div style={{margin: 10}}>
