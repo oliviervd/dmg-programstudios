@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, {useState, lazy, Suspense} from "react";
 import {useMediaQuery} from "react-responsive";
 import useGoogleSheets from "use-google-sheets";
 import {fetchTitle, fetchDescription, headerTitle, headerAbout, fetchImage, fetchText
@@ -6,6 +6,9 @@ import {fetchTitle, fetchDescription, headerTitle, headerAbout, fetchImage, fetc
 import ProjectHomeSnippet from "../elements/projectHomeSnippet";
 import ProjectHomeView from "../elements/projectHomeView";
 import Header from "../elements/Header";
+
+const InteractionBar = React.lazy(()=>import("../elements/interactionBar"))
+
 const Home = () => {
 
     const [language, setLanguage] = useState("EN");
@@ -77,7 +80,13 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div className="lineH grid--even_5">
+                <div style={{background: "white"}}>
+                    <Suspense>
+                        <InteractionBar/>
+                    </Suspense>
+                </div>
+
+                <div className="lineH grid--even_5 " style={{background: "white"}}>
                     {_studios.map((studio => {
                         let title_en, description, studioImage, projectDesc, studioID, projectTitle, studioType;
                         title_en = fetchTitle(studio, language, "studio");

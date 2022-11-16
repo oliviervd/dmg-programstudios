@@ -153,6 +153,10 @@ h3 {
     font-family: "sligoil-micro", sans-serif;
 }
 
+.borderLine-top{
+    border-top: 1px solid black
+}
+
 .borderLine-left{
     margin-left: 30px;
     border-left: 1px dotted black;
@@ -1269,7 +1273,7 @@ imageViewer__modal-main {
 @media (min-width: 1224px) {
     .grid-home-main{
         display: grid;
-        grid-template-rows: 10% 50% 40%;
+        grid-template-rows: 10% 48% 2% 40%;
     }
 }
 
