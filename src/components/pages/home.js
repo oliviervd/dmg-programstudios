@@ -1,7 +1,8 @@
 import React, {useState} from "react";
 import {useMediaQuery} from "react-responsive";
 import useGoogleSheets from "use-google-sheets";
-import {fetchTitle, fetchDescription, fetchImage, fetchText, fetchStudioID, fetchType} from "../utils/data_parsers";
+import {fetchTitle, fetchDescription, headerTitle, headerAbout, fetchImage, fetchText
+    , fetchStudioProjectDescription, fetchStudioID, fetchStudioProjectTitle, fetchType} from "../utils/data_parsers";
 import ProjectHomeSnippet from "../elements/projectHomeSnippet";
 import ProjectHomeView from "../elements/projectHomeView";
 import Header from "../elements/Header";
@@ -10,6 +11,8 @@ const Home = () => {
     const [language, setLanguage] = useState("EN");
     const [about, setAbout] = useState(false);
     const [hoverContent, setHoverContent] = useState(" ");
+
+    console.log(hoverContent);
 
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
@@ -42,7 +45,7 @@ const Home = () => {
 
     //todo: make responsive mobile
     //todo: make responsive tablet
-    //todo: make separate container for scroller.
+    //todo: make seperate container for scroller.
 
     return(
         <div>
@@ -76,12 +79,14 @@ const Home = () => {
 
                 <div className="lineH grid--even_5">
                     {_studios.map((studio => {
-                        let title_en, description, studioImage, projectDesc, studioID, studioType;
+                        let title_en, description, studioImage, projectDesc, studioID, projectTitle, studioType;
                         title_en = fetchTitle(studio, language, "studio");
                         description = fetchDescription(studio, language, "studio");
                         studioImage = fetchImage(studio, "studio");
                         studioType = fetchType(studio);
                         studioID = fetchStudioID(studio);
+
+                        projectDesc = fetchStudioProjectDescription(studio, language, "text", studioID);
 
                         if (studioType === "studio") {
 
