@@ -65,13 +65,12 @@ html, body {
     height: 200vh;
     background: linear-gradient(180deg, white 0%,  #fbf2e7 85%);
     scroll-behavior: smooth;
-
 }
 
 div {
-    font-family: "sligoil-micro", sans-serif;
+    font-family: "KWBio27-Display", sans-serif;
     font-size: 12px;
-    padding:none;
+    padding: none;
     margin: none;
 }
 
@@ -112,6 +111,11 @@ div {
     src: local("Sligoil-Micro"), url(fonts/Sligoil-Micro.otf);
 }
 
+@font-face {
+    font-family: "KWBio27-Display";
+    src: local("KWBio27-Display"), url(fonts/KWBio27-Display.otf);
+}
+
 .text {
     font-size: 18px;
     padding: 2px
@@ -136,12 +140,12 @@ crypto--h1--large {
 
 h1 {
     font-size: 43px;
-    font-family: "sligoil-micro", sans-serif;
+    font-family: "KWBio27-Display", sans-serif;
 }
 
 h2 {
     font-size: 17px;
-    font-family: "sligoil-micro", sans-serif;
+    font-family: "KWBio27-Display", sans-serif;
 } @media (max-width: 1224px) {
     h2 {
         font-size: 30px;

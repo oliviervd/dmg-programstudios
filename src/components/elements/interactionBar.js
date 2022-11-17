@@ -1,6 +1,7 @@
 import React, {lazy, Suspense} from 'react';
 
 const DisplayTimeDate = React.lazy(()=> import("./timeGovernement"))
+const FontChanger  = React.lazy(() => import("./FontChanger"))
 
 const InteractionBar = () => {
     return(
@@ -9,7 +10,9 @@ const InteractionBar = () => {
             <Suspense>
                 <DisplayTimeDate/>
             </Suspense>
-            <p className='text-center'></p>
+            <Suspense>
+                <FontChanger/>
+            </Suspense>
         </div>
     )
 }
