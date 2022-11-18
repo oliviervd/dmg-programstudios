@@ -18,7 +18,7 @@
 
 :root {
     --main__green: #afc6ae;
-    --green_ish: #8faa95
+    --green_ish: #8faa95;
     --fluo__green: #00FF67;
     --triad_pink: #C6AEAF;
     --white_main: #F1F1F1;
@@ -70,8 +70,6 @@ html, body {
 div {
     font-family: "KWBio27-Display", sans-serif;
     font-size: 12px;
-    padding: none;
-    margin: none;
 }
 
 .centerBox{
@@ -394,7 +392,7 @@ a {
 }
 
 .nav--header:hover {
-    color: var(#afc6ae)
+    color: #afc6ae
  }
 
 .emptyFrameModel__1 {
@@ -513,9 +511,6 @@ a {
 .black-box{
     background:black;
     height: fit-content;
-    margin: none;
-    padding: none;
-
 }
 
 .white-box{
@@ -776,7 +771,7 @@ button{
     height: 10vh;
     font-size: 100px;
 
-    line-height: -20px;
+    line-height: 20px;
 
     /*animation props*/
     -moz-transform: translateX(-100%);
@@ -1300,7 +1295,7 @@ imageViewer__modal-main {
 
 .graphicArchiveBox{
     z-index: 100000000;
-    margin-top: -100px;
+    margin-top: -400px;
     position: relative;
 }
 
