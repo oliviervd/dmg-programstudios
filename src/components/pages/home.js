@@ -82,7 +82,7 @@ const Home = () => {
 
                 <div style={{background: "white"}}>
                     <Suspense>
-                        <InteractionBar/>
+                        <InteractionBar lang={language}/>
                     </Suspense>
                 </div>
 
