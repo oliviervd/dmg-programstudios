@@ -1207,7 +1207,7 @@ imageViewer__modal-main {
     }
 }  @media (max-width: 1224px) {
     .grid--even_3{
-        grid-template-columns: none;
+        grid-template-columns: repeat(3, minmax(0, 1fr));
         grid-auto-flow: dense;
     }
 }
