@@ -12,8 +12,6 @@ const Sketch_ModelsGrid = p5 => {
 
     const setup = (p5, canvasParentRef) => {
         p5.createCanvas(WIDTH, HEIGHT).parent(canvasParentRef);
-        var fontFile_1 = "P-ACR-AGON-Regular.otf"
-        var fontFile_2 = "happy-times-NG_regular_master_web.ttf"
         _happy = p5.loadFont(fontFile_2, 1000);
         _pacragon = p5.loadFont(fontFile_1, 1000);
     }

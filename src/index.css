@@ -80,36 +80,6 @@ div {
 /* ---------------------------------- FONTS & TYPE ---------------------------------- */
 
 @font-face {
-    font-family: "P-ACR-AGON-Regular";
-    src: local("P-ACR-AGON-Regular"), url(fonts/P-ACR-AGON-Regular.otf)
-}
-
-@font-face {
-    font-family: "happy-times-NG_bold_master_web";
-    src: local("happy-times-NG_bold_master_web"), url(fonts/happy-times-NG_bold_master_web.ttf);
-}
-
-@font-face {
-    font-family: "happy-times-NG_italic_master_web";
-    src: local("happy-times-NG_italic_master_web"), url(fonts/happy-times-NG_italic_master_web.ttf);
-}
-
-@font-face {
-    font-family: "happy-times-NG_regular_master_web";
-    src: local("happy-times-NG_regular_master_web"), url(fonts/happy-times-NG_regular_master_web.ttf);
-}
-
-@font-face {
-    font-family: "lineal";
-    src: local("lineal"), url(fonts/Lineal.otf);
-}
-
-@font-face {
-    font-family: "sligoil-micro";
-    src: local("Sligoil-Micro"), url(fonts/Sligoil-Micro.otf);
-}
-
-@font-face {
     font-family: "KWBio27-Display";
     src: local("KWBio27-Display"), url(fonts/KWBio27-Display.otf);
 }
