@@ -1,6 +1,7 @@
 import React, {useState} from "react";
+import {headerAbout} from "../utils/data_parsers";
 
-const HamburgerMenu = () => {
+const HamburgerMenu = (props) => {
 
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
     console.log(hamburgerOpen);
@@ -30,9 +31,13 @@ const HamburgerMenu = () => {
                     <div className="hamburgerMenu">
                         <h1 style={{marginLeft: 20, marginTop: 20, position:"absolute"}} onClick={() => setHamburgerOpen(!hamburgerOpen)}>X</h1>
                         <div>
-                            <h1 className="text-center">option 1</h1>
-                            <h1 className="text-center">option 2</h1>
-                            <h1 className="text-center">option 3</h1>
+                            <h1 onClick={()=>props.setAbout(!props.about)} className="text-center">{headerAbout(props.language)}</h1>
+
+                            <div className="gridH--even_3">
+                                <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setLanguage("EN")}>EN</h2>
+                                <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setLanguage("NL")}>NL</h2>
+                                <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setLanguage("FR")}>FR</h2>
+                            </div>
                         </div>
                     </div>
                 </div>

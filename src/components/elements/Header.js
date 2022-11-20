@@ -43,7 +43,7 @@ const Header = props => {
                     <div/>
                     <div/>
                     <Suspense>
-                        <HamburgerMenu/>
+                        <HamburgerMenu setLanguage={props.setLanguage} language={props.language} setAbout={props.setAbout} about={props.about}/>
                     </Suspense>
                 </div>
             }
