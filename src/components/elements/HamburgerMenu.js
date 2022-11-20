@@ -18,12 +18,22 @@ const HamburgerMenu = () => {
                 </div>
             }
             {!hamburgerOpen &&
-                <div className="hamburgerMenu">
-                    <h1 style={{marginLeft: 20, marginTop: 20, position:"absolute"}} onClick={() => setHamburgerOpen(!hamburgerOpen)}>X</h1>
-                    <div>
-                        <h1 className="text-center">option 1</h1>
-                        <h1 className="text-center">option 2</h1>
-                        <h1 className="text-center">option 3</h1>
+                <div>
+                    <div onClick={() => setHamburgerOpen(!hamburgerOpen)} className="button-burger"
+                         aria-controls="primary-navigation" aria-expanded="false">
+                        <svg className="hamburger">
+                            <rect class="burgerIcon" className="top firstBar" width="60" height="3" x="10" y="25"/>
+                            <rect class="burgerIcon" className="top secondBar" width="60" height="3" x="10" y="45"/>
+                            <rect class="burgerIcon" className="top" width="60" height="3" x="10" y="65"/>
+                        </svg>
+                    </div>
+                    <div className="hamburgerMenu">
+                        <h1 style={{marginLeft: 20, marginTop: 20, position:"absolute"}} onClick={() => setHamburgerOpen(!hamburgerOpen)}>X</h1>
+                        <div>
+                            <h1 className="text-center">option 1</h1>
+                            <h1 className="text-center">option 2</h1>
+                            <h1 className="text-center">option 3</h1>
+                        </div>
                     </div>
                 </div>
             }
