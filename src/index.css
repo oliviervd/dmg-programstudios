@@ -122,7 +122,7 @@ h2 {
 
 h3 {
     font-size: 15px;
-    font-family: "sligoil-micro", sans-serif;
+    font-family: "KWBio27-Display", sans-serif;
 }
 
 .borderLine-top{
@@ -161,7 +161,7 @@ h3 {
 }
 
 .font-main {
-    font-family: "sligoil-micro", sans-serif;
+    font-family: "KWBio27-Display", sans-serif;
 }
 
 .subHeader__text {
@@ -183,7 +183,7 @@ h3 {
 }
 
 h4 {
-    font-family: "sligoil-micro", sans-serif;
+    font-family: "KWBio27-Display", sans-serif;
 }
 
 a {
@@ -192,7 +192,7 @@ a {
 }
 
 .main-title{
-    font-family: "sligoil-micro", sans-serif;
+    font-family: "KWBio27-Display", sans-serif;
     font-size: 100px;
     padding-top: 20vh;
     height: 50vh;
@@ -1235,7 +1235,7 @@ imageViewer__modal-main {
 @media (max-width: 1224px) {
     .grid-home-main{
         display: grid;
-        grid-template-rows: 10% 30% 60%;
+        grid-template-rows: 10% 28% 2% 60%;
     }
 }
 
