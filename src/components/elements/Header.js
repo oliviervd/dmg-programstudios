@@ -1,8 +1,8 @@
-import React from "react";
+import React, {lazy, Suspense} from "react";
 import {headerAbout, headerTitle} from "../utils/data_parsers";
-import HamburgerMenu from "./HamburgerMenu";
-
 import {useMediaQuery} from "react-responsive";
+
+const HamburgerMenu = lazy(() => import("./HamburgerMenu"));
 
 const Header = props => {
 
@@ -42,7 +42,9 @@ const Header = props => {
                     <h2 className="uppercase text-center" style={{margin: 10}}>{headerTitle(props.language)}</h2>
                     <div/>
                     <div/>
-                    <HamburgerMenu/>
+                    <Suspense>
+                        <HamburgerMenu/>
+                    </Suspense>
                 </div>
             }
 
