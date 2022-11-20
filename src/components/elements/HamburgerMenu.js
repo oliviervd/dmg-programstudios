@@ -3,13 +3,11 @@ import React from "react";
 const HamburgerMenu = () => {
     return(
         <div>
-            <div className="grid--even_3" class="button" aria-controls="primary-navigation" aria-expanded="false">
-                <div></div>
-                <div></div>
-                <svg class="hamburger">
-                    <rect class="top" width="60" height="10" x="10" y="25"/>
-                    <rect class="top" width="60" height="10" x="10" y="45"/>
-                    <rect class="top" width="60" height="10" x="10" y="65"/>
+            <div class="button-burger" aria-controls="primary-navigation" aria-expanded="false">
+                <svg className="hamburger" viewPort="0 0 100 100">
+                    <rect className="top" width="60" height="10" x="10" y="25"/>
+                    <rect className="top" width="60" height="10" x="10" y="45"/>
+                    <rect className="top" width="60" height="10" x="10" y="65"/>
                 </svg>
             </div>
         </div>

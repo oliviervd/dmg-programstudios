@@ -615,10 +615,7 @@ text {
 }
 
 button{
-    font-family: "sligoil-micro", sans-serif;
-    width: 100%;
-    background-color: var(--main__green);
-    margin-bottom: 10px;
+    background: transparent;
 }
 
 .buttonRandomizer {
