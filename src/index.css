@@ -615,10 +615,7 @@ text {
 }
 
 button{
-    font-family: "sligoil-micro", sans-serif;
-    width: 100%;
-    background-color: var(--main__green);
-    margin-bottom: 10px;
+    background: transparent;
 }
 
 .buttonRandomizer {
@@ -642,6 +639,33 @@ button{
     border: dotted 4px black;
     margin-right: 10px;
 }
+
+.hamburgerMenu{
+    position: absolute;
+    z-index: 19999999999;
+    left:0;
+    right: 0;
+    height: 40vh;
+    width: 100vw;
+    background-color: rgb(235, 253, 250);
+}
+
+.firstBar {
+    transition: all 0.35s linear;
+    transform: rotate(0deg);
+    transform-origin: 0% 50%;
+    transform: rotate(45deg);
+}
+
+.secondBar {
+    transition: all 0.35s linear;
+    transform: rotate(0deg);
+    transform-origin: 0% 50%;
+    transform: rotate(-45deg);
+}
+
+
+
 
 /* ANIMATIONSSS */
 
