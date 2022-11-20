@@ -1,8 +1,7 @@
 import React, {useState, lazy, Suspense} from "react";
 import {useMediaQuery} from "react-responsive";
 import useGoogleSheets from "use-google-sheets";
-import {fetchTitle, fetchDescription, headerTitle, headerAbout, fetchImage, fetchText
-    , fetchStudioProjectDescription, fetchStudioID, fetchStudioProjectTitle, fetchType} from "../utils/data_parsers";
+import {fetchTitle, fetchDescription, fetchImage, fetchText, fetchStudioID, fetchType} from "../utils/data_parsers";
 import ProjectHomeSnippet from "../elements/projectHomeSnippet";
 import ProjectHomeView from "../elements/projectHomeView";
 import Header from "../elements/Header";
@@ -10,6 +9,9 @@ import Header from "../elements/Header";
 const InteractionBar = React.lazy(()=>import("../elements/interactionBar"))
 
 const Home = () => {
+
+    // todo: make more carbon neutral (83);
+    // https://www.websitecarbon.com/website/modelsfromthepastforthefuture-herokuapp-com/
 
     const [language, setLanguage] = useState("EN");
     const [about, setAbout] = useState(false);
@@ -88,14 +90,12 @@ const Home = () => {
 
                 <div className="lineH grid--even_5 " style={{background: "white"}}>
                     {_studios.map((studio => {
-                        let title_en, description, studioImage, projectDesc, studioID, projectTitle, studioType;
+                        let title_en, description, studioImage, studioID, studioType;
                         title_en = fetchTitle(studio, language, "studio");
                         description = fetchDescription(studio, language, "studio");
                         studioImage = fetchImage(studio, "studio");
                         studioType = fetchType(studio);
                         studioID = fetchStudioID(studio);
-
-                        projectDesc = fetchStudioProjectDescription(studio, language, "text", studioID);
 
                         if (studioType === "studio") {
 
