@@ -18,8 +18,13 @@ const HamburgerMenu = () => {
                 </div>
             }
             {!hamburgerOpen &&
-                <div>
-                    <h1 onClick={() => setHamburgerOpen(!hamburgerOpen)}>X</h1>
+                <div className="hamburgerMenu">
+                    <h1 style={{marginLeft: 20, marginTop: 20, position:"absolute"}} onClick={() => setHamburgerOpen(!hamburgerOpen)}>X</h1>
+                    <div>
+                        <h1 className="text-center">option 1</h1>
+                        <h1 className="text-center">option 2</h1>
+                        <h1 className="text-center">option 3</h1>
+                    </div>
                 </div>
             }
         </div>

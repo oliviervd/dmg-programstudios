@@ -640,6 +640,16 @@ button{
     margin-right: 10px;
 }
 
+.hamburgerMenu{
+    position: absolute;
+    z-index: 19999999999;
+    left:0;
+    right: 0;
+    height: 40vh;
+    width: 100vw;
+    background: #79aea1;
+}
+
 /* ANIMATIONSSS */
 
 .button-lang{
