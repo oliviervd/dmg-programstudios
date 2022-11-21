@@ -84,6 +84,11 @@ div {
     src: local("KWBio27-Display"), url(fonts/KWBio27-Display.otf);
 }
 
+@font-face {
+    font-family: "BackOut";
+    src: local("BackOut"), url(fonts/BackOut.woff2);
+}
+
 .text {
     font-size: 18px;
     padding: 2px
@@ -98,7 +103,7 @@ div {
 }
 
 .graphic_archive_02 {
-    font-family: "fantasy", sans-serif;
+    font-family: "BackOut", sans-serif;
 }
 
 h1 {
@@ -605,7 +610,6 @@ button{
     right: 0;
     height: 40vh;
     width: 100vw;
-    background-color: rgb(235, 253, 250);
 }
 
 .firstBar {
