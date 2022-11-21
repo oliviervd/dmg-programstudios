@@ -126,12 +126,12 @@ h3 {
 }
 
 .borderLine-top{
-    border-top: 1px solid black
+    border-top: 1px solid
 }
 
 .borderLine-left{
     margin-left: 30px;
-    border-left: 1px dotted black;
+    border-left: 1px dotted;
 }
 
 .glossBox{
@@ -278,7 +278,7 @@ a {
 }
 
 .lineH{
-    border-top: 1px black solid;
+    border-top: 1px solid;
     z-index: 1000;
 }
 
@@ -1311,7 +1311,6 @@ imageViewer__modal-main {
 }
 
 .HomeProjectGridContainer{
-    background: white;
     top: -100%;
     transition: top 0.4s;
 }
@@ -1320,4 +1319,15 @@ imageViewer__modal-main {
     top: +100%
 }
 
+.lightMode{
+    background: white;
+    color: black;
+    border-color: black;
+}
+
+.darkMode{
+    background: black;
+    color: white;
+    border-color:white;
+}
 

@@ -7,7 +7,7 @@ import {
     fetchStudioID
 } from "../utils/data_parsers";
 
-const ProjectHomeSnippet = props => {
+const ProjectHomeSnippet = (props) => {
 
     let id, lang;
     id = props.id;

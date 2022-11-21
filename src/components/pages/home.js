@@ -1,5 +1,4 @@
-import React, {useState, lazy, Suspense} from "react";
-import {useMediaQuery} from "react-responsive";
+import React, {useState, Suspense} from "react";
 import useGoogleSheets from "use-google-sheets";
 import {fetchTitle, fetchDescription, fetchImage, fetchText, fetchStudioID, fetchType} from "../utils/data_parsers";
 import ProjectHomeSnippet from "../elements/projectHomeSnippet";
@@ -17,16 +16,7 @@ const Home = () => {
     const [about, setAbout] = useState(false);
     const [hoverContent, setHoverContent] = useState(" ");
     const [carouselState, setCarouselState] = useState("true");
-
-    console.log(carouselState);
-
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 1224px)'
-    })
-
-    const isMobile = useMediaQuery({
-        query: '(max-width: 1224px)'
-    })
+    const [darkMode, setDarkMode] = useState(false)
 
     const {data, loading, error} = useGoogleSheets({
         apiKey: "AIzaSyAhfyQ_9XDc6ajRYDy3qPXPAp8mkLKja90",
@@ -54,11 +44,11 @@ const Home = () => {
     //todo: make seperate container for scroller.
 
     return(
-        <div>
+        <div className={darkMode?"darkMode":"lightMode"}>
             <div className={carouselState?"grid-home-main-open full-page":"grid-home-main-closed full-page"}>
                 <Header about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
 
-                <div className="grid--1_2" style={{zIndex: 100000, background: "white"}}>
+                <div className="grid--1_2" style={{zIndex: 100000}}>
                     <div style={{margin: 10}}>
                         {_studios.map((text => {
                             let _text;
@@ -83,9 +73,10 @@ const Home = () => {
                     </div>
                 </div>
 
-                <div style={{background: "white"}}>
+                <div>
                     <Suspense>
-                        <InteractionBar lang={language} carouselState={carouselState} setCarouselState={setCarouselState}/>
+                        <InteractionBar lang={language} carouselState={carouselState} setCarouselState={setCarouselState}
+                                        setDarkMode={setDarkMode} darkMode={darkMode}/>
                     </Suspense>
                 </div>
 
@@ -99,11 +90,6 @@ const Home = () => {
                         studioID = fetchStudioID(studio);
 
                         if (studioType === "studio") {
-
-                            if (carouselState) {
-                                console.log("let's go");
-                            }
-
                             return(
                                 <div id="HomeProjectGrid" className="rowScroll fade-in open">
                                     <div className="scroll-div" >
