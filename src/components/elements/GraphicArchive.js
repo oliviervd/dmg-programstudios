@@ -36,10 +36,8 @@ const GraphicArchive = (props) => {
                     <div/>
                     <div>
                         <div className="borderLine-top">
-                            <ul className='italic'>protagonist #1</ul>
-                            <ul className='italic'>protagonist #2</ul>
-                            <ul className='italic'>protagonist #3</ul>
-                            <ul className='italic'>protagonist #4</ul>
+                            <ul className='italic' onClick={()=>props.setVisualIdentity("graphic_archive_01")}>protagonist #1</ul>
+                            <ul className='italic' onClick={()=>props.setVisualIdentity("graphic_archive_02")}>protagonist #2</ul>
                         </div>
                     </div>
 

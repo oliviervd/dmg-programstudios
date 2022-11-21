@@ -68,7 +68,6 @@ html, body {
 }
 
 div {
-    font-family: "KWBio27-Display", sans-serif;
     font-size: 12px;
 }
 
@@ -78,6 +77,7 @@ div {
 }
 
 /* ---------------------------------- FONTS & TYPE ---------------------------------- */
+
 
 @font-face {
     font-family: "KWBio27-Display";
@@ -93,27 +93,20 @@ div {
     color: var(--yellow_ish);
 }
 
-crypto--h1--large {
-    font-size: 70px;
-    font-family: "P-ACR-AGON-Regular", sans-serif;
-    text-decoration: none;
-    color: black;
+.graphic_archive_01 {
+    font-family: "KWBio27-Display", sans-serif;
 }
 
-@media (max-width: 800px) {
-    crypto--h1--large {
-        font-size: 90px;
-    }
+.graphic_archive_02 {
+    font-family: "fantasy", sans-serif;
 }
 
 h1 {
     font-size: 43px;
-    font-family: "KWBio27-Display", sans-serif;
 }
 
 h2 {
     font-size: 17px;
-    font-family: "KWBio27-Display", sans-serif;
 } @media (max-width: 1224px) {
     h2 {
         font-size: 30px;
@@ -122,7 +115,6 @@ h2 {
 
 h3 {
     font-size: 15px;
-    font-family: "KWBio27-Display", sans-serif;
 }
 
 .borderLine-top{
@@ -160,10 +152,6 @@ h3 {
     height: 60vh;
 }
 
-.font-main {
-    font-family: "KWBio27-Display", sans-serif;
-}
-
 .subHeader__text {
     font-size: 40px;
     color: var(--main__green);
@@ -182,17 +170,12 @@ h3 {
     font-size: 20px;
 }
 
-h4 {
-    font-family: "KWBio27-Display", sans-serif;
-}
-
 a {
     color: var(--main__green);
     cursor: crosshair;
 }
 
 .main-title{
-    font-family: "KWBio27-Display", sans-serif;
     font-size: 100px;
     padding-top: 20vh;
     height: 50vh;
@@ -244,10 +227,6 @@ a {
 }
 
 
-.boldSet {
-    font-family: "happy-times-NG_bold_master_web", sans-serif;
-}
-
 .italic {
     -moz-transition: all 1s;
     -webkit-transition: all 1s;
@@ -264,9 +243,6 @@ a {
     /*color: var(--fluo__green)*/
 }
 
-.italicSet{
-    font-family: "happy-times-NG_italic_master_web", sans-serif;
-}
 
 .pinkHeader {
     color: var(--main__green);
@@ -561,10 +537,6 @@ a {
     transform: rotate(90deg);
 }
 
-.colorText{
-    font-family: "sligoil-micro", sans-serif;
-    font-size: 15px;
-}
 
 .easeBorder__green{
     border: 2px solid var(--main__green);
@@ -581,10 +553,6 @@ a {
     border: white solid 2px;
 }
 
-.descText {
-    font-family: "sligoil-micro", sans-serif;
-    font-size: 15px;
-}
 
 .modelTitle{
     text-align: center;
@@ -616,16 +584,6 @@ text {
 
 button{
     background: transparent;
-}
-
-.buttonRandomizer {
-    position: absolute;
-    left: 90vw;
-    right: 95vw;
-    top: 5vw;
-    width: 7vw;
-    font-size: 15px;
-    font-family: "sligoil-micro", sans-serif;
 }
 
 .overlay {
@@ -1052,7 +1010,6 @@ imageViewer__modal-main {
     background-color: white;
     height: 100%;
     text-align: center;
-    font-family: "happy-times-NG_bold_master_web", sans-serif;
     font-size: 20px;
 }
 
@@ -1085,7 +1042,6 @@ imageViewer__modal-main {
 }
 
 .bruises__header{
-    font-family: "happy-times-NG_bold_master_web", sans-serif;
     text-align: center;
     font-size: 20px;
     border: 2px solid black;

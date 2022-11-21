@@ -4,7 +4,6 @@ import {headerAbout} from "../utils/data_parsers";
 const HamburgerMenu = (props) => {
 
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
-    console.log(hamburgerOpen);
 
     return(
         <div>
