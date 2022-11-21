@@ -126,12 +126,12 @@ h3 {
 }
 
 .borderLine-top{
-    border-top: 1px solid black
+    border-top: 1px solid
 }
 
 .borderLine-left{
     margin-left: 30px;
-    border-left: 1px dotted black;
+    border-left: 1px dotted;
 }
 
 .glossBox{
@@ -278,7 +278,7 @@ a {
 }
 
 .lineH{
-    border-top: 1px black solid;
+    border-top: 1px solid;
     z-index: 1000;
 }
 
@@ -1257,17 +1257,34 @@ imageViewer__modal-main {
 }
 
 @media (max-width: 1224px) {
-    .grid-home-main{
+    .grid-home-main-open{
         display: grid;
         grid-template-rows: 10% 28% 2% 60%;
+        -webkit-animation: animategrid ease-in 0.4s;
+        -moz-animation: animategrid ease 2s;
     }
 }
 
 @media (min-width: 1224px) {
-    .grid-home-main{
+    .grid-home-main-open{
         display: grid;
         grid-template-rows: 10% 48% 2% 40%;
     }
+}
+
+.grid-home-main-closed{
+    display:grid;
+    grid-template-rows: 10% 87% 2% 1%;
+}
+
+@-webkit-keyframes  animategrid {
+    from{grid-template-rows: 10% 28% 2% 60%}
+    to {grid-template-rows: 10% 88% 2%}
+}
+
+@-moz-keyframes animategrid {
+    from{grid-template-rows: 10% 28% 2% 60%}
+    to {grid-template-rows: 10% 88% 2%}
 }
 
 
@@ -1293,4 +1310,24 @@ imageViewer__modal-main {
     position: relative;
 }
 
+.HomeProjectGridContainer{
+    top: -100%;
+    transition: top 0.4s;
+}
+
+.closed{
+    top: +100%
+}
+
+.lightMode{
+    background: white;
+    color: black;
+    border-color: black;
+}
+
+.darkMode{
+    background: black;
+    color: white;
+    border-color:white;
+}
 
