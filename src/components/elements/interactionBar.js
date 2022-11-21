@@ -4,12 +4,20 @@ const DisplayTimeDate = React.lazy(()=> import("./timeGovernement"))
 const GraphicArchive  = React.lazy(() => import("./GraphicArchive"))
 
 const InteractionBar = (props) => {
+
+    let symbol;
+    if (props.carouselState) {
+        symbol = "V close V"
+    } else {
+        symbol = "◊ open ◊";
+    }
+
     return(
         <div className='grid--even_3'>
-            <p className='text-center'></p>
             <Suspense>
                 <DisplayTimeDate/>
             </Suspense>
+            <p className="italic text-center" onClick={()=>props.setCarouselState(!props.carouselState)}>{symbol}</p>
             <Suspense>
                 <GraphicArchive lang={props.lang}/>
             </Suspense>
@@ -18,5 +26,3 @@ const InteractionBar = (props) => {
 }
 
 export default InteractionBar;
- //https://drive.google.com/uc?export=view&id=1ZS7gKTHMMLTlvQk8OJexD1PzrsuL38hk
- //https://drive.google.com/uc?export=view&id=1bMpOI8NNXwzDY0U-A7XGobGtnzVq2cPn

@@ -16,8 +16,9 @@ const Home = () => {
     const [language, setLanguage] = useState("EN");
     const [about, setAbout] = useState(false);
     const [hoverContent, setHoverContent] = useState(" ");
+    const [carouselState, setCarouselState] = useState("true");
 
-    console.log(hoverContent);
+    console.log(carouselState);
 
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
@@ -54,7 +55,7 @@ const Home = () => {
 
     return(
         <div>
-            <div className="grid-home-main full-page">
+            <div className={carouselState?"grid-home-main-open full-page":"grid-home-main-closed full-page"}>
                 <Header about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
 
                 <div className="grid--1_2" style={{zIndex: 100000, background: "white"}}>
@@ -84,11 +85,11 @@ const Home = () => {
 
                 <div style={{background: "white"}}>
                     <Suspense>
-                        <InteractionBar lang={language}/>
+                        <InteractionBar lang={language} carouselState={carouselState} setCarouselState={setCarouselState}/>
                     </Suspense>
                 </div>
 
-                <div className="lineH grid--even_5 " style={{background: "white"}}>
+                <div className={"lineH grid--even_5 HomeProjectGridContainer"}>
                     {_studios.map((studio => {
                         let title_en, description, studioImage, studioID, studioType;
                         title_en = fetchTitle(studio, language, "studio");
@@ -99,19 +100,35 @@ const Home = () => {
 
                         if (studioType === "studio") {
 
+                            if (carouselState) {
+                                console.log("let's go");
+                            }
+
                             return(
-                                <div className="rowScroll fade-in">
+                                <div id="HomeProjectGrid" className="rowScroll fade-in open">
                                     <div className="scroll-div" >
                                         <h2 className="text-center uppercase box-title">{title_en}</h2>
-                                        <img className="img__fit center" src={studioImage} onMouseOver={()=>setHoverContent(studioImage)} onMouseLeave={()=>setHoverContent(" ")}/>
+                                        <img className="img__fit center" src={studioImage}
+                                             onClick={()=>setCarouselState(!carouselState)}
+                                             onMouseOver={()=>setHoverContent(studioImage)}
+                                             onMouseLeave={()=>setHoverContent(" ")}/>
                                         <p className="uppercase justify padding-10">{description}</p>
-                                        <ProjectHomeSnippet className="padding-10" id={studioID} lang={language} setHoverContent={setHoverContent}/>
+                                        <ProjectHomeSnippet className="padding-10" id={studioID}
+                                                            lang={language} setHoverContent={setHoverContent}
+                                                            setCarouselState={setCarouselState}
+                                                            carouselState={carouselState}/>
                                     </div>
                                     <div className="scroll-div" >
                                         <h2 className="text-center uppercase box-title">{title_en}</h2>
-                                        <img className="img__fit center" src={studioImage} onMouseOver={()=>setHoverContent(studioImage)} onMouseLeave={()=>setHoverContent(" ")}/>
+                                        <img className="img__fit center" src={studioImage}
+                                             onClick={()=>setCarouselState(!carouselState)}
+                                             onMouseOver={()=>setHoverContent(studioImage)}
+                                             onMouseLeave={()=>setHoverContent(" ")}/>
                                         <p className="uppercase justify padding-10">{description}</p>
-                                        <ProjectHomeSnippet className="padding-10" id={studioID} lang={language} setHoverContent={setHoverContent}/>
+                                        <ProjectHomeSnippet className="padding-10" id={studioID}
+                                                            lang={language} setHoverContent={setHoverContent}
+                                                            setCarouselState={setCarouselState}
+                                                            carouselState={carouselState}/>
                                     </div>
                                 </div>
 
