@@ -10,7 +10,6 @@ const HexCube = React.lazy(() => import( "./cube"));
 const ImageGenerator = React.lazy(() => import("./imageGenerator"));
 const ColorCubes = React.lazy(() => import("./colorCubes"));
 const Sketch13D = React.lazy(() => import("./sketches/Sketch1_3D"));
-const Model1_sensibility = React.lazy(() => import("./contributions/M01_C01"));
 const SwapBook = React.lazy(() => import("./swapBook"));
 
 
@@ -91,32 +90,6 @@ const SpectreMain = (props) => {
 
     return(
             <div className="rowScrollMain">
-                    <Suspense>
-                        {/*<Suspense>
-                        <modalWindow open={bruises} onClose={()=>setBruises(false)}/>
-                    </Suspense>*/}
-                        <div style={{marginBottom: "-300px", marginTop: "-200px"}}>
-                            {isDesktopOrLaptop && <Sketch13D/>}
-                        </div>
-                        <Model1_sensibility/>
-                    </Suspense>
-
-                <br/>
-                <div className="dotLine"/>
-                <br/>
-                <div className="grid--7_3" style={{margin: "100px"}}>
-                    <div>
-                        <h1 className=" pinkHeader">COLLECTIONS</h1>
-                        <h1 className=" pinkHeader italicSet">OF CARE:</h1>
-                        <h1 className=" pinkHeader">COLOR</h1>
-                    </div>
-                    <div className="pinkHeader boxBorder" onClick = {handleNumSwapChange}>
-                        <h1 className="pinkHeader italic" >SUGGEST </h1>
-                        <h1 className="pinkHeader italicSet" >|| RE-GENERATE </h1>
-                        <h1 className="pinkHeader italic underlined animateFont__organism" >NEW COLLECTION</h1>
-                    </div>
-                </div>
-
                 <div className="centerBox">
 
                     <div className="accordion-container__imgFrame">
