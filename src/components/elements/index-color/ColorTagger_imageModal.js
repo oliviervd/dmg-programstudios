@@ -1,6 +1,6 @@
 import React, {useState, Suspense} from "react"
 
-const ImageGallery = React.lazy(() => import("./ImageGallery"))
+const ImageGallery = React.lazy(() => import("./ColorTagger_ImageGallery"))
 
 
 const ImageViewer = ({open, onClose, image, _title}) => {

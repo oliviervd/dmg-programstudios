@@ -1141,9 +1141,14 @@ imageViewer__modal-main {
     grid-template-columns: 30% 70%;
 }
 
+.grid--75_25 {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
 .gridH--even_2{
     display:grid;
-    grid-template-rows: repeat(2, 50%);
+    grid-template-rows: repeat(2, 50vh);
 }
 
 .gridH--even_3{
