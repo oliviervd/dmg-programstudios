@@ -62,9 +62,9 @@ html, body {
     right:0;
     text-rendering: optimizeLegibility;
     cursor: cell;
-    height: 200vh;
     background: linear-gradient(180deg, white 0%,  #fbf2e7 85%);
     scroll-behavior: smooth;
+    orientation: landscape;
 }
 
 div {
@@ -1141,14 +1141,25 @@ imageViewer__modal-main {
     grid-template-columns: 30% 70%;
 }
 
+.grid--75_25 {
+    display: grid;
+    grid-template-columns: 75% 25%;
+}
+
 .gridH--even_2{
     display:grid;
-    grid-template-rows: repeat(2, 50%);
+    grid-template-rows: repeat(2, 30vh);
 }
 
 .gridH--even_3{
     display:grid;
-    grid-template-rows: repeat(3, 33%);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.gridH--1-2-6-1{
+    display: grid;
+    border: lightpink solid 1px;
+    grid-template-rows: 1fr 2fr 6fr 1fr;
 }
 
 .grid--even_2 {

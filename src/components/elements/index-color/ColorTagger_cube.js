@@ -4,9 +4,11 @@ const HexCube = (props) => {
 
     const hex_list = props.hexColors
 
+    //todo: show Hexlist only on hover
+
     return (
         <div>
-            <div className="hexCube">
+            <div className="hexCube" style={{margin:20}}>
                 <div className ="hexCube__single" style={{backgroundColor: hex_list[0].replace("[","")}}>{hex_list[0].replace("[","")}</div>
                 <div className ="hexCube__single" style={{backgroundColor: hex_list[1].replace(" '","").replace("'","")}}>{hex_list[1].replace(" '","").replace("'","")}</div>
                 <div className ="hexCube__single" style={{backgroundColor: hex_list[2].replace(" '","").replace("'","")}}>{hex_list[2].replace(" '","").replace("'","")}</div>

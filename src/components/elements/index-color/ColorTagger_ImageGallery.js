@@ -1,6 +1,6 @@
 import React from "react";
 
-const ImageGallery = ({images}) => {
+const ColorTagger_ImageGallery = ({images}) => {
 
     let l = images.length;
     const imList = images.map(x =>
@@ -14,4 +14,4 @@ const ImageGallery = ({images}) => {
 
 }
 
-export default ImageGallery;
+export default ColorTagger_ImageGallery;

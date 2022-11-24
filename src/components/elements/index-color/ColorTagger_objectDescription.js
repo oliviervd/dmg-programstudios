@@ -1,6 +1,6 @@
 import React from "react"
 
-const ObjectDescription = (props) => {
+const ColorTagger_objectDescription = (props) => {
 
     const desc = props.text.split(" ")
 
@@ -38,4 +38,4 @@ const ObjectDescription = (props) => {
 
 }
 
-export default ObjectDescription
+export default ColorTagger_objectDescription
