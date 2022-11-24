@@ -97,9 +97,18 @@ const ColorTagger = (props) => {
                 <div className="gridH--1-2-6-1">
                     <Header/>
                     <div className="grid--75_25">
-                        <div></div>
+                        <div className="grid--2_6_2">
+                            <div/>
+                            <div>
+                            </div>
+                            <div/>
+                        </div>
                         <div className={"borderLine-left"} >
-                            <h2 style={{marginLeft: 20}} >color index</h2>
+                            <div className="grid--even_2">
+                                <h2 style={{marginLeft: 20}}>color index</h2>
+                                <h2 className={"text-center"} onClick={()=>setNumSwap(generateNumSwap())}>℟eset</h2>
+
+                            </div>
                             <p style={{marginLeft: 20, marginRight:20}}>
                                 as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.
 
