@@ -10,8 +10,12 @@ import {useMediaQuery} from "react-responsive";
 import ColorTagger_colorCubes from "../elements/index-color/ColorTagger_colorCubes";
 import ColorTagger_cube from "../elements/index-color/ColorTagger_cube";
 
+import Header from "../elements/Header";
+import InteractionBar from "../elements/interactionBar";
+
 const ColorTagger = (props) => {
 
+    const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
     const [_objectNum] = useState(3)
 
     //interface for generating curated set based on colorist swap.
@@ -87,15 +91,19 @@ const ColorTagger = (props) => {
     })
 
     return(
-        <div className="grid--75_25" style={{margin:100}}>
-            <div className="gridH--even_2">
-                <ColorTagger_imageGenerator className="grid--even_3" num={num} curatedSet={curation} data={matchedObjects}/>
-                <ColorTagger_colorCubes className="grid--even_3"  num={num} curation={curation} data={matchedObjects}/>
+        <div className={visualIdentity}>
+            <Header/>
+            <div className="grid--75_25" style={{margin:0}}>
+                <div className="gridH--even_2">
+                    <ColorTagger_imageGenerator className="grid--even_3" num={num} curatedSet={curation} data={matchedObjects}/>
+                    <ColorTagger_colorCubes className="grid--even_3"  num={num} curation={curation} data={matchedObjects}/>
+                </div>
+                <div className="gridH--even_2">
+                    <ColorTagger_swapBook className="grid--even_3" num={_imSwap}/>
+                    <ColorTagger_cube className="grid--even_3" hexColors={colorHexSwap}/>
+                </div>
             </div>
-            <div className="gridH--even_2">
-                <ColorTagger_swapBook className="grid--even_3" num={_imSwap}/>
-                <ColorTagger_cube className="grid--even_3" hexColors={colorHexSwap}/>
-            </div>
+            <InteractionBar/>
         </div>
     )
 }

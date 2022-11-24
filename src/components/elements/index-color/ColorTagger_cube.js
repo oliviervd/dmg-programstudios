@@ -4,6 +4,8 @@ const HexCube = (props) => {
 
     const hex_list = props.hexColors
 
+    //todo: show Hexlist only on hover
+
     return (
         <div>
             <div className="hexCube" style={{margin:20}}>

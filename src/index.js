@@ -3,9 +3,6 @@ import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import './index.css';
-import './modals.css';
-import './svg.css';
-import './glossary.css';
 
 // import pages
 import Home from "./components/pages/home";
