@@ -17,6 +17,7 @@ const ColorTagger = (props) => {
 
     const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
     const [_objectNum] = useState(3)
+    const [darkMode, setDarkMode] = useState(false)
 
     //interface for generating curated set based on colorist swap.
     const [numSwap, setNumSwap] =useState(3); //Number of swaps.
@@ -92,18 +93,33 @@ const ColorTagger = (props) => {
 
     return(
         <div className={visualIdentity}>
-            <Header/>
-            <div className="grid--75_25" style={{margin:0}}>
-                <div className="gridH--even_2">
-                    <ColorTagger_imageGenerator className="grid--even_3" num={num} curatedSet={curation} data={matchedObjects}/>
-                    <ColorTagger_colorCubes className="grid--even_3"  num={num} curation={curation} data={matchedObjects}/>
-                </div>
-                <div className="gridH--even_2">
-                    <ColorTagger_swapBook className="grid--even_3" num={_imSwap}/>
-                    <ColorTagger_cube className="grid--even_3" hexColors={colorHexSwap}/>
+            <div className={` ${darkMode?"darkMode":"lightMode"}`}>
+                <div className="gridH--1-2-6-1">
+                    <Header/>
+                    <div className="grid--75_25">
+                        <div></div>
+                        <div className={"borderLine-left"} >
+                            <h2 style={{marginLeft: 20}} >color index</h2>
+                            <p style={{marginLeft: 20, marginRight:20}}>
+                                as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.
+
+                            </p>
+                        </div>
+                    </div>
+                    <div className="grid--75_25">
+                        <div className="gridH--even_2">
+                            <ColorTagger_imageGenerator className="grid--even_3"  num={num} curatedSet={curation} data={matchedObjects}/>
+                            <ColorTagger_colorCubes className="grid--even_3"  num={num} curation={curation} data={matchedObjects}/>
+                        </div>
+                        <div className="gridH--even_2 borderLine-left">
+                            <ColorTagger_swapBook className="grid--even_3" num={_imSwap}/>
+                            <ColorTagger_cube className="grid--even_3" hexColors={colorHexSwap}/>
+                        </div>
+                    </div>
+                    <InteractionBar className="lineH"
+                                    visualIdentity={visualIdentity} setVisualIdentity={setVisualIdentity}/>/>
                 </div>
             </div>
-            <InteractionBar/>
         </div>
     )
 }
