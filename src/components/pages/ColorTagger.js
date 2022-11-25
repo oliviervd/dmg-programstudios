@@ -13,11 +13,10 @@ import ColorTagger_cube from "../elements/index-color/ColorTagger_cube";
 import Header from "../elements/Header";
 import InteractionBar from "../elements/interactionBar";
 
-const ColorTagger = (props) => {
+const ColorTagger = () => {
 
     const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
     const [_objectNum] = useState(3)
-    const [darkMode, setDarkMode] = useState(false)
 
     //interface for generating curated set based on colorist swap.
     const [numSwap, setNumSwap] =useState(3); //Number of swaps.
@@ -87,13 +86,9 @@ const ColorTagger = (props) => {
     const num = _objectNum;
     const curation = generateCuration(num);
 
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 1224px)'
-    })
-
     return(
         <div className={visualIdentity}>
-            <div className={` ${darkMode?"darkMode":"lightMode"}`}>
+            <div>
                 <div className="gridH--1-2-6-1">
                     <Header/>
                     <div className="grid--75_25">
@@ -101,12 +96,20 @@ const ColorTagger = (props) => {
                             <div/>
                             <div>
                             </div>
-                            <div/>
+                            <div>
+                                <svg onClick={()=>setNumSwap(generateNumSwap())} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
+                                    <g>
+                                        <ellipse cx="60" cy="25" rx="50" ry="20" stroke="black" strokeWidth="2" fill="none"></ellipse>
+                                        <text x="40" y="30" fontSize="15">reset</text>
+                                    </g>
+                                </svg>
+                            </div>
                         </div>
                         <div className={"borderLine-left"} >
                             <div className="grid--even_2">
                                 <h2 style={{marginLeft: 20}}>color index</h2>
-                                <h2 className={"text-center"} onClick={()=>setNumSwap(generateNumSwap())}>℟eset</h2>
+                                <div >
+                                </div>
 
                             </div>
                             <p style={{marginLeft: 20, marginRight:20}}>
