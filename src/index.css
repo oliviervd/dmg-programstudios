@@ -1302,3 +1302,6 @@ imageViewer__modal-main {
     border-color:white;
 }
 
+.button__ellipse:hover{
+    stroke:coral;
+}

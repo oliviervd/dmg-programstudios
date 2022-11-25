@@ -17,6 +17,8 @@ const ColorTagger = () => {
 
     const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
     const [_objectNum] = useState(3)
+    const [language, setLanguage] = useState("EN");
+
 
     //interface for generating curated set based on colorist swap.
     const [numSwap, setNumSwap] =useState(3); //Number of swaps.
@@ -86,11 +88,14 @@ const ColorTagger = () => {
     const num = _objectNum;
     const curation = generateCuration(num);
 
+    const [buttonColor, setButtonColor] = useState("black")
+
+
     return(
         <div className={visualIdentity}>
-            <div>
+            <div className="lightMode">
                 <div className="gridH--1-2-6-1">
-                    <Header/>
+                    <Header setLanguage={setLanguage} language={language}/>
                     <div className="grid--75_25">
                         <div className="grid--2_6_2">
                             <div/>
@@ -99,7 +104,9 @@ const ColorTagger = () => {
                             <div>
                                 <svg onClick={()=>setNumSwap(generateNumSwap())} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
                                     <g>
-                                        <ellipse cx="60" cy="25" rx="50" ry="20" stroke="black" strokeWidth="2" fill="none"></ellipse>
+                                        <ellipse cx="60" cy="25" rx="50" ry="20"
+                                            stroke={buttonColor} strokeWidth="2" fill="none">
+                                        </ellipse>
                                         <text x="40" y="30" fontSize="15">reset</text>
                                     </g>
                                 </svg>
@@ -128,7 +135,7 @@ const ColorTagger = () => {
                             <ColorTagger_cube className="grid--even_3" hexColors={colorHexSwap}/>
                         </div>
                     </div>
-                    <InteractionBar className="lineH"
+                    <InteractionBar className="lineH" lang={language}
                                     visualIdentity={visualIdentity} setVisualIdentity={setVisualIdentity}/>/>
                 </div>
             </div>
