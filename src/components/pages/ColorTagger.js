@@ -21,7 +21,7 @@ const ColorTagger = () => {
 
 
     //interface for generating curated set based on colorist swap.
-    const [numSwap, setNumSwap] =useState(3); //Number of swaps.
+    const [numSwap, setNumSwap] = useState(3); //Number of swaps.
 
     function handleNumSwapChange() {
         //reset swap on click
@@ -40,7 +40,6 @@ const ColorTagger = () => {
     const randomSwapIndex = generateNumSwap(); // generate index for random swap.
     const colorHexSwap = swap_c[randomSwapIndex]["HEX_values"][0]; // store data for props to generate hex tiles.
     const colorNameSwap = swap_c[randomSwapIndex]["color_names"][0]
-    console.log(colorNameSwap);
     const _imSwap = swap_c[randomSwapIndex]["IIIF_image"]; // store data for props to fetch right image.
 
     function check_overlap() {
@@ -58,16 +57,26 @@ const ColorTagger = () => {
             for (let a=0; a<arr1.length; ++a) {
                 arr_1_clean.push(arr1[a].replace("[[","").replace("]]","").trim().replace("[","").replace("]","").replace("'","").replace("'",""));
             }
-            if ((arr_1_clean.filter(c => arr2.includes(c))).length >= 3)  {
+
+            //todo: interface for number of matching colors
+            if ((arr_1_clean.filter(c => arr2.includes(c))).length >= 4)  {
                 // check if color in both arrays. Return array with overlap (3 matching colors.)
                 itemsMatch.push(object_c[n]);
             }
+
         } return itemsMatch;
     }
 
     /// use matched items to generate list of items.
 
     let matchedObjects = check_overlap();
+    //
+    console.log("matched objects: " + matchedObjects.length);
+
+    if (matchedObjects.length <= 3 ) {
+        handleNumSwapChange();
+    }
+
     function generateCuration(count){
 
         const nums = [];
@@ -87,9 +96,9 @@ const ColorTagger = () => {
 
     const num = _objectNum;
     const curation = generateCuration(num);
-
+    console.log(curation);
+    console.log(matchedObjects);
     const [buttonColor, setButtonColor] = useState("black")
-
 
     return(
         <div className={visualIdentity}>
@@ -127,7 +136,8 @@ const ColorTagger = () => {
                     </div>
                     <div className="grid--75_25">
                         <div className="gridH--even_2">
-                            <ColorTagger_imageGenerator className="grid--even_3"  num={num} curatedSet={curation} data={matchedObjects}/>
+                            <ColorTagger_imageGenerator className="grid--even_3"  num={num}
+                                                        curatedSet={curation}  data={matchedObjects}/>
                             <ColorTagger_colorCubes className="grid--even_3"  num={num} curation={curation} data={matchedObjects}/>
                         </div>
                         <div className="gridH--even_2 borderLine-left">
