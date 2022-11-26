@@ -101,6 +101,7 @@ const ColorTagger = () => {
     console.log(curation);
     console.log(matchedObjects);
     const [buttonColor, setButtonColor] = useState("black")
+    const [titles, setTitles] = useState([])
 
     return(
         <div className={visualIdentity}>
@@ -140,7 +141,8 @@ const ColorTagger = () => {
                     <div className="grid--75_25">
                         <div className="gridH--even_2">
                             <ColorTagger_imageGenerator className="grid--even_3"  num={num}
-                                                        curatedSet={curation}  data={matchedObjects}/>
+                                                        curatedSet={curation}  data={matchedObjects}
+                                                        titles={titles} setTitles={setTitles}/>
                             <ColorTagger_colorCubes className="grid--even_3"  num={num} curation={curation} data={matchedObjects}/>
                         </div>
                         <div className="gridH--even_2 borderLine-left">
