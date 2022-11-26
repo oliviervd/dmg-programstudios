@@ -6,9 +6,9 @@ import swap_c from "../data/swapbook.json";
 
 import ColorTagger_imageGenerator from "../elements/index-color/ColorTagger_imageGenerator";
 import ColorTagger_swapBook from "../elements/index-color/ColorTagger_swapBook";
-import {useMediaQuery} from "react-responsive";
 import ColorTagger_colorCubes from "../elements/index-color/ColorTagger_colorCubes";
 import ColorTagger_cube from "../elements/index-color/ColorTagger_cube";
+import ColorMatchSlider from "../elements/index-color/colorMatchSlider";
 
 import Header from "../elements/Header";
 import InteractionBar from "../elements/interactionBar";
@@ -109,6 +109,7 @@ const ColorTagger = () => {
                         <div className="grid--2_6_2">
                             <div/>
                             <div>
+                                <ColorMatchSlider/>
                             </div>
                             <div>
                                 <svg onClick={()=>setNumSwap(generateNumSwap())} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
