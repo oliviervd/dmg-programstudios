@@ -21,19 +21,21 @@ const InteractionBar = (props) => {
             <p className="italic text-center" onClick={()=>props.setCarouselState(!props.carouselState)}>{symbol}</p>
             <div className="grid--even_2">
                 <Suspense>
-                    {props.archive &&
+                    {props.archiveShow &&
                         <GraphicArchive lang={props.lang}
                                         visualIdentity={props.visualIdentity}
                                         setVisualIdentity={props.setVisualIdentity}>
                         </GraphicArchive>
                     }
-                    {<div/>}
+                    {!props.archiveShow &&
+                        <div/>}
                 </Suspense>
                 <Suspense>
-                    {props.darkMode&&
+                    {props.darkModeShow&&
                         <DarkMode darkMode={props.darkMode} setDarkMode={props.setDarkMode}/>
                     }
-                    {<div/>}
+                    {!props.darkModeShow&&
+                        <div/>}
                 </Suspense>
             </div>
         </div>

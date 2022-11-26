@@ -138,7 +138,7 @@ const ColorTagger = () => {
                                 <svg onClick={()=>setNumSwap(generateNumSwap())} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
                                     <g>
                                         <ellipse cx="60" cy="25" rx="50" ry="20"
-                                            stroke={buttonColor} strokeWidth="2" fill="none">
+                                            stroke={buttonColor} strokeWidth="0.77" fill="none">
                                         </ellipse>
                                         <text x="35" y="30" fontSize="15">CURATE</text>
                                     </g>
@@ -171,7 +171,8 @@ const ColorTagger = () => {
                         </div>
                     </div>
                     <InteractionBar className="lineH" lang={language}
-                                    visualIdentity={visualIdentity} setVisualIdentity={setVisualIdentity} darkMode={false} archive={false}/>
+                                    visualIdentity={visualIdentity} setVisualIdentity={setVisualIdentity}
+                                    darkModeShow={false} archiveShow={false}/>
 
                 </div>
             </div>

@@ -13,26 +13,8 @@
     width: 100%;
 }
 
-:root {
-    --main__green: #afc6ae;
-    --green_ish: #8faa95;
-    --fluo__green: #00FF67;
-    --triad_pink: #C6AEAF;
-    --white_main: #F1F1F1;
-    --yellow_ish: #F1F1F1;
-    --yellow_bright: #ffe600;
-    --happy__bold: "happy-times-NG_bold_master_web";
-    --happy__regular: "happy-times-NG_regular_master_web";
-    --happy__italic: "happy-times-NG_italic_master_web";
-    --main-font: "sligoil-micro";
-}
-
 .inline-block{
     display: inline-block;
-}
-
-::selection {
-    background: var(--main__green)
 }
 
 .absolute{
@@ -142,32 +124,6 @@ h3 {
     border-left: 1px dotted;
 }
 
-.glossBox{
-    transform: rotate(-15deg);
-    height: 70vh;
-    white-space: nowrap;
-}
-.glossBox:hover{
-    transform: rotate(-5deg);
-    background: papayawhip;
-    transition: transform 0.1s ease-in, transform 1s ease-out;
-    transition: background 1s ease-in;
-}
-
-.glossTitles{
-    font-family: Lineal;
-    font-size: 50px;
-    transform: rotate(90deg);
-    color: var(--yellow_ish);
-    padding-left: 50%;
-}
-
-.glossDefinitionBox{
-            position: relative;
-    top: -33vh;
-    height: 60vh;
-}
-
 .subHeader__text {
     font-size: 40px;
     color: var(--main__green);
@@ -207,28 +163,6 @@ a {
     display: grid;
 }
 
-.refText{
-    text-decoration: underline;
-    transition: color 300ms;
-    color: var(--fluo__green)
-}
-
-.refText:hover {
-    transform: rotate(45deg);
-    transition: color 2s ease-out;
-    color: var(--fluo__green)
-}
-
-.refText:focus {
-    transform: rotate(45deg);
-    transition: color 2s ease-out;
-    color: var(--fluo__green)
-}
-
-.hoverLinkEffect{
-    transition: color 150ms ease-out;
-}
-
 .rotateText{
     transform: rotate(90deg);
     position: relative;
@@ -259,16 +193,6 @@ a {
     /*color: var(--fluo__green)*/
 }
 
-
-.pinkHeader {
-    color: var(--main__green);
-    line-height: 1px;
-}
-
-.line-heighter {
-    line-height: 20px;
-}
-
 .lineH{
     border-top: 1px solid;
     z-index: 1000;
@@ -276,13 +200,6 @@ a {
 
 .lineV{
     border-left: 1px black solid;
-}
-
-@media (max-width: 1224px) {
-    .button__readMore{
-        padding: 5%;
-        font-size: 30px;
-    }
 }
 
 /* ---------------------------------- COLORS ---------------------------------- */
@@ -612,7 +529,7 @@ button{
 input{
     -webkit-appearance: none;
     background: dimgray;
-    height: 2px;
+    height: 1px;
     border-radius: 20px;
     width: fit-content;
 }
