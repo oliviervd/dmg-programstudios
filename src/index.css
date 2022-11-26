@@ -86,6 +86,12 @@ div {
     src: local("BackOut"), url(fonts/BackOut.woff2);
 }
 
+text{
+    -webkit-appearance: none;
+    font-family: "KWBio27-Display", sans-serif;
+    font-weight: bold;
+}
+
 .text {
     font-size: 18px;
     padding: 2px
