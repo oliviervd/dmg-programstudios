@@ -34,6 +34,9 @@ const InteractionBar = (props) => {
                     {props.darkModeShow&&
                         <DarkMode darkMode={props.darkMode} setDarkMode={props.setDarkMode}/>
                     }
+                    {props.lastFetch &&
+                        <p>last update: 20221125</p>
+                    }
                     {!props.darkModeShow&&
                         <div/>}
                 </Suspense>

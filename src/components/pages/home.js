@@ -82,7 +82,8 @@ const Home = () => {
                             <InteractionBar lang={language}
                                             carouselState={carouselState} setCarouselState={setCarouselState}
                                             darkMode={darkMode} setDarkMode={setDarkMode}
-                                            visualIdentity={visualIdentity} setVisualIdentity={setVisualIdentity} darkModeShow={true} archiveShow={true}/>
+                                            visualIdentity={visualIdentity} setVisualIdentity={setVisualIdentity}
+                                            darkModeShow={true} archiveShow={true} lastFetch={false}/>
                         </Suspense>
                     </div>
 
