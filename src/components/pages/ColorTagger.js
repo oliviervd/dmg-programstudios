@@ -103,6 +103,24 @@ const ColorTagger = () => {
     const [buttonColor, setButtonColor] = useState("black")
     const [titles, setTitles] = useState([])
 
+    // todo: move to database
+    let text_intro;
+    if (language === "EN") {
+        text_intro = "What if machine learning algorithms are considered beyond the search engine paradigm in which they " +
+            "have been mostly used to date by museums and galleries, and instead considered to be curatorial agents, " +
+            "working alongside human curators?"
+    } else if (language === "NL") {
+        text_intro = "Wat als algoritmen voor machine learning verder worden beschouwd dan het zoekmachineparadigma waarin zij tot dusver vooral door musea en galeries zijn gebruikt, en in plaats daarvan worden beschouwd als curatoren die naast menselijke curatoren werken?"
+    } else {
+        text_intro = "Et si les algorithmes d'apprentissage automatique étaient considérés au-delà du paradigme du moteur de recherche dans lequel ils ont été principalement utilisés jusqu'à présent par les musées et les galeries, et qu'ils étaient plutôt considérés comme des agents de conservation, travaillant aux côtés de conservateurs humains ?"
+    }
+
+    //todo: move to database
+
+
+
+
+
     return(
         <div className={visualIdentity}>
             <div className="lightMode">
@@ -113,7 +131,8 @@ const ColorTagger = () => {
                             <div/>
                             <div>
                                 <ColorMatchSlider numberOfMatchingColors={numberOfMatchingColors}
-                                                  setNumberOfMatchingColors={setNumberOfMatchingColors} matches={matchedObjects.length}/>
+                                                  setNumberOfMatchingColors={setNumberOfMatchingColors} matches={matchedObjects.length}
+                                                  lang={language}/>
                             </div>
                             <div>
                                 <svg onClick={()=>setNumSwap(generateNumSwap())} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
@@ -134,11 +153,8 @@ const ColorTagger = () => {
 
                             </div>
                             <div style={{marginLeft: 20, marginRight:20}}>
-                                <p style={{fontWeight: "lighter"}}>
-                                    What if machine learning algorithms are considered beyond the search engine paradigm in which they
-                                    have been mostly used to date by museums and galleries, and instead considered to be curatorial agents,
-                                    working alongside human curators?
-                                </p>
+                                <br/>
+                                <p style={{fontWeight: "lighter"}}>{text_intro}></p>
                             </div>
                         </div>
                     </div>
