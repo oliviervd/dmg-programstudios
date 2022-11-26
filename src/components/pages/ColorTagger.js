@@ -133,8 +133,7 @@ const ColorTagger = () => {
 
                             </div>
                             <p style={{marginLeft: 20, marginRight:20}}>
-                                as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.as part of the studio digital we are exploring alternative ways of indexing our digitized collection.
-
+                                This interface explores the possibility and agency of computational entities for curating vast museum collections.
                             </p>
                         </div>
                     </div>

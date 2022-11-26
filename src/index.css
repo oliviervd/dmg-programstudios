@@ -125,6 +125,14 @@ h3 {
     font-size: 15px;
 }
 
+.verticalText{
+    writing-mode: vertical-lr;
+    position: fixed;
+    height: 300px;
+    margin-left: 10px;
+    font-weight: lighter;
+}
+
 .borderLine-top{
     border-top: 1px solid
 }

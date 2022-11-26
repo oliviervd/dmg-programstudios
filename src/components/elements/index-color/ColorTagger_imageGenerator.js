@@ -32,8 +32,9 @@ const ColorTagger_imageGenerator = (props) => {
         //const _LDES = LDESViaURI(uri)
         //console.log(_LDES)
         let _im = object_colors[x]["IIIF_image"].replace("['","").replace("']","").replace("'","").split(",")
+        let _title = object_colors[x]["title"]
         _images.push(_im);
-        //_titles.push(_LDES[0]["title_en"])
+        _titles.push(_title)
     }
 
     //todo: make one function (map) to generate three images
@@ -41,16 +42,25 @@ const ColorTagger_imageGenerator = (props) => {
     return(
         <div className="grid--even_3" id="imageRandom">
             <Suspense>
-                <img className="__img center" alt="DREAMING OF IMAGES" onClick={()=>{setImageViewer1(true)}}  src={_images[0][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
-                {/*<ImageViewer open={imageViewer1} onClose={() => setImageViewer1(false)} image={_images[0]} _title={_titles[0]}/>*/}
+                <div>
+                    <h4 className={"verticalText"}>{_titles[0]}</h4>
+                    <img className="__img center" alt="DREAMING OF IMAGES" onClick={()=>{setImageViewer1(true)}}  src={_images[0][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+                    {/*<ImageViewer open={imageViewer1} onClose={() => setImageViewer1(false)} image={_images[0]} _title={_titles[0]}/>*/}
+                </div>
             </Suspense>
             <Suspense>
-                <img className="__img center" alt="DREAMING OF IMAGES" onClick={()=>{setImageViewer2(true)}}  src={_images[1][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
-                {/*<ImageViewer open={imageViewer2} onClose={() => setImageViewer2(false)} image={_images[1]} _title={_titles[1]}/>*/}
+                <div>
+                    <h4 className={"verticalText"}>{_titles[1]}</h4>
+                    <img className="__img center" alt="DREAMING OF IMAGES" onClick={()=>{setImageViewer2(true)}}  src={_images[1][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+                    {/*<ImageViewer open={imageViewer2} onClose={() => setImageViewer2(false)} image={_images[1]} _title={_titles[1]}/>*/}
+                </div>
             </Suspense>
             <Suspense>
-                <img className="__img center" alt="DREAMING OF IMAGES" onClick={()=>{setImageViewer3(true)}} src={_images[2][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
-                {/*<ImageViewer open={imageViewer3} onClose={()=> setImageViewer3(false)} image={_images[2]} _title={_titles[2]}/>*/}
+               <div>
+                   <h4 className={"verticalText"}>{_titles[2]}</h4>
+                   <img className="__img center" alt="DREAMING OF IMAGES" onClick={()=>{setImageViewer3(true)}} src={_images[2][0].replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+                   {/*<ImageViewer open={imageViewer3} onClose={()=> setImageViewer3(false)} image={_images[2]} _title={_titles[2]}/>*/}
+               </div>
             </Suspense>
         </div>
     )
