@@ -42,6 +42,8 @@ const ColorTagger = () => {
     const colorNameSwap = swap_c[randomSwapIndex]["color_names"][0]
     const _imSwap = swap_c[randomSwapIndex]["IIIF_image"]; // store data for props to fetch right image.
 
+    const [numberOfMatchingColors, setNumberOfMatchingColors] = useState(4);
+
     function check_overlap() {
         //initiate list to populate
         let itemsMatch = [];
@@ -59,7 +61,7 @@ const ColorTagger = () => {
             }
 
             //todo: interface for number of matching colors
-            if ((arr_1_clean.filter(c => arr2.includes(c))).length >= 4)  {
+            if ((arr_1_clean.filter(c => arr2.includes(c))).length >= numberOfMatchingColors)  {
                 // check if color in both arrays. Return array with overlap (3 matching colors.)
                 itemsMatch.push(object_c[n]);
             }
@@ -109,7 +111,8 @@ const ColorTagger = () => {
                         <div className="grid--2_6_2">
                             <div/>
                             <div>
-                                <ColorMatchSlider/>
+                                <ColorMatchSlider numberOfMatchingColors={numberOfMatchingColors}
+                                                  setNumberOfMatchingColors={setNumberOfMatchingColors} matches={matchedObjects.length}/>
                             </div>
                             <div>
                                 <svg onClick={()=>setNumSwap(generateNumSwap())} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
@@ -117,7 +120,7 @@ const ColorTagger = () => {
                                         <ellipse cx="60" cy="25" rx="50" ry="20"
                                             stroke={buttonColor} strokeWidth="2" fill="none">
                                         </ellipse>
-                                        <text x="40" y="30" fontSize="15">reset</text>
+                                        <text x="35" y="30" fontSize="15">CURATE</text>
                                     </g>
                                 </svg>
                             </div>

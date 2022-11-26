@@ -595,6 +595,14 @@ button{
     top:0;
 }
 
+input{
+    -webkit-appearance: none;
+    background: dimgray;
+    height: 2px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
 .dotLine {
     border: dotted 4px black;
     margin-right: 10px;
@@ -1145,7 +1153,7 @@ imageViewer__modal-main {
 
 .gridH--even_2{
     display:grid;
-    grid-template-rows: repeat(2, 30vh);
+    grid-template-rows: repeat(2, 1fr);
 }
 
 .gridH--even_3{
