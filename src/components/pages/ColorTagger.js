@@ -1,7 +1,7 @@
 import React, {useState} from "react"
 
 //data import
-import object_c from "../data/objectsColor_10.json";
+import object_c from "../data/color_data_clean_10.json";
 import swap_c from "../data/swapbook.json";
 
 import ColorTagger_imageGenerator from "../elements/index-color/ColorTagger_imageGenerator";

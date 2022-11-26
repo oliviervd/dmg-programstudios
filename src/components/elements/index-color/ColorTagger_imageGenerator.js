@@ -1,9 +1,10 @@
 import React, {useState, Suspense} from "react";
-import ldes_translations from "../../data/postgres_ldes_dmg_translations_ldes_dmg.json"
+//import ldes_translations from "../../data/postgres_ldes_dmg_translations_ldes_dmg.json"
 const ImageViewer = React.lazy(()=> import("./ColorTagger_imageModal"))
 
 // test
 
+/*
 function LDESViaURI(uri) {
     return ldes_translations.filter(
         function(ldes_translations) {
@@ -12,7 +13,7 @@ function LDESViaURI(uri) {
     )
 
 }
-
+*/
 
 const ColorTagger_imageGenerator = (props) => {
     const curatedSet = props.curatedSet;
@@ -28,11 +29,11 @@ const ColorTagger_imageGenerator = (props) => {
     for (let imCount=0; imCount<objCount; ++imCount) {
         const x = curatedSet[imCount]
         const uri = object_colors[x]["URI"];
-        const _LDES = LDESViaURI(uri)
-        console.log(_LDES)
+        //const _LDES = LDESViaURI(uri)
+        //console.log(_LDES)
         let _im = object_colors[x]["IIIF_image"].replace("['","").replace("']","").replace("'","").split(",")
         _images.push(_im);
-        _titles.push(_LDES[0]["title_en"])
+        //_titles.push(_LDES[0]["title_en"])
     }
 
     //todo: make one function (map) to generate three images

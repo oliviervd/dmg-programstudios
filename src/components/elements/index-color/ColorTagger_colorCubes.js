@@ -1,9 +1,10 @@
 import React, {useState, Suspense} from "react";
-import ldes_translations from "../../data/postgres_ldes_dmg_translations_ldes_dmg.json"
+//import ldes_translations from "../../data/postgres_ldes_dmg_translations_ldes_dmg.json"
 
 const HexCube = React.lazy(() => import("./ColorTagger_cube"))
 const ObjectDescription = React.lazy(() => import("./ColorTagger_objectDescription"))
 
+/*
 function LDESViaURI(uri) {
     return ldes_translations.filter(
         function(ldes_translations) {
@@ -12,6 +13,7 @@ function LDESViaURI(uri) {
     )
 
 }
+*/
 
 const ColorTagger_colorCubes = (props) => {
 
@@ -56,7 +58,7 @@ const ColorTagger_colorCubes = (props) => {
 
         console.log(color_name);
 
-        const _LDES = LDESViaURI(uri)
+        /*const _LDES = LDESViaURI(uri)
 
         const title_en = _LDES[0]["title_en"];
         let desc_en;
@@ -89,16 +91,16 @@ const ColorTagger_colorCubes = (props) => {
             acquisition_date = "date of transaction: " + LDES_object["MaterieelDing.isOvergedragenBijVerwerving"][0]["Conditie.periode"]["Periode.begin"] +  acquisition_method;
         } catch {
             acquisition_date = "unknown date of transaction"
-        }
+        }*/
 
         color_hex.push(_hexVal);
 
         color_names.push(color_name);
-        obj_titles_EN.push(title_en);
-        obj_desc_EN.push(desc_en);
-        object_number.push(LDES_object["Entiteit.identificator"][1]["skos:notation"]["@value"])
-        acquisition_dates.push(acquisition_date)
-        LDES.push(LDES_object);
+        //obj_titles_EN.push(title_en);
+        //obj_desc_EN.push(desc_en);
+        //object_number.push(LDES_object["Entiteit.identificator"][1]["skos:notation"]["@value"])
+        //acquisition_dates.push(acquisition_date)
+        //LDES.push(LDES_object);
 
     }
 
