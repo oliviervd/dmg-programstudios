@@ -872,10 +872,6 @@ img__bruises{
     object-fit: contain;
 }
 
-.__img:hover{
-    transition-duration: 0.5s;
-    border: dotted 1px #00FF67;
-}
 
 .caption {
     padding: 10px 10px;
