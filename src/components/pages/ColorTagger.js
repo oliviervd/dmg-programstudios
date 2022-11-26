@@ -133,9 +133,13 @@ const ColorTagger = () => {
                                 </div>
 
                             </div>
-                            <p style={{marginLeft: 20, marginRight:20}}>
-                                This interface explores the possibility and agency of computational entities for curating vast museum collections.
-                            </p>
+                            <div style={{marginLeft: 20, marginRight:20}}>
+                                <p style={{fontWeight: "lighter"}}>
+                                    What if machine learning algorithms are considered beyond the search engine paradigm in which they
+                                    have been mostly used to date by museums and galleries, and instead considered to be curatorial agents,
+                                    working alongside human curators?
+                                </p>
+                            </div>
                         </div>
                     </div>
                     <div className="grid--75_25">
