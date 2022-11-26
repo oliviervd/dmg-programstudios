@@ -149,7 +149,8 @@ const ColorTagger = () => {
                         </div>
                     </div>
                     <InteractionBar className="lineH" lang={language}
-                                    visualIdentity={visualIdentity} setVisualIdentity={setVisualIdentity}/>/>
+                                    visualIdentity={visualIdentity} setVisualIdentity={setVisualIdentity} darkMode={false} archive={false}/>
+
                 </div>
             </div>
         </div>
