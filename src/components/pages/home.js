@@ -99,7 +99,7 @@ const Home = () => {
                             if (studioType === "studio") {
                                 return(
                                     <div id="HomeProjectGrid" className="rowScroll fade-in open">
-                                        <div className="scroll-div" >
+                                        <div className="scroll-div">
                                             <h2 className="text-center uppercase box-title">{title_en}</h2>
                                             <img className="img__fit center" src={studioImage}
                                                  onClick={()=>setCarouselState(!carouselState)}
@@ -111,7 +111,7 @@ const Home = () => {
                                                                 setCarouselState={setCarouselState}
                                                                 carouselState={carouselState}/>
                                         </div>
-                                        <div className="scroll-div" >
+                                        <div className="scroll-div">
                                             <h2 className="text-center uppercase box-title">{title_en}</h2>
                                             <img className="img__fit center" src={studioImage}
                                                  onClick={()=>setCarouselState(!carouselState)}

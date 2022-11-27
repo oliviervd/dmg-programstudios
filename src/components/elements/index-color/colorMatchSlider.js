@@ -19,8 +19,8 @@ const ColorMatchSlider= (props) => {
             <input type={"range"} value={props.numberOfMatchingColors}
                    max={10} onChange={(e)=>props.setNumberOfMatchingColors(e.target.valueAsNumber)}/>
             <div className={"gridH--even_2"}>
-                <h4 style={{fontWeight: "lighter"}}>{matchNum} {props.numberOfMatchingColors}</h4>
-                <h4 style={{fontWeight: "lighter"}}>{matchCount} {props.matches}</h4>
+                <h3 style={{fontWeight: "lighter"}}>{matchNum} {props.numberOfMatchingColors}</h3>
+                <h3 style={{fontWeight: "lighter"}}>{matchCount} {props.matches}</h3>
             </div>
         </div>
     )

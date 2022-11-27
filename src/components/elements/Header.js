@@ -19,7 +19,7 @@ const Header = props => {
 
             {isDesktopOrLaptop &&
                 <div className="grid--even_10">
-                    <h2 className="uppercase text-center" style={{margin: 10}}>{headerTitle(props.language)}</h2>
+                    <h1 className="uppercase text-center" style={{margin: 10}}>{headerTitle(props.language)}</h1>
                     <div/>
                     <div/>
                     <div/>

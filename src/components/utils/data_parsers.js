@@ -35,23 +35,24 @@ export function fetchImage(i, _type) {
 }
 
 export function headerTitle(lang, _type) {
+    let title;
         if (lang === "EN") {
-            return <p>program studios</p>
+            return "program studios"
         } else if (lang === "NL") {
-            return <p>programma studios</p>
+            return "programma studios"
         } else {
-            return <p>studios de programmation</p>
+            return "studios de programmation"
         }
 
 }
 
 export function headerAbout(lang) {
     if (lang === "EN") {
-        return <p>about</p>
+        return "about"
     } else if (lang === "NL") {
-        return <p>over</p>
+        return "over"
     } else {
-        return <p>à propos de</p>
+        return "à propos de"
     }
 }
 
@@ -59,14 +60,14 @@ export function fetchTitle(i, lang, _type) {
     if (i._type === _type) {
         if (lang === "EN") {
             if (i.title_en !== "") {
-                return <p>{i.title_en}</p>
+                return <>{i.title_en}</>
             }
         } else if (lang === "NL") {
             if (i.title_nl !== "") {
-                return <p>{i.title_nl}</p>
+                return <>{i.title_nl}</>
             }
         } else {
-            return <p>{i.title_fr}</p>
+            return <>{i.title_fr}</>
         }
     }
 }
@@ -75,14 +76,14 @@ export function fetchDescription(i, lang, _type) {
     if (i._type === _type) {
         if (lang === "EN") {
             if (i.description_en !== "") {
-                return <p>{i.description_en}</p>
+                return <>{i.description_en}</>
             }
         } else if (lang === "NL") {
             if (i.description_nl !== "") {
-                return <p>{i.description_nl}</p>
+                return <>{i.description_nl}</>
             }
         } else {
-            return <p>{i.description_fr}</p>
+            return <>{i.description_fr}</>
         }
     }
 }
@@ -132,17 +133,17 @@ export function fetchStudioProjectTitle(i, lang, _type, studioID) {
         if (i.id.startsWith(studioID)) {
             if (lang === "EN") {
                 if (i.title !== ""){
-                    return <p>{i.title_en}</p>;
+                    return <>{i.title_en}</>;
                 }
             }
             if (lang === "NL") {
                 if (i.title !== ""){
-                    return <p>{i.title_nl}</p>;
+                    return <>{i.title_nl}</>;
                 }
             }
             if (lang === "FR") {
                 if (i.title !== ""){
-                    return <p>{i.title_fr}</p>;
+                    return <>{i.title_fr}</>;
                 }
             }
         }

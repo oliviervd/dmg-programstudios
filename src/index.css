@@ -1,3 +1,18 @@
+@charset "UTF-8";
+
+html {
+    font-size: 100%;
+    transition: all 2s ease;
+    -webkit-transition: all 2s ease;
+    -moz-transition: all 2s ease;
+}
+
+@media screen and (min-width: 740px) {
+    html {
+        font-size: 125%;
+    }
+}
+
 * {
     padding: 0;
     margin: 0;
@@ -46,10 +61,6 @@ html, body {
     orientation: landscape;
 }
 
-div {
-    font-size: 12px;
-}
-
 .centerBox{
     display: flex;
     justify-content: center;
@@ -68,21 +79,6 @@ div {
     src: local("BackOut"), url(fonts/BackOut.woff2);
 }
 
-text{
-    -webkit-appearance: none;
-    font-family: "KWBio27-Display", sans-serif;
-    font-weight: bold;
-}
-
-.text {
-    font-size: 18px;
-    padding: 2px
-}
-
-.white {
-    color: var(--yellow_ish);
-}
-
 .graphic_archive_01 {
     font-family: "KWBio27-Display", sans-serif;
 }
@@ -92,19 +88,31 @@ text{
 }
 
 h1 {
-    font-size: 43px;
+    font-size: 1rem;
 }
 
 h2 {
-    font-size: 17px;
-} @media (max-width: 1224px) {
-    h2 {
-        font-size: 30px;
-    }
+    font-size: 0.8rem;
 }
 
 h3 {
-    font-size: 15px;
+    font-size: 0.5rem;
+}
+
+.text {
+    font-size: 1rem;
+    padding: 2px
+}
+
+p {
+    font-size: 0.6rem;
+}
+
+text{
+    -webkit-appearance: none;
+    font-family: "KWBio27-Display", sans-serif;
+    font-weight: bold;
+    position: relative;
 }
 
 .verticalText{
@@ -113,33 +121,6 @@ h3 {
     height: 300px;
     margin-left: 10px;
     font-weight: lighter;
-}
-
-.borderLine-top{
-    border-top: 1px solid
-}
-
-.borderLine-left{
-    margin-left: 30px;
-    border-left: 1px dotted;
-}
-
-.subHeader__text {
-    font-size: 40px;
-    color: var(--main__green);
-    font-family: lineal;
-    text-align: left;
-} @media (max-width: 1224px) {
-    .subHeader__text{
-        font-size: 50px;
-    }
-
-}
-
-.quote{
-    border-left: 3px solid black;
-    left: 20%;
-    font-size: 20px;
 }
 
 a {
@@ -247,6 +228,16 @@ a {
 /* ---------------------------------- LAYOUT ---------------------------------- */
 
 /* ------- graphic elements ---------*/
+
+.borderLine-top{
+    border-top: 1px solid
+}
+
+.borderLine-left{
+    margin-left: 30px;
+    border-left: 1px dotted;
+}
+
 
 .lineH_dash {
     border-bottom: white dotted 1.5px;
@@ -501,11 +492,6 @@ a {
     height: 20px;
 
 }
-
-text {
-    position: relative;
-}
-
 .bm-burger-button {
     position: fixed;
     width: 30px;
@@ -1213,6 +1199,16 @@ imageViewer__modal-main {
     position: relative;
 }
 
+.HomeProjectGrid{
+    overflow-x: hidden;
+    container-type: inline-size;
+    overflow-wrap: break-word;
+}
+
+.homeProjectGrid > p {
+    font-size: 19cqi;
+}
+
 .HomeProjectGridContainer{
     top: -100%;
     transition: top 0.4s;
@@ -1237,3 +1233,4 @@ imageViewer__modal-main {
 .button__ellipse:hover{
     stroke:coral;
 }
+
