@@ -1,9 +1,11 @@
-import React, {useState, Suspense} from "react";
+import React, {useState, Suspense, useEffect} from "react";
 import useGoogleSheets from "use-google-sheets";
-import {fetchTitle, fetchDescription, fetchImage, fetchText, fetchStudioID, fetchType} from "../utils/data_parsers";
+import {fetchTitle, fetchDescription, fetchImage, fetchText, fetchStudioID, fetchType, fetchStudioProjectLink} from "../utils/data_parsers";
 import ProjectHomeSnippet from "../elements/projectHomeSnippet";
 import ProjectHomeView from "../elements/projectHomeView";
 import Header from "../elements/Header";
+import {Link} from "react-router-dom";
+
 
 const InteractionBar = React.lazy(()=>import("../elements/interactionBar"))
 
@@ -89,12 +91,14 @@ const Home = () => {
 
                     <div className={"lineH grid--even_5 HomeProjectGridContainer"}>
                         {_studios.map((studio => {
-                            let title_en, description, studioImage, studioID, studioType;
+                            let title_en, description, studioImage, studioID, studioType, studioLink;
                             title_en = fetchTitle(studio, language, "studio");
                             description = fetchDescription(studio, language, "studio");
                             studioImage = fetchImage(studio, "studio");
                             studioType = fetchType(studio);
                             studioID = fetchStudioID(studio);
+                            studioLink = fetchStudioProjectLink(studio)
+                            console.log(studioLink);
 
                             if (studioType === "studio") {
                                 return(
@@ -111,6 +115,7 @@ const Home = () => {
                                                                 setCarouselState={setCarouselState}
                                                                 carouselState={carouselState}/>
                                         </div>
+
                                         <div className="scroll-div">
                                             <h2 className="text-center uppercase box-title">{title_en}</h2>
                                             <img className="img__fit center" src={studioImage}

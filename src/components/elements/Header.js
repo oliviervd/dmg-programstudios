@@ -1,4 +1,5 @@
 import React, {lazy, Suspense} from "react";
+import {Link} from "react-router-dom";
 import {headerAbout, headerTitle} from "../utils/data_parsers";
 import {useMediaQuery} from "react-responsive";
 
@@ -19,7 +20,9 @@ const Header = props => {
 
             {isDesktopOrLaptop &&
                 <div className="grid--even_10">
-                    <h1 className="uppercase text-center" style={{margin: 10}}>{headerTitle(props.language)}</h1>
+                    <Link to={"../"}>
+                        <h1 className="uppercase text-center" style={{margin: 10}}>{headerTitle(props.language)}</h1>
+                    </Link>
                     <div/>
                     <div/>
                     <div/>

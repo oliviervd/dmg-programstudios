@@ -149,3 +149,13 @@ export function fetchStudioProjectTitle(i, lang, _type, studioID) {
         }
     }
 }
+
+export function fetchStudioProjectLink(i) {
+    let url;
+    if(i.link === "yes") {
+        if (i.link_URL !== "") {
+            url = i.link_URL
+            return url
+        }
+    }
+}

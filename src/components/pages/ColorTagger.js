@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 
 //data import
 import object_c from "../data/color_data_clean_10.json";
@@ -37,10 +37,16 @@ const ColorTagger = () => {
         return Math.floor(Math.random() * numSwap.length);
     }
 
-    const randomSwapIndex = generateNumSwap(); // generate index for random swap.
-    const colorHexSwap = swap_c[randomSwapIndex]["HEX_values"][0]; // store data for props to generate hex tiles.
-    const colorNameSwap = swap_c[randomSwapIndex]["color_names"][0]
-    const _imSwap = swap_c[randomSwapIndex]["IIIF_image"]; // store data for props to fetch right image.
+    const [randomSwapIndex, setRandomSwapIndex] = useState(generateNumSwap()); // generate index for random swap.
+    const [colorHexSwap, setColorHexSwap] = useState(swap_c[randomSwapIndex]["HEX_values"][0]); // store data for props to generate hex tiles.
+    const [colorNameSwap, setColorNameSwap] = useState(swap_c[randomSwapIndex]["color_names"][0]); // store data for CSS color names.
+    const [_imSwap, setImSwap] = useState(swap_c[randomSwapIndex]["IIIF_image"]); // store data for props to fetch right image.
+
+    useEffect(()=>{
+        setColorHexSwap(() => swap_c[randomSwapIndex]["HEX_values"][0]);
+        setColorNameSwap(() => swap_c[randomSwapIndex]["color_names"][0]);
+        setImSwap(() => swap_c[randomSwapIndex]["IIIF_image"]);
+    })
 
     const [numberOfMatchingColors, setNumberOfMatchingColors] = useState(4);
 
@@ -52,6 +58,7 @@ const ColorTagger = () => {
         for (let n=0; n<object_c.length; ++n) {
             //console.log(object_c[n]["color_names"])
             let arr2 = colorNameSwap
+            let maxCount = 0;
 
             //retrieve and clean array
             let arr1 = object_c[n]["color_names"].split(",")
@@ -60,12 +67,18 @@ const ColorTagger = () => {
                 arr_1_clean.push(arr1[a].replace("[[","").replace("]]","").trim().replace("[","").replace("]","").replace("'","").replace("'",""));
             }
 
+            // TODO: create function that iterates from 1 to 10 --> on each iteration see if valid count, if not stop iterating and set max boundary = iteration cycle.
+            // TODO: feeds this into the ColorMatchSlider as props.
+
+
             //todo: interface for number of matching colors
             if ((arr_1_clean.filter(c => arr2.includes(c))).length >= numberOfMatchingColors)  {
                 // check if color in both arrays. Return array with overlap (3 matching colors.)
                 itemsMatch.push(object_c[n]);
+                if (itemsMatch.length <= 3) {
+                    maxCount = numberOfMatchingColors
+                }
             }
-
         } return itemsMatch;
     }
 
@@ -73,11 +86,20 @@ const ColorTagger = () => {
 
     let matchedObjects = check_overlap();
     //
-    console.log("matched objects: " + matchedObjects.length);
+    //console.log("matched objects: " + matchedObjects.length);
+    let MaxCount
 
     if (matchedObjects.length <= 3 ) {
         handleNumSwapChange();
+        //generateNumSwap()
+        setColorHexSwap(() => swap_c[randomSwapIndex]["HEX_values"][0]);
+        setColorNameSwap(() => swap_c[randomSwapIndex]["color_names"][0]);
+        setImSwap(() => swap_c[randomSwapIndex]["IIIF_image"]);
+        setNumberOfMatchingColors(()=> numberOfMatchingColors-1);
     }
+
+
+
 
     function generateCuration(count){
 
@@ -98,12 +120,12 @@ const ColorTagger = () => {
 
     const num = _objectNum;
     const curation = generateCuration(num);
-    console.log(curation);
-    console.log(matchedObjects);
+    //console.log(curation);
+    //console.log(matchedObjects);
     const [buttonColor, setButtonColor] = useState("black")
     const [titles, setTitles] = useState([])
 
-    // todo: move to database
+    {/* //TODO: move to database */ }
     let text_intro;
     if (language === "EN") {
         text_intro = "What if machine learning algorithms are considered beyond the search engine paradigm in which they " +
@@ -116,10 +138,14 @@ const ColorTagger = () => {
     }
 
     //todo: move to database
+    function newSwap() {
+        setRandomSwapIndex(generateNumSwap());
+        setNumberOfMatchingColors("3")
+    }
 
+    function parseColorCountLimit() {
 
-
-
+    }
 
     return(
         <div className={visualIdentity}>
@@ -132,7 +158,7 @@ const ColorTagger = () => {
                             <div>
                                 <ColorMatchSlider numberOfMatchingColors={numberOfMatchingColors}
                                                   setNumberOfMatchingColors={setNumberOfMatchingColors} matches={matchedObjects.length}
-                                                  lang={language}/>
+                                                  lang={language} maxCount={MaxCount} />
                             </div>
                             <div>
                                 <svg onClick={()=>setNumSwap(generateNumSwap())} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
@@ -147,14 +173,22 @@ const ColorTagger = () => {
                         </div>
                         <div className={"borderLine-left"} >
                             <div className="grid--even_2">
-                                <h2 style={{marginLeft: 20}}>color index</h2>
+                                <h2 style={{marginLeft: 20, marginTop:20}} >color index</h2>
                                 <div >
+                                    <svg onClick={newSwap} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
+                                        <g>
+                                            <ellipse cx="60" cy="25" rx="50" ry="20"
+                                                     stroke={buttonColor} strokeWidth="0.77" fill="none">
+                                            </ellipse>
+                                            <text x="25" y="30" fontSize="15">NEW SWAP</text>
+                                        </g>
+                                    </svg>
                                 </div>
 
                             </div>
                             <div style={{marginLeft: 20, marginRight:20}}>
                                 <br/>
-                                <p style={{fontWeight: "lighter"}}>{text_intro}></p>
+                                <p style={{fontWeight: "lighter"}}>{text_intro}</p>
                             </div>
                         </div>
                     </div>
