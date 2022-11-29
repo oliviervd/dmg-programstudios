@@ -1234,3 +1234,9 @@ imageViewer__modal-main {
     stroke:coral;
 }
 
+.border-circle{
+    border: solid black 1px;
+    border-radius: 100px;
+    height: 22px
+}
+

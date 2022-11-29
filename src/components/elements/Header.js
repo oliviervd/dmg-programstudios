@@ -33,9 +33,9 @@ const Header = props => {
                     <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setAbout(!props.about)}>{headerAbout(props.language)}</h2>
 
                     <div className="grid--even_3">
-                        <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setLanguage("EN")}>EN</h2>
-                        <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setLanguage("NL")}>NL</h2>
-                        <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setLanguage("FR")}>FR</h2>
+                        <h2 className="uppercase text-center border-circle" style={{margin: 10}} onClick={() => props.setLanguage("EN")}>EN</h2>
+                        <h2 className="uppercase text-center border-circle" style={{margin: 10}} onClick={() => props.setLanguage("NL")}>NL</h2>
+                        <h2 className="uppercase text-center border-circle" style={{margin: 10}} onClick={() => props.setLanguage("FR")}>FR</h2>
                     </div>
                 </div>
             }
