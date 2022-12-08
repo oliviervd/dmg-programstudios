@@ -89,7 +89,7 @@ const Home = () => {
                         </Suspense>
                     </div>
 
-                    <div className={"lineH grid--even_5 HomeProjectGridContainer"}>
+                    <div className={"lineH grid--even_4 HomeProjectGridContainer"}>
                         {_studios.map((studio => {
                             let title_en, description, studioImage, studioID, studioType, studioLink;
                             title_en = fetchTitle(studio, language, "studio");
