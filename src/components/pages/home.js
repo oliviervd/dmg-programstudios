@@ -12,7 +12,7 @@ const InteractionBar = React.lazy(()=>import("../elements/interactionBar"))
 const Home = () => {
 
     // todo: make more carbon neutral (83)
-    // https://www.websitecarbon.com/website/modelsfromthepastforthefuture-herokuapp-com/
+    // https://www.websitecarbon.com/website/modelsfromthepastforthefuture-herokuapp-com
 
     const [language, setLanguage] = useState("EN");
     const [about, setAbout] = useState(false);
