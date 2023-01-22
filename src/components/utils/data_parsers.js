@@ -28,8 +28,8 @@ export function fetchType(i){
 
 export function fetchImage(i, _type) {
     if (i._type === _type){
-        if (i.media_ !== "") {
-            return i.media_
+        if (i.media !== "") {
+            return "/media/raw/"+i.media
         }
     }
 }
@@ -37,11 +37,26 @@ export function fetchImage(i, _type) {
 export function headerTitle(lang, _type) {
     let title;
         if (lang === "EN") {
-            return "program studios"
+            return (
+                <div>
+                    <h1>program</h1>
+                    <h1 className={"reverse"}>studios</h1>
+                </div>
+            )
         } else if (lang === "NL") {
-            return "programma studios"
+            return (
+                <div>
+                    <h1>programma</h1>
+                    <h1 className={"reverse"}>studios</h1>
+                </div>
+            )
         } else {
-            return "studios de programmation"
+            return(
+                    <div>
+                        <h1>stuidios de</h1>
+                        <h1 className={"reverse"}>programmation</h1>
+                    </div>
+                )
         }
 
 }
@@ -95,8 +110,8 @@ export function fetchStudioID(i) {
 export function fetchStudioProjectImage(i, _type, studioID) {
     if (i._type === _type){
         if (i.id.startsWith(studioID)){
-            if (i.media_ !== "") {
-                return i.media_
+            if (i.media !== "") {
+                return "/media/raw/"+i.media
             }
         }
     }
