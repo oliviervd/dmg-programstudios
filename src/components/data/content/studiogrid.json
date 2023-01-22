@@ -1,0 +1,143 @@
+[
+  {
+    "id": "col",
+    "_type": "studio",
+    "title_nl": "Studio Collectie",
+    "title_en": "Studio Collection",
+    "title_fr": "Studio Collection",
+    "description_nl": "We nemem de sterktes van de collectie als uitgangspunt voor hedendaagse narartieven. we moedigen ontwerpend onderzoek/creatief hergebruik van de collectie aan.",
+    "description_en": "We explore the impact of digital culture on design (practices) in a co-creative and participatory way. Both as an institutional framework of care and a way of probing cutting edge digital design.",
+    "description_fr": "Nous explorons l'impact de la culture numérique sur le design (pratiques) d'une manière co-créative et participative. Il s'agit à la fois d'un cadre institutionnel de soins et d'une façon de sonder le design numérique de pointe.",
+    "media": "collection_ding_ex.jpg"
+  },
+  {
+    "id": "dig",
+    "_type": "studio",
+    "title_nl": "Studio Digitaal",
+    "title_en": "Studio Digital",
+    "title_fr": "Studio Digital",
+    "description_nl": "We onderzoeken de impact van digitale cultuur op design praktijken op cocreatieve en participatieve manier. Dit zowel in het kader van de opzet van een zorgzame digitale cultuur als een manier van prospectie van nieuwe digitale vormen van design.",
+    "description_en": "We explore the impact of digital culture on design (practices) in a co-creative and participatory way. Both as an institutional framework of care and a way of probing cutting edge digital design.",
+    "descrition_fr": "Nous explorons l'impact de la culture numérique sur le design (pratiques) d'une manière co-créative et participative. Il s'agit à la fois d'un cadre institutionnel de soins et d'une façon de sonder le design numérique de pointe.",
+    "media": "dig_jonstam_1.jpg"
+  },
+  {
+    "id": "eco",
+    "_type": "studio",
+    "title_nl": "Studio Zorg",
+    "title_en": "Studio Care",
+    "title_fr": "Studio Soins",
+    "description_nl": "We zijn gangmaker voor een duurzame en circulaire designpraktijk en onderzoeken wat zorgzaamheid kan betekenen in de designwereld. ",
+    "description_en": "We are pacemakers for a sustainable and circular design practice and explore what \"care\" can mean in the design world.",
+    "description_fr": "Nous sommes les stimulateurs d'une pratique de conception durable et circulaire et nous explorons ce que le \"soin\" peut signifier dans le monde de la conception.",
+    "media":"care_brick.jpg"
+  },
+  {
+    "id": "about",
+    "_type": "",
+    "title_nl": "Design Museum Gent ontwikkelt een duurzaam artistiek programma aangestuurd door de werking van vijf studio’s. In elke studio wisselt een multidisciplinair team expertise uit rond een thema en creëert het meerdere vormen van output.// Door de oprichting van verscheidene studio's wenst het museum in te zetten op een duurzamere en zorgzamere artistieke werking. Elke studio functioneert complementair aan de andere studios enerzijds en aan de interne werking anderzijds.// Deze programmastudio's sluiten inhoudelijk aan bij de identiteit van het museum en lopen over meerdere jaren als een vorm van slow programming. Gradueel bouwen deze studio's expertise op die vervolgens wordt gebundeld, uitgewisseld en gecommuniceerd. // De studio's kunnen evolueren / veranderen / samenkomen in de tijd, in relatie tot maatschappelijke dynamiek en urgente thema's (fluiditeit, flexibiliteit en experiment).",
+    "title_en": "Design Museum Gent develops a sustainable program driven by the activity of five studios. In each Studio, a multidisciplanry team exchanges expertise around a theme and creates multiple forms of output.//By establishing these studios, the museum wishes to commit itself to a more sustainable and caring artistic operation. Each studio functions complementary to both other studios and internal operations. // In terms of content, the studios align with the museum's identity and run over several years as a form of slow programming. Gradually, they build expertise that is then pooled, shared and communicated. // The studio's an evolve, change and converge over time, in relation to social dynamics and themes. And embrace fluidity, complexity and experimentation as both a way of being and praxis. ",
+    "title_fr": "Le Design Museum Gent élabore un programme durable basé sur l'activité de cinq studios. Dans chaque studio, une équipe multidisciplinaire échange son expertise autour d'un thème et crée des formes multiples de production. // En créant ces studios, le musée souhaite s'engager dans un fonctionnement artistique plus durable et plus solidaire. Chaque studio fonctionne en complémentarité avec les autres studios et les opérations internes.//Ces studios de programmation correspondent à l'identité du musée en termes de contenu et se déroulent sur plusieurs années (programmation lente). Progressivement, ces studios acquièrent une expertise qui est ensuite mise en commun, échangée et communiquée.//Les studios peuvent évoluer / changer / converger dans le temps, en relation avec les dynamiques sociales et les thèmes urgents (fluidité, flexibilité et expérimentation).",
+    "description_nl": "",
+    "description_en": "",
+    "description_fr": "",
+    "media":""
+  },
+  {
+    "id": "dig_t_1",
+    "_type": "text",
+    "title_nl": "Regisseurstraject: Jon Stam",
+    "title_en": "Director trajectory: Jon Stam",
+    "title_fr": "Programme de direction: Jon Stam",
+    "description_nl": "Met aanvang in januari 2023 start het museum een regisseurstraject met productdesigner Jon Stam (NL). ",
+    "description_en": "Starting in January 2023, the museum will begin a director's program with product designer Jon Stam (NL). Throughout this trajectory we will work together to research, explore and develop new meaningful ways to engage with the collection. ",
+    "description_fr": "À partir de janvier 2023, le musée lancera un programme de direction avec le designer de produits Jon Stam (NL). ",
+    "media":"dig_jonstam_0.jpg"
+  },
+  {
+    "id": "dig_t_2",
+    "_type": "text",
+    "title_nl": "R&D - kleur als index",
+    "title_en": "R&D - color as index",
+    "title_fr": "R&D - couleur comme indice",
+    "description_nl": "We onderzoeken hoe het indexeren van de collectie op basis van kleur tot nieuwe ervaringen en aanrakeningen met de collectie kan leiden.",
+    "description_en": "We explore how indexing the collection based on colour can lead to new experiences and touches with the collection.",
+    "description_fr": "Nous explorons comment l'indexation de la collection en fonction de la couleur peut conduire à de nouvelles expériences et à de nouveaux contacts avec la collection.",
+    "media":""
+  },
+  {
+    "id": "coll_t_1",
+    "_type": "text",
+    "title_nl": "Re-Use It - Mesh vzw",
+    "title_en": "Open Design Course X Design Museum Gent: Re-Use It - Mesh vzw",
+    "title_fr": "Re-Use It - Mesh vzw",
+    "description_nl": "Re-Use It selecteert objecten uit de Collectie van de Gentenaar, sampelt patronen in vectorformaat, hertekent delen van de objecten en brouwt kleurenpaletten uit deze eclectische database.",
+    "description_en": "Re-Use It selects objects from the Collection, samples patterns in vector format, redraws parts of the objects and brews color palettes from this eclectic database.",
+    "description_fr": "Re-Use It sélectionne des objets de la collection, échantillonne des motifs au format vectoriel, redessine des parties des objets et crée des palettes de couleurs à partir de cette base de données éclectique.",
+    "media":"collection_reuseit_01.jpg"
+  },
+  {
+    "id": "graph_t_1",
+    "_type": "text",
+    "title_nl": "Regisseurstraject: 019 (BE)",
+    "title_en": "Director trajectory: 019 (BE)",
+    "title_fr": "Programme de direction: 019 (BE)",
+    "description_nl": "Met aanvang in januari 2023 start het museum een regisseurstraject met het transdisciplinair platform 019 (BE). ",
+    "description_en": "Starting in January 2023, the museum will begin a director's program with the transdisciplinary platform 019 (BE).",
+    "description_fr": "À partir de janvier 2023, le musée commencera un programme de direction avec 019 (BE).",
+    "media": "graph_019.jpg"
+  },
+  {
+    "id": "eco_t_1",
+    "_type": "text",
+    "title_nl": "Circulaire gevelsteen voor DING",
+    "title_en": "Circular brick for DING",
+    "title_fr": "Brique de façade circulaire pour DING",
+    "description_nl": "De nieuwe vleugel DING van Design Museum Gent krijgt een innovatieve circulaire gevelsteen. Sinds begin 2021 werkte het museum daar met heel wat partners aan. De stenen zullen gemaakt worden van 63% gerecycleerd stedelijk afvalmateriaal uit Gent. Ze worden ook uitgehard in plaats van gebakken: de ingrediënten in de steen maken sterke bindingen in open lucht. O.a. daardoor stoot de geperste steen maar één derde CO2 uit in vergelijking met een typische baksteen uit klei over een levenscyclus van 60 jaar.",
+    "description_en": "Design Museum Gent's new wing DING will have an innovative circular facade brick. Since early 2021, the museum has been working on this with many partners. The bricks will be made of 63% recycled urban waste material from Ghent. They will also be cured instead of fired: the ingredients in the stone make strong bonds in open air. As a result, among other things, the pressed brick only emits one-third of CO2 compared to a typical clay brick over a life cycle of 60 years.",
+    "description_fr": "La nouvelle aile DING du Design Museum Gent aura une brique de façade circulaire innovante. Depuis début 2021, le musée y travaille avec de nombreux partenaires. Les briques seront composées à 63 % de déchets urbains recyclés provenant de Gand. Elles seront également durcies au lieu d'être cuites : les ingrédients de la brique forment des liens solides à l'air libre. C'est l'une des raisons pour lesquelles la brique comprimée n'émet qu'un tiers du CO2 par rapport à une brique d'argile typique sur un cycle de vie de 60 ans.",
+    "media":"care_brick_ding.jpg"
+  },
+  {
+    "id": "",
+    "_type": "",
+    "title_nl": "",
+    "title_en": "",
+    "title_fr": "",
+    "description_nl": "",
+    "description_en": "",
+    "description_fr": "",
+    "media":""
+  },
+  {
+    "id": "graph",
+    "_type": "studio",
+    "title_nl": "Studio Grafisch",
+    "title_en": "Studio Graphic",
+    "title_fr": "Studio Graphique",
+    "description_nl": "We verkennen de kracht van een flexible grafische en visuele identiteit doorheen samenwerkingen met recent afgesudeerde studenten grafisch ontwerp.",
+    "description_en": "We explore the power of a flexible graphical/visual identity through collaboration with recent graphic design graduates.",
+    "description_fr": "Nous explorons le pouvoir d'une identité graphique/visuelle flexible en collaborant avec de jeunes diplômés en design graphique.",
+    "media":"graph_019.jpg"
+  },
+  {
+    "id": "",
+    "_type": "",
+    "title_nl": "",
+    "title_en": "",
+    "title_fr": "",
+    "description_nl": "",
+    "description_en": "",
+    "description_fr": "",
+    "media":""
+  },
+  {
+    "id": "about",
+    "title_nl": "over",
+    "title_en": "about",
+    "title_fr": "a propos",
+    "description_nl": "Design Museum Gent ontwikkelt een duurzaam artistiek programma aangestuurd door de werking van vijf studio’s. In elke studio wisselt een multidisciplinair team expertise uit rond een thema en creëert het meerdere vormen van output.// Door de oprichting van verscheidene studio's wenst het museum in te zetten op een duurzamere en zorgzamere artistieke werking. Elke studio functioneert complementair aan de andere studios enerzijds en aan de interne werking anderzijds.// Deze programmastudio's sluiten inhoudelijk aan bij de identiteit van het museum en lopen over meerdere jaren als een vorm van slow programming. Gradueel bouwen deze studio's expertise op die vervolgens wordt gebundeld, uitgewisseld en gecommuniceerd. // De studio's kunnen evolueren / veranderen / samenkomen in de tijd, in relatie tot maatschappelijke dynamiek en urgente thema's (fluiditeit, flexibiliteit en experiment).",
+    "description_en": "Design Museum Gent develops a sustainable program driven by the activity of five studios. In each Studio, a multidisciplanry team exchanges expertise around a theme and creates multiple forms of output.//By establishing these studios, the museum wishes to commit itself to a more sustainable and caring artistic operation. Each studio functions complementary to both other studios and internal operations. // In terms of content, the studios align with the museum's identity and run over several years as a form of slow programming. Gradually, they build expertise that is then pooled, shared and communicated. // The studio's an evolve, change and converge over time, in relation to social dynamics and themes. And embrace fluidity, complexity and experimentation as both a way of being and praxis. ",
+    "description_fr": "Le Design Museum Gent élabore un programme durable basé sur l'activité de cinq studios. Dans chaque studio, une équipe multidisciplinaire échange son expertise autour d'un thème et crée des formes multiples de production. // En créant ces studios, le musée souhaite s'engager dans un fonctionnement artistique plus durable et plus solidaire. Chaque studio fonctionne en complémentarité avec les autres studios et les opérations internes.//Ces studios de programmation correspondent à l'identité du musée en termes de contenu et se déroulent sur plusieurs années (programmation lente). Progressivement, ces studios acquièrent une expertise qui est ensuite mise en commun, échangée et communiquée.//Les studios peuvent évoluer / changer / converger dans le temps, en relation avec les dynamiques sociales et les thèmes urgents (fluidité, flexibilité et expérimentation)."
+  }
+]
