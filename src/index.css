@@ -79,36 +79,127 @@ html, body {
     src: local("BackOut"), url(fonts/BackOut.woff2);
 }
 
+@font-face {
+    font-family: "Fungal";
+    src: local("FungalVF"), url(fonts/FungalVF.woff);
+}
+
 .graphic_archive_01 {
     font-family: "KWBio27-Display", sans-serif;
 }
 
 .graphic_archive_02 {
-    font-family: "BackOut", sans-serif;
+    font-family: "Fungal", sans-serif;
 }
 
 h1 {
-    font-size: 1rem;
+    font-family: "Fungal";
+    font-weight: 1;
+    font-size: 10vw;
+    line-height: 10vw;
+    animation: grow-lesser 50s ease-in-out infinite;
+}
+
+h1.reverse {
+    animation: grow 20s ease-in-out infinite;
+    animation-delay: 0s;
 }
 
 h2 {
-    font-size: 0.8rem;
+    font-size: 1vw;
+}
+
+h2.main {
+    font-size: 1.5vw;
+}
+
+h2.grow{
+    font-family: "Fungal";
+    font-weight: 100;
+    line-height: 5vw;
+    animation: grow-lesser 50s ease-in-out infinite;
 }
 
 h3 {
     font-size: 0.5rem;
 }
 
+@keyframes grow{
+    0% {
+        font-variation-settings: "THCK" 0, "grow" 0;
+    }
+    20%{
+        font-variation-settings: "THCK" 1000, "grow" 100;
+    }
+    30%{
+        font-variation-settings: "THCK" 800, "grow" 500;
+    }
+    35%{
+        font-variation-settings: "THCK" 650, "grow" 350;
+    }
+    40%{
+        font-variation-settings: "THCK" 500, "grow" 500;
+    }
+    50%{
+        font-variation-settings: "THCK" 700, "grow" 400;
+    }
+    60%{
+        font-variation-settings: "THCK" 500, "grow" 300;
+    }
+    70% {
+        font-variation-settings: "THCK" 800, "grow" 400;
+    }
+    80% {
+        font-variation-settings: "THCK" 1000, "grow" 100;
+    }
+    90% {
+        font-variation-settings: "THCK" 100, "grow" 50;
+    }
+    90% {
+        font-variation-settings: "THCK" 0, "grow" 0;
+    }
+}
+
+@keyframes grow-lesser {
+    0% {
+        font-variation-settings: "THCK" 0, "grow" 0;
+    }
+    50% {
+        font-variation-settings: "THCK" 800, "grow" 200;
+    }
+    100% {
+        font-variation-settings: "THCK" 0, "grow" 0;
+    }
+
+}
+
+
 .text {
     font-size: 1rem;
-    padding: 2px
+    padding: 2pxnpm startnpm start devnpm run dev
 }
 
 p {
-    font-size: 0.6rem;
+    font-size: 13px;
 }
 
-text{
+font-size--small {
+    font-size:13px;
+}
+
+font-size--medium {
+    font-size: 20px;
+}
+
+font-size--large {
+    font-size: 36px;
+}
+
+font-size--x-large {
+    font-size: 42px;
+}
+
+text {
     -webkit-appearance: none;
     font-family: "KWBio27-Display", sans-serif;
     font-weight: bold;
@@ -990,8 +1081,9 @@ imageViewer__modal-main {
     -ms-user-select: none;
 }
 
-.imgBruises {
-    width: 300px;
+.img {
+    background-blend-mode: hard-light;
+    background-color: $color_low;
 }
 
 {/* GRID SYSTEM
