@@ -57,7 +57,7 @@ const Home = () => {
         <div className={visualIdentity}>
             <div className={` ${darkMode?"darkMode":"lightMode"}`}>
                 <div className={carouselState?"grid-home-main-open full-page":"grid-home-main-closed full-page"}>
-                    <Header about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
+                    <Header big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
 
                     <div className="grid--1_2" style={{zIndex: 100000}}>
                         <div style={{margin: 10}}>

@@ -34,30 +34,57 @@ export function fetchImage(i, _type) {
     }
 }
 
-export function headerTitle(lang, _type) {
+export function headerTitleBig(lang, _type) {
     let title;
         if (lang === "EN") {
             return (
                 <div>
-                    <h1>program</h1>
-                    <h1 className={"reverse"}>studios</h1>
+                    <h1 className={"home"}>program</h1>
+                    <h1 className={"reverse home"}>studios</h1>
                 </div>
             )
         } else if (lang === "NL") {
             return (
                 <div>
-                    <h1>programma</h1>
-                    <h1 className={"reverse"}>studios</h1>
+                    <h1 className={"home"}>programma</h1>
+                    <h1 className={"reverse home"}>studios</h1>
                 </div>
             )
         } else {
             return(
-                    <div>
-                        <h1>stuidios de</h1>
-                        <h1 className={"reverse"}>programmation</h1>
+                    <div className={"home"}>
+                        <h1>studios de</h1>
+                        <h1 className={"reverse home"}>programmation</h1>
                     </div>
                 )
         }
+
+}
+
+export function headerTitle(lang, _type) {
+    let title;
+    if (lang === "EN") {
+        return (
+            <div>
+                <h1>program</h1>
+                <h1 className={"reverse"}>studios</h1>
+            </div>
+        )
+    } else if (lang === "NL") {
+        return (
+            <div>
+                <h1>programma</h1>
+                <h1 className={"reverse"}>studios</h1>
+            </div>
+        )
+    } else {
+        return(
+            <div>
+                <h1>studios de</h1>
+                <h1 className={"reverse"}>programmation</h1>
+            </div>
+        )
+    }
 
 }
 

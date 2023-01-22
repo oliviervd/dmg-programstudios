@@ -93,6 +93,10 @@ html, body {
 }
 
 h1 {
+    font-size: 1vw;
+}
+
+h1.home {
     font-family: "Fungal";
     font-weight: 1;
     font-size: 10vw;
@@ -100,7 +104,7 @@ h1 {
     animation: grow-lesser 50s ease-in-out infinite;
 }
 
-h1.reverse {
+h1.reverse.home {
     animation: grow 20s ease-in-out infinite;
     animation-delay: 0s;
 }

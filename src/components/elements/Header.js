@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from "react";
 import {Link} from "react-router-dom";
-import {headerAbout, headerTitle} from "../utils/data_parsers";
+import {headerAbout, headerTitle, headerTitleBig} from "../utils/data_parsers";
 import {useMediaQuery} from "react-responsive";
 
 const HamburgerMenu = lazy(() => import("./HamburgerMenu"));
@@ -19,7 +19,12 @@ const Header = props => {
         <div className="--nbr:2">
             {isDesktopOrLaptop &&
                 <div className="grid--even_10">
-                    <div>{headerTitle(props.language)}</div>
+                    {props.big &&
+                        <div>{headerTitleBig(props.language)}</div>
+                    }
+                    {!props.big &&
+                        <div>{headerTitle(props.language)}</div>
+                    }
                     <div/>
                     <div/>
                     <div/>
