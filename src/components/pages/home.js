@@ -1,10 +1,10 @@
 import React, {useState, Suspense, useEffect} from "react";
-import useGoogleSheets from "use-google-sheets";
 import {fetchTitle, fetchDescription, fetchImage, fetchText, fetchStudioID, fetchType, fetchStudioProjectLink} from "../utils/data_parsers";
 import ProjectHomeSnippet from "../elements/projectHomeSnippet";
 import ProjectHomeView from "../elements/projectHomeView";
 import Header from "../elements/Header";
 import {Link} from "react-router-dom";
+import studiogrid_data from "../data/content/studiogrid.json"
 
 
 const InteractionBar = React.lazy(()=>import("../elements/interactionBar"))
@@ -21,13 +21,20 @@ const Home = () => {
     const [darkMode, setDarkMode] = useState(false)
     const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
 
-    console.log(visualIdentity);
+    let _studios = []
+    studiogrid_data.map((x)=>{
+        _studios.push(x);
+    })
 
+    console.log(_studios)
+
+    /*
     const {data, loading, error} = useGoogleSheets({
         apiKey: "AIzaSyAhfyQ_9XDc6ajRYDy3qPXPAp8mkLKja90",
         sheetId: "1t8c2FwHlhGBXQ22zg0BRPNdElKNg5_yu8CUAMGY_hvw",
         datasheetOptions: [{id: 'Studios'}],
     });
+
 
     if (loading) {
         return <div><p>loading...</p></div>
@@ -37,16 +44,14 @@ const Home = () => {
         return <div><p>error!</p></div>
     }
 
+    /*
     let _studios = [];
     data.map((x)=>{
         x.data.map((l)=>{
             _studios.push(l);
         })
     })
-
-    //todo: make responsive mobile
-    //todo: make responsive tablet
-    //todo: make seperate container for scroller.
+    */
 
     return(
         <div className={visualIdentity}>
@@ -61,12 +66,12 @@ const Home = () => {
                                 _text = fetchText(text, language, "about");
                                 if (typeof _text !== "undefined"){
                                     const _t = _text.map((t)=>
-                                        <p className="paragraph">{t}</p>
+                                        <p className="font-size--small">{t}</p>
                                     )
 
                                     if (about === true){
                                         return(
-                                            <div className="about gridH--even_5">
+                                            <div className="font-size--small gridH--even_5">
                                                 <p>{_t}</p>
                                             </div>
                                         )
@@ -95,6 +100,7 @@ const Home = () => {
                             title_en = fetchTitle(studio, language, "studio");
                             description = fetchDescription(studio, language, "studio");
                             studioImage = fetchImage(studio, "studio");
+                            console.log(studioImage)
                             studioType = fetchType(studio);
                             studioID = fetchStudioID(studio);
                             studioLink = fetchStudioProjectLink(studio)
@@ -103,21 +109,8 @@ const Home = () => {
                             if (studioType === "studio") {
                                 return(
                                     <div id="HomeProjectGrid" className="rowScroll fade-in open">
-                                        <div className="scroll-div">
-                                            <h2 className="text-center uppercase box-title">{title_en}</h2>
-                                            <img className="img__fit center" src={studioImage}
-                                                 onClick={()=>setCarouselState(!carouselState)}
-                                                 onMouseOver={()=>setHoverContent(studioImage)}
-                                                 onMouseLeave={()=>setHoverContent(" ")}/>
-                                            <p className="uppercase justify padding-10">{description}</p>
-                                            <ProjectHomeSnippet className="padding-10" id={studioID}
-                                                                lang={language} setHoverContent={setHoverContent}
-                                                                setCarouselState={setCarouselState}
-                                                                carouselState={carouselState}/>
-                                        </div>
-
-                                        <div className="scroll-div">
-                                            <h2 className="text-center uppercase box-title">{title_en}</h2>
+                                        <div>
+                                            <h2 className="text-center uppercase box-title grow main">{title_en}</h2>
                                             <img className="img__fit center" src={studioImage}
                                                  onClick={()=>setCarouselState(!carouselState)}
                                                  onMouseOver={()=>setHoverContent(studioImage)}
@@ -129,11 +122,8 @@ const Home = () => {
                                                                 carouselState={carouselState}/>
                                         </div>
                                     </div>
-
                                 )
                             }
-
-
                         }))}
                     </div>
                 </div>

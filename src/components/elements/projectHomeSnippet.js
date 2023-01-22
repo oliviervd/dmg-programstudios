@@ -6,6 +6,8 @@ import {
     fetchStudioProjectImage,
     fetchStudioID
 } from "../utils/data_parsers";
+import studiogrid_data from "../data/content/studiogrid.json"
+
 
 const ProjectHomeSnippet = (props) => {
 
@@ -13,6 +15,12 @@ const ProjectHomeSnippet = (props) => {
     id = props.id;
     lang = props.lang;
 
+    let _projects = []
+    studiogrid_data.map((x)=>{
+        _projects.push(x);
+    })
+
+    /*
     const {data, loading, error} = useGoogleSheets( {
         apiKey: "AIzaSyAhfyQ_9XDc6ajRYDy3qPXPAp8mkLKja90",
         sheetId: "1t8c2FwHlhGBXQ22zg0BRPNdElKNg5_yu8CUAMGY_hvw",
@@ -33,6 +41,7 @@ const ProjectHomeSnippet = (props) => {
             _projects.push(l)
         })
     })
+    */
 
     return(
         <div>

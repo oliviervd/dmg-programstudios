@@ -16,11 +16,10 @@ const Header = props => {
     })
 
     return(
-        <div>
-
+        <div className="--nbr:2">
             {isDesktopOrLaptop &&
                 <div className="grid--even_10">
-                    <h1 className="uppercase text-center" style={{margin: 10}}>{headerTitle(props.language)}</h1>
+                    <div>{headerTitle(props.language)}</div>
                     <div/>
                     <div/>
                     <div/>
