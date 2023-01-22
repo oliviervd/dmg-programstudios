@@ -57,30 +57,30 @@ const Home = () => {
         <div className={visualIdentity}>
             <div className={` ${darkMode?"darkMode":"lightMode"}`}>
                 <div className={carouselState?"grid-home-main-open full-page":"grid-home-main-closed full-page"}>
-                    <Header big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
-
-                    <div className="grid--1_2" style={{zIndex: 100000}}>
+                    <div>
+                        <Header big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
+                        <ProjectHomeView style={{zIndex: -100000}} img={hoverContent}/>
+                    </div>
+                    <div className="grid--1_1">
+                        <div></div>
                         <div style={{margin: 10}}>
                             {_studios.map((text => {
                                 let _text;
                                 _text = fetchText(text, language, "about");
                                 if (typeof _text !== "undefined"){
                                     const _t = _text.map((t)=>
-                                        <p className="font-size--small">{t}</p>
+                                        <p className="font-size--small about">{t}</p>
                                     )
 
                                     if (about === true){
                                         return(
-                                            <div className="font-size--small gridH--even_5">
+                                            <div className="about gridH--even_5">
                                                 <p>{_t}</p>
                                             </div>
                                         )
                                     }
                                 }
                             }))}
-                        </div>
-                        <div>
-                            <ProjectHomeView img={hoverContent}/>
                         </div>
                     </div>
 
@@ -94,7 +94,7 @@ const Home = () => {
                         </Suspense>
                     </div>
 
-                    <div className={"lineH grid--even_4 HomeProjectGridContainer"}>
+                    <div style={{paddingLeft: "1vh", paddingRight: "1vh"}} className={"lineH grid--even_4 HomeProjectGridContainer"}>
                         {_studios.map((studio => {
                             let title_en, description, studioImage, studioID, studioType, studioLink;
                             title_en = fetchTitle(studio, language, "studio");

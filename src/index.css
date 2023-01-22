@@ -128,9 +128,16 @@ h3 {
     font-size: 0.5rem;
 }
 
+.about{
+    padding: 10px;
+    font-family: "Fungal";
+    animation: grow-subtle 50s ease-in-out infinite;
+    font-size: 18px
+}
+
 @keyframes grow{
     0% {
-        font-variation-settings: "THCK" 0, "grow" 0;
+        font-variation-settings: "THCK" 0, "grow" 1000;
     }
     20%{
         font-variation-settings: "THCK" 1000, "grow" 100;
@@ -160,7 +167,7 @@ h3 {
         font-variation-settings: "THCK" 100, "grow" 50;
     }
     90% {
-        font-variation-settings: "THCK" 0, "grow" 0;
+        font-variation-settings: "THCK" 0, "grow" 1000;
     }
 }
 
@@ -169,7 +176,20 @@ h3 {
         font-variation-settings: "THCK" 0, "grow" 0;
     }
     50% {
-        font-variation-settings: "THCK" 800, "grow" 200;
+        font-variation-settings: "THCK" 200, "grow" 200;
+    }
+    100% {
+        font-variation-settings: "THCK" 0, "grow" 1000;
+    }
+
+}
+
+@keyframes grow-subtle {
+    0% {
+        font-variation-settings: "THCK" 0, "grow" 0;
+    }
+    50% {
+        font-variation-settings: "THCK" 100, "grow" 1000;
     }
     100% {
         font-variation-settings: "THCK" 0, "grow" 0;
@@ -180,7 +200,7 @@ h3 {
 
 .text {
     font-size: 1rem;
-    padding: 2pxnpm startnpm start devnpm run dev
+    padding: 2px
 }
 
 p {
@@ -1100,9 +1120,14 @@ imageViewer__modal-main {
     grid-template-columns: 10% 80% 10%;
 }
 
-.grid--1_2{
+.grid--1_1{
     display: grid;
-    grid-template-columns: 1fr 2fr;
+    grid-template-columns: 1fr 1fr;
+}
+
+.grid--2_1{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 
 .grid--2_6_2 {
@@ -1281,9 +1306,6 @@ imageViewer__modal-main {
     padding: 10px;
 }
 
-.about{
-    padding: 10px;
-}
 
 .paragraph{
     padding: 10px;
