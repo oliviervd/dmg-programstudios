@@ -11,7 +11,7 @@ const DisplayTimeDate = () => {
 
     return(
         <div className="text-center">
-            <p>{dateState.toLocaleString()}</p>
+            <p className={"rhizome"}>{dateState.toLocaleString()}</p>
             <p></p>
         </div>
     )
