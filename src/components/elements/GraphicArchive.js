@@ -14,6 +14,11 @@ const GraphicArchive = (props) => {
 
     const [openArchive, setOpenArchive] = useState(false)
 
+    function setArchive(_style) {
+        props.setVisualIdentity(_style)
+        setOpenArchive(!openArchive)
+    }
+
     if(!openArchive){
         return(
             <div className="grid--even_3">
@@ -36,8 +41,8 @@ const GraphicArchive = (props) => {
                     <div className="borderLine-left"/>
                     <div>
                         <div className="borderLine-top">
-                            <p className='italic' onClick={()=>props.setVisualIdentity("graphic_archive_01")}>protagonist #1</p>
-                            <p className='italic' onClick={()=>props.setVisualIdentity("graphic_archive_02")}>protagonist #2</p>
+                            <p className='italic' onClick={()=>setArchive("graphic_archive_01")}>identity #1</p>
+                            <p className='italic' onClick={()=>setArchive("graphic_archive_02")}>identity #2</p>
                         </div>
                     </div>
 

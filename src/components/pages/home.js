@@ -86,7 +86,7 @@ const Home = () => {
                                     <div id="HomeProjectGrid" className="rowScroll fade-in open">
                                         <div>
                                             <h2 className="text-center uppercase box-title grow main">{title_en}</h2>
-                                            <p className="uppercase justify padding-10" style={{height:'8vh'}}>{description}</p>
+                                            <p className="uppercase justify padding-10" style={{height:'10vh'}}>{description}</p>
                                             <img className="img__fit center" src={studioImage}
                                                  onClick={()=>setCarouselState(!carouselState)}
                                                  onMouseOver={()=>setHoverContent(studioImage)}
