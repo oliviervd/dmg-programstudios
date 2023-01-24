@@ -1,0 +1,209 @@
+
+
+/* ---------------------------------- FONTS & TYPE ---------------------------------- */
+
+
+@font-face {
+    font-family: "KWBio27-Display";
+    src: local("KWBio27-Display"), url(fonts/KWBio27-Display.otf);
+}
+
+@font-face {
+    font-family: "BackOut";
+    src: local("BackOut"), url(fonts/BackOut.woff2);
+}
+
+@font-face {
+    font-family: "Fungal";
+    src: local("FungalVF"), url(fonts/FungalVF.woff);
+}
+
+.graphic_archive_01 {
+    font-family: "KWBio27-Display", sans-serif;
+}
+
+.graphic_archive_02 {
+    font-family: "Fungal";
+    font-size: 40vh;
+    animation: grow 150s ease-in-out infinite;
+}
+
+
+h1.home {
+    font-size: 20vh;
+    font-family: "KWBio27-Display", sans-serif;
+    animation: none;
+
+}
+
+h2 {
+    font-size: 1vw;
+}
+
+h2.main {
+    font-size: 1.5vw;
+}
+
+h2.graphic_archive_02{
+    font-family: "KWBio27-Display";
+    line-height: 2.4vw;
+    animation: none;
+}
+
+h3 {
+    font-size: 0.5rem;
+    animation: none;
+}
+
+.about{
+    padding: 10px;
+    font-size: 18px
+}
+
+.about.graphic_archive_02{
+    animation: grow 150s ease-in-out infinite;
+}
+
+p.rhizome{
+    font-family: "Fungal";
+    animation: grow 150s ease-in-out infinite;
+}
+
+@keyframes grow{
+    0% {
+        font-variation-settings: "THCK" 0, "grow" 0;
+    }
+
+    50% {
+        font-variation-settings: "THCK" 1000, "grow" 1000;
+    }
+
+    100% {
+        font-variation-settings: "THCK" 0, "grow" 0;
+    }
+}
+
+@keyframes grow-lesser {
+    0% {
+        font-variation-settings: "THCK" 0, "grow" 0;
+    }
+    50% {
+        font-variation-settings: "THCK" 200, "grow" 200;
+    }
+    100% {
+        font-variation-settings: "THCK" 0, "grow" 1000;
+    }
+
+}
+
+@keyframes grow-subtle {
+    0% {
+        font-variation-settings: "THCK" 0, "grow" 0;
+    }
+    50% {
+        font-variation-settings: "THCK" 100, "grow" 1000;
+    }
+    100% {
+        font-variation-settings: "THCK" 0, "grow" 0;
+    }
+
+}
+
+.text {
+    font-size: 1rem;
+    padding: 2px
+}
+
+p {
+    font-size: 13px;
+}
+
+font-size--small {
+    font-size:13px;
+}
+
+font-size--medium {
+    font-size: 20px;
+}
+
+font-size--large {
+    font-size: 36px;
+}
+
+font-size--x-large {
+    font-size: 42px;
+}
+
+text {
+    -webkit-appearance: none;
+    font-family: "KWBio27-Display", sans-serif;
+    font-weight: bold;
+    position: relative;
+}
+
+.verticalText{
+    writing-mode: vertical-lr;
+    position: fixed;
+    height: 300px;
+    margin-left: 10px;
+    font-weight: lighter;
+}
+
+a {
+    color: var(--main__green);
+    cursor: crosshair;
+}
+
+.main-title{
+    font-size: 100px;
+    padding-top: 20vh;
+    height: 50vh;
+    bottom: 40vh;
+}
+
+.underlined{
+    text-decoration: underline;
+}
+
+.scrollable{
+    overflow: scroll;
+    display: grid;
+}
+
+.rotateText{
+    transform: rotate(90deg);
+    position: relative;
+    top: 10%;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+.rotateText:hover{
+    transition: color 2s ease-out;
+    color: var(--fluo__green)
+}
+
+
+.italic {
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    -o-transition: all 1s;
+    transition: all 1s;
+}
+
+.italic:hover {
+    -webkit-transform: skewX(-10deg);
+    -moz-transform: skewX(-10deg);
+    -o-transform: skewX(-10deg);
+    transform: skewX(-10deg);
+    transition: color 2s ease-out;
+}
+
+.lineH{
+    border-top: 1px solid;
+    z-index: 1000;
+}
+
+.lineV{
+    border-left: 1px black solid;
+}
