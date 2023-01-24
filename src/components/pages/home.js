@@ -15,7 +15,7 @@ const Home = () => {
     // https://www.websitecarbon.com/website/modelsfromthepastforthefuture-herokuapp-com
 
     const [language, setLanguage] = useState("EN");
-    const [about, setAbout] = useState(false);
+    const [about, setAbout] = useState(true);
     const [hoverContent, setHoverContent] = useState(" ");
     const [carouselState, setCarouselState] = useState("true");
     const [darkMode, setDarkMode] = useState(false)
@@ -27,31 +27,6 @@ const Home = () => {
     })
 
     console.log(_studios)
-
-    /*
-    const {data, loading, error} = useGoogleSheets({
-        apiKey: "AIzaSyAhfyQ_9XDc6ajRYDy3qPXPAp8mkLKja90",
-        sheetId: "1t8c2FwHlhGBXQ22zg0BRPNdElKNg5_yu8CUAMGY_hvw",
-        datasheetOptions: [{id: 'Studios'}],
-    });
-
-
-    if (loading) {
-        return <div><p>loading...</p></div>
-    }
-
-    if (error) {
-        return <div><p>error!</p></div>
-    }
-
-    /*
-    let _studios = [];
-    data.map((x)=>{
-        x.data.map((l)=>{
-            _studios.push(l);
-        })
-    })
-    */
 
     return(
         <div className={visualIdentity}>

@@ -27,21 +27,10 @@
     "title_nl": "Studio Zorg",
     "title_en": "Studio Care",
     "title_fr": "Studio Soins",
-    "description_nl": "We zijn gangmaker voor een duurzame en circulaire designpraktijk en onderzoeken wat zorgzaamheid kan betekenen in de designwereld. ",
-    "description_en": "We are pacemakers for a sustainable and circular design practice and explore what \"care\" can mean in the design world.",
-    "description_fr": "Nous sommes les stimulateurs d'une pratique de conception durable et circulaire et nous explorons ce que le \"soin\" peut signifier dans le monde de la conception.",
+    "description_nl": "We zijn gangmaker voor een duurzame en circulaire designpraktijk en onderzoeken wat zorgzaamheid kan betekenen in de designwereld. In Studio Care borgen we en bouwen verder op de kennis en expertise die al werd verzameld in vroegere (tentoonstellings)projecten.",
+    "description_en": "We set the pace for a sustainable and circular design practice and explore what caring can mean in the design world. In Studio Care, we consolidate and build on the knowledge and expertise already gathered in past (exhibition) projects.",
+    "description_fr": "Nous sommes les pionniers d'une pratique de conception durable et circulaire et nous explorons ce que le souci du bien-être peut signifier dans le monde de la conception. Dans Studio Care, nous sauvegardons et mettons à profit les connaissances et l'expertise déjà acquises dans le cadre de projets (d'exposition) antérieurs.",
     "media":"care_brick.jpg"
-  },
-  {
-    "id": "about",
-    "_type": "",
-    "title_nl": "Design Museum Gent ontwikkelt een duurzaam artistiek programma aangestuurd door de werking van vijf studio’s. In elke studio wisselt een multidisciplinair team expertise uit rond een thema en creëert het meerdere vormen van output.// Door de oprichting van verscheidene studio's wenst het museum in te zetten op een duurzamere en zorgzamere artistieke werking. Elke studio functioneert complementair aan de andere studios enerzijds en aan de interne werking anderzijds.// Deze programmastudio's sluiten inhoudelijk aan bij de identiteit van het museum en lopen over meerdere jaren als een vorm van slow programming. Gradueel bouwen deze studio's expertise op die vervolgens wordt gebundeld, uitgewisseld en gecommuniceerd. // De studio's kunnen evolueren / veranderen / samenkomen in de tijd, in relatie tot maatschappelijke dynamiek en urgente thema's (fluiditeit, flexibiliteit en experiment).",
-    "title_en": "Design Museum Gent develops a sustainable program driven by the activity of five studios. In each Studio, a multidisciplanry team exchanges expertise around a theme and creates multiple forms of output.//By establishing these studios, the museum wishes to commit itself to a more sustainable and caring artistic operation. Each studio functions complementary to both other studios and internal operations. // In terms of content, the studios align with the museum's identity and run over several years as a form of slow programming. Gradually, they build expertise that is then pooled, shared and communicated. // The studio's an evolve, change and converge over time, in relation to social dynamics and themes. And embrace fluidity, complexity and experimentation as both a way of being and praxis. ",
-    "title_fr": "Le Design Museum Gent élabore un programme durable basé sur l'activité de cinq studios. Dans chaque studio, une équipe multidisciplinaire échange son expertise autour d'un thème et crée des formes multiples de production. // En créant ces studios, le musée souhaite s'engager dans un fonctionnement artistique plus durable et plus solidaire. Chaque studio fonctionne en complémentarité avec les autres studios et les opérations internes.//Ces studios de programmation correspondent à l'identité du musée en termes de contenu et se déroulent sur plusieurs années (programmation lente). Progressivement, ces studios acquièrent une expertise qui est ensuite mise en commun, échangée et communiquée.//Les studios peuvent évoluer / changer / converger dans le temps, en relation avec les dynamiques sociales et les thèmes urgents (fluidité, flexibilité et expérimentation).",
-    "description_nl": "",
-    "description_en": "",
-    "description_fr": "",
-    "media":""
   },
   {
     "id": "dig_t_1",
@@ -99,45 +88,34 @@
     "media":"care_brick_ding.jpg"
   },
   {
-    "id": "",
-    "_type": "",
-    "title_nl": "",
-    "title_en": "",
-    "title_fr": "",
-    "description_nl": "",
-    "description_en": "",
-    "description_fr": "",
-    "media":""
-  },
-  {
     "id": "graph",
     "_type": "studio",
     "title_nl": "Studio Grafisch",
     "title_en": "Studio Graphic",
     "title_fr": "Studio Graphique",
-    "description_nl": "We verkennen de kracht van een flexible grafische en visuele identiteit doorheen samenwerkingen met recent afgesudeerde studenten grafisch ontwerp.",
-    "description_en": "We explore the power of a flexible graphical/visual identity through collaboration with recent graphic design graduates.",
-    "description_fr": "Nous explorons le pouvoir d'une identité graphique/visuelle flexible en collaborant avec de jeunes diplômés en design graphique.",
+    "description_nl": "We continueren de focus op Belgisch grafisch ontwerp, zowel historisch als hedendaags. We spelen hiermee in op de nood aan museale presentatieplekken en op de vragen die we krijgen vanuit de sterk ontwikkelde en internationaal erkende grafische ontwerpsector in Belgie",
+    "description_en": "We continue our focus on Belgian graphic design, both historical and contemporary. We are responding to the need for museum presentation spaces and to the questions we receive from the highly developed and internationally recognized graphic design sector in Belgium.",
+    "description_fr": "Nous continuons à nous intéresser au graphisme belge, tant historique que contemporain. Ce faisant, nous répondons au besoin d'espaces de présentation des musées et aux demandes que nous recevons de la part du secteur très développé et internationalement reconnu du graphisme en Belgique.",
     "media":"graph_019.jpg"
-  },
-  {
-    "id": "",
-    "_type": "",
-    "title_nl": "",
-    "title_en": "",
-    "title_fr": "",
-    "description_nl": "",
-    "description_en": "",
-    "description_fr": "",
-    "media":""
   },
   {
     "id": "about",
     "title_nl": "over",
     "title_en": "about",
     "title_fr": "a propos",
-    "description_nl": "Design Museum Gent ontwikkelt een duurzaam artistiek programma aangestuurd door de werking van vijf studio’s. In elke studio wisselt een multidisciplinair team expertise uit rond een thema en creëert het meerdere vormen van output.// Door de oprichting van verscheidene studio's wenst het museum in te zetten op een duurzamere en zorgzamere artistieke werking. Elke studio functioneert complementair aan de andere studios enerzijds en aan de interne werking anderzijds.// Deze programmastudio's sluiten inhoudelijk aan bij de identiteit van het museum en lopen over meerdere jaren als een vorm van slow programming. Gradueel bouwen deze studio's expertise op die vervolgens wordt gebundeld, uitgewisseld en gecommuniceerd. // De studio's kunnen evolueren / veranderen / samenkomen in de tijd, in relatie tot maatschappelijke dynamiek en urgente thema's (fluiditeit, flexibiliteit en experiment).",
-    "description_en": "Design Museum Gent develops a sustainable program driven by the activity of five studios. In each Studio, a multidisciplanry team exchanges expertise around a theme and creates multiple forms of output.//By establishing these studios, the museum wishes to commit itself to a more sustainable and caring artistic operation. Each studio functions complementary to both other studios and internal operations. // In terms of content, the studios align with the museum's identity and run over several years as a form of slow programming. Gradually, they build expertise that is then pooled, shared and communicated. // The studio's an evolve, change and converge over time, in relation to social dynamics and themes. And embrace fluidity, complexity and experimentation as both a way of being and praxis. ",
-    "description_fr": "Le Design Museum Gent élabore un programme durable basé sur l'activité de cinq studios. Dans chaque studio, une équipe multidisciplinaire échange son expertise autour d'un thème et crée des formes multiples de production. // En créant ces studios, le musée souhaite s'engager dans un fonctionnement artistique plus durable et plus solidaire. Chaque studio fonctionne en complémentarité avec les autres studios et les opérations internes.//Ces studios de programmation correspondent à l'identité du musée en termes de contenu et se déroulent sur plusieurs années (programmation lente). Progressivement, ces studios acquièrent une expertise qui est ensuite mise en commun, échangée et communiquée.//Les studios peuvent évoluer / changer / converger dans le temps, en relation avec les dynamiques sociales et les thèmes urgents (fluidité, flexibilité et expérimentation)."
+    "description_nl": "Met de oprichting van 'programmastudios' in plaats van de huidige programmalijnen onderzoeken we als museum een duurzame en tegelijk dynamische artistieke werking. Voortbouwend op enkele lopende ‘regisseurstrajecten’ (met ontwerpers als Jon Stam en het Gentse collectief 019), en om de kennis rond bepaalde thema’s (bv. nieuwe materialen) die we de afgelopen jaren opbouwden beter te bundelen, ontwikkelen we een multidisciplinair kader om tot duurzame output te komen. In eerste instantie in functie van de grote tentoonstellingen, maar ook in de vorm van onder meer tekstmateriaal, lezingen en workshops. De studio’s lopen, parallel aan elkaar, over meerdere jaren als een vorm van ‘slow programming’, maar ze kunnen ook inspelen op urgente thema’s. // In elke studio werkt een wisselend team van designers, (jonge) gastcuratoren, experten uit verschillende disciplines, jongeren, samen met medewerkers uit de verschillende afdelingen onder begeleiding van een interne coördinator. Deze samenstelling is geïnspireerd op de veranderende manier van werken van designers, die steeds vaker inzetten op samenwerking met andere disciplines om complexe hedendaagse problemen aan te pakken. Op een gelijkaardige manier onderzoeken we met de studio’s nieuwe modellen om designtentoonstellingen te maken, in relatie tot de veranderende maatschappelijke context.",
+    "description_en": "With the creation of 'program studios' in place of the current program lines, we as a museum are exploring a sustainable yet dynamic artistic operation. Building on several ongoing 'director's projects' (with designers such as Jon Stam and the Ghent collective 019), and in order to better pool the knowledge around certain themes (e.g. new materials) that we have built up in recent years, we are developing a multidisciplinary framework to achieve sustainable output. Initially in function of the major exhibitions, but also in the form of text materials, lectures and workshops, among other things. The studios run, in parallel, over several years as a form of \"slow programming,\" but they can also respond to urgent themes. // In each studio a changing team of designers, (young) guest curators, experts from different disciplines, young people, work together with staff from the various departments under the guidance of an internal coordinator. This composition is inspired by the changing way of working of designers, who increasingly rely on collaboration with other disciplines to tackle complex contemporary problems. In a similar way, we are exploring with the studios new models for making design exhibitions, in relation to the changing social context.",
+    "description_fr": "Avec la création de \"studios de programme\" en lieu et place des lignes de programme actuelles, nous explorons, en tant que musée, un fonctionnement artistique durable et dynamique. Sur la base de plusieurs \"projets du directeur\" en cours (avec des designers tels que Jon Stam et le collectif 019 de Gand), et afin de mieux regrouper les connaissances autour de certains thèmes (par exemple, les nouveaux matériaux) que nous avons accumulées ces dernières années, nous développons un cadre multidisciplinaire pour obtenir une production durable. D'abord en fonction des grandes expositions, mais aussi sous forme de matériel textuel, de conférences et d'ateliers, entre autres. Les studios fonctionnent, en parallèle, sur plusieurs années, comme une forme de \"programmation lente\", mais ils peuvent aussi répondre à des thèmes urgents. // Dans chaque studio, une équipe changeante de designers, de (jeunes) conservateurs invités, d'experts de différentes disciplines, de jeunes, travaille avec le personnel des différents départements sous la direction d'un coordinateur interne. Cette composition s'inspire de l'évolution du mode de travail des designers, qui s'appuient de plus en plus sur la collaboration avec d'autres disciplines pour résoudre des problèmes contemporains complexes. De la même manière, les studios explorent de nouveaux modèles de réalisation d'expositions de design, en relation avec l'évolution du contexte social."
+  },
+  {
+  "id": "",
+  "_type": "",
+  "title_nl": "",
+  "title_en": "",
+  "title_fr": "",
+  "description_nl": "",
+  "description_en": "",
+  "description_fr": "",
+  "media":""
   }
 ]

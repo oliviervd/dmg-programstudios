@@ -36,8 +36,8 @@ const GraphicArchive = (props) => {
                     <div className="borderLine-left"/>
                     <div>
                         <div className="borderLine-top">
-                            <ul className='italic' onClick={()=>props.setVisualIdentity("graphic_archive_01")}>protagonist #1</ul>
-                            <ul className='italic' onClick={()=>props.setVisualIdentity("graphic_archive_02")}>protagonist #2</ul>
+                            <p className='italic' onClick={()=>props.setVisualIdentity("graphic_archive_01")}>protagonist #1</p>
+                            <p className='italic' onClick={()=>props.setVisualIdentity("graphic_archive_02")}>protagonist #2</p>
                         </div>
                     </div>
 

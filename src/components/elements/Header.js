@@ -16,14 +16,14 @@ const Header = props => {
     })
 
     return(
-        <div className="--nbr:2">
+        <div>
             {isDesktopOrLaptop &&
                 <div className="grid--even_10">
                     {props.big &&
-                        <div style={{marginTop: '10vh', marginLeft: "2vh"}}>{headerTitleBig(props.language)}</div>
+                        <div className="uppercase text-center" style={{margin: 10}}>{headerTitleBig(props.language)}</div>
                     }
                     {!props.big &&
-                        <div>{headerTitle(props.language)}</div>
+                        <div className="uppercase text-center" style={{margin: 10}}>{headerTitle(props.language)}</div>
                     }
                     <div/>
                     <div/>
