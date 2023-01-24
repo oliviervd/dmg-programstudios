@@ -64,6 +64,11 @@ h3 {
     animation: grow 150s ease-in-out infinite;
 }
 
+h3.rhizome{
+    font-family: "Fungal";
+    animation: grow 150s ease-in-out infinite;
+}
+
 p.rhizome{
     font-family: "Fungal";
     animation: grow 150s ease-in-out infinite;

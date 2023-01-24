@@ -166,14 +166,14 @@ const ColorTagger = () => {
                                         <ellipse cx="60" cy="25" rx="50" ry="20"
                                             stroke={buttonColor} strokeWidth="0.77" fill="none">
                                         </ellipse>
-                                        <text x="35" y="30" fontSize="15">CURATE</text>
+                                        <text x="35" y="30" fontSize="15" className={"rhizome"}>CURATE</text>
                                     </g>
                                 </svg>
                             </div>
                         </div>
                         <div className={"borderLine-left"} >
                             <div className="grid--even_2">
-                                <h2 style={{marginLeft: 20, marginTop:20}} >color index</h2>
+                                <h2 style={{marginLeft: 20, marginTop:20}} className={"rhizome"}>color index</h2>
                                 <div >
                                     <svg onClick={newSwap} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
                                         <g>
