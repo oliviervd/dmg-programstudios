@@ -1,0 +1,54 @@
+.lightMode{
+    background: white;
+    color: rgba(0, 0, 0, 1);
+    border-color: black;
+}
+
+.darkMode{
+    background: black;
+    color: rgba(255, 255, 255, 1);
+    border-color:white;
+}
+
+/* ---------------------------------- COLORS ---------------------------------- */
+
+.background__transparent {
+    background: transparent;
+}
+
+.background__black {
+    background: black
+}
+
+.background__white {
+    background: linear-gradient(180deg, #ffffff 0%,  #fbf2e7 85%);
+}
+
+.background__cool-to-warm-spectrum {
+    background: linear-gradient(135deg,var(--yellow_ish) 0%,white 20%,var(--yellow_ish) 100%);
+}
+
+.background__white__green {
+    background: linear-gradient(135deg, white 0%, var(--main__green) 100%);
+}
+
+.background__transparent__flow {
+    backround: transparent;
+    background-image: linear-gradient(180deg,var(--yellow_ish) 60%,rgba(255,230,0,0));
+}
+
+.background__yellow {
+    background: var(--yellow_bright);
+}
+
+.background__pink {
+    background: var(--triad_pink);
+}
+.background__pinkLight{
+    background: lightgoldenrodyellow;
+}
+
+.border-dots{
+    border-bottom: white solid 3px;
+}
+
