@@ -5,11 +5,20 @@ import ProjectHomeView from "../elements/projectHomeView";
 import Header from "../elements/Header";
 import {Link} from "react-router-dom";
 import studiogrid_data from "../data/content/studiogrid.json"
+import {useMediaQuery} from "react-responsive";
 
-
-const InteractionBar = React.lazy(()=>import("../elements/interactionBar"))
 
 const Home = () => {
+
+    const InteractionBar = React.lazy(()=>import("../elements/interactionBar"))
+
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+    })
+
+    const isMobile = useMediaQuery({
+        query: '(max-width: 1224px)'
+    })
 
     // todo: make more carbon neutral (83)
     // https://www.websitecarbon.com/website/modelsfromthepastforthefuture-herokuapp-com
@@ -28,80 +37,125 @@ const Home = () => {
 
     console.log(_studios)
 
+
+
     return(
         <div className={visualIdentity}>
             <div className={` ${darkMode?"darkMode":"lightMode"}`}>
-                <div className={carouselState?"grid-home-main-open full-page":"grid-home-main-closed full-page"}>
-                    <div>
-                        <Header big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
-                        <ProjectHomeView style={{zIndex: -100000}} img={hoverContent}/>
-                    </div>
-                    <div className="grid--1_1">
-                        <div></div>
-                        <div style={{margin: 10}}>
-                            {_studios.map((text => {
-                                let _text;
-                                _text = fetchText(text, language, "about");
-                                if (typeof _text !== "undefined"){
-                                    const _t = _text.map((t)=>
-                                        <p className="font-size--small about">{t}</p>
-                                    )
 
-                                    if (about === true){
-                                        return(
-                                            <div className="about gridH--even_5">
-                                                <p>{_t}</p>
-                                            </div>
+                {isDesktopOrLaptop &&
+                    <div className={carouselState?"grid-home-main-open full-page":"grid-home-main-closed full-page"}>
+                        <div>
+                            <Header big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
+                            <ProjectHomeView style={{zIndex: -100000}} img={hoverContent}/>
+                        </div>
+                        <div className="grid--1_1">
+                            <div></div>
+                            <div style={{margin: 10}}>
+                                {_studios.map((text => {
+                                    let _text;
+                                    _text = fetchText(text, language, "about");
+                                    if (typeof _text !== "undefined"){
+                                        const _t = _text.map((t)=>
+                                            <p className="font-size--small about">{t}</p>
                                         )
+
+                                        if (about === true){
+                                            return(
+                                                <div className="about gridH--even_5">
+                                                    <p>{_t}</p>
+                                                </div>
+                                            )
+                                        }
                                     }
+                                }))}
+                            </div>
+                        </div>
+
+                        <div>
+                            <Suspense>
+                                <InteractionBar lang={language}
+                                                carouselState={carouselState} setCarouselState={setCarouselState}
+                                                darkMode={darkMode} setDarkMode={setDarkMode}
+                                                visualIdentity={visualIdentity} setVisualIdentity={setVisualIdentity}
+                                                darkModeShow={true} archiveShow={true} lastFetch={false}/>
+                            </Suspense>
+                        </div>
+
+                        <div style={{paddingLeft: "1vh", paddingRight: "1vh"}} className={"lineH grid--even_4 HomeProjectGridContainer"}>
+                            {_studios.map((studio => {
+                                let title_en, description, studioImage, studioID, studioType, studioLink;
+                                title_en = fetchTitle(studio, language, "studio");
+                                description = fetchDescription(studio, language, "studio");
+                                studioImage = fetchImage(studio, "studio");
+                                console.log(studioImage)
+                                studioType = fetchType(studio);
+                                studioID = fetchStudioID(studio);
+                                studioLink = fetchStudioProjectLink(studio)
+                                console.log(studioLink);
+
+                                if (studioType === "studio") {
+                                    return(
+                                        <div id="HomeProjectGrid" className="rowScroll fade-in open">
+                                            <div>
+                                                <h2 className="text-center uppercase box-title grow main">{title_en}</h2>
+                                                <p className="uppercase justify padding-10" style={{height:'10vh'}}>{description}</p>
+                                                <img className="img__fit center" src={studioImage}
+                                                     onClick={()=>setCarouselState(!carouselState)}
+                                                     onMouseOver={()=>setHoverContent(studioImage)}
+                                                     onMouseLeave={()=>setHoverContent(" ")}/>
+                                                <ProjectHomeSnippet className="padding-10" id={studioID}
+                                                                    lang={language} setHoverContent={setHoverContent}
+                                                                    setCarouselState={setCarouselState}
+                                                                    carouselState={carouselState}/>
+                                            </div>
+                                        </div>
+                                    )
                                 }
                             }))}
                         </div>
                     </div>
+                }
+                { isMobile &&
+                    <div className="rowScrollMain">
+                        <div>
+                            <div className="lineH" style={{margin: "1vh", borderWidth:"0.3vh"}}></div>
+                            <Header big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
+                            <div className="lineH" style={{margin: "1vh", borderWidth:"0.3vh"}}></div>
+                            <div className="lineH" style={{margin: "1vh", borderWidth:"0.3vh"}}></div>
+                        </div>
+                        <div>
+                            {_studios.map((studio => {
+                                let title_en, description, studioImage, studioID, studioType, studioLink;
+                                title_en = fetchTitle(studio, language, "studio");
+                                description = fetchDescription(studio, language, "studio");
+                                studioImage = fetchImage(studio, "studio");
+                                console.log(studioImage)
+                                studioType = fetchType(studio);
+                                studioID = fetchStudioID(studio);
+                                studioLink = fetchStudioProjectLink(studio)
+                                console.log(studioLink);
 
-                    <div>
-                        <Suspense>
-                            <InteractionBar lang={language}
-                                            carouselState={carouselState} setCarouselState={setCarouselState}
-                                            darkMode={darkMode} setDarkMode={setDarkMode}
-                                            visualIdentity={visualIdentity} setVisualIdentity={setVisualIdentity}
-                                            darkModeShow={true} archiveShow={true} lastFetch={false}/>
-                        </Suspense>
-                    </div>
-
-                    <div style={{paddingLeft: "1vh", paddingRight: "1vh"}} className={"lineH grid--even_4 HomeProjectGridContainer"}>
-                        {_studios.map((studio => {
-                            let title_en, description, studioImage, studioID, studioType, studioLink;
-                            title_en = fetchTitle(studio, language, "studio");
-                            description = fetchDescription(studio, language, "studio");
-                            studioImage = fetchImage(studio, "studio");
-                            console.log(studioImage)
-                            studioType = fetchType(studio);
-                            studioID = fetchStudioID(studio);
-                            studioLink = fetchStudioProjectLink(studio)
-                            console.log(studioLink);
-
-                            if (studioType === "studio") {
-                                return(
-                                    <div id="HomeProjectGrid" className="rowScroll fade-in open">
+                                if (studioType === "studio") {
+                                    return(
                                         <div>
-                                            <h2 className="text-center uppercase box-title grow main">{title_en}</h2>
-                                            <p className="uppercase justify padding-10" style={{height:'10vh'}}>{description}</p>
-                                            <img className="img__fit center" src={studioImage}
-                                                 onClick={()=>setCarouselState(!carouselState)}
-                                                 onMouseOver={()=>setHoverContent(studioImage)}
-                                                 onMouseLeave={()=>setHoverContent(" ")}/>
-                                            <ProjectHomeSnippet className="padding-10" id={studioID}
-                                                                lang={language} setHoverContent={setHoverContent}
-                                                                setCarouselState={setCarouselState}
-                                                                carouselState={carouselState}/>
+                                            <h2 className='main text-center'>{title_en}</h2>
+                                            <div class="img__dither" style={{margin: "3.33vw"}}>
+                                                <picture>
+                                                    <img src={studioImage} className="img__fit center"/>
+                                                </picture>
+                                            </div>
                                         </div>
-                                    </div>
-                                )
+                                        )
+                                }
                             }
-                        }))}
+                            ))}
+
+                        </div>
                     </div>
-                </div>
+
+                }
+
             </div>
         </div>
 

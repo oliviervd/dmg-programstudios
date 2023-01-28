@@ -615,16 +615,7 @@ to {
 }
 
 
-img__bruises{
-    object-fit: contain;
-    width: 300px;
-}
 
-.img__thumbnail {
-    width: 18vw;
-    height: 20vh;
-    object-fit: contain;
-}
 
 .__img{
     border: none;
@@ -732,6 +723,17 @@ imageViewer__modal-main {
     max-width:90%;
     height: auto;
 }
+
+.img__dither > picture::after {
+    content: '';
+    pointer-events: none;
+    z-index: 222222222222;
+    top: 0px;
+    left:0px;
+    background-image: url(LDR_RG01_7.png);
+    background-repeat: repeat;
+}
+
 
 .hexBox{
     width: 20vw;
@@ -863,21 +865,6 @@ imageViewer__modal-main {
     z-index: 100000000;
     margin-top: -100px;
     position: relative;
-}
-
-.HomeProjectGrid{
-    overflow-x: hidden;
-    container-type: inline-size;
-    overflow-wrap: break-word;
-}
-
-.homeProjectGrid > p {
-    font-size: 19cqi;
-}
-
-.HomeProjectGridContainer{
-    top: -100%;
-    transition: top 0.4s;
 }
 
 .closed{

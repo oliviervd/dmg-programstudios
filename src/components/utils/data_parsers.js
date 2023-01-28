@@ -61,29 +61,52 @@ export function headerTitleBig(lang, _type) {
 
 }
 
-export function headerTitle(lang, _type) {
+export function headerTitle(lang, stacked) {
     let title;
-    if (lang === "EN") {
-        return (
-            <div>
-                <h1>program</h1>
-                <h1>studios</h1>
-            </div>
-        )
-    } else if (lang === "NL") {
-        return (
-            <div>
-                <h1>programma</h1>
-                <h1 className>studios</h1>
-            </div>
-        )
-    } else {
-        return(
-            <div>
-                <h1>studios de</h1>
-                <h1 className>programmation</h1>
-            </div>
-        )
+    if (stacked==true){
+        if (lang === "EN") {
+            return (
+                <div>
+                    <h1>program</h1>
+                    <h1>studios</h1>
+                </div>
+            )
+        } else if (lang === "NL") {
+            return (
+                <div>
+                    <h1>programma</h1>
+                    <h1 className>studios</h1>
+                </div>
+            )
+        } else {
+            return(
+                <div>
+                    <h1>studios de</h1>
+                    <h1 className>programmation</h1>
+                </div>
+            )
+        }
+    }
+    if (!stacked) {
+        if (lang === "EN") {
+            return (
+                <div>
+                    <h1>program studios</h1>
+                </div>
+            )
+        } else if (lang === "NL") {
+            return (
+                <div>
+                    <h1>programma studios</h1>
+                </div>
+            )
+        } else {
+            return(
+                <div>
+                    <h1>studios de programmation</h1>
+                </div>
+            )
+        }
     }
 
 }
