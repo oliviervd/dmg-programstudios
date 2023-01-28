@@ -8,14 +8,14 @@ const HamburgerMenu = (props) => {
     return(
         <div>
             {hamburgerOpen &&
-                <div onClick={() => setHamburgerOpen(!hamburgerOpen)}>
-                    <div>▓▓OPEN▓▓</div>
+                <div onClick={() => setHamburgerOpen(!hamburgerOpen)} className="button-burger">
+                    <p style={{fontSize:"2vh"}} className={"rhizome"}>▓-▓-▓</p>
                 </div>
             }
             {!hamburgerOpen &&
                 <div>
                     <div onClick={() => setHamburgerOpen(!hamburgerOpen)} className="button-burger">
-                        <div>▓▓CLOSE▓▓</div>
+                        <p style={{fontSize:"2vh"}} className={"rhizome"}>▓-▓-▓</p>
                     </div>
 
                     <div className="hamburgerMenu">

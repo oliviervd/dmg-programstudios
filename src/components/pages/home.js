@@ -118,11 +118,8 @@ const Home = () => {
                 }
                 { isMobile &&
                     <div className="rowScrollMain">
-                        <div>
-                            <div className="lineH" style={{margin: "1vh", borderWidth:"0.3vh"}}></div>
+                        <div style={{marginTop: "3vh", marginBottom: "3vh"}}>
                             <Header big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
-                            <div className="lineH" style={{margin: "1vh", borderWidth:"0.3vh"}}></div>
-                            <div className="lineH" style={{margin: "1vh", borderWidth:"0.3vh"}}></div>
                         </div>
                         <div>
                             {_studios.map((studio => {

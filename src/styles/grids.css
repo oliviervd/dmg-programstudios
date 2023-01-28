@@ -19,6 +19,11 @@
     grid-template-columns: 2fr 1fr;
 }
 
+.grid--3_1{
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
 .grid--2_6_2 {
     display: grid;
     grid-template-columns: 20% 60% 20%;
@@ -184,4 +189,20 @@
 @-moz-keyframes animategrid {
     from{grid-template-rows: 10% 28% 2% 60%}
     to {grid-template-rows: 10% 88% 2%}
+}
+
+
+.HomeProjectGrid{
+    overflow-x: hidden;
+    container-type: inline-size;
+    overflow-wrap: break-word;
+}
+
+.homeProjectGrid > p {
+    font-size: 19cqi;
+}
+
+.HomeProjectGridContainer{
+    top: -100%;
+    transition: top 0.4s;
 }
