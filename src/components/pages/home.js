@@ -138,7 +138,7 @@ const Home = () => {
                                         <div className="grid-autoFill">
                                             <div style={{padding: "2vw"}}>
                                                 <img src={studioImage} className="img__fit__full-width center"/>
-                                                <h2 className="centered">{title_en}</h2>
+                                                <h2 className="centered responsive uppercase">{title_en}</h2>
                                             </div>
                                         </div>
                                     )

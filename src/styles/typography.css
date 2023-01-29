@@ -50,6 +50,13 @@ h2.graphic_archive_02{
     animation: none;
 }
 
+h2.responsive{
+    font-family: "Fungal";
+    font-size: 8vw;
+    font-weight: bolder;
+    color: rgb(242, 245, 220, 0.7)
+}
+
 h3 {
     font-size: 0.5rem;
     animation: none;
