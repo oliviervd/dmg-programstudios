@@ -63,6 +63,12 @@ html, body {
     orientation: landscape;
 }
 
+@media screen and (max-width: 740px) {
+    html, body {
+        overflow: auto;
+    }
+}
+
 .centerBox{
     display: flex;
     justify-content: center;
