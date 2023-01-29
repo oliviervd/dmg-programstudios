@@ -4,6 +4,12 @@
  V: vertical (columns)
  */}
 
+.grid-autoFill{
+    display: grid;
+    position: relative;
+    text-align: center;
+}
+
 .grid--1_8_1 {
     display:grid;
     grid-template-columns: 10% 80% 10%;

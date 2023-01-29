@@ -117,7 +117,7 @@ const Home = () => {
                     </div>
                 }
                 { isMobile &&
-                    <div className="rowScrollMain">
+                    <div >
                         <div style={{marginTop: "3vh", marginBottom: "3vh"}}>
                             <Header big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
                         </div>
@@ -135,30 +135,28 @@ const Home = () => {
 
                                 if (studioType === "studio") {
                                     return(
-                                        <div>
-                                            <h2 className='main text-center'>{title_en}</h2>
-                                            <div class="img__dither" style={{margin: "3.33vw"}}>
-                                                <picture>
-                                                    <img src={studioImage} className="img__fit center"/>
-                                                </picture>
+                                        <div className="grid-autoFill">
+                                            <div style={{padding: "2vw"}}>
+                                                <img src={studioImage} className="img__fit__full-width center"/>
+                                                <h2 className="centered">{title_en}</h2>
                                             </div>
                                         </div>
-                                        )
+                                    )
                                 }
                             }
                             ))}
 
-                        </div>
-                    </div>
-
-                }
-
             </div>
         </div>
 
-
-
-    )
 }
 
-export default Home;
+</div>
+</div>
+
+
+
+)
+}
+
+    export default Home;

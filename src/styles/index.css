@@ -724,16 +724,16 @@ imageViewer__modal-main {
     height: auto;
 }
 
-.img__dither > picture::after {
-    content: '';
-    pointer-events: none;
-    z-index: 222222222222;
-    top: 0px;
-    left:0px;
-    background-image: url(LDR_RG01_7.png);
-    background-repeat: repeat;
+.img__fit__full-width{
+    width: 90vw;
 }
 
+.centered {
+    position: absolute;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 
 .hexBox{
     width: 20vw;
