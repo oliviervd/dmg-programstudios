@@ -24,7 +24,7 @@ const Home = () => {
     // https://www.websitecarbon.com/website/modelsfromthepastforthefuture-herokuapp-com
 
     const [language, setLanguage] = useState("EN");
-    const [about, setAbout] = useState(true);
+    const [about, setAbout] = useState(false);
     const [hoverContent, setHoverContent] = useState(" ");
     const [carouselState, setCarouselState] = useState("true");
     const [darkMode, setDarkMode] = useState(false)
@@ -37,12 +37,9 @@ const Home = () => {
 
     console.log(_studios)
 
-
-
     return(
         <div className={visualIdentity}>
             <div className={` ${darkMode?"darkMode":"lightMode"}`}>
-
                 {isDesktopOrLaptop &&
                     <div className={carouselState?"grid-home-main-open full-page":"grid-home-main-closed full-page"}>
                         <div>
@@ -123,40 +120,36 @@ const Home = () => {
                         </div>
                         <div>
                             {_studios.map((studio => {
-                                let title_en, description, studioImage, studioID, studioType, studioLink;
-                                title_en = fetchTitle(studio, language, "studio");
-                                description = fetchDescription(studio, language, "studio");
-                                studioImage = fetchImage(studio, "studio");
-                                console.log(studioImage)
-                                studioType = fetchType(studio);
-                                studioID = fetchStudioID(studio);
-                                studioLink = fetchStudioProjectLink(studio)
-                                console.log(studioLink);
+                                    let title_en, description, studioImage, studioID, studioType, studioLink;
+                                    title_en = fetchTitle(studio, language, "studio");
+                                    description = fetchDescription(studio, language, "studio");
+                                    studioImage = fetchImage(studio, "studio");
+                                    console.log(studioImage)
+                                    studioType = fetchType(studio);
+                                    studioID = fetchStudioID(studio);
+                                    studioLink = fetchStudioProjectLink(studio)
+                                    console.log(studioLink);
 
-                                if (studioType === "studio") {
-                                    return(
-                                        <div className="grid-autoFill">
-                                            <div style={{padding: "2vw"}}>
-                                                <img src={studioImage} className="img__fit__full-width center"/>
-                                                <h2 className="centered responsive uppercase">{title_en}</h2>
+                                    if (studioType === "studio") {
+                                        return(
+                                            <div className="grid-autoFill">
+                                                <div style={{padding: "2vw"}}>
+                                                    <div className="grid--even" style={{padding: "2vh"}}>
+                                                        <div className="lineH"></div>
+                                                        <h2 className="uppercase">{title_en}</h2>
+                                                    </div>
+                                                </div>
                                             </div>
-                                        </div>
-                                    )
+                                        )
+                                    }
                                 }
-                            }
                             ))}
-
+                        </div>
+                    </div>
+                }
             </div>
         </div>
-
+    )
 }
 
-</div>
-</div>
-
-
-
-)
-}
-
-    export default Home;
+export default Home;

@@ -10,6 +10,11 @@
     text-align: center;
 }
 
+.grid--even{
+    display: grid;
+    grid-template-rows: auto;
+}
+
 .grid--1_8_1 {
     display:grid;
     grid-template-columns: 10% 80% 10%;

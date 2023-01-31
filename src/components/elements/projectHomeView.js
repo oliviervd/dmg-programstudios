@@ -9,7 +9,7 @@ const ProjectHomeView = (props) => {
     varW = varW + "px";
     return(
         <div className="fade-in fade-out">
-            <img className="img__thumbnail" src={img} alt={img} style={{marginLeft: varH, marginTop: varW}}/>
+            {/*<img className="img__thumbnail" src={img} alt={img} style={{marginLeft: varH, marginTop: varW}}/>*/}
         </div>
     )
 }

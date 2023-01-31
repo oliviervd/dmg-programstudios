@@ -57,8 +57,6 @@ const ProjectHomeSnippet = (props) => {
                         <div className="borderLine-left">
                             <h2 className="text-center uppercase box-title">{projectTitle}</h2>
                             <img className="img__fit center" src={projectIMG}
-                                 onMouseOver={() => props.setHoverContent(projectIMG)}
-                                 onMouseLeave={() => props.setHoverContent(" ")}
                                  onClick={() => props.setCarouselState(!props.carouselState)}/>
                             <p className="uppercase justify padding-10">{projectDesc}</p>
                         </div>

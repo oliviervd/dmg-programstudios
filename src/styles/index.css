@@ -58,9 +58,9 @@ html, body {
     overflow: hidden;
     text-rendering: optimizeLegibility;
     cursor: cell;
-    background: linear-gradient(180deg, white 0%,  #fbf2e7 85%);
     scroll-behavior: smooth;
     orientation: landscape;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 @media screen and (max-width: 740px) {

@@ -3,7 +3,7 @@ import {headerAbout} from "../utils/data_parsers";
 
 const HamburgerMenu = (props) => {
 
-    const [hamburgerOpen, setHamburgerOpen] = useState(false);
+    const [hamburgerOpen, setHamburgerOpen] = useState(true);
 
     return(
         <div>
