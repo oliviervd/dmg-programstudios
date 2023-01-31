@@ -136,7 +136,7 @@ const Home = () => {
                                                 <div style={{padding: "2vw"}}>
                                                     <div className="grid--even" style={{padding: "2vh"}}>
                                                         <div className="lineH"></div>
-                                                        <h2 className="uppercase">{title_en} sytle={{fontSize="40px"}}</h2>
+                                                        <h2 className="uppercase">{title_en} sytle={{fontSize: "40px"}}</h2>
                                                     </div>
                                                 </div>
                                             </div>
