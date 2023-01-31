@@ -64,11 +64,11 @@ h3 {
 
 @media screen and (max-width: 479px) {
     h1 {
-        font-size: 10vw;
+        font-size: 8vw;
         line-height: 90%;
     }
     h2 {
-        font-size: 8vw;
+        font-size: 6vw;
         line-height: 95%;
     }
 }

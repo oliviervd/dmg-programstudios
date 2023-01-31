@@ -44,15 +44,12 @@ const Header = props => {
             {isMobile &&
                 //todo: change to hamburger menu.
                 <div className="grid--3_1">
-                    <h2 className="uppercase" style={{fontSize: "1.33vh", marginLeft: "3.33vw"}}>{headerTitle(props.language, false)}</h2>
-                    <div className="grid--even_3">
-                        <div></div>
+                    <h2 className="uppercase" style={{marginLeft: "3.33vw"}}>{headerTitle(props.language, true)}</h2>
+                    <div>
                         <Suspense>
                             <HamburgerMenu setLanguage={props.setLanguage} language={props.language} setAbout={props.setAbout} about={props.about}/>
                         </Suspense>
-                        <div></div>
                     </div>
-
                 </div>
             }
 
