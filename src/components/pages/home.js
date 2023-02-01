@@ -137,6 +137,7 @@ const Home = () => {
                                                     <div className="grid--even" style={{padding: "2vh"}}>
                                                         <div className="lineH"></div>
                                                         <h2 className="uppercase" onClick={()=>(console.log("open"))}>{title_en} </h2>
+                                                        <div style={{height: "200px"}}></div>
                                                     </div>
                                                 </div>
                                             </div>
