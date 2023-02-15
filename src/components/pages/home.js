@@ -24,11 +24,13 @@ const Home = () => {
     // https://www.websitecarbon.com/website/modelsfromthepastforthefuture-herokuapp-com
 
     const [language, setLanguage] = useState("EN");
+    const [openBox, setOpenBox] =useState(false);
+
     const [about, setAbout] = useState(false);
     const [hoverContent, setHoverContent] = useState(" ");
     const [carouselState, setCarouselState] = useState("true");
     const [darkMode, setDarkMode] = useState(false)
-    const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
+    const [visualIdentity, setVisualIdentity] = useState("graphic_archive_02")
 
     let _studios = []
     studiogrid_data.map((x)=>{
@@ -131,13 +133,19 @@ const Home = () => {
                                     console.log(studioLink);
 
                                     if (studioType === "studio") {
+
                                         return(
                                             <div className="grid-autoFill">
                                                 <div style={{padding: "2vw"}}>
                                                     <div className="grid--even" style={{padding: "2vh"}}>
-                                                        <div className="lineH"></div>
-                                                        <h2 className="uppercase" onClick={()=>(console.log("open"))}>{title_en} </h2>
-                                                        <div style={{height: "200px"}}></div>
+                                                        <div className="grid--75_25">
+                                                            <h2 className="uppercase" onClick={()=>(setOpenBox(!openBox))}>{title_en} </h2>
+                                                            <h2 className="button-dropdown"> V </h2>
+                                                        </div>
+                                                        {openBox &&
+                                                            <div style={{height: "200px"}}></div>
+                                                        }
+
                                                     </div>
                                                 </div>
                                             </div>

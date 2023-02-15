@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: "FT88";
+    src: local("FT88-Gothique"), url(fonts/FT88-Gothique.otf);
+}
+
+@font-face {
     font-family: "BackOut";
     src: local("BackOut"), url(fonts/BackOut.woff2);
 }
@@ -29,9 +34,8 @@
 
 
 h1.home {
-    font-size: 20vh;
-    font-family: "KWBio27-Display", sans-serif;
-    animation: none;
+    font-size: 8vh;
+    font-family: "FT88";
 
 }
 
@@ -44,7 +48,7 @@ h2.main {
 }
 
 h2.graphic_archive_02{
-    font-family: "KWBio27-Display";
+    font-family: "FT88";
     line-height: 2.4vw;
     animation: none;
 }
