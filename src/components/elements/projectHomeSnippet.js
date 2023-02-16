@@ -1,4 +1,5 @@
 import React from "react";
+import {useNavigate} from "react-router-dom";
 import useGoogleSheets from "use-google-sheets";
 import {
     fetchStudioProjectTitle,
@@ -53,6 +54,7 @@ const ProjectHomeSnippet = (props) => {
                 projectTitle = fetchStudioProjectTitle(project, lang, "text", id);
                 projectID = fetchStudioID(project)
                 if (projectID.startsWith(id) && id !== projectID){
+
                     return(
                         <div className="borderLine-left">
                             <h2 className="text-center uppercase box-title">{projectTitle}</h2>

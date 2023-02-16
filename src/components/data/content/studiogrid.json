@@ -1,6 +1,6 @@
 [
   {
-    "id": "col",
+    "id": "collection",
     "_type": "studio",
     "title_nl": "Studio Collectie",
     "title_en": "Studio Collection",
@@ -11,7 +11,7 @@
     "media": "collection_ding_ex.png"
   },
   {
-    "id": "dig",
+    "id": "digital",
     "_type": "studio",
     "title_nl": "Studio Digitaal",
     "title_en": "Studio Digital",
@@ -22,7 +22,7 @@
     "media": "dig_jonstam_1.png"
   },
   {
-    "id": "eco",
+    "id": "care",
     "_type": "studio",
     "title_nl": "Studio Zorg",
     "title_en": "Studio Care",
@@ -33,40 +33,7 @@
     "media":"care_brick.png"
   },
   {
-    "id": "dig_t_1",
-    "_type": "text",
-    "title_nl": "Regisseurstraject: Jon Stam",
-    "title_en": "Director trajectory: Jon Stam",
-    "title_fr": "Programme de direction: Jon Stam",
-    "description_nl": "Met aanvang in januari 2023 start het museum een regisseurstraject met productdesigner Jon Stam (NL). ",
-    "description_en": "Starting in January 2023, the museum will begin a director's program with product designer Jon Stam (NL). Throughout this trajectory we will work together to research, explore and develop new meaningful ways to engage with the collection. ",
-    "description_fr": "À partir de janvier 2023, le musée lancera un programme de direction avec le designer de produits Jon Stam (NL). ",
-    "media":"dig_jonstam_0.png"
-  },
-  {
-    "id": "dig_t_2",
-    "_type": "text",
-    "title_nl": "R&D - kleur als index",
-    "title_en": "R&D - color as index",
-    "title_fr": "R&D - couleur comme indice",
-    "description_nl": "We onderzoeken hoe het indexeren van de collectie op basis van kleur tot nieuwe ervaringen en aanrakeningen met de collectie kan leiden.",
-    "description_en": "We explore how indexing the collection based on colour can lead to new experiences and touches with the collection.",
-    "description_fr": "Nous explorons comment l'indexation de la collection en fonction de la couleur peut conduire à de nouvelles expériences et à de nouveaux contacts avec la collection.",
-    "media":""
-  },
-  {
-    "id": "coll_t_1",
-    "_type": "text",
-    "title_nl": "Re-Use It - Mesh vzw",
-    "title_en": "Open Design Course X Design Museum Gent: Re-Use It - Mesh vzw",
-    "title_fr": "Re-Use It - Mesh vzw",
-    "description_nl": "Re-Use It selecteert objecten uit de Collectie van de Gentenaar, sampelt patronen in vectorformaat, hertekent delen van de objecten en brouwt kleurenpaletten uit deze eclectische database.",
-    "description_en": "Re-Use It selects objects from the Collection, samples patterns in vector format, redraws parts of the objects and brews color palettes from this eclectic database.",
-    "description_fr": "Re-Use It sélectionne des objets de la collection, échantillonne des motifs au format vectoriel, redessine des parties des objets et crée des palettes de couleurs à partir de cette base de données éclectique.",
-    "media":""
-  },
-  {
-    "id": "graph_t_1",
+    "id": "graphic_t_1",
     "_type": "text",
     "title_nl": "Regisseurstraject: 019 (BE)",
     "title_en": "Director trajectory: 019 (BE)",
@@ -77,7 +44,7 @@
     "media": "graph_019.png"
   },
   {
-    "id": "eco_t_1",
+    "id": "care_t_1",
     "_type": "text",
     "title_nl": "Circulaire gevelsteen voor DING",
     "title_en": "Circular brick for DING",
@@ -88,7 +55,7 @@
     "media":"care_brick_ding.png"
   },
   {
-    "id": "graph",
+    "id": "graphic",
     "_type": "studio",
     "title_nl": "Studio Grafisch",
     "title_en": "Studio Graphic",
