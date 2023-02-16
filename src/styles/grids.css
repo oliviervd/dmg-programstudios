@@ -11,8 +11,7 @@
 
 .grid-autoFill{
     display: grid;
-    position: relative;
-    text-align: center;
+    grid-auto-columns: 50px;
 }
 
 .grid--even{
@@ -159,6 +158,11 @@
 .grid--even_10 {
     display:grid;
     grid-template-columns: repeat(10, 10%);
+}
+
+.grid--even_20 {
+    display:grid;
+    grid-template-columns: repeat(20, 5%);
 }
 
 .gridH--6_4 {
