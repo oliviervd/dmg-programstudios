@@ -4,6 +4,11 @@
  V: vertical (columns)
  */}
 
+.container {
+    padding: 20px;
+}
+
+
 .grid-autoFill{
     display: grid;
     position: relative;
