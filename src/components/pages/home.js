@@ -30,7 +30,7 @@ const Home = () => {
     const [hoverContent, setHoverContent] = useState(" ");
     const [carouselState, setCarouselState] = useState("true");
     const [darkMode, setDarkMode] = useState(false)
-    const [visualIdentity, setVisualIdentity] = useState("graphic_archive_02")
+    const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
 
     let _studios = []
     studiogrid_data.map((x)=>{
