@@ -35,7 +35,6 @@ export function fetchImage(i, _type) {
 }
 
 export function headerTitleBig(lang, _type) {
-    let title;
         if (lang === "EN") {
             return (
                 <div>
@@ -62,8 +61,7 @@ export function headerTitleBig(lang, _type) {
 }
 
 export function headerTitle(lang, stacked) {
-    let title;
-    if (stacked==true){
+    if (stacked===true){
         if (lang === "EN") {
             return (
                 <div>
