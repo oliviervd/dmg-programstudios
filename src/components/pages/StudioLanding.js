@@ -15,12 +15,11 @@ const StudioLanding = (props) => {
                 <div>
 
                 </div>
-                <div>
-
-                </div>
+                <div className="lineH">
                     <Suspense>
                         <InteractionBar/>
                     </Suspense>
+                </div>
                 <div>
 
                 </div>
