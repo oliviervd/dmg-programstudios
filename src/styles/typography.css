@@ -14,6 +14,11 @@
 }
 
 @font-face {
+    font-family: "Equateur";
+    src: local("Equateur-Regular"), url(fonts/Equateur-Regular.ttf);
+}
+
+@font-face {
     font-family: "BackOut";
     src: local("BackOut"), url(fonts/BackOut.woff2);
 }
@@ -24,7 +29,7 @@
 }
 
 .graphic_archive_01 {
-    font-family: "KWBio27-Display", sans-serif;
+    font-family: "Equateur", sans-serif;
 }
 
 .graphic_archive_02 {
