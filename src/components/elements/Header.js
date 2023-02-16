@@ -20,10 +20,10 @@ const Header = props => {
             {isDesktopOrLaptop &&
                 <div className="grid--even_10">
                     {props.big &&
-                        <div className="uppercase text-center" style={{margin: 10}}>{headerTitleBig(props.language)}</div>
+                        <div className="home uppercase text-center" style={{margin: 10}}>{headerTitleBig(props.language)}</div>
                     }
                     {!props.big &&
-                        <div className="uppercase text-center" style={{margin: 10}}>{headerTitle(props.language)}</div>
+                        <div className="home uppercase text-center" style={{margin: 10}}>{headerTitle(props.language)}</div>
                     }
                     <div/>
                     <div/>
@@ -44,7 +44,7 @@ const Header = props => {
             {isMobile &&
                 //todo: change to hamburger menu.
                 <div className="grid--3_1">
-                    <h2 className="uppercase" style={{marginLeft: "3.33vw"}}>{headerTitle(props.language, true)}</h2>
+                    <h2 className="home uppercase" style={{marginLeft: "3.33vw"}}>{headerTitle(props.language, true)}</h2>
                     <div>
                         <Suspense>
                             <HamburgerMenu setLanguage={props.setLanguage} language={props.language} setAbout={props.setAbout} about={props.about}/>
@@ -52,7 +52,6 @@ const Header = props => {
                     </div>
                 </div>
             }
-
         </div>
     )
 }
