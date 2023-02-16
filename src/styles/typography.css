@@ -1,21 +1,16 @@
 
 
 /* ---------------------------------- FONTS & TYPE ---------------------------------- */
-
-
-@font-face {
-    font-family: "KWBio27-Display";
-    src: local("KWBio27-Display"), url(fonts/KWBio27-Display.otf);
-}
+/* WOFF is cleaner; */
 
 @font-face {
     font-family: "FT88";
-    src: local("FT88-Gothique"), url(fonts/FT88-Gothique.otf);
+    src: local("FT88-Gothique"), url(fonts/FT88-Gothique.woff2);
 }
 
 @font-face {
     font-family: "Equateur";
-    src: local("Equateur-Regular"), url(fonts/Equateur-Regular.ttf);
+    src: local("Equateur-Regular"), url(fonts/Equateur-Regular.woff2);
 }
 
 @font-face {
