@@ -1,9 +1,10 @@
-import React, {useState, Suspense, useEffect} from "react";
+import React, {useState, Suspense} from "react";
 import {fetchTitle, fetchDescription, fetchImage, fetchText, fetchStudioID, fetchType, fetchStudioProjectLink} from "../utils/data_parsers";
+import {useNavigate} from "react-router-dom"
+
 import ProjectHomeSnippet from "../elements/projectHomeSnippet";
 import ProjectHomeView from "../elements/projectHomeView";
 import Header from "../elements/Header";
-import {Link} from "react-router-dom";
 import studiogrid_data from "../data/content/studiogrid.json"
 import {useMediaQuery} from "react-responsive";
 
@@ -11,14 +12,15 @@ import {useMediaQuery} from "react-responsive";
 const Home = () => {
 
     const InteractionBar = React.lazy(()=>import("../elements/interactionBar"))
-
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
     })
-
     const isMobile = useMediaQuery({
         query: '(max-width: 1224px)'
     })
+
+    let navigate = useNavigate();
+
 
     // todo: make more carbon neutral (83)
     // https://www.websitecarbon.com/website/modelsfromthepastforthefuture-herokuapp-com
@@ -36,8 +38,6 @@ const Home = () => {
     studiogrid_data.map((x)=>{
         _studios.push(x);
     })
-
-    console.log(_studios)
 
     return(
         <div className={visualIdentity}>
@@ -83,21 +83,26 @@ const Home = () => {
 
                         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}} className={"lineH grid--even_4 HomeProjectGridContainer"}>
                             {_studios.map((studio => {
-                                let title_en, description, studioImage, studioID, studioType, studioLink;
+                                let title_en, description, studioImage, studioID, studioType, studioLink, href;
                                 title_en = fetchTitle(studio, language, "studio");
                                 description = fetchDescription(studio, language, "studio");
                                 studioImage = fetchImage(studio, "studio");
-                                console.log(studioImage)
                                 studioType = fetchType(studio);
                                 studioID = fetchStudioID(studio);
-                                studioLink = fetchStudioProjectLink(studio)
-                                console.log(studioLink);
 
                                 if (studioType === "studio") {
+                                    href = "/studio/" + studio.title_en.split(" ")[1].toLowerCase();
+                                    const routeChange = () =>{
+                                        navigate(href);
+                                    }
+
+
+                                    // construct URIs
+
                                     return(
                                         <div id="HomeProjectGrid" className="rowScroll fade-in open">
                                             <div>
-                                                <h2 className="text-center uppercase box-title grow main">{title_en}</h2>
+                                                <h2 className="text-center uppercase box-title grow main" onClick={routeChange}>{title_en}</h2>
                                                 <p className="uppercase justify padding-10" style={{height:'10vh'}}>{description}</p>
                                                 <img className="img__fit center" src={studioImage}
                                                      onClick={()=>setCarouselState(!carouselState)}
@@ -122,15 +127,9 @@ const Home = () => {
                         </div>
                         <div>
                             {_studios.map((studio => {
-                                    let title_en, description, studioImage, studioID, studioType, studioLink;
+                                    let title_en, description, studioType;
                                     title_en = fetchTitle(studio, language, "studio");
-                                    description = fetchDescription(studio, language, "studio");
-                                    studioImage = fetchImage(studio, "studio");
-                                    console.log(studioImage)
                                     studioType = fetchType(studio);
-                                    studioID = fetchStudioID(studio);
-                                    studioLink = fetchStudioProjectLink(studio)
-                                    console.log(studioLink);
 
                                     if (studioType === "studio") {
 
