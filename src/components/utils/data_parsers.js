@@ -54,7 +54,7 @@ export function headerTitleBig(lang, _type) {
             return(
                     <div>
                         <h1 className={"home"}>studios de</h1>
-                        <h1 className={" home"}>programmation</h1>
+                        <h1 className={"home"}>programmation</h1>
                     </div>
                 )
         }
@@ -67,22 +67,22 @@ export function headerTitle(lang, stacked) {
         if (lang === "EN") {
             return (
                 <div>
-                    <h1>program</h1>
-                    <h1>studios</h1>
+                    <h1 className="home">program</h1>
+                    <h1 className="home">studios</h1>
                 </div>
             )
         } else if (lang === "NL") {
             return (
                 <div>
-                    <h1>programma</h1>
-                    <h1 className>studios</h1>
+                    <h1 className="home">programma</h1>
+                    <h1 className="home">studios</h1>
                 </div>
             )
         } else {
             return(
                 <div>
-                    <h1>studios de</h1>
-                    <h1 className>programmation</h1>
+                    <h1 className="home">studios de</h1>
+                    <h1 className="home">programmation</h1>
                 </div>
             )
         }

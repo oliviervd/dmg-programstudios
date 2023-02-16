@@ -10,6 +10,7 @@ import './styles/colors.css'
 // import pages
 import Home from "./components/pages/home";
 import ColorTagger from "./components/pages/ColorTagger";
+import BlackHole from "./components/pages/BlackHole"
 
 const rootElement = document.getElementById("root");
 render(
@@ -17,6 +18,8 @@ render(
             <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/color-tagger" element={<ColorTagger />}/>
+                <Route path="/studio/:id"/>
+                <Route path="*" element={<BlackHole />} />
             </Routes>
     </BrowserRouter>,
     rootElement
