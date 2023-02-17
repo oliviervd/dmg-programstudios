@@ -1,6 +1,5 @@
 import React from "react";
 import {useNavigate} from "react-router-dom";
-import useGoogleSheets from "use-google-sheets";
 import {
     fetchStudioProjectTitle,
     fetchStudioProjectDescription,
@@ -8,7 +7,6 @@ import {
     fetchStudioID
 } from "../utils/data_parsers";
 import studiogrid_data from "../data/content/studiogrid.json"
-
 
 const ProjectHomeSnippet = (props) => {
 
@@ -20,29 +18,6 @@ const ProjectHomeSnippet = (props) => {
     studiogrid_data.map((x)=>{
         _projects.push(x);
     })
-
-    /*
-    const {data, loading, error} = useGoogleSheets( {
-        apiKey: "AIzaSyAhfyQ_9XDc6ajRYDy3qPXPAp8mkLKja90",
-        sheetId: "1t8c2FwHlhGBXQ22zg0BRPNdElKNg5_yu8CUAMGY_hvw",
-        datasheetOptions: [{id: 'Studios'}],
-    })
-
-    if (loading) {
-        return <div><p>loading...</p></div>
-    }
-
-    if (error) {
-        return <div><p>error!</p></div>
-    }
-
-    let _projects = [];
-    data.map((x) => {
-        x.data.map((l) => {
-            _projects.push(l)
-        })
-    })
-    */
 
     return(
         <div>
