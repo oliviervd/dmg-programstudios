@@ -1,5 +1,4 @@
 import React from "react";
-import {useNavigate} from "react-router-dom";
 import {
     fetchStudioProjectTitle,
     fetchStudioProjectDescription,
@@ -15,7 +14,7 @@ const ProjectHomeSnippet = (props) => {
     lang = props.lang;
 
     let _projects = []
-    studiogrid_data.map((x)=>{
+    studiogrid_data.forEach((x)=>{
         _projects.push(x);
     })
 
@@ -33,11 +32,13 @@ const ProjectHomeSnippet = (props) => {
                     return(
                         <div className="borderLine-left">
                             <h2 className="text-center uppercase box-title">{projectTitle}</h2>
-                            <img className="img__fit center" src={projectIMG}
+                            <img className="img__fit center" src={projectIMG} alt ={""}
                                  onClick={() => props.setCarouselState(!props.carouselState)}/>
                             <p className="uppercase justify padding-10">{projectDesc}</p>
                         </div>
                     )
+                } else {
+                    return(null)
                 }
 
             })}
