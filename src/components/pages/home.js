@@ -1,5 +1,13 @@
 import React, {useState, Suspense} from "react";
-import {fetchTitle, fetchDescription, fetchImage, fetchText, fetchStudioID, fetchType, fetchStudioProjectLink} from "../utils/data_parsers";
+import {
+    fetchTitle,
+    fetchDescription,
+    fetchImage,
+    fetchText,
+    fetchStudioID,
+    fetchType,
+    headerTitleBig
+} from "../utils/data_parsers";
 import {useNavigate} from "react-router-dom"
 
 import ProjectHomeSnippet from "../elements/projectHomeSnippet";
@@ -35,7 +43,7 @@ const Home = () => {
     const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
 
     let _studios = []
-    studiogrid_data.map((x)=>{
+    studiogrid_data.forEach((x)=>{
         _studios.push(x);
     })
 
@@ -45,13 +53,13 @@ const Home = () => {
                 {isDesktopOrLaptop &&
                     <div className={carouselState?"grid-home-main-open full-page":"grid-home-main-closed full-page"}>
                         <div>
-                            <Header big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
+                            <Header showAbout={true} content={headerTitleBig(language)} big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
                             <ProjectHomeView style={{zIndex: -100000}} img={hoverContent}/>
                         </div>
                         <div className="grid--1_1">
                             <div></div>
                             <div style={{margin: 10}}>
-                                {_studios.map((text => {
+                                {_studios.forEach((text => {
                                     let _text;
                                     _text = fetchText(text, language, "about");
                                     if (typeof _text !== "undefined"){
@@ -83,7 +91,7 @@ const Home = () => {
 
                         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}} className={"lineH grid--even_4 HomeProjectGridContainer"}>
                             {_studios.map((studio => {
-                                let title_en, description, studioImage, studioID, studioType, studioLink, href;
+                                let title_en, description, studioImage, studioID, studioType, href;
                                 title_en = fetchTitle(studio, language, "studio");
                                 description = fetchDescription(studio, language, "studio");
                                 studioImage = fetchImage(studio, "studio");
@@ -104,7 +112,7 @@ const Home = () => {
                                             <div>
                                                 <h2 className="text-center uppercase box-title grow main" onClick={routeChange}>{title_en}</h2>
                                                 <p className="uppercase justify padding-10" style={{height:'10vh'}}>{description}</p>
-                                                <img className="img__fit center" src={studioImage}
+                                                <img className="img__fit center" src={studioImage} alt={""}
                                                      onClick={()=>setCarouselState(!carouselState)}
                                                      onMouseOver={()=>setHoverContent(studioImage)}
                                                      onMouseLeave={()=>setHoverContent(" ")}/>
@@ -115,6 +123,8 @@ const Home = () => {
                                             </div>
                                         </div>
                                     )
+                                } else {
+                                    return(null)
                                 }
                             }))}
                         </div>
@@ -127,7 +137,7 @@ const Home = () => {
                         </div>
                         <div>
                             {_studios.map((studio => {
-                                    let title_en, description, studioType;
+                                    let title_en, studioType;
                                     title_en = fetchTitle(studio, language, "studio");
                                     studioType = fetchType(studio);
 
@@ -149,6 +159,8 @@ const Home = () => {
                                                 </div>
                                             </div>
                                         )
+                                    } else {
+                                        return(null)
                                     }
                                 }
                             ))}
