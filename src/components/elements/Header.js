@@ -21,7 +21,7 @@ const Header = props => {
             {isDesktopOrLaptop &&
                 <div className="grid--even_10">
                     {props.big &&
-                        <div className="home  text-center" style={{margin: 10}}>{headerTitleBig(props.language)}</div>
+                        <div className="home  text-center" style={{margin: 10}}>{props.content}</div>
                     }
                     {!props.big &&
                         <div className="home  text-center" style={{margin: 10}}>{headerTitle(props.language)}</div>
@@ -33,7 +33,12 @@ const Header = props => {
                     <div/>
                     <div/>
                     <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => navigate("/index")}>INDEX</h2>
-                    <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setAbout(!props.about)}>{headerAbout(props.language)}</h2>
+                    {props.showAbout &&
+                        <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setAbout(!props.about)}>{headerAbout(props.language)}</h2>
+                    }
+                    {!props.showAbout &&
+                        <div/>
+                    }
 
                     <div className="grid--even_3">
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setLanguage("EN")}>EN</h2>
