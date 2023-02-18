@@ -19,7 +19,7 @@ render(
     <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/color-tagger" element={<ColorTagger />}/>
+                <Route path="/interfaces/color-tagger" element={<ColorTagger />}/>
                 <Route path="/studio/:id" element={<StudioLanding />}/>
                 <Route path="/index" element={<Index />} />
                 <Route path="*" element={<BlackHole />} />
