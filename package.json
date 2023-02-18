@@ -2,7 +2,7 @@
   "name": "spectre",
   "version": "0.1.0",
   "engines": {
-    "node": "14.x"
+    "node": "19.x"
   },
   "private": true,
   "homepage": "https://modelsfromthepastforthefuture.herokuapp.com/",
