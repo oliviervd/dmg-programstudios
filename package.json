@@ -5,7 +5,7 @@
     "node": "14.x"
   },
   "private": true,
-  "homepage": "https://modelsfromthepastforthefuture.herokuapp.com/",
+  "homepage": "https://dmg-programstudios.herokuapp.com/",
   "author": "Olivier Van D'huynslager (Design Museum Gent)",
   "dependencies": {
     "@supabase/supabase-js": "^2.8.0",
