@@ -1,7 +1,4 @@
 import React from "react";
-import { createClient } from 'https://esm.sh/@supabase/supabase-js@2'
-const supabase = createClient('https://xyzcompany.supabase.co', 'public-anon-key')
-
 
 export function fetchText(i, lang, id) {
         if (i.id === id) {
