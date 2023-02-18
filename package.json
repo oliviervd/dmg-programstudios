@@ -5,15 +5,13 @@
     "node": "14.x"
   },
   "private": true,
-  "homepage": "https://dmg-programstudios.herokuapp.com/",
+  "homepage": "https://modelsfromthepastforthefuture.herokuapp.com/",
   "author": "Olivier Van D'huynslager (Design Museum Gent)",
   "dependencies": {
-    "@supabase/supabase-js": "^2.8.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "axis": "^1.0.0",
-    "babel-loader": "^9.1.2",
     "dotenv": "^10.0.0",
     "jquery": "^3.6.0",
     "os": "^0.1.2",
@@ -30,7 +28,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "react-scripts start",
+    "dev": "npm start",
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
