@@ -59,7 +59,7 @@ const Home = () => {
                         <div className="grid--1_1">
                             <div></div>
                             <div style={{margin: 10}}>
-                                {_studios.forEach((text => {
+                                {_studios.map((text => {
                                     let _text;
                                     _text = fetchText(text, language, "about");
                                     if (typeof _text !== "undefined"){
@@ -73,7 +73,11 @@ const Home = () => {
                                                     <p>{_t}</p>
                                                 </div>
                                             )
+                                        } else {
+                                            return(null)
                                         }
+                                    } else {
+                                        return(null)
                                     }
                                 }))}
                             </div>
