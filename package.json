@@ -29,7 +29,7 @@
     "webpack": "^5.75.0"
   },
   "scripts": {
-    "dev": "npm start",
+    "dev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
