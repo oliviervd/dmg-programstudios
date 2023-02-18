@@ -8,6 +8,7 @@
   "homepage": "https://modelsfromthepastforthefuture.herokuapp.com/",
   "author": "Olivier Van D'huynslager (Design Museum Gent)",
   "dependencies": {
+    "@supabase/supabase-js": "^2.8.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -28,7 +29,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "npm start",
+    "dev": "react-scripts start",
     "start": "serve -s build",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
