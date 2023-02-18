@@ -1,6 +1,4 @@
 import React, {useState, useEffect} from "react"
-import * as dotenv from 'dotenv'
-
 
 //data import
 import object_c from "../data/db/20230122_color_data_clean_10.json";
@@ -17,8 +15,8 @@ import InteractionBar from "../elements/interactionBar";
 
 const ColorTagger = () => {
 
-    const supabaseUrl = process.env.SUPABASE_URL
-    const supabaseKey = process.env.SUPABASE_KEY
+    const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
+    const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
     const supabase = createClient(supabaseUrl, supabaseKey)
 
 
