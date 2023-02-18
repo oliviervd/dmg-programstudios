@@ -1,5 +1,1 @@
 # PROGRAM STUDIOS WEB INTERFACE 
-Design Museum Gent develops a sustainable program driven by the activity of five studios. In each Studio, a multidisciplanry team exchanges expertise around a theme and creates multiple forms of output.
-By establishing these studios, the museum wishes to commit itself to a more sustainable and caring artistic operation. Each studio functions complementary to both other studios and internal operations.
-In terms of content, the studios align with the museum's identity and run over several years as a form of slow programming. Gradually, they build expertise that is then pooled, shared and communicated.
-The studio's an evolve, change and converge over time, in relation to social dynamics and themes. And embrace fluidity, complexity and experimentation as both a way of being and praxis. 
