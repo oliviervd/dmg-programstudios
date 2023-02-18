@@ -1,5 +1,5 @@
 import React, {lazy, Suspense} from "react";
-import {Link, useNavigate} from "react-router-dom";
+import {useNavigate} from "react-router-dom";
 import {headerAbout, headerTitle, headerTitleBig} from "../utils/data_parsers";
 import {useMediaQuery} from "react-responsive";
 
