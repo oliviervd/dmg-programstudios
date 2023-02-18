@@ -13,17 +13,31 @@ import ColorMatchSlider from "../elements/index-color/colorMatchSlider";
 import Header from "../elements/Header";
 import InteractionBar from "../elements/interactionBar";
 
+const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
+const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
+const supabase = createClient(supabaseUrl, supabaseKey)
+
 const ColorTagger = () => {
-
-    const supabaseUrl = process.env.REACT_APP_SUPABASE_URL
-    const supabaseKey = process.env.REACT_APP_SUPABASE_KEY
-    const supabase = createClient(supabaseUrl, supabaseKey)
-
 
     const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
     const [_objectNum] = useState(3)
     const [language, setLanguage] = useState("EN");
 
+    // data fetcher
+    const [colors, setColors] = useState([])
+
+    useEffect(() => {
+        fetchColors()
+    }, []);
+
+    async function fetchColors() {
+        const { data } = await supabase
+            .from("dmg_objects_LDES")
+            .select("color_names", {'head':false})
+        setColors(data)
+    }
+
+    console.log(colors)
 
     //interface for generating curated set based on colorist swap.
     const [numSwap, setNumSwap] = useState(3); //Number of swaps.
@@ -36,7 +50,7 @@ const ColorTagger = () => {
 
     function generateNumSwap() {
         const numSwap = [];
-        for (let n=0; n<swap_c.length; ++n) {
+        for (let n = 0; n < swap_c.length; ++n) {
             numSwap.push(n);
         }
         return Math.floor(Math.random() * numSwap.length);
@@ -47,7 +61,7 @@ const ColorTagger = () => {
     const [colorNameSwap, setColorNameSwap] = useState(swap_c[randomSwapIndex]["color_names"][0]); // store data for CSS color names.
     const [_imSwap, setImSwap] = useState(swap_c[randomSwapIndex]["IIIF_image"]); // store data for props to fetch right image.
 
-    useEffect(()=>{
+    useEffect(() => {
         setColorHexSwap(() => swap_c[randomSwapIndex]["HEX_values"][0]);
         setColorNameSwap(() => swap_c[randomSwapIndex]["color_names"][0]);
         setImSwap(() => swap_c[randomSwapIndex]["IIIF_image"]);
@@ -60,7 +74,7 @@ const ColorTagger = () => {
         let itemsMatch = [];
 
         //loop and check if color name is also in swap sample.
-        for (let n=0; n<object_c.length; ++n) {
+        for (let n = 0; n < object_c.length; ++n) {
             //console.log(object_c[n]["color_names"])
             let arr2 = colorNameSwap
             let maxCount = 0;
@@ -68,8 +82,8 @@ const ColorTagger = () => {
             //retrieve and clean array
             let arr1 = object_c[n]["color_names"].split(",")
             let arr_1_clean = [];
-            for (let a=0; a<arr1.length; ++a) {
-                arr_1_clean.push(arr1[a].replace("[[","").replace("]]","").trim().replace("[","").replace("]","").replace("'","").replace("'",""));
+            for (let a = 0; a < arr1.length; ++a) {
+                arr_1_clean.push(arr1[a].replace("[[", "").replace("]]", "").trim().replace("[", "").replace("]", "").replace("'", "").replace("'", ""));
             }
 
             // TODO: create function that iterates from 1 to 10 --> on each iteration see if valid count, if not stop iterating and set max boundary = iteration cycle.
@@ -77,14 +91,15 @@ const ColorTagger = () => {
 
 
             //todo: interface for number of matching colors
-            if ((arr_1_clean.filter(c => arr2.includes(c))).length >= numberOfMatchingColors)  {
+            if ((arr_1_clean.filter(c => arr2.includes(c))).length >= numberOfMatchingColors) {
                 // check if color in both arrays. Return array with overlap (3 matching colors.)
                 itemsMatch.push(object_c[n]);
                 if (itemsMatch.length <= 3) {
                     maxCount = numberOfMatchingColors
                 }
             }
-        } return itemsMatch;
+        }
+        return itemsMatch;
     }
 
     /// use matched items to generate list of items.
@@ -94,31 +109,29 @@ const ColorTagger = () => {
     //console.log("matched objects: " + matchedObjects.length);
     let MaxCount
 
-    if (matchedObjects.length <= 3 ) {
+    if (matchedObjects.length <= 3) {
         handleNumSwapChange();
         //generateNumSwap()
         setColorHexSwap(() => swap_c[randomSwapIndex]["HEX_values"][0]);
         setColorNameSwap(() => swap_c[randomSwapIndex]["color_names"][0]);
         setImSwap(() => swap_c[randomSwapIndex]["IIIF_image"]);
-        setNumberOfMatchingColors(()=> numberOfMatchingColors-1);
+        setNumberOfMatchingColors(() => numberOfMatchingColors - 1);
     }
 
 
-
-
-    function generateCuration(count){
+    function generateCuration(count) {
 
         const nums = [];
         const ranNums = [];
 
         let j = 0;
-        for (let n=0; n<matchedObjects.length-1; ++n) {
+        for (let n = 0; n < matchedObjects.length - 1; ++n) {
             nums.push(n);
         }
         while (count--) {
             j = Math.floor(Math.random() * nums.length);
             ranNums.push(nums[j]);
-            nums.splice(j,1);
+            nums.splice(j, 1);
         }
         return ranNums
     }
@@ -130,7 +143,8 @@ const ColorTagger = () => {
     const [buttonColor, setButtonColor] = useState("black")
     const [titles, setTitles] = useState([])
 
-    {/* //TODO: move to database */ }
+    {/* //TODO: move to database */
+    }
     let text_intro;
     if (language === "EN") {
         text_intro = "What if machine learning algorithms are considered beyond the search engine paradigm in which they " +
@@ -148,7 +162,7 @@ const ColorTagger = () => {
         setNumberOfMatchingColors("3")
     }
 
-    return(
+    return (
         <div className={visualIdentity}>
             <div className="lightMode">
                 <div className="gridH--1-2-6-1">
@@ -158,36 +172,26 @@ const ColorTagger = () => {
                             <div/>
                             <div>
                                 <ColorMatchSlider numberOfMatchingColors={numberOfMatchingColors}
-                                                  setNumberOfMatchingColors={setNumberOfMatchingColors} matches={matchedObjects.length}
-                                                  lang={language} maxCount={MaxCount} />
+                                                  setNumberOfMatchingColors={setNumberOfMatchingColors}
+                                                  matches={matchedObjects.length}
+                                                  lang={language} maxCount={MaxCount}/>
                             </div>
                             <div>
-                                <svg onClick={()=>setNumSwap(generateNumSwap())} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
-                                    <g>
-                                        <ellipse cx="60" cy="25" rx="50" ry="20"
-                                            stroke={buttonColor} strokeWidth="0.77" fill="none">
-                                        </ellipse>
-                                        <text x="35" y="30" fontSize="15" className={"rhizome"}>CURATE</text>
-                                    </g>
-                                </svg>
+                                <h1 onClick={() => setNumSwap(generateNumSwap())}>
+                                    CURATE
+                                </h1>
                             </div>
                         </div>
-                        <div className={"borderLine-left"} >
+                        <div className={"borderLine-left"}>
                             <div className="grid--even_2">
-                                <h2 style={{marginLeft: 20, marginTop:20}} className={"rhizome"}>color index</h2>
-                                <div >
-                                    <svg onClick={newSwap} xmlns="http://www.w3.org/2000/svg" width="200" height="50">
-                                        <g>
-                                            <ellipse cx="60" cy="25" rx="50" ry="20"
-                                                     stroke={buttonColor} strokeWidth="0.77" fill="none">
-                                            </ellipse>
-                                            <text x="25" y="30" fontSize="15">NEW SWAP</text>
-                                        </g>
-                                    </svg>
+                                <h2 style={{marginLeft: 20, marginTop: 20}} className={"rhizome"}>color index</h2>
+                                <div>
+                                    <h2 onClick={newSwap}>
+                                        NEW SWAP
+                                    </h2>
                                 </div>
-
                             </div>
-                            <div style={{marginLeft: 20, marginRight:20}}>
+                            <div style={{marginLeft: 20, marginRight: 20}}>
                                 <br/>
                                 <p style={{fontWeight: "lighter"}}>{text_intro}</p>
                             </div>
@@ -195,10 +199,11 @@ const ColorTagger = () => {
                     </div>
                     <div className="grid--75_25">
                         <div className="gridH--even_2">
-                            <ColorTagger_imageGenerator className="grid--even_3"  num={num}
-                                                        curatedSet={curation}  data={matchedObjects}
+                            <ColorTagger_imageGenerator className="grid--even_3" num={num}
+                                                        curatedSet={curation} data={matchedObjects}
                                                         titles={titles} setTitles={setTitles}/>
-                            <ColorTagger_colorCubes className="grid--even_3"  num={num} curation={curation} data={matchedObjects}/>
+                            <ColorTagger_colorCubes className="grid--even_3" num={num} curation={curation}
+                                                    data={matchedObjects}/>
                         </div>
                         <div className="gridH--even_2 borderLine-left">
                             <ColorTagger_swapBook className="grid--even_3" num={_imSwap}/>
