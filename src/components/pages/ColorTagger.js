@@ -143,10 +143,6 @@ const ColorTagger = () => {
         setNumberOfMatchingColors("3")
     }
 
-    function parseColorCountLimit() {
-
-    }
-
     return(
         <div className={visualIdentity}>
             <div className="lightMode">
