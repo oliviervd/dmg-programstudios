@@ -1,9 +1,11 @@
 import React, {useState, useEffect} from "react"
+import * as dotenv from 'dotenv'
+
 
 //data import
 import object_c from "../data/db/20230122_color_data_clean_10.json";
 import swap_c from "../data/db/swapbook.json";
-
+import { createClient } from '@supabase/supabase-js'
 import ColorTagger_imageGenerator from "../elements/index-color/ColorTagger_imageGenerator";
 import ColorTagger_swapBook from "../elements/index-color/ColorTagger_swapBook";
 import ColorTagger_colorCubes from "../elements/index-color/ColorTagger_colorCubes";
@@ -14,6 +16,11 @@ import Header from "../elements/Header";
 import InteractionBar from "../elements/interactionBar";
 
 const ColorTagger = () => {
+
+    const supabaseUrl = process.env.SUPABASE_URL
+    const supabaseKey = process.env.SUPABASE_KEY
+    const supabase = createClient(supabaseUrl, supabaseKey)
+
 
     const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
     const [_objectNum] = useState(3)
