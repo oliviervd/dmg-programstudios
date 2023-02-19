@@ -23,9 +23,6 @@ const Index = () => {
     useEffect(() => {
         fetchColors()
     }, []);
-
-
-
     async function fetchColors() {
         const { data } = await supabase
             .from("dmg_objects_LDES")
@@ -78,7 +75,7 @@ const Index = () => {
     }
 
     // set Color for selection of collection;
-    const [objectColor, setObjectColor] = useState("MA");
+    const [objectColor, setObjectColor] = useState("Laurel green");
     const [showColors, setShowColors] = useState(false);
 
     const HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
@@ -107,6 +104,7 @@ const Index = () => {
                 {isDesktopOrLaptop&&
                     <h2 className="uppercase text-center" style={{textAlign: "right", margin: 10, marginTop: "-10px"}} onClick={()=>navigate("/")}>home</h2>
                 }
+
             </div>
             <div className="grid--even">
                 <div>
