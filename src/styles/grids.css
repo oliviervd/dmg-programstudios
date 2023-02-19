@@ -101,7 +101,7 @@
 
 .gridH--even_3{
     display:grid;
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 20vh);
 }
 
 .gridH--1-2-6-1{
