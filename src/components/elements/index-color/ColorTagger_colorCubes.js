@@ -58,49 +58,9 @@ const ColorTagger_colorCubes = (props) => {
 
         console.log(color_name);
 
-        /*const _LDES = LDESViaURI(uri)
-
-        const title_en = _LDES[0]["title_en"];
-        let desc_en;
-        if(_LDES[0]["description_adlib_en"]) {
-            desc_en = _LDES[0]["description_adlib_en"]
-        } else {
-            desc_en = "this object has no description"
-        }
-
-        const LDES_object = JSON.parse(_LDES[0][0]);
-
-        let acquisition_method = ""
-        try {
-            acquisition_method = LDES_object["MaterieelDing.isOvergedragenBijVerwerving"][0]["Activiteit.gebruikteTechniek"][0]["Recht.type"][0]["skos:prefLabel"]["@value"];
-            if (acquisition_method === "aankoop") {
-                acquisition_method = " (purchase)"
-            } else if (acquisition_method === "legaat") {
-                acquisition_method = " (bequest)"
-            }  else if (acquisition_method === "schenking") {
-                acquisition_method = " (gift)"
-            } else if (acquisition_method === "onbekend"|"overdracht") {
-                acquisition_method = ""
-            }
-        } catch {
-            acquisition_method = "";
-        }
-
-        let acquisition_date = "unknown date of transaction" + acquisition_method
-        try {
-            acquisition_date = "date of transaction: " + LDES_object["MaterieelDing.isOvergedragenBijVerwerving"][0]["Conditie.periode"]["Periode.begin"] +  acquisition_method;
-        } catch {
-            acquisition_date = "unknown date of transaction"
-        }*/
-
         color_hex.push(_hexVal);
 
         color_names.push(color_name);
-        //obj_titles_EN.push(title_en);
-        //obj_desc_EN.push(desc_en);
-        //object_number.push(LDES_object["Entiteit.identificator"][1]["skos:notation"]["@value"])
-        //acquisition_dates.push(acquisition_date)
-        //LDES.push(LDES_object);
 
     }
 
