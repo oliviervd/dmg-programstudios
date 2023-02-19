@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react"
+import React, {useState, useEffect, Suspense} from "react"
 import { createClient } from '@supabase/supabase-js'
 import {useNavigate} from "react-router-dom";
 import {shuffleFisherYates, splice, getKeyByValue} from "../utils/utils";
@@ -44,9 +44,27 @@ const Index = () => {
     const Hex100 = shuffleFisherYates(_HexCounts) // RANDOMIZE SELECTION OF COLORS USING FISHER YATES
 
     const Hex100ran = splice(Hex100, 0, 100); // ONLY SELECT FIRST 100 OUT OF SELECTION.
-    const HexOptions = Object.entries(Hex100ran).map(([key , value]) =>  (
-        <h2 style={{color:getKeyByValue(colorRef, key)}} key={key}>{key}</h2>
+
+    // set STYLING (onHover pickup color);
+    const [myStyle, setMyStyle] = useState({})
+    const handleClick = (id) => {
+        setMyStyle(prevState => ({
+            ...myStyle,
+            [id]: !prevState[id]
+        }))
+    }
+
+    // set Color for selection of collection;
+    const [objectColor, setObjectColor] = useState("");
+    const [showObject, setShowObject] = useState(false);
+
+    const HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
+        <h2 className="text-center" style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
+            onClick={()=>setObjectColor(key)} onMouseOver={()=>handleClick(i)} onMouseLeave={()=>handleClick(i)} key={key}>{key} </h2>
     ));
+
+
+
 
     return(
         <div className="container">
@@ -73,11 +91,22 @@ const Index = () => {
                         <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
                     </div>
                     <div className="grid--even_10">
-                        {HexOptions}
+                        <Suspense>
+                            {HexOptions}
+                        </Suspense>
                     </div>
-
-
                 </div>
+
+                <div>
+                    <div className="lineH"/>
+                    <div className="grid--2_6_2">
+                        <p>images</p>
+                        <div></div>
+                        <div></div>
+                    </div>
+                    <h1 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h1>
+                </div>
+
                 <div>
                     <div className="lineH"/>
                     <p>people</p>
