@@ -6,7 +6,7 @@ html, body {
     bottom:0;
     left:0;
     right:0;
-    overflow: scroll;
+    overflow-y: scroll;
     text-rendering: optimizeLegibility;
     cursor: cell;
     scroll-behavior: smooth;
@@ -18,6 +18,8 @@ html, body {
 @media screen and (max-width: 740px) {
     html, body {
         overflow: auto;
+        overflow-y: scroll;
+        overflow-x: hidden;
     }
 }
 
