@@ -4,10 +4,18 @@ import {useNavigate} from "react-router-dom";
 import {shuffleFisherYates, splice, getKeyByValue} from "../utils/utils";
 
 import colorRef from "../data/db/colorRef.json";
+import {useMediaQuery} from "react-responsive";
 
 const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yanhlanhieG5paWpibXF1dWR5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3NDMwNTY0NCwiZXhwIjoxOTg5ODgxNjQ0fQ.3u7yTeQwlheX12UbEzoHMgouRHNEwhKmvWLtNgpkdBY")
 
 const Index = () => {
+
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+    })
+    const isMobile = useMediaQuery({
+        query: '(max-width: 1224px)'
+    })
 
     let navigate = useNavigate();
 
@@ -97,7 +105,9 @@ const Index = () => {
             <div className="grid--3_4_3">
                 <h1 className="home">index</h1>
                 <div></div>
-                <h2 className="uppercase text-center" style={{textAlign: "right", margin: 10, marginTop: "-10px"}} onClick={()=>navigate("/")}>home</h2>
+                {isDesktopOrLaptop&&
+                    <h2 className="uppercase text-center" style={{textAlign: "right", margin: 10, marginTop: "-10px"}} onClick={()=>navigate("/")}>home</h2>
+                }
             </div>
             <div className="grid--even">
                 <div>
@@ -105,7 +115,9 @@ const Index = () => {
                     <div className="grid--2_6_2">
                         <p>colors</p>
                         <div></div>
-                        <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
+                        {isDesktopOrLaptop&&
+                            <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
+                        }
                     </div>
                     <div className={showColors? "full": "half"}>
                         <Suspense>
