@@ -7,7 +7,6 @@ html, body {
     left:0;
     right:0;
     overflow-y: scroll;
-    overflow-x: hidden;
     text-rendering: optimizeLegibility;
     cursor: cell;
     scroll-behavior: smooth;
@@ -16,9 +15,9 @@ html, body {
     -webkit-text-size-adjust: 100%;
 }
 
-
 @media screen and (max-width: 740px) {
     html, body {
+        overflow: auto;
         overflow-y: scroll;
         overflow-x: hidden;
     }
