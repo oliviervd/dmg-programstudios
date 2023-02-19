@@ -8,6 +8,40 @@
     padding: 20px;
 }
 
+.container-masonry{
+    max-width: 100%
+}
+
+.masonry {
+    columns: auto 150px;
+    gap: 15px;
+}
+
+.masonry img{
+    margin-bottom: 10px;
+    border-radius: 1px;
+    max-width: 100%;
+}
+
+.grid-text-autoflow {
+    display: inline-block;
+    margin: 0 0.25rem 0.25rem 0;
+    padding: 0.1rem 0.3rem;
+    font-size: 0.875rem;
+    border-radius: 2px;
+    color: #fafafa;
+    cursor: pointer;
+    overflow-y: scroll;
+    text-decoration: underline;
+    font-weight: bolder;
+}
+
+.half {
+    height: 20vh;
+    overflow-x: hidden;
+    container-type: inline-size;
+    overflow-wrap: break-word;
+}
 
 .grid-autoFill{
     display: grid;

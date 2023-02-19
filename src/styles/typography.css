@@ -29,7 +29,6 @@
 
 .graphic_archive_02 {
     font-family: "FT88";
-    animation: grow 150s ease-in-out infinite;
 }
 
 
@@ -40,6 +39,7 @@ h1.home {
 }
 
 h2 {
+    font-family: "Equateur", sans-serif;
     font-size: 20px;
 }
 
@@ -143,6 +143,7 @@ p.rhizome{
 
 p {
     font-size: 13px;
+    font-family: Equateur;
 }
 
 font-size--small {
