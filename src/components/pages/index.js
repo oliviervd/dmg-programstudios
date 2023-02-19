@@ -18,7 +18,6 @@ const Index = () => {
     })
 
     let navigate = useNavigate();
-
     // COLOR INDEX
     const [colors, setColors] = useState([]);
     useEffect(() => {

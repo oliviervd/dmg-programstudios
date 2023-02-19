@@ -16,6 +16,7 @@ html, body {
     -webkit-text-size-adjust: 100%;
 }
 
+
 @media screen and (max-width: 740px) {
     html, body {
         overflow-y: scroll;
