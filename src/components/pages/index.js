@@ -71,7 +71,8 @@ const Index = () => {
     }
 
     // set Color for selection of collection;
-    const [objectColor, setObjectColor] = useState("MA");
+
+    const [objectColor, setObjectColor] = useState("Laurel green");
     const [showColors, setShowColors] = useState(false);
 
     const HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
