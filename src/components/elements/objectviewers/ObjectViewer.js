@@ -85,110 +85,138 @@ const ObjectViewer = (props) => {
 
         } catch {dimensions=""}
 
-        function fetchMaterials(LDES) {
+        // cedar chest
+
+        function fetchMaterials(LDES ,material) {
             console.log(LDES);
             // materials (geheel) -- P45_consists_of
 
+                if (props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]) {
+                    try{
+                        if (props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][0]){
+                            let len = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"].length
+                            console.log("P45_consists of: " + len)
+                            for (let i = 0; i < len; i++) {
+                                //console.log(props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
+                                let _mat = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                                material.push(_mat + " (geheel)")
+                            }
 
-            // material (parts) -- P46_is_composed_of
-        }
+                        } else {
+                            let len = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"].length
+                            let _mat = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                            //console.log("P45_consists of: " + len)
+                            //console.log(props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
+                            material.push(_mat + " (geheel)")
 
-        fetchMaterials(props.details[0]["LDES_raw"])
+                        }
+                    } catch {}
 
-
-
-        try { // fetch materials
-            if (props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"]) {
-                let materials = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"]
-                for (let i = 0;  i < props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"].length; i++) {
-                    console.log(true)
-                    console.log(props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][1]["skos:prefLabel"]["@value"])
-                        let mat = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@id"].split("/")[7] // fetch material
-                        let note = materials[i]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@id"].split("/")[7] // fetch note (P3)
-                        material.push(mat +" ("+note+")")
-                    }
-
-                    // append both values}
-            } else if (props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]) {
-                let materials = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]
-                if (materials.length >= 0) {
-
-                    for (let i = 0; i < materials.length; i++) {
-                        material.push(materials[i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
-                    }
-                } else {
-                    material.push(props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
                 }
 
+            // material (parts) -- P46_is_composed_of
+                if (props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"]) {
+                    try{
+                        let len = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"].length
+                        console.log("P46_composed_of: " + len)
+                        for (let i = 0; i < len ; i++) {
+                            //todo: fix issue --> when same ID the value isn't parsed
+                            let m  = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"][i]
+                            console.log(m)
+                            let _mat
+                            let note
+                            try {
+                                _mat = m["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][1]["skos:prefLabel"]["@value"];
+                            } catch {
+                                _mat = ""
 
-            }
+                            }
 
-        } catch {material=''}
+                            if (m["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]){
+                                note = m["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@id"].split("/")[7]
+                            } else {
+                                note = "geheel"
+                            }
+
+                            material.push(_mat +" ("+note+")")
+                        }
+                    } catch {}
+                }
+        }
+
+        fetchMaterials(props.details[0]["LDES_raw"], material)
+
     }
 
     return (
-        <div className="ObjectViewer">
-            <div className="grid--9_1">
-                <h1 className={"home"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>{title}</h1>
-                <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
-
+        <div className="ObjectViewer grid--5_95">
+            <div className="LineObjectViewer" style={{borderColor: props.color}}>
+                <div className="LineObjectViewer"></div>
             </div>
-            <h2>{production_date}</h2>
-            <p>objectnummer: {objectNumber}</p>
-            <div className={"grid--4_6"}>
-                <img src={props.image.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}></img>
-                <div>
-                    <p>{description}</p>
-
-                    <br/>
-
-                    {creator != "" &&
-                        <div>
-                            <p className={"underlined"}>created by:</p>
-                            <h2>{creator}</h2>
-                        </div>
-                    }
-
-                    <br/>
-
-                    {producer != "" &&
-                        <div>
-                            <p className={"underlined"}>produced by: </p>
-                            <h2>{producer}</h2>
-                        </div>
-                    }
-
-                    <br/>
-
-                    {dimensions != "" &&
-                        <div>
-                            <p className={"underlined"}>dimensions:</p>
-                            <p>{dimensions}</p>
-                        </div>
-                    }
-
-                    <br/>
-                    <div className={"grid--3_7"}>
-                        <p className={"underlined"}>materials:</p>
-                        <div>
-                            {material &&
-                                material.map(mat => {
-                                    return(
-                                        <p>
-                                            {mat}
-                                        </p>
-                                    )
-                                })
-                            }
-                        </div>
-                    </div>
-
-                    <div>
-                        <p>{composition}</p>
-                    </div>
+            <div>
+                <div className="grid--9_1">
+                    <h1 className={"home"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>{title}</h1>
+                    <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
 
                 </div>
+                <h2>{production_date}</h2>
+                <p>objectnummer: {objectNumber}</p>
+                <div className={"grid--4_6"}>
+                    <img src={props.image.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}></img>
+                    <div>
+                        <p>{description}</p>
+
+                        <br/>
+
+                        {creator != "" &&
+                            <div>
+                                <p className={"underlined"}>created by:</p>
+                                <h2>{creator}</h2>
+                            </div>
+                        }
+
+                        <br/>
+
+                        {producer != "" &&
+                            <div>
+                                <p className={"underlined"}>produced by: </p>
+                                <h2>{producer}</h2>
+                            </div>
+                        }
+
+                        <br/>
+
+                        {dimensions != "" &&
+                            <div>
+                                <p className={"underlined"}>dimensions:</p>
+                                <p>{dimensions}</p>
+                            </div>
+                        }
+
+                        <br/>
+                        <div className={"grid--3_7"}>
+                            <p className={"underlined"}>materials:</p>
+                            <div>
+                                {material &&
+                                    material.map(mat => {
+                                        return(
+                                            <p>
+                                                {mat}
+                                            </p>
+                                        )
+                                    })
+                                }
+                            </div>
+                        </div>
+
+                        <div>
+                            <p>{composition}</p>
+                        </div>
+
+                    </div>
+                </div>
             </div>
+
         </div>
 
     )

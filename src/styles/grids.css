@@ -127,6 +127,11 @@
     grid-template-columns: 90% 10%;
 }
 
+.grid--5_95{
+    display: grid;
+    grid-template-columns: 5% 95%;
+}
+
 .grid--7_3 {
     display: grid;
     grid-template-columns: 70% 30%;
