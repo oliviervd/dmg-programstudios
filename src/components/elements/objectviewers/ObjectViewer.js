@@ -1,5 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {createClient} from "@supabase/supabase-js";
+import {fetchProductionInfo, fetchMaterials} from "../../utils/data_parsers";
 
 const ObjectViewer = (props) => {
     // declare object and its metadata (json) to be used in the viewer
@@ -8,6 +9,7 @@ const ObjectViewer = (props) => {
 
     let title = ""
     let description = ""
+    let productions;
     let production_date = ""
     let producer = ""
     let creator = ""
@@ -16,10 +18,8 @@ const ObjectViewer = (props) => {
     let material = []
     let composition = ""
 
-
-    function fetchMaterialsFromLDES(){}
-
     if (props.details[0]){
+
         objectNumber = props.details[0]["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
         title = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P102_has_title"]["@value"];
         try{ // description
@@ -28,9 +28,7 @@ const ObjectViewer = (props) => {
         try{ // productiedatum
             production_date = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
         } catch {production_date=""}
-        try{ // producent
-            producer = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
-        } catch {production_date=""}
+
         try{
             creator = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
         } catch {}
@@ -85,66 +83,9 @@ const ObjectViewer = (props) => {
 
         } catch {dimensions=""}
 
-        // cedar chest
-
-        function fetchMaterials(LDES ,material) {
-            console.log(LDES);
-            // materials (geheel) -- P45_consists_of
-
-                if (props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]) {
-                    try{
-                        if (props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][0]){
-                            let len = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"].length
-                            console.log("P45_consists of: " + len)
-                            for (let i = 0; i < len; i++) {
-                                //console.log(props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
-                                let _mat = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
-                                material.push(_mat + " (geheel)")
-                            }
-
-                        } else {
-                            let len = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"].length
-                            let _mat = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
-                            //console.log("P45_consists of: " + len)
-                            //console.log(props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
-                            material.push(_mat + " (geheel)")
-
-                        }
-                    } catch {}
-
-                }
-
-            // material (parts) -- P46_is_composed_of
-                if (props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"]) {
-                    try{
-                        let len = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"].length
-                        console.log("P46_composed_of: " + len)
-                        for (let i = 0; i < len ; i++) {
-                            //todo: fix issue --> when same ID the value isn't parsed
-                            let m  = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"][i]
-                            console.log(m)
-                            let _mat
-                            let note
-                            try {
-                                _mat = m["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][1]["skos:prefLabel"]["@value"];
-                            } catch {
-                                _mat = ""
-
-                            }
-
-                            if (m["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]){
-                                note = m["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@id"].split("/")[7]
-                            } else {
-                                note = "geheel"
-                            }
-
-                            material.push(_mat +" ("+note+")")
-                        }
-                    } catch {}
-                }
-        }
-
         fetchMaterials(props.details[0]["LDES_raw"], material)
+        productions = fetchProductionInfo(props.details[0]["LDES_raw"])
+        console.log(productions)
 
     }
 
@@ -177,12 +118,20 @@ const ObjectViewer = (props) => {
 
                         <br/>
 
-                        {producer != "" &&
-                            <div>
-                                <p className={"underlined"}>produced by: </p>
-                                <h2>{producer}</h2>
-                            </div>
-                        }
+                        <div>
+                            <p className={"underlined"}>produced by:</p>
+                            {productions.map(prod => {
+                                console.log(prod)
+                                return(
+                                    <div>
+                                        <h2>{prod.producer}</h2>
+                                        <p>location: {prod.place}</p>
+                                        <p>date: {prod.date}</p>
+                                        <br/>
+                                    </div>
+                                )
+                            })}
+                        </div>
 
                         <br/>
 
