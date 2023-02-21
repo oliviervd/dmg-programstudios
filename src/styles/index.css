@@ -526,6 +526,11 @@ input{
     border: 4px solid palevioletred;
 }
 
+.ObjectViewer img{
+    max-width: 100%;
+    margin: 10px;
+}
+
 
 
 
