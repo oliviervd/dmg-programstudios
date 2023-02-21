@@ -9,9 +9,8 @@ const ObjectViewer = (props) => {
 
     let title = ""
     let description = ""
-    let productions;
+    let productions = ""
     let production_date = ""
-    let producer = ""
     let creator = ""
     let objectNumber = ""
     let dimensions = ""
@@ -25,6 +24,7 @@ const ObjectViewer = (props) => {
         try{ // description
             description = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
         } catch {description = ""}
+
         try{ // productiedatum
             production_date = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
         } catch {production_date=""}
@@ -84,7 +84,10 @@ const ObjectViewer = (props) => {
         } catch {dimensions=""}
 
         fetchMaterials(props.details[0]["LDES_raw"], material)
-        productions = fetchProductionInfo(props.details[0]["LDES_raw"])
+        try {
+            productions = fetchProductionInfo(props.details[0]["LDES_raw"])
+        } catch {}
+
         console.log(productions)
 
     }
@@ -118,20 +121,24 @@ const ObjectViewer = (props) => {
 
                         <br/>
 
-                        <div>
-                            <p className={"underlined"}>produced by:</p>
-                            {productions.map(prod => {
-                                console.log(prod)
-                                return(
-                                    <div>
-                                        <h2>{prod.producer}</h2>
-                                        <p>location: {prod.place}</p>
-                                        <p>date: {prod.date}</p>
-                                        <br/>
-                                    </div>
-                                )
-                            })}
-                        </div>
+                        {productions != "" &&
+                            <div>
+                                <p className={"underlined"}>produced by:</p>
+                                {productions.map(prod => {
+                                    console.log(prod)
+                                    return(
+                                        <div>
+                                            <h2>{prod.producer}</h2>
+                                            <p>location: {prod.place}</p>
+                                            <p>date: {prod.date}</p>
+                                            <br/>
+                                        </div>
+                                    )
+                                })}
+                            </div>
+                        }
+
+
 
                         <br/>
 
