@@ -8,8 +8,19 @@
     padding: 20px;
 }
 
-.container-masonry{
-    max-width: 100%
+.container-masonry-full{
+    width: 100vw
+}
+
+.container-masonry-half{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+}
+
+.ObjectViewer {
+    margin: 10px;
+    height: 700px;
 }
 
 .masonry {
@@ -27,20 +38,13 @@
     display: inline-block;
     margin: 0 0.25rem 0.25rem 0;
     padding: 0.1rem 0.3rem;
-    font-size: 0.875rem;
+    font-size: 1rem;
     border-radius: 2px;
     color: #fafafa;
     cursor: pointer;
     overflow-y: scroll;
     text-decoration: underline;
-    font-weight: bolder;
-}
-
-.half {
-    height: 20vh;
-    overflow-x: hidden;
-    container-type: inline-size;
-    overflow-wrap: break-word;
+    font-weight: lighter;
 }
 
 .grid-autoFill{
@@ -71,6 +75,11 @@
 .grid--3_1{
     display: grid;
     grid-template-columns: 3fr 1fr;
+}
+
+.grid--4_6{
+    display: grid;
+    grid-template-columns: 4fr 6fr;
 }
 
 .grid--2_6_2 {
@@ -111,6 +120,11 @@
 .grid--8_2 {
     display: grid;
     grid-template-columns: 80% 20%;
+}
+
+.grid--9_1 {
+    display: grid;
+    grid-template-columns: 90% 10%;
 }
 
 .grid--7_3 {
