@@ -144,12 +144,19 @@ const Index = () => {
 
                 <div>
                     <div className="lineH"/>
+
                     <div className="grid--2_6_2">
                         <p>images</p>
                         <div></div>
-                        <div></div>
+                        <p></p>
                     </div>
-                    <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
+
+                    <div className="grid--2_6_2">
+                        <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
+                        <div></div>
+                        <p>>>> scroll this way >>>></p>
+                    </div>
+
                     <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
                         <div className={"masonry"} style={{height: "700px", overflowY:"scroll"}}>
                             {imageBlock}

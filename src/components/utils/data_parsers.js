@@ -1,5 +1,105 @@
 import React from "react";
 
+export function fetchProductionInfo(LDES){
+    //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]);
+    let productions = [];
+
+    let producer, production_place, production_date = [];
+    let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"].length
+    console.log(_len)
+    if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][0]) {
+        for (let i = 0; i < _len; i++) {
+            let production = new Object()
+            //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i])
+            producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
+            production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
+            production_date = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+
+            production["producer"] = producer
+            production["place"] = production_place
+            production["date"] = production_date
+
+            productions.push(production)
+
+            console.log(producer);
+            console.log(production_place);
+            console.log(production_date);
+            console.log(productions)
+        }
+    } else {
+        let production = new Object()
+        //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i])
+        producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
+        production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
+        production_date = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+
+        production["producer"] = producer
+        production["place"] = production_place
+        production["date"] = production_date
+
+        productions.push(production)
+
+        console.log(producer);
+        console.log(production_place);
+        console.log(production_date);
+        console.log(productions)
+    }
+    console.log(productions)
+    return productions;
+
+}
+export function fetchMaterials(LDES ,material) {
+    // materials (geheel) -- P45_consists_of
+
+    if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]) {
+        try{
+            if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][0]){
+                let len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"].length
+                for (let i = 0; i < len; i++) {
+                    //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
+                    let _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                    material.push(_mat + " (geheel)")
+                }
+
+            } else {
+                let len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"].length
+                let _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                //console.log("P45_consists of: " + len)
+                //console.log(props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
+                material.push(_mat + " (geheel)")
+
+            }
+        } catch {}
+
+    }
+
+    // material (parts) -- P46_is_composed_of
+    if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"]) {
+        try{
+            let len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"].length
+            for (let i = 0; i < len ; i++) {
+                //todo: fix issue --> when same ID the value isn't parsed
+                let m  = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"][i]
+                let _mat
+                let note
+                try {
+                    _mat = m["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][1]["skos:prefLabel"]["@value"];
+                } catch {
+                    _mat = ""
+                }
+
+                if (m["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]){
+                    note = m["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@id"].split("/")[7]
+                } else {
+                    note = "geheel"
+                }
+
+                material.push(_mat +" ("+note+")")
+            }
+        } catch {}
+    }
+}
+
 export function fetchText(i, lang, id) {
         if (i.id === id) {
             if (lang === "EN") {
