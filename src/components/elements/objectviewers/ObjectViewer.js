@@ -128,9 +128,15 @@ const ObjectViewer = (props) => {
                                     console.log(prod)
                                     return(
                                         <div>
-                                            <h2>{prod.producer}</h2>
-                                            <p>location: {prod.place}</p>
-                                            <p>date: {prod.date}</p>
+                                            {prod.producer &&
+                                                <h2>{prod.producer}</h2>
+                                            }
+                                            {prod.place &&
+                                                <p>location: {prod.place}</p>
+                                            }
+                                            {prod.date &&
+                                                <p>date: {prod.date}</p>
+                                            }
                                             <br/>
                                         </div>
                                     )
