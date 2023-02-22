@@ -13,18 +13,15 @@ export function EDTFtoDate(EDTF){
         let date  = converter.edtfToDate(EDTF)
         if (date.min && date.max) {
             let _date = date.min.toDate().getFullYear() + " - " + date.max.toDate().getFullYear()
-            console.log(_date)
             return _date
         }
 
         else if (date.min && !date.max) {
             let _date = "after " + date.min.toDate().getFullYear()
-            console.log(_date)
             return _date
         }
 
         else {
-            console.log(date);
         }
     }
 
