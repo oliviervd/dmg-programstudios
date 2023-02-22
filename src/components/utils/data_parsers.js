@@ -2,6 +2,27 @@ import React from "react";
 import * as EdtfConverter from 'edtf-converter';
 const converter = new EdtfConverter.Converter();
 
+export function fetchExhibitions(LDES) {
+    //console.log(LDES["object"]["http://purl.org/dc/terms/isPartOf"]);
+    let exhibitions = []
+    let _len = LDES["object"]["http://purl.org/dc/terms/isPartOf"].length
+    if (LDES["object"]["http://purl.org/dc/terms/isPartOf"]) {
+        if (LDES["object"]["http://purl.org/dc/terms/isPartOf"][0]) {
+
+            for (let i =0; i< _len; i++) {
+                let exh = {}
+                let exhibition = LDES["object"]["http://purl.org/dc/terms/isPartOf"][i]["http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"]
+                let exhibition_title = exhibition["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
+                exh["title"] = exhibition_title
+                let exhibition_date = exhibition["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+                exh["date"] = exhibition_date
+                exhibitions.push(exh)
+            }
+        }
+
+    } return exhibitions//console.log(exhibitions)
+}
+
 export function EDTFtoDate(EDTF){
     let input = EDTF;
     if (input == ".."){

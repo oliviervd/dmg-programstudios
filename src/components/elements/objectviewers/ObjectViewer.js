@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {createClient} from "@supabase/supabase-js";
-import {fetchProductionInfo, fetchMaterials, fetchCreatorInfo} from "../../utils/data_parsers";
+import {fetchProductionInfo, fetchMaterials, fetchCreatorInfo, fetchExhibitions} from "../../utils/data_parsers";
 
 const ObjectViewer = (props) => {
     // declare object and its metadata (json) to be used in the viewer
@@ -16,6 +16,7 @@ const ObjectViewer = (props) => {
     let dimensions = ""
     let material = []
     let composition = ""
+    let exhibitions = ""
 
     if (props.details[0]){
 
@@ -88,6 +89,11 @@ const ObjectViewer = (props) => {
             creations = fetchCreatorInfo(props.details[0]["LDES_raw"])
         } catch {}
 
+        try {
+            exhibitions = fetchExhibitions(props.details[0]["LDES_raw"])
+        } catch {}
+
+        console.log(exhibitions)
 
     }
 
@@ -187,6 +193,26 @@ const ObjectViewer = (props) => {
                                 }
                             </div>
                         </div>
+
+                        <br></br>
+
+                        {exhibitions != "" &&
+                            <div className={"grid--3_7"}>
+                                <p className={"underlined"}>shown in exhibitions:</p>
+                                <div>
+                                    {exhibitions &&
+                                        exhibitions.map(exh =>{
+                                            console.log(exh)
+                                            return(
+                                                <div>
+                                                    <p>{exh.title}</p>
+                                                </div>
+                                            )
+                                        })
+                                    }
+                                </div>
+                            </div>
+                        }
 
                         <div>
                             <p>{composition}</p>
