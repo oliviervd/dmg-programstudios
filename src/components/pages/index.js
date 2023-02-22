@@ -33,10 +33,11 @@ const Index = () => {
     useEffect(() => {
         fetchColors()
     }, []);
+
     async function fetchColors() {
         const { data } = await supabase
             .from("dmg_objects_LDES")
-            .select("color_names, HEX_values, iiif_image_uris",  {'head':false})
+            .select("color_names, HEX_values, iiif_image_uris, objectNumber",  {'head':false})
             .not("color_names", 'is', null)
         setColors(data)
     }
@@ -48,6 +49,16 @@ const Index = () => {
             .eq("objectNumber", objectNumber)
         setDetails(data)
     }
+
+    function filterByValue(array, string) {
+        let x = array.filter(o => o.iiif_image_uris.includes(string))
+        return x[0]["objectNumber"];
+        setObjectNumber(x[0]["objectNumber"])
+        console.log(x[0]["objectNumber"])
+
+            //Object.keys(o).some(k => o[k].toLowerCase().includes(string.toLowerCase())));
+    }
+
 
     const HexList = [];
     for (let i=0; i<colors.length; i++){
@@ -83,10 +94,12 @@ const Index = () => {
     // when clicking on an image store objectNumber in memory (objectNumber)
     const handleImgClick = (id) => {
         setImage(id);
-        const objectNumberString = id.split("/")[7].split("-transcode-")[1].split("$")[0].split(".jpg")[0] // derive objectnumber from image URI
-        setObjectNumber(objectNumberString);
+        //const objectNumberString = id.split("/")[7].split("-transcode-")[1].split("$")[0].split(".jpg")[0] // derive objectnumber from image URI
+        //setObjectNumber(objectNumberString);
         setShowDetailUI(true);
+        let objectNumberString = filterByValue(colors, id);
         fetchObjectsByID(objectNumberString)
+
     }
 
     function parseLDES(input) {
@@ -156,8 +169,6 @@ const Index = () => {
                         <div></div>
                         <p>>>> scroll this way >>>></p>
                     </div>
-
-                    //todo: add mediaquery to make more responsive.
 
                     <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
                         <div className={"masonry"} style={{height: "700px", overflowY:"scroll"}}>
