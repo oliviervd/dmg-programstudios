@@ -12,11 +12,12 @@
     width: 100vw
 }
 
-.container-masonry-half{
+.container-masonry-half {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
 }
+
+
 
 .ObjectViewer {
     margin: 10px;

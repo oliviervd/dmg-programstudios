@@ -1,12 +1,52 @@
 import React from "react";
 
+export function fetchCreatorInfo(LDES){
+    let creations = [];
+    let creator, creation_place, creation_date
+    // check if multiple creation events. - designer of conceptual thing. (designed by)
+    let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"].length
+    console.log(_len)
+
+    if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"][0]) {
+        for (let i = 0; i < _len; i++) {
+            let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]
+            let creation = new Object()
+            creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
+            try {
+                try {
+                    creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
+                } catch {}
+                try {
+                    creation["creation_date"] = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+                } catch {}
+                creations.push(creation)
+            } catch {}
+        }
+
+    } else {
+        let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]
+        let creation = new Object()
+        creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
+        try {
+            try {
+                creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
+            } catch {}
+            try {
+                creation["creation_date"] = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+            } catch {}
+            creations.push(creation)
+        } catch {}
+    }
+    return creations;
+}
+
 export function fetchProductionInfo(LDES){
     //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]);
     let productions = [];
 
     let producer, production_place, production_date = [];
     let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"].length
-    console.log(_len)
+    // check if mulptiple instances of productions.
     if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][0]) {
         for (let i = 0; i < _len; i++) {
             let production = new Object()
@@ -26,12 +66,11 @@ export function fetchProductionInfo(LDES){
             productions.push(production)
 
         }
-    } else {
+    } else { // else only parse one instance
         let production = new Object()
         //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i])
         producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
         production["producer"] = producer
-        console.log(producer)
 
         try{
             try {

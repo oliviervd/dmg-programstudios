@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import {createClient} from "@supabase/supabase-js";
-import {fetchProductionInfo, fetchMaterials} from "../../utils/data_parsers";
+import {fetchProductionInfo, fetchMaterials, fetchCreatorInfo} from "../../utils/data_parsers";
 
 const ObjectViewer = (props) => {
     // declare object and its metadata (json) to be used in the viewer
@@ -10,8 +10,8 @@ const ObjectViewer = (props) => {
     let title = ""
     let description = ""
     let productions = ""
+    let creations = ""
     let production_date = ""
-    let creator = ""
     let objectNumber = ""
     let dimensions = ""
     let material = []
@@ -28,10 +28,6 @@ const ObjectViewer = (props) => {
         try{ // productiedatum
             production_date = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
         } catch {production_date=""}
-
-        try{
-            creator = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
-        } catch {}
 
         try { // composition P46 --> has note + is composed of
             let note = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"] //fetch note
@@ -88,9 +84,15 @@ const ObjectViewer = (props) => {
             productions = fetchProductionInfo(props.details[0]["LDES_raw"])
         } catch {}
 
-        console.log(productions)
+        try {
+            creations = fetchCreatorInfo(props.details[0]["LDES_raw"])
+        } catch {}
+
+        console.log(creations)
 
     }
+
+    //todo: add mediaquery to make responsive.
 
     return (
         <div className="ObjectViewer grid--5_95">
@@ -112,10 +114,26 @@ const ObjectViewer = (props) => {
 
                         <br/>
 
-                        {creator != "" &&
+                        {creations != "" &&
                             <div>
-                                <p className={"underlined"}>created by:</p>
-                                <h2>{creator}</h2>
+                                <p className={"underlined"}>designed by:</p>
+                                {creations.map(crea => {
+                                    //console.log(prod)
+                                    return(
+                                        <div>
+                                            {crea.creator &&
+                                                <h2>{crea.creator}</h2>
+                                            }
+                                            {crea.creation_place &&
+                                                <p>location: {crea.creation_place}</p>
+                                            }
+                                            {crea.creation_date &&
+                                                <p>date: {crea.creation_date}</p>
+                                            }
+                                            <br/>
+                                        </div>
+                                    )
+                                })}
                             </div>
                         }
 
@@ -125,7 +143,7 @@ const ObjectViewer = (props) => {
                             <div>
                                 <p className={"underlined"}>produced by:</p>
                                 {productions.map(prod => {
-                                    console.log(prod)
+                                    //console.log(prod)
                                     return(
                                         <div>
                                             {prod.producer &&

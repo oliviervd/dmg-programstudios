@@ -157,6 +157,8 @@ const Index = () => {
                         <p>>>> scroll this way >>>></p>
                     </div>
 
+                    //todo: add mediaquery to make more responsive.
+
                     <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
                         <div className={"masonry"} style={{height: "700px", overflowY:"scroll"}}>
                             {imageBlock}
