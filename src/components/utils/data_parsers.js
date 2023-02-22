@@ -1,11 +1,43 @@
 import React from "react";
+import * as EdtfConverter from 'edtf-converter';
+const converter = new EdtfConverter.Converter();
+
+export function EDTFtoDate(EDTF){
+    let input = EDTF;
+    if (input == ".."){
+        let _date = "unknown"
+        return _date
+    }
+
+    else {
+        let date  = converter.edtfToDate(EDTF)
+        if (date.min && date.max) {
+            let _date = date.min.toDate().getFullYear() + " - " + date.max.toDate().getFullYear()
+            console.log(_date)
+            return _date
+        }
+
+        else if (date.min && !date.max) {
+            let _date = "after " + date.min.toDate().getFullYear()
+            console.log(_date)
+            return _date
+        }
+
+        else {
+            console.log(date);
+        }
+    }
+
+
+    //return _date
+}
 
 export function fetchCreatorInfo(LDES){
+
     let creations = [];
     let creator, creation_place, creation_date
     // check if multiple creation events. - designer of conceptual thing. (designed by)
     let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"].length
-    console.log(_len)
 
     if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"][0]) {
         for (let i = 0; i < _len; i++) {
@@ -17,7 +49,11 @@ export function fetchCreatorInfo(LDES){
                     creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
                 } catch {}
                 try {
-                    creation["creation_date"] = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+                    let creation_date = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+                    let _date  = EDTFtoDate(creation_date)
+                    creation["date"] = _date
+                    //creation["date"] = creation_date
+
                 } catch {}
                 creations.push(creation)
             } catch {}
@@ -32,7 +68,9 @@ export function fetchCreatorInfo(LDES){
                 creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
             } catch {}
             try {
-                creation["creation_date"] = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+                let creation_date = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+                let _date  = EDTFtoDate(creation_date)
+                creation["date"] = _date
             } catch {}
             creations.push(creation)
         } catch {}
@@ -59,7 +97,8 @@ export function fetchProductionInfo(LDES){
 
             if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]) {
                 production_date = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
-                production["date"] = production_date
+                let _date  = EDTFtoDate(production_date)
+                production["date"] = _date
             } else continue
 
             production["producer"] = producer
@@ -79,7 +118,8 @@ export function fetchProductionInfo(LDES){
             } catch {}
             try {
                 production_date = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
-                production["date"] = production_date
+                let _date  = EDTFtoDate(production_date)
+                production["date"] = _date
             } catch{}
 
         } catch {}
@@ -143,24 +183,24 @@ export function fetchMaterials(LDES ,material) {
 }
 
 export function fetchText(i, lang, id) {
-        if (i.id === id) {
-            if (lang === "EN") {
-                if (i.description_en !== "") {
-                    const x = i.description_en.split("//")
-                    return x;
-                }
-            } else if (lang === "NL") {
-                if (i.description_nl !== "") {
-                    const x = i.description_nl.split("//")
-                    return x;
-                }
-            } else {
-                if (i.description_fr !== "") {
-                    const x = i.description_fr.split("//")
-                    return x;
-                }
+    if (i.id === id) {
+        if (lang === "EN") {
+            if (i.description_en !== "") {
+                const x = i.description_en.split("//")
+                return x;
+            }
+        } else if (lang === "NL") {
+            if (i.description_nl !== "") {
+                const x = i.description_nl.split("//")
+                return x;
+            }
+        } else {
+            if (i.description_fr !== "") {
+                const x = i.description_fr.split("//")
+                return x;
             }
         }
+    }
 
 }
 
@@ -177,28 +217,28 @@ export function fetchImage(i, _type) {
 }
 
 export function headerTitleBig(lang, _type) {
-        if (lang === "EN") {
-            return (
-                <div>
-                    <h1 className={"home"}>program</h1>
-                    <h1 className={"home"}>studios</h1>
-                </div>
-            )
-        } else if (lang === "NL") {
-            return (
-                <div>
-                    <h1 className={"home"}>programma</h1>
-                    <h1 className={"home"}>studios</h1>
-                </div>
-            )
-        } else {
-            return(
-                    <div>
-                        <h1 className={"home"}>studios de</h1>
-                        <h1 className={"home"}>programmation</h1>
-                    </div>
-                )
-        }
+    if (lang === "EN") {
+        return (
+            <div>
+                <h1 className={"home"}>program</h1>
+                <h1 className={"home"}>studios</h1>
+            </div>
+        )
+    } else if (lang === "NL") {
+        return (
+            <div>
+                <h1 className={"home"}>programma</h1>
+                <h1 className={"home"}>studios</h1>
+            </div>
+        )
+    } else {
+        return(
+            <div>
+                <h1 className={"home"}>studios de</h1>
+                <h1 className={"home"}>programmation</h1>
+            </div>
+        )
+    }
 
 }
 

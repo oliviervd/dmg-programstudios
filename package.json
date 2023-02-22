@@ -15,6 +15,7 @@
     "@testing-library/user-event": "^13.5.0",
     "axis": "^1.0.0",
     "dotenv": "^10.0.0",
+    "edtf-converter": "^4.0.2",
     "jquery": "^3.6.0",
     "node-cron": "^3.0.2",
     "os": "^0.1.2",

@@ -88,7 +88,6 @@ const ObjectViewer = (props) => {
             creations = fetchCreatorInfo(props.details[0]["LDES_raw"])
         } catch {}
 
-        console.log(creations)
 
     }
 
@@ -127,8 +126,8 @@ const ObjectViewer = (props) => {
                                             {crea.creation_place &&
                                                 <p>location: {crea.creation_place}</p>
                                             }
-                                            {crea.creation_date &&
-                                                <p>date: {crea.creation_date}</p>
+                                            {crea.date &&
+                                                <p>date: {crea.date}</p>
                                             }
                                             <br/>
                                         </div>
