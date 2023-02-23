@@ -130,12 +130,17 @@ const Index = () => {
         />
     ))
 
+    const routeChange = () => {
+        navigate("/")
+    }
+
 
     return(
         <div className="container">
             <div className="grid--3_4_3">
                 <h1 className="home">index</h1>
                 <div></div>
+                <h2 onClick={()=>routeChange()}>back to home</h2>
 
             </div>
             <div className="grid--even">
