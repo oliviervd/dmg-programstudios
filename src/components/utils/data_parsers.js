@@ -23,7 +23,6 @@ export function fetchCurrentLocation(LDES) {
     } catch {
         return ""
     }
-
 }
 
 export function fetchTitle(LDES) {
@@ -138,14 +137,13 @@ export function fetchProductionInfo(LDES){
     //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]);
     let productions = [];
 
-    let producer, production_place, production_date = [];
+    let producer, production_place, production_date, production_technique = [];
     let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"].length
     // check if mulptiple instances of productions.
     if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][0]) {
         for (let i = 0; i < _len; i++) {
-            let production = new Object()
-            //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i])
-            producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
+            let production = new Object();
+            producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"];
             if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]) {
                 production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
                 production["place"] = production_place
@@ -155,6 +153,11 @@ export function fetchProductionInfo(LDES){
                 production_date = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
                 let _date  = EDTFtoDate(production_date)
                 production["date"] = _date
+            } else continue
+
+            if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"]) {
+                production_technique = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"];
+                production["technique"] = production_technique;
             } else continue
 
             production["producer"] = producer
@@ -177,6 +180,10 @@ export function fetchProductionInfo(LDES){
                 let _date  = EDTFtoDate(production_date)
                 production["date"] = _date
             } catch{}
+            try {
+                production_technique = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"];
+                production["technique"] = production_technique;
+            } catch {}
 
         } catch {}
         productions.push(production)

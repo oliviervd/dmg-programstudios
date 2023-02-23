@@ -193,6 +193,9 @@ const ObjectViewer = (props) => {
                                             {prod.date &&
                                                 <p>date: {prod.date}</p>
                                             }
+                                            {prod.technique &&
+                                                <p>technique: {prod.technique}</p>
+                                            }
                                             <br/>
                                         </div>
                                     )
