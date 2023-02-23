@@ -10,6 +10,7 @@ import {
     fetchObjectNumber,
     fetchDescription,
     fetchCurrentLocation
+    , fetchObjectType
 } from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 
@@ -29,6 +30,7 @@ const ObjectViewer = (props) => {
     let composition = ""
     let exhibitions = ""
     let location = ""
+    let type = ""
 
     let _LDES = props.details
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
@@ -40,7 +42,12 @@ const ObjectViewer = (props) => {
         objectNumber = fetchObjectNumber(_baseLDES)
         title = fetchTitle(_baseLDES)
         location = fetchCurrentLocation(_baseLDES)
+        console.log(type);
 
+
+        try{
+            type = fetchObjectType(_baseLDES)
+        } catch {}
 
         try{ // description
             description = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
@@ -152,6 +159,15 @@ const ObjectViewer = (props) => {
 
                         <br/>
 
+                        {type != "" &&
+                            <div>
+                                <p className={"underlined"}>type:</p>
+                                <p>{type}</p>
+                                <br/>
+                            </div>
+
+                        }
+
                         {creations != "" &&
                             <div>
                                 <p className={"underlined"}>designed by:</p>
@@ -202,10 +218,6 @@ const ObjectViewer = (props) => {
                                 })}
                             </div>
                         }
-
-
-
-                        <br/>
 
                         {dimensions != "" &&
                             <div>
