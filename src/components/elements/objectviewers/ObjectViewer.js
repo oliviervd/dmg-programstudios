@@ -163,7 +163,9 @@ const ObjectViewer = (props) => {
                             <div>
                                 <p className={"underlined"}>type:</p>
                                 <p>{type}</p>
+                                <br/>
                             </div>
+
                         }
 
                         {creations != "" &&
