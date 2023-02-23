@@ -11,6 +11,12 @@ export async function errorHandler(promise) {
     }
 }
 
+export function fetchObjectType(LDES) {
+    if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"]) {
+        return LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"]
+    }
+}
+
 export function fetchObjectNumber(LDES) {
     return LDES["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
 }
