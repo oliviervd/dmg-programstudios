@@ -9,8 +9,8 @@ import {
     fetchExhibitions,
     fetchObjectNumber,
     fetchDescription,
-    fetchCurrentLocation
-    , fetchObjectType
+    fetchCurrentLocation,
+    fetchObjectType
 } from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 
@@ -147,14 +147,17 @@ const ObjectViewer = (props) => {
                 </div>
                 <h2>{production_date}</h2>
                 <p>objectnummer: {objectNumber}</p>
-                <div className={"grid--4_6"}>
+                <div className={"grid--4_6-ObjectViewer"}>
                     <img src={props.image.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}></img>
-                    <div style={{marginLeft: "20px"}}>
+                    <div style={{marginLeft: "40px", marginRight: "10vw", marginTop:"10px"}}>
                         {props.description &&
-                            <p>{description}</p>
+                            <div>
+                                <p>{description}</p>
+                                <br/>
+                            </div>
                         }
 
-                        <br/>
+
 
                         {type != "" &&
                             <div>
