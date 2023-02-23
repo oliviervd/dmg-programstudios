@@ -13,6 +13,7 @@ import ColorTagger from "./components/pages/ColorTagger";
 import BlackHole from "./components/pages/BlackHole"
 import StudioLanding from "./components/pages/StudioLanding"
 import Index from "./components/pages/index"
+import ObjectPage from "./components/pages/ObjectPage";
 
 const rootElement = document.getElementById("root");
 render(
@@ -23,6 +24,7 @@ render(
                 <Route path="/studio/:id" element={<StudioLanding />}/>
                 <Route path="/index" element={<Index />} />
                 <Route path="*" element={<BlackHole />} />
+                <Route path="/index/object/:id" element={<ObjectPage />}></Route>
             </Routes>
     </BrowserRouter>,
     rootElement

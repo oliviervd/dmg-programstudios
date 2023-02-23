@@ -527,6 +527,7 @@ input{
 }
 
 .ObjectViewer img{
+    max-height: 60vh;
     max-width: 100%;
     margin: 10px;
 }

@@ -1,11 +1,21 @@
 import React, {useEffect, useState} from "react";
 import {createClient} from "@supabase/supabase-js";
-import {fetchProductionInfo, fetchMaterials, fetchCreatorInfo, fetchExhibitions} from "../../utils/data_parsers";
+import {
+    errorHandler,
+    fetchTitle,
+    fetchProductionInfo,
+    fetchMaterials,
+    fetchCreatorInfo,
+    fetchExhibitions,
+    fetchObjectNumber,
+    fetchDescription
+} from "../../utils/data_parsers";
+import {useNavigate} from "react-router-dom";
 
 const ObjectViewer = (props) => {
     // declare object and its metadata (json) to be used in the viewer
-    const [object, setObject] = useState("");
-    const [data, setData] = useState("");
+
+    let navigate = useNavigate();
 
     let title = ""
     let description = ""
@@ -18,20 +28,27 @@ const ObjectViewer = (props) => {
     let composition = ""
     let exhibitions = ""
 
-    if (props.details[0]){
+    let _LDES = props.details
+    //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
 
-        objectNumber = props.details[0]["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
-        title = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P102_has_title"]["@value"];
+    if (_LDES[0]){
+
+        let _baseLDES = _LDES[0]["LDES_raw"]
+
+        objectNumber = fetchObjectNumber(_baseLDES)
+        title = fetchTitle(_baseLDES)
+
+
         try{ // description
-            description = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
+            description = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
         } catch {description = ""}
 
         try{ // productiedatum
-            production_date = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+            production_date = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
         } catch {production_date=""}
 
         try { // composition P46 --> has note + is composed of
-            let note = props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"] //fetch note
+            let note = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"] //fetch note
             //composition = note;
             // append note + material
 
@@ -42,15 +59,15 @@ const ObjectViewer = (props) => {
             let height, height_unit, width, width_unit, depth, depth_unit, diamter, diameter_unit;
 
             function fetchDimensionValue(i) {
-                return props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][i]["https://schema.org/value"]["@id"].split("/")[7]
+                return _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][i]["https://schema.org/value"]["@id"].split("/")[7]
             }
 
             function fetchDimensionUnit(i) {
-                return props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][i]["https://schema.org/unitText"]
+                return _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][i]["https://schema.org/unitText"]
             }
 
             // DIMENSIONS = H x W x D
-            if (props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][1]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"]["@id"] === "https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/breedte") {
+            if (_LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][1]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"]["@id"] === "https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/breedte") {
 
                 height = fetchDimensionValue(0)
                 height_unit =fetchDimensionUnit(0)
@@ -64,7 +81,7 @@ const ObjectViewer = (props) => {
                 try{dimensions = "( H:"+height + height_unit + " / W:" + width + width_unit + " / D:" + depth + depth_unit + " )"} catch {}
 
             // DIMENSIONS = H x ø
-            } else if (props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][1]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"]["@id"] === "https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/diameter") {
+            } else if (_LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][1]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"]["@id"] === "https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/diameter") {
 
                 height = fetchDimensionValue(0)
                 height_unit =fetchDimensionUnit(0)
@@ -80,34 +97,45 @@ const ObjectViewer = (props) => {
 
         } catch {dimensions=""}
 
-        fetchMaterials(props.details[0]["LDES_raw"], material)
+        fetchMaterials(_baseLDES, material)
         try {
-            productions = fetchProductionInfo(props.details[0]["LDES_raw"])
+            productions = fetchProductionInfo(_baseLDES)
         } catch {}
 
         try {
-            creations = fetchCreatorInfo(props.details[0]["LDES_raw"])
+            creations = fetchCreatorInfo(_baseLDES)
         } catch {}
 
         try {
-            exhibitions = fetchExhibitions(props.details[0]["LDES_raw"])
+            exhibitions = fetchExhibitions(_baseLDES)
         } catch {}
 
-        console.log(exhibitions)
 
+    }
+
+    let href_objectpage = "/index/object/" + objectNumber
+    console.log(href_objectpage)
+    const routeChange = () => {
+        navigate(href_objectpage);
     }
 
     //todo: add mediaquery to make responsive.
 
     return (
         <div className="ObjectViewer grid--5_95">
-            <div className="LineObjectViewer" style={{borderColor: props.color}}>
-                <div className="LineObjectViewer"></div>
-            </div>
+            {props.colorStrip &&
+                <div className="LineObjectViewer" style={{borderColor: props.color}}/>
+            }
+            {!props.colorStrip &&
+                <div></div>
+            }
+
             <div>
                 <div className="grid--9_1">
-                    <h1 className={"home"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>{title}</h1>
-                    <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
+                    <h1 className={"home"} style={{fontSize: "4vw"}} onClick={()=>routeChange()}>{title}</h1>
+                    {props.indexUI &&
+                        <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
+                    }
 
                 </div>
                 <h2>{production_date}</h2>
@@ -115,7 +143,9 @@ const ObjectViewer = (props) => {
                 <div className={"grid--4_6"}>
                     <img src={props.image.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}></img>
                     <div>
-                        <p>{description}</p>
+                        {props.description &&
+                            <p>{description}</p>
+                        }
 
                         <br/>
 
@@ -180,18 +210,22 @@ const ObjectViewer = (props) => {
 
                         <br/>
                         <div className={"grid--3_7"}>
-                            <p className={"underlined"}>materials:</p>
+                            {material != "" &&
                             <div>
-                                {material &&
-                                    material.map(mat => {
-                                        return(
-                                            <p>
-                                                {mat}
-                                            </p>
-                                        )
-                                    })
-                                }
+                                <p className={"underlined"}>materials:</p>
+                                <div>
+                                    {material &&
+                                        material.map(mat => {
+                                            return(
+                                                <p>
+                                                    {mat}
+                                                </p>
+                                            )
+                                        })
+                                    }
+                                </div>
                             </div>
+                            }
                         </div>
 
                         <br></br>
@@ -202,7 +236,6 @@ const ObjectViewer = (props) => {
                                 <div>
                                     {exhibitions &&
                                         exhibitions.map(exh =>{
-                                            console.log(exh)
                                             return(
                                                 <div>
                                                     <p>{exh.title}</p>

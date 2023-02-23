@@ -1,6 +1,6 @@
 import React, {Suspense, useState} from "react"
 import {useParams} from "react-router-dom";
-import {fetchTitle} from "../utils/data_parsers";
+import {fetchTitleStudios} from "../utils/data_parsers";
 
 const StudioLanding = (props) => {
 
@@ -11,7 +11,7 @@ const StudioLanding = (props) => {
 
     console.log(id.id)
 
-    const Title = fetchTitle(id.id, language, "studio")
+    const Title = fetchTitleStudios(id.id, language, "studio")
     console.log(Title)
 
     return(

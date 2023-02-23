@@ -176,8 +176,8 @@ const Index = () => {
                         </div>
                         {showDetailUI &&
                             <ObjectViewer
-                                showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI}
-                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)}
+                                showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false}
+                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colorStrip={true} indexUI={true}
                             />
                         }
                     </div>

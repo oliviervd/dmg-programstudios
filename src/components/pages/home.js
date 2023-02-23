@@ -1,7 +1,7 @@
 import React, {useState, Suspense} from "react";
 import {
-    fetchTitle,
-    fetchDescription,
+    fetchTitleStudios,
+    fetchStudioDescription,
     fetchImage,
     fetchText,
     fetchStudioID,
@@ -96,8 +96,8 @@ const Home = () => {
                         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}} className={"lineH grid--even_4 HomeProjectGridContainer"}>
                             {_studios.map((studio => {
                                 let title_en, description, studioImage, studioID, studioType, href;
-                                title_en = fetchTitle(studio, language, "studio");
-                                description = fetchDescription(studio, language, "studio");
+                                title_en = fetchTitleStudios(studio, language, "studio");
+                                description = fetchStudioDescription(studio, language, "studio");
                                 studioImage = fetchImage(studio, "studio");
                                 studioType = fetchType(studio);
                                 studioID = fetchStudioID(studio);
@@ -142,7 +142,7 @@ const Home = () => {
                         <div>
                             {_studios.map((studio => {
                                     let title_en, studioType;
-                                    title_en = fetchTitle(studio, language, "studio");
+                                    title_en = fetchTitleStudios(studio, language, "studio");
                                     studioType = fetchType(studio);
 
                                     if (studioType === "studio") {

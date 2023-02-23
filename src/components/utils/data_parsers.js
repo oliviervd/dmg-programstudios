@@ -2,6 +2,33 @@ import React from "react";
 import * as EdtfConverter from 'edtf-converter';
 const converter = new EdtfConverter.Converter();
 
+export async function errorHandler(promise) {
+    try {
+        let data = await promise();
+        return [data, null];
+    } catch (error) {
+        return [null, error];
+    }
+}
+
+export function fetchObjectNumber(LDES) {
+    return LDES["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
+}
+
+export function fetchTitle(LDES) {
+    return LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P102_has_title"]["@value"];
+}
+
+export function fetchDescription(LDES) {
+    let description =
+        new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"])
+            }, 1000)
+        });
+    return description
+}
+
 export function fetchExhibitions(LDES) {
     //console.log(LDES["object"]["http://purl.org/dc/terms/isPartOf"]);
     let exhibitions = []
@@ -319,7 +346,7 @@ export function headerAbout(lang) {
     }
 }
 
-export function fetchTitle(i, lang, _type) {
+export function fetchTitleStudios(i, lang, _type) {
     if (i._type === _type) {
         if (lang === "EN") {
             if (i.title_en !== "") {
@@ -335,7 +362,7 @@ export function fetchTitle(i, lang, _type) {
     }
 }
 
-export function fetchDescription(i, lang, _type) {
+export function fetchStudioDescription(i, lang, _type) {
     if (i._type === _type) {
         if (lang === "EN") {
             if (i.description_en !== "") {
