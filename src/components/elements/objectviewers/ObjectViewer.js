@@ -59,9 +59,6 @@ const ObjectViewer = (props) => {
 
         try { // composition P46 --> has note + is composed of
             let note = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"] //fetch note
-            //composition = note;
-            // append note + material
-
         } catch {composition=''}
 
 
@@ -152,7 +149,7 @@ const ObjectViewer = (props) => {
                 <p>objectnummer: {objectNumber}</p>
                 <div className={"grid--4_6"}>
                     <img src={props.image.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}></img>
-                    <div>
+                    <div style={{marginLeft: "20px"}}>
                         {props.description &&
                             <p>{description}</p>
                         }
@@ -191,7 +188,6 @@ const ObjectViewer = (props) => {
                             </div>
                         }
 
-                        <br/>
 
                         {productions != "" &&
                             <div>
