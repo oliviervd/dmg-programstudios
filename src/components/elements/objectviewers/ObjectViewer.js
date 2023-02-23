@@ -8,7 +8,8 @@ import {
     fetchCreatorInfo,
     fetchExhibitions,
     fetchObjectNumber,
-    fetchDescription
+    fetchDescription,
+    fetchCurrentLocation
 } from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 
@@ -27,6 +28,7 @@ const ObjectViewer = (props) => {
     let material = []
     let composition = ""
     let exhibitions = ""
+    let location = ""
 
     let _LDES = props.details
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
@@ -37,6 +39,7 @@ const ObjectViewer = (props) => {
 
         objectNumber = fetchObjectNumber(_baseLDES)
         title = fetchTitle(_baseLDES)
+        location = fetchCurrentLocation(_baseLDES)
 
 
         try{ // description
@@ -250,6 +253,14 @@ const ObjectViewer = (props) => {
                         <div>
                             <p>{composition}</p>
                         </div>
+
+                        {location != "" &&
+                            <div>
+                                <p className={"underlined"}>current location:</p>
+                                <p>{location}</p>
+                            </div>
+
+                        }
 
                     </div>
                 </div>
