@@ -15,6 +15,17 @@ export function fetchObjectNumber(LDES) {
     return LDES["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
 }
 
+export function fetchCurrentLocation(LDES) {
+    try{
+        if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location"]["opmerking"]) {
+            return LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P55_has_current_location"]["opmerking"]
+        }
+    } catch {
+        return ""
+    }
+
+}
+
 export function fetchTitle(LDES) {
     return LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P102_has_title"]["@value"];
 }
