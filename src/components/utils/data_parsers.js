@@ -137,35 +137,43 @@ export function fetchCreatorInfo(LDES, PERS, THES){
     let creations = [];
     let creator, creation_place, creation_date
     // check if multiple creation events. - designer of conceptual thing. (designed by)
-    let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"].length
-
-    if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"][0]) {
+    let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"].length
+    if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"][0]) {
         for (let i = 0; i < _len; i++) {
-            let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]
+            let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"][i]
             let creation = new Object()
             let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]
             creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
             try {
+
+                // creation place
                 try {
-                    creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
-                } catch {
-                    let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
-                    let _x = fetchTermFromThes(THES, _id)
-                    creation["creation_place"] = _x
+                    try {
+                        creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
+                    } catch {
+                        let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
+                        let _x = fetchTermFromThes(THES, _id)
+                        creation["creation_place"] = _x
+                    }
+
+                } catch(error) {
+                    console.log(error)
                 }
+
+                // creation date
                 try {
                     let creation_date = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
                     let _date  = EDTFtoDate(creation_date)
                     creation["date"] = _date
-                    //creation["date"] = creation_date
 
-                } catch {}
+                } catch(error) {console.log(error)}
                 creations.push(creation)
-            } catch {}
+            } catch(error)  {console.log(error)}
         }
 
     } else {
         let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]
+        console.log(event);
         let creation = new Object()
         try{
             creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
@@ -176,21 +184,27 @@ export function fetchCreatorInfo(LDES, PERS, THES){
             creation["creator"] = x;
         }
         try {
+
+            // creation place
             try {
-                creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
-            } catch {
-                let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
-                let _x = fetchTermFromThes(THES, _id)
-                creation["creation_place"] = _x
-                //creation["creation_place"] = fetchTermFromThes(THES, _id)
-            }
+                try {
+                    creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
+                } catch {
+                    let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
+                    let _x = fetchTermFromThes(THES, _id)
+                    creation["creation_place"] = _x
+                    //creation["creation_place"] = fetchTermFromThes(THES, _id)
+                }
+            } catch (error) {console.log(error)}
+
+            // creation date
             try {
                 let creation_date = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
                 let _date  = EDTFtoDate(creation_date)
                 creation["date"] = _date
             } catch {}
             creations.push(creation)
-        } catch {}
+        } catch (error) {console.log(error)}
     }
     return creations;
 }
@@ -206,10 +220,17 @@ export function fetchProductionInfo(LDES, PERS, THES){
         for (let i = 0; i < _len; i++) {
             let production = new Object();
             producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"];
-            if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]) {
-                production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
-                production["place"] = production_place
-            } else continue
+            production["producer"] = producer
+
+            // production place
+
+            try{
+                if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]) {
+                    production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
+                    production["place"] = production_place
+                } else continue
+            } catch (error) {console.log(error)}
+
 
             if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]) {
                 production_date = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
@@ -217,14 +238,15 @@ export function fetchProductionInfo(LDES, PERS, THES){
                 production["date"] = _date
             } else continue
 
-            if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"]) {
-                production_technique = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"];
-                production["technique"] = production_technique;
-            } else continue
+            try{
+                if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"]) {
+                    production_technique = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"];
+                    production["technique"] = production_technique;
+                } else continue
+            } catch {};
 
-            production["producer"] = producer
+
             productions.push(production)
-
         }
     } else { // else only parse one instance
         let production = new Object()
