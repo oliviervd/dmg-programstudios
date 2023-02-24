@@ -46,7 +46,7 @@ const ObjectViewer = (props) => {
         fetchMaterials(_baseLDES, _baseTHES, material)
         try {
             productions = fetchProductionInfo(_baseLDES, _basePERS, _baseTHES)
-        } catch {}
+        } catch(error) {console.log(error)}
 
         objectNumber = fetchObjectNumber(_baseLDES)
         title = fetchTitle(_baseLDES)
@@ -54,15 +54,11 @@ const ObjectViewer = (props) => {
 
         try{
             type = fetchObjectType(_baseLDES)
-        } catch {}
+        } catch (error) {console.log(error)}
 
         try{ // description
             description = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
-        } catch {description = ""}
-
-        try{ // productiedatum
-            production_date = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
-        } catch {production_date=""}
+        } catch(error) {description = ""}
 
         try { // dimensions
             let height, height_unit, width, width_unit, depth, depth_unit, diamter, diameter_unit;
@@ -109,7 +105,7 @@ const ObjectViewer = (props) => {
 
         try {
             creations = fetchCreatorInfo(_baseLDES, _basePERS, _baseTHES)
-        } catch {}
+        } catch (error) {console.log(error)}
 
         try {
             exhibitions = fetchExhibitions(_baseLDES)
@@ -143,7 +139,6 @@ const ObjectViewer = (props) => {
                     }
 
                 </div>
-                <h2>{production_date}</h2>
                 <p>objectnummer: {objectNumber}</p>
                 <div className={"grid--4_6-ObjectViewer"}>
                     <img src={props.image.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}></img>
