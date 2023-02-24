@@ -33,17 +33,24 @@ const ObjectViewer = (props) => {
     let type = ""
 
     let _LDES = props.details
+    let _THES = props.thesaurus
+    let _PERS = props.personen
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
 
-    if (_LDES[0]){
+    if (_LDES[0] && _THES){
 
         let _baseLDES = _LDES[0]["LDES_raw"]
+        let _baseTHES = _THES
+        let _basePERS = _PERS
+
+        fetchMaterials(_baseLDES, _baseTHES, material)
+        try {
+            productions = fetchProductionInfo(_baseLDES, _basePERS, _baseTHES)
+        } catch {}
 
         objectNumber = fetchObjectNumber(_baseLDES)
         title = fetchTitle(_baseLDES)
         location = fetchCurrentLocation(_baseLDES)
-        console.log(type);
-
 
         try{
             type = fetchObjectType(_baseLDES)
@@ -56,11 +63,6 @@ const ObjectViewer = (props) => {
         try{ // productiedatum
             production_date = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
         } catch {production_date=""}
-
-        try { // composition P46 --> has note + is composed of
-            let note = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"] //fetch note
-        } catch {composition=''}
-
 
         try { // dimensions
             let height, height_unit, width, width_unit, depth, depth_unit, diamter, diameter_unit;
@@ -104,13 +106,9 @@ const ObjectViewer = (props) => {
 
         } catch {dimensions=""}
 
-        fetchMaterials(_baseLDES, material)
-        try {
-            productions = fetchProductionInfo(_baseLDES)
-        } catch {}
 
         try {
-            creations = fetchCreatorInfo(_baseLDES)
+            creations = fetchCreatorInfo(_baseLDES, _basePERS, _baseTHES)
         } catch {}
 
         try {
@@ -121,7 +119,7 @@ const ObjectViewer = (props) => {
     }
 
     let href_objectpage = "/index/object/" + objectNumber
-    console.log(href_objectpage)
+
     const routeChange = () => {
         navigate(href_objectpage);
     }
@@ -226,7 +224,7 @@ const ObjectViewer = (props) => {
                         }
 
                         <br/>
-                        <div className={"grid--3_7"}>
+                        <div>
                             {material != "" &&
                             <div>
                                 <p className={"underlined"}>materials:</p>
@@ -266,13 +264,9 @@ const ObjectViewer = (props) => {
                             </div>
                         }
 
-                        <div>
-                            <p>{composition}</p>
-                            <br></br>
-                        </div>
-
                         {location != "" &&
                             <div>
+                                <br></br>
                                 <p className={"underlined"}>current location:</p>
                                 <p>{location}</p>
                             </div>

@@ -23,6 +23,9 @@ const Index = () => {
 
     // COLOR INDEX
     const [colors, setColors] = useState([]); // fetch all colors used in DB and store
+    const [thesaurus, setThesaurus] = useState([]) // fetchThesaurus
+    const [personen, setPersonen] = useState("")
+
     const [objectColor, setObjectColor] = useState("Laurel green"); // set Color of objects to be shown in Masonry
     const [showColorUI, setShowColorsUI] = useState(false); // switch
     const [objectNumber, setObjectNumber] = useState("") // store object_number from image that was clicked
@@ -32,7 +35,11 @@ const Index = () => {
 
     useEffect(() => {
         fetchColors()
+        fetchThesaurus()
+        fetchPersonen()
     }, []);
+
+    console.log(thesaurus)
 
     async function fetchColors() {
         const { data } = await supabase
@@ -42,12 +49,26 @@ const Index = () => {
         setColors(data)
     }
 
+    async function fetchThesaurus() {
+        const { data } = await supabase
+            .from("dmg_thesaurus_LDES")
+            .select("*",  {'head':false})
+        setThesaurus(data)
+    }
+
     async function fetchObjectsByID(objectNumber) {
         const { data } = await supabase
             .from("dmg_objects_LDES")
             .select("LDES_raw, objectNumber" )
             .eq("objectNumber", objectNumber)
         setDetails(data)
+    }
+
+    async function fetchPersonen() {
+        const { data } = await supabase
+            .from("dmg_personen_LDES")
+            .select("*",  {'head':false})
+        setPersonen(data)
     }
 
     function filterByValue(array, string) {
@@ -181,8 +202,8 @@ const Index = () => {
                         </div>
                         {showDetailUI &&
                             <ObjectViewer
-                                showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false}
-                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colorStrip={true} indexUI={true}
+                                showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
+                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colorStrip={true} indexUI={true} personen={personen}
                             />
                         }
                     </div>
