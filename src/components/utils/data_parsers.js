@@ -61,6 +61,14 @@ export function fetchExhibitions(LDES) {
                 exh["date"] = exhibition_date
                 exhibitions.push(exh)
             }
+        } else {
+            let exh = {}
+            let exhibition = LDES["object"]["http://purl.org/dc/terms/isPartOf"]["http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"]
+            let exhibition_title = exhibition["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
+            exh["title"] = exhibition_title
+            let exhibition_date = exhibition["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
+            exh["date"] = exhibition_date
+            exhibitions.push(exh)
         }
 
     } return exhibitions//console.log(exhibitions)

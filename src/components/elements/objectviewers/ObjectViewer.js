@@ -241,11 +241,12 @@ const ObjectViewer = (props) => {
                                         })
                                     }
                                 </div>
+                                <br></br>
                             </div>
                             }
                         </div>
 
-                        <br></br>
+
 
                         {exhibitions != "" &&
                             <div className={"grid--3_7"}>
@@ -261,11 +262,13 @@ const ObjectViewer = (props) => {
                                         })
                                     }
                                 </div>
+                                <br></br>
                             </div>
                         }
 
                         <div>
                             <p>{composition}</p>
+                            <br></br>
                         </div>
 
                         {location != "" &&
