@@ -11,6 +11,37 @@ export async function errorHandler(promise) {
     }
 }
 
+export function fetchPersFromPers(input, uri) {
+    let _len = input.length
+    for (let i = 0; i<_len; i++){
+        if (input[i].is_version_of == uri) {
+            //console.log(input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"])
+            let _val = input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
+            return _val
+        }
+
+    }
+}
+
+export function fetchTermFromThes(input, uri) {
+    let _len = input.length
+    for (let i = 0; i<_len; i++){
+        try {
+            if (input[i].is_version_of == uri) {
+                //console.log(input[i]["LDES_raw"]["object"]["skos:prefLabel"]["@value"])
+                let _val = input[i]["LDES_raw"]["object"]["skos:prefLabel"]["@value"]
+                return _val
+            } else if (input[i]["LDES_raw"]["object"]["owl:sameAs"] === uri) { // check if URI is not stad.gent
+                let _val = input[i]["LDES_raw"]["object"]["skos:prefLabel"]["@value"]
+                return _val
+            }
+        } catch(error) {
+            console.log(error)
+        }
+
+    }
+}
+
 export function fetchObjectType(LDES) {
     if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"]) {
         return LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"]
@@ -101,7 +132,7 @@ export function EDTFtoDate(EDTF){
     //return _date
 }
 
-export function fetchCreatorInfo(LDES){
+export function fetchCreatorInfo(LDES, PERS, THES){
 
     let creations = [];
     let creator, creation_place, creation_date
@@ -112,11 +143,16 @@ export function fetchCreatorInfo(LDES){
         for (let i = 0; i < _len; i++) {
             let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]
             let creation = new Object()
+            let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]
             creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
             try {
                 try {
                     creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
-                } catch {}
+                } catch {
+                    let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
+                    let _x = fetchTermFromThes(THES, _id)
+                    creation["creation_place"] = _x
+                }
                 try {
                     let creation_date = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
                     let _date  = EDTFtoDate(creation_date)
@@ -131,11 +167,23 @@ export function fetchCreatorInfo(LDES){
     } else {
         let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]
         let creation = new Object()
-        creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
+        try{
+            creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
+
+        } catch (error) {
+            let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]
+            let x = fetchPersFromPers(PERS, _id)
+            creation["creator"] = x;
+        }
         try {
             try {
                 creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
-            } catch {}
+            } catch {
+                let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
+                let _x = fetchTermFromThes(THES, _id)
+                creation["creation_place"] = _x
+                //creation["creation_place"] = fetchTermFromThes(THES, _id)
+            }
             try {
                 let creation_date = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
                 let _date  = EDTFtoDate(creation_date)
@@ -147,7 +195,7 @@ export function fetchCreatorInfo(LDES){
     return creations;
 }
 
-export function fetchProductionInfo(LDES){
+export function fetchProductionInfo(LDES, PERS, THES){
     //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]);
     let productions = [];
 
@@ -186,15 +234,25 @@ export function fetchProductionInfo(LDES){
 
         try{
             try {
-                production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
-                production["place"] = production_place
-            } catch {}
+                if (production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]) {
+                    production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
+                    production["place"] = production_place
+                } else {
+                    let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
+                    let _x = fetchTermFromThes(THES, _id)
+                    production["place"] = _x
+                }
+            } catch {
+
+                //production["place"] = _x
+            }
             try {
                 production_date = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
                 let _date  = EDTFtoDate(production_date)
                 production["date"] = _date
             } catch{}
             try {
+                //todo: add multiple occurences to technique
                 production_technique = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"];
                 production["technique"] = production_technique;
             } catch {}
@@ -207,28 +265,42 @@ export function fetchProductionInfo(LDES){
     return productions;
 
 }
-export function fetchMaterials(LDES ,material) {
+
+
+
+export function fetchMaterials(LDES ,THES, material) {
     // materials (geheel) -- P45_consists_of
+
+    let _thes = THES
+    // thes["object"]["http://purl.org/dc/terms/isVersionOf"]["@id"]
 
     if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]) {
         try{
             if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][0]){
                 let len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"].length
                 for (let i = 0; i < len; i++) {
-                    //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
-                    let _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                    let _mat;
+                    let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["@id"]
+                    try {
+                        _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                    } catch {
+                        _mat = fetchTermFromThes(_thes, _id)
+                    }
                     material.push(_mat + " (geheel)")
                 }
 
             } else {
-                let len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"].length
-                let _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
-                //console.log("P45_consists of: " + len)
-                //console.log(props.details[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
+                let _mat;
+                let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["@id"]
+                try {
+                    _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                } catch {
+                    _mat = fetchTermFromThes(_thes, _id)
+                }
                 material.push(_mat + " (geheel)")
 
             }
-        } catch {}
+        } catch (error) {console.log(error)}
 
     }
 
@@ -239,12 +311,17 @@ export function fetchMaterials(LDES ,material) {
             for (let i = 0; i < len ; i++) {
                 //todo: fix issue --> when same ID the value isn't parsed
                 let m  = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P46_is_composed_of"][i]
+                let _id = m["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][1]["@id"]
                 let _mat
                 let note
                 try {
                     _mat = m["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][1]["skos:prefLabel"]["@value"];
                 } catch {
-                    _mat = ""
+                    try{
+                        _mat = fetchTermFromThes(_thes, _id)
+                    } catch(error) {
+                        console.log(error)
+                    }
                 }
 
                 if (m["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]){
@@ -252,7 +329,6 @@ export function fetchMaterials(LDES ,material) {
                 } else {
                     note = "geheel"
                 }
-
                 material.push(_mat +" ("+note+")")
             }
         } catch {}

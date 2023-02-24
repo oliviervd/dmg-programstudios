@@ -8,11 +8,14 @@ const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhb
 const ObjectPage = () => {
 
     const { id } = useParams()
-    console.log(id)
     const [details, setDetails] = useState('');
+    const [personen, setPersonen] = useState('');
+    const [thesaurus, setThesaurus] = useState("");
 
     useEffect(()=>{
         fetchObjectsByID(id)
+        fetchThesaurus()
+        fetchPersonen()
     }, [])
 
     const navigate = useNavigate()
@@ -28,15 +31,26 @@ const ObjectPage = () => {
         setDetails(data)
     }
 
+    async function fetchThesaurus() {
+        const { data } = await supabase
+            .from("dmg_thesaurus_LDES")
+            .select("*",  {'head':false})
+        setThesaurus(data)
+    }
+
+    async function fetchPersonen() {
+        const { data } = await supabase
+            .from("dmg_personen_LDES")
+            .select("*",  {'head':false})
+        setPersonen(data)
+    }
+
     let images = ""
     try {
         images = details[0]["iiif_image_uris"][0]
     } catch(error) {
         console.log(error)
     }
-
-    console.log(images);
-
 
     return(
         <div className="container">
@@ -47,7 +61,7 @@ const ObjectPage = () => {
             </div>
             <div>
                 <div className="lineH"></div>
-                <ObjectViewer description={true} details = {details} image={images} colorStrip={false}/>
+                <ObjectViewer description={true} details = {details} image={images} colorStrip={false} thesaurus={thesaurus} personen={personen}/>
             </div>
         </div>
     )
