@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {Suspense, useEffect, useState} from "react";
 import {createClient} from "@supabase/supabase-js";
 import {
     errorHandler,
@@ -14,6 +14,7 @@ import {
 } from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 
+const ImageViewer = React.lazy(() => import("./ImageViewer"));
 const ObjectViewer = (props) => {
     // declare object and its metadata (json) to be used in the viewer
 
@@ -141,7 +142,9 @@ const ObjectViewer = (props) => {
                 </div>
                 <p>objectnummer: {objectNumber}</p>
                 <div className={"grid--4_6-ObjectViewer"}>
-                    <img src={props.image.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}></img>
+                    <Suspense>
+                        <ImageViewer media={props.image} details={props.details}/>
+                    </Suspense>
                     <div style={{marginLeft: "40px", marginRight: "10vw", marginTop:"10px"}}>
                         {props.description &&
                             <div>

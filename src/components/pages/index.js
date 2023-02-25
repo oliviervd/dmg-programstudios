@@ -39,7 +39,7 @@ const Index = () => {
         fetchPersonen()
     }, []);
 
-    console.log(thesaurus)
+    console.log(colors)
 
     async function fetchColors() {
         const { data } = await supabase
@@ -59,7 +59,7 @@ const Index = () => {
     async function fetchObjectsByID(objectNumber) {
         const { data } = await supabase
             .from("dmg_objects_LDES")
-            .select("LDES_raw, objectNumber" )
+            .select("LDES_raw, objectNumber,  iiif_image_uris" )
             .eq("objectNumber", objectNumber)
         setDetails(data)
     }
@@ -203,7 +203,7 @@ const Index = () => {
                         {showDetailUI &&
                             <ObjectViewer
                                 showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
-                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colorStrip={true} indexUI={true} personen={personen}
+                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
                             />
                         }
                     </div>
