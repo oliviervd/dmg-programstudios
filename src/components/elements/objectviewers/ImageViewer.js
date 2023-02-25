@@ -5,7 +5,6 @@ const ImageViewer = (props) => {
     console.log(props.media)
     console.log(props.details)
 
-
     console.log(images)
 
     return(

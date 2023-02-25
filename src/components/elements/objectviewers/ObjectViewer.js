@@ -1,4 +1,5 @@
 import React, {Suspense, useEffect, useState} from "react";
+
 import {createClient} from "@supabase/supabase-js";
 import {
     errorHandler,

@@ -7,7 +7,6 @@ const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhb
 
 
 const ObjectPage = () => {
-
     //MEDIA QUERIES
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
