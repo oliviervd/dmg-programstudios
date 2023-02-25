@@ -13,6 +13,7 @@ import {
     fetchObjectType
 } from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
+import {useMediaQuery} from "react-responsive";
 
 const ImageViewer = React.lazy(() => import("./ImageViewer"));
 const ObjectViewer = (props) => {
@@ -37,6 +38,14 @@ const ObjectViewer = (props) => {
     let _THES = props.thesaurus
     let _PERS = props.personen
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
+
+    //MEDIA QUERIES
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+    })
+    const isMobile = useMediaQuery({
+        query: '(max-width: 1224px)'
+    })
 
     if (_LDES[0] && _THES){
 
@@ -86,7 +95,7 @@ const ObjectViewer = (props) => {
 
                 try{dimensions = "( H:"+height + height_unit + " / W:" + width + width_unit + " / D:" + depth + depth_unit + " )"} catch {}
 
-            // DIMENSIONS = H x ø
+                // DIMENSIONS = H x ø
             } else if (_LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][1]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"]["@id"] === "https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/diameter") {
 
                 height = fetchDimensionValue(0)
@@ -96,7 +105,7 @@ const ObjectViewer = (props) => {
                 diameter_unit = fetchDimensionUnit(1)
 
                 try {dimensions = "( H:"+height + height_unit + " / ø:" + diamter + diameter_unit +" )"} catch {}
-            // dimensions = H
+                // dimensions = H
             } else {
                 dimensions = "( H:" + height + height_unit +")"
             }
@@ -124,44 +133,175 @@ const ObjectViewer = (props) => {
     //todo: add mediaquery to make responsive.
 
     return (
-        <div className="ObjectViewer grid--5_95">
-            {props.colorStrip &&
-                <div className="LineObjectViewer" style={{borderColor: props.color}}/>
-            }
-            {!props.colorStrip &&
-                <div></div>
-            }
-
-            <div>
-                <div className="grid--9_1">
-                    <h1 className={"home"} style={{fontSize: "4vw"}} onClick={()=>routeChange()}>{title}</h1>
-                    {props.indexUI &&
-                        <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
+        <div>
+            {isDesktopOrLaptop &&
+                <div className="ObjectViewer grid--5_95">
+                    {props.colorStrip &&
+                        <div className="LineObjectViewer" style={{borderColor: props.color}}/>
+                    }
+                    {!props.colorStrip &&
+                        <div></div>
                     }
 
+                    <div>
+                        <div className="grid--9_1">
+                            <h1 className={"home"} style={{fontSize: "4vw"}} onClick={()=>routeChange()}>{title}</h1>
+                            {props.indexUI &&
+                                <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
+                            }
+
+                        </div>
+                        <p>objectnummer: {objectNumber}</p>
+                        <div className={"grid--4_6-ObjectViewer"}>
+                            <Suspense>
+                                <ImageViewer media={props.image} details={props.details}/>
+                            </Suspense>
+                            <div style={{marginLeft: "40px", marginRight: "10vw", marginTop:"10px"}}>
+                                {props.description &&
+                                    <div>
+                                        <p>{description}</p>
+                                        <br/>
+                                    </div>
+                                }
+
+
+
+                                {type != "" &&
+                                    <div>
+                                        <p className={"underlined"}>type:</p>
+                                        <p>{type}</p>
+                                        <br/>
+                                    </div>
+
+                                }
+
+                                {creations != "" &&
+                                    <div>
+                                        <p className={"underlined"}>designed by:</p>
+                                        {creations.map(crea => {
+                                            //console.log(prod)
+                                            return(
+                                                <div>
+                                                    {crea.creator &&
+                                                        <h2>{crea.creator}</h2>
+                                                    }
+                                                    {crea.creation_place &&
+                                                        <p>location: {crea.creation_place}</p>
+                                                    }
+                                                    {crea.date &&
+                                                        <p>date: {crea.date}</p>
+                                                    }
+                                                    <br/>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                }
+
+
+                                {productions != "" &&
+                                    <div>
+                                        <p className={"underlined"}>produced by:</p>
+                                        {productions.map(prod => {
+                                            //console.log(prod)
+                                            return(
+                                                <div>
+                                                    {prod.producer &&
+                                                        <h2>{prod.producer}</h2>
+                                                    }
+                                                    {prod.place &&
+                                                        <p>location: {prod.place}</p>
+                                                    }
+                                                    {prod.date &&
+                                                        <p>date: {prod.date}</p>
+                                                    }
+                                                    {prod.technique &&
+                                                        <p>technique: {prod.technique}</p>
+                                                    }
+                                                    <br/>
+                                                </div>
+                                            )
+                                        })}
+                                    </div>
+                                }
+
+                                {dimensions != "" &&
+                                    <div>
+                                        <p className={"underlined"}>dimensions:</p>
+                                        <p>{dimensions}</p>
+                                        <br/>
+
+                                    </div>
+                                }
+
+                                <div>
+                                    {material != "" &&
+                                        <div>
+                                            <p className={"underlined"}>materials:</p>
+                                            <div>
+                                                {material &&
+                                                    material.map(mat => {
+                                                        return(
+                                                            <p>
+                                                                {mat}
+                                                            </p>
+                                                        )
+                                                    })
+                                                }
+                                            </div>
+                                            <br></br>
+                                        </div>
+                                    }
+                                </div>
+
+
+
+                                {exhibitions != "" &&
+                                    <div className={"grid--3_7"}>
+                                        <p className={"underlined"}>shown in exhibitions:</p>
+                                        <div>
+                                            {exhibitions &&
+                                                exhibitions.map(exh =>{
+                                                    return(
+                                                        <div>
+                                                            <p>{exh.title}</p>
+                                                        </div>
+                                                    )
+                                                })
+                                            }
+                                        </div>
+                                        <br></br>
+                                    </div>
+                                }
+
+                                {location != "" &&
+                                    <div>
+                                        <br></br>
+                                        <p className={"underlined"}>current location:</p>
+                                        <p>{location}</p>
+                                    </div>
+
+                                }
+
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
-                <p>objectnummer: {objectNumber}</p>
-                <div className={"grid--4_6-ObjectViewer"}>
+            }
+            {isMobile &&
+                <div>
+                    <h1 className={"home"} style={{fontSize: "6vw", padding: "5%"}} onClick={()=>routeChange()}>{title}</h1>
+
                     <Suspense>
-                        <ImageViewer media={props.image} details={props.details}/>
+                        <ImageViewer style={{padding: "5%"}}  media={props.image} details={props.details}/>
                     </Suspense>
-                    <div style={{marginLeft: "40px", marginRight: "10vw", marginTop:"10px"}}>
+                    <div style={{padding: "5%", border: "solid black 2px"}}>
                         {props.description &&
                             <div>
                                 <p>{description}</p>
                                 <br/>
                             </div>
-                        }
-
-
-
-                        {type != "" &&
-                            <div>
-                                <p className={"underlined"}>type:</p>
-                                <p>{type}</p>
-                                <br/>
-                            </div>
-
                         }
 
                         {creations != "" &&
@@ -218,12 +358,20 @@ const ObjectViewer = (props) => {
                             <div>
                                 <p className={"underlined"}>dimensions:</p>
                                 <p>{dimensions}</p>
+                                <br/>
                             </div>
                         }
 
-                        <br/>
-                        <div>
-                            {material != "" &&
+                        {type != "" &&
+                            <div>
+                                <p className={"underlined"}>type:</p>
+                                <p>{type}</p>
+                                <br/>
+                            </div>
+
+                        }
+
+                        {material != "" &&
                             <div>
                                 <p className={"underlined"}>materials:</p>
                                 <div>
@@ -239,10 +387,7 @@ const ObjectViewer = (props) => {
                                 </div>
                                 <br></br>
                             </div>
-                            }
-                        </div>
-
-
+                        }
 
                         {exhibitions != "" &&
                             <div className={"grid--3_7"}>
@@ -270,15 +415,12 @@ const ObjectViewer = (props) => {
                             </div>
 
                         }
-
                     </div>
                 </div>
-            </div>
-
+            }
         </div>
-
     )
-    //fetchObjects()
+
 
 
 }
