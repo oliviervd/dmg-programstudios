@@ -32,6 +32,7 @@ const Index = () => {
     const [details, setDetails] = useState("");
     const [showDetailUI, setShowDetailUI] = useState(false);
     const [image, setImage] = useState("");
+    const [showIndex, setShowIndex] = useState(true)
 
     useEffect(() => {
         fetchColors()
@@ -110,6 +111,7 @@ const Index = () => {
 
     const handleClickTag = (key) => {
         setObjectColor(key)
+        setShowIndex(!showIndex)
     }
 
     // when clicking on an image store objectNumber in memory (objectNumber)
@@ -158,74 +160,123 @@ const Index = () => {
 
     return(
         <div className="container">
-            <div className="grid--3_4_3">
-                <h1 className="home">index</h1>
-                <div></div>
-                <h2 onClick={()=>routeChange()}>back to home</h2>
-
-            </div>
-            <div className="grid--even">
+            {isDesktopOrLaptop&&
                 <div>
-                    <div className="lineH"/>
-                    <div className="grid--2_6_2">
-                        <p>colors</p>
+                    <div className="grid--3_4_3">
+                        <h1 className="home">index</h1>
                         <div></div>
-                        {isDesktopOrLaptop&&
-                            <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
-                        }
+                        <h2 onClick={()=>routeChange()}>back to home</h2>
+
                     </div>
-                    <div style={{height: "200px", overflowY:"scroll"}}>
-                        <Suspense>
-                            {HexOptions}
-                        </Suspense>
+                    <div className="grid--even">
+                        <div>
+                            <div className="lineH"/>
+                            <div className="grid--2_6_2">
+                                <p>colors</p>
+                                <div></div>
+                                <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
+                            </div>
+                            <div style={{height: "200px", overflowY:"scroll"}}>
+                                <Suspense>
+                                    {HexOptions}
+                                </Suspense>
+                            </div>
+                        </div>
+
+                        <div>
+                            <div className="lineH"/>
+
+                            <div className="grid--2_6_2">
+                                <p>images</p>
+                                <div></div>
+                                <p></p>
+                            </div>
+
+                            <div className="grid--2_6_2">
+                                <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
+                                <div></div>
+                                <p>>>> scroll this way >>>></p>
+                            </div>
+
+                            <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
+                                <div className={"masonry"} style={{height: "700px", overflowY:"scroll"}}>
+                                    {imageBlock}
+                                </div>
+                                {showDetailUI &&
+                                    <ObjectViewer
+                                        showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
+                                        image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
+                                        box={false}
+                                    />
+                                }
+                            </div>
+
+
+                        </div>
+
+                        <div>
+                            <div className="lineH"/>
+                            <p>people</p>
+                            <div className="grid--even_8">
+
+                            </div>
+                        </div>
+                        <div>
+                            <div className="lineH"/>
+                            <p>systems</p>
+                            <div className="grid--even_10">
+                            </div>
+
+                        </div>
                     </div>
+
                 </div>
-
+            }
+            {isMobile &&
                 <div>
-                    <div className="lineH"/>
-
-                    <div className="grid--2_6_2">
-                        <p>images</p>
+                    <div className="grid--3_4_3">
+                        <h1 className="home">index</h1>
                         <div></div>
-                        <p></p>
+                        <h2 onClick={()=>routeChange()}>back to home</h2>
+
                     </div>
 
-                    <div className="grid--2_6_2">
-                        <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
-                        <div></div>
-                        <p>>>> scroll this way >>>></p>
-                    </div>
+                    <div>
+                        <div className="lineH"/>
+                        {showIndex &&
+                            <div style={{overflowY: "hidden"}}>
+                                <div className="grid--2_6_2">
+                                    <p>colors</p>
+                                    <div></div>
+                                </div>
 
-                    <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
-                        <div className={"masonry"} style={{height: "700px", overflowY:"scroll"}}>
+                                <div style={{height: "100%", overflowY:"scroll"}}>
+                                    <Suspense>
+                                        {HexOptions}
+                                    </Suspense>
+                                </div>
+                            </div>
+
+                        }
+
+
+                        <div className="grid--2_6_2">
+                            <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
+                            <div style={{height: "5vh"}}></div>
+                            <p onClick={()=>setShowIndex(true)}>>>> scroll this way >>>></p>
+                        </div>
+
+                        <div className={"masonry"} style={{height: "85vh", overflowY:"scroll"}}>
                             {imageBlock}
                         </div>
-                        {showDetailUI &&
-                            <ObjectViewer
-                                showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
-                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
-                            />
-                        }
-                    </div>
-
-
-                </div>
-
-                <div>
-                    <div className="lineH"/>
-                    <p>people</p>
-                    <div className="grid--even_8">
-
+                        <div>
+                            <div className={"lineH"}></div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div className="lineH"/>
-                    <p>systems</p>
-                    <div className="grid--even_10">
-                    </div>
+            }
 
-                </div>
-            </div>
+
 
         </div>
     )
