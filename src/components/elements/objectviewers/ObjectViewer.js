@@ -296,7 +296,7 @@ const ObjectViewer = (props) => {
                     <Suspense>
                         <ImageViewer style={{padding: "5%"}}  media={props.image} details={props.details}/>
                     </Suspense>
-                    <div style={{padding: "5%", border: "solid black 2px"}}>
+                    <div className={props.box? "border-box": ""} style={{padding: "5%"}}>
                         {props.description &&
                             <div>
                                 <p>{description}</p>

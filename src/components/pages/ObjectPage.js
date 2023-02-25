@@ -2,10 +2,19 @@ import React, {useEffect, useState} from "react"
 import ObjectViewer from "../elements/objectviewers/ObjectViewer";
 import {createClient} from "@supabase/supabase-js";
 import {useNavigate, useParams} from "react-router-dom";
+import {useMediaQuery} from "react-responsive";
 const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yanhlanhieG5paWpibXF1dWR5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3NDMwNTY0NCwiZXhwIjoxOTg5ODgxNjQ0fQ.3u7yTeQwlheX12UbEzoHMgouRHNEwhKmvWLtNgpkdBY")
 
 
 const ObjectPage = () => {
+
+    //MEDIA QUERIES
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1224px)'
+    })
+    const isMobile = useMediaQuery({
+        query: '(max-width: 1224px)'
+    })
 
     const { id } = useParams()
     const [details, setDetails] = useState('');
@@ -54,14 +63,21 @@ const ObjectPage = () => {
 
     return(
         <div className="container">
-            <div className="grid--3_4_3">
-                <h1 className="home">object</h1>
-                <div></div>
-                <h2 onClick={()=>routeChange()}>back to index</h2>
-            </div>
+            {isDesktopOrLaptop&&
+                <div className="grid--3_4_3">
+                    <h1 className="home">object</h1>
+                    <div></div>
+                    <h2 onClick={()=>routeChange()}>back to index</h2>
+                </div>
+            }
+
             <div>
                 <div className="lineH"></div>
-                <ObjectViewer description={true} details = {details} image={images} colorStrip={false} thesaurus={thesaurus} personen={personen}/>
+                <ObjectViewer description={true} details = {details}
+                              image={images} colorStrip={false}
+                              thesaurus={thesaurus} personen={personen}
+                              box={true}
+                />
             </div>
         </div>
     )

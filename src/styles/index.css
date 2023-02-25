@@ -638,6 +638,10 @@ imageViewer__modal-main {
     opacity: 1;
 }
 
+.border-box{
+    border: black 2px solid
+}
+
 .img__fit{
     max-width:90%;
     height: auto;
