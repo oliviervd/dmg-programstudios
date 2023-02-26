@@ -1,13 +1,17 @@
 import React, {useEffect, useState} from "react"
 import ObjectViewer from "../elements/objectviewers/ObjectViewer";
 import {createClient} from "@supabase/supabase-js";
-import {useNavigate, useParams} from "react-router-dom";
+import {useLocation, useNavigate, useParams} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import {fetchRelatedObjects} from "../utils/data_parsers";
+
 const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yanhlanhieG5paWpibXF1dWR5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3NDMwNTY0NCwiZXhwIjoxOTg5ODgxNjQ0fQ.3u7yTeQwlheX12UbEzoHMgouRHNEwhKmvWLtNgpkdBY")
 
 
 const ObjectPage = () => {
+
+    const location = useLocation();
+    const { id } = useParams();
     //MEDIA QUERIES
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 600px)'
@@ -16,7 +20,7 @@ const ObjectPage = () => {
         query: '(max-width: 600px)'
     })
 
-    const { id } = useParams()
+    //const { id } = useParams()
     const [details, setDetails] = useState('');
     const [objects, setObjects] = useState('');
     const [personen, setPersonen] = useState('');
@@ -36,6 +40,11 @@ const ObjectPage = () => {
     const navigate = useNavigate()
     const routeChange = () => {
         navigate("/index/")
+    }
+
+    console.log(location.state)
+    const GoToObjectPage = () => {
+        navigate(objectRoute.toString(), { replace: true });
     }
 
     async function fetchAll() {
@@ -76,22 +85,18 @@ const ObjectPage = () => {
     }
 
     function routeChangeObject(input) {
-        setObjectRoute(input["objectNumber"])
-        let x = objectRoute
-        console.log(objectRoute)
-        let _uri = '/index/object/' + x
-        if (_uri != '/index/object/') {
-            console.log(_uri)
-            navigate(_uri)
-        }
+        let _uri = '/index/object/' + input["objectNumber"]
+        setObjectRoute(_uri)
+        fetchObjectsByID(input["objectNumber"])
     }
+
 
     const _related = fetchRelatedObjects(objects, details);
     console.log(_related)
     const imageBlock = _related.map(image => (
         <img
             src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
-            onClick={()=> routeChangeObject(image)}
+            onClick={()=>routeChangeObject(image)}
         />
     ))
     return(
@@ -118,7 +123,7 @@ const ObjectPage = () => {
                 <div>
                     <div className={"lineH"}></div>
                     <p>related objects;</p>
-                    <div className={"masonry"} style={{height: "300px", overflowY:"scroll", marginLeft: "40px", marginRight:"40px", marginTop:"10px"}}>
+                    <div className={"masonry"} style={{height: "300px", overflowY:"scroll", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
                         {imageBlock}
                     </div>
                     <div className={"lineH"}></div>

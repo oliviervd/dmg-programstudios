@@ -93,7 +93,7 @@
 @media (max-width: 1224px) {
     .grid--4_6-ObjectViewer {
         display: grid;
-        grid-template-rows: 4fr 6fr;
+        grid-auto-rows: auto;
     }
 }
 
