@@ -35,7 +35,7 @@ export async function errorHandler(promise) {
 export function fetchPersFromPers(input, uri) {
     let _len = input.length
     for (let i = 0; i<_len; i++){
-        if (input[i].is_version_of == uri) {
+        if (input[i].is_version_of === uri) {
             //console.log(input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"])
             let _val = input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
             return _val
@@ -48,7 +48,7 @@ export function fetchTermFromThes(input, uri) {
     let _len = input.length
     for (let i = 0; i<_len; i++){
         try {
-            if (input[i].is_version_of == uri) {
+            if (input[i].is_version_of === uri) {
                 //console.log(input[i]["LDES_raw"]["object"]["skos:prefLabel"]["@value"])
                 let _val = input[i]["LDES_raw"]["object"]["skos:prefLabel"]["@value"]
                 return _val
@@ -131,7 +131,7 @@ export function fetchExhibitions(LDES) {
 
 export function EDTFtoDate(EDTF){
     let input = EDTF;
-    if (input == ".."){
+    if (input === ".."){
         let _date = "unknown"
         return _date
     }
@@ -159,14 +159,12 @@ export function EDTFtoDate(EDTF){
 export function fetchCreatorInfo(LDES, PERS, THES){
 
     let creations = [];
-    let creator, creation_place, creation_date
     // check if multiple creation events. - designer of conceptual thing. (designed by)
     let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"].length
     if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"][0]) {
         for (let i = 0; i < _len; i++) {
             let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"][i]
-            let creation = new Object()
-            let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]
+            let creation = {}
             creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
             try {
 
@@ -198,7 +196,7 @@ export function fetchCreatorInfo(LDES, PERS, THES){
     } else {
         let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]
         console.log(event);
-        let creation = new Object()
+        let creation = {}
         try{
             creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
 
@@ -242,7 +240,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
     // check if mulptiple instances of productions.
     if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][0]) {
         for (let i = 0; i < _len; i++) {
-            let production = new Object();
+            let production = {}
             producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"];
             production["producer"] = producer
 
@@ -273,7 +271,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
             productions.push(production)
         }
     } else { // else only parse one instance
-        let production = new Object()
+        let production = {}
         //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i])
         producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
         production["producer"] = producer
