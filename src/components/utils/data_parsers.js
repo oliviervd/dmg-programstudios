@@ -3,6 +3,12 @@ import * as EdtfConverter from 'edtf-converter';
 const converter = new EdtfConverter.Converter();
 
 export function fetchRelatedObjects(_LDES, _ref) {
+
+    // todo: make more specific - make use of cascade
+    // 1. same artist && producer
+    // 2. same type + same material
+    // 3. same type (OK)
+
     let _refOT
     try {
         _refOT = fetchObjectType(_ref[0]["LDES_raw"])
