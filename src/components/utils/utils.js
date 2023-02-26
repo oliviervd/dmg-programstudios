@@ -1,6 +1,7 @@
 import React from "react";
 
 
+
 // IMAGE HANDLING
 export function fetchImageByColor(objects, color) {
     // fetch list of images that share colorname (color);

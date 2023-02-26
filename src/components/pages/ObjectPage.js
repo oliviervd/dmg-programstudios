@@ -3,32 +3,47 @@ import ObjectViewer from "../elements/objectviewers/ObjectViewer";
 import {createClient} from "@supabase/supabase-js";
 import {useNavigate, useParams} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
+import {fetchRelatedObjects} from "../utils/data_parsers";
 const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yanhlanhieG5paWpibXF1dWR5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3NDMwNTY0NCwiZXhwIjoxOTg5ODgxNjQ0fQ.3u7yTeQwlheX12UbEzoHMgouRHNEwhKmvWLtNgpkdBY")
 
 
 const ObjectPage = () => {
     //MEDIA QUERIES
     const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 1224px)'
+        query: '(min-width: 600px)'
     })
     const isMobile = useMediaQuery({
-        query: '(max-width: 1224px)'
+        query: '(max-width: 600px)'
     })
 
     const { id } = useParams()
     const [details, setDetails] = useState('');
+    const [objects, setObjects] = useState('');
     const [personen, setPersonen] = useState('');
     const [thesaurus, setThesaurus] = useState("");
+    const [related, setRelated] = useState("");
+    const [objectRoute, setObjectRoute] = useState("");
+
+    console.log(objectRoute)
 
     useEffect(()=>{
         fetchObjectsByID(id)
         fetchThesaurus()
         fetchPersonen()
+        fetchAll()
     }, [])
 
     const navigate = useNavigate()
     const routeChange = () => {
         navigate("/index/")
+    }
+
+    async function fetchAll() {
+        const { data } = await supabase
+            .from("dmg_objects_LDES")
+            .select("color_names, HEX_values, iiif_image_uris, objectNumber, LDES_raw",   {'head':false})
+            .not("color_names", 'is', null)
+        setObjects(data)
     }
 
     async function fetchObjectsByID(objectNumber) {
@@ -60,6 +75,25 @@ const ObjectPage = () => {
         console.log(error)
     }
 
+    function routeChangeObject(input) {
+        setObjectRoute(input["objectNumber"])
+        let x = objectRoute
+        console.log(objectRoute)
+        let _uri = '/index/object/' + x
+        if (_uri != '/index/object/') {
+            console.log(_uri)
+            navigate(_uri)
+        }
+    }
+
+    const _related = fetchRelatedObjects(objects, details);
+    console.log(_related)
+    const imageBlock = _related.map(image => (
+        <img
+            src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
+            onClick={()=> routeChangeObject(image)}
+        />
+    ))
     return(
         <div className="container">
             {isDesktopOrLaptop&&
@@ -70,7 +104,7 @@ const ObjectPage = () => {
                 </div>
             }
 
-            <div>
+            <div style={{height: "100%"}}>
                 <div className="lineH"></div>
                 <ObjectViewer description={true} details = {details}
                               image={images} colorStrip={false}
@@ -78,6 +112,21 @@ const ObjectPage = () => {
                               box={true}
                 />
             </div>
+
+            {isDesktopOrLaptop &&
+
+                <div>
+                    <div className={"lineH"}></div>
+                    <p>related objects;</p>
+                    <div className={"masonry"} style={{height: "300px", overflowY:"scroll", marginLeft: "40px", marginRight:"40px", marginTop:"10px"}}>
+                        {imageBlock}
+                    </div>
+                    <div className={"lineH"}></div>
+
+                </div>
+
+            }
+
         </div>
     )
 }

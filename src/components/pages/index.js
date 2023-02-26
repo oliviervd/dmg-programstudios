@@ -14,10 +14,10 @@ const Index = () => {
 
     //MEDIA QUERIES
     const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 1224px)'
+        query: '(min-width: 700px)'
     })
     const isMobile = useMediaQuery({
-        query: '(max-width: 1224px)'
+        query: '(max-width: 700px)'
     })
 
     // COLOR INDEX
@@ -38,8 +38,6 @@ const Index = () => {
         fetchThesaurus()
         fetchPersonen()
     }, []);
-
-    console.log(colors)
 
     async function fetchColors() {
         const { data } = await supabase
@@ -145,6 +143,7 @@ const Index = () => {
     ));
 
     const images = fetchImageByColor(colors, objectColor)
+
     const imageBlock = images.map(image => (
         <img
             onClick={()=>handleImgClick(image)}
