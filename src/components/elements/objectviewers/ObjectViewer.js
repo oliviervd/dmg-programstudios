@@ -42,10 +42,10 @@ const ObjectViewer = (props) => {
 
     //MEDIA QUERIES
     const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 1224px)'
+        query: '(min-width: 700px)'
     })
     const isMobile = useMediaQuery({
-        query: '(max-width: 1224px)'
+        query: '(max-width: 700px)'
     })
 
     if (_LDES[0] && _THES){
@@ -136,7 +136,7 @@ const ObjectViewer = (props) => {
     return (
         <div>
             {isDesktopOrLaptop &&
-                <div className="ObjectViewer grid--5_95">
+                <div className="ObjectViewer grid--5_95" style={{height: "100%"}}>
                     {props.colorStrip &&
                         <div className="LineObjectViewer" style={{borderColor: props.color}}/>
                     }
@@ -157,6 +157,7 @@ const ObjectViewer = (props) => {
                             <Suspense>
                                 <ImageViewer media={props.image} details={props.details}/>
                             </Suspense>
+                            <div></div>
                             <div style={{marginLeft: "40px", marginRight: "10vw", marginTop:"10px"}}>
                                 {props.description &&
                                     <div>

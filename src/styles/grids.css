@@ -86,7 +86,8 @@
 
 .grid--4_6-ObjectViewer{
     display: grid;
-    grid-template-columns: 4fr 6fr;
+    grid-template-columns: 4fr 0.5fr 6fr;
+    height: 100%
 }
 
 @media (max-width: 1224px) {
