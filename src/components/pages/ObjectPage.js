@@ -105,7 +105,7 @@ const ObjectPage = () => {
                 <div className="grid--3_4_3">
                     <h1 className="home">object</h1>
                     <div></div>
-                    <h2 onClick={()=>routeChange()}>back to index</h2>
+                    <h1 style={{bottom: "0px",textAlign: "right", fontSize: "20px"}} onClick={()=>routeChange()}>back to index</h1>
                 </div>
             }
 
@@ -122,7 +122,7 @@ const ObjectPage = () => {
 
                 <div>
                     <div className={"lineH"}></div>
-                    <p>related objects;</p>
+                    <h1 className={"home"} style={{fontSize: "18px"}}>related objects;</h1>
                     <div className={"masonry"} style={{height: "300px", overflowY:"scroll", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
                         {imageBlock}
                     </div>
