@@ -21,8 +21,6 @@ const Index = () => {
     })
 
     // COLOR INDEX
-
-
     const [colors, setColors] = useState([]); // fetch all colors used in DB and store
     const [thesaurus, setThesaurus] = useState([]) // fetchThesaurus
     const [personen, setPersonen] = useState("")
