@@ -24,14 +24,17 @@ const Index = () => {
     const [colors, setColors] = useState([]); // fetch all colors used in DB and store
     const [thesaurus, setThesaurus] = useState([]) // fetchThesaurus
     const [personen, setPersonen] = useState("")
-
-    const [objectColor, setObjectColor] = useState("Laurel green"); // set Color of objects to be shown in Masonry
     const [showColorUI, setShowColorsUI] = useState(false); // switch
     const [objectNumber, setObjectNumber] = useState("") // store object_number from image that was clicked
     const [details, setDetails] = useState("");
     const [showDetailUI, setShowDetailUI] = useState(false);
     const [image, setImage] = useState("");
     const [showIndex, setShowIndex] = useState(true)
+
+    const _c = ["Tuscan brown", "Dark khaki", "Café noir", "Brown sugar", "Chestnut", "Kobicha", "Indigo dye", "Shadow blue", "Queen blue", "Eerie black", "Independence", "Morning blue", "Grullo"]
+    const random = Math.floor(Math.random() * _c.length);
+    const [objectColor, setObjectColor] = useState(_c[random]); // set Color of objects to be shown in Masonry
+
 
     useEffect(() => {
         fetchColors()
@@ -73,8 +76,6 @@ const Index = () => {
         let x = array.filter(o => o.iiif_image_uris.includes(string))
         return x[0]["objectNumber"];
         setObjectNumber(x[0]["objectNumber"])
-        console.log(x[0]["objectNumber"])
-
             //Object.keys(o).some(k => o[k].toLowerCase().includes(string.toLowerCase())));
     }
 
@@ -90,6 +91,8 @@ const Index = () => {
             }
         }
     }
+
+
     const _HexCounts = {};
     for (const _hex of HexList) {
         _HexCounts[_hex] = _HexCounts[_hex] ? _HexCounts[_hex] + 1 : 1;
