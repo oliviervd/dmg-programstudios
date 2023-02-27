@@ -91,7 +91,7 @@ const ObjectPage = () => {
     }
 
 
-    const _related = fetchRelatedObjects(objects, details);
+    const _related = fetchRelatedObjects(objects, details, thesaurus);
     console.log(_related)
     const imageBlock = _related.map(image => (
         <img

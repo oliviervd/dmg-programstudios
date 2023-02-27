@@ -64,7 +64,7 @@ const ObjectViewer = (props) => {
         location = fetchCurrentLocation(_baseLDES)
 
         try{
-            type = fetchObjectType(_baseLDES)
+            type = fetchObjectType(_baseLDES, _baseTHES)
         } catch (error) {console.log(error)}
 
         try{ // description
@@ -171,7 +171,12 @@ const ObjectViewer = (props) => {
                                 {type != "" &&
                                     <div>
                                         <p className={"underlined"}>type:</p>
-                                        <p>{type}</p>
+                                        {type.map(t => {
+                                            return(
+                                                <div>
+                                                    <p>{t}</p>
+                                                </div>)
+                                        })}
                                         <br/>
                                     </div>
 

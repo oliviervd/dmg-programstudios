@@ -2,7 +2,7 @@ import React from "react";
 import * as EdtfConverter from 'edtf-converter';
 const converter = new EdtfConverter.Converter();
 
-export function fetchRelatedObjects(_LDES, _ref) {
+export function fetchRelatedObjects(_LDES, _ref, _thes) {
 
     // todo: make more specific - make use of cascade
     // 1. same artist && producer
@@ -11,7 +11,7 @@ export function fetchRelatedObjects(_LDES, _ref) {
 
     let _refOT
     try {
-        _refOT = fetchObjectType(_ref[0]["LDES_raw"])
+        _refOT = fetchObjectType(_ref[0]["LDES_raw"], _thes)
         console.log(_refOT.length)
 
     } catch(error) {
@@ -26,9 +26,12 @@ export function fetchRelatedObjects(_LDES, _ref) {
 
         for (let x = 0; x < _refOT.length; x++) {
             try{
-                if (_OT[0] === _refOT[x]) {
-                    _matchingObjects.push(_LDES[i])
+                if (_refOT[x] != "productverpakking") { //skip if productverpakking.
+                    if (_OT[0] === _refOT[x]) {
+                        _matchingObjects.push(_LDES[i])
+                    }
                 }
+
             } catch (error){
                 console.log(error)
             }
@@ -81,15 +84,36 @@ export function fetchTermFromThes(input, uri) {
     }
 }
 
-export function fetchObjectType(LDES) {
+export function fetchObjectType(LDES, THES) {
     let objectType = [];
-    try{
-        if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"]) {
-            objectType.push(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"])
+    if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]) {
+        try{
+            try{
+                if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"]) {
+                    objectType.push(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"])
+                    return objectType
+                }
+            } catch (error) {console.log(error)}
+            try {
+                if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"][0]) {
+                    let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"].length
+                    for (let i = 0; i < _len ; i++) {
+                        try {
+                            objectType.push(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"])
+                            console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"])
+                        } catch (error) {
+                            let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["@id"]
+                            objectType.push(fetchTermFromThes(THES, _id))
+                        }
+                    }
+                    return objectType
+                }
+            } catch (error) {console.log(error)}
+        } catch (error) {
+            objectType.push("")
             return objectType
         }
-    } catch (error) {}
-
+    }
 }
 
 export function fetchObjectNumber(LDES) {
