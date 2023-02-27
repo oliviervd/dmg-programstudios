@@ -131,7 +131,7 @@ const ObjectViewer = (props) => {
         navigate(href_objectpage);
     }
 
-    //todo: add mediaquery to make responsive.
+    //todo: add media-query to make responsive.
 
     return (
         <div>

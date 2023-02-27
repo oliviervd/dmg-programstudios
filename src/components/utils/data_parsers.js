@@ -2,18 +2,22 @@ import React from "react";
 import * as EdtfConverter from 'edtf-converter';
 const converter = new EdtfConverter.Converter();
 
-export function fetchRelatedObjects(_LDES, _ref, _thes) {
+export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
 
     // todo: make more specific - make use of cascade
-    // 1. same artist && producer
-    // 2. same type + same material
-    // 3. same type (OK)
+    // skip: objectverpakking.
 
+    // 1. same artist && same type
+    // 2. same type
+    // 3. same artist?
+
+    // 1. same artist && same type
+
+
+    // 2. same type.
     let _refOT
     try {
         _refOT = fetchObjectType(_ref[0]["LDES_raw"], _thes)
-        console.log(_refOT.length)
-
     } catch(error) {
         console.log(error)
     }
@@ -43,6 +47,7 @@ export function fetchRelatedObjects(_LDES, _ref, _thes) {
     //console.log(_matchingObjects)
     return _matchingObjects
 }
+
 
 export async function errorHandler(promise) {
     try {
@@ -87,8 +92,8 @@ export function fetchTermFromThes(input, uri) {
 export function fetchObjectType(LDES, THES) {
     let objectType = [];
     if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]) {
-        try{
-            try{
+        try {
+            try {
                 if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"]) {
                     objectType.push(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"])
                     return objectType
@@ -100,7 +105,6 @@ export function fetchObjectType(LDES, THES) {
                     for (let i = 0; i < _len ; i++) {
                         try {
                             objectType.push(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"])
-                            console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"])
                         } catch (error) {
                             let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["@id"]
                             objectType.push(fetchTermFromThes(THES, _id))
@@ -239,7 +243,6 @@ export function fetchCreatorInfo(LDES, PERS, THES){
 
     } else {
         let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]
-        console.log(event);
         let creation = {}
         try{
             creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
@@ -281,7 +284,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
 
     let producer, production_place, production_date, production_technique = [];
     let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"].length
-    // check if mulptiple instances of productions.
+    // check if multiple instances of productions.
     if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][0]) {
         for (let i = 0; i < _len; i++) {
             let production = {}
