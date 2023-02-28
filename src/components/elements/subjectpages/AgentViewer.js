@@ -1,10 +1,14 @@
 import React from "react"
+import {fetchPersWikidata} from "../../utils/data_parsers/dataParserPers";
+import {harvestWikimedia} from "../../utils/data_parsers/wikimediaHarvester";
 
 const AgentViewer = (props) =>  {
 
     let name = ""
     let sex = ""
     let birth = ""
+    let wikidataURI = ""
+
     let _basePERS = props.agent
 
     if (_basePERS) {
@@ -16,6 +20,11 @@ const AgentViewer = (props) =>  {
         try {
             birth = _basePERS.LDES_raw.object["https://data.vlaanderen.be/ns/persoon#heeftGeboorte"]
         } catch (error) {}
+
+        try {
+            wikidataURI = fetchPersWikidata(_basePERS)
+        } catch (error) {}
+
     }
 
     console.log(name)
