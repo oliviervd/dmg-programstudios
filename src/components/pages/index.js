@@ -2,7 +2,7 @@ import React, {useState, useEffect, Suspense} from "react"
 import { createClient } from '@supabase/supabase-js'
 import {useNavigate} from "react-router-dom";
 import {shuffleFisherYates, splice, getKeyByValue, fetchImageByColor} from "../utils/utils";
-import ObjectViewer from "../elements/objectviewers/ObjectViewer";
+import ObjectViewer from "../elements/subjectpages/ObjectViewer";
 import colorRef from "../data/db/colorRef.json"; // data with CSS color referencing.
 import {useMediaQuery} from "react-responsive";
 

@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from "react"
-import ObjectViewer from "../elements/objectviewers/ObjectViewer";
+import ObjectViewer from "../elements/subjectpages/ObjectViewer";
 import {createClient} from "@supabase/supabase-js";
 import {useLocation, useNavigate, useParams} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
@@ -27,8 +27,6 @@ const ObjectPage = () => {
     const [related, setRelated] = useState("");
     const [objectRoute, setObjectRoute] = useState("");
 
-    console.log(objectRoute)
-
     useEffect(()=>{
         fetchObjectsByID(id)
         fetchThesaurus()
@@ -39,9 +37,6 @@ const ObjectPage = () => {
     const navigate = useNavigate()
     const routeChange = () => {
         navigate("/index/")
-    }
-    const GoToObjectPage = () => {
-        navigate(objectRoute.toString(), { replace: true });
     }
 
     async function fetchAll() {
