@@ -45,9 +45,9 @@ export function fetchPersDeath(input) {
 
 export function fetchPersGender(input) {
     let g = input.LDES_raw.object["https://data.vlaanderen.be/ns/persoon#geslacht"]["@value"]
-    if (g.includes("MALE")) {
-        return "male"
-    } else {return "female"}
+    if (g.includes("FEMALE")) {
+        return "female"
+    } else {return "male"}
 }
 
 export function fetchPersWikidata(input) {
