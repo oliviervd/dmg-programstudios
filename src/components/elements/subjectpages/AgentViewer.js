@@ -67,6 +67,7 @@ const AgentViewer = (props) =>  {
                                     <div>
                                         <p className={"underlined"}>birth date:</p>
                                         <p>{birth.date}</p>
+                                        <br/>
                                     </div>
                                 }
 
@@ -74,6 +75,7 @@ const AgentViewer = (props) =>  {
                                     <div>
                                         <p className={"underlined"}>birth place:</p>
                                         <p>{birth.place}</p>
+                                        <br/>
                                     </div>
                                 }
                             </div>
@@ -85,6 +87,7 @@ const AgentViewer = (props) =>  {
                                     <div>
                                         <p className={"underlined"}>death date:</p>
                                         <p>{death.date}</p>
+                                        <br/>
                                     </div>
                                 }
 
@@ -92,6 +95,7 @@ const AgentViewer = (props) =>  {
                                     <div>
                                         <p className={"underlined"}>death place:</p>
                                         <p>{death.place}</p>
+                                        <br/>
                                     </div>
                                 }
                             </div>
