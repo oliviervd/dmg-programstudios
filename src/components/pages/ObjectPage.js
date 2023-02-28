@@ -7,7 +7,6 @@ import {fetchRelatedObjects} from "../utils/data_parsers";
 
 const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yanhlanhieG5paWpibXF1dWR5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3NDMwNTY0NCwiZXhwIjoxOTg5ODgxNjQ0fQ.3u7yTeQwlheX12UbEzoHMgouRHNEwhKmvWLtNgpkdBY")
 
-
 const ObjectPage = () => {
 
     const location = useLocation();
@@ -21,9 +20,9 @@ const ObjectPage = () => {
     })
 
     //const { id } = useParams()
-    const [details, setDetails] = useState('');
-    const [objects, setObjects] = useState('');
-    const [personen, setPersonen] = useState('');
+    const [details, setDetails] = useState("");
+    const [objects, setObjects] = useState("");
+    const [personen, setPersonen] = useState("");
     const [thesaurus, setThesaurus] = useState("");
     const [related, setRelated] = useState("");
     const [objectRoute, setObjectRoute] = useState("");
@@ -41,8 +40,6 @@ const ObjectPage = () => {
     const routeChange = () => {
         navigate("/index/")
     }
-
-    console.log(location.state)
     const GoToObjectPage = () => {
         navigate(objectRoute.toString(), { replace: true });
     }
@@ -87,12 +84,12 @@ const ObjectPage = () => {
     function routeChangeObject(input) {
         let _uri = '/index/object/' + input["objectNumber"]
         setObjectRoute(_uri)
+        navigate(_uri)
         fetchObjectsByID(input["objectNumber"])
     }
 
 
     const _related = fetchRelatedObjects(objects, details, thesaurus);
-    console.log(_related)
     const imageBlock = _related.map(image => (
         <img
             src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}

@@ -110,9 +110,7 @@ const ObjectViewer = (props) => {
             } else {
                 dimensions = "( H:" + height + height_unit +")"
             }
-
         } catch {dimensions=""}
-
 
         try {
             creations = fetchCreatorInfo(_baseLDES, _basePERS, _baseTHES)
@@ -121,14 +119,16 @@ const ObjectViewer = (props) => {
         try {
             exhibitions = fetchExhibitions(_baseLDES)
         } catch {}
-
-
     }
 
     let href_objectpage = "/index/object/" + objectNumber
 
     const routeChange = () => {
         navigate(href_objectpage);
+    }
+
+    function routeToAgentPage(id){
+        navigate("/index/agent/"+id)
     }
 
     //todo: add media-query to make responsive.
@@ -190,7 +190,7 @@ const ObjectViewer = (props) => {
                                             return(
                                                 <div>
                                                     {crea.creator &&
-                                                        <h2>{crea.creator}</h2>
+                                                        <h2 onClick={()=> routeToAgentPage(crea.id)}>{crea.creator}</h2>
                                                     }
                                                     {crea.creation_place &&
                                                         <p>location: {crea.creation_place}</p>
@@ -205,7 +205,6 @@ const ObjectViewer = (props) => {
                                     </div>
                                 }
 
-
                                 {productions != "" &&
                                     <div>
                                         <p className={"underlined"}>produced by:</p>
@@ -214,7 +213,7 @@ const ObjectViewer = (props) => {
                                             return(
                                                 <div>
                                                     {prod.producer &&
-                                                        <h2>{prod.producer}</h2>
+                                                        <h2 onClick={()=> routeToAgentPage(prod.id)}>{prod.producer}</h2>
                                                     }
                                                     {prod.place &&
                                                         <p>location: {prod.place}</p>

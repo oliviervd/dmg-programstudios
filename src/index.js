@@ -14,6 +14,7 @@ import BlackHole from "./components/pages/BlackHole"
 import StudioLanding from "./components/pages/StudioLanding"
 import Index from "./components/pages/index"
 import ObjectPage from "./components/pages/ObjectPage";
+import AgentPage from "./components/pages/AgentPage";
 
 const rootElement = document.getElementById("root");
 render(
@@ -25,6 +26,7 @@ render(
                 <Route path="/index" element={<Index />} />
                 <Route path="*" element={<BlackHole />} />
                 <Route path="/index/object/:id" element={<ObjectPage />}></Route>
+                <Route path="/index/agent/:id" element={<AgentPage/>}></Route>
             </Routes>
     </BrowserRouter>,
     rootElement
