@@ -30,14 +30,14 @@ export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
 
         for (let x = 0; x < _refOT.length; x++) {
             try{
-                if (_refOT[x] != "productverpakking") { //skip if productverpakking.
+                if (_refOT[x] !== "productverpakking") { //skip if productverpakking.
                     if (_OT[0] === _refOT[x]) {
                         _matchingObjects.push(_LDES[i])
                     }
                 }
 
             } catch (error){
-                console.log(error)
+
             }
         }
 
@@ -58,15 +58,22 @@ export async function errorHandler(promise) {
     }
 }
 
-export function fetchPersFromPers(input, uri) {
+export function fetchPersFromPers(input, uri, field, id) {
     let _len = input.length
     for (let i = 0; i<_len; i++){
-        if (input[i].is_version_of === uri) {
-            //console.log(input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"])
-            let _val = input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
-            return _val
-        }
+        if(uri){
+            if (input[i].is_version_of === uri) {
+                //console.log(input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"])
+                if(field === "name"){
+                    return input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
+                    console.log(input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"])
+                }
+                if (field === "id"){
+                    return input[i]["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
+                }
 
+            }
+        }
     }
 }
 
@@ -98,7 +105,7 @@ export function fetchObjectType(LDES, THES) {
                     objectType.push(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"]["http://www.cidoc-crm.org/cidoc-crm/P42_assigned"]["skos:prefLabel"]["@value"])
                     return objectType
                 }
-            } catch (error) {console.log(error)}
+            } catch (error) {}
             try {
                 if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"][0]) {
                     let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P41i_was_classified_by"].length
@@ -112,7 +119,7 @@ export function fetchObjectType(LDES, THES) {
                     }
                     return objectType
                 }
-            } catch (error) {console.log(error)}
+            } catch (error) {}
         } catch (error) {
             objectType.push("")
             return objectType
@@ -207,6 +214,7 @@ export function EDTFtoDate(EDTF){
 export function fetchCreatorInfo(LDES, PERS, THES){
 
     let creations = [];
+
     // check if multiple creation events. - designer of conceptual thing. (designed by)
     let _len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"].length
     if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"][0]) {
@@ -214,14 +222,18 @@ export function fetchCreatorInfo(LDES, PERS, THES){
             let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"][i]
             let creation = {}
             creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
-            try {
+            let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
+            let id = fetchPersFromPers(PERS, _id, "id")
+            creation["id"] = id;
+            console.log(id)
 
+            try {
                 // creation place
                 try {
                     try {
                         creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
                     } catch {
-                        let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
+                        let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["@id"]
                         let _x = fetchTermFromThes(THES, _id)
                         creation["creation_place"] = _x
                     }
@@ -241,16 +253,22 @@ export function fetchCreatorInfo(LDES, PERS, THES){
             } catch(error)  {console.log(error)}
         }
 
+    // else if only one designer;
     } else {
         let event = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P67i_is_referred_to_by"]["http://www.cidoc-crm.org/cidoc-crm/P94i_was_created_by"]
         let creation = {}
         try{
             creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
+            let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
+            let id = fetchPersFromPers(PERS, _id, "id")
+            creation["id"] = id
 
         } catch (error) {
             let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]
-            let x = fetchPersFromPers(PERS, _id)
+            let x = fetchPersFromPers(PERS, _id, "name")
+            let id = fetchPersFromPers(PERS, _id, "id")
             creation["creator"] = x;
+            creation["id"] = id;
         }
         try {
 
@@ -262,7 +280,6 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                     let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
                     let _x = fetchTermFromThes(THES, _id)
                     creation["creation_place"] = _x
-                    //creation["creation_place"] = fetchTermFromThes(THES, _id)
                 }
             } catch (error) {console.log(error)}
 
@@ -290,7 +307,10 @@ export function fetchProductionInfo(LDES, PERS, THES){
             let production = {}
             producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"];
             production["producer"] = producer
-
+            let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
+            let id = fetchPersFromPers(PERS, _id, "id")
+            production["id"] = id;
+            console.log(id)
             // production place
 
             try{
@@ -322,6 +342,10 @@ export function fetchProductionInfo(LDES, PERS, THES){
         //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i])
         producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
         production["producer"] = producer
+        let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
+        let id = fetchPersFromPers(PERS, _id, "id")
+        production["id"] = id;
+        console.log(id)
 
         try{
             try {
