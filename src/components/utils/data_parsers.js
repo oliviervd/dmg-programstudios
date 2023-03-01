@@ -48,7 +48,6 @@ export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
     return _matchingObjects
 }
 
-
 export async function errorHandler(promise) {
     try {
         let data = await promise();
@@ -381,8 +380,6 @@ export function fetchProductionInfo(LDES, PERS, THES){
 
 }
 
-
-
 export function fetchMaterials(LDES ,THES, material) {
     // materials (geheel) -- P45_consists_of
 
@@ -448,6 +445,52 @@ export function fetchMaterials(LDES ,THES, material) {
             }
         } catch {}
     }
+}
+
+export function fetchDimensions(input) {
+    // utils
+    function fetchDimensionValue(i) {
+        return input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][i]["https://schema.org/value"]["@id"].split("/")[7]
+    }
+    function fetchDimensionUnit(i) {
+        return input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][i]["https://schema.org/unitText"]
+    }
+    function fetchDimensionType(i) {
+        let t = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"]["@id"].split("/")[7]
+        switch (t) {
+            case "hoogte": return "H: "
+            case "breedte": return "W: "
+            case "diepte": return "D: "
+            case "diameter": return "Ø: "
+        }
+    }
+
+    // if only one value
+    try {
+        let _t = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"]["@id"].split("/")[7]
+        let _v = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"]["https://schema.org/value"]["@id"].split("/")[7]
+        let _u = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"]["https://schema.org/unitText"]
+
+        return _t + _v + _u + " "
+
+    } catch (error) {return ""}
+
+    // if multiple values
+    try {
+        let _b = ""
+        let _len = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"].length
+        for (let i = 0; i < _len ; i++) {
+            // fetchDimensionType
+            let _t = fetchDimensionType(i).toString()
+            let _v = fetchDimensionValue(i).toString()
+            let _u = fetchDimensionUnit(i).toString()
+
+            let _f = _t + _v + _u + " "
+            _b += _f
+
+        }
+        return _b
+    } catch (error) {return ""}
 }
 
 export function fetchText(i, lang, id) {
@@ -614,7 +657,6 @@ export function fetchStudioProjectImage(i, _type, studioID) {
         }
     }
 }
-
 
 export function fetchStudioProjectDescription(i, lang, _type, studioID) {
     if (i._type === _type) {

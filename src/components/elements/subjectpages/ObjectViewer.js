@@ -9,9 +9,8 @@ import {
     fetchCreatorInfo,
     fetchExhibitions,
     fetchObjectNumber,
-    fetchDescription,
     fetchCurrentLocation,
-    fetchObjectType
+    fetchObjectType, fetchDimensions
 } from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
@@ -71,46 +70,9 @@ const ObjectViewer = (props) => {
             description = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
         } catch(error) {description = ""}
 
-        try { // dimensions
-            let height, height_unit, width, width_unit, depth, depth_unit, diamter, diameter_unit;
-
-            function fetchDimensionValue(i) {
-                return _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][i]["https://schema.org/value"]["@id"].split("/")[7]
-            }
-
-            function fetchDimensionUnit(i) {
-                return _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][i]["https://schema.org/unitText"]
-            }
-
-            // DIMENSIONS = H x W x D
-            if (_LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][1]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"]["@id"] === "https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/breedte") {
-
-                height = fetchDimensionValue(0)
-                height_unit =fetchDimensionUnit(0)
-
-                width = fetchDimensionValue(1)
-                width_unit = fetchDimensionUnit(1)
-
-                depth = fetchDimensionValue(2)
-                depth_unit = fetchDimensionUnit(2)
-
-                try{dimensions = "( H:"+height + height_unit + " / W:" + width + width_unit + " / D:" + depth + depth_unit + " )"} catch {}
-
-                // DIMENSIONS = H x ø
-            } else if (_LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"][1]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"]["@id"] === "https://apidg.gent.be/opendata/adlib2eventstream/v1/dmg/diameter") {
-
-                height = fetchDimensionValue(0)
-                height_unit =fetchDimensionUnit(0)
-
-                diamter = fetchDimensionValue(1)
-                diameter_unit = fetchDimensionUnit(1)
-
-                try {dimensions = "( H:"+height + height_unit + " / ø:" + diamter + diameter_unit +" )"} catch {}
-                // dimensions = H
-            } else {
-                dimensions = "( H:" + height + height_unit +")"
-            }
-        } catch {dimensions=""}
+        try {
+            dimensions = fetchDimensions(_baseLDES)
+        } catch {dimensions= ""}
 
         try {
             creations = fetchCreatorInfo(_baseLDES, _basePERS, _baseTHES)

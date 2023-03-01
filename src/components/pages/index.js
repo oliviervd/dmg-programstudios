@@ -35,7 +35,6 @@ const Index = () => {
     const random = Math.floor(Math.random() * _c.length);
     const [objectColor, setObjectColor] = useState(_c[random]); // set Color of objects to be shown in Masonry
 
-
     useEffect(() => {
         fetchColors()
         fetchThesaurus()
@@ -79,7 +78,6 @@ const Index = () => {
             //Object.keys(o).some(k => o[k].toLowerCase().includes(string.toLowerCase())));
     }
 
-
     const HexList = [];
     for (let i=0; i<colors.length; i++){
         // iterate over all colors.
@@ -91,7 +89,6 @@ const Index = () => {
             }
         }
     }
-
 
     const _HexCounts = {};
     for (const _hex of HexList) {
@@ -157,7 +154,6 @@ const Index = () => {
     const routeChange = () => {
         navigate("/")
     }
-
 
     return(
         <div className="container">
