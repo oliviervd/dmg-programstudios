@@ -76,87 +76,94 @@ const AgentViewer = (props) =>  {
         <div>
             <div className={"grid--5_95"}>
                 <div></div>
-                <div>
+                <div className={"grid--4_6"}>
+
+
                     <div>
-                        {name &&
-                            <h1 className={"home"} style={{fontSize: "4vw"}}>{name}</h1>
-                        }
-                    </div>
-                    <div className={"grid--4_6-ObjectViewer"}>
-                        <div></div>
-                        <div>*</div>
                         <div>
-                            <h2>biographical info</h2>
-                            <br/>
-
-                            {sex != "" &&
-                                <div>
-                                    <p className={"underlined"}>gender:</p>
-                                    <p>{sex}</p>
-                                    <br/>
-                                </div>
+                            {name &&
+                                <h1 className={"home"} style={{fontSize: "4vw"}}>{name}</h1>
                             }
-                            {birth != "" &&
-                                <div>
-                                    {birth.date &&
-                                        <div>
-                                            <p className={"underlined"}>birth date:</p>
-                                            <p>{birth.date}</p>
-                                            <br/>
-                                        </div>
-                                    }
+                        </div>
+                        <div className={"grid--4_6-ObjectViewer"}>
+                            <div></div>
+                            <div>*</div>
+                            <div>
+                                <h2>biographical info</h2>
+                                <br/>
 
-                                    {birth.place &&
-                                        <div>
-                                            <p className={"underlined"}>birth place:</p>
-                                            <p>{birth.place}</p>
-                                            <br/>
-                                        </div>
-                                    }
-                                </div>
-                            }
+                                {sex != "" &&
+                                    <div>
+                                        <p className={"underlined"}>gender:</p>
+                                        <p>{sex}</p>
+                                        <br/>
+                                    </div>
+                                }
+                                {birth != "" &&
+                                    <div>
+                                        {birth.date &&
+                                            <div>
+                                                <p className={"underlined"}>birth date:</p>
+                                                <p>{birth.date}</p>
+                                                <br/>
+                                            </div>
+                                        }
 
-                            {death != "" &&
-                                <div>
-                                    {death.date &&
-                                        <div>
-                                            <p className={"underlined"}>death date:</p>
-                                            <p>{death.date}</p>
-                                            <br/>
-                                        </div>
-                                    }
+                                        {birth.place &&
+                                            <div>
+                                                <p className={"underlined"}>birth place:</p>
+                                                <p>{birth.place}</p>
+                                                <br/>
+                                            </div>
+                                        }
+                                    </div>
+                                }
 
-                                    {death.place &&
-                                        <div>
-                                            <p className={"underlined"}>death place:</p>
-                                            <p>{death.place}</p>
-                                            <br/>
-                                        </div>
-                                    }
-                                </div>
-                            }
+                                {death != "" &&
+                                    <div>
+                                        {death.date &&
+                                            <div>
+                                                <p className={"underlined"}>death date:</p>
+                                                <p>{death.date}</p>
+                                                <br/>
+                                            </div>
+                                        }
+
+                                        {death.place &&
+                                            <div>
+                                                <p className={"underlined"}>death place:</p>
+                                                <p>{death.place}</p>
+                                                <br/>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+
+                            </div>
+                            <div>
+                                <div className={"lineH"}></div>
+                                <h2>work featured in exhibitions:</h2>
+                            </div>
 
                         </div>
 
                     </div>
 
-                </div>
-
-
-            </div>
-            <div>
-                <div>
-                    <div className={"lineH"}></div>
-                    <h2>works in the collection:</h2>
-                    <div className={"masonry"} style={{height: "400px", overflowY:"scroll", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
-                        {imageBlock}
+                    <div>
+                        <div>
+                            <div>
+                                <div className={"masonry"} style={{height: "90vh", overflowY:"scroll", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
+                                    {imageBlock}
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-                <div>
-                    <div className={"lineH"}></div>
-                    <h2>work featured in exhibitions:</h2>
-                </div>
+
+
+
             </div>
+
         </div>
     )
 }
