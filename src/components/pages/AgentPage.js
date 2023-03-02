@@ -21,10 +21,14 @@ const AgentPage = () => {
     })
 
     const [personen, setPersonen] = useState("");
+    const [objects, setObjects] = useState("");
+    const [thesaurus, setThesaurus] = useState("");
 
     useEffect(() => {
         fetchPersonen()
         fetchAgentRecordwithID(personen, id.id)
+        fetchThesaurus()
+        fetchAll()
     }, [])
 
 
@@ -35,6 +39,23 @@ const AgentPage = () => {
         setPersonen(data)
     }
 
+    async function fetchAll() {
+        const { data } = await supabase
+            .from("dmg_objects_LDES")
+            .select("color_names, HEX_values, iiif_image_uris, objectNumber, LDES_raw",   {'head':false})
+            .not("color_names", 'is', null)
+        setObjects(data)
+    }
+
+    async function fetchThesaurus() {
+        const { data } = await supabase
+            .from("dmg_thesaurus_LDES")
+            .select("*",  {'head':false})
+        setThesaurus(data)
+    }
+
+
+
     function fetchAgentRecordwithID(LDES, refPID) {
         let _len = LDES.length
         for (let i = 0; i < _len; i++) {
@@ -42,7 +63,6 @@ const AgentPage = () => {
                 let PID = LDES[i]["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
                 try {
                     if (refPID === PID) {
-                        console.log(LDES[i])
                         let match = LDES[i]
                         return match
                     }
@@ -71,7 +91,7 @@ const AgentPage = () => {
             }
             <div style={{height: "100%"}}>
                 <div className="lineH"></div>
-                <AgentViewer agent={_agent}>
+                <AgentViewer agent={_agent} objects={objects} thesaurus={thesaurus} personen={personen}>
 
                 </AgentViewer>
             </div>

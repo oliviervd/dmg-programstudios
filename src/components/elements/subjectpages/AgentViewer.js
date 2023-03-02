@@ -1,4 +1,4 @@
-import React from "react"
+import React, {useState} from "react"
 import {
     fetchPersWikidata,
     fetchPersGender,
@@ -6,6 +6,8 @@ import {
     fetchPersDeath
 } from "../../utils/data_parsers/dataParserPers";
 import {harvestWikimedia} from "../../utils/data_parsers/wikimediaHarvester";
+import {fetchOeuvre} from "../../utils/data_parsers";
+import {useNavigate} from "react-router-dom";
 
 const AgentViewer = (props) =>  {
 
@@ -14,8 +16,17 @@ const AgentViewer = (props) =>  {
     let birth = ""
     let death = ""
     let wikidataURI = ""
+    let oeuvre = ""
 
     let _basePERS = props.agent
+    let _baseLDES = props.objects
+    let PERS = props.personen
+    let THES = props.thesaurus
+
+    const [objectRoute, setObjectRoute] = useState("");
+    const navigate = useNavigate()
+
+
 
     if (_basePERS) {
         name = _basePERS.LDES_raw.object["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
@@ -35,9 +46,32 @@ const AgentViewer = (props) =>  {
             wikidataURI = fetchPersWikidata(_basePERS)
         } catch (error) {}
 
+        try {
+            oeuvre = fetchOeuvre(_baseLDES, _basePERS, PERS, THES)
+            console.log(oeuvre)
+        } catch (error) {}
+
+
     }
 
-    console.log(name)
+    function routeChangeObject(input) {
+        let _uri = '/index/object/' + input["objectNumber"]
+        setObjectRoute(_uri)
+        navigate(_uri)
+    }
+
+
+    let imageBlock = ""
+    try {
+        imageBlock = oeuvre.map(image => (
+            <img
+                src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
+                onClick={()=>routeChangeObject(image)}
+            />
+        ))
+    } catch {}
+
+
     return(
         <div>
             <div className={"grid--5_95"}>
@@ -114,6 +148,9 @@ const AgentViewer = (props) =>  {
                 <div>
                     <div className={"lineH"}></div>
                     <h2>works in the collection:</h2>
+                    <div className={"masonry"} style={{height: "400px", overflowY:"scroll", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
+                        {imageBlock}
+                    </div>
                 </div>
                 <div>
                     <div className={"lineH"}></div>

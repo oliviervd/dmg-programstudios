@@ -2,6 +2,38 @@ import React from "react";
 import * as EdtfConverter from 'edtf-converter';
 const converter = new EdtfConverter.Converter();
 
+export function fetchOeuvre(_LDES, agent, PERS, THES) {
+    let _refID = agent["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
+    let _len  = _LDES.length
+    let match = []
+
+    for (let i = 0; i < _len; i++) {
+
+        //console.log(_LDES[i])
+        try{
+            let _x = _LDES[i]["LDES_raw"]
+            let x = fetchCreatorInfo(_x, PERS, THES)
+            //console.log(x)
+            // loop over array
+            try {
+                for (let o = 0; o < x.length; o ++){
+                    let _c = x[o]
+                    // filter on same creator.id
+                    if (_c.id == _refID) {
+                        //console.log (_c.id + " === " + _refID)
+                        match.push(_LDES[i])
+                        //console.log(match)
+                    }
+
+                }
+
+            } catch(error) {}
+
+        } catch (error) {}
+    }
+    return match
+}
+
 export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
 
     // todo: make more specific - make use of cascade
@@ -67,6 +99,7 @@ export function fetchPersFromPers(input, uri, field, id) {
                     return input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
                     console.log(input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"])
                 }
+
                 if (field === "id"){
                     return input[i]["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
                 }
@@ -201,12 +234,10 @@ export function EDTFtoDate(EDTF){
             let _date = "after " + date.min.toDate().getFullYear()
             return _date
         }
-
         else {
+
         }
     }
-
-
     //return _date
 }
 
@@ -224,7 +255,6 @@ export function fetchCreatorInfo(LDES, PERS, THES){
             let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
             let id = fetchPersFromPers(PERS, _id, "id")
             creation["id"] = id;
-            console.log(id)
 
             try {
                 // creation place
@@ -238,7 +268,7 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                     }
 
                 } catch(error) {
-                    console.log(error)
+
                 }
 
                 // creation date
@@ -280,7 +310,7 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                     let _x = fetchTermFromThes(THES, _id)
                     creation["creation_place"] = _x
                 }
-            } catch (error) {console.log(error)}
+            } catch (error) {}
 
             // creation date
             try {
@@ -289,7 +319,7 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                 creation["date"] = _date
             } catch {}
             creations.push(creation)
-        } catch (error) {console.log(error)}
+        } catch (error) {}
     }
     return creations;
 }
@@ -309,9 +339,8 @@ export function fetchProductionInfo(LDES, PERS, THES){
             let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
             let id = fetchPersFromPers(PERS, _id, "id")
             production["id"] = id;
-            console.log(id)
-            // production place
 
+            // PRODUCTION PLACE
             try{
                 if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]) {
                     production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
@@ -319,21 +348,20 @@ export function fetchProductionInfo(LDES, PERS, THES){
                 } else continue
             } catch (error) {console.log(error)}
 
-
+            // PRODUCTION DATE
             if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]) {
                 production_date = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
                 let _date  = EDTFtoDate(production_date)
                 production["date"] = _date
             } else continue
 
+            // PRODUCTION TECHNIQUE
             try{
                 if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"]) {
                     production_technique = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"];
                     production["technique"] = production_technique;
                 } else continue
             } catch {};
-
-
             productions.push(production)
         }
     } else { // else only parse one instance
@@ -344,7 +372,6 @@ export function fetchProductionInfo(LDES, PERS, THES){
         let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
         let id = fetchPersFromPers(PERS, _id, "id")
         production["id"] = id;
-        console.log(id)
 
         try{
             try {
@@ -470,15 +497,17 @@ export function fetchDimensions(input) {
         let _t = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"]["@id"].split("/")[7]
         let _v = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"]["https://schema.org/value"]["@id"].split("/")[7]
         let _u = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"]["https://schema.org/unitText"]
-
         return _t + _v + _u + " "
 
-    } catch (error) {return ""}
+    } catch (error) {
+        console.log(error)
+    }
 
     // if multiple values
     try {
         let _b = ""
         let _len = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"].length
+        console.log(_len)
         for (let i = 0; i < _len ; i++) {
             // fetchDimensionType
             let _t = fetchDimensionType(i).toString()
@@ -490,7 +519,9 @@ export function fetchDimensions(input) {
 
         }
         return _b
-    } catch (error) {return ""}
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 export function fetchText(i, lang, id) {
@@ -512,7 +543,6 @@ export function fetchText(i, lang, id) {
             }
         }
     }
-
 }
 
 export function fetchType(i){
