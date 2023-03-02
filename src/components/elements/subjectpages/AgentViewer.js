@@ -63,12 +63,22 @@ const AgentViewer = (props) =>  {
 
     let imageBlock = ""
     try {
-        imageBlock = oeuvre.map(image => (
-            <img
-                src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
-                onClick={()=>routeChangeObject(image)}
-            />
-        ))
+        if(props.bitonal){
+            imageBlock = oeuvre.map(image => (
+                <img
+                    src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/bitonal.jpg")}
+                    onClick={()=>routeChangeObject(image)}
+                />
+            ))
+        } else {
+            imageBlock = oeuvre.map(image => (
+                <img
+                    src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
+                    onClick={()=>routeChangeObject(image)}
+                />
+            ))
+        }
+
     } catch {}
 
 

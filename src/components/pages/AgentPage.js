@@ -23,6 +23,7 @@ const AgentPage = () => {
     const [personen, setPersonen] = useState("");
     const [objects, setObjects] = useState("");
     const [thesaurus, setThesaurus] = useState("");
+    const [bitonal, setBitonal] = useState(true)
 
     useEffect(() => {
         fetchPersonen()
@@ -89,9 +90,24 @@ const AgentPage = () => {
                     <h1 style={{bottom: "0px",textAlign: "right", fontSize: "20px"}} onClick={()=>routeChange()}>back to index</h1>
                 </div>
             }
+
+            <div className={"grid--even_2"}>
+                <div/>
+                <div className={"grid--even_2"}>
+                    <p>>>> scroll this way >>>></p>
+                    {bitonal &&
+                        <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
+                    }
+                    {!bitonal &&
+                        <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
+                    }
+                </div>
+
+            </div>
+
             <div style={{height: "100%"}}>
                 <div className="lineH"></div>
-                <AgentViewer agent={_agent} objects={objects} thesaurus={thesaurus} personen={personen}>
+                <AgentViewer bitonal={bitonal} agent={_agent} objects={objects} thesaurus={thesaurus} personen={personen}>
 
                 </AgentViewer>
             </div>
