@@ -144,12 +144,17 @@ const Index = () => {
 
     const images = fetchImageByColor(colors, objectColor)
 
-    const imageBlock = images.map(image => (
-        <img
-            onClick={()=>handleImgClick(image)}
-            src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
-        />
-    ))
+    let imageBlock = ""
+
+    try{
+        imageBlock = images.map(image => (
+            <img
+                onClick={()=>handleImgClick(image)}
+                src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
+            />
+        ))
+    } catch (error) {console.log(error)}
+
 
     const routeChange = () => {
         navigate("/")

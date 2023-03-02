@@ -9,6 +9,11 @@
 }
 
 @font-face {
+    font-family: "Anthony";
+    src: local("Anthony"), url(fonts/Anthony.woff2);
+}
+
+@font-face {
     font-family: "Combine";
     src: local("Combine"), url(fonts/Combine.otf);
 }
