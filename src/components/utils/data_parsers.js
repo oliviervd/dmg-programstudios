@@ -13,11 +13,26 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
         try{
             let _x = _LDES[i]["LDES_raw"]
             let x = fetchCreatorInfo(_x, PERS, THES)
+            let p = fetchProductionInfo(_x, PERS, THES)
             //console.log(x)
             // loop over array
             try {
                 for (let o = 0; o < x.length; o ++){
                     let _c = x[o]
+                    // filter on same creator.id
+                    if (_c.id == _refID) {
+                        //console.log (_c.id + " === " + _refID)
+                        match.push(_LDES[i])
+                        //console.log(match)
+                    }
+
+                }
+
+            } catch(error) {}
+
+            try {
+                for (let o = 0; o < p.length; o ++){
+                    let _c = p[o]
                     // filter on same creator.id
                     if (_c.id == _refID) {
                         //console.log (_c.id + " === " + _refID)
