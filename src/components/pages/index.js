@@ -30,6 +30,7 @@ const Index = () => {
     const [showDetailUI, setShowDetailUI] = useState(false);
     const [image, setImage] = useState("");
     const [showIndex, setShowIndex] = useState(true)
+    const [bitonal, setBitonal] = useState(true)
 
     const _c = ["Tuscan brown", "Dark khaki", "Café noir", "Brown sugar", "Chestnut", "Kobicha", "Indigo dye", "Shadow blue", "Queen blue", "Eerie black", "Independence", "Morning blue", "Grullo"]
     const random = Math.floor(Math.random() * _c.length);
@@ -143,16 +144,27 @@ const Index = () => {
     ));
 
     const images = fetchImageByColor(colors, objectColor)
+    console.log(images)
 
     let imageBlock = ""
 
     try{
-        imageBlock = images.map(image => (
-            <img
-                onClick={()=>handleImgClick(image)}
-                src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
-            />
-        ))
+        if (bitonal) {
+            imageBlock = images.map(image => (
+                <img
+                    onClick={()=>handleImgClick(image)}
+                    src={image.replace("/full/0/default.jpg", "/400,/0/bitonal.jpg")}
+                />
+            ))
+        } else {
+            imageBlock = images.map(image => (
+                <img
+                    onClick={()=>handleImgClick(image)}
+                    src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
+                />
+            ))
+        }
+
     } catch (error) {console.log(error)}
 
 
@@ -167,7 +179,7 @@ const Index = () => {
                     <div className="grid--3_4_3">
                         <h1 className="home">index</h1>
                         <div></div>
-                        <h1 style={{bottom: "0px",textAlign: "right", fontSize: "20px"}} onClick={()=>routeChange()}>back to home</h1>
+                        <h1 className="home" style={{textAlign:"right"}} onClick={()=>routeChange()}>home</h1>
 
                     </div>
                     <div className="grid--even">
@@ -197,7 +209,15 @@ const Index = () => {
                             <div className="grid--2_6_2">
                                 <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
                                 <div></div>
-                                <p>>>> scroll this way >>>></p>
+                                <div className={"grid--2_1"}>
+                                    <p>>>> scroll this way >>>></p>
+                                    {bitonal &&
+                                        <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
+                                    }
+                                    {!bitonal &&
+                                        <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
+                                    }
+                                </div>
                             </div>
 
                             <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>

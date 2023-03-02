@@ -8,9 +8,11 @@ export function fetchImageByColor(objects, color) {
     const imageList = []
     for (let i=0; i<objects.length; i++){
         for (let z=0; z<objects[i]["color_names"].length; z++) {
-            if (objects[i]["color_names"][z].includes(color)) {
-                imageList.push(objects[i]["iiif_image_uris"][z])
-            }
+            try {
+                if (objects[i]["color_names"][z].includes(color)) {
+                    imageList.push(objects[i]["iiif_image_uris"][z])
+                }
+            } catch (error) {console.log(error)}
         }
     }
     return imageList

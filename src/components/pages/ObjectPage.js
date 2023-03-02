@@ -86,7 +86,7 @@ const ObjectPage = () => {
 
     const _related = fetchRelatedObjects(objects, details, thesaurus);
     const imageBlock = _related.map(image => (
-        <img
+        <img className={"related_img"}
             src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
             onClick={()=>routeChangeObject(image)}
         />
@@ -97,7 +97,7 @@ const ObjectPage = () => {
                 <div className="grid--3_4_3">
                     <h1 className="home">object</h1>
                     <div></div>
-                    <h1 style={{bottom: "0px",textAlign: "right", fontSize: "20px"}} onClick={()=>routeChange()}>back to index</h1>
+                    <h1 className="home" style={{textAlign: "right"}} onClick={()=>routeChange()}>index</h1>
                 </div>
             }
 
