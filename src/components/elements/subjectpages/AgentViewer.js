@@ -85,7 +85,7 @@ const AgentViewer = (props) =>  {
                                 <h1 className={"home"} style={{fontSize: "4vw"}}>{name}</h1>
                             }
                         </div>
-                        <div className={"grid--4_6-ObjectViewer"}>
+                        <div className={"grid--4_6-ObjectViewer"} style={{height: "30vh"}}>
                             <div></div>
                             <div>*</div>
                             <div>

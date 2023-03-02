@@ -52,7 +52,6 @@ export function fetchPersGender(input) {
 
 export function fetchPersWikidata(input) {
     let URIs = input.LDES_raw.object["owl:sameAs"]
-    console.log(URIs.length)
     for (let i = 0; i < URIs.length; i++) {
         //console.log(URIs[i])
         try {

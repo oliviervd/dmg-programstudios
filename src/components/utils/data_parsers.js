@@ -28,7 +28,7 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
 
                 }
 
-            } catch(error) {}
+            } catch(error) {console.log(error)}
 
             try {
                 for (let o = 0; o < p.length; o ++){
@@ -42,7 +42,7 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
 
                 }
 
-            } catch(error) {}
+            } catch(error) {console.log(error)}
 
         } catch (error) {}
     }
@@ -361,7 +361,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
                     production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
                     production["place"] = production_place
                 } else continue
-            } catch (error) {console.log(error)}
+            } catch (error) {}
 
             // PRODUCTION DATE
             if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]) {
