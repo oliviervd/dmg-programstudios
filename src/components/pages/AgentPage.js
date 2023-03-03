@@ -23,7 +23,7 @@ const AgentPage = () => {
     const [personen, setPersonen] = useState("");
     const [objects, setObjects] = useState("");
     const [thesaurus, setThesaurus] = useState("");
-    const [bitonal, setBitonal] = useState(true)
+    const [bitonal, setBitonal] = useState(false)
 
     useEffect(() => {
         fetchPersonen()

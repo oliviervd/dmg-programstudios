@@ -26,7 +26,7 @@ const ObjectPage = () => {
     const [thesaurus, setThesaurus] = useState("");
     const [related, setRelated] = useState("");
     const [objectRoute, setObjectRoute] = useState("");
-    const [bitonal, setBitonal] = useState(true)
+    const [bitonal, setBitonal] = useState(false)
 
 
     useEffect(()=>{
