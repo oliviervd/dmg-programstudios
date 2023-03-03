@@ -262,18 +262,35 @@ const Index = () => {
                                         </div>
                                     </div>
 
-                                    <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
-                                        <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
-                                            {imageBlock}
+                                    {!about &&
+                                        <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
+                                            <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
+                                                {imageBlock}
+                                            </div>
+                                            {showDetailUI &&
+                                                <ObjectViewer
+                                                    showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
+                                                    image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
+                                                    box={false}
+                                                />
+                                            }
                                         </div>
-                                        {showDetailUI &&
-                                            <ObjectViewer
-                                                showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
-                                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
-                                                box={false}
-                                            />
-                                        }
-                                    </div>
+                                    }
+                                    {about &&
+                                        <div className={showDetailUI? "container-masonry-half": "container-masonry-full"} style={{width: "70vw"}}>
+                                            <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
+                                                {imageBlock}
+                                            </div>
+                                            {showDetailUI &&
+                                                <ObjectViewer
+                                                    showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
+                                                    image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
+                                                    box={false}
+                                                />
+                                            }
+                                        </div>
+                                    }
+
 
 
                                 </div>
