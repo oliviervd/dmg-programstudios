@@ -5,6 +5,7 @@ import {shuffleFisherYates, splice, getKeyByValue, fetchImageByColor} from "../u
 import ObjectViewer from "../elements/subjectpages/ObjectViewer";
 import colorRef from "../data/db/colorRef.json"; // data with CSS color referencing.
 import {useMediaQuery} from "react-responsive";
+import Footer from "../elements/Footer";
 
 const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yanhlanhieG5paWpibXF1dWR5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3NDMwNTY0NCwiZXhwIjoxOTg5ODgxNjQ0fQ.3u7yTeQwlheX12UbEzoHMgouRHNEwhKmvWLtNgpkdBY")
 
@@ -22,15 +23,16 @@ const Index = () => {
 
     // COLOR INDEX
     const [colors, setColors] = useState([]); // fetch all colors used in DB and store
-    const [thesaurus, setThesaurus] = useState([]) // fetchThesaurus
-    const [personen, setPersonen] = useState("")
+    const [thesaurus, setThesaurus] = useState([]); // fetchThesaurus
+    const [personen, setPersonen] = useState("");
     const [showColorUI, setShowColorsUI] = useState(false); // switch
-    const [objectNumber, setObjectNumber] = useState("") // store object_number from image that was clicked
+    const [objectNumber, setObjectNumber] = useState(""); // store object_number from image that was clicked
     const [details, setDetails] = useState("");
     const [showDetailUI, setShowDetailUI] = useState(false);
     const [image, setImage] = useState("");
-    const [showIndex, setShowIndex] = useState(true)
-    const [bitonal, setBitonal] = useState(false)
+    const [showIndex, setShowIndex] = useState(true);
+    const [bitonal, setBitonal] = useState(false);
+    const [about, setAbout] = useState(true);
 
     const _c = ["Tuscan brown", "Dark khaki", "Café noir", "Brown sugar", "Chestnut", "Kobicha", "Indigo dye", "Shadow blue", "Queen blue", "Eerie black", "Independence", "Morning blue", "Grullo", "Old rose"]
     const random = Math.floor(Math.random() * _c.length);
@@ -172,85 +174,129 @@ const Index = () => {
         navigate("/")
     }
 
+    let style;
+
+    if(about) {
+        style = {
+            height: "200px",
+            overflowY:"scroll",
+            width: "70vw"
+        }
+    } else {
+        style = {
+            height: "200px",
+            overflowY:"scroll",
+            width: "99vw"
+        }
+    }
+
+
     return(
-        <div className="container">
+        <div>
             {isDesktopOrLaptop&&
                 <div>
-                    <div className="grid--3_4_3">
-                        <h1 className="home">index</h1>
+                    <div className="grid--3_4_3 container">
+                        <h1 className="home" onClick={()=>setAbout(!about)}>index</h1>
                         <div></div>
                         <h1 className="home" style={{textAlign:"right"}} onClick={()=>routeChange()}>home</h1>
 
                     </div>
-                    <div className="grid--even">
-                        <div>
-                            <div className="lineH"/>
-                            <div className="grid--2_6_2">
-                                <p>colors</p>
-                                <div></div>
-                                <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
+                    <div className={about? "grid--3_7": ""}>
+                        {about &&
+                            <div className={"grid--97_3"}>
+                                <div style={{borderLeft: "1px solid black"}}>
+                                    <div style={{margin: "10px"}}>
+                                        <p className={"rhizome"}>
+                                            What is Lorem Ipsum?
+                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                                            Why do we use it?
+                                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
+                                            Where does it come from?
+                                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
+                                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English
+                                        </p>
+                                        <br/>
+                                        <p onClick={()=>setAbout(!about)}>[CLOSE]</p>
+                                    </div>
+                                </div>
+                                <div className="lineV"></div>
                             </div>
-                            <div style={{height: "200px", overflowY:"scroll"}}>
-                                <Suspense>
-                                    {HexOptions}
-                                </Suspense>
-                            </div>
-                        </div>
+                        }
 
                         <div>
-                            <div className="lineH"/>
+                            <div className="grid--even" style={{width: "inherit"}}>
+                                <div style={{width:"inherit"}}>
+                                    <div className="lineH"/>
+                                    <div className="grid--2_6_2">
+                                        <p>colors</p>
+                                        <div></div>
+                                        <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
+                                    </div>
+                                    <div style={style}>
+                                        <Suspense>
+                                            {HexOptions}
+                                        </Suspense>
+                                    </div>
+                                </div>
 
-                            <div className="grid--2_6_2">
-                                <p>images</p>
-                                <div></div>
-                                <p></p>
-                            </div>
+                                <div>
+                                    <div className="lineH"/>
 
-                            <div className="grid--2_6_2">
-                                <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
-                                <div></div>
-                                <div className={"grid--2_1"}>
-                                    <p>>>> scroll this way >>>></p>
-                                    {bitonal &&
-                                        <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
-                                    }
-                                    {!bitonal &&
-                                        <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
-                                    }
+                                    <div className="grid--2_6_2">
+                                        <p>images</p>
+                                        <div></div>
+                                        <p></p>
+                                    </div>
+
+                                    <div className="grid--2_6_2">
+                                        <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
+                                        <div></div>
+                                        <div className={"grid--2_1"}>
+                                            <p>>>> scroll this way >>>></p>
+                                            {bitonal &&
+                                                <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
+                                            }
+                                            {!bitonal &&
+                                                <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
+                                            }
+                                        </div>
+                                    </div>
+
+                                    <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
+                                        <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
+                                            {imageBlock}
+                                        </div>
+                                        {showDetailUI &&
+                                            <ObjectViewer
+                                                showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
+                                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
+                                                box={false}
+                                            />
+                                        }
+                                    </div>
+
+
+                                </div>
+
+                                <div>
+                                    <div className="lineH"/>
+                                    <p>people</p>
+                                    <div className="grid--even_8">
+
+                                    </div>
+                                </div>
+                                <div>
+                                    <div className="lineH"/>
+                                    <p>systems</p>
+                                    <div className="grid--even_10">
+                                    </div>
+
                                 </div>
                             </div>
-
-                            <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
-                                <div className={"masonry"} style={{height: "700px", overflowY:"scroll"}}>
-                                    {imageBlock}
-                                </div>
-                                {showDetailUI &&
-                                    <ObjectViewer
-                                        showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
-                                        image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
-                                        box={false}
-                                    />
-                                }
-                            </div>
-
-
                         </div>
 
-                        <div>
-                            <div className="lineH"/>
-                            <p>people</p>
-                            <div className="grid--even_8">
-
-                            </div>
-                        </div>
-                        <div>
-                            <div className="lineH"/>
-                            <p>systems</p>
-                            <div className="grid--even_10">
-                            </div>
-
-                        </div>
                     </div>
+
 
                 </div>
             }
@@ -308,7 +354,7 @@ const Index = () => {
             }
 
 
-
+        <Footer></Footer>
         </div>
     )
 }
