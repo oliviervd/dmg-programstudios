@@ -30,9 +30,9 @@ const Index = () => {
     const [showDetailUI, setShowDetailUI] = useState(false);
     const [image, setImage] = useState("");
     const [showIndex, setShowIndex] = useState(true)
-    const [bitonal, setBitonal] = useState(true)
+    const [bitonal, setBitonal] = useState(false)
 
-    const _c = ["Tuscan brown", "Dark khaki", "Café noir", "Brown sugar", "Chestnut", "Kobicha", "Indigo dye", "Shadow blue", "Queen blue", "Eerie black", "Independence", "Morning blue", "Grullo"]
+    const _c = ["Tuscan brown", "Dark khaki", "Café noir", "Brown sugar", "Chestnut", "Kobicha", "Indigo dye", "Shadow blue", "Queen blue", "Eerie black", "Independence", "Morning blue", "Grullo", "Old rose"]
     const random = Math.floor(Math.random() * _c.length);
     const [objectColor, setObjectColor] = useState(_c[random]); // set Color of objects to be shown in Masonry
 
