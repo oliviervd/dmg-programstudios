@@ -10,7 +10,9 @@ export function fetchImageByColor(objects, color) {
         for (let z=0; z<objects[i]["color_names"].length; z++) {
             try {
                 if (objects[i]["color_names"][z].includes(color)) {
-                    imageList.push(objects[i]["iiif_image_uris"][z])
+                    if (objects[i]["iiif_image_uris"][z] !== undefined) {
+                        imageList.push(objects[i]["iiif_image_uris"][z])
+                    }
                 }
             } catch (error) {console.log(error)}
         }
