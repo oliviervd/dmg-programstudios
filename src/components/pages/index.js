@@ -26,6 +26,9 @@ const Index = () => {
     const [thesaurus, setThesaurus] = useState([]); // fetchThesaurus
     const [personen, setPersonen] = useState("");
     const [showColorUI, setShowColorsUI] = useState(false); // switch
+
+    const [collapseColors, setCollapseColors] = useState(true);
+
     const [objectNumber, setObjectNumber] = useState(""); // store object_number from image that was clicked
     const [details, setDetails] = useState("");
     const [showDetailUI, setShowDetailUI] = useState(false);
@@ -225,84 +228,94 @@ const Index = () => {
 
                         <div>
                             <div className="grid--even" style={{width: "inherit"}}>
-                                <div style={{width:"inherit"}}>
-                                    <div className="lineH"/>
-                                    <div className="grid--2_6_2">
-                                        <p>colors</p>
-                                        <div></div>
-                                        <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
-                                    </div>
-                                    <div style={style}>
-                                        <Suspense>
-                                            {HexOptions}
-                                        </Suspense>
-                                    </div>
-                                </div>
-
-                                <div>
-                                    <div className="lineH"/>
-
-                                    <div className="grid--2_6_2">
-                                        <p>images</p>
-                                        <div></div>
-                                        <p></p>
-                                    </div>
-
-                                    <div className="grid--2_6_2">
-                                        <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
-                                        <div></div>
-                                        <div className={"grid--2_1"}>
-                                            <p>>>> scroll this way >>>></p>
-                                            {bitonal &&
-                                                <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
-                                            }
-                                            {!bitonal &&
-                                                <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
-                                            }
-                                        </div>
-                                    </div>
-
-                                    {!about &&
-                                        <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
-                                            <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
-                                                {imageBlock}
+                                {collapseColors &&
+                                    <div>
+                                        <div style={{width:"inherit"}}>
+                                            <div className="lineH"/>
+                                            <div className="grid--2_6_2">
+                                                <p onClick={()=>setCollapseColors(!collapseColors)}>colors</p>
+                                                <div></div>
+                                                <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
                                             </div>
-                                            {showDetailUI &&
-                                                <ObjectViewer
-                                                    showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
-                                                    image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
-                                                    box={false}
-                                                />
-                                            }
-                                        </div>
-                                    }
-                                    {about &&
-                                        <div className={showDetailUI? "container-masonry-half": "container-masonry-full"} style={{width: "70vw"}}>
-                                            <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
-                                                {imageBlock}
+                                            <div style={style}>
+                                                <Suspense>
+                                                    {HexOptions}
+                                                </Suspense>
                                             </div>
-                                            {showDetailUI &&
-                                                <ObjectViewer
-                                                    showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
-                                                    image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
-                                                    box={false}
-                                                />
+                                        </div>
+                                        <div>
+                                            <div className="lineH"/>
+
+                                            <div className="grid--2_6_2">
+                                                <p>images</p>
+                                                <div></div>
+                                                <p></p>
+                                            </div>
+                                            <div className="grid--2_6_2">
+                                                <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
+                                                <div></div>
+                                                <div className={"grid--2_1"}>
+                                                    <p>>>> scroll this way >>>></p>
+                                                    {bitonal &&
+                                                        <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
+                                                    }
+                                                    {!bitonal &&
+                                                        <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
+                                                    }
+                                                </div>
+                                            </div>
+                                            {!about &&
+                                                <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
+                                                    <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
+                                                        {imageBlock}
+                                                    </div>
+                                                    {showDetailUI &&
+                                                        <ObjectViewer
+                                                            showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
+                                                            image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
+                                                            box={false}
+                                                        />
+                                                    }
+                                                </div>
+                                            }
+                                            {about &&
+                                                <div className={showDetailUI? "container-masonry-half": "container-masonry-full"} style={{width: "70vw"}}>
+                                                    <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
+                                                        {imageBlock}
+                                                    </div>
+                                                    {showDetailUI &&
+                                                        <ObjectViewer
+                                                            showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
+                                                            image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
+                                                            box={false}
+                                                        />
+                                                    }
+                                                </div>
                                             }
                                         </div>
-                                    }
+                                    </div>
 
+                                }
+                                {!collapseColors &&
+                                    <div>
+                                        <div className="lineH"/>
+                                        <div style={{height: "5vh"}} className="grid--2_6_2">
+                                            <p onClick={()=>setCollapseColors(!collapseColors)}>colors</p>
+                                            <div></div>
+                                            <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
+                                        </div>
+                                    </div>
 
+                                }
 
-                                </div>
-
-                                <div>
+                                <div style={{height: "5vh"}}>
                                     <div className="lineH"/>
                                     <p>people</p>
                                     <div className="grid--even_8">
 
                                     </div>
                                 </div>
-                                <div>
+                                <div style={{height: "5vh"}}>
                                     <div className="lineH"/>
                                     <p>systems</p>
                                     <div className="grid--even_10">
