@@ -28,6 +28,7 @@ const Index = () => {
     const [showColorUI, setShowColorsUI] = useState(false); // switch
 
     const [collapseColors, setCollapseColors] = useState(true);
+    const [collapseExhibitions, setCollapseExhibitions] = useState(true);
 
     const [objectNumber, setObjectNumber] = useState(""); // store object_number from image that was clicked
     const [details, setDetails] = useState("");
@@ -41,11 +42,16 @@ const Index = () => {
     const random = Math.floor(Math.random() * _c.length);
     const [objectColor, setObjectColor] = useState(_c[random]); // set Color of objects to be shown in Masonry
 
+    // todo: make sure to fetch (once) and store in cache.
     useEffect(() => {
+        console.log("FETCHING")
         fetchColors()
         fetchThesaurus()
         fetchPersonen()
+        console.log("FETCHED ALL.")
     }, []);
+
+    //todo: make generic functions;
 
     async function fetchColors() {
         const { data } = await supabase
@@ -62,6 +68,15 @@ const Index = () => {
         setThesaurus(data)
     }
 
+    async function fetchPersonen() {
+        const { data } = await supabase
+            .from("dmg_personen_LDES")
+            .select("*",  {'head':false})
+        setPersonen(data)
+    }
+
+
+    // todo: use data in "colors" to retrieve item. (remove this call)
     async function fetchObjectsByID(objectNumber) {
         const { data } = await supabase
             .from("dmg_objects_LDES")
@@ -70,12 +85,6 @@ const Index = () => {
         setDetails(data)
     }
 
-    async function fetchPersonen() {
-        const { data } = await supabase
-            .from("dmg_personen_LDES")
-            .select("*",  {'head':false})
-        setPersonen(data)
-    }
 
     function filterByValue(array, string) {
         let x = array.filter(o => o.iiif_image_uris.includes(string))
@@ -210,13 +219,7 @@ const Index = () => {
                                 <div style={{borderLeft: "1px solid black"}}>
                                     <div style={{margin: "10px"}}>
                                         <p className={"rhizome"}>
-                                            What is Lorem Ipsum?
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                            Why do we use it?
-                                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                            Where does it come from?
-                                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English
+                                            <h1></h1>
                                         </p>
                                         <br/>
                                         <p onClick={()=>setAbout(!about)}>[CLOSE]</p>
@@ -308,20 +311,32 @@ const Index = () => {
 
                                 }
 
-                                <div style={{height: "5vh"}}>
-                                    <div className="lineH"/>
-                                    <p>people</p>
-                                    <div className="grid--even_8">
+                                {!collapseExhibitions &&
+                                    <div>
+                                        <div style={{height: "5vh"}}>
+                                            <div className="lineH"/>
+                                            <p onClick={()=>setCollapseExhibitions(!collapseExhibitions)} >exhibtions</p>
+                                            <div className="grid--even_8">
 
+                                            </div>
+                                        </div>
                                     </div>
-                                </div>
-                                <div style={{height: "5vh"}}>
-                                    <div className="lineH"/>
-                                    <p>systems</p>
-                                    <div className="grid--even_10">
-                                    </div>
+                                }
 
-                                </div>
+                                {collapseExhibitions &&
+                                    <div>
+                                        <div style={{height: "5vh"}}>
+                                            <div className="lineH"/>
+                                            <p onClick={()=>setCollapseExhibitions(!collapseExhibitions)} >exhibtions</p>
+                                            <div className="grid--even_8">
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <p> HERE COMES AN INDEX OF EXHIBITIONS </p>
+                                        </div>
+                                    </div>
+                                }
+
                             </div>
                         </div>
 
