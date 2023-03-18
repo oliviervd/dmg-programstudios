@@ -5,11 +5,13 @@
  */}
 
 .container {
-    padding: 20px;
+    margin-left: 1vw;
+    margin-right: 1vw;
+    margin-top: 1vh;
 }
 
 .container-masonry-full{
-    width: 100vw
+    width: 100%
 }
 
 .container-masonry-half {

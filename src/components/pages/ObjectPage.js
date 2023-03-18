@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from "react"
+import React, {useState} from "react"
 import ObjectViewer from "../elements/subjectpages/ObjectViewer";
-import {createClient} from "@supabase/supabase-js";
-import {useLocation, useNavigate, useParams} from "react-router-dom";
+import {useNavigate, useParams} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import {fetchRelatedObjects} from "../utils/data_parsers";
 import useAgentQuery from "../hooks/useAgentQuery";
@@ -10,24 +9,17 @@ import useObjectsQuery from "../hooks/useObjectsQuery";
 
 const ObjectPage = () => {
 
-    const location = useLocation();
     const { id } = useParams();
     //MEDIA QUERIES
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 600px)'
     })
-    const isMobile = useMediaQuery({
-        query: '(max-width: 600px)'
-    })
 
-    //const { id } = useParams()
     const [details, setDetails] = useState("");
-    const [objectRoute, setObjectRoute] = useState("");
     const [bitonal, setBitonal] = useState(false)
 
     const _pers = useAgentQuery().data;
     const _thes = useThesaurusQuery().data;
-
     const _objects = useObjectsQuery().data;
 
     let _related;
@@ -75,7 +67,6 @@ const ObjectPage = () => {
 
     function routeChangeObject(input) {
         let _uri = '/index/object/' + input["objectNumber"]
-        setObjectRoute(_uri)
         navigate(_uri)
         fetchObjectsByID(input["objectNumber"])
     }

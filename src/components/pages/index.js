@@ -30,7 +30,7 @@ const Index = (props) => {
     const [image, setImage] = useState("");
     const [showIndex, setShowIndex] = useState(true);
     const [bitonal, setBitonal] = useState(false);
-    const [about, setAbout] = useState(true);
+    const [about, setAbout] = useState(false);
 
     const _c = ["Tuscan brown", "Dark khaki", "Café noir", "Brown sugar", "Chestnut", "Kobicha", "Indigo dye", "Shadow blue", "Queen blue", "Eerie black", "Independence", "Morning blue", "Grullo", "Old rose"]
     const random = Math.floor(Math.random() * _c.length);
@@ -152,8 +152,7 @@ const Index = (props) => {
     } else {
         style = {
             height: "200px",
-            overflowY:"scroll",
-            width: "99vw"
+            overflowY:"scroll"
         }
     }
 
@@ -168,7 +167,7 @@ const Index = (props) => {
                         <h1 className="home" style={{textAlign:"right"}} onClick={()=>routeChange()}>home</h1>
 
                     </div>
-                    <div className={about? "grid--3_7": ""}>
+                    <div className={about? "grid--3_7 container": "container"}>
                         {about &&
                             <div className={"grid--97_3"}>
                                 <div style={{borderLeft: "1px solid black"}}>
