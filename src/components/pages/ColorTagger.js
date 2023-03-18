@@ -12,10 +12,7 @@ import ColorMatchSlider from "../elements/index-color/colorMatchSlider";
 
 import Header from "../elements/Header";
 import InteractionBar from "../elements/interactionBar";
-
-//const supabase = createClient(process.env.REACT_APP_SUPABASE_URL, process.env.REACT_APP_SUPABASE_KEY)
-const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yanhlanhieG5paWpibXF1dWR5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3NDMwNTY0NCwiZXhwIjoxOTg5ODgxNjQ0fQ.3u7yTeQwlheX12UbEzoHMgouRHNEwhKmvWLtNgpkdBY")
-
+import useObjectsQuery from "../hooks/useObjectsQuery";
 
 const ColorTagger = () => {
 
@@ -24,20 +21,8 @@ const ColorTagger = () => {
     const [language, setLanguage] = useState("EN");
 
     // data fetcher
-    const [colors, setColors] = useState([])
 
-    useEffect(() => {
-        fetchColors()
-    }, []);
-
-    async function fetchColors() {
-        const { data } = await supabase
-            .from("dmg_objects_LDES")
-            .select("color_names", {'head':false})
-        setColors(data)
-    }
-
-    console.log(colors)
+    const _colors = useObjectsQuery().data
 
     //interface for generating curated set based on colorist swap.
     const [numSwap, setNumSwap] = useState(3); //Number of swaps.
