@@ -1,7 +1,9 @@
 // index.js
-import React from "react";
 import { render } from "react-dom";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import {QueryClient, QueryClientProvider} from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
+
 import './styles/index.css';
 import './styles/typography.css'
 import './styles/grids.css'
@@ -16,9 +18,17 @@ import Index from "./components/pages/index"
 import ObjectPage from "./components/pages/ObjectPage";
 import AgentPage from "./components/pages/AgentPage";
 
+const queryClient = new QueryClient(
+    {defaultOptions:
+        {queries:
+                {staleTime: 1000 * 60 * 5} // set caching time to 5 minutes.
+        }}
+)
+
 const rootElement = document.getElementById("root");
 render(
     <BrowserRouter>
+        <QueryClientProvider client={queryClient}>
             <Routes>
                 <Route path="/" element={<Home />}/>
                 <Route path="/interfaces/color-tagger" element={<ColorTagger />}/>
@@ -28,6 +38,8 @@ render(
                 <Route path="/index/object/:id" element={<ObjectPage />}></Route>
                 <Route path="/index/agent/:id" element={<AgentPage/>}></Route>
             </Routes>
+            <ReactQueryDevtools/>
+        </QueryClientProvider>
     </BrowserRouter>,
     rootElement
 );

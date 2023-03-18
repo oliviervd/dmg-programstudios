@@ -1,6 +1,4 @@
-import React, {Suspense, useEffect, useState} from "react";
-
-import {createClient} from "@supabase/supabase-js";
+import React, {Suspense} from "react";
 import {
     errorHandler,
     fetchTitle,
@@ -25,11 +23,9 @@ const ObjectViewer = (props) => {
     let description = ""
     let productions = ""
     let creations = ""
-    let production_date = ""
     let objectNumber = ""
     let dimensions = ""
     let material = []
-    let composition = ""
     let exhibitions = ""
     let location = ""
     let type = ""
@@ -37,6 +33,7 @@ const ObjectViewer = (props) => {
     let _LDES = props.details
     let _THES = props.thesaurus
     let _PERS = props.personen
+
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
 
     //MEDIA QUERIES
@@ -47,16 +44,16 @@ const ObjectViewer = (props) => {
         query: '(max-width: 700px)'
     })
 
-    if (_LDES[0] && _THES){
+    if (_LDES && _THES){
 
-        let _baseLDES = _LDES[0]["LDES_raw"]
+        let _baseLDES = _LDES["LDES_raw"]
         let _baseTHES = _THES
         let _basePERS = _PERS
 
         fetchMaterials(_baseLDES, _baseTHES, material)
         try {
             productions = fetchProductionInfo(_baseLDES, _basePERS, _baseTHES)
-        } catch(error) {console.log(error)}
+        } catch(e) {}
 
         objectNumber = fetchObjectNumber(_baseLDES)
         title = fetchTitle(_baseLDES)
@@ -64,11 +61,11 @@ const ObjectViewer = (props) => {
 
         try{
             type = fetchObjectType(_baseLDES, _baseTHES)
-        } catch (error) {console.log(error)}
+        } catch (e) {}
 
         try{ // description
             description = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
-        } catch(error) {description = ""}
+        } catch(e) {description = ""}
 
         try {
             dimensions = fetchDimensions(_baseLDES)
@@ -76,7 +73,7 @@ const ObjectViewer = (props) => {
 
         try {
             creations = fetchCreatorInfo(_baseLDES, _basePERS, _baseTHES)
-        } catch (error) {console.log(error)}
+        } catch (e) {}
 
         try {
             exhibitions = fetchExhibitions(_baseLDES)
@@ -85,15 +82,15 @@ const ObjectViewer = (props) => {
 
     let href_objectpage = "/index/object/" + objectNumber
 
-    const routeChange = () => {
+    const routeToObjectPage = () => {
+        // todo: pass props.
         navigate(href_objectpage);
     }
 
     function routeToAgentPage(id){
+        // todo: pass props.
         navigate("/index/agent/"+id)
     }
-
-    //todo: add media-query to make responsive.
 
     return (
         <div>
@@ -108,7 +105,7 @@ const ObjectViewer = (props) => {
 
                     <div>
                         <div className="grid--9_1">
-                            <h1 className={"home"} style={{fontSize: "2vw"}} onClick={()=>routeChange()}>{title}</h1>
+                            <h1 className={"home"} style={{fontSize: "2vw"}} onClick={()=>routeToObjectPage()}>{title}</h1>
                             {props.indexUI &&
                                 <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
                             }
@@ -259,7 +256,7 @@ const ObjectViewer = (props) => {
             }
             {isMobile &&
                 <div>
-                    <h1 className={"home"} style={{fontSize: "6vw", padding: "5%"}} onClick={()=>routeChange()}>{title}</h1>
+                    <h1 className={"home"} style={{fontSize: "6vw", padding: "5%"}} onClick={()=>routeToObjectPage()}>{title}</h1>
 
                     <Suspense>
                         <ImageViewer style={{padding: "5%"}}  media={props.image} details={props.details}/>

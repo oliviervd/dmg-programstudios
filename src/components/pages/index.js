@@ -7,12 +7,13 @@ import colorRef from "../data/db/colorRef.json"; // data with CSS color referenc
 import {useMediaQuery} from "react-responsive";
 import Footer from "../elements/Footer";
 
-const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yanhlanhieG5paWpibXF1dWR5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3NDMwNTY0NCwiZXhwIjoxOTg5ODgxNjQ0fQ.3u7yTeQwlheX12UbEzoHMgouRHNEwhKmvWLtNgpkdBY")
+import useObjectsQuery from "../hooks/useObjectsQuery";
+import useThesaurusQuery from "../hooks/useThesaurusQuery";
+import useAgentQuery from "../hooks/useAgentQuery";
 
-const Index = () => {
+const Index = (props) => {
     // UTILS
     let navigate = useNavigate();
-
     //MEDIA QUERIES
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 700px)'
@@ -22,13 +23,7 @@ const Index = () => {
     })
 
     // COLOR INDEX
-    const [colors, setColors] = useState([]); // fetch all colors used in DB and store
-    const [thesaurus, setThesaurus] = useState([]); // fetchThesaurus
-    const [personen, setPersonen] = useState("");
-    const [showColorUI, setShowColorsUI] = useState(false); // switch
-
     const [collapseColors, setCollapseColors] = useState(true);
-
     const [objectNumber, setObjectNumber] = useState(""); // store object_number from image that was clicked
     const [details, setDetails] = useState("");
     const [showDetailUI, setShowDetailUI] = useState(false);
@@ -41,60 +36,40 @@ const Index = () => {
     const random = Math.floor(Math.random() * _c.length);
     const [objectColor, setObjectColor] = useState(_c[random]); // set Color of objects to be shown in Masonry
 
-    useEffect(() => {
-        fetchColors()
-        fetchThesaurus()
-        fetchPersonen()
-    }, []);
+    // * --- IMPROVED API CALLS --- * //
+    const _objects  = useObjectsQuery().data;
+    const _thes  = useThesaurusQuery().data;
+    const _pers = useAgentQuery().data;
 
-    async function fetchColors() {
-        const { data } = await supabase
-            .from("dmg_objects_LDES")
-            .select("color_names, HEX_values, iiif_image_uris, objectNumber",  {'head':false})
-            .not("color_names", 'is', null)
-        setColors(data)
-    }
+    // * --- * //
 
-    async function fetchThesaurus() {
-        const { data } = await supabase
-            .from("dmg_thesaurus_LDES")
-            .select("*",  {'head':false})
-        setThesaurus(data)
-    }
-
-    async function fetchObjectsByID(objectNumber) {
-        const { data } = await supabase
-            .from("dmg_objects_LDES")
-            .select("LDES_raw, objectNumber,  iiif_image_uris" )
-            .eq("objectNumber", objectNumber)
-        setDetails(data)
-    }
-
-    async function fetchPersonen() {
-        const { data } = await supabase
-            .from("dmg_personen_LDES")
-            .select("*",  {'head':false})
-        setPersonen(data)
+    function fetchObjectById(ObjectNumber) {
+        for (let i=0; i<_objects.length; i++) {
+            if (_objects[i].objectNumber == ObjectNumber) {
+                setDetails(_objects[i])
+            }
+        }
     }
 
     function filterByValue(array, string) {
         let x = array.filter(o => o.iiif_image_uris.includes(string))
         return x[0]["objectNumber"];
-        setObjectNumber(x[0]["objectNumber"])
-            //Object.keys(o).some(k => o[k].toLowerCase().includes(string.toLowerCase())));
     }
 
     const HexList = [];
-    for (let i=0; i<colors.length; i++){
-        // iterate over all colors.
-        for (let z=0; z<colors[i]["color_names"].length; z++) {
-            for (let hex = 0; hex < colors[i]["color_names"][z].length; hex++) {
-                if (colors[i]["color_names"][z][hex] != "Gray (X11 gray)"){
-                    HexList.push(colors[i]["color_names"][z][hex])
+
+    try{
+        for (let i=0; i<_objects.length; i++){
+            // iterate over all colors.
+            for (let z=0; z<_objects[i]["color_names"].length; z++) {
+                for (let hex = 0; hex < _objects[i]["color_names"][z].length; hex++) {
+                    if (_objects[i]["color_names"][z][hex] !== "Gray (X11 gray)"){
+                        HexList.push(_objects[i]["color_names"][z][hex])
+                    }
                 }
             }
         }
-    }
+    } catch {}
 
     const _HexCounts = {};
     for (const _hex of HexList) {
@@ -120,23 +95,10 @@ const Index = () => {
     // when clicking on an image store objectNumber in memory (objectNumber)
     const handleImgClick = (id) => {
         setImage(id);
-        //const objectNumberString = id.split("/")[7].split("-transcode-")[1].split("$")[0].split(".jpg")[0] // derive objectnumber from image URI
-        //setObjectNumber(objectNumberString);
         setShowDetailUI(true);
-        let objectNumberString = filterByValue(colors, id);
-        fetchObjectsByID(objectNumberString)
-
+        let objectNumberString = filterByValue(_objects, id);
+        fetchObjectById(objectNumberString);
     }
-
-    function parseLDES(input) {
-        const LDES = input[0]["LDES_raw"]
-        //console.log(LDES["id"])
-        return LDES
-    }
-
-    try{
-        parseLDES(details);
-    } catch {}
 
     const HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
         <p className={"grid-text-autoflow"}
@@ -148,8 +110,8 @@ const Index = () => {
         </p>
     ));
 
-    const images = fetchImageByColor(colors, objectColor)
-    console.log(images)
+    let images;
+    images = fetchImageByColor(_objects, objectColor)
 
     let imageBlock = ""
 
@@ -158,6 +120,7 @@ const Index = () => {
             imageBlock = images.map(image => (
                 <img
                     onClick={()=>handleImgClick(image)}
+                    alt={'INSERT ALT HERE'} //todo: alt
                     src={image.replace("/full/0/default.jpg", "/400,/0/bitonal.jpg")}
                 />
             ))
@@ -165,14 +128,15 @@ const Index = () => {
             imageBlock = images.map(image => (
                 <img
                     onClick={()=>handleImgClick(image)}
+                    alt={'INSERT ALT HERE'} // todo: alt
                     src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
                 />
             ))
         }
 
-    } catch (error) {console.log(error)}
+    } catch {}
 
-
+    // https://www.youtube.com/watch?v=FEiggoSm8tw
     const routeChange = () => {
         navigate("/")
     }
@@ -209,17 +173,9 @@ const Index = () => {
                             <div className={"grid--97_3"}>
                                 <div style={{borderLeft: "1px solid black"}}>
                                     <div style={{margin: "10px"}}>
-                                        <p className={"rhizome"}>
-                                            What is Lorem Ipsum?
-                                            Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
-                                            Why do we use it?
-                                            It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using 'Content here, content here', making it look like readable English. Many desktop publishing packages and web page editors now use Lorem Ipsum as their default model text, and a search for 'lorem ipsum' will uncover many web sites still in their infancy. Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected humour and the like).
-                                            Where does it come from?
-                                            Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.
-                                            The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English
-                                        </p>
-                                        <br/>
-                                        <p onClick={()=>setAbout(!about)}>[CLOSE]</p>
+                                        <p className={"rhizome"}/>
+                                            <br/>
+                                            <p onClick={()=>setAbout(!about)}>[CLOSE]</p>
                                     </div>
                                 </div>
                                 <div className="lineV"></div>
@@ -271,8 +227,8 @@ const Index = () => {
                                                     </div>
                                                     {showDetailUI &&
                                                         <ObjectViewer
-                                                            showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
-                                                            image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
+                                                            showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={_thes} personen={_pers}
+                                                            image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
                                                             box={false}
                                                         />
                                                     }
@@ -285,8 +241,8 @@ const Index = () => {
                                                     </div>
                                                     {showDetailUI &&
                                                         <ObjectViewer
-                                                            showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
-                                                            image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
+                                                            showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={_thes} personen={_pers}
+                                                            image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
                                                             box={false}
                                                         />
                                                     }
@@ -373,8 +329,8 @@ const Index = () => {
 
                         {showDetailUI &&
                             <ObjectViewer
-                                showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={thesaurus} personen={personen}
-                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={colors} colorStrip={true} indexUI={true} personen={personen}
+                                showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={_thes} personen={_pers}
+                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
                                 box={false}
                             />
                         }

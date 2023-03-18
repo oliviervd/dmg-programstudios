@@ -4,6 +4,9 @@ import {createClient} from "@supabase/supabase-js";
 import {useLocation, useNavigate, useParams} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import {fetchRelatedObjects} from "../utils/data_parsers";
+import useAgentQuery from "../hooks/useAgentQuery";
+import useThesaurusQuery from "../hooks/useThesaurusQuery";
+import useObjectsQuery from "../hooks/useObjectsQuery";
 
 const supabase = createClient("https://nrjxejxbxniijbmquudy.supabase.co", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6Im5yanhlanhieG5paWpibXF1dWR5Iiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY3NDMwNTY0NCwiZXhwIjoxOTg5ODgxNjQ0fQ.3u7yTeQwlheX12UbEzoHMgouRHNEwhKmvWLtNgpkdBY")
 
@@ -21,32 +24,34 @@ const ObjectPage = () => {
 
     //const { id } = useParams()
     const [details, setDetails] = useState("");
-    const [objects, setObjects] = useState("");
-    const [personen, setPersonen] = useState("");
-    const [thesaurus, setThesaurus] = useState("");
-    const [related, setRelated] = useState("");
     const [objectRoute, setObjectRoute] = useState("");
     const [bitonal, setBitonal] = useState(false)
+
+    const _pers = useAgentQuery().data;
+    const _thes = useThesaurusQuery().data;
+    const _objects = useObjectsQuery().data;
+
+    let _related;
+    let imageBlock
+
+    try {
+        _related = fetchRelatedObjects(_objects, details, _thes);
+        imageBlock = _related.map(image => (
+            <img className={"related_img"}
+                 src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
+                 onClick={()=>routeChangeObject(image)}
+            />
+        ))
+    } catch (e) {}
 
 
     useEffect(()=>{
         fetchObjectsByID(id)
-        fetchThesaurus()
-        fetchPersonen()
-        fetchAll()
     }, [])
 
     const navigate = useNavigate()
     const routeChange = () => {
         navigate("/index/")
-    }
-
-    async function fetchAll() {
-        const { data } = await supabase
-            .from("dmg_objects_LDES")
-            .select("color_names, HEX_values, iiif_image_uris, objectNumber, LDES_raw",   {'head':false})
-            .not("color_names", 'is', null)
-        setObjects(data)
     }
 
     async function fetchObjectsByID(objectNumber) {
@@ -57,25 +62,11 @@ const ObjectPage = () => {
         setDetails(data)
     }
 
-    async function fetchThesaurus() {
-        const { data } = await supabase
-            .from("dmg_thesaurus_LDES")
-            .select("*",  {'head':false})
-        setThesaurus(data)
-    }
-
-    async function fetchPersonen() {
-        const { data } = await supabase
-            .from("dmg_personen_LDES")
-            .select("*",  {'head':false})
-        setPersonen(data)
-    }
-
     let images = ""
     try {
         images = details[0]["iiif_image_uris"][0]
     } catch(error) {
-        console.log(error)
+        //console.log(error)
     }
 
     function routeChangeObject(input) {
@@ -86,13 +77,6 @@ const ObjectPage = () => {
     }
 
 
-    const _related = fetchRelatedObjects(objects, details, thesaurus);
-    const imageBlock = _related.map(image => (
-        <img className={"related_img"}
-            src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
-            onClick={()=>routeChangeObject(image)}
-        />
-    ))
     return(
         <div className="container">
             {isDesktopOrLaptop&&
@@ -105,9 +89,9 @@ const ObjectPage = () => {
 
             <div style={{height: "100%"}}>
                 <div className="lineH"></div>
-                <ObjectViewer description={true} details = {details}
+                <ObjectViewer description={true} details = {details[0]}
                               image={images} colorStrip={false}
-                              thesaurus={thesaurus} personen={personen}
+                              thesaurus={_thes} personen={_pers}
                               box={true}
                 />
             </div>
