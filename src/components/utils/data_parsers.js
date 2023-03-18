@@ -58,9 +58,9 @@ export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
     // 1. same artist && same type
     // 2. same type.
     let _refOT
-    //console.log(_ref["LDES_raw"]);
+    console.log(_ref["LDES_raw"]);
     try {
-        _refOT = fetchObjectType(_ref[0]["LDES_raw"], _thes)
+        _refOT = fetchObjectType(_ref["LDES_raw"], _thes)
     } catch(error) {
         //console.log(error)
     }

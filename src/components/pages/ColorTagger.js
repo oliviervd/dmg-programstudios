@@ -3,7 +3,6 @@ import React, {useState, useEffect} from "react"
 //data import
 import object_c from "../data/db/20230122_color_data_clean_10.json";
 import swap_c from "../data/db/swapbook.json";
-import { createClient } from '@supabase/supabase-js'
 import ColorTagger_imageGenerator from "../elements/index-color/ColorTagger_imageGenerator";
 import ColorTagger_swapBook from "../elements/index-color/ColorTagger_swapBook";
 import ColorTagger_colorCubes from "../elements/index-color/ColorTagger_colorCubes";
