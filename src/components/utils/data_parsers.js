@@ -513,16 +513,13 @@ export function fetchDimensions(input) {
         let _v = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"]["https://schema.org/value"]["@id"].split("/")[7]
         let _u = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"]["https://schema.org/unitText"]
         return _t + _v + _u + " "
-
-    } catch (error) {
-        console.log(error)
+    } catch {
     }
 
     // if multiple values
     try {
         let _b = ""
         let _len = input["object"]["http://www.cidoc-crm.org/cidoc-crm/P43_has_dimension"].length
-        console.log(_len)
         for (let i = 0; i < _len ; i++) {
             // fetchDimensionType
             let _t = fetchDimensionType(i).toString()
@@ -534,8 +531,7 @@ export function fetchDimensions(input) {
 
         }
         return _b
-    } catch (error) {
-        console.log(error)
+    } catch {
     }
 }
 
