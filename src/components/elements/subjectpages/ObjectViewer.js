@@ -105,7 +105,7 @@ const ObjectViewer = (props) => {
 
                     <div>
                         <div className="grid--9_1">
-                            <h1 className={"home"} style={{fontSize: "2vw"}} onClick={()=>routeToObjectPage()}>{title}</h1>
+                            <h1 className={"home italic"} style={{fontSize: "2vw"}} onClick={()=>routeToObjectPage()}>{title}</h1>
                             {props.indexUI &&
                                 <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
                             }
@@ -149,7 +149,7 @@ const ObjectViewer = (props) => {
                                             return(
                                                 <div>
                                                     {crea.creator &&
-                                                        <h2 onClick={()=> routeToAgentPage(crea.id)}>{crea.creator}</h2>
+                                                        <h2 className={"italic"} onClick={()=> routeToAgentPage(crea.id)}>{crea.creator}</h2>
                                                     }
                                                     {crea.creation_place &&
                                                         <p>location: {crea.creation_place}</p>
@@ -172,7 +172,7 @@ const ObjectViewer = (props) => {
                                             return(
                                                 <div>
                                                     {prod.producer &&
-                                                        <h2 onClick={()=> routeToAgentPage(prod.id)}>{prod.producer}</h2>
+                                                        <h2 className={"italic"} onClick={()=> routeToAgentPage(prod.id)}>{prod.producer}</h2>
                                                     }
                                                     {prod.place &&
                                                         <p>location: {prod.place}</p>

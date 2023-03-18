@@ -223,18 +223,19 @@ a {
 
 
 .italic {
-    -moz-transition: all 1s;
-    -webkit-transition: all 1s;
-    -o-transition: all 1s;
-    transition: all 1s;
+    -moz-transition: all 2s;
+    -webkit-transition: all 2s;
+    -o-transition: all 2s;
+    transition: all 2s;
 }
 
 .italic:hover {
-    -webkit-transform: skewX(-10deg);
-    -moz-transform: skewX(-10deg);
-    -o-transform: skewX(-10deg);
-    transform: skewX(-10deg);
-    transition: color 2s ease-out;
+    /*-webkit-transform: skewX(-7deg);
+    -moz-transform: skewX(-7deg);
+    -o-transform: skewX(-5deg);
+    transform: skewX(-5deg);
+    transition: color 1s ease-out;*/
+    text-decoration: underline;
 }
 
 .lineH{

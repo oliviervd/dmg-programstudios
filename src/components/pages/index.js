@@ -127,6 +127,7 @@ const Index = (props) => {
         } else {
             imageBlock = images.map(image => (
                 <img
+                    className={"hoverImage"}
                     onClick={()=>handleImgClick(image)}
                     alt={'INSERT ALT HERE'} // todo: alt
                     src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}

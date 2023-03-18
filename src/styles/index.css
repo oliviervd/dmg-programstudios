@@ -97,15 +97,6 @@ html, body {
     height: 13px;
 }
 
-/* ---------------------------------- ACCORDION ---------------------------------- */
-
-.collapsed {
-    color: #007bff;
-    background: var(--yellow_ish);
-    padding: 15px 15px;
-    text-align: center;
-}
-
 /* ---------------------------------- NAV + HEADER  ---------------------------------- */
 
 .nav--header {

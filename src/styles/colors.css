@@ -52,3 +52,6 @@
     border-bottom: white solid 3px;
 }
 
+.hoverImage:hover{
+    border: transparent 0.5px solid;
+}
