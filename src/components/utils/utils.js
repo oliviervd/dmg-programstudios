@@ -1,23 +1,25 @@
 import React from "react";
 
-
-
 // IMAGE HANDLING
 export function fetchImageByColor(objects, color) {
     // fetch list of images that share colorname (color);
     const imageList = []
-    for (let i=0; i<objects.length; i++){
-        for (let z=0; z<objects[i]["color_names"].length; z++) {
-            try {
-                if (objects[i]["color_names"][z].includes(color)) {
-                    if (objects[i]["iiif_image_uris"][z] !== undefined) {
-                        imageList.push(objects[i]["iiif_image_uris"][z])
+    try {
+        for (let i=0; i<objects.length; i++){
+            for (let z=0; z<objects[i]["color_names"].length; z++) {
+                try {
+                    if (objects[i]["color_names"][z].includes(color)) {
+                        if (objects[i]["iiif_image_uris"][z] !== undefined) {
+                            imageList.push(objects[i]["iiif_image_uris"][z])
+                        }
                     }
-                }
-            } catch (error) {console.log(error)}
+                } catch (error) {console.log(error)}
+            }
         }
-    }
-    return imageList
+        return imageList
+        console.log(imageList)
+    } catch (e) {}
+
 }
 
 export function shuffleFisherYates(array) {
