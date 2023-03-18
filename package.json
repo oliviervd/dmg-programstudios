@@ -11,6 +11,7 @@
   "dependencies": {
     "@supabase/supabase-js": "^2.8.0",
     "@tanstack/react-query": "^4.26.1",
+    "@tanstack/react-query-devtools": "^4.27.0",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
@@ -42,7 +43,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "react-dotenv && npm run build"
+    "heroku-postbuild": "npm run build"
   },
   "eslintConfig": {
     "extends": [
