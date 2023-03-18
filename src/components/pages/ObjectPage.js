@@ -24,10 +24,6 @@ const ObjectPage = () => {
 
     //const { id } = useParams()
     const [details, setDetails] = useState("");
-    const [objects, setObjects] = useState("");
-    const [personen, setPersonen] = useState("");
-    const [thesaurus, setThesaurus] = useState("");
-    const [related, setRelated] = useState("");
     const [objectRoute, setObjectRoute] = useState("");
     const [bitonal, setBitonal] = useState(false)
 
@@ -35,22 +31,27 @@ const ObjectPage = () => {
     const _thes = useThesaurusQuery().data;
     const _objects = useObjectsQuery().data;
 
+    let _related;
+    let imageBlock
+
+    try {
+        _related = fetchRelatedObjects(_objects, details, _thes);
+        imageBlock = _related.map(image => (
+            <img className={"related_img"}
+                 src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
+                 onClick={()=>routeChangeObject(image)}
+            />
+        ))
+    } catch (e) {}
+
+
     useEffect(()=>{
         fetchObjectsByID(id)
-        fetchAll();
     }, [])
 
     const navigate = useNavigate()
     const routeChange = () => {
         navigate("/index/")
-    }
-
-    async function fetchAll() {
-        const { data } = await supabase
-            .from("dmg_objects_LDES")
-            .select("color_names, HEX_values, iiif_image_uris, objectNumber, LDES_raw",   {'head':false})
-            .not("color_names", 'is', null)
-        setObjects(data)
     }
 
     async function fetchObjectsByID(objectNumber) {
@@ -76,13 +77,6 @@ const ObjectPage = () => {
     }
 
 
-    const _related = fetchRelatedObjects(objects, details, _thes);
-    const imageBlock = _related.map(image => (
-        <img className={"related_img"}
-            src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
-            onClick={()=>routeChangeObject(image)}
-        />
-    ))
     return(
         <div className="container">
             {isDesktopOrLaptop&&
