@@ -10,18 +10,21 @@
   "author": "Olivier Van D'huynslager (Design Museum Gent)",
   "dependencies": {
     "@supabase/supabase-js": "^2.8.0",
+    "@tanstack/react-query": "^4.26.1",
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
     "axis": "^1.0.0",
     "dotenv": "^10.0.0",
     "edtf-converter": "^4.0.2",
+    "invariant": "^2.2.4",
     "jquery": "^3.6.0",
     "node-cron": "^3.0.2",
     "os": "^0.1.2",
     "os-browserify": "^0.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.0.0",
+    "react-dotenv": "^0.1.3",
     "react-native-xml2js": "^1.0.3",
     "react-responsive": "^9.0.2",
     "react-responsive-carousel": "^3.2.23",
@@ -30,8 +33,8 @@
     "sass": "^1.32.11",
     "serve": "^13.0.2",
     "stream": "^0.0.2",
-    "web-vitals": "^2.1.4",
-    "webpack": "^5.75.0"
+    "tiny-invariant": "^1.3.1",
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "dev": "react-scripts start",
@@ -39,7 +42,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "heroku-postbuild": "react-dotenv && npm run build"
   },
   "eslintConfig": {
     "extends": [
@@ -59,6 +62,14 @@
   },
   "devDependencies": {
     "cors": "^2.8.5",
-    "express": "^4.18.1"
+    "express": "^4.18.1",
+    "webpack": "^5.76.2",
+    "webpack-cli": "^5.0.1"
+  },
+  "react-dotenv": {
+    "whitelist": [
+      "REACT_APP_SUPABASE_ANON_KEY",
+      "REACT_APP_SUPABASE_URL"
+    ]
   }
 }
