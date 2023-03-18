@@ -50,23 +50,19 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
 }
 
 export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
-
     // todo: make more specific - make use of cascade
     // skip: objectverpakking.
-
     // 1. same artist && same type
     // 2. same type
     // 3. same artist?
-
     // 1. same artist && same type
-
-
     // 2. same type.
     let _refOT
+    //console.log(_ref["LDES_raw"]);
     try {
         _refOT = fetchObjectType(_ref[0]["LDES_raw"], _thes)
     } catch(error) {
-        console.log(error)
+        //console.log(error)
     }
 
     let _len = _LDES.length
