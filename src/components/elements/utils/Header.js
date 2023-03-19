@@ -1,6 +1,6 @@
 import React, {lazy, Suspense} from "react";
 import {useNavigate} from "react-router-dom";
-import {headerAbout, headerTitle, headerTitleBig} from "../utils/data_parsers";
+import {headerAbout, headerTitle} from "../../utils/data_parsers";
 import {useMediaQuery} from "react-responsive";
 
 const HamburgerMenu = lazy(() => import("./HamburgerMenu"));

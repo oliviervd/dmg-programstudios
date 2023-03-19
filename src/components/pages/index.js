@@ -5,7 +5,8 @@ import {shuffleFisherYates, splice, getKeyByValue, fetchImageByColor, wait} from
 import ObjectViewer from "../elements/subjectpages/ObjectViewer";
 import colorRef from "../data/db/colorRef.json"; // data with CSS color referencing.
 import {useMediaQuery} from "react-responsive";
-import Footer from "../elements/Footer";
+import Footer from "../elements/utils/Footer";
+import ExhibitionIndex from "../elements/indexes/exhibitionIndex";
 
 import useObjectsQuery from "../hooks/useObjectsQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
@@ -43,8 +44,8 @@ const Index = (props) => {
     const _objects  = useObjectsQuery().data;
     const _thes  = useThesaurusQuery().data;
     const _pers = useAgentQuery().data;
-    const _exh = useExhibitionLister(_objects);
-    console.log(_exh)
+    const _exhibitions = useExhibitionLister(_objects);
+    console.log(_exhibitions)
 
     // * --- * //
 
@@ -61,7 +62,7 @@ const Index = (props) => {
         return x[0]["objectNumber"];
     }
 
-
+    // todo: move Color index to separate component --> clean up code.
 
     const HexList = [];
 
@@ -271,16 +272,14 @@ const Index = (props) => {
 
                                 }
 
-                                <div style={{height: "5vh"}}>
+                                <div>
                                     <div className="lineH"/>
-                                    <p>people</p>
-                                    <div className="grid--even_8">
-
-                                    </div>
+                                    <p>exhibitions</p>
+                                    <ExhibitionIndex exhibitionList={_exhibitions}/>
                                 </div>
                                 <div style={{height: "5vh"}}>
                                     <div className="lineH"/>
-                                    <p>systems</p>
+                                    <p className={"rhizome fast"}>[something is growing here... ]</p>
                                     <div className="grid--even_10">
                                     </div>
 
