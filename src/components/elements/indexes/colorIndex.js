@@ -17,7 +17,6 @@ const ColorIndex = (props) => {
 
     console.log(props.showIndexColors)
 
-
     const _objects = props.objects
     const _thes  = props.thesaurus
     const _pers = props.agents
@@ -25,7 +24,7 @@ const ColorIndex = (props) => {
 
     let navigate = useNavigate();
 
-    //MEDIA QUERIES
+    //MEDIA QUERIE
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 700px)'
     })
