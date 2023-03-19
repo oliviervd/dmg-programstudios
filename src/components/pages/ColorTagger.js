@@ -9,8 +9,8 @@ import ColorTagger_colorCubes from "../elements/index-color/ColorTagger_colorCub
 import ColorTagger_cube from "../elements/index-color/ColorTagger_cube";
 import ColorMatchSlider from "../elements/index-color/colorMatchSlider";
 
-import Header from "../elements/Header";
-import InteractionBar from "../elements/interactionBar";
+import Header from "../elements/utils/Header";
+import InteractionBar from "../elements/utils/interactionBar";
 import useObjectsQuery from "../hooks/useObjectsQuery";
 
 const ColorTagger = () => {

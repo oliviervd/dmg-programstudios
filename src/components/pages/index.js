@@ -1,17 +1,22 @@
 import React, {useState, useEffect, Suspense} from "react"
 import { createClient } from '@supabase/supabase-js'
 import {useNavigate} from "react-router-dom";
-import {shuffleFisherYates, splice, getKeyByValue, fetchImageByColor} from "../utils/utils";
+import {shuffleFisherYates, splice, getKeyByValue, fetchImageByColor, wait} from "../utils/utils";
 import ObjectViewer from "../elements/subjectpages/ObjectViewer";
 import colorRef from "../data/db/colorRef.json"; // data with CSS color referencing.
 import {useMediaQuery} from "react-responsive";
-import Footer from "../elements/Footer";
+import Footer from "../elements/utils/Footer";
+
+import ExhibitionIndex from "../elements/indexes/exhibitionIndex";
+import ColorIndex from "../elements/indexes/colorIndex";
 
 import useObjectsQuery from "../hooks/useObjectsQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useAgentQuery from "../hooks/useAgentQuery";
+import useExhibitionLister from "../hooks/useExhibitionLister";
 
 const Index = (props) => {
+
     // UTILS
     let navigate = useNavigate();
     //MEDIA QUERIES
@@ -23,119 +28,22 @@ const Index = (props) => {
     })
 
     // COLOR INDEX
-    const [collapseColors, setCollapseColors] = useState(true);
-    const [objectNumber, setObjectNumber] = useState(""); // store object_number from image that was clicked
-    const [details, setDetails] = useState("");
-    const [showDetailUI, setShowDetailUI] = useState(false);
-    const [image, setImage] = useState("");
-    const [showIndex, setShowIndex] = useState(true);
-    const [bitonal, setBitonal] = useState(false);
     const [about, setAbout] = useState(false);
+    const [showIndexColors, setShowIndexColors] = useState(true);
+    const [collapseColors, setCollapseColors] = useState(true);
+    const [collapseExhibition, setCollapseExhibition] = useState(false);
 
-    const _c = ["Tuscan brown", "Dark khaki", "Café noir", "Brown sugar", "Chestnut", "Kobicha", "Indigo dye", "Shadow blue", "Queen blue", "Eerie black", "Independence", "Morning blue", "Grullo", "Old rose"]
-    const random = Math.floor(Math.random() * _c.length);
-    const [objectColor, setObjectColor] = useState(_c[random]); // set Color of objects to be shown in Masonry
+
+    console.log(showIndexColors)
+
 
     // * --- IMPROVED API CALLS --- * //
     const _objects  = useObjectsQuery().data;
     const _thes  = useThesaurusQuery().data;
     const _pers = useAgentQuery().data;
+    const _exhibitions = useExhibitionLister(_objects);
 
     // * --- * //
-
-    function fetchObjectById(ObjectNumber) {
-        for (let i=0; i<_objects.length; i++) {
-            if (_objects[i].objectNumber == ObjectNumber) {
-                setDetails(_objects[i])
-            }
-        }
-    }
-
-    function filterByValue(array, string) {
-        let x = array.filter(o => o.iiif_image_uris.includes(string))
-        return x[0]["objectNumber"];
-    }
-
-    const HexList = [];
-
-    try{
-        for (let i=0; i<_objects.length; i++){
-            // iterate over all colors.
-            for (let z=0; z<_objects[i]["color_names"].length; z++) {
-                for (let hex = 0; hex < _objects[i]["color_names"][z].length; hex++) {
-                    if (_objects[i]["color_names"][z][hex] !== "Gray (X11 gray)"){
-                        HexList.push(_objects[i]["color_names"][z][hex])
-                    }
-                }
-            }
-        }
-    } catch {}
-
-    const _HexCounts = {};
-    for (const _hex of HexList) {
-        _HexCounts[_hex] = _HexCounts[_hex] ? _HexCounts[_hex] + 1 : 1;
-    }
-    const Hex100 = shuffleFisherYates(_HexCounts) // RANDOMIZE SELECTION OF COLORS USING FISHER YATES
-    const Hex100ran = splice(Hex100, 0, 10000); // ONLY SELECT FIRST 100 OUT OF SELECTION.
-
-    // set STYLING (onHover pickup color);
-    const [myStyle, setMyStyle] = useState({})
-    const handleClick = (id) => {
-        setMyStyle(prevState => ({
-            ...myStyle,
-            [id]: !prevState[id]
-        }))
-    }
-
-    const handleClickTag = (key) => {
-        setObjectColor(key)
-        setShowIndex(!showIndex)
-    }
-
-    // when clicking on an image store objectNumber in memory (objectNumber)
-    const handleImgClick = (id) => {
-        setImage(id);
-        setShowDetailUI(true);
-        let objectNumberString = filterByValue(_objects, id);
-        fetchObjectById(objectNumberString);
-    }
-
-    const HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
-        <p className={"grid-text-autoflow"}
-            //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
-            style={{color: "black"}}
-            onClick={()=>handleClickTag(key)} onMouseOver={()=>handleClick(i)}
-            onMouseLeave={()=>handleClick(i)} key={key}>
-            #{key},
-        </p>
-    ));
-
-    let images;
-    images = fetchImageByColor(_objects, objectColor)
-
-    let imageBlock = ""
-
-    try{
-        if (bitonal) {
-            imageBlock = images.map(image => (
-                <img
-                    onClick={()=>handleImgClick(image)}
-                    alt={'INSERT ALT HERE'} //todo: alt
-                    src={image.replace("/full/0/default.jpg", "/400,/0/bitonal.jpg")}
-                />
-            ))
-        } else {
-            imageBlock = images.map(image => (
-                <img
-                    className={"hoverImage"}
-                    onClick={()=>handleImgClick(image)}
-                    alt={'INSERT ALT HERE'} // todo: alt
-                    src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
-                />
-            ))
-        }
-
-    } catch {}
 
     // https://www.youtube.com/watch?v=FEiggoSm8tw
     const routeChange = () => {
@@ -174,8 +82,8 @@ const Index = (props) => {
                                 <div style={{borderLeft: "1px solid black"}}>
                                     <div style={{margin: "10px"}}>
                                         <p className={"rhizome"}/>
-                                            <br/>
-                                            <p onClick={()=>setAbout(!about)}>[CLOSE]</p>
+                                        <br/>
+                                        <p onClick={()=>setAbout(!about)}>[CLOSE]</p>
                                     </div>
                                 </div>
                                 <div className="lineV"></div>
@@ -184,100 +92,25 @@ const Index = (props) => {
 
                         <div>
                             <div className="grid--even" style={{width: "inherit"}}>
-                                {collapseColors &&
-                                    <div>
-                                        <div style={{width:"inherit"}}>
-                                            <div className="lineH"/>
-                                            <div className="grid--2_6_2">
-                                                <p onClick={()=>setCollapseColors(!collapseColors)}>colors</p>
-                                                <div></div>
-                                                <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
-                                            </div>
-                                            <div style={style}>
-                                                <Suspense>
-                                                    {HexOptions}
-                                                </Suspense>
-                                            </div>
-                                        </div>
-                                        <div>
-                                            <div className="lineH"/>
 
-                                            <div className="grid--2_6_2">
-                                                <p>images</p>
-                                                <div></div>
-                                                <p></p>
-                                            </div>
-                                            <div className="grid--2_6_2">
-                                                <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
-                                                <div></div>
-                                                <div className={"grid--2_1"}>
-                                                    <p>>>> scroll this way >>>></p>
-                                                    {bitonal &&
-                                                        <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
-                                                    }
-                                                    {!bitonal &&
-                                                        <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
-                                                    }
-                                                </div>
-                                            </div>
-                                            {!about &&
-                                                <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
-                                                    <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
-                                                        {imageBlock}
-                                                    </div>
-                                                    {showDetailUI &&
-                                                        <ObjectViewer
-                                                            showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={_thes} personen={_pers}
-                                                            image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
-                                                            box={false}
-                                                        />
-                                                    }
-                                                </div>
-                                            }
-                                            {about &&
-                                                <div className={showDetailUI? "container-masonry-half": "container-masonry-full"} style={{width: "70vw"}}>
-                                                    <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
-                                                        {imageBlock}
-                                                    </div>
-                                                    {showDetailUI &&
-                                                        <ObjectViewer
-                                                            showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={_thes} personen={_pers}
-                                                            image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
-                                                            box={false}
-                                                        />
-                                                    }
-                                                </div>
-                                            }
-                                        </div>
-                                    </div>
+                                <ColorIndex style={style} objects={_objects} thesaurus={_thes} agents={_pers}
+                                            about={about} showIndexColors={showIndexColors} setShowIndexColors={setShowIndexColors}
+                                            collapseColors={collapseColors} setCollapseColors={setCollapseColors}
+                                            collapseExhibition={collapseExhibition} setCollapseExhibition={setCollapseExhibition}
+                                />
 
-                                }
-                                {!collapseColors &&
-                                    <div>
-                                        <div className="lineH"/>
-                                        <div style={{height: "5vh"}} className="grid--2_6_2">
-                                            <p onClick={()=>setCollapseColors(!collapseColors)}>colors</p>
-                                            <div></div>
-                                            <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
-                                        </div>
-                                    </div>
+                                <ExhibitionIndex exhibitionList={_exhibitions} objects={_objects} thesaurus={_thes} agents={_pers}
+                                                 collapseColors={collapseColors} setCollapseColors={setCollapseColors}
+                                                 collapseExhibition={collapseExhibition} setCollapseExhibition={setCollapseExhibition}
+                                />
 
-                                }
-
-                                <div style={{height: "5vh"}}>
+                                {/*<div style={{height: "5vh"}}>
                                     <div className="lineH"/>
-                                    <p>people</p>
-                                    <div className="grid--even_8">
-
-                                    </div>
-                                </div>
-                                <div style={{height: "5vh"}}>
-                                    <div className="lineH"/>
-                                    <p>systems</p>
+                                    <p className={"rhizome fast indexLabel"} style={{width: "200px", fontSize: "20px"}}>[something is growing here... ]</p>
                                     <div className="grid--even_10">
                                     </div>
 
-                                </div>
+                                </div>*/}
                             </div>
                         </div>
 
@@ -294,53 +127,16 @@ const Index = (props) => {
                         <h2 onClick={()=>routeChange()}>back to home</h2>
 
                     </div>
+                    <ColorIndex style={style} objects={_objects} thesaurus={_thes} agents={_pers}
+                                about={about}/>
+                    <ExhibitionIndex exhibitionList={_exhibitions}
+                                     showIndexColors={showIndexColors} setShowIndexColors={setShowIndexColors}/>
 
-                    <div>
-                        <div className="lineH"/>
-                        {showIndex &&
-                            <div style={{overflowY: "hidden"}}>
-                                <div className="grid--2_6_2">
-                                    <p>colors</p>
-                                    <div></div>
-                                </div>
-
-                                <div style={{height: "100%", overflowY:"scroll"}}>
-                                    <Suspense>
-                                        {HexOptions}
-                                    </Suspense>
-                                </div>
-                            </div>
-
-                        }
-
-
-                        <div className="grid--2_6_2">
-                            <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
-                            <div style={{height: "5vh"}}></div>
-                            <p onClick={()=>setShowIndex(true)}>>>> scroll this way >>>></p>
-                        </div>
-
-                        <div className={"masonry"} style={{height: "85vh", overflowY:"scroll"}}>
-                            {imageBlock}
-                        </div>
-                        <div>
-                            <div className={"lineH"}></div>
-                        </div>
-
-                        {showDetailUI &&
-                            <ObjectViewer
-                                showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={_thes} personen={_pers}
-                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
-                                box={false}
-                            />
-                        }
-
-                    </div>
                 </div>
             }
 
 
-        <Footer></Footer>
+            <Footer></Footer>
         </div>
     )
 }

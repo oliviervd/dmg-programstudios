@@ -4,9 +4,9 @@ import {fetchTitleStudios} from "../utils/data_parsers";
 
 const StudioLanding = (props) => {
 
-    const InteractionBar = React.lazy(()=>import("../elements/interactionBar"))
+    const InteractionBar = React.lazy(()=>import("../elements/utils/interactionBar"))
     const id = useParams(); //fetch id from URL
-    const Header = React.lazy(()=> import("../elements/Header"))
+    const Header = React.lazy(()=> import("../elements/utils/Header"))
     const [language, setLanguage] = useState("EN");
 
     console.log(id.id)

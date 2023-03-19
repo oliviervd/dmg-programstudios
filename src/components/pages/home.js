@@ -10,16 +10,16 @@ import {
 } from "../utils/data_parsers";
 import {useNavigate} from "react-router-dom"
 
-import ProjectHomeSnippet from "../elements/projectHomeSnippet";
-import ProjectHomeView from "../elements/projectHomeView";
-import Header from "../elements/Header";
+import ProjectHomeSnippet from "../elements/utils/projectHomeSnippet";
+import ProjectHomeView from "../elements/utils/projectHomeView";
+import Header from "../elements/utils/Header";
 import studiogrid_data from "../data/content/studiogrid.json"
 import {useMediaQuery} from "react-responsive";
 
 
 const Home = () => {
 
-    const InteractionBar = React.lazy(()=>import("../elements/interactionBar"))
+    const InteractionBar = React.lazy(()=>import("../elements/utils/interactionBar"))
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
     })

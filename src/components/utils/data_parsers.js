@@ -2,6 +2,36 @@ import React from "react";
 import * as EdtfConverter from 'edtf-converter';
 const converter = new EdtfConverter.Converter();
 
+export function fetchAllExhibitions(input) {
+    const ExList = [];
+    try{
+        for (let i=0; i<input.length; i++) {
+            // iterate over all exhibitions
+            let LDES = input[i]["LDES_raw"]["object"]
+            //console.log(LDES)
+            try {
+                if (LDES["http://purl.org/dc/terms/isPartOf"]) {
+                    let exh;
+                    if (LDES["http://purl.org/dc/terms/isPartOf"][0]){
+                        for (let x=0; x<LDES["http://purl.org/dc/terms/isPartOf"].length; x++){
+                            try{
+                                exh = LDES["http://purl.org/dc/terms/isPartOf"][x]["http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
+                                ExList.push(exh)
+                            } catch(e) {}
+                        }
+                    } else {
+                        exh = LDES["http://purl.org/dc/terms/isPartOf"]["http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
+                        ExList.push(exh)
+                    }
+                }
+            } catch (e) {}
+        }
+        //console.log(ExList);
+        return ExList
+    } catch(e) {}
+}
+
+
 export function fetchOeuvre(_LDES, agent, PERS, THES) {
     let _refID = agent["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
     let _len  = _LDES.length

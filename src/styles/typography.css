@@ -106,6 +106,15 @@ p.rhizome{
     animation: grow 150s ease-in-out infinite;
 }
 
+p.rhizome.fast {
+    animation: grow 10s ease-in-out infinite;
+}
+
+h1.rhizome.fast {
+    font-family: "Fungal";
+    animation: grow 10s ease-in-out infinite;
+}
+
 @keyframes grow{
     0% {
         font-variation-settings: "THCK" 0, "grow" 0;
@@ -197,6 +206,18 @@ a {
     padding-top: 20vh;
     height: 50vh;
     bottom: 40vh;
+}
+
+.indexLabel {
+    border: transparent solid 2px;
+    background: palegreen;
+    border-radius: 20px;
+    width: 60px;
+}
+
+.indexLabel:hover {
+    border-radius: 40px;
+    width: 70px;
 }
 
 .underlined{

@@ -4,8 +4,8 @@ import {
     fetchStudioProjectDescription,
     fetchStudioProjectImage,
     fetchStudioID
-} from "../utils/data_parsers";
-import studiogrid_data from "../data/content/studiogrid.json"
+} from "../../utils/data_parsers";
+import studiogrid_data from "../../data/content/studiogrid.json"
 
 const ProjectHomeSnippet = (props) => {
 

@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import {headerAbout} from "../utils/data_parsers";
+import {headerAbout} from "../../utils/data_parsers";
 
 const HamburgerMenu = (props) => {
 
