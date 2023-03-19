@@ -7,7 +7,7 @@ import {useMediaQuery} from "react-responsive";
 
 const ColorIndex = (props) => {
 
-    const _c = ["Tuscan brown", "Dark khaki", "Café noir", "Brown sugar", "Chestnut", "Kobicha", "Indigo dye", "Shadow blue", "Queen blue", "Eerie black", "Independence", "Morning blue", "Grullo", "Old rose"]
+    const _c = ["Tuscan brown", "Vanilla" "Dark khaki", "Café noir",  "Rifle green", "Kobicha", "Artichoke", "Indigo dye", "Shadow blue", "Queen blue", "Gunmetal", "Morning blue", "Grullo", "Rich black (FOGRA39)"]
     const random = Math.floor(Math.random() * _c.length);
     const [objectColor, setObjectColor] = useState(_c[random]); // set Color of objects to be shown in Masonry
     const [image, setImage] = useState("");
