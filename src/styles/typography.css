@@ -208,6 +208,18 @@ a {
     bottom: 40vh;
 }
 
+.indexLabel {
+    border: transparent solid 2px;
+    background: palegreen;
+    border-radius: 20px;
+    width: 60px;
+}
+
+.indexLabel:hover {
+    border-radius: 40px;
+    width: 70px;
+}
+
 .underlined{
     text-decoration: underline;
 }
