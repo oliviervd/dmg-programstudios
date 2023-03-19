@@ -1,7 +1,7 @@
 import React, {useState, useEffect, Suspense} from "react"
 import { createClient } from '@supabase/supabase-js'
 import {useNavigate} from "react-router-dom";
-import {shuffleFisherYates, splice, getKeyByValue, fetchImageByColor} from "../utils/utils";
+import {shuffleFisherYates, splice, getKeyByValue, fetchImageByColor, wait} from "../utils/utils";
 import ObjectViewer from "../elements/subjectpages/ObjectViewer";
 import colorRef from "../data/db/colorRef.json"; // data with CSS color referencing.
 import {useMediaQuery} from "react-responsive";
@@ -10,6 +10,9 @@ import Footer from "../elements/Footer";
 import useObjectsQuery from "../hooks/useObjectsQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useAgentQuery from "../hooks/useAgentQuery";
+import {fetchAllExhibitions} from "../utils/data_parsers";
+import {useQuery} from "@tanstack/react-query";
+import useExhibitionLister from "../hooks/useExhibitionLister";
 
 const Index = (props) => {
     // UTILS
@@ -40,6 +43,8 @@ const Index = (props) => {
     const _objects  = useObjectsQuery().data;
     const _thes  = useThesaurusQuery().data;
     const _pers = useAgentQuery().data;
+    const _exh = useExhibitionLister(_objects);
+    console.log(_exh)
 
     // * --- * //
 
@@ -55,6 +60,8 @@ const Index = (props) => {
         let x = array.filter(o => o.iiif_image_uris.includes(string))
         return x[0]["objectNumber"];
     }
+
+
 
     const HexList = [];
 
