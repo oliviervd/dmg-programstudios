@@ -17,6 +17,7 @@ const ColorIndex = (props) => {
 
     console.log(props.showIndexColors)
 
+
     const _objects = props.objects
     const _thes  = props.thesaurus
     const _pers = props.agents
