@@ -64,7 +64,7 @@ const ObjectViewer = (props) => {
         } catch (e) {}
 
         try{ // description
-            description = _LDES[0]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
+            description = _LDES["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
         } catch(e) {description = ""}
 
         try {
@@ -118,6 +118,7 @@ const ObjectViewer = (props) => {
                             </Suspense>
                             <div></div>
                             <div style={{marginLeft: "40px", marginRight: "10vw", marginTop:"10px"}}>
+
                                 {props.description &&
                                     <div>
                                         <p>{description}</p>
