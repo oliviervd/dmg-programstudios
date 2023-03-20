@@ -21,7 +21,7 @@ import AgentPage from "./components/pages/AgentPage";
 const queryClient = new QueryClient(
     {defaultOptions:
         {queries:
-                {staleTime: 1000 * 60 * 5} // set caching time to 5 minutes.
+                {staleTime: 1000 * 60 * 60 * 24} // set caching time to 24hours.
         }}
 )
 
