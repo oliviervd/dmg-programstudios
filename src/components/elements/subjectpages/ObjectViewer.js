@@ -121,7 +121,7 @@ const ObjectViewer = (props) => {
 
                                 {props.description &&
                                     <div>
-                                        <p>{description}</p>
+                                        <p className={'description'}>{description}</p>
                                         <br/>
                                     </div>
                                 }

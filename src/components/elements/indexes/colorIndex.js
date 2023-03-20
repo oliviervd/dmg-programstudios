@@ -4,6 +4,7 @@ import colorRef from "../../data/db/colorRef.json";
 import ObjectViewer from "../subjectpages/ObjectViewer";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
+import SearchFilterBar from "../utils/SearchFilterBar";
 
 const ColorIndex = (props) => {
 
@@ -14,8 +15,8 @@ const ColorIndex = (props) => {
     const [showDetailUIColors, setShowDetailUIColors] = useState(false);
     const [bitonal, setBitonal] = useState(false);
     const [details, setDetails] = useState("");
-
-    console.log(props.showIndexColors)
+    const [hexFilter, setHexFilter] = useState("");
+    console.log(hexFilter)
 
     const _objects = props.objects
     const _thes  = props.thesaurus
@@ -91,6 +92,7 @@ const ColorIndex = (props) => {
     const Hex100 = shuffleFisherYates(_HexCounts) // RANDOMIZE SELECTION OF COLORS USING FISHER YATES
     const Hex100ran = splice(Hex100, 0, 10000); // ONLY SELECT FIRST 100 OUT OF SELECTION.
 
+
     const HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
         <p className={"grid-text-autoflow"}
             //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
@@ -152,11 +154,17 @@ const ColorIndex = (props) => {
                     {props.collapseColors &&
                         <div>
                             <div style={{width:"inherit"}}>
-                                <div className="lineH"/>
-                                <div className="grid--2_6_2">
-                                    <p className={"indexLabel"} onClick={()=>collapse()}>colors</p>
-                                    <div></div>
-                                    <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
+                                <div>
+                                    <div className="lineH"/>
+                                    <div className="grid--2_6_2 " style={{height: '5vh'}}>
+                                        <p className={"indexLabel"} onClick={()=>collapse()}>colors</p>
+                                        <div className={"grid--5_95"}>
+                                            <div className={"indexLabel"}></div>
+                                            {/*<SearchFilterBar hexFilter={hexFilter} setHexFilter={setHexFilter}/>*/}
+                                        </div>
+                                        <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
+                                    </div>
+                                    <div className={"lineH"}></div>
                                 </div>
                                 <div style={props.style}>
                                     <Suspense>
