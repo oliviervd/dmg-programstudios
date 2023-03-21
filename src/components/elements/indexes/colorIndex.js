@@ -17,7 +17,6 @@ const ColorIndex = (props) => {
     const [bitonal, setBitonal] = useState(false);
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
-    console.log(hexFilter)
 
     const _objects = props.objects
     const _thes  = props.thesaurus
@@ -100,8 +99,8 @@ const ColorIndex = (props) => {
             <p className={"grid-text-autoflow"}
                 //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
                style={{color: "black"}}
-               onClick={()=>handleClickTag(key)} onMouseOver={()=>handleClick(i)}
-               onMouseLeave={()=>handleClick(i)} key={key}>
+               onClick={()=>handleClickTag(key)}
+               key={key}>
                 #{key},
             </p>
         ));
@@ -173,7 +172,7 @@ const ColorIndex = (props) => {
                                         <p className={"indexLabel"} onClick={()=>collapse()}>colors</p>
                                         <div className={"grid--5_95"}>
                                             <div className={"indexLabel"}></div>
-                                            <SearchFilterBar hexFilter={hexFilter} setHexFilter={setHexFilter}/>
+                                            <SearchFilterBar hexFilter={hexFilter} setHexFilter={setHexFilter} prompt={" looking for a specific color?"}/>
                                         </div>
                                         <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
                                     </div>
