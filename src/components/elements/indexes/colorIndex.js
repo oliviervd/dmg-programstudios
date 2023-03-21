@@ -37,7 +37,6 @@ const ColorIndex = (props) => {
     // when clicking on an image store objectNumber in memory (objectNumber)
     const handleImgClick = (id) => {
         setImage(id);
-        console.log(id);
         setShowDetailUIColors(true);
         let objectNumberString = filterByValue(_objects, id);
         fetchObjectById(objectNumberString);
@@ -135,11 +134,7 @@ const ColorIndex = (props) => {
     }
 
     function filterByValue(array, string) {
-        console.log(array)
-        console.log(string)
         let x = array.filter(o => o.iiif_image_uris.includes(string))
-        console.log(x)
-
         return x[0]["objectNumber"];
     }
 
