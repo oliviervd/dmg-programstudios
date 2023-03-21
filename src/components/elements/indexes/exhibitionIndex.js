@@ -2,6 +2,8 @@ import React, {useState} from "react";
 import {getKeyByValue} from "../../utils/utils";
 import colorRef from "../../data/db/colorRef.json";
 import ObjectViewer from "../subjectpages/ObjectViewer";
+import SearchFilterBar from "../utils/SearchFilterBar";
+import {filterByKey} from "../../utils/data_parsers";
 
 const ExhibitionIndex = (props) => {
 
@@ -11,8 +13,7 @@ const ExhibitionIndex = (props) => {
     const [showDetailsExhObj, setShowDetailsExhObj] = useState(false);
     const [image, setImage] = useState("")
     const [details, setDetails] = useState("")
-
-    console.log(details);
+    const [exhibitionFilter, setExhibitionFilter] = useState("")
 
     let ExhOptions;
 
@@ -30,14 +31,26 @@ const ExhibitionIndex = (props) => {
             props.setCollapseColors(false)
         }
 
+        const _exhFilter = filterByKey(_exhCounts, exhibitionFilter)
 
-        ExhOptions = Object.entries(_exhCounts).map(([key, i]) => (
-            <p className={"grid-text-autoflow"}
-               style={{color: "black"}}
-               onClick={()=>handleClickTag(key)}>
-                #{key},
-            </p>
-        ))
+        if (exhibitionFilter == "") {
+            ExhOptions = Object.entries(_exhCounts).map(([key, i]) => (
+                <p className={"grid-text-autoflow"}
+                   style={{color: "black"}}
+                   onClick={()=>handleClickTag(key)}>
+                    #{key},
+                </p>
+            ))
+        } else {
+            ExhOptions = _exhFilter.map((exh)=>{
+                return <p className={"grid-text-autoflow"}
+                          style={{color: "black"}}
+                          onClick={()=>handleClickTag(exh)}>
+                    #{exh},
+                </p>
+            })
+        }
+
 
     }
 
@@ -49,7 +62,6 @@ const ExhibitionIndex = (props) => {
             for (let i=0; i<objects.length; i++) {
                 let LDES = objects[i]["LDES_raw"]["object"]
                 if (LDES["http://purl.org/dc/terms/isPartOf"]) {
-                    //console.log(LDES["http://purl.org/dc/terms/isPartOf"])
                     let obj;
                     if (LDES["http://purl.org/dc/terms/isPartOf"][0]){
                         for (let x=0; x<LDES["http://purl.org/dc/terms/isPartOf"].length; x++){
@@ -103,19 +115,13 @@ const ExhibitionIndex = (props) => {
 
     const handleImgClick = (id) => {
         setImage(id);
-        //console.log(id);
         setShowDetailsExhObj(true);
         let objectNumberString = filterByValue(props.objects, id);
-        console.log(objectNumberString)
         fetchObjectById(objectNumberString);
     }
 
     function filterByValue(array, string) {
-        //console.log(string);
-        //console.log(array)
         let x = array.filter(o => o.iiif_image_uris.includes(string))
-        //console.log(x[0]["objectNumber"])
-        //console.log(x.objectNumber)
         return x[0]["objectNumber"];
     }
 
@@ -137,16 +143,25 @@ const ExhibitionIndex = (props) => {
             {props.collapseExhibition &&
 
                 <div>
-                    <div className="lineH"/>
-                    <p className={"indexLabel"} onClick={()=>props.setCollapseExhibition(!props.collapseExhibition)}>exhibitions</p>
-                    <div style={{width:"inherit",  height: "200px",
-                        overflowY:"scroll"}}>
-                        {ExhOptions}
+                    <div>
+                        <div>
+                            <div className="lineH"/>
+                            <div className="grid--2_6_2 " style={{height: '5vh'}}>
+                                <p className={"indexLabel"} onClick={()=>props.setCollapseExhibition(!props.collapseExhibition)}>exhibitions</p>
+                                <div className={"grid--5_95"}>
+                                    <div className={"indexLabel"}></div>
+                                    <SearchFilterBar hexFilter={exhibitionFilter} setHexFilter={setExhibitionFilter} prompt={" looking for a specific exhibition?"}/>
+                                </div>
+                            </div>
+                            <div className={"lineH"}></div>
+                        </div>
+                        <div style={{width:"inherit",  height: "200px",
+                            overflowY:"scroll"}}>
+                            {ExhOptions}
+                        </div>
                     </div>
                     <div>
                         <div className="lineH"/>
-                        <div className="lineH"/>
-
                         <div className="grid--2_6_2">
                             <p>images</p>
                             <div></div>

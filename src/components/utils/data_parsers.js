@@ -2,6 +2,10 @@ import React from "react";
 import * as EdtfConverter from 'edtf-converter';
 const converter = new EdtfConverter.Converter();
 
+export function filterByKey(object, _filter) {
+    return Object.keys(object).filter((key)=>key.toLowerCase().includes(_filter.toLowerCase()));
+}
+
 export function fetchAllExhibitions(input) {
     const ExList = [];
     try{
