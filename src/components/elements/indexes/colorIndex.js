@@ -5,6 +5,7 @@ import ObjectViewer from "../subjectpages/ObjectViewer";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import SearchFilterBar from "../utils/SearchFilterBar";
+import {filterByKey} from "../../utils/data_parsers";
 
 const ColorIndex = (props) => {
 
@@ -92,16 +93,33 @@ const ColorIndex = (props) => {
     const Hex100 = shuffleFisherYates(_HexCounts) // RANDOMIZE SELECTION OF COLORS USING FISHER YATES
     const Hex100ran = splice(Hex100, 0, 10000); // ONLY SELECT FIRST 100 OUT OF SELECTION.
 
+    const _filterHex = filterByKey(Hex100ran, hexFilter);
 
-    const HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
-        <p className={"grid-text-autoflow"}
-            //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
-           style={{color: "black"}}
-           onClick={()=>handleClickTag(key)} onMouseOver={()=>handleClick(i)}
-           onMouseLeave={()=>handleClick(i)} key={key}>
-            #{key},
-        </p>
-    ));
+    let HexOptions;
+    if (hexFilter==="") {
+        HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
+            <p className={"grid-text-autoflow"}
+                //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
+               style={{color: "black"}}
+               onClick={()=>handleClickTag(key)} onMouseOver={()=>handleClick(i)}
+               onMouseLeave={()=>handleClick(i)} key={key}>
+                #{key},
+            </p>
+        ));
+    } else {
+        HexOptions = _filterHex.map((color)=>{
+            return <p className={"grid-text-autoflow"}
+                //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
+                      style={{color: "black"}}
+                      onClick={()=>handleClickTag(color)}
+                      key={color}>
+                #{color},
+            </p>
+
+
+        });
+    }
+
 
 
     function fetchObjectById(ObjectNumber) {
@@ -160,7 +178,7 @@ const ColorIndex = (props) => {
                                         <p className={"indexLabel"} onClick={()=>collapse()}>colors</p>
                                         <div className={"grid--5_95"}>
                                             <div className={"indexLabel"}></div>
-                                            {/*<SearchFilterBar hexFilter={hexFilter} setHexFilter={setHexFilter}/>*/}
+                                            <SearchFilterBar hexFilter={hexFilter} setHexFilter={setHexFilter}/>
                                         </div>
                                         <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
                                     </div>

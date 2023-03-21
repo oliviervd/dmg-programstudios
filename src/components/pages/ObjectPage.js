@@ -16,8 +16,6 @@ const ObjectPage = () => {
     })
 
     const [details, setDetails] = useState("");
-    const [bitonal, setBitonal] = useState(false)
-
     const _pers = useAgentQuery().data;
     const _thes = useThesaurusQuery().data;
     const _objects = useObjectsQuery().data;
@@ -30,10 +28,9 @@ const ObjectPage = () => {
     }, 1000)
 
     function fetchObjectsByID(id) {
-        console.log(_objects)
         for (let i=0; i<_objects.length; i++) {
             try{
-                if (_objects[i].objectNumber == id) {
+                if (_objects[i].objectNumber === id) {
                     return _objects[i]
                 }
             } catch (e) {}
@@ -42,7 +39,6 @@ const ObjectPage = () => {
 
     try {
         _related = fetchRelatedObjects(_objects, details, _thes);
-        console.log(_related);
         imageBlock = _related.map(image => (
             <img className={"related_img"}
                  src={image["iiif_image_uris"][0].replace("/full/0/default.jpg", "/400,/0/default.jpg")}
