@@ -59,9 +59,7 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
                         match.push(_LDES[i])
                         //console.log(match)
                     }
-
                 }
-
             } catch(error) {console.log(error)}
 
             try {
@@ -269,7 +267,8 @@ export function EDTFtoDate(EDTF){
     }
 
     else {
-        let date  = converter.edtfToDate(EDTF)
+        return input
+        /*let date  = converter.edtfToDate(EDTF)
         if (date.min && date.max) {
             let _date = date.min.toDate().getFullYear() + " - " + date.max.toDate().getFullYear()
             return _date
@@ -281,7 +280,7 @@ export function EDTFtoDate(EDTF){
         }
         else {
 
-        }
+        }*/
     }
     //return _date
 }
