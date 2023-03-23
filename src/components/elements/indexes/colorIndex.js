@@ -168,10 +168,10 @@ const ColorIndex = (props) => {
                             <div style={{width:"inherit"}}>
                                 <div>
                                     <div className="lineH"/>
-                                    <div className="grid--2_6_2 " style={{height: '5vh'}}>
-                                        <p className={"indexLabel"} onClick={()=>collapse()}>colors</p>
+                                    <div className="grid--2_6_2" style={{height: '5vh'}}>
+                                        <p onClick={()=>collapse()}>colors</p>
                                         <div className={"grid--5_95"}>
-                                            <div className={"indexLabel"}></div>
+                                            <div></div>
                                             <SearchFilterBar hexFilter={hexFilter} setHexFilter={setHexFilter} prompt={" looking for a specific color?"}/>
                                         </div>
                                         <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
@@ -243,7 +243,7 @@ const ColorIndex = (props) => {
                         <div>
                             <div className="lineH"/>
                             <div style={{height: "5vh"}} className="grid--2_6_2">
-                                <p className={"indexLabel"} onClick={()=>collapse()}>colors</p>
+                                <p onClick={()=>collapse()}>colors</p>
                                 <div></div>
                                 <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
                             </div>

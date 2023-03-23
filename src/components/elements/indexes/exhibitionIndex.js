@@ -147,9 +147,9 @@ const ExhibitionIndex = (props) => {
                         <div>
                             <div className="lineH"/>
                             <div className="grid--2_6_2 " style={{height: '5vh'}}>
-                                <p className={"indexLabel"} onClick={()=>props.setCollapseExhibition(!props.collapseExhibition)}>exhibitions</p>
+                                <p onClick={()=>props.setCollapseExhibition(!props.collapseExhibition)}>exhibitions</p>
                                 <div className={"grid--5_95"}>
-                                    <div className={"indexLabel"}></div>
+                                    <div></div>
                                     <SearchFilterBar hexFilter={exhibitionFilter} setHexFilter={setExhibitionFilter} prompt={" looking for a specific exhibition?"}/>
                                 </div>
                             </div>
@@ -204,7 +204,7 @@ const ExhibitionIndex = (props) => {
                 <div>
                     <div className="lineH"/>
                     <div style={{height: "5vh"}} className="grid--2_6_2">
-                        <p className={"indexLabel"} onClick={()=>collapse()}>exhibitions</p>
+                        <p onClick={()=>collapse()}>exhibitions</p>
                         <div></div>
                     </div>
                 </div>

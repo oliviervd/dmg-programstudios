@@ -48,6 +48,10 @@
     background: lightgoldenrodyellow;
 }
 
+.background__skin{
+    background: #FFE4C4
+}
+
 .border-dots{
     border-bottom: white solid 3px;
 }

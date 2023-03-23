@@ -117,15 +117,14 @@ const ObjectViewer = (props) => {
                                 <ImageViewer media={props.image} details={props.details}/>
                             </Suspense>
                             <div></div>
-                            <div style={{marginLeft: "40px", marginRight: "10vw", marginTop:"10px"}}>
+                            <div style={{paddingLeft: "40px", paddingRight: "10vw", paddingTop:"10px"}}>
 
                                 {props.description &&
                                     <div>
-                                        <p className={'description'}>{description}</p>
+                                        <p>{description}</p>
                                         <br/>
                                     </div>
                                 }
-
 
 
                                 {type != "" &&
