@@ -159,6 +159,7 @@ const ColorIndex = (props) => {
         props.setCollapseExhibition(false);
     }
 
+
     return(
         <div>
             {isDesktopOrLaptop&&
