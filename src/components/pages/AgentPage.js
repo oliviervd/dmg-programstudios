@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {useMediaQuery} from "react-responsive";
 import {useNavigate} from "react-router-dom";
+import Header from "../elements/utils/Header";
 import AgentViewer from "../elements/subjectpages/AgentViewer"
 import {useParams} from "react-router-dom";
 import useAgentQuery from "../hooks/useAgentQuery";
@@ -62,15 +63,17 @@ const AgentPage = () => {
     }
 
     // fetch details on specific persons
+    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
 
     return(
         <div className={"container"}>
             {isDesktopOrLaptop&&
-                <div className="grid--3_4_3">
+                <Header about={false}/>
+               /* <div className="grid--3_4_3">
                     <h1 className="home">agent</h1>
                     <div></div>
                     <h1 style={{bottom: "0px",textAlign: "right", fontSize: "20px"}} onClick={()=>routeChange()}>back to index</h1>
-                </div>
+                </div>*/
             }
 
             <div className={"grid--even_2"}>
