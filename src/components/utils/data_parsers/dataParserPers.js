@@ -1,6 +1,7 @@
 import React from "react"
+import {fetchTermFromThes} from "../data_parsers";
 
-export function fetchPersBirth(input) {
+export function fetchPersBirth(input, thes) {
     let birth = {}
     try {
         let b = input.LDES_raw.object["https://data.vlaanderen.be/ns/persoon#heeftGeboorte"]
@@ -14,14 +15,14 @@ export function fetchPersBirth(input) {
         // birth place
         try {
             if(b["https://data.vlaanderen.be/ns/persoon#plaats"]) {
-                birth.place = b["https://data.vlaanderen.be/ns/persoon#plaats"]["@value"]
+                birth.place = fetchTermFromThes(thes, b["https://data.vlaanderen.be/ns/persoon#plaats"]["@id"])
             }
         } catch {}
         return birth
     } catch {}
 }
 
-export function fetchPersDeath(input) {
+export function fetchPersDeath(input, thes) {
     let birth = {}
     try {
         let b = input.LDES_raw.object["https://data.vlaanderen.be/ns/persoon#heeftOverlijden"]
@@ -34,8 +35,8 @@ export function fetchPersDeath(input) {
 
         // birth place
         try {
-            if(b["https://data.vlaanderen.be/ns/persoon#plaats"]) {
-                birth.place = b["https://data.vlaanderen.be/ns/persoon#plaats"]["@value"]
+            if(b["https://data.vlaanderen.be/ns/persoon#plaats"]["@id"]) {
+                birth.place = fetchTermFromThes(thes, b["https://data.vlaanderen.be/ns/persoon#plaats"]["@id"])
             }
         } catch {}
         return birth;
@@ -48,19 +49,4 @@ export function fetchPersGender(input) {
     if (g.includes("FEMALE")) {
         return "female"
     } else {return "male"}
-}
-
-export function fetchPersWikidata(input) {
-    let URIs = input.LDES_raw.object["owl:sameAs"]
-    for (let i = 0; i < URIs.length; i++) {
-        //console.log(URIs[i])
-        try {
-            if (URIs[i].includes("wikidata")) {
-                console.log(URIs[i])
-                return URIs[i]
-            }
-        } catch (e) {
-            console.log(e)
-        }
-    }
 }

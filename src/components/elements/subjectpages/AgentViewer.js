@@ -1,11 +1,9 @@
 import React, {useState} from "react"
 import {
-    fetchPersWikidata,
     fetchPersGender,
     fetchPersBirth,
     fetchPersDeath
 } from "../../utils/data_parsers/dataParserPers";
-import {harvestWikimedia} from "../../utils/data_parsers/wikimediaHarvester";
 import {fetchOeuvre} from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 
@@ -15,7 +13,9 @@ const AgentViewer = (props) =>  {
     let sex = ""
     let birth = ""
     let death = ""
-    let wikidataURI = ""
+    let _bios = ""
+    let wikiSnippetNl = ""
+    let wikiSnippetSource = ""
     let oeuvre = ""
 
     let _basePERS = props.agent
@@ -23,33 +23,43 @@ const AgentViewer = (props) =>  {
     let PERS = props.personen
     let THES = props.thesaurus
 
+    //console.log(wikiBios)
+
     const [objectRoute, setObjectRoute] = useState("");
     const navigate = useNavigate()
 
+    //setBios(fetchBioWikipedia(props.id));
 
 
     if (_basePERS) {
+        console.log(_basePERS.LDES_raw)
         name = _basePERS.LDES_raw.object["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
         try {
             sex = fetchPersGender(_basePERS)
         } catch (error) {}
 
         try {
-            birth = fetchPersBirth(_basePERS)
+            birth = fetchPersBirth(_basePERS, THES)
+            console.log(birth)
         } catch (error) {}
 
         try {
-            death = fetchPersDeath(_basePERS)
-        } catch (error) {}
-
-        try {
-            wikidataURI = fetchPersWikidata(_basePERS)
+            death = fetchPersDeath(_basePERS, THES)
+            console.log(death)
         } catch (error) {}
 
         try {
             oeuvre = fetchOeuvre(_baseLDES, _basePERS, PERS, THES)
-            console.log(oeuvre)
         } catch (error) {}
+
+        try {
+            _bios = eval('('+_basePERS["wikipedia_bios"]+')' )
+            console.log(typeof _bios)
+            try {
+                wikiSnippetNl = _bios.nl.snippet
+                wikiSnippetSource = _bios.nl.source
+            } catch {}
+        } catch (e) {console.log(e)}
 
 
     }
@@ -101,6 +111,14 @@ const AgentViewer = (props) =>  {
                             <div>
                                 <h2>biographical info</h2>
                                 <br/>
+
+                                {_bios != "" &&
+                                    <div>
+                                        <p>{wikiSnippetNl}</p>
+                                        <br/>
+                                    </div>
+                                }
+                                >
 
                                 {sex != "" &&
                                     <div>

@@ -37,6 +37,9 @@ const AgentPage = () => {
     const [objects, setObjects] = useState("");
     const [thesaurus, setThesaurus] = useState("");
     const [bitonal, setBitonal] = useState(false)
+    const [wikiBios, setWikiBios] = useState("")
+
+    //console.log(wikiBios)
 
     function fetchAgentRecordwithID(LDES, refPID) {
         let _len = LDES.length
@@ -86,7 +89,7 @@ const AgentPage = () => {
 
             <div style={{height: "100%"}}>
                 <div className="lineH"></div>
-                <AgentViewer bitonal={bitonal} agent={_agent} objects={_objects} thesaurus={_thes} personen={_pers}>
+                <AgentViewer id={id} bitonal={bitonal} agent={_agent} objects={_objects} thesaurus={_thes} personen={_pers} wikibios={wikiBios}>
 
                 </AgentViewer>
             </div>
