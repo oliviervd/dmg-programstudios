@@ -39,6 +39,8 @@ const AgentPage = () => {
     const [thesaurus, setThesaurus] = useState("");
     const [bitonal, setBitonal] = useState(false)
     const [wikiBios, setWikiBios] = useState("")
+    const [language, setLanguage] = useState("EN");
+
 
     //console.log(wikiBios)
 
@@ -63,12 +65,11 @@ const AgentPage = () => {
     }
 
     // fetch details on specific persons
-    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
 
     return(
         <div className={"container"}>
             {isDesktopOrLaptop&&
-                <Header about={false}/>
+                <Header about={false} language={language} setLaguage={setLanguage}/>
                /* <div className="grid--3_4_3">
                     <h1 className="home">agent</h1>
                     <div></div>
