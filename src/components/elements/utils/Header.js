@@ -7,6 +7,7 @@ const HamburgerMenu = lazy(() => import("./HamburgerMenu"));
 
 const Header = props => {
 
+    let title = ""
     const navigate = useNavigate();
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
@@ -16,16 +17,21 @@ const Header = props => {
         query: '(max-width: 1224px)'
     })
 
+    if (props.showTitle) {
+        if (props.big) {
+            title = <div className="home  text-center" style={{margin: 10}}>{props.content}</div>
+        } else if (!props.big) {
+            title = <div className="home  text-center" style={{margin: 10}}>{headerTitle(props.language)}</div>
+        }
+    } else {
+        title = <div/>
+    }
+
     return(
         <div>
             {isDesktopOrLaptop &&
                 <div className="grid--even_10">
-                    {props.big &&
-                        <div className="home  text-center" style={{margin: 10}}>{props.content}</div>
-                    }
-                    {!props.big &&
-                        <div className="home  text-center" style={{margin: 10}}>{headerTitle(props.language)}</div>
-                    }
+                    {title}
                     <div/>
                     <div/>
                     <div/>

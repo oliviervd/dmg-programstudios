@@ -53,7 +53,8 @@ const Home = () => {
                 {isDesktopOrLaptop &&
                     <div className={carouselState?"grid-home-main-open full-page":"grid-home-main-closed full-page"}>
                         <div>
-                            <Header showAbout={true} content={headerTitleBig(language)} big={true} about={about} setAbout={setAbout} setLanguage={setLanguage} language={language}/>
+                            <Header showAbout={true} content={headerTitleBig(language)} big={true} about={about}
+                                    setAbout={setAbout} setLanguage={setLanguage} language={language} showTitle={true}/>
                             <ProjectHomeView style={{zIndex: -100000}} img={hoverContent}/>
                         </div>
                         <div className="grid--1_1">

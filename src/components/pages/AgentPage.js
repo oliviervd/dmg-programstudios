@@ -32,7 +32,7 @@ const AgentPage = () => {
     let _agent;
     try {
         _agent = fetchAgentRecordwithID(_pers, id.id) // set agent based on ID
-    } catch (e) {console.log(e)}
+    } catch (e) {}
 
     const [personen, setPersonen] = useState("");
     const [objects, setObjects] = useState("");
@@ -40,9 +40,6 @@ const AgentPage = () => {
     const [bitonal, setBitonal] = useState(false)
     const [wikiBios, setWikiBios] = useState("")
     const [language, setLanguage] = useState("EN");
-
-
-    //console.log(wikiBios)
 
     function fetchAgentRecordwithID(LDES, refPID) {
         let _len = LDES.length
@@ -69,7 +66,7 @@ const AgentPage = () => {
     return(
         <div className={"container"}>
             {isDesktopOrLaptop&&
-                <Header about={false} language={language} setLaguage={setLanguage}/>
+                <Header about={false} language={language} setLanguage={setLanguage} showTitle={false}/>
                /* <div className="grid--3_4_3">
                     <h1 className="home">agent</h1>
                     <div></div>
@@ -93,7 +90,8 @@ const AgentPage = () => {
 
             <div style={{height: "100%"}}>
                 <div className="lineH"></div>
-                <AgentViewer id={id} bitonal={bitonal} agent={_agent} objects={_objects} thesaurus={_thes} personen={_pers} wikibios={wikiBios}>
+                <AgentViewer id={id} bitonal={bitonal} agent={_agent} objects={_objects} thesaurus={_thes}
+                             personen={_pers} wikibios={wikiBios} language={language}>
 
                 </AgentViewer>
             </div>

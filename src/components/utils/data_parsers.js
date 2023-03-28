@@ -56,8 +56,10 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
                     // filter on same creator.id
                     if (_c.id == _refID) {
                         //console.log (_c.id + " === " + _refID)
-                        match.push(_LDES[i])
-                        //console.log(match)
+                        //console.log(_LDES[i])
+                        if (_LDES[i]["iiif_image_uris"].length != 0) {
+                            match.push(_LDES[i])
+                        }
                     }
                 }
             } catch(error) {console.log(error)}
@@ -68,7 +70,11 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
                     // filter on same creator.id
                     if (_c.id == _refID) {
                         //console.log (_c.id + " === " + _refID)
-                        match.push(_LDES[i])
+                        //console.log(_LDES[i])
+                        if (_LDES[i]["iiif_image_uris"].length != 0) {
+                            match.push(_LDES[i])
+                        }
+
                         //console.log(match)
                     }
 
