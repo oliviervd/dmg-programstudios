@@ -99,9 +99,7 @@ export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
     console.log(_ref["LDES_raw"]);
     try {
         _refOT = fetchObjectType(_ref["LDES_raw"], _thes)
-    } catch(error) {
-        //console.log(error)
-    }
+    } catch(error) {}
 
     let _len = _LDES.length
     let _matchingObjects = []
@@ -118,16 +116,9 @@ export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
                         }
                     }
                 }
-
-            } catch (error){
-
-            }
+            } catch (error){}
         }
-
-
-        //console.log(_OT)
     }
-    //console.log(_matchingObjects)
     return _matchingObjects
 }
 
