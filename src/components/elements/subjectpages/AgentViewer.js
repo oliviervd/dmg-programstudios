@@ -64,8 +64,10 @@ const AgentViewer = (props) =>  {
 
     if (_basePERS) {
         name = _basePERS.LDES_raw.object["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
-        if (name.split(",").length = 2) {
+        if (name.split(",").length === 2) {
             name = name.split(",")[1] + " " + name.split(",")[0]
+        } else {
+            name = _basePERS.LDES_raw.object["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
         }
         try {
             sex = fetchPersGender(_basePERS)
