@@ -113,7 +113,9 @@ export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
             try{
                 if (_refOT[x] !== "productverpakking") { //skip if productverpakking.
                     if (_OT[0] === _refOT[x]) {
-                        _matchingObjects.push(_LDES[i])
+                        if (_LDES[i]["iiif_image_uris"].length != 0){
+                            _matchingObjects.push(_LDES[i])
+                        }
                     }
                 }
 
