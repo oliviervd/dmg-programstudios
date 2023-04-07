@@ -8,20 +8,25 @@ const ImageBlock = (props) => {
     try {
         if (props.bitonal) {
             imageBlock = images.map(image => (
-                <img
-                    onClick={() => props.handleImgClick(image)}
-                    alt={'INSERT ALT HERE'} //todo: alt
-                    src={image.replace("/full/0/default.jpg", "/400,/0/bitonal.jpg")}
-                />
+                <div className={"imageContainer"}>
+                    <img
+                        onClick={() => props.handleImgClick(image)}
+                        alt={'INSERT ALT HERE'} //todo: alt
+                        src={image.replace("/full/0/default.jpg", "/400,/0/bitonal.jpg")}
+                    />
+                </div>
+
             ))
         } else {
             imageBlock = images.map(image => (
-                <img
-                    className={"hoverImage"}
-                    onClick={() => props.handleImgClick(image)}
-                    alt={'INSERT ALT HERE'} // todo: alt
-                    src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
-                />
+                <div className={"hoverImage"}>
+                    <img
+                        className={""}
+                        onClick={() => props.handleImgClick(image)}
+                        alt={'INSERT ALT HERE'} // todo: alt
+                        src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
+                    />
+                </div>
             ))
         }
     } catch(e) {}

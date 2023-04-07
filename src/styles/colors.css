@@ -15,7 +15,3 @@
 .background__transparent {
     background: transparent;
 }
-
-.hoverImage:hover{
-    border: transparent 0.5px solid;
-}

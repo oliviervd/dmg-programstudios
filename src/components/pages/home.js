@@ -15,6 +15,10 @@ import ProjectHomeView from "../elements/utils/projectHomeView";
 import Header from "../elements/utils/Header";
 import studiogrid_data from "../data/content/studiogrid.json"
 import {useMediaQuery} from "react-responsive";
+import useObjectsQuery from "../hooks/useObjectsQuery";
+import useThesaurusQuery from "../hooks/useThesaurusQuery";
+import useAgentQuery from "../hooks/useAgentQuery";
+import useExhibitionLister from "../hooks/useExhibitionLister";
 
 
 const Home = () => {
@@ -46,6 +50,12 @@ const Home = () => {
     studiogrid_data.forEach((x)=>{
         _studios.push(x);
     })
+
+    // * --- IMPROVED API CALLS --- * //
+    const _objects  = useObjectsQuery().data;
+    const _thes  = useThesaurusQuery().data;
+    const _pers = useAgentQuery().data;
+    const _exhibitions = useExhibitionLister(_objects);
 
     return(
         <div className={visualIdentity}>

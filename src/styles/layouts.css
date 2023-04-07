@@ -24,3 +24,26 @@
     margin-top: 0.5vh;
     bottom: 0.5vh;
 }
+
+/* The overlay effect - lays on top of the container and over the image */
+.overlay {
+    position: absolute;
+    text-align: center;
+}
+
+.imageContainer{
+    position:relative;
+    border: black 2px solid;
+}
+
+.hoverImage{
+    opacity: 1
+}
+
+.hoverImage:hover {
+    opacity: 0.5
+}
+
+.hoverImage:hover .overlay {
+    opacity: 0.5
+}
