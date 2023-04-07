@@ -160,6 +160,11 @@
     grid-template-columns: 30% 70%;
 }
 
+.grid--2_8 {
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
 .grid--75_25 {
     display: grid;
     grid-template-columns: 75% 25%;

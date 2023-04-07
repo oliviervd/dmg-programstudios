@@ -196,11 +196,6 @@ text {
     font-weight: lighter;
 }
 
-a {
-    color: var(--main__green);
-    cursor: crosshair;
-}
-
 .main-title{
     font-size: 100px;
     padding-top: 20vh;
@@ -270,16 +265,6 @@ a {
 
 .LineObjectViewer{
     border-left: 10px solid black;
-}
-
-.searchbar{
-    background: transparent;
-    border: solid black 1px;
-    height: 4vh;
-    width: 100%;
-    border-radius: 20px;
-    margin-top: 0.5vh;
-    bottom: 0.5vh;
 }
 
 input

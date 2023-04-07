@@ -35,18 +35,20 @@ const ExhibitionIndex = (props) => {
 
         if (exhibitionFilter == "") {
             ExhOptions = Object.entries(_exhCounts).map(([key, i]) => (
-                <p className={"grid-text-autoflow"}
-                   style={{color: "black"}}
-                   onClick={()=>handleClickTag(key)}>
-                    #{key},
-                </p>
+                    <p className={"grid-text-autoflow"}
+                       style={{color: "black"}}
+                       onClick={()=>handleClickTag(key)}>
+                        #{key} ({key.length}),
+                    </p>
+
+
             ))
         } else {
             ExhOptions = _exhFilter.map((exh)=>{
                 return <p className={"grid-text-autoflow"}
                           style={{color: "black"}}
                           onClick={()=>handleClickTag(exh)}>
-                    #{exh},
+                    #{exh (exh.length)},
                 </p>
             })
         }
@@ -96,7 +98,6 @@ const ExhibitionIndex = (props) => {
 
     let imageBlockExh = ""
     let images = filterByExhibition(props.objects, exhibition)
-    console.log(images);
 
     try{
         if (bitonal) {
@@ -156,7 +157,7 @@ const ExhibitionIndex = (props) => {
                                 <p onClick={()=>props.setCollapseExhibition(!props.collapseExhibition)}>exhibitions</p>
                                 <div className={"grid--5_95"}>
                                     <div></div>
-                                    <SearchFilterBar hexFilter={exhibitionFilter} setHexFilter={setExhibitionFilter} prompt={" looking for a specific exhibition?"}/>
+                                    <SearchFilterBar filter={exhibitionFilter} setFilter={setExhibitionFilter} prompt={" looking for a specific exhibition?"}/>
                                 </div>
                             </div>
                             <div className={"lineH"}></div>

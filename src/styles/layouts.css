@@ -1,0 +1,26 @@
+.buttonType--PRIMARY {
+    display: inline-block;
+    cursor: pointer;
+    font-family: Combine;
+    border: black 1.5px solid;
+    border-radius: 20px;
+    padding: 0.25em 1em;
+    font-size: 20px
+}
+
+.buttonType--PRIMARY:hover{
+    background: black;
+    color: white;
+}
+
+
+.searchbar{
+    padding-left: 10px;
+    background: transparent;
+    border: solid black 1px;
+    height: 4vh;
+    width: 100%;
+    border-radius: 20px;
+    margin-top: 0.5vh;
+    bottom: 0.5vh;
+}

@@ -99,9 +99,7 @@ export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
     console.log(_ref["LDES_raw"]);
     try {
         _refOT = fetchObjectType(_ref["LDES_raw"], _thes)
-    } catch(error) {
-        //console.log(error)
-    }
+    } catch(error) {}
 
     let _len = _LDES.length
     let _matchingObjects = []
@@ -113,21 +111,14 @@ export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
             try{
                 if (_refOT[x] !== "productverpakking") { //skip if productverpakking.
                     if (_OT[0] === _refOT[x]) {
-                        if (_LDES[i]["iiif_image_uris"].length != 0){
+                        if (_LDES[i]["iiif_image_uris"].length !== 0){
                             _matchingObjects.push(_LDES[i])
                         }
                     }
                 }
-
-            } catch (error){
-
-            }
+            } catch (error){}
         }
-
-
-        //console.log(_OT)
     }
-    //console.log(_matchingObjects)
     return _matchingObjects
 }
 
@@ -225,6 +216,7 @@ export function fetchCurrentLocation(LDES) {
 }
 
 export function fetchTitle(LDES) {
+    //console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P102_has_title"]["@value"])
     return LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P102_has_title"]["@value"];
 }
 
