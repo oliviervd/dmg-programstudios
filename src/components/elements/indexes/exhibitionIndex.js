@@ -28,6 +28,7 @@ const ExhibitionIndex = (props) => {
         }
 
         const _exhFilter = filterByKey(_exhCounts, exhibitionFilter)
+        console.log(_exhFilter)
 
         if (exhibitionFilter === "") {
             ExhOptions = Object.entries(_exhCounts).map(([key, i]) => (
@@ -40,13 +41,16 @@ const ExhibitionIndex = (props) => {
 
             ))
         } else {
-            ExhOptions = _exhFilter.map((exh)=>{
-                return <p className={"grid-text-autoflow"}
-                          style={{color: "black"}}
-                          onClick={()=>handleClickTag(exh)}>
-                    #{exh (exh.length)},
-                </p>
-            })
+            try{
+                ExhOptions = _exhFilter.map((exh)=>{
+                    return <p className={"grid-text-autoflow"}
+                              style={{color: "black"}}
+                              onClick={()=>handleClickTag(exh)}>
+                        #{exh},
+                    </p>
+                })
+            } catch(e) {console.log(e)}
+
         }
 
 
