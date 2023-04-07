@@ -6,6 +6,8 @@ import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import SearchFilterBar from "../utils/SearchFilterBar";
 import {filterByKey} from "../../utils/data_parsers";
+import Loading from "../utils/Loading";
+import ImageBlock from "../utils/ImageBlock";
 
 const ColorIndex = (props) => {
 
@@ -17,6 +19,7 @@ const ColorIndex = (props) => {
     const [bitonal, setBitonal] = useState(false);
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
+    const [loading, setLoading] = useState(false);
 
     const _objects = props.objects
     const _thes  = props.thesaurus
@@ -43,6 +46,7 @@ const ColorIndex = (props) => {
 
     let images;
     images = fetchImageByColor(_objects, objectColor)
+    console.log(images)
 
     let imageBlock = ""
 
@@ -66,7 +70,7 @@ const ColorIndex = (props) => {
             ))
         }
 
-    } catch {}
+    } catch {imageBlock=<h2>Loading...</h2>}
 
     const HexList = [];
 
@@ -92,31 +96,39 @@ const ColorIndex = (props) => {
     const Hex100ran = splice(Hex100, 0, 10000); // ONLY SELECT FIRST 100 OUT OF SELECTION.
 
     const _filterHex = filterByKey(Hex100ran, hexFilter);
+    console.log(_filterHex)
 
     let HexOptions;
-    if (hexFilter==="") {
-        HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
-            <p className={"grid-text-autoflow"}
-                //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
-               style={{color: "black"}}
-               onClick={()=>handleClickTag(key)}
-               key={key}>
-                #{key},
-            </p>
-        ));
-    } else {
-        HexOptions = _filterHex.map((color)=>{
-            return <p className={"grid-text-autoflow"}
-                //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
-                      style={{color: "black"}}
-                      onClick={()=>handleClickTag(color)}
-                      key={color}>
-                #{color},
-            </p>
+
+    try{
+        if (hexFilter==="") {
+            try{
+                HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
+                    <p className={"grid-text-autoflow"}
+                        //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
+                       style={{color: "black"}}
+                       onClick={()=>handleClickTag(key)}
+                       key={key}>
+                        #{key},
+                    </p>
+                ));
+            } catch {HexOptions=<p className={"rhizome"}>Loading...</p>}
+
+        } else {
+            HexOptions = _filterHex.map((color)=>{
+                return <p className={"grid-text-autoflow"}
+                    //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
+                          style={{color: "black"}}
+                          onClick={()=>handleClickTag(color)}
+                          key={color}>
+                    #{color},
+                </p>
 
 
-        });
-    }
+            });
+        }
+    } catch {HexOptions=<p className={"rhizome"}>Loading...</p>}
+
 
 
 
@@ -170,19 +182,21 @@ const ColorIndex = (props) => {
                                 <div>
                                     <div className="lineH"/>
                                     <div className="grid--2_6_2" style={{height: '5vh'}}>
-                                        <p onClick={()=>collapse()}>colors</p>
+                                        <h2 onClick={()=>collapse()}>COLORS</h2>
                                         <div className={"grid--5_95"}>
                                             <div></div>
-                                            <SearchFilterBar hexFilter={hexFilter} setHexFilter={setHexFilter} prompt={" looking for a specific color?"}/>
+                                            <SearchFilterBar filter={hexFilter} setFilter={setHexFilter} prompt={" looking for a specific color?"}/>
                                         </div>
                                         <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
                                     </div>
                                     <div className={"lineH"}></div>
                                 </div>
                                 <div style={props.style}>
-                                    <Suspense>
-                                        {HexOptions}
-                                    </Suspense>
+
+                                        <Suspense fallback={<Loading />}>
+                                            {HexOptions}
+                                        </Suspense>
+
                                 </div>
                             </div>
                             <div>
@@ -211,7 +225,9 @@ const ColorIndex = (props) => {
                                 {!about &&
                                     <div className={showDetailUIColors? "container-masonry-half": "container-masonry-full"}>
                                         <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
-                                            {imageBlock}
+                                            <Suspense fallback={<Loading/>}>
+                                                {imageBlock}
+                                            </Suspense>
                                         </div>
                                         {showDetailUIColors &&
                                             <ObjectViewer

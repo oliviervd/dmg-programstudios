@@ -18,6 +18,8 @@
     "axis": "^1.0.0",
     "dotenv": "^10.0.0",
     "edtf-converter": "^4.0.2",
+    "es5-ext": "<=0.10.53",
+    "fuse.js": "^6.6.2",
     "invariant": "^2.2.4",
     "jquery": "^3.6.0",
     "node-cron": "^3.0.2",
@@ -35,8 +37,7 @@
     "serve": "^13.0.2",
     "stream": "^0.0.2",
     "tiny-invariant": "^1.3.1",
-    "web-vitals": "^2.1.4",
-    "es5-ext": "<=0.10.53"
+    "web-vitals": "^2.1.4"
   },
   "scripts": {
     "dev": "react-scripts start",

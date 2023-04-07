@@ -9,11 +9,15 @@ import Footer from "../elements/utils/Footer";
 
 import ExhibitionIndex from "../elements/indexes/exhibitionIndex";
 import ColorIndex from "../elements/indexes/colorIndex";
+import advancedSearch from "../elements/indexes/advancedSearch";
+import Loading from "../elements/utils/Loading";
 
 import useObjectsQuery from "../hooks/useObjectsQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useAgentQuery from "../hooks/useAgentQuery";
 import useExhibitionLister from "../hooks/useExhibitionLister";
+import AdvancedSearchQuery from "../elements/indexes/advancedSearchQuery";
+import AdvancedSearch from "../elements/indexes/advancedSearch";
 
 const Index = (props) => {
 
@@ -30,12 +34,13 @@ const Index = (props) => {
     // COLOR INDEX
     const [about, setAbout] = useState(false);
     const [showIndexColors, setShowIndexColors] = useState(true);
+    const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
     const [collapseColors, setCollapseColors] = useState(true);
     const [collapseExhibition, setCollapseExhibition] = useState(false);
+    const [queryResult, setQueryResult] = useState([]);
 
-
-    console.log(showIndexColors)
-
+    console.log(queryResult)
+    console.log(showAdvancedSearch)
 
     // * --- IMPROVED API CALLS --- * //
     const _objects  = useObjectsQuery().data;
@@ -78,41 +83,42 @@ const Index = (props) => {
                     </div>
                     <div className={about? "grid--3_7 container": "container"}>
                         {about &&
-                            <div className={"grid--97_3"}>
-                                <div style={{borderLeft: "1px solid black"}}>
-                                    <div style={{margin: "10px"}}>
-                                        <p className={"rhizome"}/>
-                                        <br/>
-                                        <p onClick={()=>setAbout(!about)}>[CLOSE]</p>
-                                    </div>
+                            <div>
+                                <AdvancedSearchQuery about={about} setAbout={setAbout}
+                                                     showAdvancedSearch={showAdvancedSearch} setShowAdvancedSearch={setShowAdvancedSearch}
+                                                     objects={_objects} setQueryResult={setQueryResult}
+                                />
+                            </div>
+
+                        }
+
+                        {showAdvancedSearch&&
+                            <AdvancedSearch queryResults={queryResult}/>
+                        }
+
+                        {!showAdvancedSearch&&
+                            <div>
+                                <div className="grid--even" style={{width: "inherit"}}>
+
+                                    <Suspense fallback={<Loading/>}>
+                                        <ColorIndex style={style} objects={_objects} thesaurus={_thes} agents={_pers}
+                                                    about={about} showIndexColors={showIndexColors} setShowIndexColors={setShowIndexColors}
+                                                    collapseColors={collapseColors} setCollapseColors={setCollapseColors}
+                                                    collapseExhibition={collapseExhibition} setCollapseExhibition={setCollapseExhibition}
+                                        />
+                                    </Suspense>
+
+
+                                    <ExhibitionIndex exhibitionList={_exhibitions} objects={_objects} thesaurus={_thes} agents={_pers}
+                                                     collapseColors={collapseColors} setCollapseColors={setCollapseColors}
+                                                     collapseExhibition={collapseExhibition} setCollapseExhibition={setCollapseExhibition}
+                                    />
+
                                 </div>
-                                <div className="lineV"></div>
                             </div>
                         }
 
-                        <div>
-                            <div className="grid--even" style={{width: "inherit"}}>
 
-                                <ColorIndex style={style} objects={_objects} thesaurus={_thes} agents={_pers}
-                                            about={about} showIndexColors={showIndexColors} setShowIndexColors={setShowIndexColors}
-                                            collapseColors={collapseColors} setCollapseColors={setCollapseColors}
-                                            collapseExhibition={collapseExhibition} setCollapseExhibition={setCollapseExhibition}
-                                />
-
-                                <ExhibitionIndex exhibitionList={_exhibitions} objects={_objects} thesaurus={_thes} agents={_pers}
-                                                 collapseColors={collapseColors} setCollapseColors={setCollapseColors}
-                                                 collapseExhibition={collapseExhibition} setCollapseExhibition={setCollapseExhibition}
-                                />
-
-                                {/*<div style={{height: "5vh"}}>
-                                    <div className="lineH"/>
-                                    <p className={"rhizome fast indexLabel"} style={{width: "200px", fontSize: "20px"}}>[something is growing here... ]</p>
-                                    <div className="grid--even_10">
-                                    </div>
-
-                                </div>*/}
-                            </div>
-                        </div>
 
                     </div>
 

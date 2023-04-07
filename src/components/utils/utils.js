@@ -9,20 +9,21 @@ export function fetchImageByColor(objects, color) {
     // fetch list of images that share colorname (color);
     const imageList = []
     try {
+
         for (let i=0; i<objects.length; i++){
             for (let z=0; z<objects[i]["color_names"].length; z++) {
-                try {
                     if (objects[i]["color_names"][z].includes(color)) {
-                        if (objects[i]["iiif_image_uris"][z] !== undefined) {
+                        if (objects[i]["iiif_image_uris"][z]) {
                             imageList.push(objects[i]["iiif_image_uris"][z])
                         }
                     }
-                } catch (error) {console.log(error)}
             }
         }
-        return imageList
         console.log(imageList)
-    } catch (e) {}
+        return imageList
+
+        //console.log(imageList)
+    } catch (e) {console.log(e)}
 
 }
 

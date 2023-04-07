@@ -346,10 +346,6 @@ html, body {
     background-color: blue;
 }
 
-button{
-    background: transparent;
-}
-
 .overlay {
     right:0;
     left:0;
@@ -359,6 +355,7 @@ button{
 
 input{
     -webkit-appearance: none;
+    font-family: Equateur;
     background: dimgray;
     height: 1px;
     border-radius: 20px;
