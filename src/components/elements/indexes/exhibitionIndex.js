@@ -67,7 +67,7 @@ const ExhibitionIndex = (props) => {
                                 if (LDES["http://purl.org/dc/terms/isPartOf"][x]["http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"] === exhibition){
                                     obj = objects[i]
                                     ObjList.push(obj)
-                                    if (objects[i]["iiif_image_uris"] !== "") {
+                                    if (objects[i]["iiif_image_uris"].length !== 0) {
                                         ImageList.push(objects[i]["iiif_image_uris"])
                                     }
 
@@ -79,7 +79,7 @@ const ExhibitionIndex = (props) => {
                             if (LDES["http://purl.org/dc/terms/isPartOf"]["http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"] === exhibition) {
                                 obj = objects[i]
                                 ObjList.push(obj)
-                                if (objects[i]["iiif_image_uris"] !== "") {
+                                if (objects[i]["iiif_image_uris"].length !== 0) {
                                     ImageList.push(objects[i]["iiif_image_uris"])
                                 }
                             }
@@ -114,7 +114,7 @@ const ExhibitionIndex = (props) => {
                 />
             ))
         }
-    } catch {}
+    } catch(e) {console.log(e)}
 
     const handleImgClick = (id) => {
         setImage(id);
