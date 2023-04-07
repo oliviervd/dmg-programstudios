@@ -1,13 +1,10 @@
 import React, {useState} from "react";
-import {getKeyByValue} from "../../utils/utils";
-import colorRef from "../../data/colorRef.json";
 import ObjectViewer from "../subjectpages/ObjectViewer";
 import SearchFilterBar from "../utils/SearchFilterBar";
 import {filterByKey} from "../../utils/data_parsers";
 
 const ExhibitionIndex = (props) => {
 
-    const [loading, setLoading] = useState(true);
     const [exhibition, setExhibition] = useState("Gelinkt: de collectie netwerkt");
     const [bitonal, setBitonal] = useState(false);
     const [showDetailsExhObj, setShowDetailsExhObj] = useState(false);
@@ -25,7 +22,6 @@ const ExhibitionIndex = (props) => {
             }
         } catch {}
 
-        let imageList;
         const handleClickTag = (key) => {
             setExhibition(key);
             props.setCollapseColors(false)
@@ -33,7 +29,7 @@ const ExhibitionIndex = (props) => {
 
         const _exhFilter = filterByKey(_exhCounts, exhibitionFilter)
 
-        if (exhibitionFilter == "") {
+        if (exhibitionFilter === "") {
             ExhOptions = Object.entries(_exhCounts).map(([key, i]) => (
                     <p className={"grid-text-autoflow"}
                        style={{color: "black"}}
@@ -71,7 +67,7 @@ const ExhibitionIndex = (props) => {
                                 if (LDES["http://purl.org/dc/terms/isPartOf"][x]["http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"] === exhibition){
                                     obj = objects[i]
                                     ObjList.push(obj)
-                                    if (objects[i]["iiif_image_uris"] != "") {
+                                    if (objects[i]["iiif_image_uris"] !== "") {
                                         ImageList.push(objects[i]["iiif_image_uris"])
                                     }
 
@@ -83,7 +79,7 @@ const ExhibitionIndex = (props) => {
                             if (LDES["http://purl.org/dc/terms/isPartOf"]["http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"] === exhibition) {
                                 obj = objects[i]
                                 ObjList.push(obj)
-                                if (objects[i]["iiif_image_uris"] != "") {
+                                if (objects[i]["iiif_image_uris"] !== "") {
                                     ImageList.push(objects[i]["iiif_image_uris"])
                                 }
                             }

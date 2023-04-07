@@ -294,10 +294,6 @@
     overflow-wrap: break-word;
 }
 
-.homeProjectGrid > p {
-    font-size: 19cqi;
-}
-
 .HomeProjectGridContainer{
     top: -100%;
     transition: top 0.4s;

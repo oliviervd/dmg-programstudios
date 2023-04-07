@@ -2,12 +2,10 @@ import React, {Suspense, useState} from "react";
 import {fetchImageByColor, getKeyByValue, shuffleFisherYates, splice} from "../../utils/utils";
 import colorRef from "../../data/colorRef.json";
 import ObjectViewer from "../subjectpages/ObjectViewer";
-import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import SearchFilterBar from "../utils/SearchFilterBar";
 import {filterByKey} from "../../utils/data_parsers";
 import Loading from "../utils/Loading";
-import ImageBlock from "../utils/ImageBlock";
 
 const ColorIndex = (props) => {
 
@@ -19,14 +17,11 @@ const ColorIndex = (props) => {
     const [bitonal, setBitonal] = useState(false);
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
-    const [loading, setLoading] = useState(false);
 
     const _objects = props.objects
     const _thes  = props.thesaurus
     const _pers = props.agents
     const about = props.about
-
-    let navigate = useNavigate();
 
     //MEDIA QUERIE
     const isDesktopOrLaptop = useMediaQuery({
@@ -134,14 +129,10 @@ const ColorIndex = (props) => {
 
     function fetchObjectById(ObjectNumber) {
         for (let i=0; i<_objects.length; i++) {
-            if (_objects[i].objectNumber == ObjectNumber) {
+            if (_objects[i].objectNumber === ObjectNumber) {
                 setDetails(_objects[i])
             }
         }
-    }
-
-    const routeChange = () => {
-        navigate("/")
     }
 
     function filterByValue(array, string) {
@@ -150,16 +141,6 @@ const ColorIndex = (props) => {
     }
 
     // todo: move Color index to separate component --> clean up code.
-
-
-    // set STYLING (onHover pickup color);
-    const [myStyle, setMyStyle] = useState({})
-    const handleClick = (id) => {
-        setMyStyle(prevState => ({
-            ...myStyle,
-            [id]: !prevState[id]
-        }))
-    }
 
     const handleClickTag = (key) => {
         setObjectColor(key)

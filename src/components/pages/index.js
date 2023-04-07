@@ -1,15 +1,10 @@
-import React, {useState, useEffect, Suspense} from "react"
-import { createClient } from '@supabase/supabase-js'
+import React, {useState, Suspense} from "react"
 import {useNavigate} from "react-router-dom";
-import {shuffleFisherYates, splice, getKeyByValue, fetchImageByColor, wait} from "../utils/utils";
-import ObjectViewer from "../elements/subjectpages/ObjectViewer";
-import colorRef from "../data/colorRef.json"; // data with CSS color referencing.
 import {useMediaQuery} from "react-responsive";
 import Footer from "../elements/utils/Footer";
 
 import ExhibitionIndex from "../elements/indexes/exhibitionIndex";
 import ColorIndex from "../elements/indexes/colorIndex";
-import advancedSearch from "../elements/indexes/advancedSearch";
 import Loading from "../elements/utils/Loading";
 
 import useObjectsQuery from "../hooks/useObjectsQuery";
