@@ -12,7 +12,6 @@ import './styles/layouts.css'
 
 // import pages
 import Home from "./components/pages/home";
-import ColorTagger from "./components/pages/ColorTagger";
 import StudioLanding from "./components/pages/StudioLanding"
 import Index from "./components/pages/index"
 import ObjectPage from "./components/pages/ObjectPage";
@@ -32,7 +31,6 @@ render(
         <QueryClientProvider client={queryClient}>
             <Routes>
                 <Route path="/" element={<Home />}/>
-                <Route path="/interfaces/color-tagger" element={<ColorTagger />}/>
                 <Route path="/studio/:id" element={<StudioLanding />}/>
                 <Route path="/index" element={<Index />} />
                 <Route path="/index/object/:id" element={<ObjectPage />}></Route>
