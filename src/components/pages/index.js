@@ -81,7 +81,8 @@ const Index = (props) => {
                             <div>
                                 <AdvancedSearchQuery about={about} setAbout={setAbout}
                                                      showAdvancedSearch={showAdvancedSearch} setShowAdvancedSearch={setShowAdvancedSearch}
-                                                     objects={_objects} setQueryResult={setQueryResult}
+                                                     objects={_objects} thesaurus={_thes}
+                                                     setQueryResult={setQueryResult}
                                 />
                             </div>
 
