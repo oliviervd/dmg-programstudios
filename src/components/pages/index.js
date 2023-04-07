@@ -3,7 +3,7 @@ import { createClient } from '@supabase/supabase-js'
 import {useNavigate} from "react-router-dom";
 import {shuffleFisherYates, splice, getKeyByValue, fetchImageByColor, wait} from "../utils/utils";
 import ObjectViewer from "../elements/subjectpages/ObjectViewer";
-import colorRef from "../data/db/colorRef.json"; // data with CSS color referencing.
+import colorRef from "../data/colorRef.json"; // data with CSS color referencing.
 import {useMediaQuery} from "react-responsive";
 import Footer from "../elements/utils/Footer";
 

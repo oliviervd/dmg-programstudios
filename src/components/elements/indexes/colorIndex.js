@@ -1,6 +1,6 @@
 import React, {Suspense, useState} from "react";
 import {fetchImageByColor, getKeyByValue, shuffleFisherYates, splice} from "../../utils/utils";
-import colorRef from "../../data/db/colorRef.json";
+import colorRef from "../../data/colorRef.json";
 import ObjectViewer from "../subjectpages/ObjectViewer";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";

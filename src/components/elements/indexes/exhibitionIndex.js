@@ -1,6 +1,6 @@
 import React, {useState} from "react";
 import {getKeyByValue} from "../../utils/utils";
-import colorRef from "../../data/db/colorRef.json";
+import colorRef from "../../data/colorRef.json";
 import ObjectViewer from "../subjectpages/ObjectViewer";
 import SearchFilterBar from "../utils/SearchFilterBar";
 import {filterByKey} from "../../utils/data_parsers";
