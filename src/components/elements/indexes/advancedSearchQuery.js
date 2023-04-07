@@ -43,6 +43,15 @@ const AdvancedSearchQuery = (props) => {
 
     let _result = useMemo(() => {return filterSet(filterTitle)},[filterTitle]);
 
+
+        const handleKeyDown = (event) => {
+            if (event.key === 'Enter') {
+                props.setQueryResult(_result)
+                props.setShowAdvancedSearch(true)
+            }
+        }
+
+
     function performSearch() {
         props.setQueryResult(_result)
         props.setShowAdvancedSearch(true)
@@ -66,7 +75,7 @@ const AdvancedSearchQuery = (props) => {
                             <h2 style={{padding: "12px 0"}}>title</h2>
                             <div className={"lineH"}></div>
                         </div>
-                        <SearchFilterBar filter={filterTitle} setFilter={setFilterTitle} prompt={"enter title here"}/>
+                        <SearchFilterBar filter={filterTitle} setFilter={setFilterTitle} prompt={"enter title here"} onKeyDown={handleKeyDown}/>
                     </div>
                     <br/>
                     <a className={"buttonType--PRIMARY"} onClick={performSearch}>search</a>
