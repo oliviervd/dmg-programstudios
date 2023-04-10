@@ -682,18 +682,27 @@ export function headerAbout(lang) {
     }
 }
 
-export function fetchTitleStudios(i, lang, _type) {
-    if (i._type === _type) {
-        if (lang === "EN") {
-            if (i.title_en !== "") {
-                return <>{i.title_en}</>
-            }
-        } else if (lang === "NL") {
-            if (i.title_nl !== "") {
-                return <>{i.title_nl}</>
-            }
-        } else {
-            return <>{i.title_fr}</>
+export function fetchDataStudiosPayload(source, lang, path, i) {
+
+    // title
+    if (path === "title") {
+        if (lang === "EN") {return source.titleEn}
+        else if (lang === "NL") {return source.titles.titleNl}
+        else if (lang === "FR") {return source.titles.titleFr}
+    }
+
+    if (path === "description") {
+        if (lang === "EN") {return source["textBlock"]["introductionEn"][0]["children"][0]["text"]}
+        if (lang === "NL") {return source["textBlock"]["introductionNl"][0]["children"][0]["text"]}
+        if (lang === "FR") {return source["textBlock"]["introductionFr"][0]["children"][0]["text"]}
+    }
+}
+
+export function fetchPayloadMediaById(id, mediaRepo) {
+    console.log(id);
+    for (let im=0; im<mediaRepo.length; im++) {
+        if (mediaRepo[im].id === id) {
+            return mediaRepo[im].url
         }
     }
 }
