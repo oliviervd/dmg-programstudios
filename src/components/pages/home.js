@@ -1,4 +1,4 @@
-import React, {useState, Suspense} from "react"
+import React, {useState, Suspense, useEffect} from "react"
 import {useQuery} from "@tanstack/react-query";
 import {
     fetchDataStudiosPayload,
@@ -21,25 +21,18 @@ import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useAgentQuery from "../hooks/useAgentQuery";
 import useExhibitionLister from "../hooks/useExhibitionLister";
 
-//PAYLOAD
-import usePayloadQueryStudios from "../hooks/usePayloadQueryStudios";
-import usePayloadQueryMedia from "../hooks/usePayloadQueryMedia";
-
 const Home = () => {
 
     const InteractionBar = React.lazy(() => import("../elements/utils/interactionBar"))
+    const StudioGrid = React.lazy(() => import("../elements/utils/StudioGrid"))
+
+    //todo:  put in function?
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 1224px)'
     })
     const isMobile = useMediaQuery({
         query: '(max-width: 1224px)'
     })
-
-    let navigate = useNavigate();
-
-
-    // todo: make more carbon neutral (83)
-    // https://www.websitecarbon.com/website/modelsfromthepastforthefuture-herokuapp-com
 
     const [language, setLanguage] = useState("EN");
     const [openBox, setOpenBox] = useState(false);
@@ -60,10 +53,6 @@ const Home = () => {
     const _thes = useThesaurusQuery().data;
     const _pers = useAgentQuery().data;
     const _exhibitions = useExhibitionLister(_objects);
-    const _studiosCMS = useQuery(["STUDIOS"], usePayloadQueryStudios).data.docs
-    const _mediaCMS = useQuery(["MEDIA"], usePayloadQueryMedia).data.docs
-
-    console.log(_studiosCMS)
 
     return (
         <div className={visualIdentity}>
@@ -113,50 +102,12 @@ const Home = () => {
                             </Suspense>
                         </div>
 
-                        <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}
-                             className={"lineH grid--even_4 HomeProjectGridContainer"}>
-                            {_studiosCMS.map((studio => {
-                                let title_en, description, studioImage, studioID, studioType, href;
-                                title_en = fetchDataStudiosPayload(studio, language, "title")
-                                description = fetchDataStudiosPayload(studio, language, "description")
-                                studioImage = fetchPayloadMediaById(studio.coverImage.id, _mediaCMS)
-                                studioType = ""
-                                studioID = ""
+                            <Suspense>
+                                <StudioGrid
+                                    carouselState={carouselState} setCarouselState={setCarouselState} language={language}
+                                />
+                            </Suspense>
 
-                                console.log(studio.coverImage)
-
-
-                                href = ""
-                                //href = "/studio/" + studio.title_en.split(" ")[1].toLowerCase();
-
-                                const routeChange = () => {
-                                    navigate(href);
-                                }
-
-
-                                // construct URIs
-
-                                return (
-                                    <div id="HomeProjectGrid" className="rowScroll fade-in open">
-                                        <div>
-                                            <h2 className="text-center uppercase box-title grow main"
-                                                onClick={routeChange}>{title_en}</h2>
-                                            <p className="uppercase justify padding-10"
-                                               style={{height: '10vh'}}>{description}</p>
-                                            <img className="img__fit center" src={studioImage} alt={""}
-                                                 onClick={() => setCarouselState(!carouselState)}
-                                                 onMouseOver={() => setHoverContent(studioImage)}
-                                                 onMouseLeave={() => setHoverContent(" ")}/>
-                                            <ProjectHomeSnippet className="padding-10" id={studioID}
-                                                                lang={language} setHoverContent={setHoverContent}
-                                                                setCarouselState={setCarouselState}
-                                                                carouselState={carouselState}/>
-                                        </div>
-                                    </div>
-                                )
-
-                            }))}
-                        </div>
                     </div>
                 }
                 {isMobile &&
