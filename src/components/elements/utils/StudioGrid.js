@@ -73,42 +73,10 @@ const StudioGrid = (props) => {
             </div>
         )
     } else {
-        wait(100)
         return(
-            <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}
-                 className={"lineH grid--even_4 HomeProjectGridContainer"}>
-                {data?.data.docs.map((studio => {
-                    let title_en, description, studioImage, studioID, href;
-
-                    title_en = fetchDataStudiosPayload(studio, props.language, "title")
-                    description = fetchDataStudiosPayload(studio, props.language, "description")
-                    console.log(description)
-                    studioImage = fetchPayloadMediaById(studio.coverImage.id, media.data.data.docs)
-                    console.log(studioImage)
-                    studioID = ""
-
-                    href = ""
-                    //href = "/studio/" + studio.title_en.split(" ")[1].toLowerCase();
-
-                    const routeChange = () => {
-                        navigate(href);
-                    }
-                    return (
-                        <div id="HomeProjectGrid" className="rowScroll fade-in open">
-                            <div>
-                                <h2 className="text-center uppercase box-title grow main"
-                                    onClick={routeChange}>{title_en}</h2>
-                                <p className="uppercase justify padding-10"
-                                   style={{height: '10vh'}}>{description}</p>
-                                <img className="img__fit center" alt={""} src={studioImage}
-                                    //onClick={() => props.setCarouselState(!props.carouselState)}
-                                />
-                            </div>
-                        </div>
-                    )
-
-                }))}
-            </div>
+                <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}>
+                     <p>loading..</p>
+                </div>
         )
     }
 }
