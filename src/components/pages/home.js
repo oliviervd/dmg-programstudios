@@ -4,9 +4,7 @@ import {
     fetchType,
     headerTitleBig
 } from "../utils/data_parsers";
-import {useNavigate} from "react-router-dom"
 
-import ProjectHomeSnippet from "../elements/utils/projectHomeSnippet";
 import ProjectHomeView from "../elements/utils/projectHomeView";
 import Header from "../elements/utils/Header";
 import studiogrid_data from "../data/content/studiogrid.json"
