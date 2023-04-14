@@ -1,8 +1,5 @@
 import React, {useState, Suspense, useEffect} from "react"
-import {useQuery} from "@tanstack/react-query";
 import {
-    fetchDataStudiosPayload,
-    fetchPayloadMediaById,
     fetchText,
     fetchType,
     headerTitleBig
