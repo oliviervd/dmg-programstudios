@@ -36,10 +36,11 @@ const StudioGrid = (props) => {
     })
 
     if (data) {
+        console.log(data)
         return(
             <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}
                  className={"lineH grid--even_4 HomeProjectGridContainer"}>
-                {data?.data.docs.map((studio => {
+                 {data?.data.docs.map((studio => {
                     let title_en, description, studioImage, studioID, href;
 
                     title_en = fetchDataStudiosPayload(studio, props.language, "title")
