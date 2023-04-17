@@ -6,30 +6,9 @@ import axios from "axios";
 
 const StudioGrid = (props) => {
 
-    const [studioData, setStudioData] = useState(null)
     let navigate = useNavigate();
 
-    const keyStudios = ["STUDIOS"]
-    const {data, isLoading} =  useQuery(keyStudios, ()=>{
-        return axios.get("/api/studios/", {
-            credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            },
-            accept: 'application/json'
-        })
-
-    })
-
-    useEffect(()=>{
-        if (isLoading) setStudioData("...Loading")
-    },[isLoading])
-
-    useEffect(() => {
-        if (data) setStudioData(data);
-    }, [data]);
-
+    const studioData = props.data;
 
     const keyMedia = ["MEDIA"]
     const media = useQuery(keyMedia, () => {
@@ -47,14 +26,15 @@ const StudioGrid = (props) => {
     return(
         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}
              className={"lineH grid--even_4 HomeProjectGridContainer"}>
+
             {studioData?.data.docs.map((studio => {
                 let title_en, description, studioImage, studioID, href;
 
                 title_en = fetchDataStudiosPayload(studio, props.language, "title")
                 description = fetchDataStudiosPayload(studio, props.language, "description")
                 console.log(description)
-                studioImage = fetchPayloadMediaById(studio.coverImage.id, media.data.data.docs)
-                console.log(studioImage)
+                //studioImage = fetchPayloadMediaById(studio.coverImage.id, media.data.data.docs)
+                //console.log(studioImage)
                 studioID = ""
 
                 href = ""
@@ -70,7 +50,7 @@ const StudioGrid = (props) => {
                                 onClick={routeChange}>{title_en}</h2>
                             <p className="uppercase justify padding-10"
                                style={{height: '10vh'}}>{description}</p>
-                            <img className="img__fit center" alt={""} src={studioImage}
+                            <img className="img__fit center" alt={""} src={""}
                                 //onClick={() => props.setCarouselState(!props.carouselState)}
                             />
                         </div>

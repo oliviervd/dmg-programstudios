@@ -15,11 +15,33 @@ import useObjectsQuery from "../hooks/useObjectsQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useAgentQuery from "../hooks/useAgentQuery";
 import useExhibitionLister from "../hooks/useExhibitionLister";
+import {useQuery} from "@tanstack/react-query";
+import axios from "axios";
 
 const Home = () => {
 
+    const [loadingState, setLoadingState] = useState(true);
+
     const InteractionBar = React.lazy(() => import("../elements/utils/interactionBar"))
     const StudioGrid = React.lazy(() => import("../elements/utils/StudioGrid"))
+
+    const keyStudios = ["STUDIOS"]
+    const {data, isLoading} =  useQuery(keyStudios, ()=>{
+        return axios.get("/api/studios/", {
+            credentials: 'include',
+            headers: {
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': '*'
+            },
+            accept: 'application/json'
+        })
+
+    })
+
+    useEffect(() => {
+        if (data) setLoadingState(false);
+    }, [data]);
+
 
     //todo:  put in function?
     const isDesktopOrLaptop = useMediaQuery({
@@ -96,12 +118,18 @@ const Home = () => {
                                                 darkModeShow={true} archiveShow={true} lastFetch={false}/>
                             </Suspense>
                         </div>
-
+                        {loadingState &&
+                            <p>loading...</p>
+                        }
+                        {!loadingState &&
                             <Suspense>
                                 <StudioGrid
-                                    carouselState={carouselState} setCarouselState={setCarouselState} language={language}
+                                    carouselState={carouselState} setCarouselState={setCarouselState} language={language} data={data}
                                 />
                             </Suspense>
+                        }
+
+
 
                     </div>
                 }
