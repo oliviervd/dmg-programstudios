@@ -115,6 +115,7 @@ const Home = () => {
                             {_studios.map((studio => {
                                     let title_en;
                                     title_en = "";
+                                    //studioType = fetchType(studio);
 
                                     return (
                                         <div className="grid-autoFill">
