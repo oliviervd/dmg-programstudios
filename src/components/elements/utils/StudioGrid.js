@@ -14,7 +14,7 @@ const StudioGrid = (props) => {
     const keyMedia = ["MEDIA"]
     const media = useQuery(keyMedia, () => {
         return axios.get("/api/media/", {
-            credentials: 'include',
+            withCredentials: true,
             headers: {
                 'Content-Type': 'application/json',
                 'Access-Control-Allow-Origin': '*'
