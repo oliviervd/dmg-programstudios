@@ -27,11 +27,11 @@ const Home = () => {
 
     const keyStudios = ["STUDIOS"]
     const {data, isLoading} =  useQuery(keyStudios, ()=>{
-        return axios.get("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/", {
+        return axios.get("/api/studios/", {
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
+                //'Access-Control-Allow-Origin': '*'
             },
             accept: 'application/json'
         })

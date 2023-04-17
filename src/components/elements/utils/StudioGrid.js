@@ -8,7 +8,7 @@ const StudioGrid = (props) => {
 
     let navigate = useNavigate();
 
-    const studioData = props.data;
+    const studioData = props.data.data.docs;
     console.log(studioData);
 
     const keyMedia = ["MEDIA"]
@@ -28,23 +28,19 @@ const StudioGrid = (props) => {
         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}
              className={"lineH grid--even_4 HomeProjectGridContainer"}>
 
+             {studioData?.map((studio => {
+                 console.log(studio)
+                 let title_en, description, studioImage, studioID, href;
 
-             {studioData?.data.docs.map((studio => {
-                let title_en, description, studioImage, studioID, href;
+                 title_en = fetchDataStudiosPayload(studio, props.language, "title")
+                 description = fetchDataStudiosPayload(studio, props.language, "description")
 
-                title_en = fetchDataStudiosPayload(studio, props.language, "title")
-                description = fetchDataStudiosPayload(studio, props.language, "description")
-                console.log(description)
-                //studioImage = fetchPayloadMediaById(studio.coverImage.id, media.data.data.docs)
-                //console.log(studioImage)
-                studioID = ""
+                 href = ""
+                 //href = "/studio/" + studio.title_en.split(" ")[1].toLowerCase();
 
-                href = ""
-                //href = "/studio/" + studio.title_en.split(" ")[1].toLowerCase();
-
-                const routeChange = () => {
-                    navigate(href);
-                }
+                 const routeChange = () => {
+                        navigate(href);
+                 }
                 return (
                     <div id="HomeProjectGrid" className="rowScroll fade-in open">
                         <div>
