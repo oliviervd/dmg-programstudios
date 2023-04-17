@@ -118,10 +118,10 @@ const Home = () => {
                                                 darkModeShow={true} archiveShow={true} lastFetch={false}/>
                             </Suspense>
                         </div>
-                        {loadingState &&
+                        {isLoading &&
                             <p>loading...</p>
                         }
-                        {!loadingState &&
+                        {!isLoading &&
                             <Suspense>
                                 <StudioGrid
                                     carouselState={carouselState} setCarouselState={setCarouselState} language={language} data={data}

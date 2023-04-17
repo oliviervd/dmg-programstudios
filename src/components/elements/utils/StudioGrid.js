@@ -9,6 +9,7 @@ const StudioGrid = (props) => {
     let navigate = useNavigate();
 
     const studioData = props.data;
+    console.log(studioData);
 
     const keyMedia = ["MEDIA"]
     const media = useQuery(keyMedia, () => {
@@ -27,7 +28,8 @@ const StudioGrid = (props) => {
         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}
              className={"lineH grid--even_4 HomeProjectGridContainer"}>
 
-            {studioData?.data.docs.map((studio => {
+
+             {studioData?.data.docs.map((studio => {
                 let title_en, description, studioImage, studioID, href;
 
                 title_en = fetchDataStudiosPayload(studio, props.language, "title")
@@ -57,7 +59,7 @@ const StudioGrid = (props) => {
                     </div>
                 )
 
-            }))}
+             }))}
         </div>
     )
 
