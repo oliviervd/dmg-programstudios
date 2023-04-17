@@ -27,7 +27,7 @@ const Home = () => {
 
     const keyStudios = ["STUDIOS"]
     const {data, isLoading} =  useQuery(keyStudios, ()=>{
-        return axios.get("/api/studios/", {
+        return axios.get("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/", {
             credentials: 'include',
             headers: {
                 'Content-Type': 'application/json',
@@ -38,9 +38,8 @@ const Home = () => {
 
     })
 
-    useEffect(() => {
-        if (data) setLoadingState(false);
-    }, [data]);
+    console.log(isLoading);
+
 
 
     //todo:  put in function?
@@ -128,8 +127,6 @@ const Home = () => {
                                 />
                             </Suspense>
                         }
-
-
 
                     </div>
                 }
