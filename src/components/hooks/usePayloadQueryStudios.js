@@ -3,17 +3,12 @@ import {useQuery} from "@tanstack/react-query"
 import axios from "axios";
 
 async function usePayloadQueryStudios() {
-    const key = ["OBJECTS"]
-    useQuery(key, ()=>{
-        const {isLoading, data} = axios.get("/api/studios/", {
+    const key = ["STUDIO"]
+    useQuery(key, async () => {
+        const result = await fetch("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/", {
             credentials: 'include',
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            },
-            accept: 'application/json'
-        })
-
+        }). then((req)=> req.json());
+        return result;
     })
 
 

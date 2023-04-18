@@ -6,14 +6,13 @@ import axios from "axios";
 
 const StudioGrid = (props) => {
     let navigate = useNavigate();
-    const studioData = props.data
+    const studioData = props.data.docs
 
     return(
         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}
              className={"lineH grid--even_4 HomeProjectGridContainer"}>
 
              {studioData?.map((studio => {
-                 console.log(studio)
                  let title_en, description, studioImage, studioID, href;
 
                  title_en = fetchDataStudiosPayload(studio, props.language, "title")

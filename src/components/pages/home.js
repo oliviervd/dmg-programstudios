@@ -1,7 +1,6 @@
 import React, {useState, Suspense, useEffect} from "react"
 import {
     fetchText,
-    fetchType,
     headerTitleBig
 } from "../utils/data_parsers";
 
@@ -16,7 +15,8 @@ import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useAgentQuery from "../hooks/useAgentQuery";
 import useExhibitionLister from "../hooks/useExhibitionLister";
 import {useQuery} from "@tanstack/react-query";
-import axios from "axios";
+import usePayloadQueryStudios from "../hooks/usePayloadQueryStudios";
+import {getObjects} from "../utils/SupabaseQueries";
 
 const Home = () => {
 
@@ -41,23 +41,16 @@ const Home = () => {
     const [darkMode, setDarkMode] = useState(false)
     const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
 
-    const [testData, setTestData] = useState([]);
+    const [studioData, setStudioData] = useState([]);
 
-
-    useEffect(()=> {
-        const fetchStudioData = async () => {
-            const result = await fetch ("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/", {
-                //include cookies with fetch
-                method: 'GET',
-                //mode: "cors",
-                credentials: 'include',
-            }). then((req)=> req.json());
-            setTestData(result);
-        };
-        fetchStudioData();
-    })
-
-    console.log(testData);
+    const {data, status} = useQuery({
+        queryKey:['STUDIO'],
+        queryFn: () =>
+            fetch("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/",{
+                credentials:'include',
+                method: 'GET'
+            }).then((req)=>req.json())
+    });
 
     let _studios = []
     studiogrid_data.forEach((x) => {
@@ -118,13 +111,12 @@ const Home = () => {
                             </Suspense>
                         </div>
 
-                        {/*
-                            <Suspense>
-                                <StudioGrid
-                                    carouselState={carouselState} setCarouselState={setCarouselState} language={language} data={data}
-                                />
-                            </Suspense>
-                        */}
+                        <Suspense>
+                            <StudioGrid
+                                carouselState={carouselState} setCarouselState={setCarouselState} language={language} data={data}
+                            />
+                        </Suspense>
+
                     </div>
                 }
                 {isMobile &&
