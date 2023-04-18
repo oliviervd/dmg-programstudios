@@ -76,6 +76,5 @@
       "REACT_APP_SUPABASE_URL",
       "REACT_APP_PAYLOAD_BASE_URL"
     ]
-  },
-  "proxy": "https://p01--admin-cms--qbt6mytl828m.code.run"
+  }
 }

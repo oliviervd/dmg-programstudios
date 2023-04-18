@@ -5,24 +5,8 @@ import {fetchDataStudiosPayload, fetchPayloadMediaById} from "../../utils/data_p
 import axios from "axios";
 
 const StudioGrid = (props) => {
-
     let navigate = useNavigate();
-
-    const studioData = props.data.data.docs;
-    console.log(studioData);
-
-    const keyMedia = ["MEDIA"]
-    const media = useQuery(keyMedia, () => {
-        return axios.get("/api/media/", {
-            withCredentials: true,
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*'
-            },
-            accept: 'application/json'
-        })
-    })
-
+    const studioData = props.data
 
     return(
         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}

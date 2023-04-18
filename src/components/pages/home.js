@@ -21,27 +21,8 @@ import axios from "axios";
 const Home = () => {
 
     const [loadingState, setLoadingState] = useState(true);
-
     const InteractionBar = React.lazy(() => import("../elements/utils/interactionBar"))
     const StudioGrid = React.lazy(() => import("../elements/utils/StudioGrid"))
-
-    const keyStudios = ["STUDIOS"]
-    const {data, isLoading} =  useQuery(keyStudios, ()=>{
-        return axios.get("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/", {
-            withCredentials: true,
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': '*',
-                'dataType': 'jsonP'
-            },
-            accept: 'application/json'
-        })
-
-    })
-
-    console.log(isLoading);
-
-
 
     //todo:  put in function?
     const isDesktopOrLaptop = useMediaQuery({
@@ -59,6 +40,24 @@ const Home = () => {
     const [carouselState, setCarouselState] = useState("true");
     const [darkMode, setDarkMode] = useState(false)
     const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
+
+    const [testData, setTestData] = useState([]);
+
+
+    useEffect(()=> {
+        const fetchStudioData = async () => {
+            const result = await fetch ("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/", {
+                //include cookies with fetch
+                method: 'GET',
+                mode: "cors",
+                credentials: 'include',
+            }). then((req)=> req.json());
+            setTestData(result);
+        };
+        fetchStudioData();
+    })
+
+    console.log(testData);
 
     let _studios = []
     studiogrid_data.forEach((x) => {
@@ -118,17 +117,14 @@ const Home = () => {
                                                 darkModeShow={true} archiveShow={true} lastFetch={false}/>
                             </Suspense>
                         </div>
-                        {isLoading &&
-                            <p>loading...</p>
-                        }
-                        {!isLoading &&
+
+                        {/*
                             <Suspense>
                                 <StudioGrid
                                     carouselState={carouselState} setCarouselState={setCarouselState} language={language} data={data}
                                 />
                             </Suspense>
-                        }
-
+                        */}
                     </div>
                 }
                 {isMobile &&
@@ -155,12 +151,10 @@ const Home = () => {
                                                     {openBox &&
                                                         <div style={{height: "200px"}}></div>
                                                     }
-
                                                 </div>
                                             </div>
                                         </div>
                                     )
-
                                 }
                             ))}
                         </div>
