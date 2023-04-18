@@ -8,6 +8,15 @@ const StudioGrid = (props) => {
     let navigate = useNavigate();
     const studioData = props.data.docs
 
+    const {data, status} = useQuery({
+        queryKey:['MEDIA'],
+        queryFn: () =>
+            fetch("https://p01--admin-cms--qbt6mytl828m.code.run/api/media/",{
+                credentials:'include',
+                method: 'GET'
+            }).then((req)=>req.json())
+    });
+
     return(
         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}
              className={"lineH grid--even_4 HomeProjectGridContainer"}>
@@ -17,7 +26,11 @@ const StudioGrid = (props) => {
 
                  title_en = fetchDataStudiosPayload(studio, props.language, "title")
                  description = fetchDataStudiosPayload(studio, props.language, "description")
+                 console.log(studio.coverImage)
 
+                 studioImage = fetchPayloadMediaById(data, studio.coverImage)
+                 console.log(studioImage)
+                 console.log(data)
                  href = ""
                  //href = "/studio/" + studio.title_en.split(" ")[1].toLowerCase();
 
@@ -31,7 +44,7 @@ const StudioGrid = (props) => {
                                 onClick={routeChange}>{title_en}</h2>
                             <p className="uppercase justify padding-10"
                                style={{height: '10vh'}}>{description}</p>
-                            <img className="img__fit center" alt={""} src={""}
+                            <img className="img__fit center" alt={""} src={studioImage}
                                 //onClick={() => props.setCarouselState(!props.carouselState)}
                             />
                         </div>
