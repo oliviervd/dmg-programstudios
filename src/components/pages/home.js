@@ -43,7 +43,7 @@ const Home = () => {
 
     const [studioData, setStudioData] = useState([]);
 
-    const {data, status} = useQuery({
+    const {data, status, isLoading} = useQuery({
         queryKey:['STUDIO'],
         queryFn: () =>
             fetch("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/",{
@@ -111,11 +111,13 @@ const Home = () => {
                             </Suspense>
                         </div>
 
-                        <Suspense>
-                            <StudioGrid
-                                carouselState={carouselState} setCarouselState={setCarouselState} language={language} data={data}
-                            />
-                        </Suspense>
+                        {!isLoading &&
+                            <Suspense>
+                                <StudioGrid
+                                    carouselState={carouselState} setCarouselState={setCarouselState} language={language} data={data}
+                                />
+                            </Suspense>
+                        }
 
                     </div>
                 }
