@@ -26,10 +26,10 @@ const StudioGrid = (props) => {
 
                  title_en = fetchDataStudiosPayload(studio, props.language, "title")
                  description = fetchDataStudiosPayload(studio, props.language, "description")
-                 console.log(studio.coverImage)
+                 //console.log(studio.coverImage)
 
-                 studioImage = fetchPayloadMediaById(data, studio.coverImage)
-                 console.log(studioImage)
+                 //studioImage = fetchPayloadMediaById(data, studio.coverImage)
+                 //console.log(studioImage)
                  console.log(data)
                  href = ""
                  //href = "/studio/" + studio.title_en.split(" ")[1].toLowerCase();
@@ -44,7 +44,7 @@ const StudioGrid = (props) => {
                                 onClick={routeChange}>{title_en}</h2>
                             <p className="uppercase justify padding-10"
                                style={{height: '10vh'}}>{description}</p>
-                            <img className="img__fit center" alt={""} src={studioImage}
+                            <img className="img__fit center" alt={""} src={""}
                                 //onClick={() => props.setCarouselState(!props.carouselState)}
                             />
                         </div>
