@@ -49,7 +49,7 @@ const Home = () => {
             const result = await fetch ("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/", {
                 //include cookies with fetch
                 method: 'GET',
-                mode: "cors",
+                //mode: "cors",
                 credentials: 'include',
             }). then((req)=> req.json());
             setTestData(result);
