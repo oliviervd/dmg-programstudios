@@ -8,7 +8,7 @@ const StudioGrid = (props) => {
     let navigate = useNavigate();
     const studioData = props.data.docs
 
-    const {data, status} = useQuery({
+    const {data, isLoading, status} = useQuery({
         queryKey:['MEDIA'],
         queryFn: () =>
             fetch("https://p01--admin-cms--qbt6mytl828m.code.run/api/media/",{
@@ -16,6 +16,8 @@ const StudioGrid = (props) => {
                 method: 'GET'
             }).then((req)=>req.json())
     });
+
+    console.log(data)
 
     return(
         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}
@@ -26,9 +28,9 @@ const StudioGrid = (props) => {
 
                  title_en = fetchDataStudiosPayload(studio, props.language, "title")
                  description = fetchDataStudiosPayload(studio, props.language, "description")
-                 //console.log(studio.coverImage)
+                 console.log(studio.studioImage.url)
 
-                 //studioImage = fetchPayloadMediaById(data, studio.coverImage)
+                 studioImage = ""
                  //console.log(studioImage)
                  console.log(data)
                  href = ""
@@ -44,9 +46,12 @@ const StudioGrid = (props) => {
                                 onClick={routeChange}>{title_en}</h2>
                             <p className="uppercase justify padding-10"
                                style={{height: '10vh'}}>{description}</p>
-                            <img className="img__fit center" alt={""} src={""}
-                                //onClick={() => props.setCarouselState(!props.carouselState)}
-                            />
+                            {!isLoading&&
+                                <img className="img__fit center" alt={""} src={studio.studioImage.url}
+                                    //onClick={() => props.setCarouselState(!props.carouselState)}
+                                />
+                            }
+
                         </div>
                     </div>
                 )
