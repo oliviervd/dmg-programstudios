@@ -58,7 +58,7 @@ const NewItems = (props) => {
         fetchObjectById(objectNumberString);
     }
 
-    let imageBlock = ""
+    let imageBlock = "loading"
 
     try{
         imageBlock = _newObjectsImages.map(image => (
@@ -74,6 +74,7 @@ const NewItems = (props) => {
 
     return (
         <div>
+
             {props.collapseNewItems &&
                 <div>
                     <div style={{width:"inherit"}}>
@@ -91,6 +92,9 @@ const NewItems = (props) => {
                     </div>
                     <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
                         <div className={"masonry"} style={{overflowY:"scroll", padding: "5px", height: "85vh"}}>
+                            {_objects.isLoading &&
+                                <h2>LOADING...</h2>
+                            }
                             {imageBlock}
                         </div>
                         {showDetailUI &&
