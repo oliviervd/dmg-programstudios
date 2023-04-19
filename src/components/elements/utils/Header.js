@@ -38,7 +38,7 @@ const Header = props => {
                     <div/>
                     <div/>
                     <div/>
-                    <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => navigate("/index")}>INDEX</h2>
+                    <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => navigate("/index/color/")}>INDEX</h2>
                     {props.showAbout &&
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setAbout(!props.about)}>{headerAbout(props.language)}</h2>
                     }

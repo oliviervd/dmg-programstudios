@@ -188,6 +188,22 @@ text {
     position: relative;
 }
 
+.text-center{
+    text-align: center;
+}
+
+.left {
+    text-align: left;
+}
+
+.right {
+    text-align: right;
+}
+
+.justify {
+    text-align: justify;
+}
+
 .verticalText{
     writing-mode: vertical-lr;
     position: fixed;
@@ -219,6 +235,11 @@ text {
     text-decoration: underline;
 }
 
+.strike-through{
+    text-decoration-line: underline;
+    text-underline-offset: -40%;
+}
+
 .scrollable{
     overflow: scroll;
     display: grid;
@@ -237,6 +258,9 @@ text {
     color: var(--fluo__green)
 }
 
+.uppercase{
+    text-transform: uppercase;
+}
 
 .italic {
     -moz-transition: all 2s;

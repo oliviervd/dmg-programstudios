@@ -2,7 +2,7 @@ import React, {useState} from "react"
 import ObjectViewer from "../elements/subjectpages/ObjectViewer";
 import {useNavigate, useParams} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
-import {fetchRelatedObjects} from "../utils/data_parsers";
+import {fetchObjectsByID, fetchRelatedObjects} from "../utils/data_parsers";
 import useAgentQuery from "../hooks/useAgentQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useObjectsQuery from "../hooks/useObjectsQuery";
@@ -24,18 +24,8 @@ const ObjectPage = () => {
     let imageBlock
 
     setTimeout(()=> {
-        setDetails(fetchObjectsByID(id))
+        setDetails(fetchObjectsByID(_objects, id))
     }, 1000)
-
-    function fetchObjectsByID(id) {
-        for (let i=0; i<_objects.length; i++) {
-            try{
-                if (_objects[i].objectNumber === id) {
-                    return _objects[i]
-                }
-            } catch (e) {}
-        }
-    }
 
     try {
         _related = fetchRelatedObjects(_objects, details, _thes);
@@ -50,7 +40,7 @@ const ObjectPage = () => {
 
     const navigate = useNavigate()
     const routeChange = () => {
-        navigate("/index/")
+        navigate("/index/color/")
     }
 
 

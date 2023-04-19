@@ -41,7 +41,6 @@ const ColorIndex = (props) => {
 
     let images;
     images = fetchImageByColor(_objects, objectColor)
-    console.log(images)
 
     let imageBlock = ""
 
@@ -239,12 +238,12 @@ const ColorIndex = (props) => {
                     }
                     {!props.collapseColors &&
                         <div>
-                            <div className="lineH"/>
+                           {/* <div className="lineH"/>
                             <div style={{height: "5vh"}} className="grid--2_6_2">
                                 <p onClick={()=>collapse()}>colors</p>
                                 <div></div>
                                 <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
-                            </div>
+                            </div>*/}
                         </div>
                     }
                 </div>

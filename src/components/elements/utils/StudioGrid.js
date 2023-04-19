@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from "react";
 import {useQuery} from "@tanstack/react-query";
 import {useNavigate} from "react-router-dom";
-import {fetchDataStudiosPayload, fetchPayloadMediaById} from "../../utils/data_parsers";
+import {fetchDataStudiosPayload} from "../../utils/data_parsers";
 import axios from "axios";
 
 const StudioGrid = (props) => {
@@ -17,8 +16,6 @@ const StudioGrid = (props) => {
             }).then((req)=>req.json())
     });
 
-    console.log(data)
-
     return(
         <div style={{paddingLeft: "1vh", paddingRight: "1vh"}}
              className={"lineH grid--even_4 HomeProjectGridContainer"}>
@@ -28,11 +25,7 @@ const StudioGrid = (props) => {
 
                  title_en = fetchDataStudiosPayload(studio, props.language, "title")
                  description = fetchDataStudiosPayload(studio, props.language, "description")
-                 console.log(studio.studioImage.url)
 
-                 studioImage = ""
-                 //console.log(studioImage)
-                 console.log(data)
                  href = ""
                  //href = "/studio/" + studio.title_en.split(" ")[1].toLowerCase();
 
@@ -55,7 +48,6 @@ const StudioGrid = (props) => {
                         </div>
                     </div>
                 )
-
              }))}
         </div>
     )

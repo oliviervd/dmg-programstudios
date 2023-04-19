@@ -209,11 +209,11 @@ const ExhibitionIndex = (props) => {
             }
             {!props.collapseExhibition &&
                 <div>
-                    <div className="lineH"/>
+                 {/*   <div className="lineH"/>
                     <div style={{height: "5vh"}} className="grid--2_6_2">
                         <p onClick={()=>collapse()}>exhibitions</p>
                         <div></div>
-                    </div>
+                    </div>*/}
                 </div>
             }
 

@@ -19,9 +19,7 @@ export function fetchImageByColor(objects, color) {
                     }
             }
         }
-        console.log(imageList)
         return imageList
-
         //console.log(imageList)
     } catch (e) {console.log(e)}
 
