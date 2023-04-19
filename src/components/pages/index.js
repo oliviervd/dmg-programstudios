@@ -1,4 +1,5 @@
-import React, {useState, Suspense} from "react"
+import React, {useState, Suspense, useEffect} from "react"
+import {useParams} from "react-router-dom";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import Footer from "../elements/utils/Footer";
@@ -6,6 +7,7 @@ import Footer from "../elements/utils/Footer";
 import ExhibitionIndex from "../elements/indexes/exhibitionIndex";
 import ColorIndex from "../elements/indexes/colorIndex";
 import Loading from "../elements/utils/Loading";
+import NewItems from "../elements/indexes/newItems";
 
 import useObjectsQuery from "../hooks/useObjectsQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
@@ -26,13 +28,17 @@ const Index = (props) => {
         query: '(max-width: 700px)'
     })
 
+    let type = useParams()
+
     // COLOR INDEX
     const [about, setAbout] = useState(false);
     const [showIndexColors, setShowIndexColors] = useState(true);
     const [showAdvancedSearch, setShowAdvancedSearch] = useState(false);
     const [collapseColors, setCollapseColors] = useState(true);
     const [collapseExhibition, setCollapseExhibition] = useState(false);
+    const [collapseNewItems, setCollapseNewItems] = useState(false)
     const [queryResult, setQueryResult] = useState([]);
+    const [doubleHeader, setDoubleHeader] = useState(false);
 
     console.log(queryResult)
     console.log(showAdvancedSearch)
@@ -42,6 +48,22 @@ const Index = (props) => {
     const _thes  = useThesaurusQuery().data;
     const _pers = useAgentQuery().data;
     const _exhibitions = useExhibitionLister(_objects);
+
+    let param = useParams();
+
+    useEffect(() => {
+        if (param.type === "color") {
+            openColorIndex()
+        }
+    }, [param.type]);
+
+    useEffect(() => {
+        if (param.type === "new") {
+            openNewIndex()
+        }
+    }, [param.type]);
+
+    console.log(param);
 
     // * --- * //
 
@@ -65,17 +87,86 @@ const Index = (props) => {
         }
     }
 
+    function dropDownMenu() {
+        setDoubleHeader(!doubleHeader);
+    }
+
+    let header
+    if (doubleHeader) {
+        header = {
+            //position: "fixed",
+            background: "white",
+            width: "100vw",
+            borderBottom: "solid 2px black"
+        }
+    }
+
+    // todo: make into one generic function.
+    function openColorIndex() {
+        setCollapseColors(false);
+        setCollapseExhibition(true)
+        setCollapseNewItems(false)
+        setDoubleHeader(false);
+    }
+
+    function openExhibitionIndex() {
+        setCollapseColors(true);
+        setCollapseExhibition(false)
+        setCollapseNewItems(false)
+        setDoubleHeader(false);
+    }
+
+    function openNewIndex() {
+        setCollapseColors(false);
+        setCollapseExhibition(false)
+        setCollapseNewItems(true)
+        setDoubleHeader(false);
+    }
+
 
     return(
         <div>
             {isDesktopOrLaptop&&
                 <div>
-                    <div className="grid--3_4_3 container">
-                        <h1 className="home" onClick={()=>setAbout(!about)}>index</h1>
-                        <div></div>
-                        <h1 className="home" style={{textAlign:"right"}} onClick={()=>routeChange()}>home</h1>
+                    <div style={header}>
+                        <div className="grid--even_10">
+                            <h2 className="uppercase" style={{margin: 10}} onClick={()=>routeChange()}>home</h2>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                            <h2 className={!doubleHeader?"uppercase text-center":"uppercase text-center underlined"} style={{margin: 10}} onClick={()=>dropDownMenu()} >set index</h2>
+                            <h2 className="uppercase text-center" style={{margin: 10}} onClick={()=>setAbout(!about)}>search</h2>
+                            <div className="grid--even_3">
+                                <h2 className="uppercase text-center strike-through" style={{margin: 10}}>EN</h2>
+                                <h2 className="uppercase text-center strike-through" style={{margin: 10}}>NL</h2>
+                                <h2 className="uppercase text-center strike-through" style={{margin: 10}}>FR</h2>
+                            </div>
 
+                        </div>
+                        {doubleHeader &&
+                            <div className="grid--even_10">
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+                                <div></div>
+
+                                <div>
+                                    <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>openExhibitionIndex()}>COLORS</h2>
+                                    <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>openColorIndex()}>EXHIBITIONS</h2>
+                                    <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>openNewIndex()}>NEW ADDITIONS</h2>
+                                </div>
+
+
+                            </div>
+                        }
                     </div>
+
                     <div className={about? "grid--3_7 container": "container"}>
                         {about &&
                             <div>
@@ -109,6 +200,9 @@ const Index = (props) => {
                                                      collapseColors={collapseColors} setCollapseColors={setCollapseColors}
                                                      collapseExhibition={collapseExhibition} setCollapseExhibition={setCollapseExhibition}
                                     />
+
+                                    <NewItems collapseNewItems={collapseNewItems} setCollapseNewItem={setCollapseNewItems}
+                                              objects={_objects} thesaurus={_thes} agents={_pers}/>
 
                                 </div>
                             </div>
