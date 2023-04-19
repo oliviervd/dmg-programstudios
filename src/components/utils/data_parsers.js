@@ -2,6 +2,16 @@ import React from "react";
 import * as EdtfConverter from 'edtf-converter';
 const converter = new EdtfConverter.Converter();
 
+export function fetchObjectsByID(data, id) {
+    for (let i=0; i<data.length; i++) {
+        try{
+            if (data[i].objectNumber === id) {
+                return data[i]
+            }
+        } catch (e) {}
+    }
+}
+
 export function filterByKey(object, _filter) {
     return Object.keys(object).filter((key)=>key.toLowerCase().includes(_filter.toLowerCase()));
 }
