@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+html {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
 html, body {
     position:fixed;
     top:0;
@@ -12,7 +17,6 @@ html, body {
     cursor: cell;
     scroll-behavior: smooth;
     orientation: landscape;
-    -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
 }
 
@@ -260,21 +264,6 @@ html, body {
     /* border-color: rgba(255,255,255,var(--tw-border-opacity)); */
 }
 
-.text-center{
-    text-align: center;
-}
-
-.left {
-    text-align: left;
-}
-
-.right {
-    text-align: right;
-}
-
-.justify {
-    text-align: justify;
-}
 
 .modal {
     border-left: dotted black;
@@ -483,9 +472,7 @@ input{
     color: white;
 }
 
-.uppercase{
-    text-transform: uppercase;
-}
+
 
 .container_color_interface {
     display:grid;
