@@ -81,11 +81,11 @@ const NewItems = (props) => {
                         <div>
                             <div className="lineH"/>
                             <div className="grid--2_6_2" style={{height: '5vh'}}>
-                                <h2>recent additions</h2>
+                                <h1></h1>
                                 <div className={"grid--5_95"}>
                                     <div></div>
                                 </div>
-                                <p style={{textAlign:"center", fontSize: "15px"}}>a collection of {newItems.length} items that were added in the month of march 2023.</p>
+                                <p style={{textAlign:"center", fontSize: "15px", border: "solid 1px black", borderRadius: "20px", padding: "5px"}}>a collection of {newItems.length} items that were added in the month of march 2023.</p>
                             </div>
                             <div className={"lineH"}></div>
                         </div>
