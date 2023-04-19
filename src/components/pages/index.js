@@ -53,7 +53,13 @@ const Index = (props) => {
 
     useEffect(() => {
         if (param.type === "color") {
-            openColorIndex()
+            openExhibitionIndex() // opens colors
+        }
+    }, [param.type]);
+
+    useEffect(() => {
+        if (param.type === "exhibition") {
+            openColorIndex() // opens exhibitions.
         }
     }, [param.type]);
 
