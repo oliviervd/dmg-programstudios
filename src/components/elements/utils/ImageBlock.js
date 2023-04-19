@@ -10,7 +10,8 @@ const ImageBlock = (props) => {
             imageBlock = images.map(image => (
                 <div className={"imageContainer"}>
                     <img
-                        onClick={() => props.handleImgClick(image)}
+                        className={"hoverImage"}
+                        onClick={() => props.setDetailImageID(image)}
                         alt={'INSERT ALT HERE'} //todo: alt
                         src={image.replace("/full/0/default.jpg", "/400,/0/bitonal.jpg")}
                     />
@@ -21,8 +22,8 @@ const ImageBlock = (props) => {
             imageBlock = images.map(image => (
                 <div className={"hoverImage"}>
                     <img
-                        className={""}
-                        onClick={() => props.handleImgClick(image)}
+                        className={"hoverImage"}
+                        onClick={() => props.setDetailImageID(image)}
                         alt={'INSERT ALT HERE'} // todo: alt
                         src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
                     />
