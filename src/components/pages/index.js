@@ -144,6 +144,11 @@ const Index = (props) => {
         //setShowAdvancedSearch(false)
     }
 
+    function closeSearchTab() {
+        setAbout(false)
+        setShowAdvancedSearch(false)
+        openColorIndex()
+    }
 
     return(
         <div>
@@ -158,8 +163,18 @@ const Index = (props) => {
                             <div></div>
                             <div></div>
                             <div></div>
-                            <h2 className={!doubleHeader?"uppercase text-center":"uppercase text-center underlined"} style={{margin: 10}} onClick={()=>dropDownMenu()} >set index</h2>
-                            <h2 className="uppercase text-center" style={{margin: 10}} onClick={()=>setAbout(!about)}>search</h2>
+                            {about &&
+                                <h2 className={!doubleHeader?"uppercase text-center":"uppercase text-center underlined"} style={{margin: 10}} onClick={()=> closeSearchTab()}>back to index</h2>
+                            }
+                            {about &&
+                                <div></div>
+                            }
+                            {!about &&
+                                <h2 className={!doubleHeader?"uppercase text-center":"uppercase text-center underlined"} style={{margin: 10}} onClick={()=>dropDownMenu()} >set index</h2>
+                            }
+                            {!about &&
+                                <h2 className="uppercase text-center" style={{margin: 10}} onClick={()=>setAbout(true)}>search</h2>
+                            }
                             <div className="grid--even_3">
                                 <h2 className="uppercase text-center strike-through" style={{margin: 10}}>EN</h2>
                                 <h2 className="uppercase text-center strike-through" style={{margin: 10}}>NL</h2>
