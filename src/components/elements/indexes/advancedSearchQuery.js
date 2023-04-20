@@ -98,6 +98,7 @@ const AdvancedSearchQuery = (props) => {
     function performSearch() {
         props.setQueryResult(_result)
         props.setShowAdvancedSearch(true)
+        props.setCloseSearch(true)
     }
 
     function openSearch() {
