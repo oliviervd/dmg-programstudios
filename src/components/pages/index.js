@@ -136,7 +136,7 @@ const Index = (props) => {
                 <div>
                     <div style={header}>
                         <div className="grid--even_10">
-                            <h2 className="uppercase" style={{margin: 10}} onClick={()=>routeChange()}>home</h2>
+                            <h2 className="uppercase" style={{margin: 10}}>home</h2>
                             <div></div>
                             <div></div>
                             <div></div>
