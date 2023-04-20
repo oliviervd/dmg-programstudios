@@ -3,12 +3,6 @@
 html {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    scrollbar-width: none;
-    scrollbar-color: transparent transparent;
-}
-
-::-webkit-scrollbar {
-    display: none;
 }
 
 html, body {
