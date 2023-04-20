@@ -39,6 +39,7 @@ const Index = (props) => {
     const [collapseNewItems, setCollapseNewItems] = useState(false)
     const [queryResult, setQueryResult] = useState([]);
     const [doubleHeader, setDoubleHeader] = useState(false);
+    const [closeSearch, setCloseSearch] = useState(false);
 
     console.log(queryResult)
     console.log(showAdvancedSearch)
@@ -90,6 +91,14 @@ const Index = (props) => {
         style = {
             height: "200px",
             overflowY:"scroll"
+        }
+    }
+
+    let searchBoxStyle;
+
+    if (closeSearch) {
+        searchBoxStyle = {
+            gridTemplateColumns: "5% 95%"
         }
     }
 
@@ -173,20 +182,20 @@ const Index = (props) => {
                         }
                     </div>
 
-                    <div className={about? "grid--3_7 container": "container"}>
+                    <div className={about? "grid--3_7 container": "container"} style={searchBoxStyle}>
                         {about &&
                             <div>
                                 <AdvancedSearchQuery about={about} setAbout={setAbout}
                                                      showAdvancedSearch={showAdvancedSearch} setShowAdvancedSearch={setShowAdvancedSearch}
                                                      objects={_objects} thesaurus={_thes}
-                                                     setQueryResult={setQueryResult}
+                                                     setQueryResult={setQueryResult} closeSearch={closeSearch} setCloseSearch={setCloseSearch}
                                 />
                             </div>
 
                         }
 
                         {showAdvancedSearch&&
-                            <AdvancedSearch queryResults={queryResult}/>
+                            <AdvancedSearch queryResults={queryResult} objecten={_objects} thesaurus={_thes} personen={_pers} setCloseSearch={setCloseSearch}/>
                         }
 
                         {!showAdvancedSearch&&

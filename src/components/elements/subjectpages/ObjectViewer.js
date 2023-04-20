@@ -68,7 +68,7 @@ const ObjectViewer = (props) => {
         } catch(e) {description = ""}
 
         try {
-            if (fetchDimensions(_baseLDES) != undefined){
+            if (fetchDimensions(_baseLDES) !== undefined){
                 dimensions = fetchDimensions(_baseLDES)
             }
         } catch {dimensions=""}
@@ -128,7 +128,7 @@ const ObjectViewer = (props) => {
                                     </div>
                                 }
 
-                                {type != "" &&
+                                {type !== "" &&
                                     <div>
                                         <p className={"underlined"}>type:</p>
                                         {type.map(t => {
@@ -141,7 +141,7 @@ const ObjectViewer = (props) => {
                                     </div>
                                 }
 
-                                {creations != "" &&
+                                {creations !== "" &&
                                     <div>
                                         <p className={"underlined"}>designed by:</p>
                                         {creations.map(crea => {
@@ -164,7 +164,7 @@ const ObjectViewer = (props) => {
                                     </div>
                                 }
 
-                                {productions != "" &&
+                                {productions !== "" &&
                                     <div>
                                         <p className={"underlined"}>produced by:</p>
                                         {productions.map(prod => {
@@ -190,7 +190,7 @@ const ObjectViewer = (props) => {
                                     </div>
                                 }
 
-                                {dimensions != "" &&
+                                {dimensions !== "" &&
                                     <div>
                                         <p className={"underlined"}>dimensions:</p>
                                         <p>{dimensions}</p>
@@ -200,7 +200,7 @@ const ObjectViewer = (props) => {
                                 }
 
                                 <div>
-                                    {material != "" &&
+                                    {material !== "" &&
                                         <div>
                                             <p className={"underlined"}>materials:</p>
                                             <div>
@@ -221,7 +221,7 @@ const ObjectViewer = (props) => {
 
 
 
-                                {exhibitions != "" &&
+                                {exhibitions !== "" &&
                                     <div>
                                         <p className={"underlined"}>shown in exhibitions:</p>
                                         <div>
@@ -239,7 +239,7 @@ const ObjectViewer = (props) => {
                                     </div>
                                 }
 
-                                {location != "" &&
+                                {location !== "" &&
                                     <div>
                                         <br></br>
                                         <p className={"underlined"}>current location:</p>

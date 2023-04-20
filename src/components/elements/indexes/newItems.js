@@ -36,7 +36,6 @@ const NewItems = (props) => {
         let _obj = _objects.data
         for (let i=0; i<_obj.length; i++) {
             if (_obj[i].objectNumber === ObjectNumber) {
-                console.log(_obj[i])
                 setDetails(_obj[i])
             }
         }
@@ -44,7 +43,6 @@ const NewItems = (props) => {
 
 
     function filterByValue(array, string) {
-        console.log(array)
         let x = array.filter(o => o.iiif_image_uris.includes(string))
         return x[0]["objectNumber"];
     }
@@ -52,9 +50,7 @@ const NewItems = (props) => {
     function handleImgClick(id) {
         setDetailImageID(id)
         setShowDetailUI(true)
-        console.log(detailImageID)
         let objectNumberString = filterByValue(_objects.data, id);
-        console.log(objectNumberString);
         fetchObjectById(objectNumberString);
     }
 
@@ -74,22 +70,8 @@ const NewItems = (props) => {
 
     return (
         <div>
-
             {props.collapseNewItems &&
                 <div>
-                    <div style={{width:"inherit"}}>
-                        <div>
-                            <div className="lineH"/>
-                            <div className="grid--2_6_2" style={{height: '5vh'}}>
-                                <h1></h1>
-                                <div className={"grid--5_95"}>
-                                    <div></div>
-                                </div>
-                                <p style={{textAlign:"center", fontSize: "15px", border: "solid 1px black", borderRadius: "20px", padding: "5px"}}>a collection of {newItems.length} items that were added in the month of march 2023.</p>
-                            </div>
-                            <div className={"lineH"}></div>
-                        </div>
-                    </div>
                     <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
                         <div className={"masonry"} style={{overflowY:"scroll", padding: "5px", height: "85vh"}}>
                             {_objects.isLoading &&
@@ -104,7 +86,6 @@ const NewItems = (props) => {
                             />
                         }
                     </div>
-
                 </div>
 
             }

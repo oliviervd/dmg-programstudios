@@ -15,6 +15,8 @@ const AdvancedSearchQuery = (props) => {
     const objects = props.objects;
     const thesaurus = props.thesaurus
 
+    console.log(props.closeSearch)
+
     function closeTab() {
         props.setAbout(!props.about)
         props.setShowAdvancedSearch(false);
@@ -62,10 +64,6 @@ const AdvancedSearchQuery = (props) => {
             collection.push(resultTypes)
         }
 
-        console.log(collection.length)
-        console.log(collection)
-
-
         if (collection.length > 1) {
             console.log(collection.length)
             let array1 = collection[0]
@@ -81,8 +79,6 @@ const AdvancedSearchQuery = (props) => {
             console.log(intersection)
             return intersection
         } else {
-
-            console.log(collection)
             return collection[0]
         }
     }
@@ -94,6 +90,7 @@ const AdvancedSearchQuery = (props) => {
             if (event.key === 'Enter') {
                 props.setQueryResult(_result)
                 props.setShowAdvancedSearch(true)
+
             }
         }
 
@@ -103,39 +100,45 @@ const AdvancedSearchQuery = (props) => {
         props.setShowAdvancedSearch(true)
     }
 
+    function openSearch() {
+        props.setCloseSearch(false)
+    }
+
+
     //todo: cache search query (I can go back to my search query)
     
     return (
-        <div className={"grid--97_3"} style={{height: "700px", overflowY:"scroll"}}>
-            <div style={{marginLeft: "10px", marginRight: "10px"}}>
-                <div className={"lineH"}></div>
-                <div className={"grid--8_2"}>
-                    <h2 className={"rhizome"}>ADVANCED SEARCH</h2>
-                    <p onClick={() => closeTab()}>[CLOSE]</p>
-                </div>
-                <br/>
+        <div className={"grid--97_3"} style={{height: "900px", overflowY:"scroll"}}>
+            {!props.closeSearch &&
                 <div>
-                    <div className={"grid--2_8"}>
-                        <div>
-                            <div className={"lineH"}></div>
-                            <h2 style={{padding: "12px 0"}}>title</h2>
-                            <div className={"lineH"}></div>
-                        </div>
-                        <SearchFilterBar filter={filterTitle} setFilter={setFilterTitle} prompt={"enter title here"} onKeyDown={handleKeyDown}/>
+                    <div className={"lineH"}></div>
+                    <div className={"grid--8_2"}>
+                        <h2 className={"rhizome"}>ADVANCED SEARCH</h2>
+                        <p onClick={() => closeTab()}>[CLOSE]</p>
                     </div>
                     <br/>
-
-                    <div className={"grid--2_8"}>
-                        <div>
-                            <div className={"lineH"}></div>
-                            <h2 style={{padding: "12px 0"}}>type</h2>
-                            <div className={"lineH"}></div>
+                    <div>
+                        <div className={"grid--2_8"}>
+                            <div>
+                                <div className={"lineH"}></div>
+                                <h2 style={{padding: "12px 0"}}>title</h2>
+                                <div className={"lineH"}></div>
+                            </div>
+                            <SearchFilterBar filter={filterTitle} setFilter={setFilterTitle} prompt={"enter title here"} onKeyDown={handleKeyDown}/>
                         </div>
-                        <SearchFilterBar filter={filterType} setFilter={setFilterType} prompt={"enter type here"} onKeyDown={handleKeyDown}/>
-                    </div>
-                    <br/>
+                        <br/>
 
-                    {/*<div className={"grid--2_8"}>
+                        <div className={"grid--2_8"}>
+                            <div>
+                                <div className={"lineH"}></div>
+                                <h2 style={{padding: "12px 0"}}>type</h2>
+                                <div className={"lineH"}></div>
+                            </div>
+                            <SearchFilterBar filter={filterType} setFilter={setFilterType} prompt={"enter type here"} onKeyDown={handleKeyDown}/>
+                        </div>
+                        <br/>
+
+                        {/*<div className={"grid--2_8"}>
                         <div>
                             <div className={"lineH"}></div>
                             <h2 style={{padding: "12px 0"}}>designer</h2>
@@ -145,12 +148,16 @@ const AdvancedSearchQuery = (props) => {
                     </div>
                     <br/>*/}
 
-                    <a className={"buttonType--PRIMARY"} onClick={performSearch}>search</a>
-
+                        <a className={"buttonType--PRIMARY"} onClick={performSearch}>search</a>
+                    </div>
                 </div>
-
-            </div>
-            <div className="lineV"></div>
+            }
+            {props.closeSearch &&
+                <div className={"grid--97_3"}>
+                    <h2 className={"verticalText"} style={{top: "37%"}} onClick={()=> {openSearch()}}> ↟ open advanced search ↟ </h2>
+                    <div className={"lineV"} style={{left: "50px", position:"relative"}}></div>
+                </div>
+            }
         </div>
     )
 

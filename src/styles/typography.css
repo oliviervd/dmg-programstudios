@@ -207,8 +207,6 @@ text {
 .verticalText{
     writing-mode: vertical-lr;
     position: fixed;
-    height: 300px;
-    margin-left: 10px;
     font-weight: lighter;
 }
 
@@ -252,6 +250,7 @@ text {
     text-decoration: underline;
     font-size: 20px;
 }
+
 
 .rotateText:hover{
     transition: color 2s ease-out;
