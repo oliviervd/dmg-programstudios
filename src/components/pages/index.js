@@ -122,8 +122,8 @@ const Index = (props) => {
         setCollapseExhibition(true)
         setCollapseNewItems(false)
         setDoubleHeader(false);
-        setAbout(!about)
-        setShowAdvancedSearch(false)
+        //setAbout(!about)
+        //setShowAdvancedSearch(false)
     }
 
     function openExhibitionIndex() {
@@ -131,8 +131,8 @@ const Index = (props) => {
         setCollapseExhibition(false)
         setCollapseNewItems(false)
         setDoubleHeader(false);
-        setAbout(!about)
-        setShowAdvancedSearch(false)
+        //setAbout(!about)
+        //setShowAdvancedSearch(false)
     }
 
     function openNewIndex() {
@@ -140,8 +140,8 @@ const Index = (props) => {
         setCollapseExhibition(false)
         setCollapseNewItems(true)
         setDoubleHeader(false);
-        setAbout(!about)
-        setShowAdvancedSearch(false)
+        //setAbout(!about)
+        //setShowAdvancedSearch(false)
     }
 
 
