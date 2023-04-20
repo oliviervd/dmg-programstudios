@@ -222,7 +222,7 @@ const ObjectViewer = (props) => {
 
 
                                 {exhibitions != "" &&
-                                    <div className={"grid--3_7"}>
+                                    <div>
                                         <p className={"underlined"}>shown in exhibitions:</p>
                                         <div>
                                             {exhibitions &&
