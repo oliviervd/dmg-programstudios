@@ -46,7 +46,6 @@
     border-radius: 2px;
     color: #fafafa;
     cursor: pointer;
-    overflow-y: scroll;
     text-decoration: underline;
     font-weight: lighter;
 }
