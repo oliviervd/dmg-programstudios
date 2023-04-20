@@ -2,14 +2,17 @@ import React, {useState, useEffect, useMemo} from "react"
 import Fuse from "fuse.js";
 
 import SearchFilterBar from "../utils/SearchFilterBar";
-import {fetchObjectType, fetchTitle, fetchType} from "../../utils/data_parsers";
+import {fetchDescription, fetchObjectType, fetchTitle, fetchType} from "../../utils/data_parsers";
 
 import {useQuery} from "@tanstack/react-query";
+import {unserialize} from "es5-ext/object";
 
 const AdvancedSearchQuery = (props) => {
 
     const [filterTitle, setFilterTitle] = useState("");
     const [filterType, setFilterType] = useState("");
+    const [filterDescription, setFilterDescription] = useState("")
+
     const [filterDesigner, setFilterDesigner] = useState("");
     const [result, setResult] = useState([])
     const objects = props.objects;
@@ -23,11 +26,12 @@ const AdvancedSearchQuery = (props) => {
     }
 
     console.log(props.objects.length)
-    function filterSet(title, type) {
+    function filterSet(title, type, description) {
         let collection = [];
         let intersection = []
         let titles = [];
         let types = [];
+        let descriptions = [];
 
         const optionsTitle = {
             threshold: 0.0,
@@ -41,20 +45,42 @@ const AdvancedSearchQuery = (props) => {
             keys: ["type"]
         }
 
+        const optionsDescription = {
+            threshold: 0.1,
+            ignoreLocation: true,
+            includeScore: true,
+            keys: ["description"]
+        }
+
         for (let o = 0; o < props.objects.length; o++) {
             let _title = fetchTitle(props.objects[o]["LDES_raw"])
             let _type = fetchObjectType(props.objects[o]["LDES_raw"], thesaurus)
             titles.push({title: _title, source: props.objects[o]});
-            types.push({type: _type, source: props.objects[o]})
+            types.push({type: _type, source: props.objects[o]});
+            try{
+                let _description = props.objects[o]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
+                //console.log(_description)
+                if (_description !== undefined) {
+                    descriptions.push({description: _description, source: props.objects[o]})
+                }
+                /*
+                console.log(_description)
+
+                */
+            } catch (e) {}
+
         }
 
 
         const fuseTitles = new Fuse(titles, optionsTitle);
-        const fusetype = new Fuse(types, optionsType)
+        const fusetype = new Fuse(types, optionsType);
+        const fuseDescription = new Fuse(descriptions, optionsDescription)
 
         const resultTitles = fuseTitles.search(title)
-
         const resultTypes = fusetype.search(type)
+        const resultDescription = fuseDescription.search(description)
+
+        //console.log(resultDescription)
 
         if (resultTitles.length !== 0) {
             collection.push(resultTitles)
@@ -64,10 +90,15 @@ const AdvancedSearchQuery = (props) => {
             collection.push(resultTypes)
         }
 
+        if (resultDescription.length !==0) {
+            collection.push(resultDescription)
+        }
+
         if (collection.length > 1) {
             console.log(collection.length)
             let array1 = collection[0]
             let array2 = collection[1]
+            let array3 = collection[2]
 
             array1.map(function(item1){
                 array2.map(function(item2){
@@ -83,19 +114,21 @@ const AdvancedSearchQuery = (props) => {
         }
     }
 
-    let _result = useMemo(() => {return filterSet(filterTitle, filterType)},[filterTitle, filterType]);
+    let _result;
+    //let _result = useMemo(() => {return filterSet(filterTitle, filterType, filterDescription)},[filterTitle, filterType, filterDescription]);
 
 
-        const handleKeyDown = (event) => {
-            if (event.key === 'Enter') {
-                props.setQueryResult(_result)
-                props.setShowAdvancedSearch(true)
+    const handleKeyDown = (event) => {
+        if (event.key === 'Enter') {
+            props.setQueryResult(_result)
+            props.setShowAdvancedSearch(true)
 
-            }
         }
+    }
 
 
     function performSearch() {
+        _result=filterSet(filterTitle, filterType, filterDescription)
         props.setQueryResult(_result)
         props.setShowAdvancedSearch(true)
         props.setCloseSearch(true)
@@ -107,35 +140,45 @@ const AdvancedSearchQuery = (props) => {
 
 
     //todo: cache search query (I can go back to my search query)
-    
+
     return (
         <div className={"grid--97_3"} style={{height: "900px", overflowY:"scroll"}}>
             {!props.closeSearch &&
                 <div>
                     <div className={"lineH"}></div>
-                    <div className={"grid--8_2"}>
+                    <div className={"grid--3_7"}>
                         <h2 className={"rhizome"}>ADVANCED SEARCH</h2>
                         <p onClick={() => closeTab()}>[CLOSE]</p>
                     </div>
                     <br/>
-                    <div>
-                        <div className={"grid--2_8"}>
+                    <div style={{borderLeft: "black solid 2px", borderTop: "black solid 2px", borderBottom: "black solid 2px", padding: "2px", height: "800px", borderRadius: "20px"}}>
+                        <div className={"grid--3_7"}>
                             <div>
                                 <div className={"lineH"}></div>
-                                <h2 style={{padding: "12px 0"}}>title</h2>
+                                <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>title</h2>
                                 <div className={"lineH"}></div>
                             </div>
                             <SearchFilterBar filter={filterTitle} setFilter={setFilterTitle} prompt={"enter title here"} onKeyDown={handleKeyDown}/>
                         </div>
                         <br/>
 
-                        <div className={"grid--2_8"}>
+                        <div className={"grid--3_7"}>
                             <div>
                                 <div className={"lineH"}></div>
-                                <h2 style={{padding: "12px 0"}}>type</h2>
+                                <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>type</h2>
                                 <div className={"lineH"}></div>
                             </div>
                             <SearchFilterBar filter={filterType} setFilter={setFilterType} prompt={"enter type here"} onKeyDown={handleKeyDown}/>
+                        </div>
+                        <br/>
+
+                        <div className={"grid--3_7"}>
+                            <div>
+                                <div className={"lineH"}></div>
+                                <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>description</h2>
+                                <div className={"lineH"}></div>
+                            </div>
+                            <SearchFilterBar filter={filterDescription} setFilter={setFilterDescription} prompt={"enter free text here"} onKeyDown={handleKeyDown}/>
                         </div>
                         <br/>
 
@@ -149,7 +192,7 @@ const AdvancedSearchQuery = (props) => {
                     </div>
                     <br/>*/}
 
-                        <a className={"buttonType--PRIMARY"} onClick={performSearch}>search</a>
+                        <a className={"buttonType--PRIMARY"} style={{marginLeft: "30%"}} onClick={performSearch}>search</a>
                     </div>
                 </div>
             }

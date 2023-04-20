@@ -61,18 +61,19 @@ const AdvancedSearch = (props) => {
     }
 
 
+    // if no results; display "no results".
 
     return(
         <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
             <div className={"masonry"} style={{height: "90vh", overflowY:"scroll", padding: "5px"}}>
+                    <Suspense fallback={<Loading/>}>
+                        {_r}
+                    </Suspense>
 
-                <Suspense fallback={<Loading/>}>
-                    {_r}
-                </Suspense>
             </div>
             {showDetailUI &&
                 <ObjectViewer
-                    showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={props.thesaurus} personen={props.personen}
+                    showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={true} thesaurus={props.thesaurus} personen={props.personen}
                     image={detailImageID} details={details} color={"black"} colorStrip={true} indexUI={true}
                     box={false}
                 />
