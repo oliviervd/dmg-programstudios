@@ -125,6 +125,38 @@ const ObjectViewer = (props) => {
                                     <ImageViewer media={props.image} details={props.details}/>
                                     {!props.description &&
                                         <div style={{marginLeft: "28px"}}>
+                                            <div >
+                                                {!openColors&&
+                                                    <div>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                        <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                        <br></br>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                    </div>
+                                                }
+                                                {openColors&&
+                                                    <div>
+                                                        <div className={"lineH"}></div>
+                                                        <div className={"grid--even_5"}>
+                                                            {_LDES["HEX_values"][0].map(color=>{return(
+                                                                <div style={{
+                                                                    background:color,
+                                                                    margin: '10px',
+                                                                    height: "2vh",
+                                                                    width: "2vh"
+                                                                }}></div>
+                                                            )})}
+                                                        </div>
+                                                        <br></br>
+                                                        <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                        <br></br>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                    </div>
+                                                }
+                                            </div>
                                             {!openDescription &&
                                                 <div>
                                                     <div className={"lineH"}></div>
@@ -385,7 +417,7 @@ const ObjectViewer = (props) => {
                                         {openColors&&
                                             <div>
                                                 <div className={"lineH"}></div>
-                                                <div className={"grid--even_10"}>
+                                                <div className={"grid--even_5"}>
                                                     {_LDES["HEX_values"][0].map(color=>{return(
                                                         <div style={{
                                                             background:color,
