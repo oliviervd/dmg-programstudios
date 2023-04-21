@@ -66,12 +66,25 @@ const AgentPage = () => {
     return(
         <div className={"container"}>
             {isDesktopOrLaptop&&
-                <Header about={false} language={language} setLanguage={setLanguage} showTitle={false}/>
-               /* <div className="grid--3_4_3">
-                    <h1 className="home">agent</h1>
+                <div className="grid--even_10">
+                    <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ back</h2>
                     <div></div>
-                    <h1 style={{bottom: "0px",textAlign: "right", fontSize: "20px"}} onClick={()=>routeChange()}>back to index</h1>
-                </div>*/
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                    <div></div>
+
+                    <div className="grid--even_3">
+                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>EN</h2>
+                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>NL</h2>
+                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>FR</h2>
+                    </div>
+
+                </div>
             }
 
             <div className={"grid--even_2"}>

@@ -61,10 +61,24 @@ const ObjectPage = () => {
     return(
         <div className="container">
             {isDesktopOrLaptop&&
-                <div className="grid--3_4_3">
-                    <h1 className="home">object</h1>
+                <div className="grid--even_10">
+                    <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ back</h2>
                     <div></div>
-                    <h1 className="home" style={{textAlign: "right"}} onClick={()=>routeChange()}>index</h1>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+
+                    <div></div>
+
+                    <div className="grid--even_3">
+                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>EN</h2>
+                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>NL</h2>
+                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>FR</h2>
+                    </div>
+
                 </div>
             }
 
@@ -73,7 +87,7 @@ const ObjectPage = () => {
                 <ObjectViewer description={true} details = {details}
                               image={images} colorStrip={false}
                               thesaurus={_thes} personen={_pers}
-                              box={true}
+                              box={true} colorCubes={true}
                 />
             </div>
 
