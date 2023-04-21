@@ -248,52 +248,6 @@ const ColorIndex = (props) => {
                     }
                 </div>
             }
-            {isMobile &&
-                <div>
-
-                    <div>
-                        <div className="lineH"/>
-                        {props.showIndexColors &&
-                            <div style={{overflowY: "hidden"}}>
-                                <div className="grid--2_6_2">
-                                    <p>colors</p>
-                                    <div></div>
-                                </div>
-
-                                <div style={{height: "100%", overflowY:"scroll"}}>
-                                    <Suspense>
-                                        {HexOptions}
-                                    </Suspense>
-                                </div>
-                            </div>
-
-                        }
-
-
-                        <div className="grid--2_6_2">
-                            <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
-                            <div style={{height: "5vh"}}></div>
-                            <p onClick={()=>props.setShowIndexColors(!props.showIndexColors)}>>>> scroll this way >>>></p>
-                        </div>
-
-                        <div className={"masonry"} style={{height: "85vh", overflowY:"scroll"}}>
-                            {imageBlock}
-                        </div>
-                        <div>
-                            <div className={"lineH"}></div>
-                        </div>
-
-                        {showDetailUIColors &&
-                            <ObjectViewer
-                                showDetailUI={showDetailUIColors} setShowDetailUI={setShowDetailUIColors} description={false} thesaurus={_thes} personen={_pers}
-                                image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
-                                box={false}
-                            />
-                        }
-
-                    </div>
-                </div>
-            }
         </div>
 
 
