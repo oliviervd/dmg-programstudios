@@ -198,7 +198,7 @@ const ExhibitionIndex = (props) => {
                                     <ObjectViewer
                                         showDetailUI={showDetailsExhObj} setShowDetailUI={setShowDetailsExhObj} description={false} thesaurus={props.thesaurus} personen={props.agents}
                                         image={image} details={details} colors={props.objects} colorStrip={true} indexUI={true}
-                                        box={false} color={"palegreen"}
+                                        box={false} color={"black"}
                                     />
                                 }
                             </div>

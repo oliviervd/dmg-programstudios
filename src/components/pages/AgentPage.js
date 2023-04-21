@@ -58,7 +58,7 @@ const AgentPage = () => {
 
     const navigate = useNavigate()
     const routeChange = () => {
-        navigate("/index/")
+        navigate("/index/colors/")
     }
 
     // fetch details on specific persons
