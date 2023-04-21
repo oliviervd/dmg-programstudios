@@ -121,11 +121,27 @@ const ObjectViewer = (props) => {
                                 <Suspense>
                                     <ImageViewer media={props.image} details={props.details}/>
                                     {!props.description &&
-                                        <div style={{paddingLeft:"9%"}}>
-                                            <div className={"lineH"}></div>
-                                            <br/>
-                                            <p>{description}</p>
-                                            <br/>
+                                        <div style={{marginLeft: "28px"}}>
+                                            {!openDescription &&
+                                                <div>
+                                                    <div className={"lineH"}></div>
+                                                    <br></br>
+                                                    <h2 onClick={()=>setOpenDescription(true)}>↨ description</h2>
+                                                    <br></br>
+                                                    <div className={"lineH"}></div>
+                                                    <br></br>
+                                                </div>
+                                            }
+                                            {openDescription &&
+                                                <div>
+                                                    <p>{description}</p>
+                                                    <br/>
+                                                    <h2 onClick={()=>setOpenDescription(false)}>↥ close</h2>
+                                                    <br/>
+                                                    <div className={"lineH"}></div>
+                                                    <br/>
+                                                </div>
+                                            }
                                         </div>
                                     }
                                 </Suspense>
@@ -136,8 +152,26 @@ const ObjectViewer = (props) => {
 
                                 {props.description &&
                                     <div>
-                                        <p>{description}</p>
-                                        <br/>
+                                        {!openDescription &&
+                                            <div>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
+                                                <h2 onClick={()=>setOpenDescription(true)}>↨ description</h2>
+                                                <br></br>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
+                                            </div>
+                                        }
+                                        {openDescription &&
+                                            <div>
+                                                <p>{description}</p>
+                                                <br/>
+                                                <h2 onClick={()=>setOpenDescription(false)}>↥ close</h2>
+                                                <br/>
+                                                <div className={"lineH"}></div>
+                                                <br/>
+                                            </div>
+                                        }
                                     </div>
                                 }
 
