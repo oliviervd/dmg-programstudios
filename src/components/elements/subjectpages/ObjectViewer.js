@@ -179,7 +179,7 @@ const ObjectViewer = (props) => {
                                 }
 
                                 {props.colorCubes &&
-                                    <div>
+                                    <div >
                                         {!openColors&&
                                             <div>
                                                 <div className={"lineH"}></div>
@@ -197,7 +197,7 @@ const ObjectViewer = (props) => {
                                                     {_LDES["HEX_values"][0].map(color=>{return(
                                                         <div style={{
                                                             background:color,
-                                                            margin: "10px",
+                                                            margin: '10px',
                                                             height: "5vh",
                                                             width: "5vh"
                                                         }}></div>
@@ -367,6 +367,41 @@ const ObjectViewer = (props) => {
                                         <br/>
                                         <div className={"lineH"}></div>
                                         <br/>
+                                    </div>
+                                }
+
+                                {props.colorCubes &&
+                                    <div >
+                                        {!openColors&&
+                                            <div>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
+                                                <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                <br></br>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
+                                            </div>
+                                        }
+                                        {openColors&&
+                                            <div>
+                                                <div className={"lineH"}></div>
+                                                <div className={"grid--even_10"}>
+                                                    {_LDES["HEX_values"][0].map(color=>{return(
+                                                        <div style={{
+                                                            background:color,
+                                                            margin: '10px',
+                                                            height: "2vh",
+                                                            width: "2vh"
+                                                        }}></div>
+                                                    )})}
+                                                </div>
+                                                <br></br>
+                                                <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                <br></br>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
+                                            </div>
+                                        }
                                     </div>
                                 }
                             </div>
