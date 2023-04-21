@@ -125,7 +125,7 @@ const NewItems = (props) => {
                             <div className={"lineH"}></div>
                             <ObjectViewer showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} thesaurus={_thes} personen={_pers}
                                           description={true} image={detailImageID} colorStrip={true} color={"black"}
-                                          indexUI={true} details={details}
+                                          indexUI={true} details={details} colorCubes={true}
                             />
                         </div>
                     }

@@ -201,7 +201,7 @@ const Index = (props) => {
                                 <div>
                                     <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>openExhibitionIndex()}>COLORS</h2>
                                     <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>openColorIndex()}>EXHIBITIONS</h2>
-                                    <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>openNewIndex()}>NEW ADDITIONS</h2>
+                                    <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>openNewIndex()}>RECENTLY ADDED</h2>
                                 </div>
 
 

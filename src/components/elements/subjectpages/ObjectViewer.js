@@ -34,7 +34,10 @@ const ObjectViewer = (props) => {
     let _THES = props.thesaurus
     let _PERS = props.personen
 
+    console.log(_LDES["HEX_values"])
+
     const [openDescription, setOpenDescription] = useState(false)
+    const [openColors, setOpenColors] = useState(false)
 
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
 
@@ -170,6 +173,41 @@ const ObjectViewer = (props) => {
                                                 <br/>
                                                 <div className={"lineH"}></div>
                                                 <br/>
+                                            </div>
+                                        }
+                                    </div>
+                                }
+
+                                {props.colorCubes &&
+                                    <div >
+                                        {!openColors&&
+                                            <div>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
+                                                <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                <br></br>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
+                                            </div>
+                                        }
+                                        {openColors&&
+                                            <div>
+                                                <div className={"lineH"}></div>
+                                                <div className={"grid--even_10"}>
+                                                    {_LDES["HEX_values"][0].map(color=>{return(
+                                                        <div style={{
+                                                            background:color,
+                                                            margin: '10px',
+                                                            height: "5vh",
+                                                            width: "5vh"
+                                                        }}></div>
+                                                    )})}
+                                                </div>
+                                                <br></br>
+                                                <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                <br></br>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
                                             </div>
                                         }
                                     </div>
@@ -329,6 +367,41 @@ const ObjectViewer = (props) => {
                                         <br/>
                                         <div className={"lineH"}></div>
                                         <br/>
+                                    </div>
+                                }
+
+                                {props.colorCubes &&
+                                    <div >
+                                        {!openColors&&
+                                            <div>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
+                                                <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                <br></br>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
+                                            </div>
+                                        }
+                                        {openColors&&
+                                            <div>
+                                                <div className={"lineH"}></div>
+                                                <div className={"grid--even_10"}>
+                                                    {_LDES["HEX_values"][0].map(color=>{return(
+                                                        <div style={{
+                                                            background:color,
+                                                            margin: '10px',
+                                                            height: "2vh",
+                                                            width: "2vh"
+                                                        }}></div>
+                                                    )})}
+                                                </div>
+                                                <br></br>
+                                                <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                <br></br>
+                                                <div className={"lineH"}></div>
+                                                <br></br>
+                                            </div>
+                                        }
                                     </div>
                                 }
                             </div>

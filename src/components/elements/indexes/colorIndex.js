@@ -162,7 +162,7 @@ const ColorIndex = (props) => {
                                 <div>
                                     <div className="lineH"/>
                                     <div className="grid--2_6_2" style={{height: '5vh'}}>
-                                        <h2 onClick={()=>collapse()}>COLORS</h2>
+                                        <h2>COLORS</h2>
                                         <div className={"grid--5_95"}>
                                             <div></div>
                                             <SearchFilterBar filter={hexFilter} setFilter={setHexFilter} prompt={" looking for a specific color?"}/>
