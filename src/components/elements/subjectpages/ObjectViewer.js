@@ -421,9 +421,10 @@ const ObjectViewer = (props) => {
                                                     {_LDES["HEX_values"][0].map(color=>{return(
                                                         <div style={{
                                                             background:color,
-                                                            margin: '10px',
-                                                            height: "2vh",
-                                                            width: "2vh"
+                                                            marginLeft: "25%",
+                                                            marginTop: "30%",
+                                                            height: "4vh",
+                                                            width: "4vh"
                                                         }}></div>
                                                     )})}
                                                 </div>
