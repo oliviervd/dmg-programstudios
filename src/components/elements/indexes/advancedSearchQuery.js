@@ -3,11 +3,18 @@ import Fuse from "fuse.js";
 
 import SearchFilterBar from "../utils/SearchFilterBar";
 import {fetchDescription, fetchObjectType, fetchTitle, fetchType} from "../../utils/data_parsers";
+import {useMediaQuery} from "react-responsive";
 
 import {useQuery} from "@tanstack/react-query";
 import {unserialize} from "es5-ext/object";
 
 const AdvancedSearchQuery = (props) => {
+
+    //todo:  put in function?
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 1500px)'
+    })
+
 
     const [filterTitle, setFilterTitle] = useState("");
     const [filterType, setFilterType] = useState("");
@@ -21,8 +28,7 @@ const AdvancedSearchQuery = (props) => {
     console.log(props.closeSearch)
 
     function closeTab() {
-        props.setAbout(!props.about)
-        props.setShowAdvancedSearch(false);
+        props.setCloseSearch(true)
     }
 
     console.log(props.objects.length)
@@ -148,11 +154,11 @@ const AdvancedSearchQuery = (props) => {
                     <div className={"lineH"}></div>
                     <div className={"grid--3_7"}>
                         <h2 className={"rhizome"}>ADVANCED SEARCH</h2>
-                        <p onClick={() => closeTab()}>[CLOSE]</p>
+                        <h1 style={{textAlign: "right"}} onClick={() => closeTab()}>X</h1>
                     </div>
                     <br/>
-                    <div style={{borderLeft: "black solid 2px", borderTop: "black solid 2px", borderBottom: "black solid 2px", padding: "2px", height: "800px", borderRadius: "20px"}}>
-                        <div className={"grid--3_7"}>
+                    <div style={{padding: "2px", height: "800px", borderRadius: "20px"}}>
+                        <div className={isDesktopOrLaptop?"grid--3_7":""}>
                             <div>
                                 <div className={"lineH"}></div>
                                 <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>title</h2>
@@ -162,7 +168,7 @@ const AdvancedSearchQuery = (props) => {
                         </div>
                         <br/>
 
-                        <div className={"grid--3_7"}>
+                        <div className={isDesktopOrLaptop?"grid--3_7":""}>
                             <div>
                                 <div className={"lineH"}></div>
                                 <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>type</h2>
@@ -172,7 +178,7 @@ const AdvancedSearchQuery = (props) => {
                         </div>
                         <br/>
 
-                        <div className={"grid--3_7"}>
+                        <div className={isDesktopOrLaptop?"grid--3_7":""}>
                             <div>
                                 <div className={"lineH"}></div>
                                 <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>description</h2>
@@ -198,8 +204,8 @@ const AdvancedSearchQuery = (props) => {
             }
             {props.closeSearch &&
                 <div className={"grid--97_3"}>
-                    <h2 className={"verticalText"} style={{top: "37%"}} onClick={()=> {openSearch()}}> ↟ open advanced search ↟ </h2>
-                    <div className={"lineV"} style={{left: "50px", position:"relative"}}></div>
+                    <h2 className={"verticalText"} style={{top: "37%", left: "20px"}} onClick={()=> {openSearch()}}> ↟ open advanced search ↟ </h2>
+                    <div className={"lineV"} style={{left: "40px", position:"relative"}}></div>
                 </div>
             }
         </div>
