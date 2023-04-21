@@ -118,10 +118,10 @@ const ObjectViewer = (props) => {
                             <div>
                                 <Suspense>
                                     <ImageViewer media={props.image} details={props.details}/>
-                                    <div className={"lineH"}></div>
-                                    <br/>
                                     {!props.description &&
                                         <div style={{paddingLeft:"9%"}}>
+                                            <div className={"lineH"}></div>
+                                            <br/>
                                             <p>{description}</p>
                                             <br/>
                                         </div>
