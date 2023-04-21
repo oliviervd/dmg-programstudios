@@ -124,7 +124,7 @@ const NewItems = (props) => {
                             <h2 style={{margin:"10px"}} onClick={()=>setShowDetailUI(false)}> back </h2>
                             <div className={"lineH"}></div>
                             <ObjectViewer showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} thesaurus={_thes} personen={_pers}
-                                          description={false} image={detailImageID} colorStrip={true} color={"black"}
+                                          description={true} image={detailImageID} colorStrip={true} color={"black"}
                                           indexUI={true} details={details}
                             />
                         </div>

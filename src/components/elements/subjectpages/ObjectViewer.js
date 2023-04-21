@@ -1,4 +1,4 @@
-import React, {Suspense} from "react";
+import React, {Suspense, useState} from "react";
 import {
     errorHandler,
     fetchTitle,
@@ -33,6 +33,8 @@ const ObjectViewer = (props) => {
     let _LDES = props.details
     let _THES = props.thesaurus
     let _PERS = props.personen
+
+    const [openDescription, setOpenDescription] = useState(false)
 
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
 
@@ -275,8 +277,26 @@ const ObjectViewer = (props) => {
                     <div style={{padding: "5%"}}>
                         {props.description &&
                             <div>
-                                <p>{description}</p>
-                                <br/>
+                                {!openDescription &&
+                                    <div>
+                                        <div className={"lineH"}></div>
+                                        <br></br>
+                                        <h2 onClick={()=>setOpenDescription(true)}>↨ description</h2>
+                                        <br></br>
+                                        <div className={"lineH"}></div>
+                                        <br></br>
+                                    </div>
+                                }
+                                {openDescription &&
+                                    <div>
+                                        <p>{description}</p>
+                                        <br/>
+                                        <h2 onClick={()=>setOpenDescription(false)}>↥ close</h2>
+                                        <br/>
+                                        <div className={"lineH"}></div>
+                                        <br/>
+                                    </div>
+                                }
                             </div>
                         }
 
