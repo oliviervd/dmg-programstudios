@@ -2,12 +2,8 @@ import React, {useState, useEffect, useMemo} from "react"
 import Fuse from "fuse.js";
 
 import SearchFilterBar from "../utils/SearchFilterBar";
-import {fetchDescription, fetchObjectType, fetchTitle, fetchType} from "../../utils/data_parsers";
+import {fetchObjectType, fetchTitle} from "../../utils/data_parsers";
 import {useMediaQuery} from "react-responsive";
-
-import {useQuery} from "@tanstack/react-query";
-import {unserialize} from "es5-ext/object";
-
 const AdvancedSearchQuery = (props) => {
 
     //todo:  put in function?

@@ -259,17 +259,12 @@ const Index = (props) => {
             }
             {isMobile &&
                 <div>
-                    <div className="grid--3_4_3">
-                        <h1 className="home">index</h1>
-                        <div></div>
-                        <h2 onClick={()=>routeChange()}>back to home</h2>
-
-                    </div>
                     <ColorIndex style={style} objects={_objects} thesaurus={_thes} agents={_pers}
                                 about={about}/>
                     <ExhibitionIndex exhibitionList={_exhibitions}
                                      showIndexColors={showIndexColors} setShowIndexColors={setShowIndexColors}/>
-
+                    <NewItems collapseNewItems={collapseNewItems} setCollapseNewItem={setCollapseNewItems}
+                              objects={_objects} thesaurus={_thes} agents={_pers}/>
                 </div>
             }
 
