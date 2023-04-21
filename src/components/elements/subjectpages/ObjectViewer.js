@@ -115,9 +115,20 @@ const ObjectViewer = (props) => {
                         </div>
                         <p>objectnummer: {objectNumber}</p>
                         <div className={"grid--4_6-ObjectViewer"}>
-                            <Suspense>
-                                <ImageViewer media={props.image} details={props.details}/>
-                            </Suspense>
+                            <div>
+                                <Suspense>
+                                    <ImageViewer media={props.image} details={props.details}/>
+                                    <div className={"lineH"}></div>
+                                    <br/>
+                                    {!props.description &&
+                                        <div style={{paddingLeft:"9%"}}>
+                                            <p>{description}</p>
+                                            <br/>
+                                        </div>
+                                    }
+                                </Suspense>
+                            </div>
+
                             <div></div>
                             <div style={{paddingLeft: "40px", paddingRight: "10vw", paddingTop:"10px"}}>
 
