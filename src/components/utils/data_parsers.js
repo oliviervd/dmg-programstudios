@@ -47,26 +47,29 @@ export function fetchAllExhibitions(input) {
 
 
 export function fetchOeuvre(_LDES, agent, PERS, THES) {
-    let _refID = agent["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
-    let _len  = _LDES.length
+    let _refID = agent["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"] // OK
+    console.log(_refID)
+    let _len  = _LDES.length // OK
     let match = []
 
     for (let i = 0; i < _len; i++) {
 
         //console.log(_LDES[i])
+        // DMG-A-00677
+
         try{
             let _x = _LDES[i]["LDES_raw"]
             let x = fetchCreatorInfo(_x, PERS, THES)
             let p = fetchProductionInfo(_x, PERS, THES)
-            //console.log(x)
+
             // loop over array
             try {
                 for (let o = 0; o < x.length; o ++){
                     let _c = x[o]
+
+                    //console.log(_c)
                     // filter on same creator.id
                     if (_c.id == _refID) {
-                        //console.log (_c.id + " === " + _refID)
-                        //console.log(_LDES[i])
                         if (_LDES[i]["iiif_image_uris"].length != 0) {
                             match.push(_LDES[i])
                         }
@@ -76,16 +79,22 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
 
             try {
                 for (let o = 0; o < p.length; o ++){
-                    let _c = p[o]
+                    let _p = p[o]
+                    console.log(_p)
+                    //console.log(_p.id)
+                    //console.log(_refID)
+
                     // filter on same creator.id
-                    if (_c.id == _refID) {
-                        //console.log (_c.id + " === " + _refID)
+                    if (_p.id == _refID) {
+
+                        //console.log (_p.id + " === " + _refID)
                         //console.log(_LDES[i])
+
                         if (_LDES[i]["iiif_image_uris"].length != 0) {
                             match.push(_LDES[i])
                         }
 
-                        //console.log(match)
+                        console.log(match)
                     }
 
                 }
