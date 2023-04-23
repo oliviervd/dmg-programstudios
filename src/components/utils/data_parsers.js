@@ -1,6 +1,4 @@
 import React from "react";
-import * as EdtfConverter from 'edtf-converter';
-const converter = new EdtfConverter.Converter();
 
 export function fetchObjectsByID(data, id) {
     for (let i=0; i<data.length; i++) {
@@ -69,8 +67,8 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
 
                     //console.log(_c)
                     // filter on same creator.id
-                    if (_c.id == _refID) {
-                        if (_LDES[i]["iiif_image_uris"].length != 0) {
+                    if (_c.id === _refID) {
+                        if (_LDES[i]["iiif_image_uris"].length !== 0) {
                             match.push(_LDES[i])
                         }
                     }
@@ -80,21 +78,13 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
             try {
                 for (let o = 0; o < p.length; o ++){
                     let _p = p[o]
-                    console.log(_p)
-                    //console.log(_p.id)
-                    //console.log(_refID)
 
                     // filter on same creator.id
-                    if (_p.id == _refID) {
+                    if (_p.id === _refID) {
 
-                        //console.log (_p.id + " === " + _refID)
-                        //console.log(_LDES[i])
-
-                        if (_LDES[i]["iiif_image_uris"].length != 0) {
+                        if (_LDES[i]["iiif_image_uris"].length !== 0) {
                             match.push(_LDES[i])
                         }
-
-                        console.log(match)
                     }
 
                 }
@@ -158,7 +148,6 @@ export function fetchPersFromPers(input, uri, field, id) {
                 //console.log(input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"])
                 if(field === "name"){
                     return input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
-                    console.log(input[i]["LDES_raw"]["object"]["https://data.vlaanderen.be/ns/persoon#volledigeNaam"])
                 }
 
                 if (field === "id"){
@@ -176,11 +165,9 @@ export function fetchTermFromThes(input, uri) {
         try {
             if (input[i].is_version_of === uri) {
                 //console.log(input[i]["LDES_raw"]["object"]["skos:prefLabel"]["@value"])
-                let _val = input[i]["LDES_raw"]["object"]["skos:prefLabel"]["@value"]
-                return _val
+                return input[i]["LDES_raw"]["object"]["skos:prefLabel"]["@value"]
             } else if (input[i]["LDES_raw"]["object"]["owl:sameAs"] === uri) { // check if URI is not stad.gent
-                let _val = input[i]["LDES_raw"]["object"]["skos:prefLabel"]["@value"]
-                return _val
+                return input[i]["LDES_raw"]["object"]["skos:prefLabel"]["@value"]
             }
         } catch(error) {
             console.log(error)
@@ -259,19 +246,15 @@ export function fetchExhibitions(LDES) {
             for (let i =0; i< _len; i++) {
                 let exh = {}
                 let exhibition = LDES["object"]["http://purl.org/dc/terms/isPartOf"][i]["http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"]
-                let exhibition_title = exhibition["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
-                exh["title"] = exhibition_title
-                let exhibition_date = exhibition["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
-                exh["date"] = exhibition_date
+                exh["title"] = exhibition["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
+                exh["date"] = exhibition["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
                 exhibitions.push(exh)
             }
         } else {
             let exh = {}
             let exhibition = LDES["object"]["http://purl.org/dc/terms/isPartOf"]["http://www.cidoc-crm.org/cidoc-crm/P16_used_specific_object"]
-            let exhibition_title = exhibition["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
-            exh["title"] = exhibition_title
-            let exhibition_date = exhibition["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
-            exh["date"] = exhibition_date
+            exh["title"] = exhibition["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
+            exh["date"] = exhibition["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
             exhibitions.push(exh)
         }
 
@@ -281,8 +264,7 @@ export function fetchExhibitions(LDES) {
 export function EDTFtoDate(EDTF){
     let input = EDTF;
     if (input === ".."){
-        let _date = "unknown"
-        return _date
+        return "unknown"
     }
 
     else {
@@ -316,8 +298,7 @@ export function fetchCreatorInfo(LDES, PERS, THES){
             let creation = {}
             creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
             let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
-            let id = fetchPersFromPers(PERS, _id, "id")
-            creation["id"] = id;
+            creation["id"] = fetchPersFromPers(PERS, _id, "id")
 
             try {
                 // creation place
@@ -326,8 +307,7 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                         creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
                     } catch {
                         let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["@id"]
-                        let _x = fetchTermFromThes(THES, _id)
-                        creation["creation_place"] = _x
+                        creation["creation_place"] = fetchTermFromThes(THES, _id)
                     }
 
                 } catch(error) {
@@ -337,8 +317,7 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                 // creation date
                 try {
                     let creation_date = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
-                    let _date  = EDTFtoDate(creation_date)
-                    creation["date"] = _date
+                    creation["date"] = EDTFtoDate(creation_date)
 
                 } catch(error) {console.log(error)}
                 creations.push(creation)
