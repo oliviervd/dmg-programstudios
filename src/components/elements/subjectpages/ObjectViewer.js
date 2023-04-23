@@ -84,7 +84,8 @@ const ObjectViewer = (props) => {
 
         try {
             exhibitions = fetchExhibitions(_baseLDES)
-        } catch {}
+            console.log(exhibitions)
+        } catch {console.log(exhibitions)}
 
         try {
             acquisition = fetchAcquisitionHistory(_baseLDES)
@@ -355,7 +356,7 @@ const ObjectViewer = (props) => {
                                     </div>
                                 }
 
-                                {exhibitions !== undefined &&
+                                {exhibitions !== "" &&
                                     <div>
                                         <p className={"underlined"}>shown in exhibitions:</p>
                                         <div>
@@ -375,7 +376,6 @@ const ObjectViewer = (props) => {
 
                                 {location !== "" &&
                                     <div>
-                                        <br></br>
                                         <p className={"underlined"}>current location:</p>
                                         <p>{location}</p>
                                     </div>
@@ -551,7 +551,7 @@ const ObjectViewer = (props) => {
                             </div>
                         }
 
-                        {exhibitions !== undefined &&
+                        {exhibitions !== "" &&
                             <div className={"grid--3_7"}>
                                 <p className={"underlined"}>shown in exhibitions:</p>
                                 <div>
