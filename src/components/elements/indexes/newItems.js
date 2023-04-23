@@ -112,11 +112,15 @@ const NewItems = (props) => {
             {isMobile &&
                 <div>
                     {!showDetailUI&&
-                        <div className={"masonry"} style={{overflowY:"scroll", padding: "5px", height: "auto"}}>
-                            {_objects.isLoading &&
-                                <h2>LOADING...</h2>
-                            }
-                            {imageBlock}
+                        <div>
+                            <img className={"center"} style={{width: "25vw"}} src={"https://api.collectie.gent/iiif/image/iiif/2/44ee1c8d5ee57d2da6186d3fc33d00d8-transcode-0519.jpg/full/full/0/bitonal.jpg"}/>
+                            <div className={"lineH"}></div>
+                            <div className={"masonry"} style={{overflowY:"scroll", padding: "5px", height: "auto"}}>
+                                {_objects.isLoading &&
+                                    <h2>LOADING...</h2>
+                                }
+                                {imageBlock}
+                            </div>
                         </div>
                     }
                     {showDetailUI&&
