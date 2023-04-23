@@ -1,6 +1,5 @@
 import React, {Suspense, useState} from "react";
 import {
-    errorHandler,
     fetchTitle,
     fetchProductionInfo,
     fetchMaterials,
@@ -8,7 +7,8 @@ import {
     fetchExhibitions,
     fetchObjectNumber,
     fetchCurrentLocation,
-    fetchObjectType, fetchDimensions
+    fetchObjectType, fetchDimensions,
+    fetchAcquisitionHistory
 } from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
@@ -29,15 +29,15 @@ const ObjectViewer = (props) => {
     let exhibitions = ""
     let location = ""
     let type = ""
+    let acquisition
 
     let _LDES = props.details
     let _THES = props.thesaurus
     let _PERS = props.personen
 
-    console.log(_LDES["HEX_values"])
-
     const [openDescription, setOpenDescription] = useState(false)
     const [openColors, setOpenColors] = useState(false)
+    const [selectColor, setSelectColor] = useState("")
 
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
 
@@ -51,9 +51,9 @@ const ObjectViewer = (props) => {
 
     if (_LDES && _THES){
 
-        let _baseLDES = _LDES["LDES_raw"]
-        let _baseTHES = _THES
-        let _basePERS = _PERS
+        let _baseLDES = _LDES["LDES_raw"] // raw data for LDES (object description)
+        let _baseTHES = _THES // raw data for concept list (thesaurus)
+        let _basePERS = _PERS // raw data for agent list (individuals and organisations)
 
         fetchMaterials(_baseLDES, _baseTHES, material)
         try {
@@ -84,6 +84,10 @@ const ObjectViewer = (props) => {
 
         try {
             exhibitions = fetchExhibitions(_baseLDES)
+        } catch {}
+
+        try {
+            acquisition = fetchAcquisitionHistory(_baseLDES)
         } catch {}
     }
 
@@ -125,6 +129,38 @@ const ObjectViewer = (props) => {
                                     <ImageViewer media={props.image} details={props.details}/>
                                     {!props.description &&
                                         <div style={{marginLeft: "28px"}}>
+                                            <div >
+                                                {!openColors&&
+                                                    <div>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                        <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                        <br></br>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                    </div>
+                                                }
+                                                {openColors&&
+                                                    <div>
+                                                        <div className={"lineH"}></div>
+                                                        <div className={"grid--even_5"}>
+                                                            {_LDES["HEX_values"][0].map(color=>{return(
+                                                                <div style={{
+                                                                    background:color,
+                                                                    margin: '10px',
+                                                                    height: "2vh",
+                                                                    width: "2vh"
+                                                                }}></div>
+                                                            )})}
+                                                        </div>
+                                                        <br></br>
+                                                        <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                        <br></br>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                    </div>
+                                                }
+                                            </div>
                                             {!openDescription &&
                                                 <div>
                                                     <div className={"lineH"}></div>
@@ -200,7 +236,7 @@ const ObjectViewer = (props) => {
                                                             margin: '10px',
                                                             height: "5vh",
                                                             width: "5vh"
-                                                        }}></div>
+                                                        }} onClick={()=>setSelectColor(color)} ></div>
                                                     )})}
                                                 </div>
                                                 <br></br>
@@ -285,7 +321,7 @@ const ObjectViewer = (props) => {
                                 }
 
                                 <div>
-                                    {material !== "" &&
+                                    {material !== undefined &&
                                         <div>
                                             <p className={"underlined"}>materials:</p>
                                             <div>
@@ -304,7 +340,15 @@ const ObjectViewer = (props) => {
                                     }
                                 </div>
 
-
+                                {acquisition !== undefined &&
+                                    <div>
+                                        <p className={"underlined"}>acquired:</p>
+                                        <div>
+                                            <p>{acquisition.date} ({acquisition.method})</p>
+                                        </div>
+                                        <br/>
+                                    </div>
+                                }
 
                                 {exhibitions !== "" &&
                                     <div>
@@ -385,14 +429,15 @@ const ObjectViewer = (props) => {
                                         {openColors&&
                                             <div>
                                                 <div className={"lineH"}></div>
-                                                <div className={"grid--even_10"}>
+                                                <div className={"grid--even_5"}>
                                                     {_LDES["HEX_values"][0].map(color=>{return(
                                                         <div style={{
                                                             background:color,
-                                                            margin: '10px',
-                                                            height: "2vh",
-                                                            width: "2vh"
-                                                        }}></div>
+                                                            marginLeft: "25%",
+                                                            marginTop: "30%",
+                                                            height: "4vh",
+                                                            width: "4vh"
+                                                        }} onClick={()=>setSelectColor(color)}></div>
                                                     )})}
                                                 </div>
                                                 <br></br>

@@ -37,8 +37,6 @@ const ExhibitionIndex = (props) => {
                        onClick={()=>handleClickTag(key)}>
                         #{key} ({key.length}),
                     </p>
-
-
             ))
         } else {
             try{
@@ -50,10 +48,7 @@ const ExhibitionIndex = (props) => {
                     </p>
                 })
             } catch(e) {console.log(e)}
-
         }
-
-
     }
 
     function filterByExhibition(objects, exhibitions) {
@@ -148,7 +143,6 @@ const ExhibitionIndex = (props) => {
     return(
         <div>
             {props.collapseExhibition &&
-
                 <div>
                     <div>
                         <div>
@@ -203,7 +197,6 @@ const ExhibitionIndex = (props) => {
                                 }
                             </div>
                         </div>
-
                     </div>
                 </div>
             }
