@@ -208,10 +208,10 @@ export function fetchObjectType(LDES, THES) {
 
 export function fetchAcquisitionHistory(LDES) {
     let acquisition = {}
-    console.log(LDES)
-    acquisition["date"] = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["http://data.europa.eu/m8g/startTime"]["@value"]
+    try {
+        acquisition["date"] = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["http://data.europa.eu/m8g/startTime"]["@value"]
+    } catch {acquisition["date"]="datum onbekend"}
     acquisition["method"] = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through"]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
-    console.log(acquisition)
     return acquisition;
 }
 

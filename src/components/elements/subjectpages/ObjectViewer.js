@@ -344,7 +344,12 @@ const ObjectViewer = (props) => {
                                     <div>
                                         <p className={"underlined"}>acquired:</p>
                                         <div>
-                                            <p>{acquisition.date} ({acquisition.method})</p>
+                                            {acquisition.date &&
+                                                <p>{acquisition.date} ({acquisition.method})</p>
+                                            }
+                                            {!acquisition.date &&
+                                                <p>date unknown ({acquisition.method})</p>
+                                            }
                                         </div>
                                         <br/>
                                     </div>
@@ -374,7 +379,6 @@ const ObjectViewer = (props) => {
                                         <p className={"underlined"}>current location:</p>
                                         <p>{location}</p>
                                     </div>
-
                                 }
 
                             </div>
