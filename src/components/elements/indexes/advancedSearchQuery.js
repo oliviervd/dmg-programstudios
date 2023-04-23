@@ -183,17 +183,6 @@ const AdvancedSearchQuery = (props) => {
                             <SearchFilterBar filter={filterDescription} setFilter={setFilterDescription} prompt={"enter free text here"} onKeyDown={handleKeyDown}/>
                         </div>
                         <br/>
-
-                        {/*<div className={"grid--2_8"}>
-                        <div>
-                            <div className={"lineH"}></div>
-                            <h2 style={{padding: "12px 0"}}>designer</h2>
-                            <div className={"lineH"}></div>
-                        </div>
-                        <SearchFilterBar filter={filterDesigner} setFilter={setFilterDesigner} prompt={"enter designer here"} onKeyDown={handleKeyDown}/>
-                    </div>
-                    <br/>*/}
-
                         <a className={"buttonType--PRIMARY"} style={{marginLeft: "30%"}} onClick={performSearch}>search</a>
                     </div>
                 </div>
