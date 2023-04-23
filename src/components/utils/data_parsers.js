@@ -105,7 +105,6 @@ export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
     // 1. same artist && same type
     // 2. same type.
     let _refOT
-    console.log(_ref["LDES_raw"]);
     try {
         _refOT = fetchObjectType(_ref["LDES_raw"], _thes)
     } catch(error) {}
@@ -205,6 +204,15 @@ export function fetchObjectType(LDES, THES) {
             return objectType
         }
     }
+}
+
+export function fetchAcquisitionHistory(LDES) {
+    let acquisition = {}
+    console.log(LDES)
+    acquisition["date"] = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["http://data.europa.eu/m8g/startTime"]["@value"]
+    acquisition["method"] = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P24i_changed_ownership_through"]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+    console.log(acquisition)
+    return acquisition;
 }
 
 export function fetchObjectNumber(LDES) {
