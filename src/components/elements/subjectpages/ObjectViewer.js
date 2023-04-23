@@ -350,11 +350,11 @@ const ObjectViewer = (props) => {
                                     </div>
                                 }
 
-                                {exhibitions !== "" &&
+                                {exhibitions !== undefined &&
                                     <div>
                                         <p className={"underlined"}>shown in exhibitions:</p>
                                         <div>
-                                            {exhibitions &&
+                                            {exhibitions[0] &&
                                                 exhibitions.map(exh =>{
                                                     return(
                                                         <div>
@@ -476,7 +476,7 @@ const ObjectViewer = (props) => {
                         }
 
 
-                        {productions !== "" &&
+                        {productions !== undefined &&
                             <div>
                                 <p className={"underlined"}>produced by:</p>
                                 {productions.map(prod => {
@@ -537,11 +537,21 @@ const ObjectViewer = (props) => {
                             </div>
                         }
 
-                        {exhibitions !== "" &&
+                        {acquisition !== undefined &&
+                            <div>
+                                <p className={"underlined"}>acquired:</p>
+                                <div>
+                                    <p>{acquisition.date} ({acquisition.method})</p>
+                                </div>
+                                <br/>
+                            </div>
+                        }
+
+                        {exhibitions !== undefined &&
                             <div className={"grid--3_7"}>
                                 <p className={"underlined"}>shown in exhibitions:</p>
                                 <div>
-                                    {exhibitions &&
+                                    {exhibitions[0] &&
                                         exhibitions.map(exh =>{
                                             return(
                                                 <div>
