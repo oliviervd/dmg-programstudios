@@ -111,9 +111,13 @@ const NewItems = (props) => {
             }
             {isMobile &&
                 <div>
-                    {!showDetailUI&&
+                    {!showDetailUI &&
                         <div>
-                            <img className={"center"} style={{width: "25vw"}} src={"https://api.collectie.gent/iiif/image/iiif/2/44ee1c8d5ee57d2da6186d3fc33d00d8-transcode-0519.jpg/full/full/0/bitonal.jpg"}/>
+                            <div className={"grid--even_3"}>
+                                <div></div>
+                                <img className={"center"} style={{width: "25vw"}} src={"https://api.collectie.gent/iiif/image/iiif/2/44ee1c8d5ee57d2da6186d3fc33d00d8-transcode-0519.jpg/full/full/0/bitonal.jpg"}/>
+                                <div></div>
+                            </div>
                             <div className={"lineH"}></div>
                             <div className={"masonry"} style={{overflowY:"scroll", padding: "5px", height: "auto"}}>
                                 {_objects.isLoading &&
@@ -123,7 +127,7 @@ const NewItems = (props) => {
                             </div>
                         </div>
                     }
-                    {showDetailUI&&
+                    {showDetailUI &&
                         <div>
                             <h2 style={{margin:"10px"}} onClick={()=>setShowDetailUI(false)}> back </h2>
                             <div className={"lineH"}></div>

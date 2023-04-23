@@ -90,6 +90,8 @@ const ObjectViewer = (props) => {
         try {
             acquisition = fetchAcquisitionHistory(_baseLDES)
         } catch {}
+
+        console.log(_LDES);
     }
 
     let href_objectpage = "/index/object/" + objectNumber
@@ -480,7 +482,7 @@ const ObjectViewer = (props) => {
                         }
 
 
-                        {productions !== undefined &&
+                        {productions !== "" &&
                             <div>
                                 <p className={"underlined"}>produced by:</p>
                                 {productions.map(prod => {
