@@ -90,10 +90,7 @@ const ColorIndex = (props) => {
     const Hex100ran = splice(Hex100, 0, 10000); // ONLY SELECT FIRST 100 OUT OF SELECTION.
 
     const _filterHex = filterByKey(Hex100ran, hexFilter);
-    console.log(_filterHex)
-
     let HexOptions;
-
     try{
         if (hexFilter==="") {
             try{
