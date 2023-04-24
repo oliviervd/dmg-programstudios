@@ -1,13 +1,15 @@
 import React from "react";
 
 export function fetchObjectsByID(data, id) {
-    for (let i=0; i<data.length; i++) {
-        try{
-            if (data[i].objectNumber === id) {
-                return data[i]
-            }
-        } catch (e) {}
-    }
+    try{
+        for (let i=0; i<data.length; i++) {
+            try{
+                if (data[i].objectNumber === id) {
+                    return data[i]
+                }
+            } catch (e) {}
+        }
+    } catch (e) {}
 }
 
 export function filterByKey(object, _filter) {

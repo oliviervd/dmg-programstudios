@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {Suspense, useState} from "react"
 import ObjectViewer from "../elements/subjectpages/ObjectViewer";
 import {useNavigate, useParams} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
@@ -6,6 +6,7 @@ import {fetchObjectsByID, fetchRelatedObjects} from "../utils/data_parsers";
 import useAgentQuery from "../hooks/useAgentQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useObjectsQuery from "../hooks/useObjectsQuery";
+import Loading from "../elements/utils/Loading";
 
 const ObjectPage = () => {
 
@@ -84,11 +85,13 @@ const ObjectPage = () => {
 
             <div style={{height: "100%"}}>
                 <div className="lineH"></div>
-                <ObjectViewer description={true} details = {details}
-                              image={images} colorStrip={false}
-                              thesaurus={_thes} personen={_pers}
-                              box={true} colorCubes={true}
-                />
+                <Suspense fallback={<Loading/>}>
+                    <ObjectViewer description={true} details = {details}
+                                  image={images} colorStrip={false}
+                                  thesaurus={_thes} personen={_pers}
+                                  box={true} colorCubes={true}
+                    />
+                </Suspense>
             </div>
 
             {isDesktopOrLaptop &&
