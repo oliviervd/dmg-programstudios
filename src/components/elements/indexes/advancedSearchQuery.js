@@ -144,7 +144,7 @@ const AdvancedSearchQuery = (props) => {
     //todo: cache search query (I can go back to my search query)
 
     return (
-        <div className={"grid--97_3"} style={{height: "900px", overflowY:"scroll"}}>
+        <div className={"grid--97_3"} style={{height: "900px", overflowY:"hidden"}}>
             {!props.closeSearch &&
                 <div>
                     <div className={"lineH"}></div>
