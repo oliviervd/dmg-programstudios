@@ -1,6 +1,6 @@
 import React, {useState, Suspense, useEffect} from "react"
 import {useParams} from "react-router-dom";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, Link} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import Footer from "../elements/utils/Footer";
 
@@ -162,7 +162,7 @@ const Index = (props) => {
                 <div>
                     <div style={header}>
                         <div className="grid--even_10">
-                            <img style={{width: "5vw"}} src={"https://api.collectie.gent/iiif/image/iiif/2/44ee1c8d5ee57d2da6186d3fc33d00d8-transcode-0519.jpg/full/full/0/bitonal.jpg"}/>
+                            <a className={"HeaderLink uppercase text-center"} style={{margin: 10}} href={"/"}>HOME</a>
                             <div></div>
                             <div></div>
                             <div></div>
