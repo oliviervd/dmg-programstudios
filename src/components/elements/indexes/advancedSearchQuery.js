@@ -144,7 +144,7 @@ const AdvancedSearchQuery = (props) => {
     //todo: cache search query (I can go back to my search query)
 
     return (
-        <div className={"grid--97_3"} style={{height: "900px", overflowY:"hidden"}}>
+        <div className={"grid--97_3"} style={{height: "auto", overflowY:"hidden"}}>
             {!props.closeSearch &&
                 <div>
                     <div className={"lineH"}></div>
@@ -153,7 +153,7 @@ const AdvancedSearchQuery = (props) => {
                         <h1 style={{textAlign: "right"}} onClick={() => closeTab()}>X</h1>
                     </div>
                     <br/>
-                    <div style={{padding: "2px", height: "800px", borderRadius: "20px"}}>
+                    <div style={{padding: "2px", height: "auto", borderRadius: "20px"}}>
                         <div className={isDesktopOrLaptop?"grid--3_7":""}>
                             <div>
                                 <div className={"lineH"}></div>
