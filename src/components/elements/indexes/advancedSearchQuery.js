@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useMemo} from "react"
+import React, {useState} from "react"
 import Fuse from "fuse.js";
 
 import SearchFilterBar from "../utils/SearchFilterBar";
@@ -11,14 +11,10 @@ const AdvancedSearchQuery = (props) => {
         query: '(min-width: 1500px)'
     })
 
-
     const [filterTitle, setFilterTitle] = useState("");
     const [filterType, setFilterType] = useState("");
     const [filterDescription, setFilterDescription] = useState("")
 
-    const [filterDesigner, setFilterDesigner] = useState("");
-    const [result, setResult] = useState([])
-    const objects = props.objects;
     const thesaurus = props.thesaurus
 
     console.log(props.closeSearch)
