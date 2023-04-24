@@ -113,13 +113,17 @@ const NewItems = (props) => {
                 <div>
                     {!showDetailUI &&
                         <div>
-                            <div className={"grid--even_3"}>
+                            <div>
+                                <h1 className={"text-center home"} style={{margin: "50px", fontSize: "10vw"}}>RECENT ADDITIONS</h1>
+                                <div className={"lineH"}></div>
+                                <br/>
+                                <p style={{fontSize: "20px", margin: "10px"}}>The museum is currently working hard to make its collection available online. Every month we showcase the progress made. In march 2023, {newItems.length} new additions from its collection have been opened up.</p>
                                 <div></div>
                                 <img className={"center"} style={{width: "25vw"}} src={"https://api.collectie.gent/iiif/image/iiif/2/44ee1c8d5ee57d2da6186d3fc33d00d8-transcode-0519.jpg/full/full/0/bitonal.jpg"}/>
-                                <div></div>
+
                             </div>
                             <div className={"lineH"}></div>
-                            <div className={"masonry"} style={{overflowY:"scroll", padding: "5px", height: "auto"}}>
+                            <div className={"masonry"} style={{overflowY:"scroll", padding: "10px", height: "auto"}}>
                                 {_objects.isLoading &&
                                     <h2>LOADING...</h2>
                                 }
