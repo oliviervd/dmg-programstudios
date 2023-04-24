@@ -65,7 +65,7 @@ const AdvancedSearch = (props) => {
 
     return(
         <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
-            <div className={"masonry"} style={{height: "90vh", overflowY:"scroll", padding: "5px"}}>
+            <div className={"masonry"} style={{height: "90vh", overflowY:"hidden", padding: "5px"}}>
                     <Suspense fallback={<Loading/>}>
                         {_r}
                     </Suspense>

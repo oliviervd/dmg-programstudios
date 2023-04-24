@@ -189,7 +189,7 @@ const AdvancedSearchQuery = (props) => {
             }
             {props.closeSearch &&
                 <div className={"grid--97_3"}>
-                    <h2 className={"verticalText"} style={{top: "37%", left: "20px"}} onClick={()=> {openSearch()}}> ↟ open advanced search ↟ </h2>
+                    <h2 className={"verticalText"} style={{top: "37%", left: "20px", overflowX:"hidden"}} onClick={()=> {openSearch()}}> ↟ open advanced search ↟ </h2>
                     <div className={"lineV"} style={{left: "40px", position:"relative"}}></div>
                 </div>
             }
