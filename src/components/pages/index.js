@@ -162,7 +162,7 @@ const Index = (props) => {
                 <div>
                     <div style={header}>
                         <div className="grid--even_10">
-                            <h2 className="uppercase" style={{margin: 10}}>home</h2>
+                            <img style={{width: "5vw"}} src={"https://api.collectie.gent/iiif/image/iiif/2/44ee1c8d5ee57d2da6186d3fc33d00d8-transcode-0519.jpg/full/full/0/bitonal.jpg"}/>
                             <div></div>
                             <div></div>
                             <div></div>
