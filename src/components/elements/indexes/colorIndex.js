@@ -97,7 +97,7 @@ const ColorIndex = (props) => {
                 HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
                     <p className={"grid-text-autoflow"}
                         //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
-                       style={{color: "black"}}
+                       style={{color: "black", fontWeight: "lighter"}}
                        onClick={()=>handleClickTag(key)}
                        key={key}>
                         #{key},

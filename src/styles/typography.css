@@ -16,11 +16,25 @@
 @font-face {
     font-family: "Combine";
     src: local("Combine"), url(fonts/Combine.otf);
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
     font-family: "Equateur";
     src: local("Equateur-Regular"), url(fonts/Equateur-Regular.woff2);
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
 }
 
 @font-face {
@@ -51,15 +65,18 @@ h1.home {
 h2 {
     font-family: "Equateur", sans-serif;
     font-size: 20px;
+    font-weight: normal;
 }
 
 .HeaderLink {
+    color:black;
     font-family: "Equateur", sans-serif;
     font-size: 20px;
     text-decoration: none;
 }
 
 .HeaderLinkBig {
+    color:black;
     font-size: 6vh;
     font-family: "Combine", sans-serif;
     text-decoration: none;
