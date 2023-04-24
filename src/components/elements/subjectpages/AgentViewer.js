@@ -251,7 +251,7 @@ const AgentViewer = (props) =>  {
                         <div>
                             <div>
                                 <div>
-                                    <div className={"masonry"} style={{height: "90vh", overflowY:"scroll", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
+                                    <div className={"masonry"} style={{height: "90vh", overflowY:"hidden", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
                                         {imageBlock}
                                     </div>
                                 </div>
