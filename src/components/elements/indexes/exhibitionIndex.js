@@ -28,7 +28,6 @@ const ExhibitionIndex = (props) => {
         }
 
         const _exhFilter = filterByKey(_exhCounts, exhibitionFilter)
-        console.log(_exhFilter)
 
         if (exhibitionFilter === "") {
             ExhOptions = Object.entries(_exhCounts).map(([key, i]) => (
