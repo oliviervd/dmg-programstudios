@@ -88,7 +88,7 @@ const NewItems = (props) => {
                     {props.collapseNewItems &&
                         <div>
                             <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
-                                <div className={"masonry"} style={{overflowY:"scroll", padding: "5px", height: "85vh"}}>
+                                <div className={"masonry"} style={{overflowY:"hidden", padding: "5px", height: "85vh"}}>
                                     {_objects.isLoading &&
                                         <h2>LOADING...</h2>
                                     }

@@ -201,7 +201,7 @@ const ColorIndex = (props) => {
 
                                 {!about &&
                                     <div className={showDetailUIColors? "container-masonry-half": "container-masonry-full"}>
-                                        <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
+                                        <div className={"masonry"} style={{height: "700px", overflowY:"hidden", padding: "5px"}}>
                                             <Suspense fallback={<Loading/>}>
                                                 {imageBlock}
                                             </Suspense>
@@ -217,7 +217,7 @@ const ColorIndex = (props) => {
                                 }
                                 {about &&
                                     <div className={showDetailUIColors? "container-masonry-half": "container-masonry-full"} style={{width: "70vw"}}>
-                                        <div className={"masonry"} style={{height: "700px", overflowY:"scroll", padding: "5px"}}>
+                                        <div className={"masonry"} style={{height: "700px", overflowY:"hidden", padding: "5px"}}>
                                             {imageBlock}
                                         </div>
                                         {showDetailUIColors &&

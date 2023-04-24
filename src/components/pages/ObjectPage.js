@@ -98,7 +98,7 @@ const ObjectPage = () => {
                     <h1 className={"home"} style={{fontSize: "18px"}}>related objects;</h1>
                     <div className={"lineH"}></div>
 
-                    <div className={"masonry"} style={{height: "300px", overflowY:"scroll", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
+                    <div className={"masonry"} style={{height: "300px", overflowX:"scroll", overflowY:"hidden", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
                         {imageBlock}
                     </div>
                     <div className={"lineH"}></div>
