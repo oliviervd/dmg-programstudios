@@ -255,6 +255,11 @@
     grid-template-rows: 10% 30% 60%;
 }
 
+.gridH--1_6_3 {
+    display:grid;
+    grid-template-rows: 10vh 60vh 30vh;
+}
+
 @media (max-width: 1224px) {
     .grid-home-main-open{
         display: grid;

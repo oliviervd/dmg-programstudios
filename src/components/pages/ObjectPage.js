@@ -17,16 +17,16 @@ const ObjectPage = () => {
     })
 
     const [details, setDetails] = useState("");
+    const _objects = useObjectsQuery().data;
     const _pers = useAgentQuery().data;
     const _thes = useThesaurusQuery().data;
-    const _objects = useObjectsQuery().data;
 
     let _related;
     let imageBlock
 
     setTimeout(()=> {
         setDetails(fetchObjectsByID(_objects, id))
-    }, 1000)
+    }, )
 
     try {
         _related = fetchRelatedObjects(_objects, details, _thes);
@@ -36,7 +36,9 @@ const ObjectPage = () => {
                  onClick={()=>routeChangeObject(image)}
             />
         ))
-    } catch (e) {console.log(e)}
+    } catch (e) {
+        imageBlock= <Loading></Loading>
+    }
 
 
     const navigate = useNavigate()
@@ -60,7 +62,7 @@ const ObjectPage = () => {
 
 
     return(
-        <div className="container">
+        <div>
             {isDesktopOrLaptop&&
                 <div className="grid--even_10">
                     <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ back</h2>
@@ -83,7 +85,7 @@ const ObjectPage = () => {
                 </div>
             }
 
-            <div style={{height: "100%"}}>
+            <div>
                 <div className="lineH"></div>
                 <Suspense fallback={<Loading/>}>
                     <ObjectViewer description={true} details = {details}

@@ -12,6 +12,7 @@ import {
 } from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
+import Loading from "../utils/Loading";
 
 const ImageViewer = React.lazy(() => import("./ImageViewer"));
 const ObjectViewer = (props) => {
@@ -58,7 +59,7 @@ const ObjectViewer = (props) => {
         fetchMaterials(_baseLDES, _baseTHES, material)
         try {
             productions = fetchProductionInfo(_baseLDES, _basePERS, _baseTHES)
-        } catch(e) {}
+        } catch(e) {productions=<Loading></Loading>}
 
         objectNumber = fetchObjectNumber(_baseLDES)
         title = fetchTitle(_baseLDES)
@@ -66,7 +67,7 @@ const ObjectViewer = (props) => {
 
         try{
             type = fetchObjectType(_baseLDES, _baseTHES)
-        } catch (e) {}
+        } catch (e) {type=<Loading></Loading>}
 
         try{ // description
             description = _LDES["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
@@ -128,8 +129,10 @@ const ObjectViewer = (props) => {
                         <p>objectnummer: {objectNumber}</p>
                         <div className={"grid--4_6-ObjectViewer"}>
                             <div>
-                                <Suspense>
-                                    <ImageViewer media={props.image} details={props.details}/>
+                                <Suspense fallback={<Loading />}>
+                                    <Suspense fallback={<Loading />}>
+                                        <ImageViewer media={props.image} details={props.details}/>
+                                    </Suspense>
                                     {!props.description &&
                                         <div style={{marginLeft: "28px"}}>
                                             <div >
