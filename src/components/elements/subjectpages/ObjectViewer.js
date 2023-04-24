@@ -235,13 +235,13 @@ const ObjectViewer = (props) => {
                                         {openColors&&
                                             <div>
                                                 <div className={"lineH"}></div>
-                                                <div className={"grid--even_10"}>
+                                                <div className={"grid--even_5"}>
                                                     {_LDES["HEX_values"][0].map(color=>{return(
                                                         <div style={{
                                                             background:color,
                                                             margin: '10px',
-                                                            height: "5vh",
-                                                            width: "5vh"
+                                                            height: "5vw",
+                                                            width: "5vw"
                                                         }} onClick={()=>setSelectColor(color)} ></div>
                                                     )})}
                                                 </div>
