@@ -43,10 +43,49 @@ export function fetchAllExhibitions(input) {
     } catch(e) {}
 }
 
+export function fetchOeuvreV2(_LDES, agent, PERS, THES) {
+
+    console.log(_LDES)
+    let _refID = agent["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
+    let match = [] // setup empty array to store matches
+    // loop over all items in LDES
+    for (let i=0; i < _LDES.length; i++) {
+        // fetch producer == NOVA (DMG-A-00677)
+        try{
+            let _prod = fetchProductionInfo(_LDES[i]["LDES_raw"], PERS, THES)
+            let _creators = fetchCreatorInfo(_LDES[i]["LDES_raw"], PERS, THES) //
+
+            // check producers
+            for (let p = 0; p < _prod.length; p++) {
+                if(_prod[p].id === _refID) {
+                    if (_LDES[i]["iiif_image_uris"].length !== 0) {
+                        match.push(_LDES[i])
+                    }
+                }
+            }
+
+            // check creators
+            for (let c = 0; c < _creators.length; c++) {
+                try{
+                    if(_creators[c].id === _refID) {
+                        if (_LDES[i]["iiif_image_uris"].length !== 0) {
+                            match.push(_LDES[i])
+                        }
+                    }
+                } catch(e) {console.log(e)}
+
+
+            }
+        } catch (e) {}
+
+    }
+    return match
+
+}
+
 
 export function fetchOeuvre(_LDES, agent, PERS, THES) {
     let _refID = agent["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"] // OK
-    console.log(_refID)
     let _len  = _LDES.length // OK
     let match = []
 
@@ -81,7 +120,6 @@ export function fetchOeuvre(_LDES, agent, PERS, THES) {
 
                     // filter on same creator.id
                     if (_p.id === _refID) {
-
                         if (_LDES[i]["iiif_image_uris"].length !== 0) {
                             match.push(_LDES[i])
                         }
