@@ -66,48 +66,64 @@ const AgentPage = () => {
     return(
         <div className={"container"}>
             {isDesktopOrLaptop&&
-                <div className="grid--even_10">
-                    <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ back</h2>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div>
 
-                    <div></div>
+                    <div className="grid--even_10">
+                        <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ back</h2>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
+                        <div></div>
 
-                    <div className="grid--even_3">
-                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>EN</h2>
-                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>NL</h2>
-                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>FR</h2>
+                        <div></div>
+
+                        <div className="grid--even_3">
+                            <h2 className="uppercase text-center strike-through" style={{margin: 10}}>EN</h2>
+                            <h2 className="uppercase text-center strike-through" style={{margin: 10}}>NL</h2>
+                            <h2 className="uppercase text-center strike-through" style={{margin: 10}}>FR</h2>
+                        </div>
+
                     </div>
 
+                    <div className={"grid--even_2"}>
+                        <div/>
+                        <div className={"grid--even_2"}>
+                            <p>>>> scroll this way >>>></p>
+                            {bitonal &&
+                                <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
+                            }
+                            {!bitonal &&
+                                <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
+                            }
+                        </div>
+
+                    </div>
+
+                    <div style={{height: "100%"}}>
+                        <div className="lineH"></div>
+                        <AgentViewer id={id} bitonal={bitonal} agent={_agent} objects={_objects} thesaurus={_thes}
+                                     personen={_pers} wikibios={wikiBios} language={language}>
+
+                        </AgentViewer>
+                    </div>
+                </div>
+            }
+            {isMobile&&
+                <div>
+                    <div style={{height: "100%"}}>
+                        <div className="lineH"></div>
+                        <AgentViewer id={id} bitonal={bitonal} agent={_agent} objects={_objects} thesaurus={_thes}
+                                     personen={_pers} wikibios={wikiBios} language={language}>
+
+                        </AgentViewer>
+                    </div>
                 </div>
             }
 
-            <div className={"grid--even_2"}>
-                <div/>
-                <div className={"grid--even_2"}>
-                    <p>>>> scroll this way >>>></p>
-                    {bitonal &&
-                        <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
-                    }
-                    {!bitonal &&
-                        <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
-                    }
-                </div>
 
-            </div>
-
-            <div style={{height: "100%"}}>
-                <div className="lineH"></div>
-                <AgentViewer id={id} bitonal={bitonal} agent={_agent} objects={_objects} thesaurus={_thes}
-                             personen={_pers} wikibios={wikiBios} language={language}>
-
-                </AgentViewer>
-            </div>
         </div>
     )
 }

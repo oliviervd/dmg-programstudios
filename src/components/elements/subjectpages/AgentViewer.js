@@ -4,10 +4,19 @@ import {
     fetchPersBirth,
     fetchPersDeath
 } from "../../utils/data_parsers/dataParserPers";
-import {fetchOeuvre} from "../../utils/data_parsers";
+import {fetchOeuvre, fetchOeuvreV2} from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
+import {useMediaQuery} from "react-responsive";
 
 const AgentViewer = (props) =>  {
+
+    //MEDIA QUERIES
+    const isDesktopOrLaptop = useMediaQuery({
+        query: '(min-width: 700px)'
+    })
+    const isMobile = useMediaQuery({
+        query: '(max-width: 700px)'
+    })
 
     let labels = {
         "EN": {
@@ -58,6 +67,9 @@ const AgentViewer = (props) =>  {
     const [objectRoute, setObjectRoute] = useState("");
     const navigate = useNavigate()
 
+    // mobile
+    const [openBiography, setOpenBiography] = useState(false);
+
     //setBios(fetchBioWikipedia(props.id));
 
     //todo: translate all fields.
@@ -82,7 +94,8 @@ const AgentViewer = (props) =>  {
         } catch (error) {}
 
         try {
-            oeuvre = fetchOeuvre(_baseLDES, _basePERS, PERS, THES)
+            //oeuvre = fetchOeuvre(_baseLDES, _basePERS, PERS, THES)
+            oeuvre = fetchOeuvreV2(_baseLDES, _basePERS, PERS, THES)
             console.log(oeuvre);
         } catch (error) {}
 
@@ -149,105 +162,157 @@ const AgentViewer = (props) =>  {
 
     return(
         <div>
-            <div className={"grid--5_95"}>
-                <div></div>
-                <div className={"grid--4_6"}>
+            {isDesktopOrLaptop &&
+                <div className={"grid--5_95"}>
+                    <div></div>
+                    <div className={"grid--4_6"}>
 
 
-                    <div>
                         <div>
-                            {name &&
-                                <h1 className={"home"} style={{fontSize: "4vw"}}>{name}</h1>
-                            }
-                        </div>
-                        <div className={"grid--4_6-ObjectViewer"} style={{height: "30vh"}}>
-                            <div></div>
-                            <div>*</div>
                             <div>
-                                {_bios != "" &&
-                                    <div>
-                                        <h2>{labels[props.language][0]}</h2>
-                                        <br/>
-
+                                {name &&
+                                    <h1 className={"home"} style={{fontSize: "4vw"}}>{name}</h1>
+                                }
+                            </div>
+                            <div className={"grid--4_6-ObjectViewer"} style={{height: "30vh"}}>
+                                <div></div>
+                                <div>*</div>
+                                <div>
+                                    {_bios != "" &&
                                         <div>
-                                            <p>{wikiSnippet}</p>
+                                            <h2>{labels[props.language][0]}</h2>
+                                            <br/>
+
+                                            <div>
+                                                <p>{wikiSnippet}</p>
+                                                <br/>
+                                            </div>
+                                        </div>
+
+                                    }
+
+                                    {sex != "" &&
+                                        <div>
+                                            <p className={"underlined"}>{labels[props.language][1]}:</p>
+                                            <p>{sex}</p>
                                             <br/>
                                         </div>
-                                    </div>
+                                    }
+                                    {birth != "" &&
+                                        <div>
+                                            {birth.date &&
+                                                <div>
+                                                    <p className={"underlined"}>{labels[props.language][2]}:</p>
+                                                    <p>{birth.date}</p>
+                                                    <br/>
+                                                </div>
+                                            }
 
-                                }
+                                            {birth.place &&
+                                                <div>
+                                                    <p className={"underlined"}>{labels[props.language][3]}:</p>
+                                                    <p>{birth.place}</p>
+                                                    <br/>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
 
-                                {sex != "" &&
-                                    <div>
-                                        <p className={"underlined"}>{labels[props.language][1]}:</p>
-                                        <p>{sex}</p>
-                                        <br/>
-                                    </div>
-                                }
-                                {birth != "" &&
-                                    <div>
-                                        {birth.date &&
-                                            <div>
-                                                <p className={"underlined"}>{labels[props.language][2]}:</p>
-                                                <p>{birth.date}</p>
-                                                <br/>
-                                            </div>
-                                        }
+                                    {death != "" &&
+                                        <div>
+                                            {death.date &&
+                                                <div>
+                                                    <p className={"underlined"}>{labels[props.language][4]}:</p>
+                                                    <p>{death.date}</p>
+                                                    <br/>
+                                                </div>
+                                            }
 
-                                        {birth.place &&
-                                            <div>
-                                                <p className={"underlined"}>{labels[props.language][3]}:</p>
-                                                <p>{birth.place}</p>
-                                                <br/>
-                                            </div>
-                                        }
-                                    </div>
-                                }
+                                            {death.place &&
+                                                <div>
+                                                    <p className={"underlined"}>{labels[props.language][5]}:</p>
+                                                    <p>{death.place}</p>
+                                                    <br/>
+                                                </div>
+                                            }
+                                        </div>
+                                    }
 
-                                {death != "" &&
-                                    <div>
-                                        {death.date &&
-                                            <div>
-                                                <p className={"underlined"}>{labels[props.language][4]}:</p>
-                                                <p>{death.date}</p>
-                                                <br/>
-                                            </div>
-                                        }
+                                </div>
+                                <div>
+                                    <div className={"lineH"}></div>
+                                    <h2>{labels[props.language][6]}:</h2>
+                                </div>
 
-                                        {death.place &&
-                                            <div>
-                                                <p className={"underlined"}>{labels[props.language][5]}:</p>
-                                                <p>{death.place}</p>
-                                                <br/>
-                                            </div>
-                                        }
-                                    </div>
-                                }
-
-                            </div>
-                            <div>
-                                <div className={"lineH"}></div>
-                                <h2>{labels[props.language][6]}:</h2>
                             </div>
 
                         </div>
 
-                    </div>
-
-                    <div>
                         <div>
                             <div>
-                                <div className={"masonry"} style={{height: "90vh", overflowY:"scroll", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
-                                    {imageBlock}
+                                <div>
+                                    <div className={"masonry"} style={{height: "90vh", overflowY:"scroll", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
+                                        {imageBlock}
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            }
+            {isMobile &&
+                <div>
+                    <div>
+                        <br/>
+                        <div className={"grid--even_3"}>
+                            <h2 className={"text-center"}>NL</h2>
+                            <h2 className={"text-center"}>EN</h2>
+                            <h2 className={"text-center"}>FR</h2>
+                        </div>
+                        <br/>
+                        <div className={"lineH"}></div>
 
 
 
-            </div>
+                        {name &&
+                            <h1 className={"home text-center"} style={{fontSize: "10vw" ,padding: "10px"}}>{name}</h1>
+                        }
+
+                        {!openBiography &&
+                            <div>
+                                <div className={"lineH"}></div>
+                                <br></br>
+                                <h2 onClick={()=>setOpenBiography(true)}>↨ {labels[props.language][0]}</h2>
+                                <br></br>
+                                <div className={"lineH"}></div>
+                            </div>
+                        }
+                        {openBiography &&
+                            <div>
+                                {_bios != "" &&
+                                    <div style={{padding: "10px"}} >
+                                        <br/>
+                                        <div>
+                                            <p style={{fontSize: "20px"}}>{wikiSnippet}</p>
+                                            <br/>
+                                        </div>
+                                        <h2 onClick={()=>setOpenBiography(false)}>close</h2>
+                                    </div>
+                                }
+                            </div>
+                        }
+
+                        <div>
+                            <h2>works in the collection ({oeuvre.length})</h2>
+                            <div className={"lineH"}></div>
+                            <div className={"masonry"} style={{overflowY:"scroll", padding: "5px", height: "auto"}}>
+                                {imageBlock}
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            }
 
         </div>
     )
