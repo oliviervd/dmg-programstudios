@@ -64,7 +64,7 @@ const AgentPage = () => {
     // fetch details on specific persons
 
     return(
-        <div className={"container"}>
+        <div >
             {isDesktopOrLaptop&&
                 <div>
 
