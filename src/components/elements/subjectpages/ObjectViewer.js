@@ -59,7 +59,7 @@ const ObjectViewer = (props) => {
         fetchMaterials(_baseLDES, _baseTHES, material)
         try {
             productions = fetchProductionInfo(_baseLDES, _basePERS, _baseTHES)
-        } catch(e) {productions=<Loading></Loading>}
+        } catch(e) {}
 
         objectNumber = fetchObjectNumber(_baseLDES)
         title = fetchTitle(_baseLDES)
@@ -67,7 +67,7 @@ const ObjectViewer = (props) => {
 
         try{
             type = fetchObjectType(_baseLDES, _baseTHES)
-        } catch (e) {type=<Loading></Loading>}
+        } catch (e) {}
 
         try{ // description
             description = _LDES["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
