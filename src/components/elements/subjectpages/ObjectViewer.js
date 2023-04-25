@@ -43,6 +43,10 @@ const ObjectViewer = (props) => {
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
 
     //MEDIA QUERIES
+    const isBigScreen = useMediaQuery({
+            query: '(min-width: 1400px)'
+    })
+
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 700px)'
     })
@@ -219,172 +223,224 @@ const ObjectViewer = (props) => {
                                         }
                                     </div>
                                 }
-
-                                {props.colorCubes &&
-                                    <div >
-                                        {!openColors&&
-                                            <div>
-                                                <div className={"lineH"}></div>
-                                                <br></br>
-                                                <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
-                                                <br></br>
-                                                <div className={"lineH"}></div>
-                                                <br></br>
-                                            </div>
-                                        }
-                                        {openColors&&
-                                            <div>
-                                                <div className={"lineH"}></div>
-                                                <div className={"grid--even_5"}>
-                                                    {_LDES["HEX_values"][0].map(color=>{return(
-                                                        <div style={{
-                                                            background:color,
-                                                            margin: '10px',
-                                                            height: "5vw",
-                                                            width: "5vw"
-                                                        }} onClick={()=>setSelectColor(color)} ></div>
-                                                    )})}
-                                                </div>
-                                                <br></br>
-                                                <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
-                                                <br></br>
-                                                <div className={"lineH"}></div>
-                                                <br></br>
-                                            </div>
-                                        }
-                                    </div>
-                                }
-
-                                {type !== "" &&
+                                {!isBigScreen &&
                                     <div>
-                                        <p className={"underlined"}>type:</p>
-                                        {type.map(t => {
-                                            return(
-                                                <div>
-                                                    <p>{t}</p>
-                                                </div>)
-                                        })}
-                                        <br/>
-                                    </div>
-                                }
-
-                                {creations !== "" &&
-                                    <div>
-                                        <p className={"underlined"}>designed by:</p>
-                                        {creations.map(crea => {
-                                            //console.log(prod)
-                                            return(
-                                                <div>
-                                                    {crea.creator &&
-                                                        <h2 className={"italic"} onClick={()=> routeToAgentPage(crea.id)}>{crea.creator}</h2>
-                                                    }
-                                                    {crea.creation_place &&
-                                                        <p>location: {crea.creation_place}</p>
-                                                    }
-                                                    {crea.date &&
-                                                        <p>date: {crea.date}</p>
-                                                    }
-                                                    <br/>
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                }
-
-                                {productions !== "" &&
-                                    <div>
-                                        <p className={"underlined"}>produced by:</p>
-                                        {productions.map(prod => {
-                                            //console.log(prod)
-                                            return(
-                                                <div>
-                                                    {prod.producer &&
-                                                        <h2 className={"italic"} onClick={()=> routeToAgentPage(prod.id)}>{prod.producer}</h2>
-                                                    }
-                                                    {prod.place &&
-                                                        <p>location: {prod.place}</p>
-                                                    }
-                                                    {prod.date &&
-                                                        <p>date: {prod.date}</p>
-                                                    }
-                                                    {prod.technique &&
-                                                        <p>technique: {prod.technique}</p>
-                                                    }
-                                                    <br/>
-                                                </div>
-                                            )
-                                        })}
-                                    </div>
-                                }
-
-                                {dimensions !== "" &&
-                                    <div>
-                                        <p className={"underlined"}>dimensions:</p>
-                                        <p>{dimensions}</p>
-                                        <br/>
-
-                                    </div>
-                                }
-
-                                <div>
-                                    {material !== undefined &&
-                                        <div>
-                                            <p className={"underlined"}>materials:</p>
-                                            <div>
-                                                {material &&
-                                                    material.map(mat => {
-                                                        return(
-                                                            <p>
-                                                                {mat}
-                                                            </p>
-                                                        )
-                                                    })
+                                        {props.colorCubes &&
+                                            <div >
+                                                {!openColors&&
+                                                    <div>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                        <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                        <br></br>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                    </div>
+                                                }
+                                                {openColors&&
+                                                    <div>
+                                                        <div className={"lineH"}></div>
+                                                        <div className={"grid--even_5"}>
+                                                            {_LDES["HEX_values"][0].map(color=>{return(
+                                                                <div style={{
+                                                                    background:color,
+                                                                    margin: '10px',
+                                                                    height: "5vw",
+                                                                    width: "5vw"
+                                                                }} onClick={()=>setSelectColor(color)} ></div>
+                                                            )})}
+                                                        </div>
+                                                        <br></br>
+                                                        <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                        <br></br>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                    </div>
                                                 }
                                             </div>
-                                            <br></br>
-                                        </div>
-                                    }
-                                </div>
-
-                                {acquisition !== undefined &&
-                                    <div>
-                                        <p className={"underlined"}>acquired:</p>
-                                        <div>
-                                            {acquisition.date &&
-                                                <p>{acquisition.date} ({acquisition.method})</p>
-                                            }
-                                            {!acquisition.date &&
-                                                <p>date unknown ({acquisition.method})</p>
-                                            }
-                                        </div>
-                                        <br/>
+                                        }
                                     </div>
                                 }
 
-                                {exhibitions !== "" &&
+                                <div className={isBigScreen?"grid--4_2_4":""}>
+
                                     <div>
-                                        <p className={"underlined"}>shown in exhibitions:</p>
-                                        <div>
-                                            {exhibitions[0] &&
-                                                exhibitions.map(exh =>{
+                                        {type !== "" &&
+                                            <div>
+                                                <p className={"underlined"}>type:</p>
+                                                {type.map(t => {
                                                     return(
                                                         <div>
-                                                            <p>{exh.title}</p>
+                                                            <p>{t}</p>
+                                                        </div>)
+                                                })}
+                                                <br/>
+                                            </div>
+                                        }
+
+                                        {creations !== "" &&
+                                            <div>
+                                                <p className={"underlined"}>designed by:</p>
+                                                {creations.map(crea => {
+                                                    //console.log(prod)
+                                                    return(
+                                                        <div>
+                                                            {crea.creator &&
+                                                                <h2 className={"italic"} onClick={()=> routeToAgentPage(crea.id)}>{crea.creator}</h2>
+                                                            }
+                                                            {crea.creation_place &&
+                                                                <p>location: {crea.creation_place}</p>
+                                                            }
+                                                            {crea.date &&
+                                                                <p>date: {crea.date}</p>
+                                                            }
+                                                            <br/>
                                                         </div>
                                                     )
-                                                })
+                                                })}
+                                            </div>
+                                        }
+
+                                        {productions !== "" &&
+                                            <div>
+                                                <p className={"underlined"}>produced by:</p>
+                                                {productions.map(prod => {
+                                                    //console.log(prod)
+                                                    return(
+                                                        <div>
+                                                            {prod.producer &&
+                                                                <h2 className={"italic"} onClick={()=> routeToAgentPage(prod.id)}>{prod.producer}</h2>
+                                                            }
+                                                            {prod.place &&
+                                                                <p>location: {prod.place}</p>
+                                                            }
+                                                            {prod.date &&
+                                                                <p>date: {prod.date}</p>
+                                                            }
+                                                            {prod.technique &&
+                                                                <p>technique: {prod.technique}</p>
+                                                            }
+                                                            <br/>
+                                                        </div>
+                                                    )
+                                                })}
+                                            </div>
+                                        }
+
+                                        {dimensions !== "" &&
+                                            <div>
+                                                <p className={"underlined"}>dimensions:</p>
+                                                <p>{dimensions}</p>
+                                                <br/>
+
+                                            </div>
+                                        }
+                                        <div>
+                                            {material !== undefined &&
+                                                <div>
+                                                    <p className={"underlined"}>materials:</p>
+                                                    <div>
+                                                        {material &&
+                                                            material.map(mat => {
+                                                                return(
+                                                                    <p>
+                                                                        {mat}
+                                                                    </p>
+                                                                )
+                                                            })
+                                                        }
+                                                    </div>
+                                                    <br></br>
+                                                </div>
                                             }
                                         </div>
-                                        <br></br>
-                                    </div>
-                                }
 
-                                {location !== "" &&
-                                    <div>
-                                        <p className={"underlined"}>current location:</p>
-                                        <p>{location}</p>
+                                        {acquisition !== undefined &&
+                                            <div>
+                                                <p className={"underlined"}>acquired:</p>
+                                                <div>
+                                                    {acquisition.date &&
+                                                        <p>{acquisition.date} ({acquisition.method})</p>
+                                                    }
+                                                    {!acquisition.date &&
+                                                        <p>date unknown ({acquisition.method})</p>
+                                                    }
+                                                </div>
+                                                <br/>
+                                            </div>
+                                        }
+
+                                        {exhibitions !== "" &&
+                                            <div>
+                                                <p className={"underlined"}>shown in exhibitions:</p>
+                                                <div>
+                                                    {exhibitions[0] &&
+                                                        exhibitions.map(exh =>{
+                                                            return(
+                                                                <div>
+                                                                    <p>{exh.title}</p>
+                                                                </div>
+                                                            )
+                                                        })
+                                                    }
+                                                </div>
+                                                <br></br>
+                                            </div>
+                                        }
+
+                                        {location !== "" &&
+                                            <div>
+                                                <p className={"underlined"}>current location:</p>
+                                                <p>{location}</p>
+                                            </div>
+                                        }
                                     </div>
-                                }
+                                    <div className={"lineV"} style={{margin:"40px"}}/>
+                                    <div>
+                                        {isBigScreen &&
+                                            <div>
+                                                {props.colorCubes &&
+                                                    <div >
+                                                        {!openColors&&
+                                                            <div>
+                                                                <div className={"lineH"}></div>
+                                                                <br></br>
+                                                                <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                                <br></br>
+                                                                <div className={"lineH"}></div>
+                                                                <br></br>
+                                                            </div>
+                                                        }
+                                                        {openColors&&
+                                                            <div>
+                                                                <div className={"lineH"}></div>
+                                                                <div className={"grid--even_5"}>
+                                                                    {_LDES["HEX_values"][0].map(color=>{return(
+                                                                        <div style={{
+                                                                            background:color,
+                                                                            margin: '10px',
+                                                                            height: "2vw",
+                                                                            width: "2vw"
+                                                                        }} onClick={()=>setSelectColor(color)} ></div>
+                                                                    )})}
+                                                                </div>
+                                                                <br></br>
+                                                                <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                                <br></br>
+                                                                <div className={"lineH"}></div>
+                                                                <br></br>
+                                                            </div>
+                                                        }
+                                                    </div>
+                                                }
+                                            </div>
+                                        }
+                                    </div>
+
+
+                                </div>
+
+
 
                             </div>
                         </div>
