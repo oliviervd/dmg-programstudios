@@ -112,14 +112,6 @@ html, body {
     color: #afc6ae
  }
 
-.emptyFrameModel__1 {
-    position:relative;
-    width: 400px;
-    height: 100%;
-    left: 30vw;
-    border: 3px solid var(--main__green);
-}
-
 .black {
     background:black;
 }
@@ -284,19 +276,9 @@ html, body {
     margin-bottom: 20px;
 }
 
-.title-box__title:hover{
-    transition-duration: 1.5s;
-    transition: color 2s ease-out;
-    color: var(--fluo__green)
-}
 
 .glossText{
     transform: rotate(90deg);
-}
-
-
-.easeBorder__green{
-    border: 2px solid var(--main__green);
 }
 
 .searchbox{
@@ -392,13 +374,6 @@ input{
     padding-top: 16px;
 }
 
-.rowScroll {
-    border: 4px none var(--main__green);
-    height: auto;
-    overflow-y:auto;
-    margin-top: 20px;
-}
-
 .rowScrollMain{
     height: 100vh;
     overflow-y:auto;
@@ -414,17 +389,6 @@ input{
     .scroll-container{
         font-size: 30px;
     }
-}
-
-.scroll-container__blue__pink{
-    -moz-box-pack: center;
-    background-color: blue;
-    border-right: 3px solid black;
-    border-left: 3px solid black;
-    overflow: hidden;
-    display: flex;
-    justify-content: space-evenly;
-    color: var(--main__green);
 }
 
 
@@ -612,13 +576,6 @@ input{
     text-align: center;
 }
 
-.textBackground__green{
-    color: var(--main__green);
-}
-
-.fluoGreen {
-    color: var(--fluo__green);
-}
 
 .bruises__box{
     position: fixed;

@@ -285,12 +285,6 @@ text {
     font-size: 20px;
 }
 
-
-.rotateText:hover{
-    transition: color 2s ease-out;
-    color: var(--fluo__green)
-}
-
 .uppercase{
     text-transform: uppercase;
 }
