@@ -359,8 +359,7 @@ export function fetchCreatorInfo(LDES, PERS, THES){
         try{
             creation["creator"] = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
             let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
-            let id = fetchPersFromPers(PERS, _id, "id")
-            creation["id"] = id
+            creation["id"] = fetchPersFromPers(PERS, _id, "id")
 
         } catch (error) {
             let _id =  event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]
@@ -377,16 +376,14 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                     creation["creation_place"] = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
                 } catch {
                     let _id = event["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
-                    let _x = fetchTermFromThes(THES, _id)
-                    creation["creation_place"] = _x
+                    creation["creation_place"] = fetchTermFromThes(THES, _id)
                 }
             } catch (error) {}
 
             // creation date
             try {
                 let creation_date = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
-                let _date  = EDTFtoDate(creation_date)
-                creation["date"] = _date
+                creation["date"] = EDTFtoDate(creation_date)
             } catch {}
             creations.push(creation)
         } catch (error) {}
@@ -407,8 +404,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
             producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"];
             production["producer"] = producer
             let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
-            let id = fetchPersFromPers(PERS, _id, "id")
-            production["id"] = id;
+            production["id"] = fetchPersFromPers(PERS, _id, "id");
 
             // PRODUCTION PLACE
             try{
@@ -421,8 +417,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
             // PRODUCTION DATE
             if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]) {
                 production_date = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
-                let _date  = EDTFtoDate(production_date)
-                production["date"] = _date
+                production["date"] = EDTFtoDate(production_date)
             } else continue
 
             // PRODUCTION TECHNIQUE
@@ -440,8 +435,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
         producer =  LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["label"]["@value"]
         production["producer"] = producer
         let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["equivalent"]["@id"]
-        let id = fetchPersFromPers(PERS, _id, "id")
-        production["id"] = id;
+        production["id"] = fetchPersFromPers(PERS, _id, "id");
 
         try{
             try {
@@ -450,8 +444,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
                     production["place"] = production_place
                 } else {
                     let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]
-                    let _x = fetchTermFromThes(THES, _id)
-                    production["place"] = _x
+                    production["place"] = fetchTermFromThes(THES, _id)
                 }
             } catch {
 
@@ -459,8 +452,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
             }
             try {
                 production_date = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
-                let _date  = EDTFtoDate(production_date)
-                production["date"] = _date
+                production["date"] = EDTFtoDate(production_date)
             } catch{}
             try {
                 //todo: add multiple occurences to technique
@@ -594,18 +586,15 @@ export function fetchText(i, lang, id) {
     if (i.id === id) {
         if (lang === "EN") {
             if (i.description_en !== "") {
-                const x = i.description_en.split("//")
-                return x;
+                return i.description_en.split("//")
             }
         } else if (lang === "NL") {
             if (i.description_nl !== "") {
-                const x = i.description_nl.split("//")
-                return x;
+                return i.description_nl.split("//")
             }
         } else {
             if (i.description_fr !== "") {
-                const x = i.description_fr.split("//")
-                return x;
+                return i.description_fr.split("//")
             }
         }
     }
@@ -768,20 +757,17 @@ export function fetchStudioProjectDescription(i, lang, _type, studioID) {
         if (i.id.startsWith(studioID)){
             if (lang === "EN") {
                 if (i.description_en !== "") {
-                    const desc = i.description_en
-                    return desc;
+                    return i.description_en
                 }
             }
             if (lang === "FR") {
                 if (i.description_fr !== "") {
-                    const desc = i.description_fr
-                    return desc;
+                    return i.description_fr
                 }
             }
             if (lang === "NL") {
                 if (i.description_nl !== "") {
-                    const desc = i.description_nl
-                    return desc;
+                    return i.description_nl
                 }
             }
         }
