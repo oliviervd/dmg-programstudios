@@ -1,4 +1,4 @@
-import React, {useState, Suspense, useEffect} from "react"
+import React, {useState, Suspense} from "react"
 import {
     fetchText,
     headerTitleBig
@@ -15,12 +15,9 @@ import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useAgentQuery from "../hooks/useAgentQuery";
 import useExhibitionLister from "../hooks/useExhibitionLister";
 import {useQuery} from "@tanstack/react-query";
-import usePayloadQueryStudios from "../hooks/usePayloadQueryStudios";
-import {getObjects} from "../utils/SupabaseQueries";
 
 const Home = () => {
 
-    const [loadingState, setLoadingState] = useState(true);
     const InteractionBar = React.lazy(() => import("../elements/utils/interactionBar"))
     const StudioGrid = React.lazy(() => import("../elements/utils/StudioGrid"))
 
@@ -41,9 +38,7 @@ const Home = () => {
     const [darkMode, setDarkMode] = useState(false)
     const [visualIdentity, setVisualIdentity] = useState("graphic_archive_01")
 
-    const [studioData, setStudioData] = useState([]);
-
-    const {data, status, isLoading} = useQuery({
+    const {data, isLoading} = useQuery({
         queryKey:['STUDIO'],
         queryFn: () =>
             fetch("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/",{
@@ -92,10 +87,10 @@ const Home = () => {
                                                 </div>
                                             )
                                         } else {
-                                            return (null)
+                                            return null
                                         }
                                     } else {
-                                        return (null)
+                                        return null
                                     }
                                 }))}
                             </div>
@@ -131,7 +126,6 @@ const Home = () => {
                             {_studios.map((studio => {
                                     let title_en;
                                     title_en = "";
-                                    //studioType = fetchType(studio);
 
                                     return (
                                         <div className="grid-autoFill">

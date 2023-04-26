@@ -1,6 +1,6 @@
 import React, {useState, Suspense, useEffect} from "react"
 import {useParams} from "react-router-dom";
-import {useNavigate, Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import Footer from "../elements/utils/Footer";
 
@@ -19,7 +19,6 @@ import AdvancedSearch from "../elements/indexes/advancedSearch";
 const Index = (props) => {
 
     // UTILS
-    let navigate = useNavigate();
     //MEDIA QUERIES
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 700px)'
