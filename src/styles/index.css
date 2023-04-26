@@ -325,7 +325,7 @@ html, body {
 
 input{
     -webkit-appearance: none;
-    font-family: Equateur;
+    font-family: Equateur, sans-serif;
     background: dimgray;
     height: 1px;
     border-radius: 20px;
@@ -348,15 +348,13 @@ input{
 
 .firstBar {
     transition: all 0.35s linear;
-    transform: rotate(0deg);
-    transform-origin: 0% 50%;
+    transform-origin: 0 50%;
     transform: rotate(45deg);
 }
 
 .secondBar {
     transition: all 0.35s linear;
-    transform: rotate(0deg);
-    transform-origin: 0% 50%;
+    transform-origin: 0 50%;
     transform: rotate(-45deg);
 }
 

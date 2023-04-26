@@ -16,7 +16,7 @@ import useExhibitionLister from "../hooks/useExhibitionLister";
 import AdvancedSearchQuery from "../elements/indexes/advancedSearchQuery";
 import AdvancedSearch from "../elements/indexes/advancedSearch";
 
-const Index = (props) => {
+const Index = () => {
 
     // UTILS
     //MEDIA QUERIES

@@ -426,7 +426,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
                     production_technique = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"];
                     production["technique"] = production_technique;
                 } else continue
-            } catch {};
+            } catch {}
             productions.push(production)
         }
     } else { // else only parse one instance
@@ -697,7 +697,7 @@ export function headerAbout(lang) {
     }
 }
 
-export function fetchDataStudiosPayload(source, lang, path, i) {
+export function fetchDataStudiosPayload(source, lang, path) {
 
     // title
     if (path === "title") {
