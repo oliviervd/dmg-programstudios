@@ -15,6 +15,7 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "@vitejs/plugin-react": "^4.0.0",
     "axios": "^1.3.5",
     "axis": "^1.0.0",
     "dotenv": "^10.0.0",
@@ -33,20 +34,21 @@
     "react-responsive": "^9.0.2",
     "react-responsive-carousel": "^3.2.23",
     "react-router-dom": "^6.3.0",
-    "react-scripts": "^5.0.1",
     "sass": "^1.32.11",
     "serve": "^13.0.2",
     "stream": "^0.0.2",
     "tiny-invariant": "^1.3.1",
+    "vite": "^4.3.2",
+    "vite-plugin-env-compatible": "^1.1.1",
+    "vite-plugin-svgr": "^2.4.0",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "dev": "react-scripts start",
-    "start": "serve -s build",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject",
-    "heroku-postbuild": "npm run build"
+    "dev": "vite start",
+    "start": "vite",
+    "build": "vite build",
+    "heroku-postbuild": "npm run build",
+    "serve": "vite preview"
   },
   "eslintConfig": {
     "extends": [
