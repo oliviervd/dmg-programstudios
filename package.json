@@ -47,8 +47,6 @@
     "dev": "vite start",
     "start": "vite",
     "build": "vite build",
-    "postinstall": "npm run build",
-    "serve-heroku": "vite --host 0.0.0.0 --port 3000 preview",
     "heroku-postbuild": "npm run build",
     "serve": "vite preview"
   },
