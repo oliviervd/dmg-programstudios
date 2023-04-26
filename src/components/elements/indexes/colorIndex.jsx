@@ -189,7 +189,7 @@ const ColorIndex = (props) => {
                                     <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
                                     <div></div>
                                     <div className={"grid--2_1"}>
-                                        <p>>>> scroll this way >>>></p>
+                                        <p>scroll this way</p>
                                         {bitonal &&
                                             <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
                                         }

@@ -173,7 +173,7 @@ const ExhibitionIndex = (props) => {
                                 <h2>{exhibition}</h2>
                                 <div></div>
                                 <div className={"grid--2_1"}>
-                                    <p>>>> scroll this way >>>></p>
+                                    <p> scroll this way </p>
                                     {bitonal &&
                                         <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
                                     }
