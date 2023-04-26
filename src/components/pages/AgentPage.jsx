@@ -1,7 +1,6 @@
-import React, {useEffect, useState} from "react";
+import React, {useState} from "react";
 import {useMediaQuery} from "react-responsive";
 import {useNavigate} from "react-router-dom";
-import Header from "../elements/utils/Header";
 import AgentViewer from "../elements/subjectpages/AgentViewer"
 import {useParams} from "react-router-dom";
 import useAgentQuery from "../hooks/useAgentQuery";
@@ -34,9 +33,6 @@ const AgentPage = () => {
         _agent = fetchAgentRecordwithID(_pers, id.id) // set agent based on ID
     } catch (e) {}
 
-    const [personen, setPersonen] = useState("");
-    const [objects, setObjects] = useState("");
-    const [thesaurus, setThesaurus] = useState("");
     const [bitonal, setBitonal] = useState(false)
     const [wikiBios, setWikiBios] = useState("")
     const [language, setLanguage] = useState("EN");

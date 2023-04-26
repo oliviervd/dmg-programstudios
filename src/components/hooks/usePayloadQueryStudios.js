@@ -1,6 +1,5 @@
 import React from "react";
 import {useQuery} from "@tanstack/react-query"
-import axios from "axios";
 
 async function usePayloadQueryStudios() {
     const key = ["STUDIO"]
@@ -10,8 +9,6 @@ async function usePayloadQueryStudios() {
         }).then((req) => req.json())]);
         return result;
     })
-
-
 }
 
 export default usePayloadQueryStudios;
