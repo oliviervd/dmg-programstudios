@@ -8,7 +8,7 @@ async function usePayloadQueryStudios() {
             credentials: 'include',
         }).then((req) => req.json())]);
         return result;
-    })
+    }, {staleTime:Infinity})
 }
 
 export default usePayloadQueryStudios;

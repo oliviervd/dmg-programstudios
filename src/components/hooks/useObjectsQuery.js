@@ -10,7 +10,7 @@ function useObjectsQuery() {
         return await getObjects(client).then(
             (result) => result.data
         );
-    });
+    }, {staleTime:Infinity, refetchOnReconnect: false, refetchOnMount: false});
 }
 
 export default useObjectsQuery
