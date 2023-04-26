@@ -1,4 +1,3 @@
-import React from "react"
 import {fetchTermFromThes} from "../data_parsers";
 
 export function fetchPersBirth(input, thes) {

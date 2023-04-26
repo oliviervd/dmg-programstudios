@@ -2,9 +2,9 @@ import React, {useState} from "react"
 import {
     fetchPersGender,
     fetchPersBirth,
-    fetchPersDeath
+    fetchPersDeath,
 } from "../../utils/data_parsers/dataParserPers";
-import {fetchOeuvre, fetchOeuvreV2} from "../../utils/data_parsers";
+import {fetchOeuvreV2, listOfParticipatedExhibitions} from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 
@@ -56,6 +56,7 @@ const AgentViewer = (props) =>  {
     let wikiSnippet = ""
     let wikiSnippetSource = ""
     let oeuvre = ""
+    let exhibitions = ""
 
     let _basePERS = props.agent
     let _baseLDES = props.objects
@@ -98,6 +99,10 @@ const AgentViewer = (props) =>  {
             oeuvre = fetchOeuvreV2(_baseLDES, _basePERS, PERS, THES)
             console.log(oeuvre);
         } catch (error) {}
+
+        try {
+            exhibitions = listOfParticipatedExhibitions(oeuvre);
+        } catch(e) {console.log(e)}
 
         try {
             //todo: put in generic function.

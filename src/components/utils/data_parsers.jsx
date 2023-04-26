@@ -1,5 +1,15 @@
 import React from "react";
 
+export function containsObject(obj, list) {
+    // This method checks if the object reference is the same in the array. It's fast, but won't work if you want to check for a different object with the same content
+    for( let i = 0; i < list.length; i++) {
+        if (list[i] === obj) {
+            return true;
+        }
+    }
+    return false;
+}
+
 export function fetchObjectsByID(data, id) {
     try{
         for (let i=0; i<data.length; i++) {
@@ -45,7 +55,35 @@ export function fetchAllExhibitions(input) {
     } catch(e) {}
 }
 
+export function listOfParticipatedExhibitions(oeuvre) {
+    const exhibitionList = []
+    const filteredList = []
+    for (let i=0; i < oeuvre.length; i++) {
+        try {
+            let exh = fetchExhibitions(oeuvre[i]["LDES_raw"])
+            if (exh.length === 1) {
+                exhibitionList.push(exh[0])
+            } else {
+                for (let e=0; e < exh.length ; e++) {
+                    exhibitionList.push(exh[e])
+                }
+            }
+
+        } catch (e) {}
+    }
+
+    exhibitionList.forEach(item=>{
+        if(!containsObject(item, filteredList)) {
+            console.log(item)
+            filteredList.push(item)
+        }
+    })
+
+    console.log(filteredList)
+}
+
 export function fetchOeuvreV2(_LDES, agent, PERS, THES) {
+    // todo: add function to ensure that each work is only shown once. --> check if already in set
     let _refID = agent["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
     let match = [] // setup empty array to store matches
     // loop over all items in LDES
@@ -60,10 +98,10 @@ export function fetchOeuvreV2(_LDES, agent, PERS, THES) {
                             match.push(_LDES[i])
                         }
                     } else if(_prod[0].id=== _refID) {
-                        console.log(_prod)
+
                     }
                 }
-            } catch (e) {console.log(e)}
+            } catch (e) {}
 
             try {
                 let _creators = fetchCreatorInfo(_LDES[i]["LDES_raw"], PERS, THES) //
@@ -74,9 +112,9 @@ export function fetchOeuvreV2(_LDES, agent, PERS, THES) {
                                 match.push(_LDES[i])
                             }
                         }
-                    } catch(e) {console.log(e)}
+                    } catch(e) {}
                 }
-            } catch (e) {console.log(e)}
+            } catch (e) {}
 
             // check creators
 

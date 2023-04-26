@@ -28,8 +28,6 @@ const Index = (props) => {
         query: '(max-width: 700px)'
     })
 
-    let type = useParams()
-
     // COLOR INDEX
     const [about, setAbout] = useState(false);
     const [showIndexColors, setShowIndexColors] = useState(true);
@@ -71,13 +69,6 @@ const Index = (props) => {
     }, [param.type]);
 
     console.log(param);
-
-    // * --- * //
-
-    // https://www.youtube.com/watch?v=FEiggoSm8tw
-    const routeChange = () => {
-        navigate("/")
-    }
 
     let style;
 
