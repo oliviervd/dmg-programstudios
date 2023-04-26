@@ -1,5 +1,5 @@
 import React, {lazy, Suspense} from "react";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, Link} from "react-router-dom";
 import {headerAbout, headerTitle} from "../../utils/data_parsers";
 import {useMediaQuery} from "react-responsive";
 
@@ -38,7 +38,7 @@ const Header = props => {
                     <div/>
                     <div/>
                     <div/>
-                    <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => navigate("/index/color/")}>INDEX</h2>
+                    <Link className="uppercase text-center HeaderLink" style={{margin: 10}} to={"/index/color/"}>INDEX</Link>
                     {props.showAbout &&
                         <h2 className="uppercase text-center" style={{margin: 10}} onClick={() => props.setAbout(!props.about)}>{headerAbout(props.language)}</h2>
                     }

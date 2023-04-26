@@ -162,7 +162,7 @@ const Index = (props) => {
                 <div>
                     <div style={header}>
                         <div className="grid--even_10">
-                            <a className={"HeaderLink uppercase"} style={{margin: '10px', fontWeight:"bold"}}  href={"/"}>HOME</a>
+                            <Link className={"HeaderLink uppercase"} style={{margin: '10px', fontWeight:"bold"}}  to={"/"}>HOME</Link>
                             <div></div>
                             <div></div>
                             <div></div>

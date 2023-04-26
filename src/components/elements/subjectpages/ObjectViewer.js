@@ -13,6 +13,7 @@ import {
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import Loading from "../utils/Loading";
+import {Link} from "react-router-dom";
 
 const ImageViewer = React.lazy(() => import("./ImageViewer"));
 const ObjectViewer = (props) => {
@@ -124,7 +125,7 @@ const ObjectViewer = (props) => {
 
                     <div>
                         <div className="grid--9_1">
-                            <a className={"HeaderLinkBig home italic"} style={{fontSize: "2vw"}} href={href_objectpage}>{title}</a>
+                            <Link className={"HeaderLinkBig home italic"} style={{fontSize: "2vw"}} to={href_objectpage}>{title}</Link>
                             {props.indexUI &&
                                 <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
                             }
@@ -450,7 +451,7 @@ const ObjectViewer = (props) => {
             }
             {isMobile &&
                 <div>
-                    <h1 className={"home"} style={{fontSize: "6vw", padding: "5%"}} onClick={()=>routeToObjectPage()}>{title}</h1>
+                    <h1 className={"home"} style={{fontSize: "6vw", padding: "5%"}}>{title}</h1>
 
                     <Suspense>
                         <ImageViewer style={{padding: "5%"}}  media={props.image} details={props.details}/>
