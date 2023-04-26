@@ -91,7 +91,7 @@ const ObjectPage = () => {
                     <ObjectViewer description={true} details = {details}
                                   image={images} colorStrip={false}
                                   thesaurus={_thes} personen={_pers}
-                                  box={true} colorCubes={true}
+                                  box={true} colorCubes={true} split={true}
                     />
                 </Suspense>
             </div>

@@ -112,6 +112,13 @@ const ObjectViewer = (props) => {
         navigate("/index/agent/"+id)
     }
 
+    let split = false;
+    if (isBigScreen && props.split) {
+            split = true
+    }
+
+    console.log(split);
+
     return (
         <div>
             {isDesktopOrLaptop &&
@@ -263,7 +270,7 @@ const ObjectViewer = (props) => {
                                     </div>
                                 }
 
-                                <div className={isBigScreen?"grid--4_2_4":""}>
+                                <div className={split?"grid--4_2_4":""}>
 
                                     <div>
                                         {type !== "" &&
