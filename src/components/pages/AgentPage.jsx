@@ -48,8 +48,7 @@ const AgentPage = () => {
                 let PID = LDES[i]["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
                 try {
                     if (refPID === PID) {
-                        let match = LDES[i]
-                        return match
+                        return LDES[i]
                     }
                 } catch(e) {}
             } catch(error) {}

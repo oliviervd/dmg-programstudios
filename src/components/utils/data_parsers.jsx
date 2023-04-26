@@ -125,57 +125,6 @@ export function fetchOeuvreV2(_LDES, agent, PERS, THES) {
 
 }
 
-
-export function fetchOeuvre(_LDES, agent, PERS, THES) {
-    let _refID = agent["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"] // OK
-    let _len  = _LDES.length // OK
-    let match = []
-
-    for (let i = 0; i < _len; i++) {
-
-        //console.log(_LDES[i])
-        // DMG-A-00677
-
-        try{
-            let _x = _LDES[i]["LDES_raw"]
-            let x = fetchCreatorInfo(_x, PERS, THES)
-            let p = fetchProductionInfo(_x, PERS, THES)
-
-            // loop over array
-            try {
-                for (let o = 0; o < x.length; o ++){
-                    let _c = x[o]
-
-                    //console.log(_c)
-                    // filter on same creator.id
-                    if (_c.id === _refID) {
-                        if (_LDES[i]["iiif_image_uris"].length !== 0) {
-                            match.push(_LDES[i])
-                        }
-                    }
-                }
-            } catch(error) {console.log(error)}
-
-            try {
-                for (let o = 0; o < p.length; o ++){
-                    let _p = p[o]
-
-                    // filter on same creator.id
-                    if (_p.id === _refID) {
-                        if (_LDES[i]["iiif_image_uris"].length !== 0) {
-                            match.push(_LDES[i])
-                        }
-                    }
-
-                }
-
-            } catch(error) {console.log(error)}
-
-        } catch (error) {}
-    }
-    return match
-}
-
 export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
     // todo: make more specific - make use of cascade
     // skip: objectverpakking.
@@ -210,16 +159,7 @@ export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
     return _matchingObjects
 }
 
-export async function errorHandler(promise) {
-    try {
-        let data = await promise();
-        return [data, null];
-    } catch (error) {
-        return [null, error];
-    }
-}
-
-export function fetchPersFromPers(input, uri, field, id) {
+export function fetchPersFromPers(input, uri, field) {
     let _len = input.length
     for (let i = 0; i<_len; i++){
         if(uri){
@@ -315,12 +255,12 @@ export function fetchTitle(LDES) {
 }
 
 export function fetchDescription(LDES) {
-    let description =
-        new Promise((resolve, reject) => {
-            setTimeout(() => {
-                resolve(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"])
-            }, 1000)
-        });
+    let description;
+    description = new Promise((resolve) => {
+        setTimeout(() => {
+            resolve(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"])
+        }, 1000)
+    });
     return description
 }
 
@@ -505,7 +445,7 @@ export function fetchProductionInfo(LDES, PERS, THES){
 
         try{
             try {
-                if (production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]) {
+                if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]) {
                     production_place = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P7_took_place_at"]["equivalent"]["skos:prefLabel"]["@value"]
                     production["place"] = production_place
                 } else {

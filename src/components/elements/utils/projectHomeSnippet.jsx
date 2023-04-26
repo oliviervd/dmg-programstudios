@@ -38,7 +38,7 @@ const ProjectHomeSnippet = (props) => {
                         </div>
                     )
                 } else {
-                    return(null)
+                    return null
                 }
 
             })}

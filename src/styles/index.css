@@ -616,7 +616,6 @@ input{
 
 .img {
     background-blend-mode: hard-light;
-    background-color: $color_low;
 }
 
 
