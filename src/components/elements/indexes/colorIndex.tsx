@@ -13,20 +13,19 @@ const ColorIndex = (props) => {
     const [searchParamsColors, setSearchParamsColors] = useSearchParams()
     const _c = ["Tuscan brown", "Vanilla","Dark khaki", "Café noir",  "Rifle green", "Kobicha", "Artichoke", "Indigo dye", "Shadow blue", "Queen blue", "Gunmetal", "Morning blue", "Grullo", "Rich black (FOGRA39)"]
     const random = Math.floor(Math.random() * _c.length);
-    const [objectColor, setObjectColor] = useState(searchParamsColors.get("color")); // set Color of objects to be shown in Masonry
     const [image, setImage] = useState("");
     const [showDetailUIColors, setShowDetailUIColors] = useState(false);
     const [bitonal, setBitonal] = useState(false);
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
 
-    console.log(searchParamsColors.get("color"))
+    let objectColor = searchParamsColors.get("color")
 
     const selectColor = (type: string, value: string) => {
         searchParamsColors.set(type, value)
         setSearchParamsColors(searchParamsColors)
         props.setShowIndexColors(!props.showIndexColors)
-        setObjectColor(value);
+        objectColor = value;
     }
 
     const {colorId} = useParams();
