@@ -284,7 +284,7 @@
 
 
 .HomeProjectGrid{
-    overflow-x: hidden;
+    overflow: scroll;
     container-type: inline-size;
     overflow-wrap: break-word;
 }
@@ -292,5 +292,5 @@
 .HomeProjectGridContainer{
     top: -100%;
     transition: top 0.4s;
-    overflow: scroll
+    overflow: clip;
 }

@@ -33,10 +33,9 @@ const StudioGrid = (props) => {
                         navigate(href);
                  }
                 return (
-                    <div id="HomeProjectGrid" className="rowScroll fade-in open">
+                    <div id="HomeProjectGrid" className="rowScroll fade-in open" style={{overflow: "scroll"}}>
                         <div>
-                            <h2 className="text-center uppercase box-title grow main"
-                                onClick={routeChange}>{title_en}</h2>
+                            <h2 className="text-center uppercase box-title grow main">{title_en}</h2>
                             <p className="uppercase justify padding-10"
                                style={{height: '10vh'}}>{description}</p>
                             {!isLoading&&
