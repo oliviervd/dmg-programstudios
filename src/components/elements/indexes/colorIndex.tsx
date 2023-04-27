@@ -12,7 +12,6 @@ const ColorIndex = (props) => {
 
     const [searchParamsColors, setSearchParamsColors] = useSearchParams()
     const _c = ["Tuscan brown", "Vanilla","Dark khaki", "Café noir",  "Rifle green", "Kobicha", "Artichoke", "Indigo dye", "Shadow blue", "Queen blue", "Gunmetal", "Morning blue", "Grullo", "Rich black (FOGRA39)"]
-    const random = Math.floor(Math.random() * _c.length);
     const [image, setImage] = useState("");
     const [showDetailUIColors, setShowDetailUIColors] = useState(false);
     const [bitonal, setBitonal] = useState(false);
@@ -28,10 +27,6 @@ const ColorIndex = (props) => {
         objectColor = value;
     }
 
-    const {colorId} = useParams();
-    console.log(colorId)
-
-
     const _objects = props.objects
     const _thes  = props.thesaurus
     const _pers = props.agents
@@ -45,7 +40,7 @@ const ColorIndex = (props) => {
         query: '(max-width: 700px)'
     })
 
-    // when clicking on an image store objectNumber in memory (objectNumber)
+    //todo: when clicking on an image store objectNumber in memory (objectNumber) --> searchparams
     const handleImgClick = (id) => {
         setImage(id);
         setShowDetailUIColors(true);
@@ -56,7 +51,7 @@ const ColorIndex = (props) => {
     let images;
     images = fetchImageByColor(_objects, objectColor)
 
-    let imageBlock = ""
+    let imageBlock: JSX.Element = <></>
 
     try{
         if (bitonal) {
@@ -134,10 +129,6 @@ const ColorIndex = (props) => {
             });
         }
     } catch {HexOptions=<p className={"rhizome"}>Loading...</p>}
-
-
-
-
     function fetchObjectById(ObjectNumber) {
         for (let i=0; i<_objects.length; i++) {
             if (_objects[i].objectNumber === ObjectNumber) {
@@ -145,19 +136,14 @@ const ColorIndex = (props) => {
             }
         }
     }
-
     function filterByValue(array, string) {
         let x = array.filter(o => o.iiif_image_uris.includes(string))
         return x[0]["objectNumber"];
     }
-
-    // todo: move Color index to separate component --> clean up code.
-
     function collapse() {
         props.setCollapseColors(!props.collapseColors)
         props.setCollapseExhibition(false);
     }
-
 
     return(
         <div>
