@@ -1,7 +1,6 @@
 import React, {useState, Suspense, useEffect} from "react"
 import {Helmet} from "react-helmet-async";
-import {useParams} from "react-router-dom";
-import {Link} from "react-router-dom";
+import {useParams, useSearchParams, Link} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import Footer from "../elements/utils/Footer";
 
@@ -39,9 +38,6 @@ const Index = () => {
     const [doubleHeader, setDoubleHeader] = useState(false);
     const [closeSearch, setCloseSearch] = useState(false);
 
-    console.log(queryResult)
-    console.log(showAdvancedSearch)
-
     // * --- IMPROVED API CALLS --- * //
     const _objects  = useObjectsQuery().data;
     const _thes  = useThesaurusQuery().data;
@@ -67,8 +63,6 @@ const Index = () => {
             openNewIndex()
         }
     }, [param.type]);
-
-    console.log(param);
 
     let style;
 

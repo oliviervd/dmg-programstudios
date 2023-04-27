@@ -19,6 +19,18 @@ const ColorIndex = (props) => {
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
 
+    const [searchParamsColors, setSearchParamsColors] = useSearchParams()
+    const selectColor = (type: string, value: string) => {
+        searchParamsColors.set(type, value)
+        setSearchParamsColors(searchParamsColors)
+        props.setShowIndexColors(!props.showIndexColors)
+        setObjectColor(value);
+    }
+
+    const {colorId} = useParams();
+    console.log(colorId)
+
+
     const _objects = props.objects
     const _thes  = props.thesaurus
     const _pers = props.agents
@@ -99,10 +111,11 @@ const ColorIndex = (props) => {
                     <p className={"grid-text-autoflow"}
                         //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
                        style={{color: "black", fontWeight: "lighter"}}
-                       onClick={()=>handleClickTag(key)}
+                       onClick={()=>selectColor("color", key)}
                        key={key}>
                         #{key},
                     </p>
+
                 ));
             } catch {HexOptions=<p className={"rhizome"}>Loading...</p>}
 
@@ -111,7 +124,7 @@ const ColorIndex = (props) => {
                 return <p className={"grid-text-autoflow"}
                     //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
                           style={{color: "black"}}
-                          onClick={()=>handleClickTag(color)}
+                          onClick={()=>selectColor("color", color)}
                           key={color}>
                     #{color},
                 </p>
@@ -138,11 +151,6 @@ const ColorIndex = (props) => {
     }
 
     // todo: move Color index to separate component --> clean up code.
-
-    const handleClickTag = (key) => {
-        setObjectColor(key)
-        props.setShowIndexColors(!props.showIndexColors)
-    }
 
     function collapse() {
         props.setCollapseColors(!props.collapseColors)
@@ -171,9 +179,9 @@ const ColorIndex = (props) => {
                                 </div>
                                 <div style={props.style}>
 
-                                        <Suspense fallback={<Loading />}>
-                                            {HexOptions}
-                                        </Suspense>
+                                    <Suspense fallback={<Loading />}>
+                                        {HexOptions}
+                                    </Suspense>
 
                                 </div>
                             </div>
@@ -236,7 +244,7 @@ const ColorIndex = (props) => {
                     }
                     {!props.collapseColors &&
                         <div>
-                           {/* <div className="lineH"/>
+                            {/* <div className="lineH"/>
                             <div style={{height: "5vh"}} className="grid--2_6_2">
                                 <p onClick={()=>collapse()}>colors</p>
                                 <div></div>
