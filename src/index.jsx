@@ -2,6 +2,7 @@
 import { render } from "react-dom";
 import { BrowserRouter, Route, Routes} from "react-router-dom";
 import {QueryClient, QueryClientProvider, } from "@tanstack/react-query";
+import {HelmetProvider} from "react-helmet-async"
 import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
 import './styles/index.css';
@@ -28,16 +29,18 @@ const queryClient = new QueryClient(
 const rootElement = document.getElementById("root");
 render(
     <BrowserRouter>
-        <QueryClientProvider client={queryClient}>
-            <Routes>
-                <Route path="/" element={<Home />}/>
-                <Route path="/studio/:id" element={<StudioLanding />}/>
-                <Route path="/index/:type" element={<Index />} />
-                <Route path="/index/object/:id" element={<ObjectPage />}></Route>
-                <Route path="/index/agent/:id" element={<AgentPage/>}></Route>
-            </Routes>
-            <ReactQueryDevtools/>
-        </QueryClientProvider>
+        <HelmetProvider>
+            <QueryClientProvider client={queryClient}>
+                <Routes>
+                    <Route path="/" element={<Home />}/>
+                    <Route path="/studio/:id" element={<StudioLanding />}/>
+                    <Route path="/index/:type" element={<Index />} />
+                    <Route path="/index/object/:id" element={<ObjectPage />}></Route>
+                    <Route path="/index/agent/:id" element={<AgentPage/>}></Route>
+                </Routes>
+                <ReactQueryDevtools/>
+            </QueryClientProvider>
+        </HelmetProvider>
     </BrowserRouter>,
     rootElement
 );

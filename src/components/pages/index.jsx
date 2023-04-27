@@ -1,4 +1,5 @@
 import React, {useState, Suspense, useEffect} from "react"
+import {Helmet} from "react-helmet-async";
 import {useParams} from "react-router-dom";
 import {Link} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
@@ -150,6 +151,10 @@ const Index = () => {
         <div>
             {isDesktopOrLaptop&&
                 <div>
+                    <Helmet>
+                        <title>INDEX</title>
+                        <meta name={"description"} content={"page containing several indexes on the collection of Design Museum Gent"}/>
+                    </Helmet>
                     <div style={header}>
                         <div className="grid--even_10">
                             <Link className={"HeaderLink uppercase"} style={{margin: '10px', fontWeight:"bold"}}  to={"/"}>HOME</Link>

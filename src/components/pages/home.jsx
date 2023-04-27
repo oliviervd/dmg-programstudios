@@ -4,6 +4,7 @@ import {
     headerTitleBig
 } from "../utils/data_parsers";
 
+import {Helmet} from "react-helmet-async";
 import ProjectHomeView from "../elements/utils/projectHomeView";
 import Header from "../elements/utils/Header";
 import studiogrid_data from "../data/content/studiogrid.json"
@@ -60,6 +61,10 @@ const Home = () => {
 
     return (
         <div className={visualIdentity}>
+            <Helmet>
+                <title>HOMEPAGE</title>
+                <meta name={"description"} content={"homepage for program studios of Design Museum Gent"}/>
+            </Helmet>
             <div className={` ${darkMode ? "darkMode" : "lightMode"}`}>
                 {isDesktopOrLaptop &&
                     <div
