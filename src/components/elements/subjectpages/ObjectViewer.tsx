@@ -21,16 +21,16 @@ const ObjectViewer = (props) => {
 
     let navigate = useNavigate();
 
-    let title = ""
-    let description = ""
-    let productions = ""
-    let creations = ""
-    let objectNumber = ""
-    let dimensions = ""
+    let title: any[] = []
+    let description: string = ""
+    let productions: any[] = []
+    let creations: string = ""
+    let objectNumber: string = ""
+    let dimensions: string = ""
     let material = []
-    let exhibitions = ""
-    let location = ""
-    let type = ""
+    let exhibitions: string = ""
+    let location: string = ""
+    let type: string = ""
     let acquisition
 
     let _LDES = props.details

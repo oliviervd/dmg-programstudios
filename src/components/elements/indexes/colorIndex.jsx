@@ -1,4 +1,5 @@
 import React, {Suspense, useState} from "react";
+import {useParams, useSearchParams, Link} from "react-router-dom";
 import {fetchImageByColor, getKeyByValue, shuffleFisherYates, splice} from "../../utils/utils";
 import colorRef from "../../data/colorRef.json";
 import ObjectViewer from "../subjectpages/ObjectViewer";
