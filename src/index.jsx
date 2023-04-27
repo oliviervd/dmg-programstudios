@@ -17,6 +17,7 @@ import StudioLanding from "./components/pages/StudioLanding"
 import Index from "./components/pages/index"
 import ObjectPage from "./components/pages/ObjectPage";
 import AgentPage from "./components/pages/AgentPage";
+import {Analytics} from "@vercel/analytics/react";
 
 const queryClient = new QueryClient(
     {defaultOptions:
@@ -28,19 +29,23 @@ const queryClient = new QueryClient(
 
 const rootElement = document.getElementById("root");
 render(
-    <BrowserRouter>
-        <HelmetProvider>
-            <QueryClientProvider client={queryClient}>
-                <Routes>
-                    <Route path="/" element={<Home />}/>
-                    <Route path="/studio/:id" element={<StudioLanding />}/>
-                    <Route path="/index/:type" element={<Index />} />
-                    <Route path="/index/object/:id" element={<ObjectPage />}></Route>
-                    <Route path="/index/agent/:id" element={<AgentPage/>}></Route>
-                </Routes>
-                <ReactQueryDevtools/>
-            </QueryClientProvider>
-        </HelmetProvider>
-    </BrowserRouter>,
+    <>
+        <BrowserRouter>
+            <HelmetProvider>
+                <QueryClientProvider client={queryClient}>
+                    <Routes>
+                        <Route path="/" element={<Home />}/>
+                        <Route path="/studio/:id" element={<StudioLanding />}/>
+                        <Route path="/index/:type" element={<Index />} />
+                        <Route path="/index/object/:id" element={<ObjectPage />}></Route>
+                        <Route path="/index/agent/:id" element={<AgentPage/>}></Route>
+                    </Routes>
+                    <ReactQueryDevtools/>
+                </QueryClientProvider>
+            </HelmetProvider>
+        </BrowserRouter>
+        <Analytics />
+    </>,
     rootElement
+
 );
