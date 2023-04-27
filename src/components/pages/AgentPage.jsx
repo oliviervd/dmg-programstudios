@@ -86,7 +86,7 @@ const AgentPage = () => {
                     <div className={"grid--even_2"}>
                         <div/>
                         <div className={"grid--even_2"}>
-                            <p>>>> scroll this way >>>></p>
+                            <p> scroll this way </p>
                             {bitonal &&
                                 <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
                             }

@@ -5,6 +5,7 @@
     "node": "19.x",
     "npm": "9.x"
   },
+  "type": "commonjs",
   "private": true,
   "homepage": "https://dmg-programstudios.herokuapp.com/",
   "author": "Olivier Van D'huynslager (Design Museum Gent)",
@@ -48,6 +49,8 @@
     "start": "vite",
     "build": "vite build",
     "heroku-postbuild": "npm run build",
+    "postinstall": "vite build",
+    "serve-heroku": "vite preview --network --port $PORT",
     "serve": "vite preview"
   },
   "eslintConfig": {
