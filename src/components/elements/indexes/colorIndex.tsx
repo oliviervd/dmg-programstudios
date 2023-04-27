@@ -1,7 +1,8 @@
-import React, {Suspense, useState} from "react";
+import * as React from "react"
+import {Suspense, useState} from "react";
 import {useParams, useSearchParams, Link} from "react-router-dom";
 import {fetchImageByColor, getKeyByValue, shuffleFisherYates, splice} from "../../utils/utils";
-import colorRef from "../../data/colorRef.json";
+import colorRef from '../../data/colorRef.json';
 import ObjectViewer from "../subjectpages/ObjectViewer";
 import {useMediaQuery} from "react-responsive";
 import SearchFilterBar from "../utils/SearchFilterBar";
@@ -18,7 +19,8 @@ const ColorIndex = (props) => {
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
 
-    let objectColor = searchParamsColors.get("color")
+    //todo: pick random color if empty params.
+    let objectColor: string = searchParamsColors.get("color")
 
     const selectColor = (type: string, value: string) => {
         searchParamsColors.set(type, value)
