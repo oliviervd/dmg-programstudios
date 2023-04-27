@@ -292,4 +292,5 @@
 .HomeProjectGridContainer{
     top: -100%;
     transition: top 0.4s;
+    overflow: scroll
 }
