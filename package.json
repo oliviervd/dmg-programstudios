@@ -50,7 +50,7 @@
     "build": "vite build",
     "heroku-postbuild": "npm run build",
     "postinstall": "vite build",
-    "serve-heroku": "vite preview --network --port $PORT",
+    "serve-heroku": "npm run build",
     "serve": "vite preview"
   },
   "eslintConfig": {
