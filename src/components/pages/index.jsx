@@ -107,8 +107,6 @@ const Index = () => {
         setCollapseExhibition(true)
         setCollapseNewItems(false)
         setDoubleHeader(false);
-        //setAbout(!about)
-        //setShowAdvancedSearch(false)
     }
 
     function openExhibitionIndex() {
@@ -116,8 +114,6 @@ const Index = () => {
         setCollapseExhibition(false)
         setCollapseNewItems(false)
         setDoubleHeader(false);
-        //setAbout(!about)
-        //setShowAdvancedSearch(false)
     }
 
     function openNewIndex() {
@@ -125,8 +121,6 @@ const Index = () => {
         setCollapseExhibition(false)
         setCollapseNewItems(true)
         setDoubleHeader(false);
-        //setAbout(!about)
-        //setShowAdvancedSearch(false)
     }
 
     function closeSearchTab() {
