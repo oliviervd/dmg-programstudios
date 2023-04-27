@@ -154,6 +154,7 @@ const Index = () => {
                     <Helmet>
                         <title>INDEX</title>
                         <meta name={"description"} content={"page containing several indexes on the collection of Design Museum Gent"}/>
+                        <link rel={"canonical"} href={import.meta.env.REACT_APP_WEB_BASE_URL+"/index/color/"}/>
                     </Helmet>
                     <div style={header}>
                         <div className="grid--even_10">

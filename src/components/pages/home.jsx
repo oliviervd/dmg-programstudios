@@ -64,6 +64,7 @@ const Home = () => {
             <Helmet>
                 <title>HOMEPAGE</title>
                 <meta name={"description"} content={"homepage for program studios of Design Museum Gent"}/>
+                <link rel={"canonical"} href={import.meta.env.REACT_APP_WEB_BASE_URL}/>
             </Helmet>
             <div className={` ${darkMode ? "darkMode" : "lightMode"}`}>
                 {isDesktopOrLaptop &&
