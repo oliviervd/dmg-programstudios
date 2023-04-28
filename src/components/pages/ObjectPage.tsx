@@ -1,4 +1,5 @@
-import React, {Suspense, useState} from "react"
+import * as React from "react"
+import {Suspense, useState} from "react"
 import ObjectViewer from "../elements/subjectpages/ObjectViewer";
 import {useNavigate, useParams} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
@@ -22,7 +23,7 @@ const ObjectPage = () => {
     const _thes = useThesaurusQuery().data;
 
     let _related;
-    let imageBlock
+    let imageBlock:JSX.Element = <></>
 
     setTimeout(()=> {
         setDetails(fetchObjectsByID(_objects, id))
@@ -62,7 +63,7 @@ const ObjectPage = () => {
 
 
     return(
-        <div>
+        <div className={"grid__objectViewer"} style={{overflowX: "hidden"}}>
             {isDesktopOrLaptop&&
                 <div className="grid--even_10">
                     <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ back</h2>
