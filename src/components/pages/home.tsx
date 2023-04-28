@@ -1,4 +1,5 @@
-import React, {useState, Suspense} from "react"
+import * as React from "react"
+import {useState, Suspense} from "react"
 import {
     fetchText,
     headerTitleBig
@@ -7,6 +8,7 @@ import {
 import {Helmet} from "react-helmet-async";
 import ProjectHomeView from "../elements/utils/projectHomeView";
 import Header from "../elements/utils/Header";
+// @ts-ignore
 import studiogrid_data from "../data/content/studiogrid.json"
 import {useMediaQuery} from "react-responsive";
 
@@ -54,6 +56,7 @@ const Home = () => {
     })
 
     // * --- IMPROVED API CALLS --- * //
+
     const _objects = useObjectsQuery().data;
     const _thes = useThesaurusQuery().data;
     const _pers = useAgentQuery().data;
