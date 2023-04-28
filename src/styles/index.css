@@ -464,7 +464,7 @@ input{
 }
 
 .ObjectViewer img{
-    max-height: 60vh;
+    max-height: 50vh;
     max-width: 100%;
     margin: 10px;
 }
@@ -497,8 +497,7 @@ input{
 }
 
 .img__fit{
-    max-width:90%;
-    height: auto;
+    max-height: 40vh;
 }
 
 .img__fit__full-width{
