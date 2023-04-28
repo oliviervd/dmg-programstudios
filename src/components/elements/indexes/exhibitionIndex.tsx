@@ -27,13 +27,6 @@ const ExhibitionIndex = (props) => {
         setExhibition(value);
     }
 
-    if (exhibitionSearch.get("exhibition") != null) {
-        setExhibition(exhibitionSearch.get("exhibition"))
-    } else {
-        setExhibition("Gelinkt: de collectie netwerkt")
-    }
-
-
     if (props.exhibitionList){
         const _exhCounts = {};
         try{
