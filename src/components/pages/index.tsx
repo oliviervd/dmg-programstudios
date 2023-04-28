@@ -1,6 +1,7 @@
-import React, {useState, Suspense, useEffect} from "react"
+import * as React from "react"
+import {useState, Suspense, useEffect} from "react"
 import {Helmet} from "react-helmet-async";
-import {useParams, useSearchParams, Link} from "react-router-dom";
+import {useParams, Link} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import Footer from "../elements/utils/Footer";
 
@@ -45,6 +46,7 @@ const Index = () => {
     const _exhibitions = useExhibitionLister(_objects);
 
     let param = useParams();
+    const {type} =  useParams()
 
     useEffect(() => {
         if (param.type === "color") {
@@ -109,7 +111,7 @@ const Index = () => {
         setDoubleHeader(false);
     }
 
-    function openExhibitionIndex() {
+    function openExhibitionIndex() {3
         setCollapseColors(true);
         setCollapseExhibition(false)
         setCollapseNewItems(false)
@@ -183,9 +185,9 @@ const Index = () => {
                                 <div></div>
 
                                 <div>
-                                    <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>openExhibitionIndex()}>COLORS</h2>
-                                    <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>openColorIndex()}>EXHIBITIONS</h2>
-                                    <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>openNewIndex()}>RECENTLY ADDED</h2>
+                                    <Link to={`/index/color/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openExhibitionIndex()}>COLORS</Link>
+                                    <Link to={`/index/exhibitions/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openColorIndex()}>EXHIBITIONS</Link>
+                                    <Link to={`/index/new/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openNewIndex()}>NEW</Link>
                                 </div>
 
 
