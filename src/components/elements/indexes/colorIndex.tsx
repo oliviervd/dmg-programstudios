@@ -13,14 +13,19 @@ const ColorIndex = (props) => {
 
     const [searchParamsColors, setSearchParamsColors] = useSearchParams()
     const _c = ["Tuscan brown", "Vanilla","Dark khaki", "Café noir",  "Rifle green", "Kobicha", "Artichoke", "Indigo dye", "Shadow blue", "Queen blue", "Gunmetal", "Morning blue", "Grullo", "Rich black (FOGRA39)"]
+    const random = Math.floor(Math.random() * _c.length);
     const [image, setImage] = useState("");
     const [showDetailUIColors, setShowDetailUIColors] = useState(false);
     const [bitonal, setBitonal] = useState(false);
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
 
-    //todo: pick random color if empty params.
-    let objectColor: string = searchParamsColors.get("color")
+    let objectColor: string
+    if (searchParamsColors.get("color") != null) {
+        objectColor = searchParamsColors.get("color")
+    } else {
+        objectColor = _c[random]
+    }
 
     const selectColor = (type: string, value: string) => {
         searchParamsColors.set(type, value)
@@ -35,10 +40,10 @@ const ColorIndex = (props) => {
     const about = props.about
 
     //MEDIA QUERIE
-    const isDesktopOrLaptop = useMediaQuery({
+    const isDesktopOrLaptop:boolean = useMediaQuery({
         query: '(min-width: 700px)'
     })
-    const isMobile = useMediaQuery({
+    const isMobile:boolean = useMediaQuery({
         query: '(max-width: 700px)'
     })
 
