@@ -12,7 +12,6 @@ const ExhibitionIndex = (props) => {
 
     const [exhibitionSearch, setExhibitionSearch] = useSearchParams()
 
-    const [exhibition, setExhibition] = useState("Gelinkt: de collectie netwerkt");
     const [bitonal, setBitonal] = useState(false);
     const [showDetailsExhObj, setShowDetailsExhObj] = useState(false);
     const [image, setImage] = useState("")
@@ -20,11 +19,18 @@ const ExhibitionIndex = (props) => {
     const [exhibitionFilter, setExhibitionFilter] = useState("")
 
     let ExhOptions;
+    let exhibition:string
 
     const selectExhibition = (type:string, value:string) => {
         exhibitionSearch.set(type, value)
         setExhibitionSearch(exhibitionSearch)
-        setExhibition(value);
+        exhibition = value
+    }
+
+    if (exhibitionSearch.get("exhibition") != null) {
+        exhibition = exhibitionSearch.get("exhibition")
+    } else {
+       exhibition = "Object Stories. Een kijk op de collectie"
     }
 
     if (props.exhibitionList){
