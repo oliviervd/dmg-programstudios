@@ -1,9 +1,16 @@
-import React, {useState} from "react";
+// noinspection HttpUrlsUsage
+
+import * as React from "react"
+import {useState} from "react"
+import {useSearchParams} from "react-router-dom";
+
 import ObjectViewer from "../subjectpages/ObjectViewer";
 import SearchFilterBar from "../utils/SearchFilterBar";
 import {filterByKey} from "../../utils/data_parsers";
 
 const ExhibitionIndex = (props) => {
+
+    const [exhibitionSearch, setExhibitionSearch] = useSearchParams()
 
     const [exhibition, setExhibition] = useState("Gelinkt: de collectie netwerkt");
     const [bitonal, setBitonal] = useState(false);
@@ -14,6 +21,12 @@ const ExhibitionIndex = (props) => {
 
     let ExhOptions;
 
+    const selectExhibition = (type:string, value:string) => {
+        exhibitionSearch.set(type, value)
+        setExhibitionSearch(exhibitionSearch)
+        setExhibition(value);
+    }
+
     if (props.exhibitionList){
         const _exhCounts = {};
         try{
@@ -22,18 +35,13 @@ const ExhibitionIndex = (props) => {
             }
         } catch {}
 
-        const handleClickTag = (key) => {
-            setExhibition(key);
-            props.setCollapseColors(false)
-        }
-
         const _exhFilter = filterByKey(_exhCounts, exhibitionFilter)
 
         if (exhibitionFilter === "") {
-            ExhOptions = Object.entries(_exhCounts).map(([key, i]) => (
+            ExhOptions = Object.entries(_exhCounts).map(([key]) => (
                     <p className={"grid-text-autoflow"}
                        style={{color: "black"}}
-                       onClick={()=>handleClickTag(key)}>
+                       onClick={()=>selectExhibition("exhibition", key)}>
                         #{key} ({key.length}),
                     </p>
             ))
@@ -42,7 +50,7 @@ const ExhibitionIndex = (props) => {
                 ExhOptions = _exhFilter.map((exh)=>{
                     return <p className={"grid-text-autoflow"}
                               style={{color: "black"}}
-                              onClick={()=>handleClickTag(exh)}>
+                              onClick={()=>selectExhibition("exhibition", exh)}>
                         #{exh},
                     </p>
                 })
@@ -50,7 +58,7 @@ const ExhibitionIndex = (props) => {
         }
     }
 
-    function filterByExhibition(objects, exhibitions) {
+    function filterByExhibition(objects) {
         //fetch array of objects that were shown at this exhibition.
         const ObjList = [];
         const ImageList = [];
@@ -90,8 +98,8 @@ const ExhibitionIndex = (props) => {
         } catch (e) {}
     }
 
-    let imageBlockExh = ""
-    let images = filterByExhibition(props.objects, exhibition)
+    let imageBlockExh:JSX.Element[] = <></>
+    let images = filterByExhibition(props.objects)
 
     try{
         if (bitonal) {
@@ -134,11 +142,6 @@ const ExhibitionIndex = (props) => {
         }
     }
 
-    function collapse() {
-        props.setCollapseExhibition(!props.collapseExhibition)
-        props.setCollapseColors(false);
-    }
-
     return(
         <div>
             {props.collapseExhibition &&
@@ -147,7 +150,7 @@ const ExhibitionIndex = (props) => {
                         <div>
                             <div className="lineH"/>
                             <div className="grid--2_6_2 " style={{height: '5vh'}}>
-                                <p onClick={()=>props.setCollapseExhibition(!props.collapseExhibition)}>exhibitions</p>
+                                <p>exhibitions</p>
                                 <div className={"grid--5_95"}>
                                     <div></div>
                                     <SearchFilterBar filter={exhibitionFilter} setFilter={setExhibitionFilter} prompt={" looking for a specific exhibition?"}/>
