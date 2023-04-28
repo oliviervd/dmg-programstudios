@@ -186,7 +186,7 @@ const Index = () => {
 
                                 <div>
                                     <Link to={`/index/color/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openExhibitionIndex()}>COLORS</Link>
-                                    <Link to={`/index/exhibitions/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openColorIndex()}>EXHIBITIONS</Link>
+                                    <Link to={`/index/exhibition/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openColorIndex()}>EXHIBITIONS</Link>
                                     <Link to={`/index/new/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openNewIndex()}>NEW</Link>
                                 </div>
 
