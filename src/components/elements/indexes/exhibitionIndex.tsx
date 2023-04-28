@@ -21,11 +21,23 @@ const ExhibitionIndex = (props) => {
 
     let ExhOptions;
 
+    const _objects = props.objects
+    const _thes  = props.thesaurus
+    const _pers = props.agents
+    const about = props.about
+
     const selectExhibition = (type:string, value:string) => {
         exhibitionSearch.set(type, value)
         setExhibitionSearch(exhibitionSearch)
         setExhibition(value);
     }
+
+    if (exhibitionSearch.get("exhibition") != null) {
+        setExhibition(exhibitionSearch.get("exhibition"))
+    } else {
+        setExhibition("Gelinkt: de collectie netwerkt")
+    }
+
 
     if (props.exhibitionList){
         const _exhCounts = {};
