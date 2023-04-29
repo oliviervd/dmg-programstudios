@@ -12,6 +12,7 @@ import Loading from "../utils/Loading";
 const ColorIndex = (props) => {
 
     const [searchParamsColors, setSearchParamsColors] = useSearchParams()
+    const [searchParamsGender, setSearchParamsGender] = useSearchParams()
     const _c = ["Tuscan brown", "Vanilla","Dark khaki", "Café noir",  "Rifle green", "Kobicha", "Artichoke", "Indigo dye", "Shadow blue", "Queen blue", "Gunmetal", "Morning blue", "Grullo", "Rich black (FOGRA39)"]
     const random = Math.floor(Math.random() * _c.length);
     const [image, setImage] = useState("");
@@ -20,11 +21,25 @@ const ColorIndex = (props) => {
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
 
+    let maleFilter: boolean
+    let femaleFilter: boolean
+    if (searchParamsGender.get("sex") == "MALE") {
+        maleFilter = true;
+    }
+    if (searchParamsGender.get("sex") == "FEMALE") {
+        femaleFilter = true;
+    }
+
     let objectColor: string
     if (searchParamsColors.get("color") != null) {
         objectColor = searchParamsColors.get("color")
     } else {
-        objectColor = _c[random]
+        objectColor = "Morning blue"
+    }
+
+    const selectGender = (type: string, value: string) => {
+        searchParamsGender.set(type, value)
+        setSearchParamsGender(searchParamsGender)
     }
 
     const selectColor = (type: string, value: string) => {
@@ -191,14 +206,34 @@ const ColorIndex = (props) => {
                                 <div className="grid--2_6_2">
                                     <h2 style={{color: getKeyByValue(colorRef, objectColor)}}>{objectColor}</h2>
                                     <div></div>
-                                    <div className={"grid--2_1"}>
-                                        <p>scroll this way</p>
+                                    <div className={"grid--even_3"}>
+                                        <div>
+                                            <div>
+                                                {maleFilter &&
+                                                    <p onClick={()=>selectGender("sex", "")}>◧ male</p>
+                                                }
+                                                {!maleFilter &&
+                                                    <p onClick={()=>selectGender("sex", "MALE")}>⧅ male</p>
+                                                }
+                                            </div>
+                                            <div>
+                                                {femaleFilter &&
+                                                    <p onClick={()=>selectGender("sex", "")}>◧ female</p>
+                                                }
+                                                {!femaleFilter &&
+                                                    <p onClick={()=>selectGender("sex", "FEMALE")}>⧅ female</p>
+                                                }
+                                            </div>
+
+                                        </div>
                                         {bitonal &&
                                             <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
                                         }
                                         {!bitonal &&
                                             <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
                                         }
+                                        <p>scroll this way</p>
+
                                     </div>
                                 </div>
 
