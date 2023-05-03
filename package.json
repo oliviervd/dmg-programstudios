@@ -10,7 +10,7 @@
   "homepage": "https://dmg-programstudios.herokuapp.com/",
   "author": "Olivier Van D'huynslager (Design Museum Gent)",
   "dependencies": {
-    "@supabase/supabase-js": "^2.8.0",
+    "@supabase/supabase-js": "^2.21.0",
     "@tanstack/react-query": "^4.28.0",
     "@tanstack/react-query-devtools": "^4.27.0",
     "@testing-library/jest-dom": "^5.16.4",
@@ -27,6 +27,7 @@
     "invariant": "^2.2.4",
     "jquery": "^3.6.0",
     "node-cron": "^3.0.2",
+    "openapi-typescript": "^6.2.4",
     "os": "^0.1.2",
     "os-browserify": "^0.3.0",
     "react": "^18.2.0",

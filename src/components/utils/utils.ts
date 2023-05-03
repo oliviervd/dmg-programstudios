@@ -2,6 +2,16 @@ export function wait(duration) {
     return new Promise(resolve => setTimeout(resolve, duration))
 }
 
+export function filterGender(male:boolean, female:boolean){
+    const filteredSet:[] = []
+    if (male) {
+
+    }
+    if (female) {
+
+    }
+}
+
 // IMAGE HANDLING
 export function fetchImageByColor(objects, color) {
     // fetch list of images that share colorname (color);
