@@ -39,7 +39,7 @@ const StudioGrid = (props) => {
                             <p className="uppercase justify padding-10"
                                style={{height: '10vh'}}>{description}</p>
                             {!isLoading&&
-                                <img className="img__fit center" alt={""} src={studio.studioImage.url}
+                                <img style={{paddingLeft: "10px"}} className="img__fit center" alt={""} src={studio.studioImage.url}
                                     //onClick={() => props.setCarouselState(!props.carouselState)}
                                 />
                             }
