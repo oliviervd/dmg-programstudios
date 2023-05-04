@@ -1,5 +1,5 @@
 import {useQuery} from "@tanstack/react-query";
-import {useNavigate} from "react-router-dom";
+import {useNavigate, Link} from "react-router-dom";
 import {fetchDataStudiosPayload} from "../../utils/data_parsers";
 import axios from "axios";
 
@@ -25,9 +25,7 @@ const StudioGrid = (props) => {
 
                  title_en = fetchDataStudiosPayload(studio, props.language, "title")
                  description = fetchDataStudiosPayload(studio, props.language, "description")
-
-                 href = ""
-                 //href = "/studio/" + studio.title_en.split(" ")[1].toLowerCase();
+                 href = "/studio/" + title_en.split(" ")[1].toLowerCase();
 
                  const routeChange = () => {
                         navigate(href);
@@ -35,11 +33,13 @@ const StudioGrid = (props) => {
                 return (
                     <div id="HomeProjectGrid" className="rowScroll fade-in open" style={{overflow: "scroll"}}>
                         <div>
-                            <h2 className="text-center uppercase box-title grow main">{title_en}</h2>
+                            <div style={{textAlign:"center"}}>
+                                <Link className="HeaderLinkIndex uppercase" to={} >{title_en}</Link>
+                            </div>
                             <p className="uppercase justify padding-10"
                                style={{height: '10vh'}}>{description}</p>
                             {!isLoading&&
-                                <img style={{paddingLeft: "10px"}} className="img__fit center" alt={""} src={studio.studioImage.url}
+                                <img style={{maxWidth: "90%"}} className="img__fit center" alt={""} src={studio.studioImage.url}
                                     //onClick={() => props.setCarouselState(!props.carouselState)}
                                 />
                             }

@@ -1,5 +1,3 @@
-
-
 /* ---------------------------------- FONTS & TYPE ---------------------------------- */
 /* WOFF is cleaner; */
 
@@ -80,6 +78,15 @@ h2 {
     font-size: 6vh;
     font-family: "Combine", sans-serif;
     text-decoration: none;
+}
+
+.HeaderLinkIndex{
+    font-size: 33px;
+    font-family: "Equateur", sans-serif;
+    font-weight: normal;
+    text-align: center;
+    text-decoration: none;
+
 }
 
 h2.main {
