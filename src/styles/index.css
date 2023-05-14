@@ -33,6 +33,10 @@ html, body {
     background-blend-mode: color-burn;
 }
 
+img {
+    max-width: 100%;
+}
+
 .button-dropdown{
     position: absolute;
     right: 10vw;
