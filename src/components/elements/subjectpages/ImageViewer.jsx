@@ -1,14 +1,23 @@
 import React from "react"
-import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
-import {Carousel} from "react-responsive-carousel";
-import ReactDOM from 'react-dom';
 
 const ImageViewer = (props) => {
-    let images = ""
+
+    let attribution, license;
+
+    try {
+        attribution = props.details.attributions[0]
+    } catch(e) {attribution = "unknown"}
+
+    try {
+        license = props.details.CC_Licenses[0]
+    } catch (e) {license = "unknown"}
 
     return(
         <div>
-            <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+            <div className={"imageContainer"}>
+                <p className={"infoIcon"}>i</p>
+                <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+            </div>
         </div>
     )
 }

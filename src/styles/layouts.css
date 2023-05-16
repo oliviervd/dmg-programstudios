@@ -35,11 +35,6 @@
     text-align: center;
 }
 
-.imageContainer{
-    position:relative;
-    border: black 2px solid;
-}
-
 .hoverImage{
     opacity: 1
 }
