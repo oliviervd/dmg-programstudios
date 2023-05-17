@@ -1,0 +1,87 @@
+{
+  "title": {
+    "NL": "titel",
+    "EN": "title",
+    "FR": "titre"
+  },
+  "description": {
+    "NL": "beschrijving",
+    "EN": "description",
+    "FR": "description"
+  },
+  "type": {
+    "NL": "objectnaam (type)",
+    "EN": "type",
+    "FR": "type"
+  },
+  "advanced search": {
+    "NL": "geavanceerd zoeken",
+    "EN": "advanced search",
+    "FR": "recherche avancée"
+  },
+  "search_button": {
+    "NL": "zoek",
+    "EN": "search",
+    "FR": "recherche"
+  },
+  "open_search_interface": {
+    "NL": "↟ geavanceerd zoeken openen ↟",
+    "EN": "↟ open advanced search ↟",
+    "FR": "↟ ouvrir la recherche avancée ↟"
+  },
+  "images": {
+    "NL": "afbeeldingen",
+    "EN": "images",
+    "FR": "images"
+  },
+  "back_to_index": {
+    "NL": "terug naar index",
+    "EN": "back to index",
+    "FR": "retour à l'index"
+  },
+  "set_index": {
+    "NL": "kies indexering",
+    "EN": "pick index",
+    "FR": "indice de sélection"
+   },
+  "colors": {
+    "NL": "KLEUREN",
+    "EN": "COLORS",
+    "FR": "COULEURS"
+  },
+  "exhibition": {
+    "NL": "TENTOONSTELLING",
+    "EN": "EXHIBITION",
+    "FR": "EXPOSITION"
+  },
+  "new": {
+    "NL": "RECENT TOEGEVOEGD",
+    "EN": "RECENTLY ADDED",
+    "FR": "AJOUTE RECEMMENT"
+  },
+  "color_search_prompt": {
+    "NL": "  op zoek naar een kleur?",
+    "EN": "  looking for a specific color?",
+    "FR": "  vous recherchez une couleur spécifique?"
+  },
+  "male": {
+    "NL": "man",
+    "EN": "male",
+    "FR": "mâle"
+  },
+  "female": {
+    "NL": "vrouw",
+    "EN": "female",
+    "FR": "femme"
+  },
+  "bitonal": {
+    "NL": "bitonaal",
+    "EN": "bitonal",
+    "FR": "bitonal"
+  },
+  "scroll": {
+    "NL": "↠↠  scroll ↠↠",
+    "EN": "↠↠  scroll ↠↠",
+    "FR": "↠↠  scroll ↠↠"
+  }
+}
