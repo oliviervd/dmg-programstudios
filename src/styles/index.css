@@ -33,6 +33,10 @@ html, body {
     background-blend-mode: color-burn;
 }
 
+img {
+    max-width: 100%;
+}
+
 .button-dropdown{
     position: absolute;
     right: 10vw;
@@ -209,7 +213,8 @@ html, body {
     }
 }
 
-@-o-keyframes fadeOut {
+@-o-keyframes
+fadeOut {
     0% {
         opacity:1;
     }
@@ -466,11 +471,7 @@ input{
 .ObjectViewer img{
     max-height: 50vh;
     max-width: 100%;
-    margin: 10px;
 }
-
-
-
 
 .__img{
     border: none;
@@ -573,28 +574,6 @@ input{
     text-align: center;
 }
 
-
-.bruises__box{
-    position: fixed;
-    cursor: grab;
-    top: 20vh;
-    left: 80vw;
-    width: 300px;
-    border: black 2px solid;
-    padding: 10px 10px;
-}
-
-.bruises__header{
-    text-align: center;
-    font-size: 20px;
-    border: 2px solid black;
-    margin-bottom: 3.33px;
-    padding: 3.33px 3.33px;
-}
-
-.bruises__text{
-    border-top: black solid 2px;
-}
 
 .login-wrapper {
     display: flex;

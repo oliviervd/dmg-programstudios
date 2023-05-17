@@ -221,6 +221,51 @@ a:visited {
     text-decoration: none;
 }
 
+.imageContainer{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+.infoIcon{
+    width: 12px;
+    height: 12px;
+    line-height: 14px;
+    text-align: center;
+    position: absolute;
+    top: 18px;
+    right: 18px;
+    color: black;
+    border: black 2px solid;
+    border-radius: 50%;
+}
+
+.infoIcon:hover{
+    border-color: #f1f1f1;
+    color: #f1f1f1;
+}
+
+.hiddenInformation {
+    display: none;
+}
+
+.hiddenInformation {
+    display: block;
+    width: 400px;
+    height: auto;
+    top: 40px;
+    right: 18px;
+
+    line-height: 14px;
+    text-align: left;
+
+    position: absolute;
+    color: black;
+    background: whitesmoke;
+    border: black solid 1px;
+    padding: 10px;
+}
+
 font-size--small {
     font-size:13px;
 }

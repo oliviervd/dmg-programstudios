@@ -4,6 +4,11 @@
     margin-top: 1vh;
 }
 
+.grid__objectViewer{
+    display: grid;
+    grid-template-rows: 10% 70% 20%;
+}
+
 .container-masonry-full{
     width: 100%
 }
