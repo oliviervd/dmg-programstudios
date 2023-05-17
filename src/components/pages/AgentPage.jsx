@@ -6,6 +6,8 @@ import {useParams} from "react-router-dom";
 import useAgentQuery from "../hooks/useAgentQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useObjectsQuery from "../hooks/useObjectsQuery";
+import translations from "../data/translations.json";
+
 
 const AgentPage = () => {
 
@@ -51,6 +53,11 @@ const AgentPage = () => {
         }
     }
 
+    function translate(_term, _lang) {
+        return translations[_term][_lang] // _lang = key.
+    }
+
+
     const navigate = useNavigate()
     const routeChange = () => {
         navigate("/index/colors/")
@@ -64,7 +71,7 @@ const AgentPage = () => {
                 <div>
 
                     <div className="grid--even_10">
-                        <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ back</h2>
+                        <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ {translate("back", language)}</h2>
                         <div></div>
                         <div></div>
                         <div></div>
@@ -76,9 +83,9 @@ const AgentPage = () => {
                         <div></div>
 
                         <div className="grid--even_3">
-                            <h2 className="uppercase text-center strike-through" style={{margin: 10}}>EN</h2>
-                            <h2 className="uppercase text-center strike-through" style={{margin: 10}}>NL</h2>
-                            <h2 className="uppercase text-center strike-through" style={{margin: 10}}>FR</h2>
+                            <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>{setLanguage("EN")}}>EN</h2>
+                            <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>{setLanguage("NL")}}>NL</h2>
+                            <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>{setLanguage("FR")}}>FR</h2>
                         </div>
 
                     </div>

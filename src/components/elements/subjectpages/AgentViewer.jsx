@@ -4,6 +4,7 @@ import {
     fetchPersBirth,
     fetchPersDeath,
 } from "../../utils/data_parsers/dataParserPers";
+import translations from '../../data/translations.json';
 import {fetchOeuvreV2, listOfParticipatedExhibitions} from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
@@ -17,6 +18,19 @@ const AgentViewer = (props) =>  {
     const isMobile = useMediaQuery({
         query: '(max-width: 700px)'
     })
+
+    const [language, setLanguage] = useState("EN");
+
+    let _lang
+    try{
+        _lang = props.language
+    } catch {
+        _lang = language
+    }
+
+    function translate(_term, _lang) {
+        return translations[_term][_lang] // _lang = key.
+    }
 
     let labels = {
         "EN": {
@@ -95,7 +109,6 @@ const AgentViewer = (props) =>  {
         } catch (error) {}
 
         try {
-            //oeuvre = fetchOeuvre(_baseLDES, _basePERS, PERS, THES)
             oeuvre = fetchOeuvreV2(_baseLDES, _basePERS, PERS, THES)
             console.log(oeuvre);
         } catch (error) {}
@@ -103,6 +116,8 @@ const AgentViewer = (props) =>  {
         try {
             exhibitions = listOfParticipatedExhibitions(oeuvre);
         } catch(e) {console.log(e)}
+
+        let WikiSnippet = "loading";
 
         try {
             //todo: put in generic function.

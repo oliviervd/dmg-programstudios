@@ -158,5 +158,10 @@
     "NL": "gerelateerde objecten",
     "EN": "related objects",
     "FR": "objets apparentés"
+  },
+  "back": {
+    "NL": "terug",
+    "EN": "back",
+    "FR": "retourner"
   }
 }
