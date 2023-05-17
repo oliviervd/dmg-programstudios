@@ -424,7 +424,7 @@ const ObjectViewer = (props) => {
                                                             <div>
                                                                 <div className={"lineH"}></div>
                                                                 <br></br>
-                                                                <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                                <h2 onClick={()=>setOpenColors(true)}>↨ {translate("colors", _lang)}</h2>
                                                                 <br></br>
                                                                 <div className={"lineH"}></div>
                                                                 <br></br>
@@ -444,7 +444,7 @@ const ObjectViewer = (props) => {
                                                                     )})}
                                                                 </div>
                                                                 <br></br>
-                                                                <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                                <h2 onClick={()=>setOpenColors(false)}>↥ {translate("close",_lang)}</h2>
                                                                 <br></br>
                                                                 <div className={"lineH"}></div>
                                                                 <br></br>

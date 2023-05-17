@@ -69,6 +69,11 @@
     "EN": "  looking for a specific color?",
     "FR": "  vous recherchez une couleur spécifique?"
   },
+  "exhibition_search_prompt": {
+    "NL": "  op zoek naar een tentoonstelling?",
+    "EN": "  looking for a specific exhibition?",
+    "FR": "  vous recherchez une exposition spécifique?"
+  },
   "male": {
     "NL": "man",
     "EN": "male",
@@ -148,5 +153,10 @@
     "NL": "huidige locatie",
     "EN": "current location",
     "FR": "lieu actuel"
+  },
+  "relatedObjects":{
+    "NL": "gerelateerde objecten",
+    "EN": "related objects",
+    "FR": "objets apparentés"
   }
 }
