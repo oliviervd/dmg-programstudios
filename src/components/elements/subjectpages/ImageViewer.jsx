@@ -1,18 +1,12 @@
 import React, {useState} from "react"
-import {at} from "es5-ext/string/#";
 
 const ImageViewer = (props) => {
-
     const [showImageInfo, setShowImageInfo] = useState(false);
     let attribution, license;
-
-
     try {
         attribution = props.details.attributions[0]
         attribution = attribution.split(",")
     } catch(e) {attribution = "unknown"}
-
-    console.log(attribution)
 
     try {
         license = props.details.CC_Licenses[0]
