@@ -9,6 +9,8 @@ import ExhibitionIndex from "../elements/indexes/exhibitionIndex";
 import ColorIndex from "../elements/indexes/colorIndex";
 import Loading from "../elements/utils/Loading";
 import NewItems from "../elements/indexes/newItems";
+import translations from '../data/translations.json';
+
 
 import useObjectsQuery from "../hooks/useObjectsQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
@@ -38,6 +40,7 @@ const Index = () => {
     const [queryResult, setQueryResult] = useState([]);
     const [doubleHeader, setDoubleHeader] = useState(false);
     const [closeSearch, setCloseSearch] = useState(false);
+    const [language, setLanguage] = useState("EN")
 
     // * --- IMPROVED API CALLS --- * //
     const _objects  = useObjectsQuery().data;
@@ -45,8 +48,15 @@ const Index = () => {
     const _pers = useAgentQuery().data;
     const _exhibitions = useExhibitionLister(_objects);
 
+    function translate(_term, _lang) {
+        return translations[_term][_lang] // _lang = key.
+    }
+
+    // * --- DECLARE OBJECTS (LAYOUT) --- * //
+    let style, searchBoxStyle, header
+
     let param = useParams();
-    const {type} =  useParams()
+    // todo: set params for language in URL (NL, FR , EN)
 
     useEffect(() => {
         if (param.type === "color") {
@@ -66,8 +76,6 @@ const Index = () => {
         }
     }, [param.type]);
 
-    let style;
-
     if(about) {
         style = {
             height: "200px",
@@ -81,8 +89,6 @@ const Index = () => {
         }
     }
 
-    let searchBoxStyle;
-
     if (closeSearch) {
         searchBoxStyle = {
             gridTemplateColumns: "5% 95%"
@@ -93,7 +99,6 @@ const Index = () => {
         setDoubleHeader(!doubleHeader);
     }
 
-    let header
     if (doubleHeader) {
         header = {
             //position: "fixed",
@@ -156,21 +161,21 @@ const Index = () => {
                             <div></div>
                             <div></div>
                             {about &&
-                                <h2 className={!doubleHeader?"uppercase text-center":"uppercase text-center underlined"} style={{margin: 10}} onClick={()=> closeSearchTab()}>back to index</h2>
+                                <h2 className={!doubleHeader?"uppercase text-center":"uppercase text-center underlined"} style={{margin: 10}} onClick={()=> closeSearchTab()}>{translate("back_to_index", language)}</h2>
                             }
                             {about &&
                                 <div></div>
                             }
                             {!about &&
-                                <h2 className={!doubleHeader?"uppercase text-center":"uppercase text-center underlined"} style={{margin: 10}} onClick={()=>dropDownMenu()} >set index</h2>
+                                <h2 className={!doubleHeader?"uppercase text-center":"uppercase text-center underlined"} style={{margin: 10}} onClick={()=>dropDownMenu()}>{translate("set_index", language)}</h2>
                             }
                             {!about &&
                                 <h2 className="uppercase text-center idle" style={{margin: 10}} onClick={()=>openSearchTab()}>search</h2>
                             }
                             <div className="grid--even_3">
-                                <h2 className="uppercase text-center strike-through" style={{margin: 10}}>EN</h2>
-                                <h2 className="uppercase text-center strike-through" style={{margin: 10}}>NL</h2>
-                                <h2 className="uppercase text-center strike-through" style={{margin: 10}}>FR</h2>
+                                <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("EN")}>EN</h2>
+                                <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("NL")}>NL</h2>
+                                <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("FR")}>FR</h2>
                             </div>
 
                         </div>
@@ -182,15 +187,12 @@ const Index = () => {
                                 <div></div>
                                 <div></div>
                                 <div></div>
-                                <div></div>
-
                                 <div>
-                                    <Link to={`/index/color/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openExhibitionIndex()}>COLORS</Link>
-                                    <Link to={`/index/exhibition/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openColorIndex()}>EXHIBITIONS</Link>
-                                    <Link to={`/index/new/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openNewIndex()}>NEW</Link>
+                                    <Link to={`/index/color/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openExhibitionIndex()}>{translate("exhibition", language)}</Link>
+                                    <Link to={`/index/exhibition/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openColorIndex()}>{translate("colors", language)}</Link>
+                                    <Link to={`/index/new/`} className="HeaderLink" style={{margin: 10, whiteSpace: "nowrap"}} onClick={()=>openNewIndex()}>{translate("new", language)}</Link>
                                 </div>
-
-
+                                <div></div>
                             </div>
                         }
                     </div>
@@ -200,7 +202,7 @@ const Index = () => {
                             <div>
                                 <AdvancedSearchQuery about={about} setAbout={setAbout}
                                                      showAdvancedSearch={showAdvancedSearch} setShowAdvancedSearch={setShowAdvancedSearch}
-                                                     objects={_objects} thesaurus={_thes}
+                                                     objects={_objects} thesaurus={_thes} language={language}
                                                      setQueryResult={setQueryResult} closeSearch={closeSearch} setCloseSearch={setCloseSearch}
                                 />
                             </div>
@@ -208,7 +210,7 @@ const Index = () => {
                         }
 
                         {showAdvancedSearch&&
-                            <AdvancedSearch queryResults={queryResult} objecten={_objects} thesaurus={_thes} personen={_pers} setCloseSearch={setCloseSearch}/>
+                            <AdvancedSearch queryResults={queryResult} objecten={_objects} thesaurus={_thes} personen={_pers} setCloseSearch={setCloseSearch} language={language}/>
                         }
 
                         {!showAdvancedSearch&&
@@ -220,6 +222,7 @@ const Index = () => {
                                                     about={about} showIndexColors={showIndexColors} setShowIndexColors={setShowIndexColors}
                                                     collapseColors={collapseColors} setCollapseColors={setCollapseColors}
                                                     collapseExhibition={collapseExhibition} setCollapseExhibition={setCollapseExhibition}
+                                                    language={language}
                                         />
                                     </Suspense>
 
@@ -227,10 +230,11 @@ const Index = () => {
                                     <ExhibitionIndex exhibitionList={_exhibitions} objects={_objects} thesaurus={_thes} agents={_pers}
                                                      collapseColors={collapseColors} setCollapseColors={setCollapseColors}
                                                      collapseExhibition={collapseExhibition} setCollapseExhibition={setCollapseExhibition}
+                                                     language={language}
                                     />
 
                                     <NewItems collapseNewItems={collapseNewItems} setCollapseNewItem={setCollapseNewItems}
-                                              objects={_objects} thesaurus={_thes} agents={_pers}/>
+                                              objects={_objects} thesaurus={_thes} agents={_pers} language={language}/>
 
                                 </div>
                             </div>
