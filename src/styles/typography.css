@@ -230,6 +230,27 @@ a:visited {
     color: #f1f1f1;
 }
 
+.hiddenInformation {
+    display: none;
+}
+
+.hiddenInformation {
+    display: block;
+    width: 400px;
+    height: auto;
+    top: 40px;
+    right: 18px;
+
+    line-height: 14px;
+    text-align: left;
+
+    position: absolute;
+    color: black;
+    background: whitesmoke;
+    border: black solid 1px;
+    padding: 10px;
+}
+
 font-size--small {
     font-size:13px;
 }
