@@ -19,6 +19,11 @@
     "EN": "advanced search",
     "FR": "recherche avancée"
   },
+  "search": {
+    "NL": "zoeken",
+    "EN": "search",
+    "FR": "sercher"
+  },
   "search_button": {
     "NL": "zoek",
     "EN": "search",
@@ -40,24 +45,24 @@
     "FR": "retour à l'index"
   },
   "set_index": {
-    "NL": "kies indexering",
-    "EN": "pick index",
-    "FR": "indice de sélection"
+    "NL": "indexering",
+    "EN": "index",
+    "FR": "indice"
    },
   "colors": {
-    "NL": "KLEUREN",
-    "EN": "COLORS",
-    "FR": "COULEURS"
+    "NL": "kleuren",
+    "EN": "colors",
+    "FR": "couleurs"
   },
   "exhibition": {
-    "NL": "TENTOONSTELLING",
-    "EN": "EXHIBITION",
-    "FR": "EXPOSITION"
+    "NL": "tentoonstellingen",
+    "EN": "exhibitions",
+    "FR": "expositions"
   },
   "new": {
-    "NL": "RECENT TOEGEVOEGD",
-    "EN": "RECENTLY ADDED",
-    "FR": "AJOUTE RECEMMENT"
+    "NL": "recent toegevoegd",
+    "EN": "recently added",
+    "FR": "ajoute recemment"
   },
   "color_search_prompt": {
     "NL": "  op zoek naar een kleur?",
@@ -83,5 +88,65 @@
     "NL": "↠↠  scroll ↠↠",
     "EN": "↠↠  scroll ↠↠",
     "FR": "↠↠  scroll ↠↠"
+  },
+  "close": {
+    "NL": "sluiten",
+    "EN": "close",
+    "FR": "fermer"
+  },
+  "objectNumber": {
+    "NL": "objectnummer",
+    "EN": "object number",
+    "FR": "numéro d'inventaire"
+  },
+  "designedBy": {
+    "NL": "ontwerper",
+    "EN": "designed by",
+    "FR": "design"
+  },
+  "producedBy": {
+    "NL": "producent",
+    "EN": "producer",
+    "FR": "producteur"
+  },
+  "location": {
+    "NL": "locatie",
+    "EN": "location",
+    "FR": "location"
+  },
+  "date": {
+    "NL": "datering",
+    "EN": "date",
+    "FR": "date"
+  },
+  "technique": {
+    "NL": "techniek",
+    "EN": "technique",
+    "FR": "technique"
+  },
+  "dimensions": {
+    "NL": "afmetingen",
+    "EN": "dimensions",
+    "FR": "dimensions"
+  },
+  "materials": {
+    "NL": "materialen",
+    "EN": "materials",
+    "FR": "materials"
+  },
+  "acquisition": {
+    "NL": "verwerving",
+    "EN": "acquisition",
+    "FR": "acquisition"
+  },
+  "shownInExhibitions": {
+    "NL": "tentoonstellingen",
+    "EN": "exhibitions",
+    "FR": "expositions"
+  },
+  "currentLocation": {
+    "NL": "huidige locatie",
+    "EN": "current location",
+    "FR": "lieu actuel"
   }
 }
