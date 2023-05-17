@@ -173,9 +173,9 @@ const Index = () => {
                                 <h2 className="HeaderLink uppercase text-center idle" style={{margin: 10}} onClick={()=>openSearchTab()}>{translate("search", language)}</h2>
                             }
                             <div className="grid--even_3">
-                                <h2 className="HeaderLink uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("EN")}>EN</h2>
-                                <h2 className="HeaderLink uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("NL")}>NL</h2>
-                                <h2 className="HeaderLink uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("FR")}>FR</h2>
+                                <h2 className="HeaderLink uppercase text-center" style={{margin: 10}} onClick={()=>setLanguage("EN")}>EN</h2>
+                                <h2 className="HeaderLink uppercase text-center" style={{margin: 10}} onClick={()=>setLanguage("NL")}>NL</h2>
+                                <h2 className="HeaderLink uppercase text-center" style={{margin: 10}} onClick={()=>setLanguage("FR")}>FR</h2>
                             </div>
 
                         </div>
