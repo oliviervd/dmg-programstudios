@@ -51,6 +51,11 @@
     grid-template-rows: auto;
 }
 
+.gridH--even{
+    display: grid;
+    grid-auto-columns: auto;
+}
+
 .grid--1_8_1 {
     display:grid;
     grid-template-columns: 10% 80% 10%;
@@ -244,6 +249,11 @@
 .gridH--1_3_6{
     display:grid;
     grid-template-rows: 10% 30% 60%;
+}
+
+.gridH--1-2{
+    display: grid;
+    grid-template-rows: 30% 70%;
 }
 
 .gridH--1_6_3 {
