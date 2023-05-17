@@ -184,7 +184,7 @@ const ColorIndex = (props) => {
                                 <div>
                                     <div className="lineH"/>
                                     <div className="grid--2_6_2" style={{height: '5vh'}}>
-                                        <h2>{translate('colors',_lang)}</h2>
+                                        <h2>{translate('colors',_lang).toUpperCase()}</h2>
                                         <div className={"grid--5_95"}>
                                             <div></div>
                                             <SearchFilterBar filter={hexFilter} setFilter={setHexFilter} prompt={translate("color_search_prompt", _lang)}/>
@@ -255,7 +255,7 @@ const ColorIndex = (props) => {
                                             <ObjectViewer
                                                 showDetailUI={showDetailUIColors} setShowDetailUI={setShowDetailUIColors} description={false} thesaurus={_thes} personen={_pers}
                                                 image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
-                                                box={false} split={false}
+                                                box={false} split={false} language={_lang}
                                             />
                                         }
                                     </div>
@@ -269,7 +269,7 @@ const ColorIndex = (props) => {
                                             <ObjectViewer
                                                 showDetailUI={showDetailUIColors} setShowDetailUI={setShowDetailUIColors} description={false} thesaurus={_thes} personen={_pers}
                                                 image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
-                                                box={false} split={false}
+                                                box={false} split={false} language={_lang}
                                             />
                                         }
                                     </div>

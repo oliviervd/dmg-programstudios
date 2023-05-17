@@ -161,21 +161,21 @@ const Index = () => {
                             <div></div>
                             <div></div>
                             {about &&
-                                <h2 className={!doubleHeader?"uppercase text-center":"uppercase text-center underlined"} style={{margin: 10}} onClick={()=> closeSearchTab()}>{translate("back_to_index", language)}</h2>
+                                <h2 className={!doubleHeader?"HeaderLink uppercase text-center":"HeaderLink uppercase text-center underlined"} style={{margin: 10}} onClick={()=> closeSearchTab()}>{translate("back_to_index", language)}</h2>
                             }
                             {about &&
                                 <div></div>
                             }
                             {!about &&
-                                <h2 className={!doubleHeader?"uppercase text-center":"uppercase text-center underlined"} style={{margin: 10}} onClick={()=>dropDownMenu()}>{translate("set_index", language)}</h2>
+                                <h2 className={!doubleHeader?"uppercase text-center HeaderLink":"HeaderLink uppercase text-center underlined"} style={{margin: 10}} onClick={()=>dropDownMenu()}>{translate("set_index", language)}</h2>
                             }
                             {!about &&
-                                <h2 className="uppercase text-center idle" style={{margin: 10}} onClick={()=>openSearchTab()}>search</h2>
+                                <h2 className="HeaderLink uppercase text-center idle" style={{margin: 10}} onClick={()=>openSearchTab()}>{translate("search", language)}</h2>
                             }
                             <div className="grid--even_3">
-                                <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("EN")}>EN</h2>
-                                <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("NL")}>NL</h2>
-                                <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("FR")}>FR</h2>
+                                <h2 className="HeaderLink uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("EN")}>EN</h2>
+                                <h2 className="HeaderLink uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("NL")}>NL</h2>
+                                <h2 className="HeaderLink uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("FR")}>FR</h2>
                             </div>
 
                         </div>
@@ -187,12 +187,16 @@ const Index = () => {
                                 <div></div>
                                 <div></div>
                                 <div></div>
-                                <div>
-                                    <Link to={`/index/color/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openExhibitionIndex()}>{translate("exhibition", language)}</Link>
-                                    <Link to={`/index/exhibition/`} className="HeaderLink" style={{margin: 10}} onClick={()=>openColorIndex()}>{translate("colors", language)}</Link>
-                                    <Link to={`/index/new/`} className="HeaderLink" style={{margin: 10, whiteSpace: "nowrap"}} onClick={()=>openNewIndex()}>{translate("new", language)}</Link>
+                                <div></div>
+                                <div className={"grid--even"}>
+                                    <Link to={`/index/color/`} className="HeaderLink" style={{}} onClick={()=>openExhibitionIndex()}>{translate("colors", language)}</Link>
+                                    <Link to={`/index/exhibition/`} className="HeaderLink" style={{}} onClick={()=>openColorIndex()}>{translate("exhibition", language)}</Link>
+                                    <Link to={`/index/new/`} className="HeaderLink" style={{whiteSpace: "nowrap"}} onClick={()=>openNewIndex()}>{translate("new", language)}</Link>
                                 </div>
                                 <div></div>
+                                <div></div>
+                                <div></div>
+
                             </div>
                         }
                     </div>
