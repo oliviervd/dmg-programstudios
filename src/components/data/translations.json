@@ -1,0 +1,167 @@
+{
+  "title": {
+    "NL": "titel",
+    "EN": "title",
+    "FR": "titre"
+  },
+  "description": {
+    "NL": "beschrijving",
+    "EN": "description",
+    "FR": "description"
+  },
+  "type": {
+    "NL": "objectnaam (type)",
+    "EN": "type",
+    "FR": "type"
+  },
+  "advanced search": {
+    "NL": "geavanceerd zoeken",
+    "EN": "advanced search",
+    "FR": "recherche avancée"
+  },
+  "search": {
+    "NL": "zoeken",
+    "EN": "search",
+    "FR": "sercher"
+  },
+  "search_button": {
+    "NL": "zoek",
+    "EN": "search",
+    "FR": "recherche"
+  },
+  "open_search_interface": {
+    "NL": "↟ geavanceerd zoeken openen ↟",
+    "EN": "↟ open advanced search ↟",
+    "FR": "↟ ouvrir la recherche avancée ↟"
+  },
+  "images": {
+    "NL": "afbeeldingen",
+    "EN": "images",
+    "FR": "images"
+  },
+  "back_to_index": {
+    "NL": "terug naar index",
+    "EN": "back to index",
+    "FR": "retour à l'index"
+  },
+  "set_index": {
+    "NL": "indexering",
+    "EN": "index",
+    "FR": "indice"
+   },
+  "colors": {
+    "NL": "kleuren",
+    "EN": "colors",
+    "FR": "couleurs"
+  },
+  "exhibition": {
+    "NL": "tentoonstellingen",
+    "EN": "exhibitions",
+    "FR": "expositions"
+  },
+  "new": {
+    "NL": "recent toegevoegd",
+    "EN": "recently added",
+    "FR": "ajoute recemment"
+  },
+  "color_search_prompt": {
+    "NL": "  op zoek naar een kleur?",
+    "EN": "  looking for a specific color?",
+    "FR": "  vous recherchez une couleur spécifique?"
+  },
+  "exhibition_search_prompt": {
+    "NL": "  op zoek naar een tentoonstelling?",
+    "EN": "  looking for a specific exhibition?",
+    "FR": "  vous recherchez une exposition spécifique?"
+  },
+  "male": {
+    "NL": "man",
+    "EN": "male",
+    "FR": "mâle"
+  },
+  "female": {
+    "NL": "vrouw",
+    "EN": "female",
+    "FR": "femme"
+  },
+  "bitonal": {
+    "NL": "bitonaal",
+    "EN": "bitonal",
+    "FR": "bitonal"
+  },
+  "scroll": {
+    "NL": "↠↠  scroll ↠↠",
+    "EN": "↠↠  scroll ↠↠",
+    "FR": "↠↠  scroll ↠↠"
+  },
+  "close": {
+    "NL": "sluiten",
+    "EN": "close",
+    "FR": "fermer"
+  },
+  "objectNumber": {
+    "NL": "objectnummer",
+    "EN": "object number",
+    "FR": "numéro d'inventaire"
+  },
+  "designedBy": {
+    "NL": "ontwerper",
+    "EN": "designed by",
+    "FR": "design"
+  },
+  "producedBy": {
+    "NL": "producent",
+    "EN": "producer",
+    "FR": "producteur"
+  },
+  "location": {
+    "NL": "locatie",
+    "EN": "location",
+    "FR": "location"
+  },
+  "date": {
+    "NL": "datering",
+    "EN": "date",
+    "FR": "date"
+  },
+  "technique": {
+    "NL": "techniek",
+    "EN": "technique",
+    "FR": "technique"
+  },
+  "dimensions": {
+    "NL": "afmetingen",
+    "EN": "dimensions",
+    "FR": "dimensions"
+  },
+  "materials": {
+    "NL": "materialen",
+    "EN": "materials",
+    "FR": "materials"
+  },
+  "acquisition": {
+    "NL": "verwerving",
+    "EN": "acquisition",
+    "FR": "acquisition"
+  },
+  "shownInExhibitions": {
+    "NL": "tentoonstellingen",
+    "EN": "exhibitions",
+    "FR": "expositions"
+  },
+  "currentLocation": {
+    "NL": "huidige locatie",
+    "EN": "current location",
+    "FR": "lieu actuel"
+  },
+  "relatedObjects":{
+    "NL": "gerelateerde objecten",
+    "EN": "related objects",
+    "FR": "objets apparentés"
+  },
+  "back": {
+    "NL": "terug",
+    "EN": "back",
+    "FR": "retourner"
+  }
+}

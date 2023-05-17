@@ -7,6 +7,7 @@ import {useSearchParams} from "react-router-dom";
 import ObjectViewer from "../subjectpages/ObjectViewer";
 import SearchFilterBar from "../utils/SearchFilterBar";
 import {filterByKey} from "../../utils/data_parsers";
+import translations from "../../data/translations.json";
 
 const ExhibitionIndex = (props) => {
 
@@ -20,6 +21,11 @@ const ExhibitionIndex = (props) => {
 
     let ExhOptions;
     let exhibition:string
+    let _lang = props.language
+
+    function translate(_term, _lang) {
+        return translations[_term][_lang] // _lang = key.
+    }
 
     const selectExhibition = (type:string, value:string) => {
         exhibitionSearch.set(type, value)
@@ -156,10 +162,10 @@ const ExhibitionIndex = (props) => {
                         <div>
                             <div className="lineH"/>
                             <div className="grid--2_6_2 " style={{height: '5vh'}}>
-                                <p>exhibitions</p>
+                                <h2>{translate("exhibition", _lang).toUpperCase()}</h2>
                                 <div className={"grid--5_95"}>
                                     <div></div>
-                                    <SearchFilterBar filter={exhibitionFilter} setFilter={setExhibitionFilter} prompt={" looking for a specific exhibition?"}/>
+                                    <SearchFilterBar filter={exhibitionFilter} setFilter={setExhibitionFilter} prompt={translate("exhibition_search_prompt", _lang)}/>
                                 </div>
                             </div>
                             <div className={"lineH"}></div>
@@ -172,7 +178,7 @@ const ExhibitionIndex = (props) => {
                     <div>
                         <div className="lineH"/>
                         <div className="grid--2_6_2">
-                            <p>images</p>
+                            <p>{translate("images", _lang)}</p>
                             <div></div>
                             <p></p>
                         </div>
@@ -182,13 +188,13 @@ const ExhibitionIndex = (props) => {
                                 <h2>{exhibition}</h2>
                                 <div></div>
                                 <div className={"grid--2_1"}>
-                                    <p> scroll this way </p>
                                     {bitonal &&
-                                        <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
+                                        <p onClick={()=> setBitonal(!bitonal)} >◧ {translate("bitonal", _lang)}</p>
                                     }
                                     {!bitonal &&
-                                        <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
+                                        <p onClick={()=> setBitonal(!bitonal)} >⧅ {translate("bitonal", _lang)}</p>
                                     }
+                                    <p> {translate("scroll", _lang)} </p>
                                 </div>
                             </div>
 
@@ -200,7 +206,7 @@ const ExhibitionIndex = (props) => {
                                     <ObjectViewer
                                         showDetailUI={showDetailsExhObj} setShowDetailUI={setShowDetailsExhObj} description={false} thesaurus={props.thesaurus} personen={props.agents}
                                         image={image} details={details} colors={props.objects} colorStrip={true} indexUI={true}
-                                        box={false} color={"black"}
+                                        box={false} color={"black"} language={_lang}
                                     />
                                 }
                             </div>

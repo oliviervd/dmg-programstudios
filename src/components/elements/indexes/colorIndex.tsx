@@ -8,6 +8,8 @@ import {useMediaQuery} from "react-responsive";
 import SearchFilterBar from "../utils/SearchFilterBar";
 import {filterByKey} from "../../utils/data_parsers";
 import Loading from "../utils/Loading";
+import translations from '../../data/translations.json';
+
 
 const ColorIndex = (props) => {
 
@@ -20,6 +22,11 @@ const ColorIndex = (props) => {
     const [bitonal, setBitonal] = useState(false);
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
+
+    const _lang = props.language
+    function translate(_term, _lang) {
+        return translations[_term][_lang] // _lang = key.
+    }
 
     let maleFilter: boolean
     let femaleFilter: boolean
@@ -177,12 +184,12 @@ const ColorIndex = (props) => {
                                 <div>
                                     <div className="lineH"/>
                                     <div className="grid--2_6_2" style={{height: '5vh'}}>
-                                        <h2>COLORS</h2>
+                                        <h2>{translate('colors',_lang).toUpperCase()}</h2>
                                         <div className={"grid--5_95"}>
                                             <div></div>
-                                            <SearchFilterBar filter={hexFilter} setFilter={setHexFilter} prompt={" looking for a specific color?"}/>
+                                            <SearchFilterBar filter={hexFilter} setFilter={setHexFilter} prompt={translate("color_search_prompt", _lang)}/>
                                         </div>
-                                        <p style={{textAlign:"center"}}>*pseudorandom selection out of {HexList.length} colors observed.</p>
+                                        <p style={{textAlign:"center"}}></p>
                                     </div>
                                     <div className={"lineH"}></div>
                                 </div>
@@ -198,7 +205,7 @@ const ColorIndex = (props) => {
                                 <div className="lineH"/>
 
                                 <div className="grid--2_6_2">
-                                    <p>images</p>
+                                    <p>{translate("images", _lang)}</p>
                                     <div></div>
                                     <p></p>
                                 </div>
@@ -210,29 +217,29 @@ const ColorIndex = (props) => {
                                         <div>
                                             <div>
                                                 {maleFilter &&
-                                                    <p onClick={()=>selectGender("sex", "")}>◧ male</p>
+                                                    <p onClick={()=>selectGender("sex", "")}>◧ {translate("male", _lang)}</p>
                                                 }
                                                 {!maleFilter &&
-                                                    <p onClick={()=>selectGender("sex", "MALE")}>⧅ male</p>
+                                                    <p onClick={()=>selectGender("sex", "MALE")}>⧅ {translate("male", _lang)}</p>
                                                 }
                                             </div>
                                             <div>
                                                 {femaleFilter &&
-                                                    <p onClick={()=>selectGender("sex", "")}>◧ female</p>
+                                                    <p onClick={()=>selectGender("sex", "")}>◧ {translate("female", _lang)}</p>
                                                 }
                                                 {!femaleFilter &&
-                                                    <p onClick={()=>selectGender("sex", "FEMALE")}>⧅ female</p>
+                                                    <p onClick={()=>selectGender("sex", "FEMALE")}>⧅ {translate("female", _lang)}</p>
                                                 }
                                             </div>
 
                                         </div>
                                         {bitonal &&
-                                            <p onClick={()=> setBitonal(!bitonal)} >◧ bitonal</p>
+                                            <p onClick={()=> setBitonal(!bitonal)} >◧ {translate("bitonal", _lang)}</p>
                                         }
                                         {!bitonal &&
-                                            <p onClick={()=> setBitonal(!bitonal)} >⧅ bitonal</p>
+                                            <p onClick={()=> setBitonal(!bitonal)} >⧅ {translate("bitonal", _lang)}</p>
                                         }
-                                        <p>scroll this way</p>
+                                        <p>{translate("scroll", _lang)}</p>
 
                                     </div>
                                 </div>
@@ -248,7 +255,7 @@ const ColorIndex = (props) => {
                                             <ObjectViewer
                                                 showDetailUI={showDetailUIColors} setShowDetailUI={setShowDetailUIColors} description={false} thesaurus={_thes} personen={_pers}
                                                 image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
-                                                box={false} split={false}
+                                                box={false} split={false} language={_lang}
                                             />
                                         }
                                     </div>
@@ -262,7 +269,7 @@ const ColorIndex = (props) => {
                                             <ObjectViewer
                                                 showDetailUI={showDetailUIColors} setShowDetailUI={setShowDetailUIColors} description={false} thesaurus={_thes} personen={_pers}
                                                 image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
-                                                box={false} split={false}
+                                                box={false} split={false} language={_lang}
                                             />
                                         }
                                     </div>

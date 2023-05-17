@@ -8,8 +8,9 @@ import useAgentQuery from "../hooks/useAgentQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useObjectsQuery from "../hooks/useObjectsQuery";
 import Loading from "../elements/utils/Loading";
+import translations from "../data/translations.json";
 
-const ObjectPage = () => {
+const ObjectPage = (props) => {
 
     const { id } = useParams();
     //MEDIA QUERIES
@@ -18,9 +19,19 @@ const ObjectPage = () => {
     })
 
     const [details, setDetails] = useState("");
+    const [language, setLanguage] = useState("EN")
     const _objects = useObjectsQuery().data;
     const _pers = useAgentQuery().data;
     const _thes = useThesaurusQuery().data;
+
+    if (props.language){
+        setLanguage(props.language)
+    }
+
+
+    function translate(_term, _lang) {
+        return translations[_term][_lang] // _lang = key.
+    }
 
     let _related;
     let imageBlock:JSX.Element = <></>
@@ -66,7 +77,7 @@ const ObjectPage = () => {
         <div className={"grid__objectViewer"} style={{overflowX: "hidden"}}>
             {isDesktopOrLaptop&&
                 <div className="grid--even_10">
-                    <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ back</h2>
+                    <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ {translate("back", language)}</h2>
                     <div></div>
                     <div></div>
                     <div></div>
@@ -78,9 +89,9 @@ const ObjectPage = () => {
                     <div></div>
 
                     <div className="grid--even_3">
-                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>EN</h2>
-                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>NL</h2>
-                        <h2 className="uppercase text-center strike-through" style={{margin: 10}}>FR</h2>
+                        <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("EN")}>EN</h2>
+                        <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("NL")}>NL</h2>
+                        <h2 className="uppercase text-center strike-through" style={{margin: 10}} onClick={()=>setLanguage("FR")}>FR</h2>
                     </div>
 
                 </div>
@@ -93,6 +104,7 @@ const ObjectPage = () => {
                                   image={images} colorStrip={false}
                                   thesaurus={_thes} personen={_pers}
                                   box={true} colorCubes={true} split={true}
+                                  language={language}
                     />
                 </Suspense>
             </div>
@@ -101,7 +113,7 @@ const ObjectPage = () => {
 
                 <div>
                     <div className={"lineH"}></div>
-                    <h1 className={"home"} style={{fontSize: "18px", margin:"20px"}}>related objects;</h1>
+                    <h1 className={"home"} style={{fontSize: "18px", margin:"20px"}}>{translate("relatedObjects", language)}</h1>
                     <div className={"lineH"}></div>
 
                     <div className={"masonry"} style={{height: "300px", overflowX:"scroll", overflowY:"hidden", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>

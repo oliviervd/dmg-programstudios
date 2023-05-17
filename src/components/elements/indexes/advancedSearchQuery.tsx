@@ -1,10 +1,17 @@
 import React, {useState} from "react"
 import Fuse from "fuse.js";
+import translations from '../../data/translations.json';
 
 import SearchFilterBar from "../utils/SearchFilterBar";
 import {fetchObjectType, fetchTitle} from "../../utils/data_parsers";
 import {useMediaQuery} from "react-responsive";
+import {useSearchParams} from "react-router-dom";
 const AdvancedSearchQuery = (props) => {
+    let _lang = props.language
+
+    function translate(_term, _lang) {
+        return translations[_term][_lang] // _lang = key.
+    }
 
     //todo:  put in function?
     const isDesktopOrLaptop = useMediaQuery({
@@ -14,22 +21,29 @@ const AdvancedSearchQuery = (props) => {
     const [filterTitle, setFilterTitle] = useState("");
     const [filterType, setFilterType] = useState("");
     const [filterDescription, setFilterDescription] = useState("")
-
     const thesaurus = props.thesaurus
-
-    console.log(props.closeSearch)
 
     function closeTab() {
         props.setCloseSearch(true)
     }
 
-    console.log(props.objects.length)
+    //todo: add query to URL so it can be shared;
+    const [searchParamsType, setSearchParamType] = useSearchParams();
+
+    let typeFilter: String
+    if (searchParamsType.get("type") != "") {
+
+    }
     function filterSet(title, type, description) {
-        let collection = [];
-        let intersection = []
+        let collection: [] = [];
+        let intersection:[] = [];
         let titles = [];
         let types = [];
         let descriptions = [];
+
+        //todo: add materials
+        //todo: add creator
+        //todo: add place of creation/production
 
         const optionsTitle = {
             threshold: 0.0,
@@ -55,20 +69,15 @@ const AdvancedSearchQuery = (props) => {
             let _type = fetchObjectType(props.objects[o]["LDES_raw"], thesaurus)
             titles.push({title: _title, source: props.objects[o]});
             types.push({type: _type, source: props.objects[o]});
-            try{
+            try {
                 let _description = props.objects[o]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P3_has_note"]["@value"]
                 //console.log(_description)
                 if (_description !== undefined) {
                     descriptions.push({description: _description, source: props.objects[o]})
                 }
-                /*
-                console.log(_description)
-
-                */
-            } catch (e) {}
-
+            } catch (e) {
+            }
         }
-
 
         const fuseTitles = new Fuse(titles, optionsTitle);
         const fusetype = new Fuse(types, optionsType);
@@ -77,8 +86,6 @@ const AdvancedSearchQuery = (props) => {
         const resultTitles = fuseTitles.search(title)
         const resultTypes = fusetype.search(type)
         const resultDescription = fuseDescription.search(description)
-
-        //console.log(resultDescription)
 
         if (resultTitles.length !== 0) {
             collection.push(resultTitles)
@@ -113,18 +120,14 @@ const AdvancedSearchQuery = (props) => {
     }
 
     let _result;
-    //let _result = useMemo(() => {return filterSet(filterTitle, filterType, filterDescription)},[filterTitle, filterType, filterDescription]);
-
-
     const handleKeyDown = (event) => {
+        //todo: fix function (does not work)
         if (event.key === 'Enter') {
             props.setQueryResult(_result)
             props.setShowAdvancedSearch(true)
-
+            props.setCloseSearch(true)
         }
     }
-
-
     function performSearch() {
         _result=filterSet(filterTitle, filterType, filterDescription)
         props.setQueryResult(_result)
@@ -136,16 +139,14 @@ const AdvancedSearchQuery = (props) => {
         props.setCloseSearch(false)
     }
 
-
-    //todo: cache search query (I can go back to my search query)
-
+    //todo: cache search query (I can go back to my search query) - use searchParams ()
     return (
         <div className={"grid--97_3"} style={{height: "auto", overflowY:"hidden"}}>
             {!props.closeSearch &&
                 <div>
                     <div className={"lineH"}></div>
                     <div className={"grid--3_7"}>
-                        <h2 className={"rhizome"}>ADVANCED SEARCH</h2>
+                        <h2 className={"rhizome"}>{translate("advanced search", _lang)}</h2>
                         <h1 style={{textAlign: "right"}} onClick={() => closeTab()}>X</h1>
                     </div>
                     <br/>
@@ -153,39 +154,37 @@ const AdvancedSearchQuery = (props) => {
                         <div className={isDesktopOrLaptop?"grid--3_7":""}>
                             <div>
                                 <div className={"lineH"}></div>
-                                <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>title</h2>
+                                <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>{translate("title", _lang)}</h2>
                                 <div className={"lineH"}></div>
                             </div>
                             <SearchFilterBar filter={filterTitle} setFilter={setFilterTitle} prompt={"enter title here"} onKeyDown={handleKeyDown}/>
                         </div>
                         <br/>
-
                         <div className={isDesktopOrLaptop?"grid--3_7":""}>
                             <div>
                                 <div className={"lineH"}></div>
-                                <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>type</h2>
+                                <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>{translate("type", _lang)}</h2>
                                 <div className={"lineH"}></div>
                             </div>
                             <SearchFilterBar filter={filterType} setFilter={setFilterType} prompt={"enter type here"} onKeyDown={handleKeyDown}/>
                         </div>
                         <br/>
-
                         <div className={isDesktopOrLaptop?"grid--3_7":""}>
                             <div>
                                 <div className={"lineH"}></div>
-                                <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>description</h2>
+                                <h2 style={{padding: "12px 0", paddingLeft: "12px"}}>{translate("description", _lang)}</h2>
                                 <div className={"lineH"}></div>
                             </div>
                             <SearchFilterBar filter={filterDescription} setFilter={setFilterDescription} prompt={"enter free text here"} onKeyDown={handleKeyDown}/>
                         </div>
                         <br/>
-                        <a className={"buttonType--PRIMARY"} style={{marginLeft: "30%"}} onClick={performSearch}>search</a>
+                        <a className={"buttonType--PRIMARY"} style={{marginLeft: "30%"}} onClick={performSearch}>{translate("search_button", _lang)}</a>
                     </div>
                 </div>
             }
             {props.closeSearch &&
                 <div className={"grid--97_3"}>
-                    <h2 className={"verticalText"} style={{top: "37%", left: "20px", overflowX:"hidden"}} onClick={()=> {openSearch()}}> ↟ open advanced search ↟ </h2>
+                    <h2 className={"verticalText"} style={{top: "37%", left: "20px", overflowX:"hidden"}} onClick={()=> {openSearch()}}> {translate("open_search_interface", _lang)} </h2>
                     <div className={"lineV"} style={{left: "40px", position:"relative"}}></div>
                 </div>
             }

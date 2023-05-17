@@ -14,6 +14,8 @@ import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
 import Loading from "../utils/Loading";
 import {Link} from "react-router-dom";
+import translations from '../../data/translations.json';
+
 
 const ImageViewer = React.lazy(() => import("./ImageViewer"));
 const ObjectViewer = (props) => {
@@ -40,6 +42,20 @@ const ObjectViewer = (props) => {
     const [openDescription, setOpenDescription] = useState(false)
     const [openColors, setOpenColors] = useState(false)
     const [selectColor, setSelectColor] = useState("")
+    const [language, setLanguage] = useState("EN")
+
+    let _lang
+    try{
+        _lang = props.language
+    } catch {
+        _lang = language
+    }
+
+    function translate(_term, _lang) {
+        return translations[_term][_lang] // _lang = key.
+    }
+
+    console.log(translate("objectNumber", _lang))
 
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
 
@@ -90,14 +106,11 @@ const ObjectViewer = (props) => {
 
         try {
             exhibitions = fetchExhibitions(_baseLDES)
-            console.log(exhibitions)
-        } catch {console.log(exhibitions)}
+        } catch {}
 
         try {
             acquisition = fetchAcquisitionHistory(_baseLDES)
         } catch {}
-
-        console.log(_LDES);
     }
 
     let href_objectpage = "/index/object/" + objectNumber
@@ -116,8 +129,6 @@ const ObjectViewer = (props) => {
     if (isBigScreen && props.split) {
             split = true
     }
-
-    console.log(split);
 
     return (
         <div>
@@ -138,7 +149,7 @@ const ObjectViewer = (props) => {
                             }
 
                         </div>
-                        <p>objectnummer: {objectNumber}</p>
+                        <p>{translate("objectNumber", _lang)}: {objectNumber}</p>
                         <div className={"grid--4_6-ObjectViewer"}>
                             <div>
                                 <Suspense fallback={<Loading />}>
@@ -152,7 +163,7 @@ const ObjectViewer = (props) => {
                                                     <div>
                                                         <div className={"lineH"}></div>
                                                         <br></br>
-                                                        <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                        <h2 onClick={()=>setOpenColors(true)}>↨ {translate("colors", _lang)}</h2>
                                                         <br></br>
                                                         <div className={"lineH"}></div>
                                                         <br></br>
@@ -172,7 +183,7 @@ const ObjectViewer = (props) => {
                                                             )})}
                                                         </div>
                                                         <br></br>
-                                                        <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                        <h2 onClick={()=>setOpenColors(false)}>↥ {translate("close",_lang)}</h2>
                                                         <br></br>
                                                         <div className={"lineH"}></div>
                                                         <br></br>
@@ -183,7 +194,7 @@ const ObjectViewer = (props) => {
                                                 <div>
                                                     <div className={"lineH"}></div>
                                                     <br></br>
-                                                    <h2 onClick={()=>setOpenDescription(true)}>↨ description</h2>
+                                                    <h2 onClick={()=>setOpenDescription(true)}>↨ {translate("description", _lang)}</h2>
                                                     <br></br>
                                                     <div className={"lineH"}></div>
                                                     <br></br>
@@ -193,7 +204,7 @@ const ObjectViewer = (props) => {
                                                 <div>
                                                     <p>{description}</p>
                                                     <br/>
-                                                    <h2 onClick={()=>setOpenDescription(false)}>↥ close</h2>
+                                                    <h2 onClick={()=>setOpenDescription(false)}>↥ {translate("close",_lang)}</h2>
                                                     <br/>
                                                     <div className={"lineH"}></div>
                                                     <br/>
@@ -213,7 +224,7 @@ const ObjectViewer = (props) => {
                                             <div>
                                                 <div className={"lineH"}></div>
                                                 <br></br>
-                                                <h2 onClick={()=>setOpenDescription(true)}>↨ description</h2>
+                                                <h2 onClick={()=>setOpenDescription(true)}>↨ {translate("description", _lang)}</h2>
                                                 <br></br>
                                                 <div className={"lineH"}></div>
                                                 <br></br>
@@ -223,7 +234,7 @@ const ObjectViewer = (props) => {
                                             <div>
                                                 <p>{description}</p>
                                                 <br/>
-                                                <h2 onClick={()=>setOpenDescription(false)}>↥ close</h2>
+                                                <h2 onClick={()=>setOpenDescription(false)}>↥ {translate("close",_lang)}</h2>
                                                 <br/>
                                                 <div className={"lineH"}></div>
                                                 <br/>
@@ -239,7 +250,7 @@ const ObjectViewer = (props) => {
                                                     <div>
                                                         <div className={"lineH"}></div>
                                                         <br></br>
-                                                        <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                        <h2 onClick={()=>setOpenColors(true)}>↨ {translate("colors", _lang)}</h2>
                                                         <br></br>
                                                         <div className={"lineH"}></div>
                                                         <br></br>
@@ -259,7 +270,7 @@ const ObjectViewer = (props) => {
                                                             )})}
                                                         </div>
                                                         <br></br>
-                                                        <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                        <h2 onClick={()=>setOpenColors(false)}>↥ {translate("close",_lang)}</h2>
                                                         <br></br>
                                                         <div className={"lineH"}></div>
                                                         <br></br>
@@ -275,7 +286,7 @@ const ObjectViewer = (props) => {
                                     <div>
                                         {type !== "" &&
                                             <div>
-                                                <p className={"underlined"}>type:</p>
+                                                <p className={"underlined"}>{translate("type", _lang)}:</p>
                                                 {type.map(t => {
                                                     return(
                                                         <div>
@@ -288,7 +299,7 @@ const ObjectViewer = (props) => {
 
                                         {creations !== "" &&
                                             <div>
-                                                <p className={"underlined"}>designed by:</p>
+                                                <p className={"underlined"}>{translate("designedBy", _lang)}:</p>
                                                 {creations.map(crea => {
                                                     //console.log(prod)
                                                     return(
@@ -297,10 +308,10 @@ const ObjectViewer = (props) => {
                                                                 <h2 className={"italic"} onClick={()=> routeToAgentPage(crea.id)}>{crea.creator}</h2>
                                                             }
                                                             {crea.creation_place &&
-                                                                <p>location: {crea.creation_place}</p>
+                                                                <p>{translate("location", _lang)}: {crea.creation_place}</p>
                                                             }
                                                             {crea.date &&
-                                                                <p>date: {crea.date}</p>
+                                                                <p>{translate("date", _lang)}: {crea.date}</p>
                                                             }
                                                             <br/>
                                                         </div>
@@ -311,7 +322,7 @@ const ObjectViewer = (props) => {
 
                                         {productions !== "" &&
                                             <div>
-                                                <p className={"underlined"}>produced by:</p>
+                                                <p className={"underlined"}>{translate("producedBy", _lang)}:</p>
                                                 {productions.map(prod => {
                                                     //console.log(prod)
                                                     return(
@@ -320,13 +331,13 @@ const ObjectViewer = (props) => {
                                                                 <h2 className={"italic"} onClick={()=> routeToAgentPage(prod.id)}>{prod.producer}</h2>
                                                             }
                                                             {prod.place &&
-                                                                <p>location: {prod.place}</p>
+                                                                <p>{translate("location", _lang)}: {prod.place}</p>
                                                             }
                                                             {prod.date &&
-                                                                <p>date: {prod.date}</p>
+                                                                <p>{translate("date", _lang)}: {prod.date}</p>
                                                             }
                                                             {prod.technique &&
-                                                                <p>technique: {prod.technique}</p>
+                                                                <p>{translate('technique', _lang)}: {prod.technique}</p>
                                                             }
                                                             <br/>
                                                         </div>
@@ -337,7 +348,7 @@ const ObjectViewer = (props) => {
 
                                         {dimensions !== "" &&
                                             <div>
-                                                <p className={"underlined"}>dimensions:</p>
+                                                <p className={"underlined"}>{translate("dimensions",_lang)}:</p>
                                                 <p>{dimensions}</p>
                                                 <br/>
 
@@ -346,7 +357,7 @@ const ObjectViewer = (props) => {
                                         <div>
                                             {material !== undefined &&
                                                 <div>
-                                                    <p className={"underlined"}>materials:</p>
+                                                    <p className={"underlined"}>{translate("materials",_lang)}:</p>
                                                     <div>
                                                         {material &&
                                                             material.map(mat => {
@@ -365,7 +376,7 @@ const ObjectViewer = (props) => {
 
                                         {acquisition !== undefined &&
                                             <div>
-                                                <p className={"underlined"}>acquired:</p>
+                                                <p className={"underlined"}>{translate("acquisition", _lang)}:</p>
                                                 <div>
                                                     {acquisition.date &&
                                                         <p>{acquisition.date} ({acquisition.method})</p>
@@ -380,7 +391,7 @@ const ObjectViewer = (props) => {
 
                                         {exhibitions !== "" &&
                                             <div>
-                                                <p className={"underlined"}>shown in exhibitions:</p>
+                                                <p className={"underlined"}>{translate("shownInExhibitions", _lang)}:</p>
                                                 <div>
                                                     {exhibitions[0] &&
                                                         exhibitions.map(exh =>{
@@ -398,7 +409,7 @@ const ObjectViewer = (props) => {
 
                                         {location !== "" &&
                                             <div>
-                                                <p className={"underlined"}>current location:</p>
+                                                <p className={"underlined"}>{translate("currentLocation", _lang)}:</p>
                                                 <p>{location}</p>
                                             </div>
                                         }
@@ -413,7 +424,7 @@ const ObjectViewer = (props) => {
                                                             <div>
                                                                 <div className={"lineH"}></div>
                                                                 <br></br>
-                                                                <h2 onClick={()=>setOpenColors(true)}>↨ colors</h2>
+                                                                <h2 onClick={()=>setOpenColors(true)}>↨ {translate("colors", _lang)}</h2>
                                                                 <br></br>
                                                                 <div className={"lineH"}></div>
                                                                 <br></br>
@@ -433,7 +444,7 @@ const ObjectViewer = (props) => {
                                                                     )})}
                                                                 </div>
                                                                 <br></br>
-                                                                <h2 onClick={()=>setOpenColors(false)}>↥ close</h2>
+                                                                <h2 onClick={()=>setOpenColors(false)}>↥ {translate("close",_lang)}</h2>
                                                                 <br></br>
                                                                 <div className={"lineH"}></div>
                                                                 <br></br>

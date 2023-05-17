@@ -1,9 +1,7 @@
 import React, {Suspense, useMemo, useState} from "react"
 import ObjectViewer from "../subjectpages/ObjectViewer";
 import Loading from "../utils/Loading";
-import {getKeyByValue} from "../../utils/utils";
-import colorRef from "../../data/colorRef.json";
-
+import translations from "../../data/translations.json";
 
 const AdvancedSearch = (props) => {
 
@@ -12,12 +10,14 @@ const AdvancedSearch = (props) => {
     const [details, setDetails] = useState("");
     const [detailImageID, setDetailImageID] = useState("");
 
-
     let _r;
     let counter = 0
     const _objects = props.objecten
+    let _lang = props.language
 
-    console.log(_objects)
+    function translate(_term, _lang) {
+        return translations[_term][_lang] // _lang = key.
+    }
 
     function fetchImage(image) {
         try {
@@ -30,7 +30,6 @@ const AdvancedSearch = (props) => {
 
     function fetchObjectById(ObjectNumber) {
         let _obj = _objects
-        console.log(_obj)
         for (let i=0; i<_obj.length; i++) {
             if (_obj[i].objectNumber === ObjectNumber) {
                 setDetails(_obj[i])
@@ -41,7 +40,6 @@ const AdvancedSearch = (props) => {
     function handleImgClick(im) {
         setShowDetailUI(true);
         setDetailImageID(im["item"]["source"]["iiif_image_uris"][0])
-        console.log(im["item"]["source"]["objectNumber"])
         props.setCloseSearch(true)
         fetchObjectById(im["item"]["source"]["objectNumber"])
     }
@@ -61,23 +59,25 @@ const AdvancedSearch = (props) => {
     }
 
 
-    // if no results; display "no results".
-
+    // todo: if no results; display "no results".
     return(
         <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
-            <div className={"masonry"} style={{height: "90vh", overflowY:"hidden", padding: "5px"}}>
-                    <Suspense fallback={<Loading/>}>
-                        {_r}
-                    </Suspense>
+                <div>
+                    <div className={"masonry"} style={{height: "90vh", overflowY:"hidden", padding: "5px"}}>
+                        <Suspense fallback={<Loading/>}>
+                            {_r}
+                        </Suspense>
 
-            </div>
-            {showDetailUI &&
-                <ObjectViewer
-                    showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={props.thesaurus} personen={props.personen}
-                    image={detailImageID} details={details} color={"black"} colorStrip={true} indexUI={true}
-                    box={false}
-                />
-            }
+                    </div>
+                    {showDetailUI &&
+                        <ObjectViewer
+                            showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={props.thesaurus} personen={props.personen}
+                            image={detailImageID} details={details} color={"black"} colorStrip={true} indexUI={true}
+                            box={false}
+                        />
+                    }
+                </div>
+
         </div>
     )
 }
