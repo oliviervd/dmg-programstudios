@@ -39,7 +39,7 @@ const NewItems = (props) => {
                 _newObjectsData.push(object)
                 _newObjectsImages.push(object.iiif_image_uris[0])
             } catch (e) {
-                console.log(e);
+                ;
             }
 
         }
