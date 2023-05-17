@@ -18,6 +18,7 @@ const AgentViewer = (props) =>  {
         query: '(max-width: 700px)'
     })
 
+    // todo: move to translation file
     let labels = {
         "EN": {
             0: "biography",
@@ -97,7 +98,6 @@ const AgentViewer = (props) =>  {
         try {
             //oeuvre = fetchOeuvre(_baseLDES, _basePERS, PERS, THES)
             oeuvre = fetchOeuvreV2(_baseLDES, _basePERS, PERS, THES)
-            console.log(oeuvre);
         } catch (error) {}
 
         try {
@@ -113,24 +113,24 @@ const AgentViewer = (props) =>  {
                         wikiSnippet = _bios.nl.snippet
                         wikiSnippetSource = _bios.nl.source
                     } else {
-                        _bios = ""
+                        wikiSnippet = "Om meer informatie te geven over de personen en instellingen gerelateerd aan objecten uit onze collectie maakt het museum gebruik van informatie op Wikipedia. Voor deze persoon of instelling is er echter nog geen Wikipedia pagina beschikbaar."
                     }
                 } else if (props.language === "EN") {
                     if (_bios.en.snippet != "no data") {
                         wikiSnippet = _bios.en.snippet
                         wikiSnippetSource = _bios.en.source
                     } else {
-                        _bios = ""
+                        wikiSnippet = "To provide more information about the people and institutions related to objects in our collection, the museum uses information on Wikipedia. However, a Wikipedia page is not yet available for this person or institution."
                     }
                 } else if (props.language === "FR") {
                     if (_bios.fr.snippet != "no data") {
                         wikiSnippet = _bios.fr.snippet
                         wikiSnippetSource = _bios.fr.source
                     } else {
-                        _bios = ""
+                        wikiSnippet = "Pour fournir plus d'informations sur les personnes et les institutions liées aux objets de notre collection, le musée utilise les informations de Wikipedia. Cependant, il n'existe pas encore de page Wikipédia pour cette personne ou cette institution."
                     }
                 }
-
+                console.log(_bios)
             } catch {}
         } catch (e) {}
 
