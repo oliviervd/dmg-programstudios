@@ -77,7 +77,7 @@ const ObjectPage = (props) => {
         <div className={"grid__objectViewer"} style={{overflowX: "hidden"}}>
             {isDesktopOrLaptop&&
                 <div className="grid--even_10">
-                    <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ back</h2>
+                    <h2 className={"uppercase text-center"} style={{margin: 10}} onClick={()=>routeChange()}> ⇜ {translate("back", language)}</h2>
                     <div></div>
                     <div></div>
                     <div></div>
