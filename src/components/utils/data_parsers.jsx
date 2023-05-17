@@ -74,12 +74,9 @@ export function listOfParticipatedExhibitions(oeuvre) {
 
     exhibitionList.forEach(item=>{
         if(!containsObject(item, filteredList)) {
-            console.log(item)
             filteredList.push(item)
         }
     })
-
-    console.log(filteredList)
 }
 
 export function fetchOeuvreV2(_LDES, agent, PERS, THES) {
