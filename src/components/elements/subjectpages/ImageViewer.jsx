@@ -5,7 +5,12 @@ const ImageViewer = (props) => {
     let attribution, license;
     try {
         attribution = props.details.attributions[0]
-        attribution = attribution.split(",")
+        try{
+            attribution = attribution.split(",")
+            attribution = attribution.map((item)=> {
+                return <p>{item}</p>
+            })
+        } catch {attribution = props.details.attributions[0]}
     } catch(e) {attribution = "unknown"}
 
     try {
@@ -18,9 +23,7 @@ const ImageViewer = (props) => {
                 <span className={"infoIcon"} onClick={()=>setShowImageInfo(!showImageInfo)}>i</span>
                 {showImageInfo &&
                     <div className={"hiddenInformation"}>
-                        {attribution.map((item)=>{
-                            return <p>{item}</p>
-                        })}
+                        <div>{attribution}</div>
                         <a href={license} target={"_blank"}>{license}</a>
                     </div>
                 }
