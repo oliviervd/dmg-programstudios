@@ -22,6 +22,7 @@ const ColorIndex = (props) => {
     const [bitonal, setBitonal] = useState(false);
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
+    const [colorInfo, setColorInfo] = useState(false);
 
     const _lang = props.language
     function translate(_term, _lang) {
@@ -184,7 +185,18 @@ const ColorIndex = (props) => {
                                 <div>
                                     <div className="lineH"/>
                                     <div className="grid--2_6_2" style={{height: '5vh'}}>
-                                        <h2>{translate('colors',_lang).toUpperCase()}</h2>
+                                        <div>
+                                            <div style={{position: "absolute"}}>
+                                                <h2>{translate('colors',_lang).toUpperCase()}</h2>
+                                                <div style={{width: "10px"}}></div>
+                                                <div >
+                                                    <span className={"infoIcon"} style={{position: "absolute", left: "110%", top: 0, alignItems: "left", "height": 8, width: 8, fontSize:8, lineHeight:"8px"}} onClick={()=>setColorInfo(!colorInfo)}>i</span>
+                                                </div>
+                                                {colorInfo&&
+                                                    <p style={{padding: "10px",height: "auto", width:"300px", border:"solid 2px black", background: "white", position:"absolute", left: "100%"}}>{translate("colorIndexInfo",_lang)}</p>
+                                                }
+                                            </div>
+                                        </div>
                                         <div className={"grid--5_95"}>
                                             <div></div>
                                             <SearchFilterBar filter={hexFilter} setFilter={setHexFilter} prompt={translate("color_search_prompt", _lang)}/>
