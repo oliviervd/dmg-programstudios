@@ -18,6 +18,7 @@ const NewItems = (props) => {
     const newItems = ["1987-0919", "1987-0858", "1987-0860", "1987-0930", "1987-0961", "1987-1000", "1987-0996", "1987-0845", "1987-0846", "1987-1100", "1987-0898", "1987-0960", "1987-1098", "1980-0010", "1988-0030", "1988-0031_0-7", "2010-0030", "DES.1996.01", "DES.1996.03", "DES.1996.05", "DES.1997.05", "1986-0015", "1989-0020", "1991-0038", "1991-0075", "1991-0076", "1457", "4624", "2794", "2795", "0293", "0294", "0472", "0561", "0562", "0563", "0564", "0565", "0571", "0578", "0586", "3814", "DMG_T_00769_ORANJE", "DMG_T_00979_ORANJE", "DMG_T_01018_ORANJE", "DMG_T_01137_ORANJE", "DMG_T_01139_ORANJE", "DMG_T_01147_ORANJE", "DMG_T_01159_ORANJE", "0033_0-2", "0811", "1976-0221", "1977-0097", "1978-0038", "1978-0042", "1985-0068", "1988-0020_0-2", "1999-0092", "1999-0093", "2011-0038", "2013-0015", "2017-0225", "2018-0003", "2900", "2901", "3062", "3083", "3120", "3126", "3139", "3143", "3144", "3147", "3148", "3169", "3172", "3795", "3882", "4314", "4605", "DMG_T_00197_ORANJE", "FH-0028", "FH-0042", "3068", "3090", "3091", "3100", "3110", "3127", "3158", "3159", "3173", "0827", "3054", "3055", "3060", "3066", "3130", "3069", "3073", "3074", "3077", "3080", "3103", "3128", "3171", "3064", "2018-0251_00-16", "1994-0012", "1994-0013"]
     const _newObjectsData = [];
     const _newObjectsImages = [];
+    const _lang = props.language
 
     const [detailImageID, setDetailImageID] = useState("");
     const [showDetailUI, setShowDetailUI] = useState(false);
@@ -103,7 +104,7 @@ const NewItems = (props) => {
                                 {showDetailUI &&
                                     <ObjectViewer showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} thesaurus={_thes} personen={_pers}
                                                   description={false} image={detailImageID} colorStrip={true} color={"black"}
-                                                  indexUI={true} details={details}
+                                                  indexUI={true} details={details} language={_lang}
                                     />
                                 }
                             </div>
