@@ -34,7 +34,7 @@ const StudioGrid = (props) => {
                     <div id="HomeProjectGrid" className="rowScroll fade-in open" style={{overflow: "scroll"}}>
                         <div>
                             <div style={{textAlign:"center"}}>
-                                <Link className="HeaderLinkIndex uppercase" to={""} >{title_en}</Link>
+                                <Link className="HeaderLinkIndex uppercase" to={href} >{title_en}</Link>
                             </div>
                             <p className="uppercase justify padding-10"
                                style={{height: '10vh'}}>{description}</p>
