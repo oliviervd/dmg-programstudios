@@ -55,8 +55,6 @@ const ObjectViewer = (props) => {
         return translations[_term][_lang] // _lang = key.
     }
 
-    console.log(translate("objectNumber", _lang))
-
     //todo: add async function to display data -- https://www.geeksforgeeks.org/how-to-escape-try-catch-hell-in-javascript/
 
     //MEDIA QUERIES
