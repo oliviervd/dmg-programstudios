@@ -22,12 +22,18 @@ const AdvancedSearchQuery = (props) => {
     const [filterType, setFilterType] = useState("");
     const [filterDescription, setFilterDescription] = useState("");
     const [isPublicDomain, setIsPublicDomain] = useState(false)
+    const [isCheckedPD, setIsCheckedPD] = useState(false);
 
     //console.log(isCheckedList)
     const thesaurus = props.thesaurus
 
     function closeTab() {
         props.setCloseSearch(true)
+    }
+
+    function handleCheckBoxPD() {
+        setIsPublicDomain(!isPublicDomain)
+        setIsCheckedPD(!isCheckedPD)
     }
 
     function filterSet(title, type, description, license) {
@@ -210,7 +216,7 @@ const AdvancedSearchQuery = (props) => {
                                 <br/>
                                 <div style={{display:"grid", gridAutoFlow:"column"}}>
                                     <div className={"checkbox-wrapper"}>
-                                        <input name={"publicDomain"} type={"checkbox"} onChange={()=>setIsPublicDomain(!isPublicDomain)}></input>
+                                        <input name={"publicDomain"} type={"checkbox"} checked={isCheckedPD} onChange={()=>handleCheckBoxPD()}></input>
                                         <label className={"checkbox-text"} style={{margin:"none"}}>{translate("https://creativecommons.org/publicdomain/zero/1.0/", _lang)}</label>
                                     </div>
                                 </div>
