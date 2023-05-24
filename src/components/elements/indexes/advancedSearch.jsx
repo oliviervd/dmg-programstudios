@@ -53,29 +53,32 @@ const AdvancedSearch = (props) => {
                 src={fetchImage(im)}
             />
         ))
-
     } catch(e) {
-        _r = ""
+        _r =
+            <div>
+                <p>no objects matching this query were found.</p>
+            </div>
     }
-
 
     // todo: if no results; display "no results".
     return(
-        <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
-                    <div className={"masonry"} style={{height: "90vh", overflowY:"hidden", padding: "5px"}}>
-                        <Suspense fallback={<Loading/>}>
-                            {_r}
-                        </Suspense>
-
-                    </div>
-                    {showDetailUI &&
-                        <ObjectViewer
-                            showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={props.thesaurus} personen={props.personen}
-                            image={detailImageID} details={details} color={"black"} colorStrip={true} indexUI={true}
-                            box={false} language={_lang}
-                        />
-                    }
+        <div className={"lineH"}>
+            <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
+                <div className={"masonry"} style={{height: "90vh", overflowY:"hidden", padding: "5px"}}>
+                    <Suspense fallback={<Loading/>}>
+                        {_r}
+                    </Suspense>
+                </div>
+                {showDetailUI &&
+                    <ObjectViewer
+                        showDetailUI={showDetailUI} setShowDetailUI={setShowDetailUI} description={false} thesaurus={props.thesaurus} personen={props.personen}
+                        image={detailImageID} details={details} color={"black"} colorStrip={true} indexUI={true}
+                        box={false} language={_lang}
+                    />
+                }
+            </div>
         </div>
+
     )
 }
 
