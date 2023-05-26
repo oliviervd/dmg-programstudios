@@ -302,17 +302,19 @@ const ObjectViewer = (props) => {
                                                     //console.log(prod)
                                                     return(
                                                         <div>
-                                                            {crea.creator &&
-                                                                <h2 className={"italic"} onClick={()=> routeToAgentPage(crea.id)}>{crea.creator}</h2>
-                                                            }
+                                                            <div style={{marginTop: "0px", marginBottom: "5px"}}>
+                                                                {crea.qualification &&
+                                                                    <p>{crea.qualification}</p>
+                                                                }
+                                                                {crea.creator &&
+                                                                    <h2 className={"italic"} onClick={()=> routeToAgentPage(crea.id)}>{crea.creator}</h2>
+                                                                }
+                                                            </div>
                                                             {crea.creation_place &&
                                                                 <p>{translate("location", _lang)}: {crea.creation_place}</p>
                                                             }
                                                             {crea.date &&
                                                                 <p>{translate("date", _lang)}: {crea.date}</p>
-                                                            }
-                                                            {crea.qualification &&
-                                                                <p>{translate("qualification", _lang)}: {crea.qualification}</p>
                                                             }
                                                             <br/>
                                                         </div>
@@ -328,9 +330,14 @@ const ObjectViewer = (props) => {
                                                     //console.log(prod)
                                                     return(
                                                         <div>
-                                                            {prod.producer &&
-                                                                <h2 className={"italic"} onClick={()=> routeToAgentPage(prod.id)}>{prod.producer}</h2>
-                                                            }
+                                                            <div style={{marginTop: "0px", marginBottom: "5px"}}>
+                                                                {prod.qualification &&
+                                                                    <p>{prod.qualification}</p>
+                                                                }
+                                                                {prod.producer &&
+                                                                    <h2 className={"italic"} onClick={()=> routeToAgentPage(prod.id)}>{prod.producer}</h2>
+                                                                }
+                                                            </div>
                                                             {prod.place &&
                                                                 <p>{translate("location", _lang)}: {prod.place}</p>
                                                             }
@@ -340,9 +347,7 @@ const ObjectViewer = (props) => {
                                                             {prod.technique &&
                                                                 <p>{translate('technique', _lang)}: {prod.technique}</p>
                                                             }
-                                                            {prod.qualification &&
-                                                                <p>{translate("qualification", _lang)}: {prod.qualification}</p>
-                                                            }
+
                                                             <br/>
                                                         </div>
                                                     )
