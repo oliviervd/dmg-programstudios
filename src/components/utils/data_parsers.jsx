@@ -345,6 +345,14 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                     creation["date"] = EDTFtoDate(creation_date)
 
                 } catch(error) {console.log(error)}
+
+                // role
+                try {
+                    let _role = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["kwalificatie"]
+                    creation["qualification"] = _role
+                    console.log(_role)
+                } catch(e) {}
+
                 creations.push(creation)
             } catch(error)  {console.log(error)}
         }
@@ -382,6 +390,13 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                 let creation_date = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
                 creation["date"] = EDTFtoDate(creation_date)
             } catch {}
+
+            // role
+            try {
+                let _role = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["kwalificatie"]
+                creation["qualification"] = _role
+            } catch(e) {}
+
             creations.push(creation)
         } catch (error) {}
     }
