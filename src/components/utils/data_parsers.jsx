@@ -439,6 +439,13 @@ export function fetchProductionInfo(LDES, PERS, THES){
                     production["technique"] = production_technique;
                 } else continue
             } catch {}
+
+            // QUALIFICATION
+            try{
+                let _role = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["kwalificatie"]
+                production["qualification"] = _role
+            } catch {}
+
             productions.push(production)
         }
     } else { // else only parse one instance
@@ -470,6 +477,11 @@ export function fetchProductionInfo(LDES, PERS, THES){
                 //todo: add multiple occurences to technique
                 production_technique = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"];
                 production["technique"] = production_technique;
+            } catch {}
+            // qaulification
+            try {
+                let _qualification = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["kwalificatie"]
+                production["qualification"] = _qualification
             } catch {}
 
         } catch {}

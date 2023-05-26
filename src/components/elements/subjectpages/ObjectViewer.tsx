@@ -340,6 +340,8 @@ const ObjectViewer = (props) => {
                                                             {prod.technique &&
                                                                 <p>{translate('technique', _lang)}: {prod.technique}</p>
                                                             }
+                                                            {prod.qualification}
+                                                                <p>{translate("qualification", _lang)}: {prod.qualification}</p>
                                                             <br/>
                                                         </div>
                                                     )
