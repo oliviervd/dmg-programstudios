@@ -57,5 +57,4 @@ export function splice(object, number, number2) {
 
 export function getKeyByValue(object, value) {
     return "#" + Object.keys(object).find(key => object[key] === value);
-    console.log("#" + Object.keys(object).find(key => object[key] === value));
 }

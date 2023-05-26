@@ -14,6 +14,11 @@
     "EN": "type",
     "FR": "type"
   },
+  "licenseQuery": {
+    "NL": "licentie",
+    "EN": "license",
+    "FR": "license"
+  },
   "advanced search": {
     "NL": "geavanceerd zoeken",
     "EN": "advanced search",
@@ -173,5 +178,20 @@
     "NL": "kwalificatie",
     "EN": "qualification",
     "FR": "qualification"
+  },
+  "https://creativecommons.org/publicdomain/zero/1.0/": {
+    "NL": "publiek domein",
+    "EN": "public domain",
+    "FR": "domaine publique"
+  },
+  "http://rightsstatements.org/vocab/InC/1.0/": {
+    "NL": "auteursrechtelijk beschermd",
+    "EN": "in copyright",
+    "FR": "protége par le droit d'auteur"
+  },
+  "https://creativecommons.org/licenses/by-nc-nd/4.0/": {
+    "NL": "CC BY-NC-ND 4.0",
+    "EN": "CC BY-NC-ND 4.0",
+    "FR": "CC BY-NC-ND 4.0"
   }
 }

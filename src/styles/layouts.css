@@ -29,6 +29,33 @@
     bottom: 0.5vh;
 }
 
+.checkbox-wrapper input[type="checkbox"] {
+    /*removing default appearance*/
+    -webkit-appearance: none;
+    appearance: none;
+    /*custom design*/
+    position: relative;
+    width: 18px;
+    height: 18px;
+    margin-right: 0.5em;
+    border: 1px solid black;
+    outline: none;
+    cursor: pointer;
+    background-color: #f1f1f1;
+    vertical-align: middle;
+    text-align: center;
+}
+
+.checkbox-wrapper input:checked {
+    background-color: palegreen;
+}
+
+.checkbox-text{
+    font-size: 18px;
+    text-align: center;
+    padding-top: 2px;
+}
+
 /* The overlay effect - lays on top of the container and over the image */
 .overlay {
     position: absolute;
