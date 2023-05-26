@@ -345,6 +345,14 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                     creation["date"] = EDTFtoDate(creation_date)
 
                 } catch(error) {console.log(error)}
+
+                // role
+                try {
+                    let _role = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["kwalificatie"]
+                    creation["qualification"] = _role
+                    console.log(_role)
+                } catch(e) {}
+
                 creations.push(creation)
             } catch(error)  {console.log(error)}
         }
@@ -382,6 +390,13 @@ export function fetchCreatorInfo(LDES, PERS, THES){
                 let creation_date = event["http://www.cidoc-crm.org/cidoc-crm/P4_has_time-span"]["@value"]
                 creation["date"] = EDTFtoDate(creation_date)
             } catch {}
+
+            // role
+            try {
+                let _role = event["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["kwalificatie"]
+                creation["qualification"] = _role
+            } catch(e) {}
+
             creations.push(creation)
         } catch (error) {}
     }
@@ -424,6 +439,13 @@ export function fetchProductionInfo(LDES, PERS, THES){
                     production["technique"] = production_technique;
                 } else continue
             } catch {}
+
+            // QUALIFICATION
+            try{
+                let _role = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"][i]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["kwalificatie"]
+                production["qualification"] = _role
+            } catch {}
+
             productions.push(production)
         }
     } else { // else only parse one instance
@@ -455,6 +477,11 @@ export function fetchProductionInfo(LDES, PERS, THES){
                 //todo: add multiple occurences to technique
                 production_technique = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P32_used_general_technique"]['http://www.cidoc-crm.org/cidoc-crm/P2_has_type'][0]["skos:prefLabel"]["@value"];
                 production["technique"] = production_technique;
+            } catch {}
+            // qaulification
+            try {
+                let _qualification = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P108i_was_produced_by"]["http://www.cidoc-crm.org/cidoc-crm/P14_carried_out_by"]["kwalificatie"]
+                production["qualification"] = _qualification
             } catch {}
 
         } catch {}

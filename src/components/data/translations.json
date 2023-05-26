@@ -174,6 +174,11 @@
     "EN": "This color index is based on the CSS colors. This is a list of 140 colors that are supported by all modern browsers. CSS colors provide a versatile means to define and manipulate colors on the web, but it's important to remember that they are a digital representation and interpretation of colors. While CSS colors can be used to approximate natural colors, they don't have a direct one-to-one relationship with specific natural colors. The perception of colors can also vary across devices, screens, and human observers, making it challenging to precisely match CSS colors to natural colors.",
     "FR": "Cet index des couleurs est basé sur les couleurs CSS. Il s'agit d'une liste de 140 couleurs prises en charge par tous les navigateurs modernes. Les couleurs CSS constituent un moyen polyvalent de définir et de manipuler les couleurs sur le web, mais il est important de se rappeler qu'il s'agit d'une représentation et d'une interprétation numériques des couleurs. Bien que les couleurs CSS puissent être utilisées pour se rapprocher des couleurs naturelles, elles n'ont pas de relation directe avec les couleurs naturelles spécifiques. La perception des couleurs peut également varier selon les appareils, les écrans et les observateurs humains, ce qui rend difficile la comparaison précise entre les couleurs CSS et les couleurs naturelles."
   },
+  "qualification": {
+    "NL": "kwalificatie",
+    "EN": "qualification",
+    "FR": "qualification"
+  },
   "https://creativecommons.org/publicdomain/zero/1.0/": {
     "NL": "publiek domein",
     "EN": "public domain",
