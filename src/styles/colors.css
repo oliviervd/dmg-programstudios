@@ -19,14 +19,19 @@
 .turbulence{
     position: absolute;
     z-index: -100;
-    top: 10%;
-    bottom: 72%;
+    top: 10vh;
+    bottom: 72vh;
     left: 0;
     right: 0;
+    background-size: contain;
 }
 
 .overlay {
     /* ... */
     background: linear-gradient(transparent, rgb(187, 208, 201, 0.2), transparent);
+    mask-image: linear-gradient(transparent, rgb(0,0,0,1),rgb(0,0,0,0));
+    filter: url(#grainy);
     mix-blend-mode: multiply;
+    background-size: contain;
+
 }
