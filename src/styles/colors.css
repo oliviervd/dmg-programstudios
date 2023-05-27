@@ -15,3 +15,18 @@
 .background__transparent {
     background: transparent;
 }
+
+.turbulence{
+    position: absolute;
+    z-index: -100;
+    top: 10%;
+    bottom: 72%;
+    left: 0;
+    right: 0;
+}
+
+.overlay {
+    /* ... */
+    background: linear-gradient(transparent, rgb(187, 208, 201, 0.2), transparent);
+    mix-blend-mode: multiply;
+}

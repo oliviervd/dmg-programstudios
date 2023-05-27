@@ -175,6 +175,8 @@ const ColorIndex = (props) => {
         props.setCollapseExhibition(false);
     }
 
+    console.log(getKeyByValue(colorRef, objectColor)+'40')
+
     return(
         <div>
             {isDesktopOrLaptop&&
@@ -182,6 +184,21 @@ const ColorIndex = (props) => {
                     {props.collapseColors &&
                         <div>
                             <div style={{width:"inherit"}}>
+
+                                <div className={"turbulence"} style={{background: `radial-gradient(${getKeyByValue(colorRef, objectColor)+'40'}, transparent`}}>
+                                    <svg>
+                                        <filter id="grainy">
+                                            <feTurbulence
+                                                type="turbulence"
+                                                baseFrequency="0.9"
+                                            />
+                                            <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+
+                                        </filter>
+                                    </svg>
+                                    <div className={"overlay"}></div>
+                                </div>
+
                                 <div>
                                     <div className="lineH"/>
                                     <div className="grid--2_6_2" style={{height: '5vh'}}>
