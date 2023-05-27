@@ -28,10 +28,6 @@ const AgentViewer = (props) =>  {
         _lang = language
     }
 
-    function translate(_term, _lang) {
-        return translations[_term][_lang] // _lang = key.
-    }
-
     let labels = {
         "EN": {
             0: "biography",

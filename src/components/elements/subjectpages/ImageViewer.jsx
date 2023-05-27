@@ -1,4 +1,6 @@
 import React, {useState} from "react"
+import {translate} from "../../utils/utils";
+import translations from '../../data/translations.json';
 
 const ImageViewer = (props) => {
     const [showImageInfo, setShowImageInfo] = useState(false);
@@ -24,7 +26,7 @@ const ImageViewer = (props) => {
                 {showImageInfo &&
                     <div className={"hiddenInformation"}>
                         <div>{attribution}</div>
-                        <a href={license} target={"_blank"}>{license}</a>
+                        <a href={license} target={"_blank"}>{translate(license, props.language, translations)}</a>
                     </div>
                 }
                 <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
