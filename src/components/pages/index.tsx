@@ -1,5 +1,5 @@
 import * as React from "react"
-import {useState, Suspense, useEffect} from "react"
+import {useState, Suspense, useEffect, useDispatch} from "react"
 import {Helmet} from "react-helmet-async";
 import {useParams, Link} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
@@ -61,20 +61,13 @@ const Index = () => {
     useEffect(() => {
         if (param.type === "color") {
             openExhibitionIndex() // opens colors
-        }
-    }, [param.type]);
-
-    useEffect(() => {
-        if (param.type === "exhibition") {
+        } else if  (param.type === "exhibition") {
             openColorIndex() // opens exhibitions.
-        }
-    }, [param.type]);
-
-    useEffect(() => {
-        if (param.type === "new") {
+        } else if (param.type === "new") {
             openNewIndex()
         }
     }, [param.type]);
+
 
     if(about) {
         style = {
