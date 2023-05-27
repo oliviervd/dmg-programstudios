@@ -193,5 +193,15 @@
     "NL": "CC BY-NC-ND 4.0",
     "EN": "CC BY-NC-ND 4.0",
     "FR": "CC BY-NC-ND 4.0"
+  },
+  "http://rightsstatements.org/vocab/InC-RUU/1.0/": {
+    "NL": "Auteursrechtelijk beschermd - rechthebbende(n) niet-lokaliseerbaar of niet-identificeerbaar",
+    "EN": "In Copyright - Rights-holder(s) Unlocatable or Unidentifiable",
+    "FR": "Protégé par le droit d'auteur - Titulaire(s) des droits impossible(s) à localiser ou à identifier"
+  },
+  "https://rightsstatements.org/page/UND/1.0/": {
+    "NL": "Auteursrechtelijke bescherming niet bepaald",
+    "EN": "Copyright Undetermined",
+    "FR": "Droit d'auteur indéterminé"
   }
 }

@@ -1,3 +1,8 @@
+export function translate(_term, _lang, translations) {
+    return translations[_term][_lang] // _lang = key.
+}
+
+
 export function wait(duration) {
     return new Promise(resolve => setTimeout(resolve, duration))
 }
