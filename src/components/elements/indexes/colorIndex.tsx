@@ -187,12 +187,13 @@ const ColorIndex = (props) => {
 
                                 <div className={"turbulence"} style={{background: `radial-gradient(${getKeyByValue(colorRef, objectColor)+'40'}, transparent`}}>
                                     <svg>
-                                        <filter id="grainy">
+                                        <filter style={{visibility:"hidden"}} id="grainy">
                                             <feTurbulence
                                                 type="turbulence"
                                                 baseFrequency="0.9"
                                             />
-                                            <feBlend in="SourceGraphic" in2="monoNoise" mode="screen" />
+                                            <feColorMatrix in="colorNoise" type="matrix" values=".33 .33 .33 0 0 .33 .33 .33 0 0 .33 .33 .33 0 0 0 0 0 1 0" result="monoNoise" />
+                                            <feBlend in="SourceGraphic" in2="monoNoise" mode="multiply" />
 
                                         </filter>
                                     </svg>

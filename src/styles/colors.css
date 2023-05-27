@@ -27,8 +27,8 @@
 }
 
 .overlay {
-    /* ... */
-    background: linear-gradient(transparent, rgb(187, 208, 201, 0.2), transparent);
+    /*     background: linear-gradient(transparent, rgb(187, 208, 201, 0.2), transparent); */
+    color: pink;
     mask-image: linear-gradient(transparent, rgb(0,0,0,1),rgb(0,0,0,0));
     filter: url(#grainy);
     mix-blend-mode: multiply;
