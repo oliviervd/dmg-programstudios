@@ -185,7 +185,7 @@ const ColorIndex = (props) => {
                         <div>
                             <div style={{width:"inherit"}}>
 
-                                <div className={"turbulence"} style={{background: `radial-gradient(${getKeyByValue(colorRef, objectColor)+'40'}, transparent`}}>
+                                <div className={"turbulence"} style={{background: `${getKeyByValue(colorRef, objectColor)+'40'}`}}>
                                     <svg>
                                         <filter style={{visibility:"hidden"}} id="grainy">
                                             <feTurbulence
@@ -197,7 +197,7 @@ const ColorIndex = (props) => {
 
                                         </filter>
                                     </svg>
-                                    <div className={"overlay"}></div>
+                                    {/*<div className={"overlay"}></div>*/}
                                 </div>
 
                                 <div>
@@ -232,10 +232,10 @@ const ColorIndex = (props) => {
                                 </div>
                             </div>
                             <div>
-                                <div className="lineH"/>
 
                                 <div className="grid--2_6_2">
                                     <p>{translate("images", _lang)}</p>
+                                    <p>  </p>
                                     <div></div>
                                     <p></p>
                                 </div>
