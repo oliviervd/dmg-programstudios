@@ -19,6 +19,7 @@ import ObjectPage from "./components/pages/ObjectPage";
 import AgentPage from "./components/pages/AgentPage";
 import {Analytics} from "@vercel/analytics/react";
 import StudioGraphicHome from "./components/pages/studios/StudioGraphic";
+import StudioDigital from "./components/pages/studios/studioDigital";
 
 const queryClient = new QueryClient(
     {defaultOptions:
@@ -39,6 +40,7 @@ render(
                         <Route path="/studio/:id" element={<StudioLanding />}/>
                         <Route path="/index/:type" element={<Index />}/>
                         <Route path="/studio/graphic" element={<StudioGraphicHome />}></Route>
+                        <Route path="/studio/digital" element={<StudioDigital />}> </Route>
                         <Route path="/index/object/:id" element={<ObjectPage />}></Route>
                         <Route path="/index/agent/:id" element={<AgentPage/>}></Route>
                     </Routes>
