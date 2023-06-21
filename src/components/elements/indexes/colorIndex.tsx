@@ -211,7 +211,7 @@ const ColorIndex = (props) => {
                                                     <span className={"infoIcon"} style={{position: "absolute", left: "110%", top: 0, alignItems: "left", "height": 8, width: 8, fontSize:8, lineHeight:"8px"}} onClick={()=>setColorInfo(!colorInfo)}>i</span>
                                                 </div>
                                                 {colorInfo&&
-                                                    <p style={{padding: "10px",height: "auto", width:"300px", border:"solid 2px black", background: "white", position:"absolute", left: "100%"}}>{translate("colorIndexInfo",_lang)}</p>
+                                                    <p style={{fontSize: "1.2em" ,padding: "10px",height: "auto", width:"500px", border:"solid 2px black", background: "white", position:"absolute", left: "100%"}}>{translate("colorIndexInfo",_lang)}</p>
                                                 }
                                             </div>
                                         </div>
