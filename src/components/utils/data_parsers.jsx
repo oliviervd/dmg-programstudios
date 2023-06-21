@@ -1,4 +1,17 @@
 import React from "react";
+import {useQuery} from "@tanstack/react-query";
+
+export function fetchContentStudiosCMS() {
+    const {data, isLoading, status} = useQuery({
+        queryKey:['STUDIOS'],
+        queryFn: () =>
+            fetch("https://p01--admin-cms--qbt6mytl828m.code.run/api/studios/",{
+                credentials: 'include',
+                method: 'GET'
+            }).then((req)=>req.json())
+    })
+    return data
+}
 
 export function containsObject(obj, list) {
     // This method checks if the object reference is the same in the array. It's fast, but won't work if you want to check for a different object with the same content
@@ -112,14 +125,10 @@ export function fetchOeuvreV2(_LDES, agent, PERS, THES) {
                     } catch(e) {}
                 }
             } catch (e) {}
-
             // check creators
-
         } catch (e) {}
-
     }
     return match
-
 }
 
 export function fetchRelatedObjects(_LDES, _ref, _thes, _pers) {
