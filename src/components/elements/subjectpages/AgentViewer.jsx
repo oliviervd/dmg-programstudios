@@ -3,7 +3,7 @@ import {
     fetchPersGender,
     fetchPersBirth,
     fetchPersDeath,
-} from "../../utils/data_parsers/dataParserPers";
+} from "../../utils/data_parsers_utils/dataParserPers";
 import translations from '../../data/translations.json';
 import {fetchOeuvreV2, listOfParticipatedExhibitions} from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
