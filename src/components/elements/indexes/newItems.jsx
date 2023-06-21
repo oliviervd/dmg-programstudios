@@ -97,16 +97,16 @@ const NewItems = (props) => {
         <div>
             {isDesktopOrLaptop &&
                 <div>
-                    <div>
-                        <div className={"grid--even_10"}>
-                            <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_march)}}>march 2023</p>
-                            <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_april)}}>april 2023</p>
-                            <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_may)}}>may 2023</p>
-                        </div>
-                        <div className={"lineH"}></div>
-                    </div>
                     {props.collapseNewItems &&
                         <div>
+                            <div>
+                                <div className={"grid--even_10"}>
+                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_march)}}>march 2023</p>
+                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_april)}}>april 2023</p>
+                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_may)}}>may 2023</p>
+                                </div>
+                                <div className={"lineH"}></div>
+                            </div>
                             <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
                                 <div className={"masonry"} style={{overflowY:"hidden", padding: "5px", height: "85vh"}}>
                                     {_objects.isLoading &&
