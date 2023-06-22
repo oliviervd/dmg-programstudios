@@ -41,6 +41,7 @@ const ObjectViewer = (props) => {
 
     const [openDescription, setOpenDescription] = useState(false)
     const [openColors, setOpenColors] = useState(false)
+    const [openMetadata, setOpenMetadata] = useState(false);
     const [selectColor, setSelectColor] = useState("")
     const [language, setLanguage] = useState("EN")
 
@@ -127,6 +128,8 @@ const ObjectViewer = (props) => {
     if (isBigScreen && props.split) {
             split = true
     }
+
+    const URI = "https://data.designmuseumgent.be/id/object/"+objectNumber+".json"
 
     return (
         <div>
@@ -422,6 +425,37 @@ const ObjectViewer = (props) => {
                                                 <p>{location}</p>
                                             </div>
                                         }
+
+                                        {!isBigScreen&&
+                                            <div>
+                                                <br/>
+                                                {!openMetadata &&
+                                                    <div>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                        <h2 onClick={()=>setOpenMetadata(true)}>↨ {translate("source", _lang)}</h2>
+                                                        <br></br>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                    </div>
+                                                }
+                                                {openMetadata &&
+                                                    <div>
+                                                        <div className={"lineH"}></div>
+                                                        <br></br>
+                                                        <div>
+                                                            <a href={URI}>{URI}</a>
+                                                        </div>
+                                                        <br/>
+                                                        <h2 onClick={()=>setOpenMetadata(false)} className={"underlined"}>↥ {translate("close", _lang)}</h2>
+                                                        <br></br>
+                                                        <div className={"lineH"}></div>
+                                                    </div>
+                                                }
+                                            </div>
+
+                                        }
+
                                     </div>
                                     <div className={"lineV"} style={{margin:"40px"}}/>
                                     <div>
@@ -459,6 +493,33 @@ const ObjectViewer = (props) => {
                                                                 <br></br>
                                                             </div>
                                                         }
+                                                        <div>
+                                                            {!openMetadata &&
+                                                                <div>
+                                                                    <div className={"lineH"}></div>
+                                                                    <br></br>
+                                                                    <h2 onClick={()=>setOpenMetadata(true)}>↨ {translate("source", _lang)}</h2>
+                                                                    <br></br>
+                                                                    <div className={"lineH"}></div>
+                                                                    <br></br>
+                                                                </div>
+                                                            }
+                                                            {openMetadata &&
+                                                                <div>
+                                                                    <div className={"lineH"}></div>
+                                                                    <br></br>
+                                                                    <div>
+                                                                        <a href={URI}>{URI}</a>
+                                                                    </div>
+                                                                    <br/>
+                                                                    <h2 onClick={()=>setOpenMetadata(false)} className={"underlined"}>↥ {translate("close", _lang)}</h2>
+                                                                    <br></br>
+                                                                    <div className={"lineH"}></div>
+                                                                </div>
+                                                            }
+                                                        </div>
+
+
                                                     </div>
                                                 }
                                             </div>

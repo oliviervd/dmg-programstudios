@@ -164,6 +164,11 @@
     "EN": "related objects",
     "FR": "objets apparentés"
   },
+  "source": {
+    "NL": "bron",
+    "EN": "source",
+    "FR": "sources"
+  },
   "back": {
     "NL": "terug",
     "EN": "back",
