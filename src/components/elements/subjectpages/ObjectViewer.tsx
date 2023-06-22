@@ -444,7 +444,7 @@ const ObjectViewer = (props) => {
                                                         <div className={"lineH"}></div>
                                                         <br></br>
                                                         <div>
-                                                            <a href={URI}>{URI}</a>
+                                                            <a href={URI} target="_blank">{URI}</a>
                                                         </div>
                                                         <br/>
                                                         <h2 onClick={()=>setOpenMetadata(false)} className={"underlined"}>↥ {translate("close", _lang)}</h2>
@@ -509,7 +509,7 @@ const ObjectViewer = (props) => {
                                                                     <div className={"lineH"}></div>
                                                                     <br></br>
                                                                     <div>
-                                                                        <a href={URI}>{URI}</a>
+                                                                        <a href={URI} target="_blank">{URI}</a>
                                                                     </div>
                                                                     <br/>
                                                                     <h2 onClick={()=>setOpenMetadata(false)} className={"underlined"}>↥ {translate("close", _lang)}</h2>
