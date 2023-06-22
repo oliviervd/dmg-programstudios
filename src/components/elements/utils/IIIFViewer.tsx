@@ -48,8 +48,8 @@ export function IIIFViewer() {
                 })}
             </CanvasPanel.Viewer>
             <div style={{ display: "flex" }}>
-                <button onClick={previousCanvas}>prev</button>
-                <button onClick={nextCanvas}>next</button>
+                <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={previousCanvas}>prev</p>
+                <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={nextCanvas}>next</p>
             </div>
         </>
     );
@@ -70,9 +70,9 @@ function ViewerControls() {
                 background: "white"
             }}
         >
-            <button onClick={() => preset?.runtime.world.zoomOut()}>Zoom Out</button>
-            <button onClick={() => preset?.runtime.world.zoomIn()}>Zoom in</button>
-            <button onClick={() => preset?.runtime.world.goHome()}>Home</button>
+            <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={() => preset?.runtime.world.zoomOut()}>Zoom Out</p>
+            <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={() => preset?.runtime.world.zoomIn()}>Zoom in</p>
+            <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={() => preset?.runtime.world.goHome()}>Home</p>
         </div>
     );
 }
