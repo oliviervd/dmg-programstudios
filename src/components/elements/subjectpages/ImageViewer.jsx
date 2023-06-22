@@ -31,7 +31,7 @@ const ImageViewer = (props) => {
                     </div>
                 }
                 {props.viewer &&
-                    <IIIFVault/>
+                    <IIIFVault backgroundColor={"white"}/>
                 }
                 {!props.viewer &&
                     <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
