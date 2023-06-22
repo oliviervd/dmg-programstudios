@@ -138,6 +138,12 @@ h3 {
     }
 }
 
+a {
+    color: black;
+    text-decoration: underline;
+}
+
+
 .about{
     padding: 10px;
     font-size: 18px
