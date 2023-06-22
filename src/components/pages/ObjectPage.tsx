@@ -104,7 +104,7 @@ const ObjectPage = (props) => {
                                   image={images} colorStrip={false}
                                   thesaurus={_thes} personen={_pers}
                                   box={true} colorCubes={true} split={true}
-                                  language={language}
+                                  language={language} viewer={true}
                     />
                 </Suspense>
             </div>

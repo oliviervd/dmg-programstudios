@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import {translate} from "../../utils/utils";
 import translations from '../../data/translations.json';
+import IIIFVault from "../utils/IIIFVault";
 
 const ImageViewer = (props) => {
     const [showImageInfo, setShowImageInfo] = useState(false);
@@ -29,7 +30,12 @@ const ImageViewer = (props) => {
                         <a href={license} target={"_blank"}>{translate(license, props.language, translations)}</a>
                     </div>
                 }
-                <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+                {props.viewer &&
+                    <IIIFVault manifest={"https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1987-1311_0-2"}/>
+                }
+                {!props.viewer &&
+                    <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+                }
             </div>
         </div>
     )
