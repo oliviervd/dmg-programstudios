@@ -31,7 +31,7 @@ const ImageViewer = (props) => {
                     </div>
                 }
                 {props.viewer &&
-                    <IIIFVault manifest={"https://api.collectie.gent/iiif/presentation/v2/manifest/dmg:1987-1311_0-2"}/>
+                    <IIIFVault/>
                 }
                 {!props.viewer &&
                     <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>

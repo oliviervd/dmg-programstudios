@@ -11,6 +11,9 @@ import {
 
 export function IIIFViewer() {
     const manifest = useManifest();
+
+    console.log(manifest);
+
     const canvases = useVisibleCanvases();
     const { nextCanvas, previousCanvas } = useSimpleViewer();
 
@@ -22,7 +25,7 @@ export function IIIFViewer() {
 
     return (
         <>
-            <CanvasPanel.Viewer height={600}>
+            <CanvasPanel.Viewer height={600} background={"white"}>
                 {canvases.map((canvas, idx) => {
                     const margin = accumulator;
                     accumulator += canvas.width;
@@ -34,6 +37,7 @@ export function IIIFViewer() {
                                 renderViewerControls={
                                     idx === 0 ? () => <ViewerControls /> : undefined
                                 }
+
                                 // renderMediaControls={
                                 //   idx === 0 ? () => <MediaControls /> : undefined
                                 // }
@@ -62,7 +66,8 @@ function ViewerControls() {
                 position: "absolute",
                 top: 20,
                 right: 20,
-                zIndex: 12
+                zIndex: 12,
+                background: "white"
             }}
         >
             <button onClick={() => preset?.runtime.world.zoomOut()}>Zoom Out</button>
