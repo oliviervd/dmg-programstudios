@@ -19,8 +19,7 @@ import translations from '../../data/translations.json';
 
 const ImageViewer = React.lazy(() => import("./ImageViewer"));
 const ObjectViewer = (props) => {
-    // declare object and its metadata (json) to be used in the viewer
-
+    // declare object and its metadata (json) to be used in the viewe
     let navigate = useNavigate();
 
     let title: any[] = []
@@ -155,7 +154,7 @@ const ObjectViewer = (props) => {
                             <div>
                                 <Suspense fallback={<Loading />}>
                                     <Suspense fallback={<Loading />}>
-                                        <ImageViewer media={props.image} details={props.details} language={_lang}/>
+                                        <ImageViewer viewer={props.viewer} media={props.image} details={props.details} language={_lang}/>
                                     </Suspense>
                                     {!props.description &&
                                         <div style={{marginLeft: "28px"}}>
@@ -542,7 +541,7 @@ const ObjectViewer = (props) => {
                     <h1 className={"home"} style={{fontSize: "6vw", padding: "5%"}}>{title}</h1>
 
                     <Suspense>
-                        <ImageViewer style={{padding: "5%"}}  media={props.image} details={props.details} language={_lang}/>
+                        <ImageViewer viewer={props.viewer} style={{padding: "5%"}}  media={props.image} details={props.details} language={_lang}/>
                     </Suspense>
                     <div style={{padding: "5%"}}>
                         {props.description &&

@@ -1,6 +1,7 @@
 import React, {useState} from "react"
 import {translate} from "../../utils/utils";
 import translations from '../../data/translations.json';
+import IIIFVault from "../utils/IIIFVault";
 
 const ImageViewer = (props) => {
     const [showImageInfo, setShowImageInfo] = useState(false);
@@ -19,6 +20,12 @@ const ImageViewer = (props) => {
         license = props.details.CC_Licenses[0]
     } catch (e) {license = "unknown"}
 
+    let _manifest
+
+    try {
+        _manifest = props.details["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of"]["@id"]
+    } catch(e) {}
+
     return(
         <div>
             <div className={"imageContainer"}>
@@ -29,7 +36,12 @@ const ImageViewer = (props) => {
                         <a href={license} target={"_blank"}>{translate(license, props.language, translations)}</a>
                     </div>
                 }
-                <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+                {props.viewer &&
+                    <IIIFVault backgroundColor={"white"} manifest={_manifest}/>
+                }
+                {!props.viewer &&
+                    <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
+                }
             </div>
         </div>
     )
