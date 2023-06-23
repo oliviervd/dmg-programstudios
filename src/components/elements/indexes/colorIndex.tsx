@@ -175,8 +175,6 @@ const ColorIndex = (props) => {
         props.setCollapseExhibition(false);
     }
 
-    console.log(getKeyByValue(colorRef, objectColor)+'40')
-
     return(
         <div>
             {isDesktopOrLaptop&&

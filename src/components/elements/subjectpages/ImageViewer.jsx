@@ -20,6 +20,12 @@ const ImageViewer = (props) => {
         license = props.details.CC_Licenses[0]
     } catch (e) {license = "unknown"}
 
+    let _manifest
+
+    try {
+        _manifest = props.details["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P129i_is_subject_of"]["@id"]
+    } catch(e) {}
+
     return(
         <div>
             <div className={"imageContainer"}>
@@ -31,7 +37,7 @@ const ImageViewer = (props) => {
                     </div>
                 }
                 {props.viewer &&
-                    <IIIFVault backgroundColor={"white"}/>
+                    <IIIFVault backgroundColor={"white"} manifest={_manifest}/>
                 }
                 {!props.viewer &&
                     <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>

@@ -10,9 +10,8 @@ import {
 export function IIIFViewer() {
 
     const manifest = useManifest();
-    console.log(manifest);
-
     const canvases = useVisibleCanvases();
+
     const { nextCanvas, previousCanvas } = useSimpleViewer();
 
     if (!manifest) {
