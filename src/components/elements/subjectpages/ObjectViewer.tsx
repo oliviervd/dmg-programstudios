@@ -404,8 +404,6 @@ const ObjectViewer = (props) => {
                                             }
                                         </div>
 
-                                      s
-
                                         {acquisition !== undefined &&
                                             <div>
                                                 <p className={"underlined"}>{translate("acquisition", _lang)}:</p>
