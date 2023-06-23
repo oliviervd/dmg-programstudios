@@ -10,9 +10,18 @@ import {
 export function IIIFViewer() {
 
     const manifest = useManifest();
-    const canvases = useVisibleCanvases();
+    const canvases = useVisibleCanvases()
+    let _multiple = false
+    let _last = false
+    let _limit = manifest.items.length;
+
+    if (manifest.items.length > 1) { _multiple=true}
 
     const { nextCanvas, previousCanvas } = useSimpleViewer();
+
+    function next() {
+
+    }
 
     if (!manifest) {
         return <div>Loading..</div>;
@@ -44,10 +53,13 @@ export function IIIFViewer() {
                     );
                 })}
             </CanvasPanel.Viewer>
-            <div style={{ display: "flex" }}>
-                <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={previousCanvas}>prev</p>
-                <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={nextCanvas}>next</p>
-            </div>
+            {_multiple&&
+                <div className={"grid--1_1"} style={{position: "relative"}}>
+                    <h1 className={"italic"} style={{color: "black", margin: "10px", background: "white"}} onClick={previousCanvas}> ↜ </h1>
+                    <h1 className={"italic"} style={{color: "black", margin: "10px", background: "white"}} onClick={nextCanvas}> ↝ </h1>
+                </div>
+            }
+
         </>
     );
 }
@@ -67,9 +79,9 @@ function ViewerControls() {
                 background: "white"
             }}
         >
-            <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={() => preset?.runtime.world.zoomOut()}>Zoom Out</p>
-            <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={() => preset?.runtime.world.zoomIn()}>Zoom in</p>
-            <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={() => preset?.runtime.world.goHome()}>Home</p>
+            <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={() => preset?.runtime.world.zoomOut()}> zoom out </p>
+            <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={() => preset?.runtime.world.zoomIn()}> zoom in </p>
+            <p className={"italic"} style={{color: "black", margin: "10px"}} onClick={() => preset?.runtime.world.goHome()}>full</p>
         </div>
     );
 }
