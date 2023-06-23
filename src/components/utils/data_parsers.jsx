@@ -1,6 +1,8 @@
 import React from "react";
 import {useQuery} from "@tanstack/react-query";
 
+
+
 export function fetchContentStudiosCMS() {
     const {data, isLoading, status} = useQuery({
         queryKey:['STUDIOS'],
@@ -199,6 +201,20 @@ export function fetchTermFromThes(input, uri) {
         }
 
     }
+}
+
+export function fetchCollection(LDES, THES) {
+    let collection = [];
+    if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"][0]) {
+        for (let i=0; i<LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"].length; i++) {
+            let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"][i]["@id"]
+            collection.push(fetchTermFromThes(THES, _id));
+        }
+    } else {
+        let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"]["@id"]
+        collection.push(fetchTermFromThes(THES, _id));
+    }
+    return collection;
 }
 
 export function fetchObjectType(LDES, THES) {

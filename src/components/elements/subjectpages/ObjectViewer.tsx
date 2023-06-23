@@ -8,7 +8,8 @@ import {
     fetchObjectNumber,
     fetchCurrentLocation,
     fetchObjectType, fetchDimensions,
-    fetchAcquisitionHistory
+    fetchAcquisitionHistory,
+    fetchCollection
 } from "../../utils/data_parsers";
 import {useNavigate} from "react-router-dom";
 import {useMediaQuery} from "react-responsive";
@@ -33,6 +34,7 @@ const ObjectViewer = (props) => {
     let location: string = ""
     let type: string = ""
     let acquisition
+    let collection = []
 
     let _LDES = props.details
     let _THES = props.thesaurus
@@ -74,6 +76,10 @@ const ObjectViewer = (props) => {
         let _baseLDES = _LDES["LDES_raw"] // raw data for LDES (object description)
         let _baseTHES = _THES // raw data for concept list (thesaurus)
         let _basePERS = _PERS // raw data for agent list (individuals and organisations)
+
+        try {
+            collection = fetchCollection(_baseLDES, _baseTHES)
+        } catch(e) {}
 
         fetchMaterials(_baseLDES, _baseTHES, material)
         try {
@@ -142,7 +148,7 @@ const ObjectViewer = (props) => {
                     }
 
                     <div>
-                        <div className="grid--9_1">
+                        <div className="grid--1_1">
                             <Link className={"HeaderLinkBig home italic"} style={{fontSize: "2vw"}} to={href_objectpage}>{title}</Link>
                             {props.indexUI &&
                                 <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
@@ -211,13 +217,14 @@ const ObjectViewer = (props) => {
                                                 </div>
                                             }
                                         </div>
+
                                     }
                                 </Suspense>
                             </div>
 
-                            <div></div>
+                            <div>
+                            </div>
                             <div style={{paddingLeft: "40px", paddingRight: "10vw", paddingTop:"10px"}}>
-
                                 {props.description &&
                                     <div>
                                         {!openDescription &&
@@ -232,7 +239,7 @@ const ObjectViewer = (props) => {
                                         }
                                         {openDescription &&
                                             <div>
-                                                <p>{description}</p>
+                                                <p style={{fontSize: "1em"}}>{description}</p>
                                                 <br/>
                                                 <h2 onClick={()=>setOpenDescription(false)}>↥ {translate("close",_lang)}</h2>
                                                 <br/>
@@ -283,7 +290,19 @@ const ObjectViewer = (props) => {
 
                                 <div className={split?"grid--4_2_4":""}>
 
+
                                     <div>
+                                        <div className={"gridPills"}>
+                                            {collection.map(col=>{return(
+                                                <div className={"pillBox"}>
+                                                    <p className={"pillContent"}>{col}</p>
+                                                </div>
+                                            )
+                                            })}
+                                        </div>
+                                        <br/>
+                                        <div className={"lineH"}></div>
+                                        <br/>
                                         {type !== "" &&
                                             <div>
                                                 <p className={"underlined"}>{translate("type", _lang)}:</p>
@@ -384,6 +403,8 @@ const ObjectViewer = (props) => {
                                                 </div>
                                             }
                                         </div>
+
+                                      s
 
                                         {acquisition !== undefined &&
                                             <div>

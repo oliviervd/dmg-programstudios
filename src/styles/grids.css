@@ -309,3 +309,8 @@
     transition: top 0.4s;
     overflow: clip;
 }
+
+.gridPills{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(10px, 1fr));
+}
