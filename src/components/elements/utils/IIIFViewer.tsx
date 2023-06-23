@@ -3,15 +3,13 @@ import {
     useVisibleCanvases,
     useSimpleViewer,
     CanvasPanel,
-    // ViewerControls,
-    // MediaControls,
     CanvasContext,
     useViewerPreset
 } from "react-iiif-vault";
 
 export function IIIFViewer() {
-    const manifest = useManifest();
 
+    const manifest = useManifest();
     console.log(manifest);
 
     const canvases = useVisibleCanvases();
@@ -25,12 +23,12 @@ export function IIIFViewer() {
 
     return (
         <>
-            <CanvasPanel.Viewer height={600}>
+            <CanvasPanel.Viewer height={600} background="white">
                 {canvases.map((canvas, idx) => {
                     const margin = accumulator;
                     accumulator += canvas.width;
                     return (
-                        <CanvasContext canvas={canvas.id} key={canvas.id} >
+                        <CanvasContext canvas={canvas.id} key={canvas.id}>
                             <CanvasPanel.RenderCanvas
                                 key={canvas.id}
                                 strategies={["3d-model", "media", "images"]}
