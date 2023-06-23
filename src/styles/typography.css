@@ -396,3 +396,24 @@ input
     font-family: Equateur;
     font-size: 20px;
 }
+
+.pillBox{
+    marginLeft: 0px;
+    border: black solid 1px;
+    border-radius: 50px;
+    background: white;
+    width: fit-content
+}
+
+.pillContent{
+    margin: 10px;
+    color: black;
+    padding: 0 0;
+    text-align: center;
+}
+
+.pillContent:hover{
+    text-decoration: underline;
+}
+
+
