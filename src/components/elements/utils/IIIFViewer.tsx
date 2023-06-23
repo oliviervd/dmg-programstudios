@@ -6,11 +6,13 @@ import {
     CanvasContext,
     useViewerPreset
 } from "react-iiif-vault";
+import {useState} from "react";
 
 export function IIIFViewer() {
 
     const manifest = useManifest();
     const canvases = useVisibleCanvases()
+    const [imageCount, setImageCount] = useState(0);
     let _multiple = false
     let _last = false
     let _limit = manifest.items.length;
@@ -20,7 +22,10 @@ export function IIIFViewer() {
     const { nextCanvas, previousCanvas } = useSimpleViewer();
 
     function next() {
-
+        setImageCount((imageCount)=> (imageCount+1))
+        if (imageCount === _limit) {
+            _last = true
+        }
     }
 
     if (!manifest) {

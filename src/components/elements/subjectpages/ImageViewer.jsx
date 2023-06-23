@@ -37,12 +37,18 @@ const ImageViewer = (props) => {
                     </div>
                 }
                 {props.viewer &&
-                    <IIIFVault backgroundColor={"white"} manifest={_manifest}/>
-                }
+                    <div>
+                        <IIIFVault backgroundColor={"white"} manifest={_manifest}/>
+                        <div style={{zIndex: "1000", position: "absolute", bottom: "100px", right: "10px", background: "white", padding: "10px"}}>
+                            <a>{attribution}</a>
+                            <a href={license} target={"_blank"}>{translate(license, props.language, translations)}</a>
+                        </div>
+                    </div>}
                 {!props.viewer &&
                     <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
                 }
             </div>
+
         </div>
     )
 }
