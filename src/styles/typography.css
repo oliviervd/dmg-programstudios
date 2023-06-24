@@ -2,21 +2,6 @@
 /* WOFF is cleaner; */
 
 @font-face {
-    font-family: "FA_WYEFLCWLGN";
-    src: local("FA_WYEFLCWLGN"), url(fonts/FA_WYEFLCWLGN.ttf);
-}
-
-@font-face {
-    font-family: "FT88";
-    src: local("FT88-Gothique"), url(fonts/FT88-Gothique.woff2);
-}
-
-@font-face {
-    font-family: "Anthony";
-    src: local("Anthony"), url(fonts/Anthony.woff2);
-}
-
-@font-face {
     font-family: "Combine";
     src: local("Combine"), url(fonts/Combine.otf);
     speak: none;
@@ -41,11 +26,6 @@
 }
 
 @font-face {
-    font-family: "BackOut";
-    src: local("BackOut"), url(fonts/BackOut.woff2);
-}
-
-@font-face {
     font-family: "Fungal";
     src: local("FungalVF"), url(fonts/FungalVF.woff);
 }
@@ -66,13 +46,13 @@ span {
 }
 
 .graphic_archive_02 {
-    font-family: "FT88";
+    font-family: "Combine";
 }
 
 
 h1.home {
     font-size: 6vh;
-    font-family: "FA_WYEFLCWLGN", sans-serif;
+    font-family: "Combine", sans-serif;
 
 }
 
