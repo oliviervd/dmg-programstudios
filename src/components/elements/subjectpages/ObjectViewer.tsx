@@ -301,7 +301,6 @@ const ObjectViewer = (props) => {
                                             })}
                                         </div>
                                         <br/>
-                                        <div className={"lineH"}></div>
                                         <br/>
                                         {type !== "" &&
                                             <div>

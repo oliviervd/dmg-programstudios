@@ -85,7 +85,6 @@ const ObjectPage = (props) => {
                     <div></div>
                     <div></div>
                     <div></div>
-
                     <div></div>
 
                     <div className="grid--even_3">
@@ -113,9 +112,8 @@ const ObjectPage = (props) => {
 
                 <div>
                     <div className={"lineH"}></div>
-                    <h1 className={"home"} style={{fontSize: "18px", margin:"20px"}}>{translate("relatedObjects", language)}</h1>
+                    <h1 className={"home"} style={{fontSize: "18px", margin:"20px", paddingLeft: "4vw"}}>{translate("relatedObjects", language)}</h1>
                     <div className={"lineH"}></div>
-
                     <div className={"masonry"} style={{height: "300px", overflowX:"scroll", overflowY:"hidden", marginLeft: "5vw", marginRight:"5vw", marginTop:"1vh"}}>
                         {imageBlock}
                     </div>
