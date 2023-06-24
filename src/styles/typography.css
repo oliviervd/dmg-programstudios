@@ -408,7 +408,7 @@ input
     border-radius: 50px;
     background: white;
     width: fit-content;
-    padding: 25px 50px;
+    margin: 10px 10px 0 5px;
 }
 
 .pillContent{
