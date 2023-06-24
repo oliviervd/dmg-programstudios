@@ -2,6 +2,11 @@
 /* WOFF is cleaner; */
 
 @font-face {
+    font-family: "FA_WYEFLCWLGN";
+    src: local("FA_WYEFLCWLGN"), url(fonts/FA_WYEFLCWLGN.ttf);
+}
+
+@font-face {
     font-family: "FT88";
     src: local("FT88-Gothique"), url(fonts/FT88-Gothique.woff2);
 }
@@ -67,7 +72,7 @@ span {
 
 h1.home {
     font-size: 6vh;
-    font-family: "Combine", sans-serif;
+    font-family: "FA_WYEFLCWLGN", sans-serif;
 
 }
 
@@ -218,7 +223,7 @@ h1.rhizome.fast {
 }
 
 p {
-    font-size: 13px;
+    font-size: 1em;
     font-family: Equateur;
 }
 
@@ -398,11 +403,12 @@ input
 }
 
 .pillBox{
-    marginLeft: 0px;
+    float:left;
     border: black solid 1px;
     border-radius: 50px;
     background: white;
-    width: fit-content
+    width: fit-content;
+    padding: 25px 50px;
 }
 
 .pillContent{
