@@ -68,6 +68,14 @@ const Index = () => {
         }
     }, [param.type]);
 
+    useEffect(()=> {
+        if (param.language === "NL") {
+            setLanguage("NL")
+        } else {
+            setLanguage("EN")
+        }
+    })
+
 
     if(about) {
         style = {
