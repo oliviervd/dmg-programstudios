@@ -75,6 +75,7 @@ h2 {
 
 .HeaderLinkBig {
     color:black;
+    letter-spacing: -2px;
     font-size: 6vh;
     font-family: "Combine", sans-serif;
     text-decoration: none;
