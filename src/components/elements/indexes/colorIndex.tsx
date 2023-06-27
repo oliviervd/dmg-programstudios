@@ -23,6 +23,7 @@ const ColorIndex = (props) => {
     const [details, setDetails] = useState("");
     const [hexFilter, setHexFilter] = useState("");
     const [colorInfo, setColorInfo] = useState(false);
+    const [colorSwaps, setColorSwaps] = useState(true)
 
     const _lang = props.language
     function translate(_term, _lang) {
@@ -133,29 +134,50 @@ const ColorIndex = (props) => {
     try{
         if (hexFilter==="") {
             try{
-                HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
-                    <p className={"grid-text-autoflow"}
-                        //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
-                       style={{color: "black", fontWeight: "lighter"}}
-                       onClick={()=>selectColor("color", key)}
-                       key={key}>
-                        #{key},
-                    </p>
+                if (!colorSwaps) {
+                    HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
+                        <p className={"grid-text-autoflow"}
+                            //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
+                           style={{color: "black", fontWeight: "lighter"}}
+                           onClick={()=>selectColor("color", key)}
+                           key={key}>
+                            #{key},
+                        </p>
 
-                ));
+                    ));
+                }else {
+                    HexOptions = Object.entries(Hex100ran).map(([key , i]) =>  (
+                        <p className={"grid-text-autoflow"}
+                            //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
+                           style={{
+                               color: "black",
+                               fontWeight: "lighter",
+                               background:`${getKeyByValue(colorRef, key) + '40'}`,
+                               //width:"40px",
+                               //height:"20px",
+                               //borderRadius: "30%"
+                           }}
+                           onClick={()=>selectColor("color", key)}
+                           key={key}>
+                            #{key}
+                        </p>
+
+                    ));
+                }
             } catch {HexOptions=<p className={"rhizome"}>Loading...</p>}
 
         } else {
             HexOptions = _filterHex.map((color)=>{
-                return <p className={"grid-text-autoflow"}
-                    //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
-                          style={{color: "black"}}
-                          onClick={()=>selectColor("color", color)}
-                          key={color}>
-                    #{color},
-                </p>
 
-
+                return <div style={{background:"pink"}}>
+                    <p className={"grid-text-autoflow"}
+                        //style={{color:myStyle[`${i}`] ? getKeyByValue(colorRef, key) : "black"}}
+                       style={{color: "black"}}
+                       onClick={()=>selectColor("color", color)}
+                       key={color}>
+                        #{color},
+                    </p>
+                </div>
             });
         }
     } catch {HexOptions=<p className={"rhizome"}>Loading...</p>}
@@ -183,7 +205,7 @@ const ColorIndex = (props) => {
                         <div>
                             <div style={{width:"inherit"}}>
 
-                                <div className={"turbulence"} style={{background: `${getKeyByValue(colorRef, objectColor)+'40'}`}}>
+                                {/* <div className={"turbulence"} style={{background: `${getKeyByValue(colorRef, objectColor)+'40'}`}}>
                                     <svg>
                                         <filter style={{visibility:"hidden"}} id="grainy">
                                             <feTurbulence
@@ -195,8 +217,8 @@ const ColorIndex = (props) => {
 
                                         </filter>
                                     </svg>
-                                    {/*<div className={"overlay"}></div>*/}
-                                </div>
+                                    {/*<div className={"overlay"}></div>
+                                </div> */}
 
                                 <div>
                                     <div className="lineH"/>
@@ -211,6 +233,9 @@ const ColorIndex = (props) => {
                                                 {colorInfo&&
                                                     <p style={{fontSize: "1.2em" ,padding: "10px",height: "auto", width:"500px", border:"solid 2px black", background: "white", position:"absolute", left: "100%"}}>{translate("colorIndexInfo",_lang)}</p>
                                                 }
+                                                <p onClick={()=>{setColorSwaps(!colorSwaps)}}>
+                                                    ◧ show colors
+                                                </p>
                                             </div>
                                         </div>
                                         <div className={"grid--5_95"}>
