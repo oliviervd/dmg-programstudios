@@ -28,6 +28,7 @@ const AgentViewer = (props) =>  {
         _lang = language
     }
 
+    // todo: clean up code and add these to translation file.
     let labels = {
         "EN": {
             0: "biography",
@@ -58,30 +59,18 @@ const AgentViewer = (props) =>  {
         }
     }
 
-    let name = ""
-    let sex = ""
-    let birth = ""
-    let death = ""
-    let _bios = ""
-    let wikiSnippet = ""
-    let wikiSnippetSource = ""
-    let oeuvre = ""
-    let exhibitions = ""
+    let name, sex, birth, death, _bios, wikiSnippet, wikiSnippetSource, oeuvre, exhibitions = ""
 
     let _basePERS = props.agent
     let _baseLDES = props.objects
     let PERS = props.personen
     let THES = props.thesaurus
 
-    //console.log(wikiBios)
-
     const [objectRoute, setObjectRoute] = useState("");
     const navigate = useNavigate()
 
     // mobile
     const [openBiography, setOpenBiography] = useState(false);
-
-    //setBios(fetchBioWikipedia(props.id));
 
     //todo: translate all fields.
 
