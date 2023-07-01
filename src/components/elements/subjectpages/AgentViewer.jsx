@@ -11,22 +11,42 @@ import {useMediaQuery} from "react-responsive";
 
 const AgentViewer = (props) =>  {
 
+    let name, sex, birth, death, _bios, wikiSnippet, wikiSnippetSource, oeuvre, exhibitions, _lang = ""
+    let _basePERS, _baseLDES, PERS, THES
+
     //MEDIA QUERIES
-    const isDesktopOrLaptop = useMediaQuery({
-        query: '(min-width: 700px)'
-    })
-    const isMobile = useMediaQuery({
-        query: '(max-width: 700px)'
+    const isDesktopOrLaptop = useMediaQuery( {query: '(min-width: 700px)'})
+    const isMobile = useMediaQuery({query: '(max-width: 700px)'})
+
+    const fetchLanguage = Promise.resolve(props.language)
+    const fetchAgent = Promise.resolve(props.agent)
+    const fetchAgents = Promise.resolve(props.personen)
+    const fetchTHES = Promise.resolve(props.thesaurus)
+    const fetchLDES = Promise.resolve(props.objects)
+
+    Promise.all([fetchLanguage, fetchAgent, fetchAgents, fetchTHES, fetchLDES]).then(values => {
+        _lang = values[0]
+        _basePERS = values[1]
+        PERS = values[2]
+        THES = values[3]
+        _baseLDES = values[4]
+    }).then(()=>{
+        console.log(_basePERS)
+        console.log(THES)
+        if (fetchPersBirth(_basePERS, THES)) {birth = fetchPersBirth(_basePERS, THES)}
+        console.log(birth)
     })
 
-    const [language, setLanguage] = useState("EN");
+    /*// promise to fetch data --> if fetched (start populating page with metadata)
+    const fetchLanguage = new Promise((resolve, reject) => {
+        resolve(props.language)
+    }).then((data)=> {_lang = data})
 
-    let _lang
-    try{
-        _lang = props.language
-    } catch {
-        _lang = language
-    }
+    const fetchPers = new Promise((resolve, reject) => {
+        resolve(props.agent)
+    }).then((data) => {
+        let _basePERS = data
+    })*/
 
     // todo: clean up code and add these to translation file.
     let labels = {
@@ -59,20 +79,17 @@ const AgentViewer = (props) =>  {
         }
     }
 
-    let name, sex, birth, death, _bios, wikiSnippet, wikiSnippetSource, oeuvre, exhibitions = ""
 
-    let _basePERS = props.agent
-    let _baseLDES = props.objects
-    let PERS = props.personen
-    let THES = props.thesaurus
+    //let _basePERS = props.agent
+    //let _baseLDES = props.objects
+    //let PERS = props.personen
+    //let THES = props.thesaurus
 
     const [objectRoute, setObjectRoute] = useState("");
     const navigate = useNavigate()
 
     // mobile
     const [openBiography, setOpenBiography] = useState(false);
-
-    //todo: translate all fields.
 
     if (_basePERS) {
         name = _basePERS.LDES_raw.object["https://data.vlaanderen.be/ns/persoon#volledigeNaam"]
@@ -85,9 +102,9 @@ const AgentViewer = (props) =>  {
             sex = fetchPersGender(_basePERS)
         } catch (error) {}
 
-        try {
+       /* try {
             birth = fetchPersBirth(_basePERS, THES)
-        } catch (error) {}
+        } catch (error) {}*/
 
         try {
             death = fetchPersDeath(_basePERS, THES)
