@@ -88,5 +88,5 @@
       "REACT_APP_PAYLOAD_BASE_URL"
     ]
   },
-  "proxy": "https://dmg-programstudios.herokuapp.com/"
+  "proxy": "https://dmg-programstudios.vercel.app/"
 }
