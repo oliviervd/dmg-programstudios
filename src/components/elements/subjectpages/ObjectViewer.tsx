@@ -135,10 +135,12 @@ const ObjectViewer = (props) => {
 
     // check if colors are available - if not then make sure not to parse color hex.
     let _colors = false
-    if (_LDES["HEX_values"][0]){
-        _colors = true
-        console.log(_LDES["HEX_values"][0])
-    } else { _colors = false }
+    try{
+        if (_LDES["HEX_values"][0]){
+            _colors = true
+        } else { _colors = false }
+    } catch(e) {console.log(e)}
+
 
     const URI = "https://data.designmuseumgent.be/id/object/"+objectNumber+".json"
 
