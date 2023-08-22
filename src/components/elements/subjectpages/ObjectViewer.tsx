@@ -77,6 +77,7 @@ const ObjectViewer = (props) => {
         let _baseTHES = _THES // raw data for concept list (thesaurus)
         let _basePERS = _PERS // raw data for agent list (individuals and organisations)
 
+
         try {
             collection = fetchCollection(_baseLDES, _baseTHES)
         } catch(e) {}
@@ -119,13 +120,11 @@ const ObjectViewer = (props) => {
 
     let href_objectpage = "/index/object/" + objectNumber
 
-    const routeToObjectPage = () => {
-        // todo: pass props.
-        navigate(href_objectpage);
+    function routeToCollectionPage(id) {
+        navigate("/index/collection/"+id)
     }
 
     function routeToAgentPage(id){
-        // todo: pass props.
         navigate("/index/agent/"+id)
     }
 
@@ -133,6 +132,13 @@ const ObjectViewer = (props) => {
     if (isBigScreen && props.split) {
             split = true
     }
+
+    // check if colors are available - if not then make sure not to parse color hex.
+    let _colors = false
+    if (_LDES["HEX_values"][0]){
+        _colors = true
+        console.log(_LDES["HEX_values"][0])
+    } else { _colors = false }
 
     const URI = "https://data.designmuseumgent.be/id/object/"+objectNumber+".json"
 
@@ -164,38 +170,40 @@ const ObjectViewer = (props) => {
                                     </Suspense>
                                     {!props.description &&
                                         <div style={{marginLeft: "28px"}}>
-                                            <div >
-                                                {!openColors&&
-                                                    <div>
-                                                        <div className={"lineH"}></div>
-                                                        <br></br>
-                                                        <h2 onClick={()=>setOpenColors(true)}>↨ {translate("colors", _lang)}</h2>
-                                                        <br></br>
-                                                        <div className={"lineH"}></div>
-                                                        <br></br>
-                                                    </div>
-                                                }
-                                                {openColors&&
-                                                    <div>
-                                                        <div className={"lineH"}></div>
-                                                        <div className={"grid--even_5"}>
-                                                            {_LDES["HEX_values"][0].map(color=>{return(
-                                                                <div style={{
-                                                                    background:color,
-                                                                    margin: '10px',
-                                                                    height: "2vh",
-                                                                    width: "2vh"
-                                                                }}></div>
-                                                            )})}
+                                            {_colors &&
+                                                <div >
+                                                    {!openColors&&
+                                                        <div>
+                                                            <div className={"lineH"}></div>
+                                                            <br></br>
+                                                            <h2 onClick={()=>setOpenColors(true)}>↨ {translate("colors", _lang)}</h2>
+                                                            <br></br>
+                                                            <div className={"lineH"}></div>
+                                                            <br></br>
                                                         </div>
-                                                        <br></br>
-                                                        <h2 onClick={()=>setOpenColors(false)}>↥ {translate("close",_lang)}</h2>
-                                                        <br></br>
-                                                        <div className={"lineH"}></div>
-                                                        <br></br>
-                                                    </div>
-                                                }
-                                            </div>
+                                                    }
+                                                    {openColors&&
+                                                        <div>
+                                                            <div className={"lineH"}></div>
+                                                            <div className={"grid--even_5"}>
+                                                                {_LDES["HEX_values"][0].map(color=>{return(
+                                                                    <div style={{
+                                                                        background:color,
+                                                                        margin: '10px',
+                                                                        height: "2vh",
+                                                                        width: "2vh"
+                                                                    }}></div>
+                                                                )})}
+                                                            </div>
+                                                            <br></br>
+                                                            <h2 onClick={()=>setOpenColors(false)}>↥ {translate("close",_lang)}</h2>
+                                                            <br></br>
+                                                            <div className={"lineH"}></div>
+                                                            <br></br>
+                                                        </div>
+                                                    }
+                                                </div>
+                                            }
                                             {!openDescription &&
                                                 <div>
                                                     <div className={"lineH"}></div>
@@ -294,7 +302,7 @@ const ObjectViewer = (props) => {
                                     <div>
                                         <div className={"gridPills"}>
                                             {collection.map(col=>{return(
-                                                <div className={"pillBox"}>
+                                                <div className={"pillBox"} onClick={()=>{routeToCollectionPage(col)}}>
                                                     <p className={"pillContent"}>{col}</p>
                                                 </div>
                                             )
