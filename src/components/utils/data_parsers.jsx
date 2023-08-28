@@ -94,6 +94,13 @@ export function listOfParticipatedExhibitions(oeuvre) {
     })
 }
 
+export function fetchCollectionsObjects(_LDES, collection) {
+    let _refCollection;
+    for (let i=0; i<_LDES.length; i++) {
+
+    }
+}
+
 export function fetchOeuvreV2(_LDES, agent, PERS, THES) {
     // todo: add function to ensure that each work is only shown once. --> check if already in set
     let _refID = agent["LDES_raw"]["object"]["http://www.w3.org/ns/adms#identifier"][1]["skos:notation"]["@value"]
@@ -528,13 +535,22 @@ export function fetchMaterials(LDES ,THES, material) {
         try{
             if (LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][0]){
                 let len = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"].length
+                //todo: check if cest is not on [0] --> if so go for [1]
                 for (let i = 0; i < len; i++) {
                     let _mat;
                     let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["@id"]
                     try {
-                        _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                        console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
+                        if(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"] !== undefined) {
+                            _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                        } else {
+                            _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"][i]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][1]["skos:prefLabel"]["@value"]
+                        }
+
+                        console.log(_mat)
                     } catch {
                         _mat = fetchTermFromThes(_thes, _id)
+                        console.log(_mat)
                     }
                     material.push(_mat + " (geheel)")
                 }
@@ -542,14 +558,23 @@ export function fetchMaterials(LDES ,THES, material) {
             } else {
                 let _mat;
                 let _id = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["@id"]
+                console.log()
                 try {
-                    _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                    try{
+                        console.log(LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"])
+                        _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][0]["skos:prefLabel"]["@value"]
+                    }
+                    catch(e) {
+                        _mat = LDES["object"]["http://www.cidoc-crm.org/cidoc-crm/P45_consists_of"]["http://www.cidoc-crm.org/cidoc-crm/P2_has_type"][1]["skos:prefLabel"]["@value"]
+                    }
+                    console.log(_mat)
                 } catch {
                     _mat = fetchTermFromThes(_thes, _id)
                 }
                 material.push(_mat + " (geheel)")
 
             }
+            return material
         } catch (error) {console.log(error)}
 
     }
@@ -581,6 +606,7 @@ export function fetchMaterials(LDES ,THES, material) {
                 }
                 material.push(_mat +" ("+note+")")
             }
+            return material
         } catch {}
     }
 }
