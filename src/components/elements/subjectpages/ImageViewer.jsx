@@ -29,22 +29,14 @@ const ImageViewer = (props) => {
     return(
         <div>
             <div className={"imageContainer"}>
-                <span className={"infoIcon"} onClick={()=>setShowImageInfo(!showImageInfo)}>i</span>
-                {showImageInfo &&
-                    <div className={"hiddenInformation"}>
-                        <div>{attribution}</div>
-                        <a href={license} target={"_blank"}>{translate(license, props.language, translations)}</a>
+                {/*<span className={"infoIcon"} onClick={()=>setShowImageInfo(!showImageInfo)}>i</span>*/}
+                    <div className={"imageContainer--attribution"}>
+                        <p className={"imageContainer--attribution_text"}>{attribution}</p>
+                        <a className={"imageContainer--attribution_link"} href={license} target={"_blank"}>{translate(license, props.language, translations)}</a>
                     </div>
-                }
                 {props.viewer &&
                     <div>
                         <IIIFVault backgroundColor={"white"} manifest={_manifest}/>
-                        {/*
-                        <div style={{zIndex: "1000", position: "absolute", bottom: "100px", right: "10px", background: "white", padding: "10px"}}>
-                            <a>{attribution}</a>
-                            <a href={license} target={"_blank"}>{translate(license, props.language, translations)}</a>
-                        </div>
-                        */}
                     </div>}
                 {!props.viewer &&
                     <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
