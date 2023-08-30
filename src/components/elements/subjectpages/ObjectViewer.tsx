@@ -159,7 +159,7 @@ const ObjectViewer = (props) => {
                         <div className="grid--1_1">
                             <Link className={"HeaderLinkBig home italic"} style={{fontSize: "2vw"}} to={href_objectpage}>{title}</Link>
                             {props.indexUI &&
-                                <h3 className={"underlined"} style={{fontSize: "4vw"}} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
+                                <h3 className={"objectViewer--close"} onClick={()=>props.setShowDetailUI(!props.showDetailUI)}>X</h3>
                             }
 
                         </div>

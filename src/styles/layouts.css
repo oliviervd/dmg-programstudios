@@ -108,3 +108,9 @@
     font-family: "Equateur", sans-serif;
     font-size: 12px;
 }
+
+.objectViewer--close{
+    position: relative;
+    text-align: right;
+    font-size: 2em;
+}
