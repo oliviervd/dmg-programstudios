@@ -34,8 +34,18 @@ const ObjectPage = (props) => {
         return translations[_term][_lang] // _lang = key.
     }
 
+    // FETCH MEDIA
+    // MAIN IMAGE
+    let images = ""
+    try {
+        images = details["iiif_image_uris"][0]
+    } catch(error) {
+        //console.log(error)
+    }
+
+    // MAIN RELATED IMAGES
     let _related;
-    let imageBlock:JSX.Element = <></>
+    //let imageBlock:JSX.Element = <></>
 
     setTimeout(()=> {
         setDetails(fetchObjectsByID(_objects, id))
@@ -59,13 +69,6 @@ const ObjectPage = (props) => {
         navigate("/index/color/")
     }
 
-
-    let images = ""
-    try {
-        images = details["iiif_image_uris"][0]
-    } catch(error) {
-        //console.log(error)
-    }
 
     function routeChangeObject(input) {
         let _uri = '/index/object/' + input["objectNumber"]
