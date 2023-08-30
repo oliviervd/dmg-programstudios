@@ -45,7 +45,7 @@ const ObjectPage = (props) => {
 
     // MAIN RELATED IMAGES
     let _related;
-    //let imageBlock:JSX.Element = <></>
+    let imageBlock:JSX.Element = <></>
 
     setTimeout(()=> {
         setDetails(fetchObjectsByID(_objects, id))
