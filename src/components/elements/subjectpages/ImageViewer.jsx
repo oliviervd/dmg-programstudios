@@ -30,7 +30,7 @@ const ImageViewer = (props) => {
     return(
         <div>
             <div className={"imageContainer"}>
-                <span className={"infoIcon"} onClick={()=>setShowImageInfo(!showImageInfo)}>i</span>
+                {/*<span className={"infoIcon"} onClick={()=>setShowImageInfo(!showImageInfo)}>i</span>*/}
                 {props.viewer &&
                     <div>
                         <IIIFVault backgroundColor={"white"} manifest={_manifest}/>
