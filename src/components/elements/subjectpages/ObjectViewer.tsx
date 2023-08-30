@@ -168,7 +168,7 @@ const ObjectViewer = (props) => {
                             <div>
                                 <Suspense fallback={<Loading />}>
                                     <Suspense fallback={<Loading />}>
-                                        <ImageViewer viewer={props.viewer} media={props.image} details={props.details} language={_lang}/>
+                                        <ImageViewer viewer={props.viewer} media={props.image} details={props.details} language={_lang} attribution={props.attribution}/>
                                     </Suspense>
                                     {!props.description &&
                                         <div style={{marginLeft: "28px"}}>

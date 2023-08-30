@@ -13,6 +13,7 @@ import translations from "../data/translations.json";
 const ObjectPage = (props) => {
 
     const { id } = useParams();
+
     //MEDIA QUERIES
     const isDesktopOrLaptop = useMediaQuery({
         query: '(min-width: 600px)'
@@ -28,7 +29,7 @@ const ObjectPage = (props) => {
         setLanguage(props.language)
     }
 
-
+    // todo: make generic function
     function translate(_term, _lang) {
         return translations[_term][_lang] // _lang = key.
     }
@@ -103,7 +104,7 @@ const ObjectPage = (props) => {
                                   image={images} colorStrip={false}
                                   thesaurus={_thes} personen={_pers}
                                   box={true} colorCubes={true} split={true}
-                                  language={language} viewer={true}
+                                  language={language} viewer={true} attribution={true}
                     />
                 </Suspense>
             </div>

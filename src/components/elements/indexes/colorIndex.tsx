@@ -308,7 +308,7 @@ const ColorIndex = (props) => {
                                             <ObjectViewer
                                                 showDetailUI={showDetailUIColors} setShowDetailUI={setShowDetailUIColors} description={false} thesaurus={_thes} personen={_pers}
                                                 image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
-                                                box={false} split={false} language={_lang} viewer={false}
+                                                box={false} split={false} language={_lang} viewer={false}  attribution={false}
                                             />
                                         }
                                     </div>
@@ -322,7 +322,7 @@ const ColorIndex = (props) => {
                                             <ObjectViewer
                                                 showDetailUI={showDetailUIColors} setShowDetailUI={setShowDetailUIColors} description={false} thesaurus={_thes} personen={_pers}
                                                 image={image} details={details} color={getKeyByValue(colorRef, objectColor)} colors={_objects} colorStrip={true} indexUI={true}
-                                                box={false} split={false} language={_lang} viewer={false}
+                                                box={false} split={false} language={_lang} viewer={false} attribution={false}
                                             />
                                         }
                                     </div>

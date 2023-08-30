@@ -73,3 +73,37 @@
 .hoverImage:hover .overlay {
     opacity: 0.5
 }
+
+
+.imageContainer{
+    position: relative;
+    text-align: center;
+    color: white;
+}
+
+/* MEDIA DISPLAY */
+
+.imageContainer--attribution{
+    position: relative;
+    z-index: 100000;
+    background: white;
+    display: block;
+    width: 400px;
+    height: auto;
+    right: 18px;
+    bottom: 20px;
+    color: black;
+    text-align: left;
+    padding: 3.33px;
+    left: 1px;
+}
+
+.imageContainer--attribution_text{
+    font-family: Equateur;
+    font-size: 12px;
+}
+
+.imageContainer--attribution_link{
+    font-family: "Equateur", sans-serif;
+    font-size: 12px;
+}

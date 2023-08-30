@@ -214,36 +214,6 @@ a:visited {
     text-decoration: none;
 }
 
-.imageContainer{
-    position: relative;
-    text-align: center;
-    color: white;
-}
-
-.imageContainer--attribution{
-    position: absolute;
-    z-index: 100000;
-    background: white;
-    display: block;
-    width: 400px;
-    height: auto;
-    right: 18px;
-    bottom: 20px;
-    color: black;
-    text-align: left;
-    padding: 3.33px;
-}
-
-.imageContainer--attribution_text{
-    font-family: Equateur;
-    font-size: 12px;
-}
-
-.imageContainer--attribution_link{
-    font-family: "Equateur", sans-serif;
-    font-size: 12px;
-}
-
 .infoIcon{
     width: 12px;
     height: 12px;

@@ -4,7 +4,7 @@ import translations from '../../data/translations.json';
 import IIIFVault from "../utils/IIIFVault";
 
 const ImageViewer = (props) => {
-    const [showImageInfo, setShowImageInfo] = useState(false);
+    const [showImageInfo, setShowImageInfo] = useState(true);
     let attribution, license;
     try {
         attribution = props.details.attributions[0]
@@ -17,7 +17,8 @@ const ImageViewer = (props) => {
     } catch(e) {attribution = "unknown"}
 
     try {
-        license = props.details.CC_Licenses[0]
+        license = props.details.CC_Licenses[0];
+        license = translate(license, props.language, translations)
     } catch (e) {license = "unknown"}
 
     let _manifest
@@ -29,11 +30,7 @@ const ImageViewer = (props) => {
     return(
         <div>
             <div className={"imageContainer"}>
-                {/*<span className={"infoIcon"} onClick={()=>setShowImageInfo(!showImageInfo)}>i</span>*/}
-                    <div className={"imageContainer--attribution"}>
-                        <p className={"imageContainer--attribution_text"}>{attribution}</p>
-                        <a className={"imageContainer--attribution_link"} href={license} target={"_blank"}>{translate(license, props.language, translations)}</a>
-                    </div>
+                <span className={"infoIcon"} onClick={()=>setShowImageInfo(!showImageInfo)}>i</span>
                 {props.viewer &&
                     <div>
                         <IIIFVault backgroundColor={"white"} manifest={_manifest}/>
@@ -42,6 +39,13 @@ const ImageViewer = (props) => {
                     <img alt="loading.." className="img__fit" style={{paddingLeft: "5%"}} src={props.media.replace("/full/0/default.jpg", "/1000,/0/default.jpg")}/>
                 }
             </div>
+
+            {props.attribution &&
+                <div className={"imageContainer--attribution"}>
+                    <p className={"imageContainer--attribution_text"}>{attribution}</p>
+                    <a className={"imageContainer--attribution_link"} href={license} target={"_blank"}>{license}</a>
+                </div>
+            }
 
         </div>
     )
