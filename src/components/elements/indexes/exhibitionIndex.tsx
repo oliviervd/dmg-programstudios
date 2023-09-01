@@ -121,7 +121,7 @@ const ExhibitionIndex = (props) => {
         posterImageBlock = _posters.map(poster=> (
             <img
                 className={"index__posters-image"}
-                src={poster.iiif_image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
+                src={poster["iiif_image"].replace("/full/0/default.jpg", "/500,/0/default.jpg")}
             />)
         )
     } catch(e) {}
