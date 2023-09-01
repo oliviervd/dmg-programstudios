@@ -15,6 +15,7 @@ import translations from '../data/translations.json';
 import useObjectsQuery from "../hooks/useObjectsQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useAgentQuery from "../hooks/useAgentQuery";
+import fetchAllExhibitions from "../hooks/useExhibitionLister"
 import useExhibitionLister from "../hooks/useExhibitionLister";
 import AdvancedSearchQuery from "../elements/indexes/advancedSearchQuery";
 import AdvancedSearch from "../elements/indexes/advancedSearch";
@@ -111,13 +112,17 @@ const Index = () => {
 
     // todo: make into one generic function.
     function openColorIndex() {
+        setAbout(false)
+        setShowAdvancedSearch(false)
         setCollapseColors(false);
         setCollapseExhibition(true)
         setCollapseNewItems(false)
         setDoubleHeader(false);
     }
 
-    function openExhibitionIndex() {3
+    function openExhibitionIndex() {
+        setAbout(false)
+        setShowAdvancedSearch(false)
         setCollapseColors(true);
         setCollapseExhibition(false)
         setCollapseNewItems(false)
@@ -125,6 +130,8 @@ const Index = () => {
     }
 
     function openNewIndex() {
+        setAbout(false)
+        setShowAdvancedSearch(false)
         setCollapseColors(false);
         setCollapseExhibition(false)
         setCollapseNewItems(true)
@@ -152,54 +159,23 @@ const Index = () => {
                         <meta name={"description"} content={"page containing several indexes on the collection of Design Museum Gent"}/>
                         <link rel={"canonical"} href={import.meta.env.REACT_APP_WEB_BASE_URL+"/index/color/"}/>
                     </Helmet>
-                    <div style={header}>
+                    <div className={"index__header-container"}>
                         <div className="grid--even_10">
                             <Link className={"HeaderLink uppercase"} style={{margin: '10px', fontWeight:"bold"}}  to={"/"}>HOME</Link>
                             <div></div>
                             <div></div>
                             <div></div>
+                            <h2 style={{margin: 10}} className="HeaderLink uppercase text-center" onClick={()=>setAbout(!about)}> SEARCH </h2>
                             <div></div>
-                            <div></div>
-                            <div></div>
-                            {about &&
-                                <h2 className={!doubleHeader?"HeaderLink uppercase text-center":"HeaderLink uppercase text-center underlined"} style={{margin: 10}} onClick={()=> closeSearchTab()}>{translate("back_to_index", language)}</h2>
-                            }
-                            {about &&
-                                <div></div>
-                            }
-                            {!about &&
-                                <h2 className={!doubleHeader?"uppercase text-center HeaderLink":"HeaderLink uppercase text-center underlined"} style={{margin: 10}} onClick={()=>dropDownMenu()}>{translate("set_index", language)}</h2>
-                            }
-                            {!about &&
-                                <h2 className="HeaderLink uppercase text-center idle" style={{margin: 10}} onClick={()=>openSearchTab()}>{translate("search", language)}</h2>
-                            }
+                            <h2 to={`/index/color/`}  style={{margin: 10}} className="HeaderLink uppercase text-center" onClick={()=>openExhibitionIndex()}>{translate("colors", language)}</h2>
+                            <h2 to={`/index/exhibition/`}  style={{margin: 10}} className="HeaderLink uppercase text-center" onClick={()=>openColorIndex()}>{translate("exhibition", language)}</h2>
+                            <h2 to={`/index/new/`}  style={{margin: 10}} className="HeaderLink uppercase text-center" onClick={()=>openNewIndex()}>{translate("new", language)}</h2>
                             <div className="grid--even_3">
                                 <h2 className="HeaderLink uppercase text-center" style={{margin: 10}} onClick={()=>setLanguage("EN")}>EN</h2>
                                 <h2 className="HeaderLink uppercase text-center" style={{margin: 10}} onClick={()=>setLanguage("NL")}>NL</h2>
                                 <h2 className="HeaderLink uppercase text-center" style={{margin: 10}} onClick={()=>setLanguage("FR")}>FR</h2>
                             </div>
-
                         </div>
-                        {doubleHeader &&
-                            <div className="grid--even_10">
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-                                <div className={"grid--even"}>
-                                    <Link to={`/index/color/`} className="HeaderLink" style={{}} onClick={()=>openExhibitionIndex()}>{translate("colors", language)}</Link>
-                                    <Link to={`/index/exhibition/`} className="HeaderLink" style={{}} onClick={()=>openColorIndex()}>{translate("exhibition", language)}</Link>
-                                    <Link to={`/index/new/`} className="HeaderLink" style={{whiteSpace: "nowrap"}} onClick={()=>openNewIndex()}>{translate("new", language)}</Link>
-                                </div>
-                                <div></div>
-                                <div></div>
-                                <div></div>
-
-                            </div>
-                        }
                     </div>
 
                     <div className={about? "grid--3_7 container": "container"} style={searchBoxStyle}>

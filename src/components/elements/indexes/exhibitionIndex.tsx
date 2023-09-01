@@ -199,7 +199,7 @@ const ExhibitionIndex = (props) => {
                             </div>
 
                             <div className={showDetailsExhObj? "container-masonry-half": "container-masonry-full"}>
-                                <div className={"masonry"} style={{height: "700px", overflowY:"hidden", padding: "5px"}}>
+                                <div className={"masonry"}>
                                     {imageBlockExh}
                                 </div>
                                 {showDetailsExhObj &&

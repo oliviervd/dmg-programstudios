@@ -110,7 +110,7 @@ const NewItems = (props) => {
                                 <div className={"lineH"}></div>
                             </div>
                             <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
-                                <div className={"masonry"} style={{overflowY:"hidden", padding: "5px", height: "85vh"}}>
+                                <div className={"masonry"} >
                                     {_objects.isLoading &&
                                         <h2>LOADING...</h2>
                                     }

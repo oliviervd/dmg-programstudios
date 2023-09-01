@@ -1,8 +1,6 @@
 import React from "react";
 import {useQuery} from "@tanstack/react-query";
 
-
-
 export function fetchContentStudiosCMS() {
     const {data, isLoading, status} = useQuery({
         queryKey:['STUDIOS'],
@@ -776,9 +774,9 @@ export function fetchDataStudiosPayload(source, lang, path) {
 
     // title
     if (path === "title") {
-        if (lang === "EN") {return source.titleEn}
-        else if (lang === "NL") {return source.titles.titleNl}
-        else if (lang === "FR") {return source.titles.titleFr}
+        if (lang === "EN") {return source.EN}
+        else if (lang === "NL") {return source.NL}
+        else if (lang === "FR") {return source.FR}
     }
 
     if (path === "description") {
