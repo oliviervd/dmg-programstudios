@@ -19,3 +19,10 @@ export function getAgents(client) {
         .select("*",  {'head':false})
     //return Promise.resolve([])
 }
+
+export function getArchief(client) {
+    // fetch posters
+    return client
+        .from("dmg_archief_LDES")
+        .select("*", {'head': false})
+}

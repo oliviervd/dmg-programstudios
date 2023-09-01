@@ -15,6 +15,7 @@ import translations from '../data/translations.json';
 import useObjectsQuery from "../hooks/useObjectsQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useAgentQuery from "../hooks/useAgentQuery";
+import useArchiveQuery from "../hooks/useArchiveQuery"
 import fetchAllExhibitions from "../hooks/useExhibitionLister"
 import useExhibitionLister from "../hooks/useExhibitionLister";
 import AdvancedSearchQuery from "../elements/indexes/advancedSearchQuery";
@@ -48,6 +49,7 @@ const Index = () => {
     const _thes  = useThesaurusQuery().data;
     const _pers = useAgentQuery().data;
     const _exhibitions = useExhibitionLister(_objects);
+    const _posters = useArchiveQuery().data
 
     function translate(_term, _lang) {
         return translations[_term][_lang] // _lang = key.
@@ -211,7 +213,7 @@ const Index = () => {
                                     <ExhibitionIndex exhibitionList={_exhibitions} objects={_objects} thesaurus={_thes} agents={_pers}
                                                      collapseColors={collapseColors} setCollapseColors={setCollapseColors}
                                                      collapseExhibition={collapseExhibition} setCollapseExhibition={setCollapseExhibition}
-                                                     language={language}
+                                                     language={language} posters={_posters}
                                     />
 
                                     <NewItems collapseNewItems={collapseNewItems} setCollapseNewItem={setCollapseNewItems}

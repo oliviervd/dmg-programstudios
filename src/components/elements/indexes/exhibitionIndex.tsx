@@ -22,6 +22,9 @@ const ExhibitionIndex = (props) => {
     let ExhOptions;
     let exhibition:string
     let _lang = props.language
+    let _posters = props.posters
+
+    console.log(props.posters)
 
     function translate(_term, _lang) {
         return translations[_term][_lang] // _lang = key.
@@ -111,7 +114,17 @@ const ExhibitionIndex = (props) => {
     }
 
     let imageBlockExh:JSX.Element[] = <></>
+    let posterImageBlock:JSX.Element[] = <></>
     let images = filterByExhibition(props.objects)
+
+    try{
+        posterImageBlock = _posters.map(poster=> (
+            <img
+                className={"index__posters-image"}
+                src={poster.iiif_image.replace("/full/0/default.jpg", "/400,/0/bitonal.jpg")}
+            />)
+        )
+    } catch(e) {}
 
     try{
         if (bitonal) {
@@ -154,11 +167,12 @@ const ExhibitionIndex = (props) => {
         }
     }
 
+
     return(
         <div>
             {props.collapseExhibition &&
                 <div>
-                    <div>
+                    {/*<div>
                         <div>
                             <div className="lineH"/>
                             <div className="grid--2_6_2 " style={{height: '5vh'}}>
@@ -174,7 +188,7 @@ const ExhibitionIndex = (props) => {
                             overflowY:"scroll"}}>
                             {ExhOptions}
                         </div>
-                    </div>
+                    </div>*/}
                     <div>
                         <div className="lineH"/>
                         <div className="grid--2_6_2">
@@ -184,7 +198,7 @@ const ExhibitionIndex = (props) => {
                         </div>
 
                         <div>
-                            <div className="grid--2_6_2">
+                           {/* <div className="grid--2_6_2">
                                 <h2>{exhibition}</h2>
                                 <div></div>
                                 <div className={"grid--2_1"}>
@@ -196,9 +210,21 @@ const ExhibitionIndex = (props) => {
                                     }
                                     <p> {translate("scroll", _lang)} </p>
                                 </div>
+                            </div>*/}
+
+
+                            {/* POSTERS */}
+
+                            <div className={"index__posters-container"}>
+                                <p>POSTERS</p>
+                                <div className={"index__posters-masonry"}>
+                                    {posterImageBlock}
+                                </div>
                             </div>
 
-                            <div className={showDetailsExhObj? "container-masonry-half": "container-masonry-full"}>
+                            {/* IMAGES */}
+
+                           {/* <div className={showDetailsExhObj? "container-masonry-half": "container-masonry-full"}>
                                 <div className={"masonry"}>
                                     {imageBlockExh}
                                 </div>
@@ -209,7 +235,7 @@ const ExhibitionIndex = (props) => {
                                         box={false} color={"black"} language={_lang} viewer={false} attribution={false}
                                     />
                                 }
-                            </div>
+                            </div>*/}
                         </div>
                     </div>
                 </div>
