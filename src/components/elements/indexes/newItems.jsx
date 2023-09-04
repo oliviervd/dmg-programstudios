@@ -19,7 +19,8 @@ const NewItems = (props) => {
     const newItems_may = ["1983-0049", "1983-0051", "1983-0052", "1983-0056", "1983-0057", "1983-0060", "1983-0068", "2001-0117", "2005-0022", "DES.1996.08_0-2", "4508", "4500", "0910", "2017-0100", "2017-0224", "2017-0226", "3056", "3059", "3151", "3394", "3395", "3399", "3401", "3137_2-4"]
     const newItems_june = ["1985-0004_0-2", "2000-0048", "2001-0030", "2001-0031", "1424", "1987-1441_00-15", "0273", "0309", "0424", "0431", "0590", "0889_0-3", "1977-0025", "2023-0015_0-5", "2023-0016_0-2", "2023-0017_0-2", "2023-0019_0-2", "2023-0020_0-2", "2023-0023_0-3", "2023-0024_0-2", "2023-0025", "2023-0026_0-4", "2023-0027", "2023-0028_0-5", "2023-0029_0-2", "2023-0030_0-2", "2023-0031_0-2", "2023-0032_0-2", "2023-0033_0-3", "2023-0034_0-2", "2023-0035_0-2", "2023-0037_0-2", "2023-0038_0-2", "2023-0039_0-2"]
     const newItems_july = ["DES.1997.08", "2011-0078", "1989-0068", "1989-0071", "1989-0075", "DMG_T_00773_ORANJE", "2023-0040_0-2", "2023-0042_0-2", "2023-0043_0-2", "2023-0044_0-2", "2023-0045_0-2", "2023-0046_0-2", "2023-0047_0-2", "2023-0048_0-4", "2023-0052", "2023-0054_0-3", "2023-0055", "2023-0056", "DMG_T_01126_ORANJE", "DMG_T_01130_ORANJE", "2002-0012_0-2", "2017-0228", "3063", "2003-0113", "2003-0114", "2003-0115", "2004-0076_0-2", "2004-0077_0-2", "3040", "3196", "2022-0017"]
-    const [newItems, setNewItems] = useState(newItems_july)
+    const newItems_august = ["1987-0965_00-10", "1987-1083", "1999-0031", "2005-0004", "1520", "1976-0232", "3907", "1987-0176_0-2", "1987-0177_00-12", "1987-0180_0-2", "1987-0183_0-2", "1986-0042_0-4", "0989", "0056", "1785", "1786", "1787", "1835", "1872", "1986-0040", "1989-0030", "1994-0037", "2017-0234_0-3", "2017-0237_0-7", "2568", "2569", "2570", "2571", "3187", "3206", "3297", "3380", "3383", "3384", "3385", "3386", "3387", "3388", "3389", "3390", "3391", "3472", "3728", "3883"]
+    const [newItems, setNewItems] = useState(newItems_august)
 
     const _newObjectsData = [];
     const _newObjectsImages = [];
@@ -101,11 +102,12 @@ const NewItems = (props) => {
                         <div>
                             <div>
                                 <div className={"grid--even_10"}>
-                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_march)}}>march 2023</p>
-                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_april)}}>april 2023</p>
-                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_may)}}>may 2023</p>
-                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_june)}}>june 2023</p>
+                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_august)}}>august 2023</p>
                                     <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_july)}}>july 2023</p>
+                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_june)}}>june 2023</p>
+                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_may)}}>may 2023</p>
+                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_april)}}>april 2023</p>
+                                    <p className={"HeaderLink"} onClick={()=>{setNewItems(newItems_march)}}>march 2023</p>
                                 </div>
                                 <div className={"lineH"}></div>
                             </div>
