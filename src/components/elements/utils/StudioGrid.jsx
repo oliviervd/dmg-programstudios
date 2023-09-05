@@ -33,9 +33,6 @@ const StudioGrid = (props) => {
                 return (
                     <div id="HomeProjectGrid" className="rowScroll fade-in open" style={{overflow: "scroll"}}>
                         <div className={"studioGrid-overlay"}>
-                            <div className={"studioGrid-overlay-text"}>
-                                starting up.
-                            </div>
                         </div>
                         <div>
                             <div style={{textAlign:"center"}}>
