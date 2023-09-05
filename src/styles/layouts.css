@@ -125,7 +125,7 @@
 }
 
 .studioGrid-overlay-text{
-    background: #afc6ae;
+    background: rgba(175, 198, 174, 0.7);
     position: relative;
     top: 20vh;
     text-align: center;

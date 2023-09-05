@@ -92,11 +92,30 @@ export function listOfParticipatedExhibitions(oeuvre) {
     })
 }
 
-export function fetchCollectionsObjects(_LDES, collection) {
-    let _refCollection;
+export function fetchCollectionsObjects(_LDES, THES, collection) {
+    let collectionSubset = [];
     for (let i=0; i<_LDES.length; i++) {
+        try{
+            if(_LDES[i]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"][0]){
+                for (let x = 0; x < _LDES[i]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"].length; x++) {
+                    let _id = _LDES[i]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"][x]["@id"]
+                    let _collection = fetchTermFromThes(THES, _id);
+                    if (_collection === collection){
+                        collectionSubset.push(_LDES[i])
+                    } else {}
+                }
+            } else {
+                let _id = _LDES[i]["LDES_raw"]["object"]["http://www.cidoc-crm.org/cidoc-crm/P46i_forms_part_of"]["@id"]
+                let _coll = fetchTermFromThes(THES, _id)
+
+                if (_coll === collection) {
+                    collectionSubset.push(_LDES[i])
+                } else {}
+            }
+        } catch (e) {}
 
     }
+    return collectionSubset
 }
 
 export function fetchOeuvreV2(_LDES, agent, PERS, THES) {
@@ -771,7 +790,6 @@ export function headerAbout(lang) {
 }
 
 export function fetchDataStudiosPayload(source, lang, path) {
-
     // title
     if (path === "title") {
         if (lang === "EN") {return source.EN}
