@@ -32,11 +32,16 @@ const StudioGrid = (props) => {
                  }
                 return (
                     <div id="HomeProjectGrid" className="rowScroll fade-in open" style={{overflow: "scroll"}}>
+                        <div className={"studioGrid-overlay"}>
+                            <div className={"studioGrid-overlay-text"}>
+                                starting up.
+                            </div>
+                        </div>
                         <div>
                             <div style={{textAlign:"center"}}>
                                 <Link className="HeaderLinkIndex uppercase" to={href} >{title_en}</Link>
                             </div>
-                            <p className="uppercase justify padding-10"
+                            <p className="rhizome fast uppercase justify padding-10"
                                style={{height: '10vh'}}>{description}</p>
                             {!isLoading&&
                                 <img style={{maxWidth: "90%"}} className="img__fit center" alt={""} src={studio.studioImage.url}
