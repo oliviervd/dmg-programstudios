@@ -137,8 +137,12 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
-    background: rgba(255, 255, 255, 0.7);
+    background: rgba(255, 255, 255, 0.9);
     z-index: 100000000000000000;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right:0;
 }
 
 .container__loading-text{
