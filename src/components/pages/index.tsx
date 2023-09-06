@@ -80,13 +80,13 @@ const Index = () => {
 
     if(about) {
         style = {
-            height: "200px",
+            height: "300px",
             overflowY:"scroll",
             width: "70vw"
         }
     } else {
         style = {
-            height: "200px",
+            height: "300px",
             overflowY:"scroll"
         }
     }

@@ -4,6 +4,7 @@ import {fetchObjectsByID} from "../../utils/data_parsers";
 import ObjectViewer from "../subjectpages/ObjectViewer";
 import {useMediaQuery} from "react-responsive";
 import {useNavigate} from "react-router-dom";
+import Loading from "../utils/Loading";
 
 const NewItems = (props) => {
 
@@ -87,12 +88,12 @@ const NewItems = (props) => {
             <img
                 className={"hoverImage"}
                 onClick={()=>handleImgClick(image)}
-                alt={'INSERT ALT HERE'} //todo: alt
+                //todo: alt
                 src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
             />
         ))
 
-    } catch {imageBlock=<h2>Loading...</h2>}
+    } catch {imageBlock=<Loading/>}
 
     return (
         <div>
@@ -114,7 +115,7 @@ const NewItems = (props) => {
                             <div className={showDetailUI? "container-masonry-half": "container-masonry-full"}>
                                 <div className={"masonry"} >
                                     {_objects.isLoading &&
-                                        <h2>LOADING...</h2>
+                                        <Loading classname={"modal"}></Loading>
                                     }
                                     {imageBlock}
                                 </div>

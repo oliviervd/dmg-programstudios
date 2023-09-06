@@ -145,6 +145,10 @@
     right:0;
 }
 
+.container__loading.modal{
+    position: relative;
+}
+
 .container__loading-text{
     position: absolute;
     width: 100vw;

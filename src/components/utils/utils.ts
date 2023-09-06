@@ -2,10 +2,6 @@ export function translate(_term, _lang, translations) {
     return translations[_term][_lang] // _lang = key.
 }
 
-export function wait(duration) {
-    return new Promise(resolve => setTimeout(resolve, duration))
-}
-
 // IMAGE HANDLING
 export function fetchImageByColor(objects, color) {
     // fetch list of images that share colorname (color);

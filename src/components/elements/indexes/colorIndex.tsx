@@ -79,6 +79,7 @@ const ColorIndex = (props) => {
         fetchObjectById(objectNumberString);
     }
 
+    // parse MEDIA
     let images;
     images = fetchImageByColor(_objects, objectColor)
 
@@ -89,7 +90,7 @@ const ColorIndex = (props) => {
             imageBlock = images.map(image => (
                 <img
                     onClick={()=>handleImgClick(image)}
-                    alt={'INSERT ALT HERE'} //todo: alt
+                     //todo: alt
                     src={image.replace("/full/0/default.jpg", "/400,/0/bitonal.jpg")}
                 />
             ))
@@ -98,7 +99,7 @@ const ColorIndex = (props) => {
                 <img
                     className={"hoverImage"}
                     onClick={()=>handleImgClick(image)}
-                    alt={'INSERT ALT HERE'} // todo: alt
+                     // todo: alt
                     src={image.replace("/full/0/default.jpg", "/400,/0/default.jpg")}
                 />
             ))
@@ -249,7 +250,9 @@ const ColorIndex = (props) => {
                                 <div style={props.style}>
 
                                     <Suspense fallback={<Loading />}>
-                                        {HexOptions}
+                                        <div>
+                                            {HexOptions}
+                                        </div>
                                     </Suspense>
 
                                 </div>
@@ -269,20 +272,20 @@ const ColorIndex = (props) => {
                                     <div className={"grid--even_3"}>
                                         <div>
                                             <div>
-                                                {maleFilter &&
+                                               {/* {maleFilter &&
                                                     <p onClick={()=>selectGender("sex", "")}>◧ {translate("male", _lang)}</p>
                                                 }
                                                 {!maleFilter &&
                                                     <p onClick={()=>selectGender("sex", "MALE")}>⧅ {translate("male", _lang)}</p>
-                                                }
+                                                }*/}
                                             </div>
                                             <div>
-                                                {femaleFilter &&
+                                               {/* {femaleFilter &&
                                                     <p onClick={()=>selectGender("sex", "")}>◧ {translate("female", _lang)}</p>
                                                 }
                                                 {!femaleFilter &&
                                                     <p onClick={()=>selectGender("sex", "FEMALE")}>⧅ {translate("female", _lang)}</p>
-                                                }
+                                                }*/}
                                             </div>
 
                                         </div>
