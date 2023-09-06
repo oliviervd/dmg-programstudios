@@ -146,7 +146,23 @@
 }
 
 .container__loading-text{
-    height: 50vh;
+    position: absolute;
+    width: 100vw;
+    top: 45vh;
     text-align: center;
-    font-size: 4em;
+    font-size: 6em;
+    color: rgba(0, 0, 0, 0.3);
+    z-index: 10000000000000000000000;
+
+}
+
+.container__loading-text-overlay{
+    position: absolute;
+    width: 100vw;
+    top: 45vh;
+    text-align: center;
+    font-size: 5em;
+    font-family: "Combine";
+    color: rgba(0, 0, 0, 0.7);
+    z-index: 10000000000000000000000;
 }

@@ -102,6 +102,7 @@ const ObjectPage = (props) => {
 
             <div>
                 <div className="lineH"></div>
+                <Loading/>
                 <Suspense fallback={<Loading/>}>
                     <ObjectViewer description={true} details = {details}
                                   image={images} colorStrip={false}
