@@ -24,6 +24,7 @@
     "strict": true,
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
+    "allowSyntheticDefaultImports": true,
     "noImplicitReturns": true,
     "resolveJsonModule": true
   }

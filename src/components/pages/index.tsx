@@ -11,12 +11,10 @@ import Loading from "../elements/utils/Loading";
 import NewItems from "../elements/indexes/newItems";
 import translations from '../data/translations.json';
 
-
 import useObjectsQuery from "../hooks/useObjectsQuery";
 import useThesaurusQuery from "../hooks/useThesaurusQuery";
 import useAgentQuery from "../hooks/useAgentQuery";
 import useArchiveQuery from "../hooks/useArchiveQuery"
-import fetchAllExhibitions from "../hooks/useExhibitionLister"
 import useExhibitionLister from "../hooks/useExhibitionLister";
 import AdvancedSearchQuery from "../elements/indexes/advancedSearchQuery";
 import AdvancedSearch from "../elements/indexes/advancedSearch";
